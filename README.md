@@ -1,41 +1,53 @@
 ﻿# MaquiGest
-
 <div align="center">
 
-  <p><b>Universidad Peruana de Ciencias Aplicadas</b></p>
+  <img src="assets/md-images-front/upc-logo.png" width="150px" />
+
+  <p>Universidad Peruana de Ciencias Aplicadas</p>
+  <p>Facultad de Ingeniería</p>
   <p>Carrera de Ingeniería de Software</p>
+
+  <p>Ciclo académico 2026-20</p><br>
 
   <p><b>1ASI0729</b></p>
   <p><b>Desarrollo de Aplicaciones Open Source</b></p>
-
   <p>NRC</p>
   <p><b>7750</b></p>
-
-  <p><b>Informe del Trabajo Final</b></p>
-
+  <p><b>Informe de Trabajo Final</b></p>
   <p>Docente</p>
   <p><b>Bautista Ubillús, Efraín Ricardo</b></p>
-
   <p>Startup</p>
-  <p><b>CleanCode</b></p>
-
+  <p><b>CleanCode</b></p><br>
   <p>Producto</p>
   <p><b>MaquiGest</b></p>
 
-  <p><b>Periodo 202620</b></p>
+</div>
+
+<div align="center">
+  <h3>Integrantes</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Apellidos y Nombres</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>U202115277</td>
+        <td>Delgado Perez, James Caleb</td>
+      </tr>
+      <tr>
+        <td>U202111529</td>
+        <td>Montalvo Vasquez, Bruno Rodrigo</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+
   <p><b>Septiembre, 2026</b></p>
 
 </div>
 
 <div style="page-break-after: always;"></div>
-
-## Project Overview
-
-MaquiGest es una plataforma SaaS especializada en pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para proyectos de construcción de pequeña escala.
-
-La plataforma centralizará la gestión del inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento, permitiendo realizar el seguimiento de los equipos durante todo el ciclo de alquiler.
-
-El producto estará dirigido a dos segmentos principales:
-
-1. Pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos de construcción.
-2. Personas naturales que necesitan alquilar equipos o maquinaria para proyectos personales relacionados con la construcción.
