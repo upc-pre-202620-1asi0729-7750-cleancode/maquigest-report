@@ -60,3 +60,20 @@
 |   AV1   |       |  Todos   | Se agregó la primera versión del informe, incluyendo carátula, registro de versiones, perfiles del equipo, análisis inicial del problema, artefactos de UX, arquitectura preliminar y evidencias del Sprint 1. |
 
 <div style="page-break-after: always;"></div>
+
+
+## Project Report Collaboration Insights
+
+A continuación, se presenta el repositorio utilizado para la elaboración colaborativa del informe del proyecto MaquiGest.
+
+#### Link del repositorio del Reporte:
+
+- https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-report
+
+### Entrega AV1:
+
+#### Participación por integrante:
+
+##### Commits en el Project Report:
+
+<div style="page-break-after: always;"></div>
