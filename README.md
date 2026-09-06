@@ -51,3 +51,12 @@
 </div>
 
 <div style="page-break-after: always;"></div>
+
+
+## Registro de Versiones del Informe
+
+| Versión | Fecha |  Autor   |                                                  Descripción de modificación                                                   |
+| :-----: |:-----:|:--------:| :----------------------------------------------------------------------------------------------------------------------------: |
+|   AV1   |       |  Todos   | Se agregó la primera versión del informe, incluyendo carátula, registro de versiones, perfiles del equipo, análisis inicial del problema, artefactos de UX, arquitectura preliminar y evidencias del Sprint 1. |
+
+<div style="page-break-after: always;"></div>
