@@ -564,6 +564,84 @@ Frente a estas alternativas, MaquiGest no plantea competir inicialmente mediante
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
+A partir del análisis competitivo realizado, CleanCode plantea las siguientes estrategias y tácticas preliminares para posicionar a MaquiGest frente a las soluciones identificadas. Estas propuestas buscan aprovechar las oportunidades del mercado, utilizar las fortalezas de MaquiGest, responder a las fortalezas de los competidores y aprovechar las limitaciones identificadas en sus propuestas.
+
+#### 1. Aprovechar la fortaleza: especialización en el alquiler de maquinaria para construcción
+
+**Estrategia**
+
+Posicionar MaquiGest como una plataforma especializada en los procesos de pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción, evitando competir únicamente mediante la cantidad de funcionalidades disponibles.
+
+**Tácticas**
+
+- **Terminología especializada:** utilizar conceptos propios del dominio del alquiler de maquinaria de manera consistente dentro de la plataforma.
+- **Priorización de procesos principales:** centrar el MVP en inventario, disponibilidad, reservas, alquileres, entregas, devoluciones y mantenimiento.
+- **Validación con empresas del sector:** utilizar las entrevistas para identificar cuáles de estos procesos representan mayor valor para los usuarios.
+- **Experiencia orientada al ciclo de alquiler:** diseñar los flujos de acuerdo con las etapas que atraviesa un equipo desde su disponibilidad hasta su devolución y posterior mantenimiento.
+
+**Valor Añadido**
+
+- Mayor adaptación de la plataforma al contexto específico de las empresas objetivo.
+- Reducción de funcionalidades innecesarias durante las primeras etapas de adopción.
+- Experiencia de uso alineada con las tareas que realizan las empresas de alquiler de maquinaria.
+
+#### 2. Aprovechar las debilidades de competidores: costos y amplitud funcional
+
+**Estrategia**
+
+Reducir la barrera de entrada para pequeñas y medianas empresas que no necesitan inicialmente el alcance funcional de plataformas más amplias o cuyos costos pueden superar su capacidad de inversión.
+
+**Tácticas**
+
+- **Adopción progresiva:** permitir que las empresas comiencen utilizando las funcionalidades esenciales de gestión de alquiler.
+- **Modelo SaaS escalonado:** evaluar planes de suscripción que permitan aumentar las capacidades disponibles conforme crezca la operación de la empresa.
+- **MVP orientado al valor:** evitar incorporar funcionalidades avanzadas que todavía no hayan sido validadas con los segmentos objetivo.
+- **Configuración simplificada:** reducir la cantidad de pasos necesarios para registrar inicialmente los equipos y comenzar a administrar alquileres.
+
+**Valor Añadido**
+
+- Menor barrera para la adopción de una plataforma digital por parte de pequeñas empresas.
+- Posibilidad de incorporar nuevas capacidades conforme aumenten las necesidades del negocio.
+- Mayor relación entre las funcionalidades contratadas y las necesidades reales de la empresa.
+
+#### 3. Afrontar las fortalezas de competidores consolidados
+
+**Estrategia**
+
+Frente a la experiencia, amplitud funcional y reconocimiento de Booqable, EZRentOut y Point of Rental, MaquiGest buscará construir confianza mediante una experiencia sencilla, trazable y adaptada al segmento objetivo.
+
+**Tácticas**
+
+- **Seguimiento del estado de las operaciones:** mostrar claramente el estado de reservas, alquileres, entregas, devoluciones e incidencias.
+- **Historial de equipos:** mantener registros relevantes sobre alquileres, incidencias y mantenimiento de cada equipo.
+- **Experiencia consistente:** mantener una navegación y comunicación coherentes entre el Landing Page y la Web Application.
+- **Retroalimentación de usuarios:** actualizar progresivamente el producto según los hallazgos obtenidos mediante Needfinding y Validation Interviews.
+
+**Valor Añadido**
+
+- Mayor visibilidad sobre el estado de los equipos y alquileres.
+- Reducción de la incertidumbre generada por información distribuida en diferentes herramientas.
+- Construcción progresiva de confianza mediante procesos claros y trazables.
+
+#### 4. Aprovechar la oportunidad: digitalización de empresas con procesos dispersos
+
+**Estrategia**
+
+Orientar la propuesta de MaquiGest hacia empresas que actualmente dependen de hojas de cálculo, documentos físicos, llamadas y aplicaciones de mensajería para coordinar sus operaciones de alquiler.
+
+**Tácticas**
+
+- **Centralización de información:** concentrar inventario, disponibilidad, reservas y alquileres en un mismo entorno.
+- **Consulta de disponibilidad:** facilitar que los responsables del negocio puedan conocer el estado de los equipos antes de confirmar un alquiler.
+- **Digitalización progresiva de documentos:** incorporar de manera gradual contratos, pagos y otros registros asociados al ciclo de alquiler.
+- **Contenido demostrativo:** utilizar el Landing Page y material audiovisual para mostrar de forma sencilla los beneficios de reemplazar procesos dispersos por una plataforma centralizada.
+
+**Valor Añadido**
+
+- Menor dependencia de registros distribuidos entre diferentes herramientas.
+- Mayor facilidad para consultar información actualizada durante las operaciones.
+- Mejor trazabilidad del ciclo de alquiler desde la reserva hasta la devolución del equipo.
+
 ## 2.2. Entrevistas
 
 ### 2.2.1. Diseño de entrevistas
