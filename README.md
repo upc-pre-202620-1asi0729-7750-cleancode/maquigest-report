@@ -329,6 +329,239 @@ Para el análisis se han seleccionado **Booqable, EZRentOut y Point of Rental**,
 
 ### 2.1.1. Análisis competitivo
 
+A través del presente análisis se busca conocer la posición de MaquiGest frente a soluciones digitales consolidadas dentro del mercado de gestión de alquileres. La comparación permite identificar las principales fortalezas, debilidades, oportunidades y amenazas relacionadas con cada alternativa y determinar posibles características diferenciales para la propuesta de CleanCode.
+
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="6">Competitive Analysis Landscape</th>
+    </tr>
+    <tr>
+      <td colspan="2"><strong>¿Por qué llevar a cabo este análisis?</strong></td>
+      <td colspan="4">¿Cómo puede MaquiGest posicionarse como una alternativa especializada para pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción frente a soluciones digitales de gestión de alquiler ya existentes?</td>
+    </tr>
+    <tr>
+      <td colspan="2"><strong>(En la cabecera colocar por cada competidor nombre y logo)</strong></td>
+      <th>
+        MaquiGest<br>
+        <img src="./assets/images/maquigest-logo.png" alt="MaquiGest" width="90">
+      </th>
+      <th>
+        Booqable<br>
+        <img src="./assets/images/booqable-logo.png" alt="Booqable" width="90">
+      </th>
+      <th>
+        EZRentOut<br>
+        <img src="./assets/images/ezrentout-logo.png" alt="EZRentOut" width="90">
+      </th>
+      <th>
+        Point of Rental<br>
+        <img src="./assets/images/point-of-rental-logo.png" alt="Point of Rental" width="90">
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2">Perfil</th>
+      <td><strong>Overview</strong></td>
+      <td>Plataforma SaaS desarrollada por CleanCode para centralizar el ciclo de alquiler de maquinaria y equipos para construcción. Contempla la gestión de inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento.</td>
+      <td>Plataforma SaaS orientada a empresas de alquiler. Integra gestión de inventario, pedidos, disponibilidad, reservas, presupuestos, contratos, facturas, pagos y reservas online.</td>
+      <td>Plataforma especializada en empresas de alquiler de equipos. Integra inventario, disponibilidad, reservas, devoluciones, mantenimiento, facturación y seguimiento de los equipos dentro de una misma solución.</td>
+      <td>Plataforma cloud para empresas de alquiler de diferentes industrias. Permite gestionar inventario, contratos, facturación, disponibilidad, mantenimiento, comercio electrónico, clientes y reportes.</td>
+    </tr>
+    <tr>
+      <td><strong>Ventaja competitiva</strong><br>¿Qué valor ofrece a los clientes?</td>
+      <td>Busca diferenciarse mediante una experiencia especializada para pequeñas y medianas empresas dedicadas al alquiler de maquinaria para construcción, priorizando simplicidad, centralización y trazabilidad durante todo el ciclo de alquiler.</td>
+      <td>Ofrece una puesta en marcha sencilla, disponibilidad en tiempo real y un conjunto amplio de herramientas para gestionar alquileres y recibir reservas online desde una misma plataforma.</td>
+      <td>Ofrece una cobertura amplia del ciclo de los equipos, integrando alquiler, mantenimiento, órdenes de trabajo, facturación y herramientas avanzadas de seguimiento de activos.</td>
+      <td>Cuenta con una trayectoria consolidada en software de alquiler y ofrece un ecosistema escalable que permite crecer desde operaciones pequeñas hasta empresas con múltiples ubicaciones y mayores necesidades operativas.</td>
+    </tr>
+    <tr>
+      <th rowspan="2">Perfil de Marketing</th>
+      <td><strong>Mercado objetivo</strong></td>
+      <td>Pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos utilizados principalmente en obras de construcción de pequeña escala, además de personas interesadas en alquilar dichos equipos.</td>
+      <td>Operadores independientes, pequeñas empresas, negocios de alquiler en crecimiento y empresas con múltiples ubicaciones pertenecientes a distintas industrias.</td>
+      <td>Empresas dedicadas al alquiler de equipos y, mediante sus planes de mayor nivel, compañías con múltiples ubicaciones y operaciones relacionadas con maquinaria pesada.</td>
+      <td>Empresas de alquiler de herramientas, equipos, eventos, maquinaria y otros activos, desde negocios en crecimiento hasta organizaciones con operaciones de mayor escala.</td>
+    </tr>
+    <tr>
+      <td><strong>Estrategias de marketing</strong></td>
+      <td>Se plantea utilizar presencia digital, contenido relacionado con la gestión de maquinaria, demostraciones del producto y contacto directo con empresas del sector para facilitar el conocimiento y adopción de la plataforma.</td>
+      <td>Utiliza prueba gratuita, demostraciones, contenido digital y planes diferenciados según el tamaño y crecimiento de la empresa.</td>
+      <td>Emplea pruebas gratuitas, demostraciones comerciales, contenido especializado y planes diferenciados según la complejidad de la operación.</td>
+      <td>Utiliza demostraciones personalizadas, casos de éxito, contenido especializado y soluciones diferenciadas según la industria y el tamaño de las operaciones.</td>
+    </tr>
+    <tr>
+      <th rowspan="3">Perfil de Producto</th>
+      <td><strong>Productos &amp; Servicios</strong></td>
+      <td>Gestión de inventario, disponibilidad, reservas, alquileres, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento. También contempla una experiencia digital para que los clientes consulten equipos y realicen procesos relacionados con sus alquileres.</td>
+      <td>Gestión de inventario y pedidos, disponibilidad en tiempo real, reservas online, presupuestos, contratos, facturas, pagos, reportes, integraciones, página de reservas y acceso a API en determinados planes.</td>
+      <td>Gestión de inventario, reservas, calendario de disponibilidad, pagos, tienda de alquiler, mantenimiento, órdenes de trabajo, aplicaciones móviles, alquileres de largo plazo y, en planes superiores, GPS y telemática.</td>
+      <td>Gestión de inventario, contratos, facturación, mantenimiento, órdenes de trabajo, reservas, portal para clientes, comercio electrónico, disponibilidad en múltiples ubicaciones, pagos, reportes y analítica.</td>
+    </tr>
+    <tr>
+      <td><strong>Precios &amp; Costos</strong></td>
+      <td>El esquema definitivo de precios deberá validarse durante el desarrollo del modelo de negocio. Se plantea un modelo SaaS basado en suscripciones adaptadas a las necesidades y capacidad operativa de las empresas objetivo.</td>
+      <td>Cuenta con los planes Start, Grow y Scale. Con facturación anual, sus precios publicados parten aproximadamente de USD 29, USD 69 y USD 149 mensuales respectivamente, además de complementos opcionales.</td>
+      <td>El plan Growth parte de USD 399 mensuales con facturación anual, Premium de USD 499 mensuales y Enterprise utiliza un esquema de precio personalizado.</td>
+      <td>No publica una tarifa única. El costo se determina mediante una cotización basada en factores como tamaño de la flota, número de ubicaciones y funcionalidades requeridas.</td>
+    </tr>
+    <tr>
+      <td><strong>Canales de distribución</strong><br>(Web y/o Móvil)</td>
+      <td>Landing Page y Web Application responsive accesibles mediante Internet.</td>
+      <td>Plataforma web, página de reservas, integración con sitios web y herramientas móviles complementarias para la gestión de alquileres.</td>
+      <td>Aplicación web, aplicaciones móviles para Android y iOS y Rental Webstore orientada a los clientes.</td>
+      <td>Plataforma web cloud, portal para clientes, comercio electrónico y herramientas móviles para las operaciones de alquiler.</td>
+    </tr>
+    <tr>
+      <th colspan="2">Análisis SWOT</th>
+      <td colspan="4">Se realiza el análisis para MaquiGest y sus competidores. Las fortalezas de MaquiGest deben apoyar sus oportunidades y contribuir a la posible ventaja competitiva de la propuesta.</td>
+    </tr>
+    <tr>
+      <th rowspan="4">Análisis SWOT</th>
+      <td><strong>Fortalezas</strong></td>
+      <td>
+        <ul>
+          <li>Especialización propuesta en pequeñas y medianas empresas vinculadas al alquiler de maquinaria para construcción.</li>
+          <li>Centralización del ciclo de alquiler.</li>
+          <li>Orientación tanto a las empresas como a sus clientes.</li>
+          <li>Propuesta enfocada en simplicidad y trazabilidad.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Plataforma madura y fácil de adoptar.</li>
+          <li>Disponibilidad en tiempo real.</li>
+          <li>Reservas online.</li>
+          <li>Amplio conjunto de funcionalidades e integraciones.</li>
+          <li>Plan inicial de menor costo frente a otras soluciones analizadas.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Amplia cobertura del ciclo de alquiler.</li>
+          <li>Gestión avanzada de mantenimiento.</li>
+          <li>Aplicaciones móviles.</li>
+          <li>Soporte para operaciones con maquinaria pesada.</li>
+          <li>Integraciones de GPS y telemática en el plan Enterprise.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Amplia experiencia en el mercado de alquiler.</li>
+          <li>Ecosistema escalable.</li>
+          <li>Gestión de mantenimiento y órdenes de trabajo.</li>
+          <li>Gran cantidad de reportes.</li>
+          <li>Soporte para múltiples industrias y ubicaciones.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Debilidades</strong></td>
+      <td>
+        <ul>
+          <li>Producto nuevo y todavía en desarrollo.</li>
+          <li>Ausencia inicial de reconocimiento de marca.</li>
+          <li>Menor cantidad de funcionalidades durante el MVP.</li>
+          <li>Base inicial limitada de usuarios e integraciones.</li>
+          <li>Necesidad de validar la disposición de pago del segmento objetivo.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Está orientado a diferentes industrias de alquiler y no específicamente al alquiler de maquinaria para construcción.</li>
+          <li>Algunas funcionalidades avanzadas dependen de planes superiores o complementos adicionales.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>El precio inicial puede representar una barrera para pequeñas empresas con presupuestos reducidos.</li>
+          <li>Algunas capacidades avanzadas se encuentran únicamente en planes superiores.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>El precio no se encuentra publicado directamente y requiere contacto comercial.</li>
+          <li>Su amplia cobertura puede superar las necesidades iniciales de pequeños negocios que buscan digitalizar solamente sus procesos esenciales.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Oportunidades</strong></td>
+      <td>
+        <ul>
+          <li>Digitalización de empresas que todavía utilizan hojas de cálculo, documentos y mensajería.</li>
+          <li>Especialización en un nicho concreto del alquiler de maquinaria.</li>
+          <li>Adaptación a las necesidades de empresas locales.</li>
+          <li>Incorporación progresiva de nuevas funcionalidades y servicios.</li>
+          <li>Desarrollo de planes SaaS adecuados al crecimiento de las empresas.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Crecimiento de las reservas digitales.</li>
+          <li>Expansión hacia nuevas industrias y empresas con múltiples ubicaciones.</li>
+          <li>Ampliación de integraciones y automatización de procesos.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Crecimiento de la digitalización de flotas.</li>
+          <li>Mayor adopción de mantenimiento preventivo y telemática.</li>
+          <li>Expansión hacia empresas de maquinaria pesada y operaciones multi-sede.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Crecimiento de empresas de alquiler que buscan migrar a soluciones cloud.</li>
+          <li>Incorporación de analítica e inteligencia artificial.</li>
+          <li>Expansión de servicios para operaciones multi-sede.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Amenazas</strong></td>
+      <td>
+        <ul>
+          <li>Presencia de competidores internacionales consolidados.</li>
+          <li>Resistencia al cambio de empresas acostumbradas a procesos manuales.</li>
+          <li>Sensibilidad al precio en pequeñas empresas.</li>
+          <li>Posibilidad de que plataformas existentes profundicen su oferta para el mismo segmento.</li>
+          <li>Dificultad inicial para generar confianza.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Aparición de soluciones especializadas en nichos específicos.</li>
+          <li>Competencia basada en precios.</li>
+          <li>Plataformas regionales que ofrezcan mayor adaptación al mercado local.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Competencia de soluciones SaaS de menor costo.</li>
+          <li>Preferencia de pequeñas empresas por herramientas más simples.</li>
+          <li>Aparición de plataformas especializadas en sectores concretos.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Competencia de soluciones SaaS más económicas y de menor alcance.</li>
+          <li>Aparición de plataformas especializadas por industria.</li>
+          <li>Empresas pequeñas que prefieran soluciones con precios publicados y adopción inmediata.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+El análisis permite observar que **Booqable, EZRentOut y Point of Rental cuentan con soluciones consolidadas y una cobertura funcional considerable**. Booqable destaca por su facilidad de adopción y su capacidad para habilitar reservas digitales; EZRentOut presenta una fuerte orientación a la gestión integral de equipos y mantenimiento; mientras que Point of Rental dispone de un ecosistema de mayor amplitud y escalabilidad para distintos tipos de operaciones.
+
+Frente a estas alternativas, MaquiGest no plantea competir inicialmente mediante una mayor cantidad de funcionalidades. Su oportunidad preliminar consiste en **especializar la experiencia en pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción**, priorizando los procesos de mayor valor para este segmento, una experiencia sencilla y la centralización del ciclo de alquiler. Estas características deberán contrastarse posteriormente con los resultados obtenidos en las entrevistas con los segmentos objetivo.
+
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
 ## 2.2. Entrevistas
