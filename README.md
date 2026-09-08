@@ -345,19 +345,19 @@ A través del presente análisis se busca conocer la posición de MaquiGest fren
       <td colspan="2"><strong>(En la cabecera colocar por cada competidor nombre y logo)</strong></td>
       <th>
         MaquiGest<br>
-        <img src="./assets/images/maquigest-logo.png" alt="MaquiGest" width="90">
+        <img src="./assets/md-images-competitors/maquigest-logo.jpeg" alt="MaquiGest" width="90">
       </th>
       <th>
         Booqable<br>
-        <img src="./assets/images/booqable-logo.png" alt="Booqable" width="90">
+        <img src="./assets/md-images-competitors/booqable-logo.PNG" alt="Booqable" width="90">
       </th>
       <th>
         EZRentOut<br>
-        <img src="./assets/images/ezrentout-logo.png" alt="EZRentOut" width="90">
+        <img src="./assets/md-images-competitors/ezrentout-logo.png" alt="EZRentOut" width="90">
       </th>
       <th>
         Point of Rental<br>
-        <img src="./assets/images/point-of-rental-logo.png" alt="Point of Rental" width="90">
+        <img src="./assets/md-images-competitors/point-of-rental-logo.png" alt="Point of Rental" width="90">
       </th>
     </tr>
   </thead>
