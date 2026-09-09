@@ -399,6 +399,7 @@ Sabremos que hemos tenido éxito cuando veamos una adopción recurrente de la pl
 ## 1.3. Segmentos objetivo
 
 **Segmento #1: Pequeñas y medianas empresas de alquiler de maquinaria**
+
 Empresas dedicadas al alquiler de maquinaria y equipos utilizados principalmente en construcción, remodelación, movimiento de tierras y obras civiles. 
 
 * Aspectos demográficos:
@@ -409,6 +410,7 @@ Empresas dedicadas al alquiler de maquinaria y equipos utilizados principalmente
   - Motivación: reducir pérdidas, mantener los equipos disponibles y tener mayor control sobre el negocio.
 
 **Segmento #2: Pequeñas empresas constructoras**
+
 Pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. 
 
 * Aspectos demográficos:
