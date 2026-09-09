@@ -408,7 +408,7 @@ Empresas dedicadas al alquiler de maquinaria y equipos utilizados principalmente
   - Comportamiento tecnológico: utiliza computadora y smartphone para gestionar el negocio; suele utilizar WhatsApp, Excel, correo electrónico y sistemas administrativos básicos.
   - Motivación: reducir pérdidas, mantener los equipos disponibles y tener mayor control sobre el negocio.
 
-**Segmento #2: Pequeñas y medianas empresas de alquiler de maquinaria**
+**Segmento #2: Pequeñas empresas constructoras**
 Pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. 
 
 * Aspectos demográficos:
