@@ -430,8 +430,6 @@ El impacto se refleja en el tiempo empleado para comprobar información, los pos
 
 ## 3.1. User Stories
 
-## 3.1. User Stories
-
 <table>
 <tr>
 <th>Epic / Story ID</th>
