@@ -740,6 +740,7 @@ Then el sistema registra la solicitud de contacto
 
 ### 4.2.5. Navigation Systems
 
+## 4.3. Landing Page UI Design
 ### 4.3.1. Landing Page Wireframe
 
 En esta sección se presentan los wireframes de la Landing Page de MaquiGest. Estos artefactos permiten definir la estructura inicial de la interfaz, la distribución de los contenidos y la jerarquía visual de los principales elementos antes de aplicar los estilos finales del producto. Asimismo, permiten evidenciar la traducción de las decisiones tomadas previamente en las secciones de Style Guidelines e Information Architecture hacia una propuesta concreta de interfaz para la Landing Page.
