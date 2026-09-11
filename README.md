@@ -724,21 +724,133 @@ Then el sistema registra la solicitud de contacto
 
 ## 4.1. Style Guidelines
 
+Los Style Guidelines establecen los lineamientos visuales utilizados en el diseño de la interfaz, con el propósito de mantener una experiencia coherente y consistente a lo largo del producto digital. 
+
+
 ### 4.1.1. General Style Guidelines
+
+**Branding**: El isotipo de MaquiGest representa la combinación de los dos conceptos principales que conforman el nombre de la plataforma: maquinaria y gestión. Su diseño parte de una forma geométrica inspirada en la inicial “M”, integrando elementos visuales asociados a la maquinaria de construcción. 
+
+<img src = "assets/md-images-isotype/isotypeMaquiGest.png" width = 300px>
+
+**Typography:** Se ha escogido la tipografía Inter debido a su excelente legibilidad, tanto en textos pequeños como en títulos y botones. Además, es una tipografía moderna y profesional, características que se adaptan favorablemente a las necesidades y objetivos de nuestra plataforma. 
+
+<img src = "assets/md-images-typography/inter_typography.png" width = 300px>
+
+**Spacing:** Se establece un sistema de espaciado consistente con el propósito de mantener una interfaz ordenada, legible y visualmente equilibrada. La separación entre textos, botones, campos de formulario, tarjetas y secciones permite diferenciar y agrupar los elementos según su relación, evitando la saturación visual y facilitando el recorrido del contenido. Asimismo, mantener valores de espaciado definidos contribuye a la consistencia entre los diferentes componentes de MaquiGest y favorece su adaptación a distintos tamaños de pantalla.
+
+**Dimensiones (Tonos de voz):** El lenguaje de MaquiGest apunta a una comunicación profesional, clara, directa y orientada a la acción, buscando transmitir confianza y facilitar que los usuarios comprendan rápidamente la información y las acciones disponibles en la plataforma.
+- **Enfoque:** Nuestro enfoque es profesional y práctico. Por un lado, es profesional porque buscamos transmitir confianza, seriedad y seguridad en la gestión de las operaciones. Por otro lado, es práctico porque comunicamos soluciones concretas y útiles para las necesidades de nuestros usuarios. De esta manera, evitamos presentar información innecesaria y nos enfocamos en facilitar la realización de las tareas.
+- **Lenguaje:** Establecemos un lenguaje claro y directo, priorizando términos conocidos por las empresas del sector de alquiler de maquinaria y construcción. Evitamos tecnicismos innecesarios y utilizamos expresiones sencillas que permitan comprender rápidamente las funciones, instrucciones, mensajes y acciones disponibles en la plataforma.
+- **Estilo de comunicación:** Nuestro estilo de comunicación será profesional, cercano y orientado a la acción. Los mensajes serán breves y fáciles de comprender, utilizando verbos que indiquen claramente qué puede hacer el usuario, como registrar, consultar, reservar, alquilar o devolver. Asimismo, los mensajes de confirmación, advertencia y error proporcionarán información concreta para que el usuario pueda comprender la situación y saber qué acción realizar.
+
 
 ### 4.1.2. Web Style Guidelines
 
+1. Diseño Responsivo y Adaptabilidad
+- **Adaptación fluida:** El sitio utiliza un sistema de retícula flexible basado en CSS Flexbox y Media Queries. Por un lado, Flexbox permite distribuir y reorganizar los elementos de manera flexible según el espacio disponible; por otro, las Media Queries permiten modificar esta distribución en función del tamaño de la pantalla.
+- **Puntos de ruptura (breakpoints):** Se establece un punto de ruptura en 980 px, a partir del cual la navegación cambia de una barra horizontal a un menú vertical optimizado para pantallas de menor tamaño. Asimismo, las tarjetas de servicios (planes) pasan de una disposición en cuadrícula (grid) a una organización vertical.
+
+2. Sistema de Layout y Patrones de Lectura
+- **Patrón de lectura:** La Landing Page presenta principalmente un patrón de lectura vertical y centrado, guiado por una clara jerarquía visual. En la sección principal (hero), la atención se dirige desde el encabezado y el título principal hacia la descripción, las llamadas a la acción (CTA) y, posteriormente, los elementos visuales inferiores. Este recorrido favorece una exploración secuencial del contenido y la identificación de las acciones principales. 
+- **Jerarquía Visual:** La interfaz establece una jerarquía visual clara mediante variaciones de tamaño, color, contraste, peso tipográfico y espaciado. Los títulos principales reciben mayor protagonismo, seguidos por los textos descriptivos y las llamadas a la acción (CTA). Asimismo, el uso de colores diferenciados permite destacar las acciones prioritarias y orientar al usuario durante el recorrido del contenido. 
+3. Elementos Visuales
+- **Imágenes:** La identidad visual de la página utiliza dos versiones del logotipo de MaquiGest: una versión en azul oscuro, destinada principalmente a fondos claros, y una versión en blanco, utilizada sobre fondos oscuros para garantizar un contraste y una legibilidad adecuados. 
+4. Componentes de Interacción
+- **Botón primario (Action):** Botón de color naranja con texto en azul oscuro, utilizado para destacar la acción principal “Solicitar demo”. Al seleccionarlo, dirige al usuario a una sección donde puede completar un formulario con los datos de su empresa para solicitar posteriormente una demostración del funcionamiento de la plataforma. 
+- **Enlaces de navegación:** Enlaces ubicados en la barra de navegación superior que permiten dirigir al usuario hacia distintas secciones de la página. Presentan un estado hover que oscurece ligeramente el texto al posicionar el cursor sobre ellos. 
+- **Estados visuales:** Cada elemento interactivo cuenta con dos estados claramente definidos: default y hover.
+5. Formularios y Entradas de Datos
+- **Claridad y visualización:** El formulario de solicitud de demostración presenta una estructura clara y organizada, utilizando distintos tipos de campos según la información requerida: campos de texto, una lista desplegable y un área de texto. Cada campo cuenta con una etiqueta descriptiva y los campos obligatorios se identifican mediante un asterisco (*), mientras que el campo no requerido se señala explícitamente como opcional. Finalmente, el formulario presenta un botón de acción principal claramente diferenciado para enviar la solicitud. 
+6. Accesibilidad y Estándares de Calidad:
+Se evalúa el cumplimiento de los principios de accesibilidad establecidos por las Web Content Accessibility Guidelines (WCAG): perceptible:  operable, comprensible y robusto. 
+- **Perceptible:** El contenido presenta una estructura visual clara, con textos legibles y un contraste adecuado entre los elementos y sus fondos. La información relevante puede distinguirse mediante diferentes recursos visuales, como tamaño, tipografía y color. 
+- **Operable:** Los elementos interactivos de la página pueden utilizarse mediante diferentes métodos de entrada. La navegación mediante teclado permite recorrer enlaces, botones y campos de formulario, facilitando la interacción sin depender exclusivamente del mouse. 
+- **Comprensible:** La interfaz utiliza textos, etiquetas y acciones claramente identificables. Los formularios indican los campos obligatorios y opcionales, mientras que la organización y comportamiento de los componentes permiten al usuario comprender las acciones disponibles. 
+- **Robusto:** El código utiliza correctamente elementos HTML semánticos y componentes apropiados según su función, favoreciendo una correcta interpretación del contenido por navegadores y tecnologías de asistencia. 
+
 ## 4.2. Information Architecture
+
+Para el desarrollo del proyecto, la Arquitectura de la Información se plantea considerando las necesidades de los usuarios y la estructura del contenido de la plataforma. Esto permite establecer una organización coherente de las funcionalidades y reducir la complejidad durante la navegación e interacción con el sistema. 
 
 ### 4.2.1. Organization Systems
 
+**Organización jerárquica visual:** Empecemos con la vista de nuestro segmento principal: las empresas de alquiler de maquinaria. En la parte lateral de la plataforma se encontrarán las siguientes opciones de navegación: Dashboard, Equipos, Reservas, Alquileres, Mantenimiento, Clientes y Reportes.
+Al ingresar a la plataforma, el usuario se encontrará en la sección Dashboard, donde podrá visualizar y monitorear información relevante, como la cantidad de equipos disponibles, equipos alquilados, equipos en mantenimiento y próximas reservas. Asimismo, en esta sección se encontrarán las principales acciones que puede realizar el usuario, como registrar un equipo, crear una reserva y registrar un alquiler.
+Además, en la parte inferior del Dashboard se visualizarán las próximas reservas, los alquileres activos, los equipos que requieren mantenimiento y la actividad reciente, permitiendo al usuario tener una visión general del estado de sus operaciones.
+Continuamos con la vista de nuestro segundo segmento: las pequeñas empresas constructoras. En la parte lateral de la plataforma se encontrarán las siguientes opciones de navegación: Dashboard, Buscar equipos, Mis reservas, Mis alquileres y Perfil.
+Al ingresar a la plataforma, el usuario se encontrará en la sección Dashboard, donde podrá visualizar información relevante sobre sus alquileres, como las reservas próximas, los alquileres activos y las fechas de devolución. De esta manera, podrá conocer rápidamente el estado de los equipos que está utilizando en sus proyectos.
+Asimismo, en esta sección se encontrarán las principales acciones que puede realizar el usuario, como buscar maquinaria, realizar una solicitud de alquiler y consultar sus alquileres activos.
+Debajo de estas acciones se visualizará información complementaria, como las reservas próximas, los alquileres activos, las fechas de devolución y la actividad reciente, permitiendo al usuario tener una visión general de los equipos que tiene reservados o actualmente en alquiler.
+
+**Organización Secuencial:** Para la organización secuencial del segmento de empresas de alquiler de maquinaria, se ha definido un flujo basado en el ciclo de gestión de los equipos dentro de MaquiGest. El proceso comienza con el registro de la maquinaria, donde se ingresan sus principales características y datos de identificación.
+Una vez registrado el equipo, el usuario puede consultar su disponibilidad y, cuando un cliente solicita la maquinaria, crear una reserva para un período determinado. Posteriormente, la reserva puede convertirse en un alquiler, dando paso a las acciones relacionadas con la entrega del equipo.
+Durante el alquiler, la empresa podrá consultar el estado de la operación y, cuando finalice el período establecido, registrar la devolución de la maquinaria. Después de la devolución, se realizará una inspección del equipo para verificar su estado. Si se detecta algún daño o se requiere mantenimiento, la maquinaria pasará al proceso correspondiente; de lo contrario, podrá volver a estar disponible para un nuevo alquiler.
+De esta manera, la organización secuencial permite que el usuario siga un flujo lógico y ordenado, acompañando el ciclo de vida de la maquinaria desde su registro hasta su disponibilidad nuevamente, reduciendo la necesidad de realizar procesos desconectados entre diferentes secciones de la plataforma.
+
+**Organización matricial:** En la sección de Equipos, los usuarios podrán visualizar la información de las maquinarias registradas mediante una estructura matricial. Cada equipo se mostrará en una fila y sus principales características se organizarán en diferentes columnas, como nombre o código del equipo, categoría, estado, ubicación, disponibilidad y acciones.
+Esta organización permitirá que los usuarios puedan consultar, comparar y gestionar rápidamente los diferentes equipos registrados en la plataforma sin necesidad de acceder individualmente a cada uno. Asimismo, se podrán aplicar filtros para facilitar la búsqueda de una maquinaria específica según su estado, categoría o disponibilidad.
+De esta manera, la organización matricial permitirá presentar una gran cantidad de información de forma estructurada, facilitando la consulta y gestión del inventario de maquinaria.
+
+**Sistemas de categorización:**
+- Por tópicos: Equipos, Reservas, Alquileres, Mantenimiento, Clientes y Reportes.
+- Por audiencia: Se presenta diferente información y funciones a las empresas de alquiler y pequeñas empresas constructoras. 
+
+
 ### 4.2.2. Labeling Systems
 
-### 4.2.3. SEO Tags and Meta Tags
+**Etiquetas para la navegación principal:** 
+- Dashboard: Vista general del estado de los equipos, reservas, alquileres y mantenimiento. 
+- Equipos: Permite registrar, consultar y administrar las maquinarias disponibles en la empresa. 
+- Reservas: Permite gestionar las solicitudes y reservas de equipos para determinados períodos. 
+- Alquileres: Permite administrar los alquileres activos, sus detalles y su estado. 
+- Mantenimiento: Permite registrar inspecciones, mantenimientos, incidencias y reparaciones de los equipos. 
+- Clientes: Permite registrar y consultar la información de las empresas o personas que alquilan los equipos.
+- Reportes: Permite consultar información resumida sobre alquileres, utilización de equipos, ingresos y mantenimiento.
 
+**Etiquetas para acciones:**
+- Registrar equipo: Permite agregar una nueva maquinaria al inventario.
+Editar equipo: Permite modificar la información de una maquinaria registrada.
+- Crear reserva: Permite apartar un equipo para un período determinado.
+- Confirmar reserva: Permite confirmar una reserva solicitada por un cliente.
+- Registrar alquiler: Permite iniciar y registrar formalmente un nuevo alquiler.
+- Registrar entrega: Permite registrar la entrega del equipo al cliente.
+- Registrar devolución: Permite registrar el retorno de la maquinaria.
+- Registrar mantenimiento: Permite registrar una actividad de mantenimiento para un equipo. 
+- Registrar incidencia: Permite registrar daños, fallas u otros problemas detectados en un equipo. 
+Ver detalles: Permite consultar toda la información relacionada con un registro.
+- Editar: Permite modificar la información de un registro.
+- Eliminar: Permite eliminar un registro cuando corresponda.
+
+### 4.2.3. SEO Tags and Meta Tags
+- Titulo:
+```html
+<title>MaquiGest | Gestión de alquiler de maquinaria</title>
+```
+
+- Descripción:
+```html
+<meta name="description" content="Gestiona el alquiler de maquinaria para construcción en un solo lugar. Controla equipos, reservas, alquileres, mantenimiento y operaciones con MaquiGest."> 
+```
+
+- Palabras clave (keywords):
+```html
+<meta name="keywords" content="alquiler de maquinaria, gestión de maquinaria, alquiler de equipos, maquinaria para construcción, software de alquiler, gestión de alquileres, MaquiGest"> 
+```
+
+- Autor:
+```html
+<meta name="author" content="CleanCode"> 
+```
 ### 4.2.4. Searching Systems
 
+- **Sistema de búsqueda local:** Dentro de la sección “Equipos”, se dispone de una barra de búsqueda que permite localizar equipos mediante su nombre, código o categoría. Adicionalmente, se incorporan filtros que permiten refinar los resultados según categoría, estado y ubicación.
+
 ### 4.2.5. Navigation Systems
+
+- **Sistema de navegación global:** Se implementa mediante una barra lateral (sidebar) que permite al usuario acceder a las principales secciones del sistema, como Dashboard, Equipos, Reservas, Alquileres, Mantenimiento, Clientes y Reportes.
+- **Botones de Acción Rápida:** Botones “Registrar Equipo” y “Crear Reserva” ubicados en el Dashboard, que permiten acceder directamente a procesos frecuentes.
+
 
 ## 4.3. Landing Page UI Design
 
