@@ -345,11 +345,11 @@ El impacto se refleja en el tiempo empleado para comprobar información, los pos
 
 El User Journey Mapping permite representar de manera integral la experiencia de los principales usuarios de MaquiGest a lo largo del proceso de alquiler de maquinaria y equipos para pequeñas construcciones. El recorrido end-to-end que se pretende ilustrar comprende las distintas etapas que atraviesan la Persona Alquiler y la Persona Constructora, desde la identificación de una necesidad y la búsqueda o gestión de un equipo, hasta la reservación, formalización del alquiler, entrega, utilización y posterior devolución de la maquinaria. A través de este recorrido se busca identificar las acciones, necesidades, expectativas y principales dificultades que experimentan ambos segmentos, con el propósito de reconocer oportunidades de mejora que puedan ser abordadas mediante las funcionalidades propuestas en MaquiGest.
 
-**1. User Journey Map para el primer segmento**
+**1. User Journey Map - Pequeñas y medianas empresas de alquiler de maquinaria**
 
 ![User Journey Map](./assets/md-images-chapter2/user-journey-map1.png)
 
-**2. User Journey Map para el segundo segmento**
+**2. User Journey Map - Pequeñas empresas constructoras**
 
 ![User Journey Map](./assets/md-images-chapter2/user-journey-map2.png)
 
