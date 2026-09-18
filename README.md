@@ -1,56 +1,71 @@
-﻿# MaquiGest
-<div align="center">
+﻿<div align="center">
 
-  <img src="assets/md-images-front/upc-logo.png" width="150px" />
+<img src="assets/md-images-front/upc-logo.png" alt="Logo de la Universidad Peruana de Ciencias Aplicadas" width="90">
 
-  <p>Universidad Peruana de Ciencias Aplicadas</p>
-  <p>Facultad de Ingeniería</p>
-  <p>Carrera de Ingeniería de Software</p>
+<p>
+Universidad Peruana de Ciencias Aplicadas<br>
+Carrera de Ingeniería de Software
+</p>
 
-  <p>Ciclo académico 2026-20</p><br>
+<br>
 
-  <p><b>1ASI0729</b></p>
-  <p><b>Desarrollo de Aplicaciones Open Source</b></p>
-  <p>NRC</p>
-  <p><b>7750</b></p>
-  <p><b>Informe de Trabajo Final</b></p>
-  <p>Docente</p>
-  <p><b>Bautista Ubillús, Efraín Ricardo</b></p>
-  <p>Startup</p>
-  <p><b>CleanCode</b></p><br>
-  <p>Producto</p>
-  <p><b>MaquiGest</b></p>
+<p>
+<strong>1ASI0729</strong><br>
+<strong>Desarrollo de Aplicaciones Open Source</strong>
+</p>
 
-</div>
+<p>
+NRC<br>
+<strong>7750</strong>
+</p>
 
-<div align="center">
-  <h3>Integrantes</h3>
+<h3>Informe del Trabajo Final</h3>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Código</th>
-        <th>Apellidos y Nombres</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>U202115277</td>
-        <td>Delgado Perez, James Caleb</td>
-      </tr>
-      <tr>
-        <td>U202111529</td>
-        <td>Montalvo Vasquez, Bruno Rodrigo</td>
-      </tr>
-      <tr>
-        <td>U202410211</td>
-        <td>Manosalva Tovar, Miroslav</td>
-      </tr>
-    </tbody>
-  </table>
-  <br>
+<p>
+Docente<br>
+<strong>Bautista Ubillús, Efraín Ricardo</strong>
+</p>
 
-  <p><b>Septiembre, 2026</b></p>
+<br>
+
+<p>
+Equipo<br>
+<strong>CleanCode</strong>
+</p>
+
+<p>
+Proyecto<br>
+<strong>MaquiGest</strong>
+</p>
+
+<br>
+
+<p><strong>Integrantes</strong></p>
+
+<p>
+<span style="display:inline-block; width:120px; text-align:left;"><strong>Código</strong></span>
+<span style="display:inline-block; width:300px; text-align:left;"><strong>Apellidos y Nombres</strong></span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202115277</span>
+<span style="display:inline-block; width:300px; text-align:left;">Delgado Perez, James Caleb</span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202111529</span>
+<span style="display:inline-block; width:300px; text-align:left;">Montalvo Vasquez, Bruno Rodrigo</span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202410211</span>
+<span style="display:inline-block; width:300px; text-align:left;">Manosalva Tovar, Miroslav</span>
+</p>
+
+<br>
+
+<p><strong>Período 202620</strong></p>
+
+<br>
+
+<p><strong>Septiembre 2026</strong></p>
 
 </div>
 
@@ -311,25 +326,518 @@ El impacto se refleja en el tiempo empleado para comprobar información, los pos
 
 #### 1.2.2.1. Lean UX Problem Statements
 
+La situación actual del sector de alquiler de maquinaria y equipos para pequeñas construcciones se ha centrado principalmente en empresas que gestionan sus operaciones mediante herramientas dispersas como hojas de cálculo, llamadas, mensajes y sistemas independientes, dificultando el control de la disponibilidad, reservas, contratos, entregas, devoluciones y mantenimiento de sus equipos.
+
+Lo que los productos y servicios existentes no logran abordar completamente es la necesidad de las pequeñas empresas de contar con una solución especializada, sencilla y accesible, que les permita gestionar de manera integral el ciclo de vida de su maquinaria sin enfrentarse a la complejidad de plataformas orientadas a operaciones de mayor escala.
+
+Nuestro producto abordará esta brecha mediante una plataforma SaaS especializada en pequeñas empresas de alquiler de maquinaria para construcción, que centralizará en un único lugar la gestión de inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento, permitiendo realizar un seguimiento del equipo durante todo su ciclo de alquiler.
+
+Nuestro enfoque inicial será pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos utilizados en proyectos de construcción de pequeña escala, que necesitan profesionalizar y organizar sus operaciones sin incorporar herramientas excesivamente complejas.
+
+Sabremos que hemos tenido éxito cuando veamos una adopción recurrente de la plataforma por parte de estas empresas, una reducción de errores relacionados con reservas y disponibilidad, un mayor control sobre el estado de los equipos y un incremento en el uso de funcionalidades como gestión de alquileres y mantenimiento
+
 #### 1.2.2.2. Lean UX Assumptions
+
+**Business Assumptions:**
+* Creemos que las pequeñas y medianas empresas de alquiler de equipo necesitan una solución digital especializada para gestionar sus operaciones de alquiler.
+
+* Creemos que las pequeñas empresas de construcción están dispuestas a utilizar una plataforma digital para buscar, reservar y gestionar el alquiler de equipo de construcción.
+
+* Creemos que las empresas de alquiler de equipo están dispuestas a pagar una suscripción mensual de SaaS por una plataforma que centralice y simplifique sus operaciones de alquiler.
+
+* Creemos que un modelo de suscripción de tres niveles puede adaptarse a las diferentes necesidades operativas y niveles de crecimiento de las pequeñas y medianas empresas de alquiler de equipo.
+
+**Business Outcome Assumptions:**
+
+* Creemos que MaquiGest logrará un número cada vez mayor de empresas de alquiler que paguen por el servicio gracias a la adopción de su plataforma SaaS.
+
+* Creemos que MaquiGest  logrará una alta tasa de retención de clientes al brindar valor continuo a las empresas de alquiler de equipos.
+
+* Creemos que MaquiGest aumentará la adopción de planes de suscripción de mayor nivel a medida que las empresas de alquiler amplíen su inventario y sus necesidades operativas.
+
+* Creemos que la participación de las empresas de construcción aumentará el número de transacciones de alquiler gestionadas a través de la plataforma.
+
+**User Assumptions:**
+
+* Creemos que los propietarios y administradores de pequeñas y medianas empresas de alquiler de equipos son usuarios clave que necesitan supervisar el inventario, los alquileres, los ingresos y el mantenimiento de los equipos.
+
+* Creemos que los operadores de alquiler son responsables de gestionar las reservaciones, los contratos, las entregas de equipo, las devoluciones y los incidentes.
+
+* Creemos que los gerentes de compras o los jefes de obra en pequeñas empresas constructoras son responsables de buscar y alquilar el equipo necesario para sus proyectos.
+
+* Creemos que las empresas constructoras necesitan conocer la disponibilidad del equipo, las condiciones de alquiler y las fechas de devolución al gestionar sus proyectos.
+
+**User Outcome and Benefit Assumptions:**
+
+* Creemos que los administradores de las empresas de alquiler desean conocer rápidamente el estado, la ubicación y la disponibilidad de cada equipo para poder tomar mejores decisiones operativas.
+
+* Creemos que los operadores de alquiler desean gestionar de manera eficiente las reservaciones, entregas y devoluciones para reducir los errores operativos y ahorrar tiempo.
+
+* Creemos que los administradores de empresas de alquiler desean monitorear el estado de los equipos y el historial de mantenimiento para maximizar la disponibilidad y la vida útil de los mismos.
+
+* Creemos que los gerentes de construcción desean encontrar rápidamente equipos adecuados y disponibles para obtener a tiempo los recursos necesarios para sus proyectos.
+
+* Creemos que las empresas constructoras desean contar con información clara sobre las condiciones de alquiler, los costos y las fechas de devolución para planificar mejor los recursos y gastos de sus proyectos.
+
+**Feature Assumptions:**
+
+* Creemos que las empresas de alquiler necesitan un módulo de administración de inventario para registrar el equipo, sus características, ubicación, estado y disponibilidad.
+
+* Creemos que las empresas de alquiler necesitan un sistema de reservaciones que verifique automáticamente la disponibilidad de los equipos y evite que se superpongan las reservaciones.
+
+* Creemos que las empresas de alquiler necesitan un módulo integrado de gestión de alquileres para administrar contratos, tarifas, pagos, entregas y devoluciones.
+
+* Creemos que las empresas de alquiler necesitan un módulo de gestión de mantenimiento para registrar inspecciones, incidentes, reparaciones, costos y mantenimiento programado.
+
+* Creemos que las empresas constructoras necesitan una interfaz de búsqueda y alquiler de equipos para encontrar la maquinaria adecuada, verificar la disponibilidad y solicitar alquileres de acuerdo con los requisitos de sus proyectos.
+
+* Creemos que las empresas constructoras necesitan una interfaz de seguimiento de alquileres para monitorear sus alquileres activos, los períodos de alquiler, los costos y las fechas de devolución
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
+* Creemos que lograremos una mayor retención de clientes si los administradores de las empresas de alquiler pueden conocer rápidamente el estado, la ubicación y la disponibilidad de su equipo mediante un módulo centralizado de gestión de inventario.
+
+* Creemos que lograremos una mayor satisfacción y retención de los clientes si las empresas de alquiler pueden gestionar de manera eficiente las reservaciones y evitar conflictos de disponibilidad mediante un sistema automatizado de gestión de reservaciones.
+
+* Creemos que aumentaremos el número de transacciones de alquiler completadas si los operadores de alquiler pueden gestionar los contratos, los pagos, las entregas y las devoluciones en un solo lugar mediante un módulo integrado de gestión de alquileres.
+
+* Creemos que podremos aumentar la utilización de los equipos y reducir el tiempo de inactividad operativa si los administradores de las empresas de alquiler pueden monitorear de manera proactiva el estado y las necesidades de mantenimiento de sus equipos mediante un módulo de gestión de mantenimiento.
+
+* Creemos que aumentaremos el número de transacciones de alquiler gestionadas a través de MaquiGest si los gerentes de construcción pueden encontrar rápidamente el equipo adecuado y disponible para sus proyectos mediante una interfaz de búsqueda y alquiler de equipo.
+
+* Creemos que lograremos aumentar la retención de usuarios entre las empresas de construcción si los gerentes de obra pueden monitorear fácilmente sus alquileres activos, los costos y las fechas de devolución mediante una interfaz de seguimiento de alquileres.
+
 #### 1.2.2.4. Lean UX Canvas
 
+<img src = "assets/md-images-lean_ux_canva/CLEANCODE_MaquiGest.png" width="800px">
+
 ## 1.3. Segmentos objetivo
+
+**Segmento #1: Pequeñas y medianas empresas de alquiler de maquinaria**
+
+Empresas dedicadas al alquiler de maquinaria y equipos utilizados principalmente en construcción, remodelación, movimiento de tierras y obras civiles. 
+
+* Aspectos demográficos:
+  - Edades: aproximadamente 30–55 años. 
+  - Ubicación: principalmente zonas urbanas donde existe concentración de actividad empresarial y construcción.
+* Aspectos psicográficos:
+  - Comportamiento tecnológico: utiliza computadora y smartphone para gestionar el negocio; suele utilizar WhatsApp, Excel, correo electrónico y sistemas administrativos básicos.
+  - Motivación: reducir pérdidas, mantener los equipos disponibles y tener mayor control sobre el negocio.
+
+**Segmento #2: Pequeñas empresas constructoras**
+
+Pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. 
+
+* Aspectos demográficos:
+  - Edades: aproximadamente 28–50 años. 
+  - Ubicación: zonas urbanas y áreas con actividad constructiva. 
+* Aspectos psicográficos:
+  - Comportamiento: Prefieren procesos de solicitud simples y rápidos.
+  - Motivación: reducir costos y evitar retrasos en sus proyectos.
 
 # Capítulo II: Requirements Elicitation & Analysis
 
 ## 2.1. Competidores
 
+En esta sección se analizan soluciones digitales que actualmente brindan soporte a empresas dedicadas al alquiler de equipos y otros activos, con el objetivo de conocer las alternativas existentes e identificar oportunidades de diferenciación para MaquiGest.
+
+Para el análisis se han seleccionado **Booqable, EZRentOut y Point of Rental**, debido a que cuentan con modelos de negocio basados en productos digitales relacionados directamente con la gestión de alquileres. Booqable ofrece una plataforma SaaS para la administración de inventario, pedidos y reservas; EZRentOut se especializa en la gestión de alquiler de equipos e incorpora funcionalidades de mantenimiento y seguimiento de activos; mientras que Point of Rental ofrece soluciones de gestión para empresas de alquiler de distintos tamaños, incluyendo aquellas vinculadas al alquiler de herramientas y maquinaria.
+
 ### 2.1.1. Análisis competitivo
 
+A través del presente análisis se busca conocer la posición de MaquiGest frente a soluciones digitales consolidadas dentro del mercado de gestión de alquileres. La comparación permite identificar las principales fortalezas, debilidades, oportunidades y amenazas relacionadas con cada alternativa y determinar posibles características diferenciales para la propuesta de CleanCode.
+
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="6">Competitive Analysis Landscape</th>
+    </tr>
+    <tr>
+      <td colspan="2"><strong>¿Por qué llevar a cabo este análisis?</strong></td>
+      <td colspan="4">¿Cómo puede MaquiGest posicionarse como una alternativa especializada para pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción frente a soluciones digitales de gestión de alquiler ya existentes?</td>
+    </tr>
+    <tr>
+      <td colspan="2"><strong>(En la cabecera colocar por cada competidor nombre y logo)</strong></td>
+      <th>
+        MaquiGest<br>
+        <img src="./assets/md-images-competitors/maquigest-logo.jpeg" alt="MaquiGest" width="90">
+      </th>
+      <th>
+        Booqable<br>
+        <img src="./assets/md-images-competitors/booqable-logo.PNG" alt="Booqable" width="90">
+      </th>
+      <th>
+        EZRentOut<br>
+        <img src="./assets/md-images-competitors/ezrentout-logo.png" alt="EZRentOut" width="90">
+      </th>
+      <th>
+        Point of Rental<br>
+        <img src="./assets/md-images-competitors/point-of-rental-logo.png" alt="Point of Rental" width="90">
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2">Perfil</th>
+      <td><strong>Overview</strong></td>
+      <td>Plataforma SaaS desarrollada por CleanCode para centralizar el ciclo de alquiler de maquinaria y equipos para construcción. Contempla la gestión de inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento.</td>
+      <td>Plataforma SaaS orientada a empresas de alquiler. Integra gestión de inventario, pedidos, disponibilidad, reservas, presupuestos, contratos, facturas, pagos y reservas online.</td>
+      <td>Plataforma especializada en empresas de alquiler de equipos. Integra inventario, disponibilidad, reservas, devoluciones, mantenimiento, facturación y seguimiento de los equipos dentro de una misma solución.</td>
+      <td>Plataforma cloud para empresas de alquiler de diferentes industrias. Permite gestionar inventario, contratos, facturación, disponibilidad, mantenimiento, comercio electrónico, clientes y reportes.</td>
+    </tr>
+    <tr>
+      <td><strong>Ventaja competitiva</strong><br>¿Qué valor ofrece a los clientes?</td>
+      <td>Busca diferenciarse mediante una experiencia especializada para pequeñas y medianas empresas dedicadas al alquiler de maquinaria para construcción, priorizando simplicidad, centralización y trazabilidad durante todo el ciclo de alquiler.</td>
+      <td>Ofrece una puesta en marcha sencilla, disponibilidad en tiempo real y un conjunto amplio de herramientas para gestionar alquileres y recibir reservas online desde una misma plataforma.</td>
+      <td>Ofrece una cobertura amplia del ciclo de los equipos, integrando alquiler, mantenimiento, órdenes de trabajo, facturación y herramientas avanzadas de seguimiento de activos.</td>
+      <td>Cuenta con una trayectoria consolidada en software de alquiler y ofrece un ecosistema escalable que permite crecer desde operaciones pequeñas hasta empresas con múltiples ubicaciones y mayores necesidades operativas.</td>
+    </tr>
+    <tr>
+      <th rowspan="2">Perfil de Marketing</th>
+      <td><strong>Mercado objetivo</strong></td>
+      <td>Pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos utilizados principalmente en obras de construcción de pequeña escala, además de personas interesadas en alquilar dichos equipos.</td>
+      <td>Operadores independientes, pequeñas empresas, negocios de alquiler en crecimiento y empresas con múltiples ubicaciones pertenecientes a distintas industrias.</td>
+      <td>Empresas dedicadas al alquiler de equipos y, mediante sus planes de mayor nivel, compañías con múltiples ubicaciones y operaciones relacionadas con maquinaria pesada.</td>
+      <td>Empresas de alquiler de herramientas, equipos, eventos, maquinaria y otros activos, desde negocios en crecimiento hasta organizaciones con operaciones de mayor escala.</td>
+    </tr>
+    <tr>
+      <td><strong>Estrategias de marketing</strong></td>
+      <td>Se plantea utilizar presencia digital, contenido relacionado con la gestión de maquinaria, demostraciones del producto y contacto directo con empresas del sector para facilitar el conocimiento y adopción de la plataforma.</td>
+      <td>Utiliza prueba gratuita, demostraciones, contenido digital y planes diferenciados según el tamaño y crecimiento de la empresa.</td>
+      <td>Emplea pruebas gratuitas, demostraciones comerciales, contenido especializado y planes diferenciados según la complejidad de la operación.</td>
+      <td>Utiliza demostraciones personalizadas, casos de éxito, contenido especializado y soluciones diferenciadas según la industria y el tamaño de las operaciones.</td>
+    </tr>
+    <tr>
+      <th rowspan="3">Perfil de Producto</th>
+      <td><strong>Productos &amp; Servicios</strong></td>
+      <td>Gestión de inventario, disponibilidad, reservas, alquileres, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento. También contempla una experiencia digital para que los clientes consulten equipos y realicen procesos relacionados con sus alquileres.</td>
+      <td>Gestión de inventario y pedidos, disponibilidad en tiempo real, reservas online, presupuestos, contratos, facturas, pagos, reportes, integraciones, página de reservas y acceso a API en determinados planes.</td>
+      <td>Gestión de inventario, reservas, calendario de disponibilidad, pagos, tienda de alquiler, mantenimiento, órdenes de trabajo, aplicaciones móviles, alquileres de largo plazo y, en planes superiores, GPS y telemática.</td>
+      <td>Gestión de inventario, contratos, facturación, mantenimiento, órdenes de trabajo, reservas, portal para clientes, comercio electrónico, disponibilidad en múltiples ubicaciones, pagos, reportes y analítica.</td>
+    </tr>
+    <tr>
+      <td><strong>Precios &amp; Costos</strong></td>
+      <td>El esquema definitivo de precios deberá validarse durante el desarrollo del modelo de negocio. Se plantea un modelo SaaS basado en suscripciones adaptadas a las necesidades y capacidad operativa de las empresas objetivo.</td>
+      <td>Cuenta con los planes Start, Grow y Scale. Con facturación anual, sus precios publicados parten aproximadamente de USD 29, USD 69 y USD 149 mensuales respectivamente, además de complementos opcionales.</td>
+      <td>El plan Growth parte de USD 399 mensuales con facturación anual, Premium de USD 499 mensuales y Enterprise utiliza un esquema de precio personalizado.</td>
+      <td>No publica una tarifa única. El costo se determina mediante una cotización basada en factores como tamaño de la flota, número de ubicaciones y funcionalidades requeridas.</td>
+    </tr>
+    <tr>
+      <td><strong>Canales de distribución</strong><br>(Web y/o Móvil)</td>
+      <td>Landing Page y Web Application responsive accesibles mediante Internet.</td>
+      <td>Plataforma web, página de reservas, integración con sitios web y herramientas móviles complementarias para la gestión de alquileres.</td>
+      <td>Aplicación web, aplicaciones móviles para Android y iOS y Rental Webstore orientada a los clientes.</td>
+      <td>Plataforma web cloud, portal para clientes, comercio electrónico y herramientas móviles para las operaciones de alquiler.</td>
+    </tr>
+    <tr>
+      <th colspan="2">Análisis SWOT</th>
+      <td colspan="4">Se realiza el análisis para MaquiGest y sus competidores. Las fortalezas de MaquiGest deben apoyar sus oportunidades y contribuir a la posible ventaja competitiva de la propuesta.</td>
+    </tr>
+    <tr>
+      <th rowspan="4">Análisis SWOT</th>
+      <td><strong>Fortalezas</strong></td>
+      <td>
+        <ul>
+          <li>Especialización propuesta en pequeñas y medianas empresas vinculadas al alquiler de maquinaria para construcción.</li>
+          <li>Centralización del ciclo de alquiler.</li>
+          <li>Orientación tanto a las empresas como a sus clientes.</li>
+          <li>Propuesta enfocada en simplicidad y trazabilidad.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Plataforma madura y fácil de adoptar.</li>
+          <li>Disponibilidad en tiempo real.</li>
+          <li>Reservas online.</li>
+          <li>Amplio conjunto de funcionalidades e integraciones.</li>
+          <li>Plan inicial de menor costo frente a otras soluciones analizadas.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Amplia cobertura del ciclo de alquiler.</li>
+          <li>Gestión avanzada de mantenimiento.</li>
+          <li>Aplicaciones móviles.</li>
+          <li>Soporte para operaciones con maquinaria pesada.</li>
+          <li>Integraciones de GPS y telemática en el plan Enterprise.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Amplia experiencia en el mercado de alquiler.</li>
+          <li>Ecosistema escalable.</li>
+          <li>Gestión de mantenimiento y órdenes de trabajo.</li>
+          <li>Gran cantidad de reportes.</li>
+          <li>Soporte para múltiples industrias y ubicaciones.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Debilidades</strong></td>
+      <td>
+        <ul>
+          <li>Producto nuevo y todavía en desarrollo.</li>
+          <li>Ausencia inicial de reconocimiento de marca.</li>
+          <li>Menor cantidad de funcionalidades durante el MVP.</li>
+          <li>Base inicial limitada de usuarios e integraciones.</li>
+          <li>Necesidad de validar la disposición de pago del segmento objetivo.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Está orientado a diferentes industrias de alquiler y no específicamente al alquiler de maquinaria para construcción.</li>
+          <li>Algunas funcionalidades avanzadas dependen de planes superiores o complementos adicionales.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>El precio inicial puede representar una barrera para pequeñas empresas con presupuestos reducidos.</li>
+          <li>Algunas capacidades avanzadas se encuentran únicamente en planes superiores.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>El precio no se encuentra publicado directamente y requiere contacto comercial.</li>
+          <li>Su amplia cobertura puede superar las necesidades iniciales de pequeños negocios que buscan digitalizar solamente sus procesos esenciales.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Oportunidades</strong></td>
+      <td>
+        <ul>
+          <li>Digitalización de empresas que todavía utilizan hojas de cálculo, documentos y mensajería.</li>
+          <li>Especialización en un nicho concreto del alquiler de maquinaria.</li>
+          <li>Adaptación a las necesidades de empresas locales.</li>
+          <li>Incorporación progresiva de nuevas funcionalidades y servicios.</li>
+          <li>Desarrollo de planes SaaS adecuados al crecimiento de las empresas.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Crecimiento de las reservas digitales.</li>
+          <li>Expansión hacia nuevas industrias y empresas con múltiples ubicaciones.</li>
+          <li>Ampliación de integraciones y automatización de procesos.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Crecimiento de la digitalización de flotas.</li>
+          <li>Mayor adopción de mantenimiento preventivo y telemática.</li>
+          <li>Expansión hacia empresas de maquinaria pesada y operaciones multi-sede.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Crecimiento de empresas de alquiler que buscan migrar a soluciones cloud.</li>
+          <li>Incorporación de analítica e inteligencia artificial.</li>
+          <li>Expansión de servicios para operaciones multi-sede.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Amenazas</strong></td>
+      <td>
+        <ul>
+          <li>Presencia de competidores internacionales consolidados.</li>
+          <li>Resistencia al cambio de empresas acostumbradas a procesos manuales.</li>
+          <li>Sensibilidad al precio en pequeñas empresas.</li>
+          <li>Posibilidad de que plataformas existentes profundicen su oferta para el mismo segmento.</li>
+          <li>Dificultad inicial para generar confianza.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Aparición de soluciones especializadas en nichos específicos.</li>
+          <li>Competencia basada en precios.</li>
+          <li>Plataformas regionales que ofrezcan mayor adaptación al mercado local.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Competencia de soluciones SaaS de menor costo.</li>
+          <li>Preferencia de pequeñas empresas por herramientas más simples.</li>
+          <li>Aparición de plataformas especializadas en sectores concretos.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Competencia de soluciones SaaS más económicas y de menor alcance.</li>
+          <li>Aparición de plataformas especializadas por industria.</li>
+          <li>Empresas pequeñas que prefieran soluciones con precios publicados y adopción inmediata.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+El análisis permite observar que **Booqable, EZRentOut y Point of Rental cuentan con soluciones consolidadas y una cobertura funcional considerable**. Booqable destaca por su facilidad de adopción y su capacidad para habilitar reservas digitales; EZRentOut presenta una fuerte orientación a la gestión integral de equipos y mantenimiento; mientras que Point of Rental dispone de un ecosistema de mayor amplitud y escalabilidad para distintos tipos de operaciones.
+
+Frente a estas alternativas, MaquiGest no plantea competir inicialmente mediante una mayor cantidad de funcionalidades. Su oportunidad preliminar consiste en **especializar la experiencia en pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción**, priorizando los procesos de mayor valor para este segmento, una experiencia sencilla y la centralización del ciclo de alquiler. Estas características deberán contrastarse posteriormente con los resultados obtenidos en las entrevistas con los segmentos objetivo.
+
 ### 2.1.2. Estrategias y tácticas frente a competidores
+
+A partir del análisis competitivo realizado, CleanCode plantea las siguientes estrategias y tácticas preliminares para posicionar a MaquiGest frente a las soluciones identificadas. Estas propuestas buscan aprovechar las oportunidades del mercado, utilizar las fortalezas de MaquiGest, responder a las fortalezas de los competidores y aprovechar las limitaciones identificadas en sus propuestas.
+
+#### 1. Aprovechar la fortaleza: especialización en el alquiler de maquinaria para construcción
+
+**Estrategia**
+
+Posicionar MaquiGest como una plataforma especializada en los procesos de pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción, evitando competir únicamente mediante la cantidad de funcionalidades disponibles.
+
+**Tácticas**
+
+- **Terminología especializada:** utilizar conceptos propios del dominio del alquiler de maquinaria de manera consistente dentro de la plataforma.
+- **Priorización de procesos principales:** centrar el MVP en inventario, disponibilidad, reservas, alquileres, entregas, devoluciones y mantenimiento.
+- **Validación con empresas del sector:** utilizar las entrevistas para identificar cuáles de estos procesos representan mayor valor para los usuarios.
+- **Experiencia orientada al ciclo de alquiler:** diseñar los flujos de acuerdo con las etapas que atraviesa un equipo desde su disponibilidad hasta su devolución y posterior mantenimiento.
+
+**Valor Añadido**
+
+- Mayor adaptación de la plataforma al contexto específico de las empresas objetivo.
+- Reducción de funcionalidades innecesarias durante las primeras etapas de adopción.
+- Experiencia de uso alineada con las tareas que realizan las empresas de alquiler de maquinaria.
+
+#### 2. Aprovechar las debilidades de competidores: costos y amplitud funcional
+
+**Estrategia**
+
+Reducir la barrera de entrada para pequeñas y medianas empresas que no necesitan inicialmente el alcance funcional de plataformas más amplias o cuyos costos pueden superar su capacidad de inversión.
+
+**Tácticas**
+
+- **Adopción progresiva:** permitir que las empresas comiencen utilizando las funcionalidades esenciales de gestión de alquiler.
+- **Modelo SaaS escalonado:** evaluar planes de suscripción que permitan aumentar las capacidades disponibles conforme crezca la operación de la empresa.
+- **MVP orientado al valor:** evitar incorporar funcionalidades avanzadas que todavía no hayan sido validadas con los segmentos objetivo.
+- **Configuración simplificada:** reducir la cantidad de pasos necesarios para registrar inicialmente los equipos y comenzar a administrar alquileres.
+
+**Valor Añadido**
+
+- Menor barrera para la adopción de una plataforma digital por parte de pequeñas empresas.
+- Posibilidad de incorporar nuevas capacidades conforme aumenten las necesidades del negocio.
+- Mayor relación entre las funcionalidades contratadas y las necesidades reales de la empresa.
+
+#### 3. Afrontar las fortalezas de competidores consolidados
+
+**Estrategia**
+
+Frente a la experiencia, amplitud funcional y reconocimiento de Booqable, EZRentOut y Point of Rental, MaquiGest buscará construir confianza mediante una experiencia sencilla, trazable y adaptada al segmento objetivo.
+
+**Tácticas**
+
+- **Seguimiento del estado de las operaciones:** mostrar claramente el estado de reservas, alquileres, entregas, devoluciones e incidencias.
+- **Historial de equipos:** mantener registros relevantes sobre alquileres, incidencias y mantenimiento de cada equipo.
+- **Experiencia consistente:** mantener una navegación y comunicación coherentes entre el Landing Page y la Web Application.
+- **Retroalimentación de usuarios:** actualizar progresivamente el producto según los hallazgos obtenidos mediante Needfinding y Validation Interviews.
+
+**Valor Añadido**
+
+- Mayor visibilidad sobre el estado de los equipos y alquileres.
+- Reducción de la incertidumbre generada por información distribuida en diferentes herramientas.
+- Construcción progresiva de confianza mediante procesos claros y trazables.
+
+#### 4. Aprovechar la oportunidad: digitalización de empresas con procesos dispersos
+
+**Estrategia**
+
+Orientar la propuesta de MaquiGest hacia empresas que actualmente dependen de hojas de cálculo, documentos físicos, llamadas y aplicaciones de mensajería para coordinar sus operaciones de alquiler.
+
+**Tácticas**
+
+- **Centralización de información:** concentrar inventario, disponibilidad, reservas y alquileres en un mismo entorno.
+- **Consulta de disponibilidad:** facilitar que los responsables del negocio puedan conocer el estado de los equipos antes de confirmar un alquiler.
+- **Digitalización progresiva de documentos:** incorporar de manera gradual contratos, pagos y otros registros asociados al ciclo de alquiler.
+- **Contenido demostrativo:** utilizar el Landing Page y material audiovisual para mostrar de forma sencilla los beneficios de reemplazar procesos dispersos por una plataforma centralizada.
+
+**Valor Añadido**
+
+- Menor dependencia de registros distribuidos entre diferentes herramientas.
+- Mayor facilidad para consultar información actualizada durante las operaciones.
+- Mejor trazabilidad del ciclo de alquiler desde la reserva hasta la devolución del equipo.
 
 ## 2.2. Entrevistas
 
 ### 2.2.1. Diseño de entrevistas
+
+**Segmento 1: Pequeñas y medianas empresas de alquiler de maquinaria**
+
+**Objetivo:** Conocer cómo gestionan actualmente sus máquinas y alquileres, qué problemas enfrentan y qué tan útil podría resultarles una solución como MaquiGest.
+
+**Contexto**
+
+1. ¿A qué se dedica actualmente su empresa y qué tipo de maquinaria suelen alquilar?
+
+2. ¿Quién se encarga normalmente de gestionar los alquileres y las máquinas?
+
+**Situación actual**
+
+3. Cuando un cliente quiere alquilar una máquina, ¿cómo realizan normalmente todo el proceso?
+
+4. ¿Cómo saben qué máquinas están disponibles, alquiladas o fuera de servicio?
+
+5. ¿Qué herramientas utilizan actualmente para llevar el control de sus máquinas y alquileres?
+
+**Problemas**
+
+6. ¿Cuál es la principal dificultad que tienen al gestionar sus alquileres?
+
+7. ¿Alguna vez han tenido problemas porque una máquina fue reservada para más de un cliente o no estaba disponible cuando debía estarlo?
+
+8. ¿Qué ocurre cuando una máquina es devuelta con algún daño o presenta una falla?
+
+9. ¿Cómo controlan actualmente los mantenimientos y cuándo una máquina puede volver a alquilarse?
+
+10. ¿Qué parte del proceso de alquiler les toma más tiempo o les genera más problemas?
+
+**Opinión sobre MaquiGest**
+
+> *"Estamos desarrollando MaquiGest, una plataforma pensada para pequeñas y medianas empresas de alquiler de maquinaria. La idea es permitir gestionar las máquinas y alquileres desde un solo lugar, desde la reserva hasta la devolución y mantenimiento, de una manera sencilla."*
+
+11. ¿Qué le parece esta idea? ¿Cree que podría ser útil para su empresa? ¿Por qué?
+
+12. Si pudiera mejorar una sola parte de la gestión de sus alquileres, ¿cuál sería?
+
+
+**Segmento 2: Pequeñas empresas constructoras**
+
+**Objetivo:** Conocer cómo buscan y alquilan maquinaria actualmente, qué dificultades encuentran y qué tan útil podría resultarles MaquiGest.
+
+**Contexto**
+
+1. ¿A qué tipo de proyectos de construcción o remodelación se dedica su empresa?
+
+2. ¿Con qué frecuencia necesitan alquilar maquinaria o equipos?
+
+**Situación actual**
+
+3. Cuando necesitan una máquina para un proyecto, ¿cómo buscan actualmente dónde alquilarla?
+
+4. ¿Cómo averiguan si una máquina está disponible para las fechas que necesitan?
+
+5. ¿Qué información necesitan conocer antes de decidir alquilar una máquina?
+
+**Problemas**
+
+6. ¿Cuál es la principal dificultad que encuentran cuando necesitan conseguir maquinaria?
+
+7. ¿Alguna vez han necesitado una máquina y no pudieron conseguirla cuando la necesitaban? ¿Qué ocurrió?
+
+8. ¿Han tenido problemas con la entrega, el uso o la devolución de una máquina alquilada?
+
+9. ¿Qué parte del proceso de conseguir y alquilar maquinaria les toma más tiempo?
+
+10. ¿Qué cambiarían de la forma en que actualmente buscan o alquilan maquinaria?
+
+**Opinión sobre MaquiGest**
+
+> *"Estamos desarrollando MaquiGest, una plataforma pensada para facilitar el alquiler de maquinaria. La idea es que las empresas puedan buscar equipos, consultar información y disponibilidad y gestionar sus alquileres desde un solo lugar, de una manera sencilla."*
+
+11. ¿Qué le parece esta idea? ¿Cree que podría ser útil para su empresa? ¿Por qué?
+
+12. Si pudiera encontrar toda la información de una máquina en un solo lugar, ¿qué información sería indispensable para usted?
 
 ### 2.2.2. Registro de entrevistas
 
@@ -339,11 +847,51 @@ El impacto se refleja en el tiempo empleado para comprobar información, los pos
 
 ### 2.3.1. User Personas
 
+El user persona se construyó a partir de patrones encontrados en las entrevistas
+
+**Segmento objetivo 1: Pequeñas y medianas empresas de alquiler de maquinaria**
+![User Persona 1](./assets/md-images-chapter2/user-persona-armando-casas.png)
+
+**Segmento Objetivo 2: Pequeñas empresas constructoras**
+![User Persona 2](./assets/md-images-chapter2/user-persona-andrea-torres.png)
+
 ### 2.3.2. User Task Matrix
+
+| TASK | Armando Casas (Empresa de alquiler) Frecuencia | Armando Casas (Empresa de alquiler) Importancia | Andrea Torres (Empresa constructora) Frecuencia | Andrea Torres (Empresa constructora) Importancia |
+| :---- | :---: | :---: | :---: | :---: |
+| **Consultar el inventario de maquinaria** | **Often** | **High** | **Sometimes** | **Medium** |
+| **Consultar la disponibilidad de una maquinaria** | **Often** | **High** | **Often** | **High** |
+| **Registrar o actualizar información de maquinaria** | **Often** | **High** | **Rarely** | **Low** |
+| **Gestionar reservas y solicitudes de alquiler** | **Often** | **High** | **Often** | **High** |
+| **Coordinar la entrega de maquinaria** | **Often** | **High** | **Often** | **High** |
+| **Registrar la devolución de maquinaria** | **Often** | **High** | **Sometimes** | **Medium** |
+| **Verificar el estado de la maquinaria después de un alquiler** | **Often** | **High** | **Sometimes** | **Medium** |
+| **Registrar incidentes o daños en una maquinaria** | **Sometimes** | **High** | **Sometimes** | **High** |
+| **Consultar el historial de mantenimiento de una maquinaria** | **Often** | **High** | **Rarely** | **Medium** |
+| **Programar o registrar mantenimientos** | **Sometimes** | **High** | **Rarely** | **Low** |
+| **Buscar maquinaria según las necesidades de un proyecto** | **Rarely** | **Low** | **Often** | **High** |
+| **Consultar características y condiciones de una maquinaria** | **Sometimes** | **Medium** | **Often** | **High** |
+| **Realizar seguimiento del estado de una solicitud o alquiler** | **Often** | **High** | **Often** | **High** |
 
 ### 2.3.3. User Journey Mapping
 
+**1. User Journey Map para el primer segmento**
+
+![User Journey Map](./assets/md-images-chapter2/user-journey-map1.png)
+
+**2. User Journey Map para el segundo segmento**
+
+![User Journey Map](./assets/md-images-chapter2/user-journey-map2.png)
+
 ### 2.3.4. Empathy Mapping
+
+**1. Empathy Map para el primer segmento**
+
+![Empathy Map](./assets/md-images-chapter2/empathy-map1.png)
+
+**2. Empathy Map para el segundo segmento**
+
+![Empathy Map](./assets/md-images-chapter2/empathy-map2.png)
 
 ## 2.4. Big Picture Event Storming
 
@@ -351,9 +899,7 @@ El impacto se refleja en el tiempo empleado para comprobar información, los pos
 
 # Capítulo III: Requirements Specification
 
-## 3.1. User Stories
-
-## 3.1. User Stories
+## 3.1. User Stories 
 
 <table>
 <tr>
@@ -411,6 +957,30 @@ And muestra los nuevos datos
 </tr>
 
 <tr>
+<td>US04</td>
+<td>Recuperar contraseña</td>
+<td>Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta.</td>
+<td>
+Given que el usuario solicita recuperación<br>
+When ingresa su correo<br>
+Then el sistema envía instrucciones de recuperación
+</td>
+<td>EP01</td>
+</tr>
+
+<tr>
+<td>US05</td>
+<td>Cerrar sesión</td>
+<td>Como usuario, quiero cerrar sesión para proteger mi cuenta.</td>
+<td>
+Given que el usuario está autenticado<br>
+When selecciona cerrar sesión<br>
+Then el sistema finaliza su sesión
+</td>
+<td>EP01</td>
+</tr>
+
+<tr>
 <td>EP02</td>
 <td>Gestión de maquinaria</td>
 <td>Epic orientado al registro, organización y consulta del inventario de maquinaria disponible para alquiler.</td>
@@ -419,7 +989,7 @@ And muestra los nuevos datos
 </tr>
 
 <tr>
-<td>US04</td>
+<td>US06</td>
 <td>Registrar maquinaria</td>
 <td>Como empresa de alquiler, quiero registrar mis máquinas y equipos para mantener organizado mi inventario.</td>
 <td>
@@ -432,7 +1002,7 @@ And muestra el equipo registrado
 </tr>
 
 <tr>
-<td>US05</td>
+<td>US07</td>
 <td>Consultar maquinaria</td>
 <td>Como empresa de alquiler, quiero consultar las máquinas registradas para conocer la información de mis equipos.</td>
 <td>
@@ -445,7 +1015,7 @@ And muestra información relevante de cada equipo
 </tr>
 
 <tr>
-<td>US06</td>
+<td>US08</td>
 <td>Actualizar información de maquinaria</td>
 <td>Como empresa de alquiler, quiero actualizar la información de mis equipos para mantener el inventario actualizado.</td>
 <td>
@@ -457,7 +1027,7 @@ Then el sistema guarda la información actualizada
 </tr>
 
 <tr>
-<td>US07</td>
+<td>US09</td>
 <td>Consultar disponibilidad de maquinaria</td>
 <td>Como empresa de alquiler, quiero conocer la disponibilidad de cada equipo para evitar conflictos al gestionar nuevos alquileres.</td>
 <td>
@@ -469,7 +1039,7 @@ Then el sistema muestra si cada equipo está disponible, reservado o alquilado
 </tr>
 
 <tr>
-<td>US08</td>
+<td>US10</td>
 <td>Consultar estado de maquinaria</td>
 <td>Como empresa de alquiler, quiero conocer el estado de mis equipos para evitar alquilar maquinaria que no se encuentra en condiciones de uso.</td>
 <td>
@@ -490,7 +1060,7 @@ And permite identificar si está disponible para alquiler
 </tr>
 
 <tr>
-<td>US09</td>
+<td>US11</td>
 <td>Buscar maquinaria</td>
 <td>Como empresa constructora, quiero buscar maquinaria según mis necesidades para encontrar equipos adecuados para mi proyecto.</td>
 <td>
@@ -502,7 +1072,7 @@ Then el sistema muestra las maquinarias que coinciden con sus necesidades
 </tr>
 
 <tr>
-<td>US10</td>
+<td>US12</td>
 <td>Consultar información de maquinaria</td>
 <td>Como empresa constructora, quiero consultar las características de una maquinaria para determinar si es adecuada para mi proyecto.</td>
 <td>
@@ -514,7 +1084,7 @@ Then el sistema muestra sus características, estado y condiciones de alquiler
 </tr>
 
 <tr>
-<td>US11</td>
+<td>US13</td>
 <td>Consultar disponibilidad para un periodo</td>
 <td>Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado antes de solicitar el alquiler.</td>
 <td>
@@ -526,7 +1096,7 @@ Then el sistema indica si el equipo puede ser alquilado durante dicho periodo
 </tr>
 
 <tr>
-<td>US12</td>
+<td>US14</td>
 <td>Solicitar alquiler de maquinaria</td>
 <td>Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto.</td>
 <td>
@@ -540,6 +1110,50 @@ And muestra su estado
 
 <tr>
 <td>EP04</td>
+<td>Planes y suscripciones</td>
+<td>Epic orientado a la gestión de planes.</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>US15</td>
+<td>Visualizar planes disponibles</td>
+<td>Como usuario, quiero ver los planes para elegir uno.</td>
+<td>
+Given que el usuario accede a la sección de planes<br>
+When visualiza opciones<br>
+Then el sistema muestra los planes con sus características y precios
+</td>
+<td>EP04</td>
+</tr>
+
+<tr>
+<td>US16</td>
+<td>Suscribirse a un plan</td>
+<td>Como usuario, quiero suscribirme a un plan para acceder a funciones premium.</td>
+<td>
+Given que el usuario selecciona un plan<br>
+When confirma la suscripción<br>
+Then el sistema registra el plan
+</td>
+<td>EP04</td>
+</tr>
+
+<tr>
+<td>US17</td>
+<td>Cambiar de plan</td>
+<td>Como usuario, quiero cambiar de plan según mis necesidades.</td>
+<td>
+Given que el usuario tiene un plan activo<br>
+When selecciona otro<br>
+Then el sistema actualiza la suscripción
+</td>
+<td>EP04</td>
+</tr>
+
+<tr>
+<td>EP05</td>
 <td>Gestión de reservas y alquileres</td>
 <td>Epic orientado a la administración de reservas y al seguimiento del ciclo de alquiler de los equipos.</td>
 <td>-</td>
@@ -547,7 +1161,7 @@ And muestra su estado
 </tr>
 
 <tr>
-<td>US13</td>
+<td>US18</td>
 <td>Gestionar solicitudes de alquiler</td>
 <td>Como empresa de alquiler, quiero revisar las solicitudes recibidas para decidir cuáles atender y mantener control sobre mis alquileres.</td>
 <td>
@@ -556,11 +1170,11 @@ When el usuario consulta las solicitudes<br>
 Then el sistema muestra la información de cada solicitud<br>
 And permite identificar su estado
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>US14</td>
+<td>US19</td>
 <td>Confirmar o rechazar una solicitud</td>
 <td>Como empresa de alquiler, quiero aceptar o rechazar solicitudes de alquiler para controlar la disponibilidad de mis equipos.</td>
 <td>
@@ -569,11 +1183,11 @@ When el usuario selecciona aceptar o rechazar<br>
 Then el sistema actualiza el estado de la solicitud<br>
 And muestra el nuevo estado
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>US15</td>
+<td>US20</td>
 <td>Consultar alquileres activos</td>
 <td>Como empresa de alquiler, quiero consultar mis alquileres activos para conocer qué equipos están actualmente alquilados.</td>
 <td>
@@ -582,11 +1196,11 @@ When el usuario consulta sus alquileres<br>
 Then el sistema muestra los equipos alquilados<br>
 And muestra información del periodo correspondiente
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>US16</td>
+<td>US21</td>
 <td>Consultar estado de una solicitud de alquiler</td>
 <td>Como empresa constructora, quiero consultar el estado de mi solicitud para saber si mi alquiler fue aceptado, rechazado o aún está pendiente.</td>
 <td>
@@ -594,11 +1208,11 @@ Given que el usuario ha realizado una solicitud<br>
 When consulta sus solicitudes<br>
 Then el sistema muestra el estado actualizado de cada una
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>US17</td>
+<td>US22</td>
 <td>Gestionar entregas y devoluciones</td>
 <td>Como empresa de alquiler, quiero registrar las entregas y devoluciones de maquinaria para mantener trazabilidad sobre los equipos alquilados.</td>
 <td>
@@ -607,11 +1221,11 @@ When se registra la entrega o devolución<br>
 Then el sistema actualiza el estado del alquiler<br>
 And registra la operación realizada
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>EP05</td>
+<td>EP06</td>
 <td>Gestión de mantenimiento e incidencias</td>
 <td>Epic orientado al seguimiento del estado operativo de la maquinaria y a la gestión de mantenimientos e incidencias.</td>
 <td>-</td>
@@ -619,7 +1233,7 @@ And registra la operación realizada
 </tr>
 
 <tr>
-<td>US18</td>
+<td>US23</td>
 <td>Registrar mantenimiento</td>
 <td>Como empresa de alquiler, quiero registrar mantenimientos realizados a una maquinaria para mantener un historial de su estado operativo.</td>
 <td>
@@ -628,11 +1242,11 @@ When el usuario registra un mantenimiento<br>
 Then el sistema almacena la información<br>
 And la relaciona con el equipo correspondiente
 </td>
-<td>EP05</td>
+<td>EP06</td>
 </tr>
 
 <tr>
-<td>US19</td>
+<td>US24</td>
 <td>Programar mantenimiento</td>
 <td>Como empresa de alquiler, quiero programar mantenimientos para evitar que los equipos sean utilizados cuando requieren atención.</td>
 <td>
@@ -641,11 +1255,11 @@ When el usuario registra una fecha de mantenimiento<br>
 Then el sistema guarda la programación<br>
 And permite consultar el mantenimiento pendiente
 </td>
-<td>EP05</td>
+<td>EP06</td>
 </tr>
 
 <tr>
-<td>US20</td>
+<td>US25</td>
 <td>Registrar incidencia de maquinaria</td>
 <td>Como empresa de alquiler, quiero registrar incidencias de mis equipos para llevar un control de problemas y reparaciones.</td>
 <td>
@@ -654,11 +1268,11 @@ When el usuario registra el problema<br>
 Then el sistema almacena la incidencia<br>
 And la relaciona con la maquinaria correspondiente
 </td>
-<td>EP05</td>
+<td>EP06</td>
 </tr>
 
 <tr>
-<td>US21</td>
+<td>US26</td>
 <td>Consultar historial de maquinaria</td>
 <td>Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus alquileres, incidencias y mantenimientos.</td>
 <td>
@@ -666,11 +1280,11 @@ Given que existe una maquinaria registrada<br>
 When el usuario consulta su historial<br>
 Then el sistema muestra las operaciones asociadas al equipo
 </td>
-<td>EP05</td>
+<td>EP06</td>
 </tr>
 
 <tr>
-<td>EP06</td>
+<td>EP07</td>
 <td>Información y contratación del servicio</td>
 <td>Epic orientado a brindar información sobre MaquiGest y facilitar el contacto de potenciales clientes con la plataforma.</td>
 <td>-</td>
@@ -678,7 +1292,7 @@ Then el sistema muestra las operaciones asociadas al equipo
 </tr>
 
 <tr>
-<td>US22</td>
+<td>US27</td>
 <td>Consultar información de MaquiGest</td>
 <td>Como visitante, quiero conocer las funcionalidades y beneficios de MaquiGest para determinar si la solución se adapta a las necesidades de mi empresa.</td>
 <td>
@@ -686,11 +1300,11 @@ Given que el visitante accede al Landing Page<br>
 When revisa la información del producto<br>
 Then el sistema muestra sus principales funcionalidades y beneficios
 </td>
-<td>EP06</td>
+<td>EP07</td>
 </tr>
 
 <tr>
-<td>US23</td>
+<td>US28</td>
 <td>Solicitar demostración</td>
 <td>Como potencial cliente, quiero solicitar una demostración de MaquiGest para conocer cómo funciona antes de utilizar el servicio.</td>
 <td>
@@ -699,11 +1313,11 @@ When completa y envía el formulario de demostración<br>
 Then el sistema registra la solicitud<br>
 And muestra un mensaje de confirmación
 </td>
-<td>EP06</td>
+<td>EP07</td>
 </tr>
 
 <tr>
-<td>US24</td>
+<td>US29</td>
 <td>Contactar con MaquiGest</td>
 <td>Como potencial cliente, quiero contactar con el equipo de MaquiGest para realizar consultas sobre el servicio.</td>
 <td>
@@ -711,12 +1325,14 @@ Given que el visitante accede a la sección de contacto<br>
 When completa y envía sus datos y consulta<br>
 Then el sistema registra la solicitud de contacto
 </td>
-<td>EP06</td>
+<td>EP07</td>
 </tr>
 
 </table>
 
 ## 3.2. Impact Mapping
+
+![Impact Mapping](./assets/md-images-chapter3/impact-mapping.png)
 
 ## 3.3. Product Backlog
 
@@ -904,10 +1520,341 @@ De esta manera, la organización matricial permitirá presentar una gran cantida
 
 
 ## 4.3. Landing Page UI Design
-
 ### 4.3.1. Landing Page Wireframe
 
+En esta sección se presentan los wireframes de la Landing Page de MaquiGest. Estos artefactos permiten definir la estructura inicial de la interfaz, la distribución de los contenidos y la jerarquía visual de los principales elementos antes de aplicar los estilos finales del producto. Asimismo, permiten evidenciar la traducción de las decisiones tomadas previamente en las secciones de Style Guidelines e Information Architecture hacia una propuesta concreta de interfaz para la Landing Page.
+
+La propuesta de wireframes organiza la experiencia de navegación de forma jerárquica y secuencial, guiando al visitante desde la comprensión inicial de la propuesta de valor de MaquiGest hasta las acciones de conversión, como la solicitud de una demostración o el envío de una consulta. La estructura general está compuesta por las secciones Home, Benefits, Features, About Us, Solutions, Plans, Request Demo y Contact, las cuales responden a las necesidades de los segmentos objetivo previamente identificados: pequeñas y medianas empresas de alquiler de maquinaria y pequeñas empresas constructoras.
+
+#### Desktop Web Browser
+
+La versión para Desktop Web Browser aprovecha el espacio horizontal para distribuir la información mediante bloques claramente diferenciados, facilitando la lectura, la comparación de contenido y la identificación de los principales llamados a la acción. La propuesta mantiene consistencia estructural entre secciones y aplica principios de jerarquía visual, alineación, proximidad y contraste, permitiendo que los visitantes comprendan de manera progresiva la solución ofrecida por MaquiGest.
+
+##### Home
+
+El wireframe de la sección Home presenta el primer contacto entre el visitante y la propuesta de valor de MaquiGest. En esta sección se ubican el encabezado de navegación, el mensaje principal del producto, una breve descripción y los principales Call To Action: “Solicitar Demo” y “Ver planes”. La composición está orientada a comunicar rápidamente el propósito de la plataforma y motivar al visitante a continuar explorando el sitio.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-home.png"
+       alt="Landing Page Wireframe - Home"
+       width="90%">
+</p>
+
+##### Benefits
+
+La sección Benefits organiza en tres bloques los principales beneficios de la solución. Esta disposición permite que el visitante identifique rápidamente el valor que ofrece MaquiGest, destacando aspectos como el control de disponibilidad, la centralización de operaciones y el seguimiento del estado de la maquinaria. La estructura mediante cards facilita la exploración y comparación de la información.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-benefits.png"
+       alt="Landing Page Wireframe - Benefits"
+       width="90%">
+</p>
+
+##### Features
+
+La sección Features presenta las funcionalidades principales de la plataforma mediante seis cards distribuidas en una retícula. Esta organización permite representar de forma clara y ordenada las herramientas más importantes de MaquiGest, como la gestión del inventario de maquinaria, disponibilidad, alquileres, entregas y devoluciones, mantenimiento e incidencias, y búsqueda o solicitud de equipos. La distribución busca favorecer la legibilidad y el reconocimiento visual de cada funcionalidad.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-features.png"
+       alt="Landing Page Wireframe - Features"
+       width="90%">
+</p>
+
+##### About Us
+
+La sección About Us comunica la identidad de la startup y la intención del producto. El wireframe emplea una composición de bloques que permite presentar información institucional de forma resumida, como la misión, la visión y los valores de CleanCode y MaquiGest. Esta organización contribuye a fortalecer la credibilidad de la propuesta y a comunicar el enfoque del equipo desarrollador.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-about-us.png"
+       alt="Landing Page Wireframe - About Us"
+       width="90%">
+</p>
+
+##### Solutions
+
+La sección Solutions traduce de forma directa los resultados del análisis de segmentos objetivo. Su estructura permite diferenciar visualmente las soluciones orientadas a pequeñas y medianas empresas de alquiler de maquinaria y a pequeñas empresas constructoras. De esta manera, cada visitante puede identificar rápidamente la propuesta de valor más cercana a sus necesidades y relacionarla con su contexto de uso.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-solutions.png"
+       alt="Landing Page Wireframe - Solutions"
+       width="90%">
+</p>
+
+##### Plans
+
+La sección Plans organiza la información comercial de la plataforma en tres tarjetas comparables. El objetivo de esta disposición es permitir que el visitante reconozca de manera sencilla las alternativas disponibles y evalúe la opción más adecuada para su negocio. El uso de cards refuerza la claridad, la comparación entre opciones y la orientación a la conversión.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-plans.png"
+       alt="Landing Page Wireframe - Plans"
+       width="90%">
+</p>
+
+##### Request Demo
+
+La sección Request Demo está orientada a la conversión del visitante. El wireframe organiza el contenido en dos áreas: una zona de explicación breve sobre la demostración y un formulario para registrar los datos del interesado. Esta distribución facilita la comprensión del propósito de la sección y reduce la fricción durante el proceso de contacto inicial con la startup.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-request-demo.png"
+       alt="Landing Page Wireframe - Request Demo"
+       width="90%">
+</p>
+
+##### Contact
+
+La sección Contact presenta un formulario orientado a consultas generales y se complementa con un footer informativo. Su estructura prioriza la claridad en la interacción, permitiendo que el visitante identifique fácilmente los campos necesarios para enviar un mensaje. Además, el footer funciona como cierre de la experiencia, reforzando la navegación, la identidad del producto y la información complementaria del sitio.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-contact.png"
+       alt="Landing Page Wireframe - Contact"
+       width="90%">
+</p>
+
+En conjunto, los wireframes de la Landing Page de MaquiGest evidencian una propuesta estructurada, coherente con la arquitectura de información y orientada a una experiencia de navegación clara, comprensible e inclusiva. La distribución de secciones, el uso de jerarquías visuales y la ubicación de los llamados a la acción buscan facilitar tanto la comprensión de la propuesta de valor como la interacción de los visitantes con el producto.
+
+#### Mobile Web Browser
+
+La versión para Mobile Web Browser adapta la estructura de la Landing Page de MaquiGest a una pantalla de menor ancho, priorizando la legibilidad, la navegación vertical y el acceso rápido a los principales llamados a la acción. Para ello, los contenidos se reorganizan en una sola columna, manteniendo la misma secuencia informativa definida en la versión desktop y preservando la coherencia con la arquitectura de información establecida previamente.
+
+En esta propuesta, el encabezado se simplifica mediante un menú hamburguesa, lo cual permite optimizar el espacio disponible sin perder acceso a las secciones principales del sitio. Asimismo, el Hero prioriza el mensaje principal del producto y los Call To Action “Solicitar Demo” y “Ver planes”, con una disposición centrada que facilita la lectura y la interacción desde dispositivos móviles.
+
+##### Home
+
+La sección Home en mobile presenta la propuesta de valor de MaquiGest de forma resumida, destacando el nombre del producto, una breve descripción y los principales Call To Action. La disposición vertical permite centrar la atención del visitante en el propósito de la Landing Page desde el inicio de la experiencia.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-home.png"
+       alt="Landing Page Wireframe - Mobile - Home"
+       width="40%">
+</p>
+
+##### Benefits
+
+La sección Benefits reorganiza la propuesta de beneficios en una sola card visible por bloque, priorizando la lectura secuencial y reduciendo la sobrecarga visual en pantallas pequeñas. Esta adaptación mantiene claridad en la presentación del valor de la plataforma.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-benefits.png"
+       alt="Landing Page Wireframe - Mobile - Benefits"
+       width="40%">
+</p>
+
+##### Features
+
+La sección Features adapta las funcionalidades principales a una experiencia vertical y progresiva. Cada funcionalidad se presenta en tarjetas individuales, permitiendo al usuario concentrarse en un elemento a la vez y comprender con facilidad las capacidades principales de MaquiGest.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-features.png"
+       alt="Landing Page Wireframe - Mobile - Features"
+       width="40%">
+</p>
+
+##### About Us
+
+La sección About Us en mobile conserva la información institucional de forma resumida y jerarquizada. Los bloques de contenido se disponen verticalmente para facilitar la lectura y mantener una presentación limpia y comprensible sobre la identidad de CleanCode y MaquiGest.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-about-us.png"
+       alt="Landing Page Wireframe - Mobile - About Us"
+       width="40%">
+</p>
+
+##### Solutions
+
+La sección Solutions mantiene la diferenciación de la propuesta de valor para los segmentos objetivo, reorganizando el contenido en formato vertical. Esta decisión favorece la identificación progresiva de cada solución y mejora la experiencia de lectura en dispositivos móviles.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-solutions.png"
+       alt="Landing Page Wireframe - Mobile - Solutions"
+       width="40%">
+</p>
+
+##### Plans
+
+La sección Plans reorganiza las alternativas disponibles en un formato vertical, permitiendo que cada plan sea visualizado individualmente. Esta adaptación mejora la comparación y facilita que el visitante identifique la opción más adecuada sin afectar la claridad del contenido.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-plans.png"
+       alt="Landing Page Wireframe - Mobile - Plans"
+       width="40%">
+</p>
+
+##### Request Demo
+
+La sección Request Demo en mobile prioriza la simplicidad de interacción, presentando el contenido explicativo y el formulario en una estructura vertical. Esta organización reduce la fricción y facilita el registro de datos desde una pantalla táctil.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-request-demo.png"
+       alt="Landing Page Wireframe - Mobile - Request Demo"
+       width="40%">
+</p>
+
+##### Contact
+
+La sección Contact adapta el formulario y el footer al entorno móvil, manteniendo una disposición clara de campos y botones para favorecer la interacción del visitante. De esta forma, se asegura una experiencia consistente y accesible al cierre del recorrido de la Landing Page.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-contact.png"
+       alt="Landing Page Wireframe - Mobile - Contact"
+       width="40%">
+</p>
+
+En conjunto, la propuesta mobile mantiene la estructura, jerarquía y objetivos de conversión de la Landing Page de MaquiGest, adaptándolos a las características de navegación propias de dispositivos móviles. La organización en una sola columna, el uso de un menú simplificado y la disposición vertical de las cards y formularios contribuyen a una experiencia clara, comprensible e inclusiva.
+
 ### 4.3.2. Landing Page Mock-up
+
+En esta sección se presentan los mock-ups de la Landing Page de MaquiGest para las versiones Desktop Web Browser y Mobile Web Browser. A diferencia de los wireframes, los mock-ups incorporan los elementos visuales definidos para el producto, como colores, tipografía, iconografía, estilos de botones, cards, formularios y demás componentes de interfaz, permitiendo representar una versión más cercana al resultado final de la Landing Page.
+
+La propuesta mantiene la estructura y jerarquía establecidas previamente en los wireframes y aplica de manera consistente el Design System de MaquiGest. La identidad visual utiliza principalmente tonos azul oscuro, azul y naranja, acompañados de fondos claros que favorecen la legibilidad y permiten destacar los principales Call To Action.
+
+Asimismo, los mock-ups evidencian la aplicación de principios de jerarquía visual, alineación, proximidad, consistencia y contraste. La organización del contenido facilita que los visitantes comprendan progresivamente la propuesta de valor, conozcan los beneficios y funcionalidades del producto, identifiquen la solución correspondiente a su segmento, comparen los planes disponibles y puedan solicitar una demostración o ponerse en contacto con CleanCode.
+
+#### Landing Page Mock-up para Desktop Web Browser
+
+La versión Desktop Web Browser aprovecha el espacio horizontal para organizar los contenidos mediante una estructura clara y consistente. El Header mantiene visibles las principales opciones de navegación y los Call To Action, mientras que las diferentes secciones utilizan cards, bloques de contenido y formularios para facilitar la exploración de la información.
+
+La sección Home presenta la identidad de MaquiGest y comunica directamente su propuesta de valor mediante el mensaje principal “Organize your equipment. Stay on top of every rental.”. Los botones “Request demo” y “View plans” destacan las principales acciones disponibles para el visitante.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-home.png"
+       alt="Landing Page Mock-up - Home"
+       width="90%">
+</p>
+
+La sección Benefits presenta tres beneficios principales mediante cards diferenciadas visualmente: claridad sobre la disponibilidad de equipos, conexión de las operaciones de alquiler y cuidado de la maquinaria. Esta organización permite comunicar de forma rápida los principales resultados que MaquiGest busca ofrecer a sus usuarios.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-benefits.png"
+       alt="Landing Page Mock-up - Benefits"
+       width="90%">
+</p>
+
+La sección Features organiza las principales funcionalidades de MaquiGest mediante una retícula de seis cards. Entre ellas se encuentran la gestión del inventario de maquinaria, disponibilidad y reservas, seguimiento de alquileres, entregas y devoluciones, mantenimiento e incidencias, y búsqueda y solicitud de equipos. Esta disposición facilita la identificación y comprensión de las capacidades principales de la plataforma.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-features.png"
+       alt="Landing Page Mock-up - Features"
+       width="90%">
+</p>
+
+La sección About Us presenta a CleanCode como la startup responsable de MaquiGest. La información se organiza mediante bloques diferenciados para misión, visión y valores, reforzando la identidad del equipo y comunicando los principios que orientan el desarrollo del producto.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-about-us.png"
+       alt="Landing Page Mock-up - About Us"
+       width="90%">
+</p>
+
+La sección Solutions diferencia visualmente las propuestas dirigidas a los dos segmentos objetivo de MaquiGest. El primer bloque está orientado a empresas de alquiler de maquinaria que requieren centralizar información y operaciones durante todo el ciclo de alquiler. El segundo está dirigido a pequeñas empresas constructoras que necesitan buscar equipos, consultar disponibilidad y gestionar sus solicitudes de alquiler.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-solutions.png"
+       alt="Landing Page Mock-up - Solutions"
+       width="90%">
+</p>
+
+La sección Plans presenta los planes Essential, Professional y Growth mediante cards comparables. Cada alternativa muestra su precio referencial, propósito, principales funcionalidades y un Call To Action para solicitar una demostración. El plan Professional recibe un tratamiento visual destacado mediante la etiqueta “Recommended”, estableciendo una jerarquía entre las alternativas sin impedir su comparación.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-plans.png"
+       alt="Landing Page Mock-up - Plans"
+       width="90%">
+</p>
+
+La sección Request Demo utiliza una composición de dos columnas. En el lado izquierdo se explica brevemente el propósito de la demostración, mientras que en el lado derecho se presenta un formulario con los datos necesarios para registrar el interés del visitante. El botón “Send demo request” funciona como Call To Action principal de la sección y utiliza el color de acento para reforzar su visibilidad.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-request-demo.png"
+       alt="Landing Page Mock-up - Request Demo"
+       width="90%">
+</p>
+
+Finalmente, la sección Contact permite realizar consultas generales mediante un formulario simplificado compuesto por nombre, correo electrónico y mensaje. El Footer complementa el cierre de la experiencia mediante la identidad visual de MaquiGest, accesos de navegación, información de copyright y el enlace a los términos y condiciones.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-contact.png"
+       alt="Landing Page Mock-up - Contact"
+       width="90%">
+</p>
+
+En conjunto, los mock-ups para Desktop Web Browser muestran la evolución visual de los wireframes y evidencian la aplicación coherente de la identidad visual y del Design System de MaquiGest. La combinación de jerarquía visual, contraste, agrupación de contenido, componentes reutilizables y Call To Action claramente identificables busca proporcionar una experiencia clara, consistente y orientada a las necesidades de los segmentos objetivo.
+
+#### Landing Page Mock-up para Mobile Web Browser
+
+La versión Mobile Web Browser adapta la propuesta visual de la Landing Page de MaquiGest a pantallas de menor tamaño, manteniendo la misma estructura, identidad visual y objetivos de conversión definidos para la versión desktop. En esta adaptación, los contenidos se reorganizan en una sola columna, priorizando la lectura vertical, la claridad de los elementos interactivos y la facilidad de navegación desde dispositivos móviles.
+
+La propuesta conserva los lineamientos del Design System de MaquiGest mediante el uso consistente de colores, tipografía, botones, cards y formularios. Asimismo, se aplican principios de jerarquía visual, contraste, proximidad y consistencia para asegurar que la experiencia en dispositivos móviles continúe siendo clara, comprensible y alineada con las necesidades de los segmentos objetivo.
+
+La sección Home concentra la propuesta de valor principal de MaquiGest en una composición vertical. El mensaje central, los botones “Request demo” y “View plans”, y la presencia destacada del logotipo permiten que el visitante identifique rápidamente el propósito de la plataforma desde el inicio de la navegación.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-home.png"
+       alt="Landing Page Mock-up - Mobile - Home"
+       width="40%">
+</p>
+
+La sección Benefits reorganiza los beneficios principales en tarjetas apiladas verticalmente, favoreciendo la lectura secuencial y la comprensión rápida del valor de la solución. Esta disposición permite destacar con claridad la disponibilidad, la conexión de operaciones y el cuidado de la maquinaria.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-benefits.png"
+       alt="Landing Page Mock-up - Mobile - Benefits"
+       width="40%">
+</p>
+
+La sección Features presenta las funcionalidades principales de la plataforma mediante cards verticales, facilitando la lectura de cada capacidad del sistema en una pantalla reducida. Esta distribución permite al visitante reconocer progresivamente funciones como el inventario de maquinaria, disponibilidad y reservas, seguimiento de alquileres, entregas y devoluciones, mantenimiento e incidencias, y búsqueda o solicitud de equipos.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-features.png"
+       alt="Landing Page Mock-up - Mobile - Features"
+       width="40%">
+</p>
+
+La sección About Us adapta la información institucional de CleanCode y MaquiGest a una estructura vertical, presentando de forma clara la misión, visión y valores del equipo. El uso de bloques diferenciados favorece la legibilidad y evita la saturación de contenido en la interfaz móvil.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-about-us.png"
+       alt="Landing Page Mock-up - Mobile - About Us"
+       width="40%">
+</p>
+
+La sección Solutions mantiene la diferenciación de la propuesta de valor para los segmentos objetivo de MaquiGest. En la versión mobile, los bloques se presentan uno debajo del otro, permitiendo que el visitante identifique con claridad la solución orientada a empresas de alquiler de maquinaria y la propuesta dirigida a pequeñas empresas constructoras.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-solutions.png"
+       alt="Landing Page Mock-up - Mobile - Solutions"
+       width="40%">
+</p>
+
+La sección Plans reorganiza las alternativas disponibles en un formato vertical, permitiendo visualizar cada plan de manera individual. Esta adaptación mejora la comparación y mantiene una lectura clara de los planes Essential, Professional y Growth, así como de sus respectivas características y llamados a la acción.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-plans-1.png"
+       alt="Landing Page Mock-up - Mobile - Plans 1"
+       width="40%">
+</p>
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-plans-2.png"
+       alt="Landing Page Mock-up - Mobile - Plans 2"
+       width="40%">
+</p>
+
+La sección Request Demo combina una breve explicación de la demostración con un formulario adaptado a interacción táctil. La disposición en una sola columna facilita el ingreso de datos desde un dispositivo móvil y mantiene visible el Call To Action principal para enviar la solicitud.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-request-demo.png"
+       alt="Landing Page Mock-up - Mobile - Request Demo"
+       width="40%">
+</p>
+
+Finalmente, la sección Contact presenta un formulario simplificado para consultas generales y un footer adaptado al entorno móvil. La disposición vertical de los enlaces, el contenido institucional y la información complementaria permite cerrar la experiencia de navegación de manera ordenada y consistente con la identidad visual del producto.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-contact.png"
+       alt="Landing Page Mock-up - Mobile - Contact"
+       width="40%">
+</p>
+
+En conjunto, los mock-ups para Mobile Web Browser evidencian la adaptación del diseño visual de MaquiGest a dispositivos móviles, manteniendo coherencia con la versión desktop y aplicando de forma consistente el Design System del producto. La organización vertical, la claridad de los componentes y la visibilidad de los llamados a la acción contribuyen a una experiencia intuitiva, accesible y orientada a la conversión.
+
 
 ## 4.4. Web Applications UX/UI Design
 
