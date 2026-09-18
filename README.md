@@ -732,10 +732,12 @@ Los Style Guidelines establecen los lineamientos visuales utilizados en el dise�
 **Branding**: El isotipo de MaquiGest representa la combinación de los dos conceptos principales que conforman el nombre de la plataforma: maquinaria y gestión. Su diseño parte de una forma geométrica inspirada en la inicial “M”, integrando elementos visuales asociados a la maquinaria de construcción. 
 
 <img src = "assets/md-images-isotype/isotypeMaquiGest.png" width = 300px>
+<br><br><br>
 
 **Typography:** Se ha escogido la tipografía Inter debido a su excelente legibilidad, tanto en textos pequeños como en títulos y botones. Además, es una tipografía moderna y profesional, características que se adaptan favorablemente a las necesidades y objetivos de nuestra plataforma. 
 
 <img src = "assets/md-images-typography/inter_typography.png" width = 300px>
+<br><br>
 
 **Spacing:** Se establece un sistema de espaciado consistente con el propósito de mantener una interfaz ordenada, legible y visualmente equilibrada. La separación entre textos, botones, campos de formulario, tarjetas y secciones permite diferenciar y agrupar los elementos según su relación, evitando la saturación visual y facilitando el recorrido del contenido. Asimismo, mantener valores de espaciado definidos contribuye a la consistencia entre los diferentes componentes de MaquiGest y favorece su adaptación a distintos tamaños de pantalla.
 
@@ -775,52 +777,100 @@ Para el desarrollo del proyecto, la Arquitectura de la Información se plantea c
 
 ### 4.2.1. Organization Systems
 
-**Organización jerárquica visual:** Empecemos con la vista de nuestro segmento principal: las empresas de alquiler de maquinaria. En la parte lateral de la plataforma se encontrarán las siguientes opciones de navegación: Dashboard, Equipos, Reservas, Alquileres, Mantenimiento, Clientes y Reportes.
-Al ingresar a la plataforma, el usuario se encontrará en la sección Dashboard, donde podrá visualizar y monitorear información relevante, como la cantidad de equipos disponibles, equipos alquilados, equipos en mantenimiento y próximas reservas. Asimismo, en esta sección se encontrarán las principales acciones que puede realizar el usuario, como registrar un equipo, crear una reserva y registrar un alquiler.
-Además, en la parte inferior del Dashboard se visualizarán las próximas reservas, los alquileres activos, los equipos que requieren mantenimiento y la actividad reciente, permitiendo al usuario tener una visión general del estado de sus operaciones.
-Continuamos con la vista de nuestro segundo segmento: las pequeñas empresas constructoras. En la parte lateral de la plataforma se encontrarán las siguientes opciones de navegación: Dashboard, Buscar equipos, Mis reservas, Mis alquileres y Perfil.
-Al ingresar a la plataforma, el usuario se encontrará en la sección Dashboard, donde podrá visualizar información relevante sobre sus alquileres, como las reservas próximas, los alquileres activos y las fechas de devolución. De esta manera, podrá conocer rápidamente el estado de los equipos que está utilizando en sus proyectos.
+**Organización jerárquica visual:** Empecemos con la vista de nuestro segmento principal: las empresas de alquiler de maquinaria. En la parte lateral de la plataforma se encontrarán las siguientes opciones de navegación: Dashboard, Maquinaria, Solicitudes de alquiler, Reservas, Alquileres, Mantenimiento, Clientes y Reportes.
+
+Al ingresar a la plataforma, el usuario se encontrará en la sección Dashboard, donde podrá visualizar y monitorear información relevante, como la cantidad de maquinaria disponible, maquinaria alquilada, maquinaria en mantenimiento y próximas reservas. Asimismo, en esta sección se encontrarán las principales acciones que puede realizar el usuario, como registrar una maquinaria, gestionar solicitudes de alquiler y registrar un alquiler.
+
+Además, en la parte inferior del Dashboard se visualizarán las próximas reservas, los alquileres activos, la maquinaria que requiere mantenimiento y la actividad reciente, permitiendo al usuario tener una visión general del estado de sus operaciones.
+
+Continuamos con la vista de nuestro segundo segmento: las pequeñas empresas constructoras. En la parte lateral de la plataforma se encontrarán las siguientes opciones de navegación: Dashboard, Buscar maquinaria, Mis solicitudes, Mis reservas, Mis alquileres y Perfil.
+
+Al ingresar a la plataforma, el usuario se encontrará en la sección Dashboard, donde podrá visualizar información relevante sobre sus solicitudes y alquileres, como las reservas próximas, los alquileres activos y las fechas de devolución. De esta manera, podrá conocer rápidamente el estado de la maquinaria que está utilizando o que ha solicitado para sus proyectos.
+
 Asimismo, en esta sección se encontrarán las principales acciones que puede realizar el usuario, como buscar maquinaria, realizar una solicitud de alquiler y consultar sus alquileres activos.
-Debajo de estas acciones se visualizará información complementaria, como las reservas próximas, los alquileres activos, las fechas de devolución y la actividad reciente, permitiendo al usuario tener una visión general de los equipos que tiene reservados o actualmente en alquiler.
 
-**Organización Secuencial:** Para la organización secuencial del segmento de empresas de alquiler de maquinaria, se ha definido un flujo basado en el ciclo de gestión de los equipos dentro de MaquiGest. El proceso comienza con el registro de la maquinaria, donde se ingresan sus principales características y datos de identificación.
-Una vez registrado el equipo, el usuario puede consultar su disponibilidad y, cuando un cliente solicita la maquinaria, crear una reserva para un período determinado. Posteriormente, la reserva puede convertirse en un alquiler, dando paso a las acciones relacionadas con la entrega del equipo.
-Durante el alquiler, la empresa podrá consultar el estado de la operación y, cuando finalice el período establecido, registrar la devolución de la maquinaria. Después de la devolución, se realizará una inspección del equipo para verificar su estado. Si se detecta algún daño o se requiere mantenimiento, la maquinaria pasará al proceso correspondiente; de lo contrario, podrá volver a estar disponible para un nuevo alquiler.
-De esta manera, la organización secuencial permite que el usuario siga un flujo lógico y ordenado, acompañando el ciclo de vida de la maquinaria desde su registro hasta su disponibilidad nuevamente, reduciendo la necesidad de realizar procesos desconectados entre diferentes secciones de la plataforma.
+Debajo de estas acciones se visualizará información complementaria, como las solicitudes pendientes, las reservas próximas, los alquileres activos, las fechas de devolución y la actividad reciente, permitiendo al usuario tener una visión general de la maquinaria que ha solicitado, tiene reservada o se encuentra actualmente en alquiler.
 
-**Organización matricial:** En la sección de Equipos, los usuarios podrán visualizar la información de las maquinarias registradas mediante una estructura matricial. Cada equipo se mostrará en una fila y sus principales características se organizarán en diferentes columnas, como nombre o código del equipo, categoría, estado, ubicación, disponibilidad y acciones.
-Esta organización permitirá que los usuarios puedan consultar, comparar y gestionar rápidamente los diferentes equipos registrados en la plataforma sin necesidad de acceder individualmente a cada uno. Asimismo, se podrán aplicar filtros para facilitar la búsqueda de una maquinaria específica según su estado, categoría o disponibilidad.
-De esta manera, la organización matricial permitirá presentar una gran cantidad de información de forma estructurada, facilitando la consulta y gestión del inventario de maquinaria.
+**Organización Secuencial:** Para la organización secuencial del segmento de empresas de alquiler de maquinaria, se ha definido un flujo basado en el ciclo de gestión de la maquinaria dentro de MaquiGest. El proceso comienza con el registro de la maquinaria, donde se ingresan sus principales características, datos de identificación, estado y disponibilidad.
+
+Una vez registrada, la maquinaria puede ser consultada y administrada dentro del inventario. Cuando una empresa constructora envía una solicitud de alquiler, la empresa de alquiler puede revisar la disponibilidad de la maquinaria y evaluar la solicitud. Si esta es aprobada, se confirma una reserva para el período solicitado.
+
+Posteriormente, la reserva da paso al proceso de alquiler, en el cual se establecen las condiciones correspondientes y se coordina la entrega de la maquinaria. Una vez realizada la entrega, el alquiler pasa a estar activo y la empresa puede realizar seguimiento a su estado durante el período establecido.
+
+Al finalizar el alquiler, se registra la devolución de la maquinaria y se realiza una inspección para verificar su condición física y operativa. Si durante la inspección se detecta algún daño, incidencia o necesidad de mantenimiento, la maquinaria pasa al proceso de mantenimiento correspondiente. En caso contrario, vuelve a estar disponible para una nueva solicitud de alquiler.
+
+De esta manera, la organización secuencial permite que el usuario siga un flujo lógico y ordenado que acompaña el ciclo de vida de la maquinaria, desde su registro y disponibilidad inicial hasta su alquiler, devolución, inspección y posterior disponibilidad, reduciendo la necesidad de gestionar estos procesos de manera aislada en diferentes secciones de la plataforma.
+
+**Organización matricial:** En la sección de Maquinaria, los usuarios podrán visualizar la información de las maquinarias registradas mediante una estructura matricial. Cada maquinaria se mostrará en una fila, mientras que sus principales características se organizarán en diferentes columnas, como nombre o código, categoría, estado, ubicación, disponibilidad y acciones disponibles.
+
+Esta organización permitirá a los usuarios consultar, comparar y gestionar rápidamente las diferentes maquinarias registradas en la plataforma, sin necesidad de acceder individualmente al detalle de cada una. Asimismo, se podrán aplicar filtros para facilitar la búsqueda de una maquinaria específica según criterios como categoría, estado, ubicación o disponibilidad.
+
+Las acciones disponibles en cada fila permitirán acceder a operaciones relacionadas con la gestión de la maquinaria, como consultar su información detallada, actualizar sus datos o revisar su estado dentro del ciclo de alquiler y mantenimiento.
+
+De esta manera, la organización matricial permitirá presentar una gran cantidad de información de forma estructurada y comparable, facilitando la consulta, búsqueda y gestión del inventario de maquinaria dentro de MaquiGest.
 
 **Sistemas de categorización:**
-- Por tópicos: Equipos, Reservas, Alquileres, Mantenimiento, Clientes y Reportes.
-- Por audiencia: Se presenta diferente información y funciones a las empresas de alquiler y pequeñas empresas constructoras. 
+
+- **Por tópicos:** La información y las funcionalidades de la plataforma se organizan de acuerdo con los principales conceptos del dominio, como Maquinaria, Solicitudes de alquiler, Reservas, Alquileres, Mantenimiento, Clientes y Reportes.
+
+- **Por audiencia:** La plataforma presenta información, opciones de navegación y funcionalidades diferentes según el segmento de usuario. Las empresas de alquiler de maquinaria acceden principalmente a funciones relacionadas con la gestión de maquinaria, solicitudes, reservas, alquileres, clientes y mantenimiento; mientras que las pequeñas empresas constructoras acceden a funciones orientadas a la búsqueda de maquinaria, envío y seguimiento de solicitudes, reservas y alquileres.
 
 
 ### 4.2.2. Labeling Systems
 
-**Etiquetas para la navegación principal:** 
-- Dashboard: Vista general del estado de los equipos, reservas, alquileres y mantenimiento. 
-- Equipos: Permite registrar, consultar y administrar las maquinarias disponibles en la empresa. 
-- Reservas: Permite gestionar las solicitudes y reservas de equipos para determinados períodos. 
-- Alquileres: Permite administrar los alquileres activos, sus detalles y su estado. 
-- Mantenimiento: Permite registrar inspecciones, mantenimientos, incidencias y reparaciones de los equipos. 
-- Clientes: Permite registrar y consultar la información de las empresas o personas que alquilan los equipos.
-- Reportes: Permite consultar información resumida sobre alquileres, utilización de equipos, ingresos y mantenimiento.
+**Etiquetas para la navegación principal:**
+
+- **Dashboard:** Vista general del estado de la maquinaria, solicitudes de alquiler, reservas, alquileres y mantenimientos.
+
+- **Maquinaria:** Permite registrar, consultar y administrar la maquinaria perteneciente a la empresa de alquiler.
+
+- **Solicitudes de alquiler:** Permite consultar, evaluar, aprobar o rechazar las solicitudes de alquiler enviadas por los clientes.
+
+- **Reservas:** Permite consultar y administrar las reservas confirmadas de maquinaria para determinados períodos.
+
+- **Alquileres:** Permite administrar los alquileres, consultar sus detalles y realizar seguimiento a su estado durante el ciclo de alquiler.
+
+- **Mantenimiento:** Permite gestionar inspecciones, mantenimientos, incidencias y reparaciones relacionadas con la maquinaria.
+
+- **Clientes:** Permite registrar y consultar la información de las empresas clientes que solicitan y alquilan maquinaria.
+
+- **Reportes:** Permite consultar información resumida sobre alquileres, utilización de maquinaria, ingresos y mantenimiento.
 
 **Etiquetas para acciones:**
-- Registrar equipo: Permite agregar una nueva maquinaria al inventario.
-Editar equipo: Permite modificar la información de una maquinaria registrada.
-- Crear reserva: Permite apartar un equipo para un período determinado.
-- Confirmar reserva: Permite confirmar una reserva solicitada por un cliente.
-- Registrar alquiler: Permite iniciar y registrar formalmente un nuevo alquiler.
-- Registrar entrega: Permite registrar la entrega del equipo al cliente.
-- Registrar devolución: Permite registrar el retorno de la maquinaria.
-- Registrar mantenimiento: Permite registrar una actividad de mantenimiento para un equipo. 
-- Registrar incidencia: Permite registrar daños, fallas u otros problemas detectados en un equipo. 
-Ver detalles: Permite consultar toda la información relacionada con un registro.
-- Editar: Permite modificar la información de un registro.
-- Eliminar: Permite eliminar un registro cuando corresponda.
+
+- **Registrar maquinaria:** Permite agregar una nueva maquinaria al inventario de la empresa.
+
+- **Editar maquinaria:** Permite modificar la información de una maquinaria previamente registrada.
+
+- **Ver disponibilidad:** Permite consultar si una maquinaria se encuentra disponible para un período determinado.
+
+- **Revisar solicitud:** Permite consultar la información de una solicitud de alquiler enviada por un cliente.
+
+- **Aprobar solicitud:** Permite aceptar una solicitud de alquiler cuando la maquinaria se encuentra disponible y se cumplen las condiciones requeridas.
+
+- **Rechazar solicitud:** Permite rechazar una solicitud de alquiler cuando esta no puede ser atendida.
+
+- **Confirmar reserva:** Permite confirmar la asignación de una maquinaria a un cliente para un período determinado después de aprobar su solicitud.
+
+- **Registrar alquiler:** Permite registrar formalmente un alquiler asociado a una reserva confirmada.
+
+- **Registrar entrega:** Permite registrar la entrega de la maquinaria al cliente.
+
+- **Registrar devolución:** Permite registrar el retorno de la maquinaria al finalizar el alquiler.
+
+- **Inspeccionar maquinaria:** Permite registrar la verificación del estado físico y operativo de la maquinaria después de su devolución.
+
+- **Registrar mantenimiento:** Permite registrar una actividad de mantenimiento realizada sobre una maquinaria.
+
+- **Programar mantenimiento:** Permite establecer un mantenimiento que deberá realizarse sobre una maquinaria en una fecha o período determinado.
+
+- **Registrar incidencia:** Permite registrar daños, fallas u otros problemas relacionados con una maquinaria.
+
+- **Ver detalles:** Permite consultar la información completa relacionada con un registro.
+
+- **Editar:** Permite modificar la información de un registro cuando corresponda.
+
+- **Eliminar:** Permite eliminar un registro cuando las reglas del proceso lo permitan.
 
 ### 4.2.3. SEO Tags and Meta Tags
 - Titulo:
@@ -844,12 +894,13 @@ Ver detalles: Permite consultar toda la información relacionada con un registro
 ```
 ### 4.2.4. Searching Systems
 
-- **Sistema de búsqueda local:** Dentro de la sección “Equipos”, se dispone de una barra de búsqueda que permite localizar equipos mediante su nombre, código o categoría. Adicionalmente, se incorporan filtros que permiten refinar los resultados según categoría, estado y ubicación.
+- **Sistema de búsqueda local:** Dentro de la sección “Maquinaria”, se dispone de una barra de búsqueda que permite localizar maquinaria mediante su nombre, código o categoría. Adicionalmente, se incorporan filtros que permiten refinar los resultados según categoría, estado, ubicación y disponibilidad.
 
 ### 4.2.5. Navigation Systems
 
-- **Sistema de navegación global:** Se implementa mediante una barra lateral (sidebar) que permite al usuario acceder a las principales secciones del sistema, como Dashboard, Equipos, Reservas, Alquileres, Mantenimiento, Clientes y Reportes.
-- **Botones de Acción Rápida:** Botones “Registrar Equipo” y “Crear Reserva” ubicados en el Dashboard, que permiten acceder directamente a procesos frecuentes.
+- **Sistema de navegación global:** Se implementa mediante una barra lateral (sidebar) que permite al usuario acceder a las principales secciones de la plataforma. Para las empresas de alquiler de maquinaria, las opciones principales son Dashboard, Maquinaria, Solicitudes de alquiler, Reservas, Alquileres, Mantenimiento, Clientes y Reportes. Para las pequeñas empresas constructoras, la navegación incluye Dashboard, Buscar maquinaria, Mis solicitudes, Mis reservas, Mis alquileres y Perfil.
+
+- **Botones de Acción Rápida:** En el Dashboard se incorporan accesos directos a las acciones más frecuentes de acuerdo con el segmento del usuario. Para las empresas de alquiler se incluyen acciones como “Registrar maquinaria” y “Gestionar solicitudes de alquiler”, mientras que para las empresas constructoras se incluyen acciones como “Buscar maquinaria” y “Realizar solicitud de alquiler”.
 
 
 ## 4.3. Landing Page UI Design
