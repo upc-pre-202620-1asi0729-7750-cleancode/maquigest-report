@@ -2796,6 +2796,10 @@ El sistema se apoya en tres servicios externos esenciales para su funcionamiento
 
 ![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-iam-bounded-context.png)
 
+#### A. Inventory Bounded Context
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-inventory-bounded-context.png)
+
 ## 4.7. Software Object-Oriented Design
 
 ### 4.7.1. Class Diagrams
