@@ -2782,6 +2782,10 @@ El sistema se apoya en tres servicios externos esenciales para su funcionamiento
 
 ### 4.6.4. Software Architecture Components Diagrams
 
+#### Component Diagram: Web Application (SPA - Front-end)
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-web-app.png)
+
 ## 4.7. Software Object-Oriented Design
 
 ### 4.7.1. Class Diagrams
