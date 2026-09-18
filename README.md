@@ -2824,6 +2824,40 @@ El sistema se apoya en tres servicios externos esenciales para su funcionamiento
 
 ### 4.7.1. Class Diagrams
 
+#### IAM
+
+![Class Diagram — IAM](./assets/md-images-chapter4/class-diagram-iam.png)
+
+`User` es la entidad central, con `role` (empresa de alquiler o constructora) y `status`. `Credentials` es un value object que encapsula la validación de correo y contraseña, y `Session` representa el token vigente. `AuthenticationService` orquesta registro, inicio y cierre de sesión (US01, US02) a través de `UserRepository`.
+
+#### Profiles
+
+![Class Diagram — Profiles](./assets/md-images-chapter4/class-diagram-profiles.png)
+
+`CompanyProfile` guarda los datos de la empresa (US03) y compone un value object `Address` con coordenadas, que alimenta la integración con Google Maps. `ProviderProfile` extiende el perfil de una empresa de alquiler con su reputación pública — alquileres completados y tasa de cumplimiento —, que corresponde al término "Perfil de Proveedor" del Ubiquitous Language.
+
+#### Inventory
+
+![Class Diagram — Inventory](./assets/md-images-chapter4/class-diagram-inventory.png)
+
+`Equipment` es el agregado principal: pertenece a una `EquipmentCategory`, compone una `RentalRate` (tarifa diaria y semanal) y mantiene su `EquipmentStatus` (disponible, alquilado, en mantenimiento). Los `AvailabilityBlock` con su `DateRange` permiten responder `isAvailableFor(period)` sin superposiciones, que es la regla que evita las dobles reservas descritas en la problemática. `InventoryService` cubre el registro, la actualización, la búsqueda para constructoras y el cambio de estado (US04–US11).
+
+#### Rentals
+
+![Class Diagram — Rentals](./assets/md-images-chapter4/class-diagram-rentals.png)
+
+`RentalRequest` modela la reservación: nace en estado `PENDING` y, al aceptarse, genera un `RentalContract` (US12–US16). El contrato compone un `RentalPeriod` y registra una `Delivery` y un `EquipmentReturn` (US17). `EquipmentReturn.requiresMaintenance()` es el punto donde una devolución con daño dispara el flujo del contexto Maintenance. `RentalService` orquesta el ciclo completo mediante los dos repositorios.
+
+#### Maintenance
+
+![Class Diagram — Maintenance](./assets/md-images-chapter4/class-diagram-maintenance.png)
+
+`MaintenanceRecord` distingue mantenimientos preventivos y correctivos con su ciclo de estados (US18, US19). `Incident` registra daños o fallas con su severidad y puede originar un `MaintenanceRecord` (US20). `EquipmentHistory` es un modelo de lectura que agrega alquileres, incidencias y mantenimientos de un equipo para responder US21 sin acoplar el contexto a Rentals: solo consume un `RentalSummary` con los datos mínimos.
+
+#### Subscription 
+
+![Class Diagram — Subscription](./assets/md-images-chapter4/class-diagram-subscription-bounded-context.png)
+
 ## 4.8. Database Design
 
 ### 4.8.1. Database Diagrams
