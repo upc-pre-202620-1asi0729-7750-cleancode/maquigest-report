@@ -1,0 +1,40 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Inventory Backend Component Diagram
+
+Container(spa, "Single Page Application", "Angular", "Consumes inventory and machinery-management capabilities provided by the MaquiGest backend.")
+
+Container_Boundary(inventoryContext, "Inventory Bounded Context\n[Java / Spring Boot]") {
+
+    Component(interfacesLayer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes endpoints for machinery, categories, rates, status, and availability management.")
+
+    Component(applicationLayer, "Application Layer", "Application Services / Command and Query Services", "Coordinates machinery registration, updates, availability queries, rates, and inventory-management use cases.")
+
+    Component(domainLayer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains equipment, category, rate, status, availability, and inventory-related business rules.")
+
+    Component(infrastructureLayer, "Infrastructure Layer", "Spring Data JPA / Repository Implementations", "Provides persistence implementations and technical adapters required by the Inventory bounded context.")
+}
+
+Container_Ext(rentalsContext, "Rentals Bounded Context", "Backend Context", "Uses machinery information and availability during rental operations.")
+
+Container_Ext(maintenanceContext, "Maintenance Bounded Context", "Backend Context", "Updates equipment status and availability when maintenance operations occur.")
+
+ContainerDb(database, "MaquiGest Database", "MySQL", "Stores machinery, categories, rates, equipment status, and availability information.")
+
+Rel(spa, interfacesLayer, "Consumes Inventory services", "JSON / HTTPS")
+
+Rel(interfacesLayer, applicationLayer, "Delegates requests")
+
+Rel(applicationLayer, domainLayer, "Executes inventory domain operations")
+Rel(applicationLayer, infrastructureLayer, "Uses persistence capabilities")
+
+Rel(rentalsContext, applicationLayer, "Queries machinery availability")
+Rel(maintenanceContext, applicationLayer, "Updates equipment status")
+
+Rel(infrastructureLayer, database, "Reads and writes Inventory data", "JPA / SQL")
+
+SHOW_LEGEND()
+
+@enduml

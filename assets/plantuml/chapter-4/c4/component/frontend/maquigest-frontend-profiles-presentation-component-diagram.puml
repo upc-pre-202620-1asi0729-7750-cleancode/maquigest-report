@@ -1,0 +1,26 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Profiles Frontend Presentation Layer Components Diagram
+
+Boundary(profilesPresentation, "Profiles Presentation Layer [Angular]") {
+    Component(profileComponent, "ProfileComponent", "Angular Component", "Displays the authenticated user's profile information.")
+    Component(editProfileComponent, "EditProfileComponent", "Angular Component", "Provides the interface for updating profile information.")
+    Component(companyProfileComponent, "CompanyProfileComponent", "Angular Component", "Displays and manages company profile information.")
+}
+
+Component(profilesApplication, "Profiles Application Layer", "Facades / Services", "Coordinates profile queries and profile-management use cases.")
+Component(sharedFrontend, "Shared Frontend", "Shared UI Components", "Provides reusable layout, forms, validation, and UI utilities.")
+
+Rel(profileComponent, profilesApplication, "Requests profile data")
+Rel(editProfileComponent, profilesApplication, "Requests profile updates")
+Rel(companyProfileComponent, profilesApplication, "Requests company profile operations")
+
+Rel(profileComponent, sharedFrontend, "Uses UI components")
+Rel(editProfileComponent, sharedFrontend, "Uses UI components")
+Rel(companyProfileComponent, sharedFrontend, "Uses UI components")
+
+SHOW_LEGEND()
+
+@enduml

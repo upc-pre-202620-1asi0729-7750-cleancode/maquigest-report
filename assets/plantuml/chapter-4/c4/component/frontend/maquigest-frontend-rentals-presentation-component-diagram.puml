@@ -1,0 +1,29 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Rentals Frontend Presentation Layer Components Diagram
+
+Boundary(rentalsPresentation, "Rentals Presentation Layer [Angular]") {
+    Component(rentalRequestsComponent, "RentalRequestsComponent", "Angular Component", "Displays and manages rental requests.")
+    Component(rentalRequestDetailComponent, "RentalRequestDetailComponent", "Angular Component", "Displays detailed information for a selected rental request.")
+    Component(reservationsComponent, "ReservationsComponent", "Angular Component", "Displays confirmed machinery reservations.")
+    Component(activeRentalsComponent, "ActiveRentalsComponent", "Angular Component", "Displays currently active rental operations.")
+    Component(deliveryFormComponent, "DeliveryFormComponent", "Angular Component", "Provides the interface for registering machinery delivery.")
+    Component(returnFormComponent, "ReturnFormComponent", "Angular Component", "Provides the interface for registering machinery return.")
+}
+
+Component(rentalsApplication, "Rentals Application Layer", "Facades / Services", "Coordinates rental requests, reservations, deliveries, active rentals, and returns.")
+
+Rel(rentalRequestsComponent, rentalsApplication, "Requests rental operations")
+Rel(rentalRequestDetailComponent, rentalsApplication, "Requests rental details")
+Rel(reservationsComponent, rentalsApplication, "Requests reservation data")
+Rel(activeRentalsComponent, rentalsApplication, "Requests active rentals")
+Rel(deliveryFormComponent, rentalsApplication, "Registers delivery")
+Rel(returnFormComponent, rentalsApplication, "Registers return")
+
+Rel(rentalRequestsComponent, rentalRequestDetailComponent, "Navigates to")
+
+SHOW_LEGEND()
+
+@enduml

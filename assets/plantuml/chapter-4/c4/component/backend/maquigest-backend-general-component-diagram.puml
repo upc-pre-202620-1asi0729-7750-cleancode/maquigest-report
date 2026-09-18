@@ -1,0 +1,57 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Backend General Components Diagram
+
+Container(spa, "Single Page Application", "Angular", "Provides MaquiGest functionality to authenticated users through their web browser.")
+
+Container_Boundary(backend, "MaquiGest Backend API Application\n[Java / Spring Boot]") {
+
+    Component(iamContext, "IAM Bounded Context", "Bounded Context Component", "Manages authentication, authorization, credentials, users, roles, and access control.")
+
+    Component(profilesContext, "Profiles Bounded Context", "Bounded Context Component", "Manages user, company, supplier, and customer profile information.")
+
+    Component(inventoryContext, "Inventory Bounded Context", "Bounded Context Component", "Manages machinery, categories, rates, equipment status, and availability.")
+
+    Component(rentalsContext, "Rentals Bounded Context", "Bounded Context Component", "Manages rental requests, reservations, contracts, deliveries, active rentals, and returns.")
+
+    Component(maintenanceContext, "Maintenance Bounded Context", "Bounded Context Component", "Manages maintenance schedules, inspections, incidents, and equipment maintenance history.")
+
+    Component(subscriptionsContext, "Subscriptions Bounded Context", "Bounded Context Component", "Manages subscription plans, active subscriptions, billing state, and plan changes.")
+
+    Component(sharedComponent, "Shared", "Shared Component", "Provides reusable cross-cutting capabilities, common abstractions, validation, configuration, and technical utilities.")
+}
+
+ContainerDb(database, "MaquiGest Database", "MySQL", "Stores persistent account, profile, machinery, rental, maintenance, and subscription information.")
+
+Rel(spa, iamContext, "Uses authentication services", "JSON / HTTPS")
+Rel(spa, profilesContext, "Uses profile services", "JSON / HTTPS")
+Rel(spa, inventoryContext, "Uses inventory services", "JSON / HTTPS")
+Rel(spa, rentalsContext, "Uses rental services", "JSON / HTTPS")
+Rel(spa, maintenanceContext, "Uses maintenance services", "JSON / HTTPS")
+Rel(spa, subscriptionsContext, "Uses subscription services", "JSON / HTTPS")
+
+Rel(profilesContext, iamContext, "Uses authenticated account identity")
+Rel(rentalsContext, inventoryContext, "Checks machinery availability")
+Rel(rentalsContext, profilesContext, "Uses company and participant profiles")
+Rel(maintenanceContext, inventoryContext, "Updates equipment status and availability")
+Rel(subscriptionsContext, iamContext, "Uses authenticated account identity")
+
+Rel(iamContext, sharedComponent, "Uses")
+Rel(profilesContext, sharedComponent, "Uses")
+Rel(inventoryContext, sharedComponent, "Uses")
+Rel(rentalsContext, sharedComponent, "Uses")
+Rel(maintenanceContext, sharedComponent, "Uses")
+Rel(subscriptionsContext, sharedComponent, "Uses")
+
+Rel(iamContext, database, "Persists")
+Rel(profilesContext, database, "Persists")
+Rel(inventoryContext, database, "Persists")
+Rel(rentalsContext, database, "Persists")
+Rel(maintenanceContext, database, "Persists")
+Rel(subscriptionsContext, database, "Persists")
+
+SHOW_LEGEND()
+
+@enduml

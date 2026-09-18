@@ -1,0 +1,37 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Profiles Backend Component Diagram
+
+Container(spa, "Single Page Application", "Angular", "Consumes profile-management capabilities provided by the MaquiGest backend.")
+
+Container_Boundary(profilesContext, "Profiles Bounded Context\n[Java / Spring Boot]") {
+
+    Component(interfacesLayer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes endpoints for user profiles, company profiles, supplier information, and profile updates.")
+
+    Component(applicationLayer, "Application Layer", "Application Services / Command and Query Services", "Coordinates profile registration, profile updates, company information, and profile-query use cases.")
+
+    Component(domainLayer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains user profile, company profile, supplier information, and profile-related business rules.")
+
+    Component(infrastructureLayer, "Infrastructure Layer", "Spring Data JPA / Repository Implementations", "Provides persistence implementations and technical adapters required by the Profiles bounded context.")
+}
+
+Container_Ext(iamContext, "IAM Bounded Context", "Backend Context", "Provides authenticated account identity and access information.")
+
+ContainerDb(database, "MaquiGest Database", "MySQL", "Stores user, company, supplier, and profile-related information.")
+
+Rel(spa, interfacesLayer, "Consumes Profiles services", "JSON / HTTPS")
+
+Rel(interfacesLayer, applicationLayer, "Delegates requests")
+
+Rel(applicationLayer, domainLayer, "Executes profile domain operations")
+Rel(applicationLayer, infrastructureLayer, "Uses persistence capabilities")
+
+Rel(applicationLayer, iamContext, "Uses authenticated account identity")
+
+Rel(infrastructureLayer, database, "Reads and writes Profiles data", "JPA / SQL")
+
+SHOW_LEGEND()
+
+@enduml

@@ -1,0 +1,26 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - IAM Frontend Presentation Layer Components Diagram
+
+Boundary(iamPresentation, "IAM Presentation Layer [Angular]") {
+    Component(loginComponent, "LoginComponent", "Angular Component", "Provides the authentication form and handles user login interaction.")
+    Component(registerComponent, "RegisterComponent", "Angular Component", "Provides account registration and validation interaction.")
+    Component(recoverPasswordComponent, "RecoverPasswordComponent", "Angular Component", "Provides the password-recovery interface and recovery request interaction.")
+}
+
+Component(iamApplication, "IAM Application Layer", "Facades / Services", "Coordinates authentication, registration, password recovery, and session use cases.")
+Component(sharedFrontend, "Shared Frontend", "Shared UI Components", "Provides reusable form controls, validation messages, layout elements, and UI utilities.")
+
+Rel(loginComponent, iamApplication, "Requests authentication")
+Rel(registerComponent, iamApplication, "Requests account registration")
+Rel(recoverPasswordComponent, iamApplication, "Requests password recovery")
+
+Rel(loginComponent, sharedFrontend, "Uses UI components")
+Rel(registerComponent, sharedFrontend, "Uses UI components")
+Rel(recoverPasswordComponent, sharedFrontend, "Uses UI components")
+
+SHOW_LEGEND()
+
+@enduml

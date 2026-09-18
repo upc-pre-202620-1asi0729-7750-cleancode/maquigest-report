@@ -1,0 +1,47 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Subscriptions Backend Component Diagram
+
+Container(spa, "Single Page Application", "Angular", "Consumes subscription-management capabilities provided by the MaquiGest backend.")
+
+Container_Boundary(subscriptionsContext, "Subscriptions Bounded Context\n[Java / Spring Boot]") {
+
+    Component(interfacesLayer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes endpoints for subscription plans, active subscriptions, plan changes, billing status, and subscription management.")
+
+    Component(applicationLayer, "Application Layer", "Application Services / Command and Query Services", "Coordinates plan selection, subscription activation, plan changes, billing state, and subscription-related use cases.")
+
+    Component(domainLayer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains subscription plans, active subscriptions, billing status, and subscription-related business rules.")
+
+    Component(infrastructureLayer, "Infrastructure Layer", "Spring Data JPA / Repository Implementations", "Provides persistence implementations and technical adapters required by the Subscriptions bounded context.")
+
+    Component(paymentConnector, "Payment Connector", "Stripe SDK / REST API", "Integrates the Subscriptions bounded context with the external payment provider.")
+}
+
+Container_Ext(iamContext, "IAM Bounded Context", "Backend Context", "Provides authenticated account identity required for subscription ownership.")
+
+Container_Ext(profilesContext, "Profiles Bounded Context", "Backend Context", "Provides company and account profile information associated with subscriptions.")
+
+System_Ext(stripe, "Stripe", "External Payment Service", "Processes subscription payment transactions.")
+
+ContainerDb(database, "MaquiGest Database", "MySQL", "Stores plans, subscriptions, billing status, payment references, and subscription-related information.")
+
+Rel(spa, interfacesLayer, "Consumes Subscriptions services", "JSON / HTTPS")
+
+Rel(interfacesLayer, applicationLayer, "Delegates requests")
+
+Rel(applicationLayer, domainLayer, "Executes subscription domain operations")
+Rel(applicationLayer, infrastructureLayer, "Uses persistence capabilities")
+Rel(applicationLayer, paymentConnector, "Requests payment operations")
+
+Rel(applicationLayer, iamContext, "Uses authenticated account identity")
+Rel(applicationLayer, profilesContext, "Uses company profile information")
+
+Rel(paymentConnector, stripe, "Processes subscription payments", "HTTPS / API")
+
+Rel(infrastructureLayer, database, "Reads and writes Subscriptions data", "JPA / SQL")
+
+SHOW_LEGEND()
+
+@enduml
