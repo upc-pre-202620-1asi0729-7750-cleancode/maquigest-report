@@ -1859,10 +1859,63 @@ En conjunto, los mock-ups para Mobile Web Browser evidencian la adaptación del 
 ## 4.4. Web Applications UX/UI Design
 
 ### 4.4.1. Web Applications Wireframes
+#### Dashboard — Empresa de alquiler de maquinaria
 
+**Propósito:** Proporcionar al administrador una vista general de la disponibilidad de su maquinaria y de las operaciones de alquiler, facilitando la identificación de próximas entregas, devoluciones y necesidades de mantenimiento.
+
+**Elementos clave:**
+
+- Navegación lateral hacia Dashboard, Equipment, Rental requests, Reservations, Rentals, Maintenance, Clients y Reports.
+- Accesos rápidos para registrar maquinaria, revisar solicitudes y registrar un alquiler.
+- Indicadores de maquinaria disponible, maquinaria alquilada, maquinaria en mantenimiento y próximas reservas.
+- Listado de reservas confirmadas y resumen de alquileres activos con sus fechas de devolución.
+- Seguimiento de inspecciones, mantenimiento y actividad reciente.
+- Selector de idioma y acceso a la cuenta del administrador.
+- Adaptación para navegador móvil mediante un menú desplegable y una distribución vertical de los contenidos.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rental-dashboard-desktop-wireframe.png" alt="Wireframe del dashboard de la empresa de alquiler para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rental-dashboard-mobile-wireframe.png" alt="Wireframe del dashboard de la empresa de alquiler para navegador móvil" width="40%">
+</p>
+
+Los registros, cantidades y fechas se presentan como datos de ejemplo para representar la organización de la información.
 ### 4.4.2. Web Applications Wireflow Diagrams
 
 ### 4.4.3. Web Applications Mock-ups
+#### Dashboard — Empresa de alquiler de maquinaria
+
+**Propósito:** Presentar la propuesta visual del panel principal para la empresa de alquiler, aplicando la identidad de MaquiGest a la estructura definida en su wireframe.
+
+**Elementos clave:**
+
+- Logotipo de MaquiGest y tipografía Inter.
+- Azul oscuro para la identidad y los elementos principales de navegación.
+- Acento naranja para destacar la acción de registrar maquinaria.
+- Azul para los enlaces que permiten consultar información adicional.
+- Fondos claros y tarjetas que agrupan indicadores, reservas, alquileres, mantenimiento y actividad reciente.
+- Etiquetas textuales para comunicar estados, como reserva confirmada, inspección pendiente y mantenimiento en curso.
+- Distribución adaptable a escritorio y navegador móvil, conservando las acciones e información principales.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rental-dashboard-desktop-mockup.png" alt="Mock-up del dashboard de la empresa de alquiler para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rental-dashboard-mobile-mockup.png" alt="Mock-up del dashboard de la empresa de alquiler para navegador móvil" width="40%">
+</p>
+
+Esta propuesta utiliza datos de ejemplo y representa el diseño visual de la pantalla. Las interacciones se desarrollarán al conectar las pantallas en el prototipo.
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
