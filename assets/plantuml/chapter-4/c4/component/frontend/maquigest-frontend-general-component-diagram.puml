@@ -1,0 +1,70 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Frontend General Components Diagram
+
+Person(rentalOperator, "Rental Operator", "Uses the MaquiGest SPA to manage machinery and rental operations.")
+Person(constructionManager, "Construction Manager", "Uses the MaquiGest SPA to search machinery and manage rental requests.")
+
+Container_Boundary(frontend, "MaquiGest Frontend Bounded Context Map\n[Angular SPA / Frontend Container]") {
+
+    Component(appLayout, "App Layout", "Angular / Angular Material", "Provides the application shell, toolbar, navigation, contextual layout, and router outlet.")
+
+    Component(appRouter, "App Router", "Angular Router", "Routes users to the frontend bounded contexts.")
+
+    Component(sharedContext, "Shared Context", "Shared Frontend Component", "Provides reusable UI components, guards, session support, utilities, configuration, and shared services.")
+
+    Component(iamContext, "IAM Context", "Bounded Context Component", "Provides login, registration, password recovery, authentication, and session management.")
+
+    Component(profilesContext, "Profiles Context", "Bounded Context Component", "Provides user, company, and supplier profile management.")
+
+    Component(inventoryContext, "Inventory Context", "Bounded Context Component", "Provides machinery catalog, equipment details, rates, availability, and inventory management.")
+
+    Component(rentalsContext, "Rentals Context", "Bounded Context Component", "Provides rental requests, reservations, deliveries, active rentals, and returns.")
+
+    Component(maintenanceContext, "Maintenance Context", "Bounded Context Component", "Provides maintenance schedules, inspections, incidents, and machinery maintenance history.")
+
+    Component(subscriptionsContext, "Subscriptions Context", "Bounded Context Component", "Provides plan catalog, current subscription, plan changes, and subscription management.")
+
+    Component(frontendInfrastructure, "API and Local Data Infrastructure", "Angular HttpClient / Web Storage", "Provides typed REST services, HTTP communication, local session persistence, and frontend data access.")
+}
+
+Container_Ext(backendApi, "MaquiGest Backend API", "Java / Spring Boot", "REST API consumed by the frontend.")
+
+Rel(rentalOperator, appLayout, "Uses")
+Rel(constructionManager, appLayout, "Uses")
+
+Rel(appLayout, appRouter, "Displays routed views")
+
+Rel(appRouter, iamContext, "Routes")
+Rel(appRouter, profilesContext, "Routes")
+Rel(appRouter, inventoryContext, "Routes")
+Rel(appRouter, rentalsContext, "Routes")
+Rel(appRouter, maintenanceContext, "Routes")
+Rel(appRouter, subscriptionsContext, "Routes")
+
+Rel(sharedContext, iamContext, "Provides shared session UI and services")
+Rel(sharedContext, profilesContext, "Provides shared UI and utilities")
+Rel(sharedContext, inventoryContext, "Provides shared UI and utilities")
+Rel(sharedContext, rentalsContext, "Provides shared UI and utilities")
+Rel(sharedContext, maintenanceContext, "Provides shared UI and utilities")
+Rel(sharedContext, subscriptionsContext, "Provides shared UI and utilities")
+
+Rel(profilesContext, iamContext, "Uses authenticated account context")
+Rel(rentalsContext, inventoryContext, "Uses machinery availability")
+Rel(maintenanceContext, inventoryContext, "Updates machinery availability")
+Rel(subscriptionsContext, iamContext, "Uses authenticated account context")
+
+Rel(iamContext, frontendInfrastructure, "Uses REST services")
+Rel(profilesContext, frontendInfrastructure, "Uses REST services")
+Rel(inventoryContext, frontendInfrastructure, "Uses REST services")
+Rel(rentalsContext, frontendInfrastructure, "Uses REST services")
+Rel(maintenanceContext, frontendInfrastructure, "Uses REST services")
+Rel(subscriptionsContext, frontendInfrastructure, "Uses REST services")
+
+Rel(frontendInfrastructure, backendApi, "Consumes", "JSON / HTTPS")
+
+SHOW_LEGEND()
+
+@enduml

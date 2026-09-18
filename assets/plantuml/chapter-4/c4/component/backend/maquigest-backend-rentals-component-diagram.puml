@@ -1,0 +1,40 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Rentals Backend Component Diagram
+
+Container(spa, "Single Page Application", "Angular", "Consumes rental-management capabilities provided by the MaquiGest backend.")
+
+Container_Boundary(rentalsContext, "Rentals Bounded Context\n[Java / Spring Boot]") {
+
+    Component(interfacesLayer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes endpoints for rental requests, reservations, contracts, deliveries, active rentals, and returns.")
+
+    Component(applicationLayer, "Application Layer", "Application Services / Command and Query Services", "Coordinates rental requests, reservation workflows, contract operations, deliveries, returns, and rental lifecycle use cases.")
+
+    Component(domainLayer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains rental requests, rental contracts, reservations, deliveries, returns, and rental business rules.")
+
+    Component(infrastructureLayer, "Infrastructure Layer", "Spring Data JPA / Repository Implementations", "Provides persistence implementations and technical adapters required by the Rentals bounded context.")
+}
+
+Container_Ext(inventoryContext, "Inventory Bounded Context", "Backend Context", "Provides machinery information, rates, status, and availability required by rental operations.")
+
+Container_Ext(profilesContext, "Profiles Bounded Context", "Backend Context", "Provides supplier, lessee, and company profile information required by rental operations.")
+
+ContainerDb(database, "MaquiGest Database", "MySQL", "Stores rental requests, reservations, contracts, deliveries, returns, and active rental information.")
+
+Rel(spa, interfacesLayer, "Consumes Rentals services", "JSON / HTTPS")
+
+Rel(interfacesLayer, applicationLayer, "Delegates requests")
+
+Rel(applicationLayer, domainLayer, "Executes rental domain operations")
+Rel(applicationLayer, infrastructureLayer, "Uses persistence capabilities")
+
+Rel(applicationLayer, inventoryContext, "Checks machinery availability and equipment data")
+Rel(applicationLayer, profilesContext, "Uses company and participant profile data")
+
+Rel(infrastructureLayer, database, "Reads and writes Rentals data", "JPA / SQL")
+
+SHOW_LEGEND()
+
+@enduml

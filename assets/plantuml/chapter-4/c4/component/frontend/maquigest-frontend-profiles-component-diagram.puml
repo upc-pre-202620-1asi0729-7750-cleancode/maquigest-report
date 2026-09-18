@@ -1,0 +1,38 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Profiles Frontend Components Diagram
+
+Container_Boundary(profilesContext, "Profiles Frontend Bounded Context\n[Angular Bounded Context Module]") {
+
+    Component(presentationLayer, "Presentation Layer", "Pages / Components / Routes", "Renders user and company profile views, handles profile editing, and delegates profile actions.")
+
+    Component(applicationLayer, "Application Layer", "Facades / Services", "Coordinates profile use cases, profile state, company information, and frontend workflows.")
+
+    Component(infrastructureLayer, "Infrastructure Layer", "API Clients / Mappers", "Consumes Profiles backend endpoints and maps API resources into frontend models.")
+
+    Component(domainLayer, "Domain Layer", "Models / Rules", "Defines user, company, supplier profile, and profile-related frontend models and rules.")
+}
+
+Container_Ext(iamContext, "IAM", "Frontend Context", "Provides authenticated user and account context.")
+
+Container_Ext(sharedFrontend, "Shared Frontend", "Shared UI / Session", "Provides reusable UI primitives, session utilities, guards, and shared frontend services.")
+
+Container_Ext(backendApi, "MaquiGest Backend API", "External Container", "REST API consumed by the Profiles frontend context.")
+
+Rel(presentationLayer, applicationLayer, "Dispatches UI actions")
+
+Rel(applicationLayer, infrastructureLayer, "Requests profile data")
+Rel(applicationLayer, domainLayer, "Applies profile rules")
+
+Rel(applicationLayer, iamContext, "Uses authenticated account context")
+
+Rel(presentationLayer, sharedFrontend, "Uses layout / UI primitives")
+Rel(applicationLayer, sharedFrontend, "Uses session services")
+
+Rel(infrastructureLayer, backendApi, "Consumes Profiles REST endpoints", "JSON / HTTPS")
+
+SHOW_LEGEND()
+
+@enduml

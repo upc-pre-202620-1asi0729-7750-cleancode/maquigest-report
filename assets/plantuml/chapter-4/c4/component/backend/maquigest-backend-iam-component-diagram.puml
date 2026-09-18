@@ -1,0 +1,40 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - IAM Backend Component Diagram
+
+Container(spa, "Single Page Application", "Angular", "Consumes authentication and account-access capabilities provided by the MaquiGest backend.")
+
+Container_Boundary(iamContext, "IAM Bounded Context\n[Java / Spring Boot]") {
+
+    Component(interfacesLayer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes authentication, registration, account access, and authorization endpoints to the frontend.")
+
+    Component(applicationLayer, "Application Layer", "Application Services / Command and Query Services", "Coordinates authentication, registration, credential management, and account-access use cases.")
+
+    Component(domainLayer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains users, credentials, roles, authentication rules, and IAM business logic.")
+
+    Component(infrastructureLayer, "Infrastructure Layer", "Spring Data JPA / Repository Implementations", "Provides persistence implementations and technical adapters required by the IAM bounded context.")
+
+    Component(securityConnector, "Security Connector", "Spring Security / JWT", "Provides authentication filters, password encoding, token generation, and authorization mechanisms.")
+}
+
+ContainerDb(database, "MaquiGest Database", "MySQL", "Stores user accounts, credentials, roles, and authentication-related information.")
+
+System_Ext(sendGrid, "SendGrid", "Provides transactional email delivery for account and password-recovery notifications.")
+
+Rel(spa, interfacesLayer, "Consumes IAM services", "JSON / HTTPS")
+
+Rel(interfacesLayer, applicationLayer, "Delegates requests")
+
+Rel(applicationLayer, domainLayer, "Executes domain operations")
+Rel(applicationLayer, infrastructureLayer, "Uses persistence capabilities")
+Rel(applicationLayer, securityConnector, "Uses authentication and authorization services")
+
+Rel(infrastructureLayer, database, "Reads and writes IAM data", "JPA / SQL")
+
+Rel(applicationLayer, sendGrid, "Requests account and recovery emails", "HTTPS / API")
+
+SHOW_LEGEND()
+
+@enduml

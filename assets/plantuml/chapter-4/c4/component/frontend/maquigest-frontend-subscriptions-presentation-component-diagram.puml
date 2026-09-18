@@ -1,0 +1,32 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Subscriptions Frontend Presentation Layer Components Diagram
+
+Boundary(subscriptionsPresentation, "Subscriptions Presentation Layer [Angular]") {
+
+    Component(plansComponent, "PlansComponent", "Angular Component", "Displays the available MaquiGest subscription plans.")
+
+    Component(currentSubscriptionComponent, "CurrentSubscriptionComponent", "Angular Component", "Displays the current subscription, subscription status, and associated plan information.")
+
+    Component(changePlanComponent, "ChangePlanComponent", "Angular Component", "Provides the interface for selecting and changing the current subscription plan.")
+}
+
+Component(subscriptionsApplication, "Subscriptions Application Layer", "Facades / Services", "Coordinates plan queries, current subscription state, and plan-change use cases.")
+
+Component(sharedFrontend, "Shared Frontend", "Shared UI Components", "Provides reusable layout, buttons, dialogs, form controls, and common UI utilities.")
+
+Rel(plansComponent, subscriptionsApplication, "Requests available plans")
+Rel(currentSubscriptionComponent, subscriptionsApplication, "Requests current subscription")
+Rel(changePlanComponent, subscriptionsApplication, "Requests plan change")
+
+Rel(plansComponent, changePlanComponent, "Selects plan")
+
+Rel(plansComponent, sharedFrontend, "Uses UI components")
+Rel(currentSubscriptionComponent, sharedFrontend, "Uses UI components")
+Rel(changePlanComponent, sharedFrontend, "Uses UI components")
+
+SHOW_LEGEND()
+
+@enduml

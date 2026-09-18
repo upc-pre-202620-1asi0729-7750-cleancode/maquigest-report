@@ -1,0 +1,41 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Subscriptions Frontend Components Diagram
+
+Container_Boundary(subscriptionsContext, "Subscriptions Frontend Bounded Context\n[Angular Bounded Context Module]") {
+
+    Component(presentationLayer, "Presentation Layer", "Pages / Components / Routes", "Renders subscription plans, current subscription, plan comparison, and plan management views.")
+
+    Component(applicationLayer, "Application Layer", "Facades / Services", "Coordinates subscription workflows, plan selection, subscription state, and frontend use cases.")
+
+    Component(infrastructureLayer, "Infrastructure Layer", "API Clients / Mappers", "Consumes Subscriptions backend endpoints and maps subscription resources into frontend models.")
+
+    Component(domainLayer, "Domain Layer", "Models / Rules", "Defines subscription plan, subscription status, billing-related models, and frontend subscription rules.")
+}
+
+Container_Ext(iamContext, "IAM", "Frontend Context", "Provides authenticated account and session context.")
+
+Container_Ext(profilesContext, "Profiles", "Frontend Context", "Provides company and account profile information associated with the subscription.")
+
+Container_Ext(sharedFrontend, "Shared Frontend", "Shared UI / Session", "Provides reusable UI primitives, session utilities, guards, and shared frontend services.")
+
+Container_Ext(backendApi, "MaquiGest Backend API", "External Container", "REST API consumed by the Subscriptions frontend context.")
+
+Rel(presentationLayer, applicationLayer, "Dispatches UI actions")
+
+Rel(applicationLayer, infrastructureLayer, "Requests subscription data")
+Rel(applicationLayer, domainLayer, "Applies subscription and plan rules")
+
+Rel(applicationLayer, iamContext, "Uses authenticated account context")
+Rel(applicationLayer, profilesContext, "Uses company profile information")
+
+Rel(presentationLayer, sharedFrontend, "Uses layout / UI primitives")
+Rel(applicationLayer, sharedFrontend, "Uses session services")
+
+Rel(infrastructureLayer, backendApi, "Consumes Subscriptions REST endpoints", "JSON / HTTPS")
+
+SHOW_LEGEND()
+
+@enduml

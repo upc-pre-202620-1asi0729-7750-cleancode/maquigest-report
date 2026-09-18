@@ -1,0 +1,25 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Maintenance Frontend Presentation Layer Components Diagram
+
+Boundary(maintenancePresentation, "Maintenance Presentation Layer [Angular]") {
+    Component(maintenanceListComponent, "MaintenanceListComponent", "Angular Component", "Displays scheduled and completed maintenance activities.")
+    Component(maintenanceDetailComponent, "MaintenanceDetailComponent", "Angular Component", "Displays detailed maintenance information and equipment history.")
+    Component(incidentFormComponent, "IncidentFormComponent", "Angular Component", "Provides the interface for registering equipment incidents.")
+    Component(inspectionComponent, "InspectionComponent", "Angular Component", "Provides inspection information and inspection-related interaction.")
+}
+
+Component(maintenanceApplication, "Maintenance Application Layer", "Facades / Services", "Coordinates maintenance, inspection, incident, and equipment-history use cases.")
+
+Rel(maintenanceListComponent, maintenanceApplication, "Requests maintenance data")
+Rel(maintenanceDetailComponent, maintenanceApplication, "Requests maintenance details")
+Rel(incidentFormComponent, maintenanceApplication, "Registers incident")
+Rel(inspectionComponent, maintenanceApplication, "Manages inspection")
+
+Rel(maintenanceListComponent, maintenanceDetailComponent, "Navigates to")
+
+SHOW_LEGEND()
+
+@enduml

@@ -1,0 +1,41 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Rentals Frontend Components Diagram
+
+Container_Boundary(rentalsContext, "Rentals Frontend Bounded Context\n[Angular Bounded Context Module]") {
+
+    Component(presentationLayer, "Presentation Layer", "Pages / Components / Routes", "Renders rental requests, reservations, deliveries, active rentals, and return views and handles user interactions.")
+
+    Component(applicationLayer, "Application Layer", "Facades / Services", "Coordinates rental workflows, reservation state, delivery and return operations, and frontend use cases.")
+
+    Component(infrastructureLayer, "Infrastructure Layer", "API Clients / Mappers", "Consumes Rentals backend endpoints and maps rental resources into frontend models.")
+
+    Component(domainLayer, "Domain Layer", "Models / Rules", "Defines rental request, reservation, rental contract, delivery, and return models and frontend business rules.")
+}
+
+Container_Ext(inventoryContext, "Inventory", "Frontend Context", "Provides machinery information, rates, status, and availability required by rental workflows.")
+
+Container_Ext(profilesContext, "Profiles", "Frontend Context", "Provides supplier, lessee, and company profile information used during rental operations.")
+
+Container_Ext(sharedFrontend, "Shared Frontend", "Shared UI / Session", "Provides reusable UI primitives, session utilities, guards, and shared frontend services.")
+
+Container_Ext(backendApi, "MaquiGest Backend API", "External Container", "REST API consumed by the Rentals frontend context.")
+
+Rel(presentationLayer, applicationLayer, "Dispatches UI actions")
+
+Rel(applicationLayer, infrastructureLayer, "Requests rental data")
+Rel(applicationLayer, domainLayer, "Applies rental workflow rules")
+
+Rel(applicationLayer, inventoryContext, "Uses machinery availability and equipment data")
+Rel(applicationLayer, profilesContext, "Uses company and participant profile data")
+
+Rel(presentationLayer, sharedFrontend, "Uses layout / UI primitives")
+Rel(applicationLayer, sharedFrontend, "Uses session services")
+
+Rel(infrastructureLayer, backendApi, "Consumes Rentals REST endpoints", "JSON / HTTPS")
+
+SHOW_LEGEND()
+
+@enduml

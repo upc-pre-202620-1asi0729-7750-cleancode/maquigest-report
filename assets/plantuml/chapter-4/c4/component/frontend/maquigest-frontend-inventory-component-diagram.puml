@@ -1,0 +1,41 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Inventory Frontend Components Diagram
+
+Container_Boundary(inventoryContext, "Inventory Frontend Bounded Context\n[Angular Bounded Context Module]") {
+
+    Component(presentationLayer, "Presentation Layer", "Pages / Components / Routes", "Renders machinery catalog, equipment details, availability, rates, and inventory management views.")
+
+    Component(applicationLayer, "Application Layer", "Facades / Services", "Coordinates equipment queries, inventory operations, availability state, and frontend workflows.")
+
+    Component(infrastructureLayer, "Infrastructure Layer", "API Clients / Mappers", "Consumes Inventory backend endpoints and maps equipment resources into frontend models.")
+
+    Component(domainLayer, "Domain Layer", "Models / Rules", "Defines equipment, category, rate, status, and availability models and frontend business rules.")
+}
+
+Container_Ext(rentalsContext, "Rentals", "Frontend Context", "Uses machinery information and availability when creating and managing rental requests.")
+
+Container_Ext(maintenanceContext, "Maintenance", "Frontend Context", "Coordinates equipment maintenance status and availability changes.")
+
+Container_Ext(sharedFrontend, "Shared Frontend", "Shared UI / Session", "Provides reusable UI primitives, session utilities, guards, and shared frontend services.")
+
+Container_Ext(backendApi, "MaquiGest Backend API", "External Container", "REST API consumed by the Inventory frontend context.")
+
+Rel(presentationLayer, applicationLayer, "Dispatches UI actions")
+
+Rel(applicationLayer, infrastructureLayer, "Requests equipment data")
+Rel(applicationLayer, domainLayer, "Applies inventory and availability rules")
+
+Rel(applicationLayer, rentalsContext, "Provides machinery availability")
+Rel(applicationLayer, maintenanceContext, "Coordinates equipment status")
+
+Rel(presentationLayer, sharedFrontend, "Uses layout / UI primitives")
+Rel(applicationLayer, sharedFrontend, "Uses shared services")
+
+Rel(infrastructureLayer, backendApi, "Consumes Inventory REST endpoints", "JSON / HTTPS")
+
+SHOW_LEGEND()
+
+@enduml
