@@ -2819,7 +2819,7 @@ Additionally, the RESTful API communicates with external services such as **Goog
   <img src="./assets/plantuml/chapter-4/c4/container/maquigest-c4-container-diagram.png"
        alt="MaquiGest Software Architecture Container Diagram"
        width="90%">
-</p>![Software Architecture Container Diagram](./assets/md-images-chapter4/container-diagram.png)
+</p>
 
 ### 4.6.4. Software Architecture Component Diagrams
 
