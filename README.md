@@ -3151,7 +3151,126 @@ Este bounded context utiliza IAM para identificar la cuenta autenticada y Profil
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
+# Capítulo V: Product Implementation, Validation & Deployment
+
 ## 5.1. Software Configuration Management
+
+La gestión de la configuración de software en MaquiGest tiene como propósito mantener el control sobre los artefactos producidos durante el desarrollo del proyecto, garantizar la trazabilidad de los cambios realizados por los integrantes del equipo y asegurar que las diferentes versiones del producto puedan ser identificadas, integradas y desplegadas de manera organizada.
+
+Para ello, CleanCode utiliza herramientas de control de versiones, diseño, documentación y despliegue que permiten coordinar el trabajo colaborativo tanto en el Project Report como en el Landing Page y, posteriormente, en los demás productos de software que conformarán MaquiGest.
+
+La estrategia de trabajo se encuentra basada en Git y GitHub para el versionamiento y colaboración, GitFlow para la organización de ramas, Conventional Commits para mantener mensajes de cambios consistentes y Semantic Versioning para identificar las versiones liberadas del producto.
+
+Asimismo, se utilizan herramientas especializadas para las diferentes actividades del ciclo de desarrollo, incluyendo Figma para el diseño UX/UI, PlantUML para la elaboración de diagramas de arquitectura de software y Netlify para el despliegue público del Landing Page.
+
+### 5.1.1. Software Development Environment Configuration
+
+El entorno de desarrollo de MaquiGest se ha configurado utilizando diferentes herramientas de acuerdo con las actividades de gestión, diseño, implementación, documentación y despliegue requeridas durante el desarrollo del producto.
+
+Esta configuración permite mantener una separación clara entre los artefactos de documentación, diseño e implementación, facilitando el trabajo colaborativo del equipo y la evolución progresiva de la solución.
+
+#### Project Management
+
+Para la administración técnica y colaboración del proyecto se utiliza GitHub como plataforma principal.
+
+CleanCode dispone de una organización en GitHub que centraliza los repositorios correspondientes a los diferentes productos de MaquiGest. A través de esta plataforma, los integrantes del equipo pueden trabajar de manera distribuida, crear ramas independientes para sus tareas, registrar commits, integrar cambios y mantener un historial completo de la evolución del proyecto.
+
+Durante el desarrollo se utiliza GitFlow como estrategia de ramificación. Las nuevas funcionalidades y modificaciones se desarrollan principalmente mediante ramas `feature/*`, las cuales se integran posteriormente en la rama `develop`. Cuando el conjunto de funcionalidades alcanza un estado adecuado para una entrega, se utiliza una rama `release/*`, mientras que `main` representa las versiones estables del producto.
+
+Los principales repositorios utilizados actualmente son:
+
+| Producto | Repositorio |
+| --- | --- |
+| Project Report | `maquigest-report` |
+| Landing Page | `maquigest-website` |
+
+**GitHub Organization:**  
+`upc-pre-202620-1asi0729-7750-cleancode`
+
+#### Requirements Management
+
+Los requisitos funcionales y las necesidades identificadas para MaquiGest se documentan dentro del Project Report.
+
+La definición de requisitos parte de los resultados obtenidos mediante el proceso de Requirements Elicitation & Analysis, incluyendo entrevistas, Needfinding, User Personas, User Task Matrix, User Journey Mapping, Empathy Mapping, Big Picture Event Storming y Ubiquitous Language.
+
+Posteriormente, los requisitos son formalizados mediante Epics y User Stories, incluyendo criterios de aceptación utilizando la estructura Given-When-Then. Estos artefactos constituyen la base para organizar las funcionalidades que posteriormente son incorporadas al Product Backlog y desarrolladas durante los Sprints.
+
+GitHub también permite relacionar los cambios realizados en los repositorios con las funcionalidades correspondientes mediante ramas y commits descriptivos, proporcionando trazabilidad entre los requisitos documentados y su posterior implementación.
+
+#### Product UX/UI Design
+
+Para el diseño de la experiencia de usuario y de las interfaces de MaquiGest se utiliza Figma.
+
+Esta herramienta permitió desarrollar los Wireframes y Mock-ups correspondientes tanto al Landing Page como a la Web Application. Las propuestas fueron elaboradas considerando los Style Guidelines, la Information Architecture y los segmentos objetivo definidos previamente.
+
+Los diseños incluyen versiones para Desktop Web Browser y Mobile Web Browser, permitiendo representar el comportamiento responsive esperado antes de comenzar la implementación.
+
+Asimismo, Figma sirve como referencia visual durante el desarrollo, facilitando que los integrantes encargados de implementar las interfaces mantengan consistencia con la identidad visual, estructura y componentes definidos durante la etapa de diseño.
+
+**Herramienta:** Figma
+
+#### Software Development
+
+Para el desarrollo inicial del Landing Page de MaquiGest se utilizan tecnologías web estándar:
+
+- HTML5 para la estructura semántica del contenido.
+- CSS3 para los estilos, diseño responsive y presentación visual.
+- JavaScript para las interacciones y comportamiento dinámico del sitio.
+
+El código fuente del Landing Page se administra en el repositorio `maquigest-website`.
+
+Para el desarrollo de la Web Application se ha definido Angular con TypeScript y Angular Material como tecnologías principales del frontend.
+
+Para el backend se ha establecido una RESTful API desarrollada con Java y Spring Boot, utilizando Spring Data JPA para la persistencia y MySQL como sistema gestor de base de datos.
+
+La arquitectura del software está organizada siguiendo principios de Domain-Driven Design, separando la solución en los siguientes bounded contexts:
+
+`IAM`, `Profiles`, `Inventory`, `Rentals`, `Maintenance` y `Subscriptions`.
+
+La organización por bounded contexts permite mantener separadas las responsabilidades asociadas con autenticación, perfiles, inventario, alquileres, mantenimiento y suscripciones.
+
+#### Software Architecture and Modeling
+
+Para la elaboración de los diagramas de arquitectura de MaquiGest se utiliza PlantUML junto con la librería C4-PlantUML.
+
+Esta configuración permite generar diagramas correspondientes a los diferentes niveles del C4 Model, incluyendo:
+
+- Software Architecture Context Diagram.
+- Software Architecture Container Diagram.
+- Software Architecture Component Diagrams.
+
+Los archivos PlantUML se utilizan como fuente para generar imágenes PNG que posteriormente son incorporadas al Project Report.
+
+Los diagramas permiten representar progresivamente la arquitectura de MaquiGest, comenzando por las relaciones generales del sistema, continuando con sus containers y finalizando con la descomposición interna de los principales componentes frontend y backend.
+
+#### Software Documentation
+
+La documentación del proyecto se administra principalmente mediante archivos Markdown almacenados en el repositorio `maquigest-report`.
+
+El archivo `README.md` concentra el Project Report y permite mantener versionado el contenido correspondiente a análisis de requisitos, diseño UX/UI, arquitectura de software, implementación y evidencias del proyecto.
+
+GitHub facilita el trabajo colaborativo sobre este documento mediante ramas independientes, commits y merges, permitiendo identificar las contribuciones realizadas por los diferentes integrantes del equipo.
+
+Los recursos visuales utilizados en el informe, como Wireframes, Mock-ups, diagramas C4 y demás evidencias, se almacenan dentro de la estructura de `assets` del repositorio para conservar una organización uniforme.
+
+#### Software Deployment
+
+Para el despliegue del Landing Page de MaquiGest se utiliza Netlify.
+
+El repositorio `maquigest-website` se encuentra vinculado con el proyecto de despliegue `maquigest-cleancode`, permitiendo publicar una versión accesible del Landing Page a través de Internet.
+
+La configuración del despliegue se administra mediante el archivo `netlify.toml`, donde se establecen las instrucciones necesarias para que Netlify procese correctamente el proyecto.
+
+El flujo general de publicación utilizado por el equipo es:
+
+`feature/* → develop → release/* → main → versión estable → Netlify`
+
+De esta manera, las funcionalidades son desarrolladas inicialmente de forma independiente, integradas y verificadas en `develop`, preparadas mediante una rama de release y finalmente incorporadas a `main`, desde donde se mantiene la versión estable del producto.
+
+Para la primera versión del Landing Page se generó la release `1.0.0`, acompañada por los tags correspondientes utilizados para identificar dicha versión dentro del repositorio.
+
+**Deployment Platform:** Netlify  
+**Netlify Project:** `maquigest-cleancode`
 
 ### 5.1.1. Software Development Environment Configuration
 
