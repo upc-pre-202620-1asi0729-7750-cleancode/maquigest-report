@@ -1,4 +1,75 @@
-﻿
+﻿<div align="center">
+
+<img src="assets/md-images-front/upc-logo.png" alt="Logo de la Universidad Peruana de Ciencias Aplicadas" width="90">
+
+<p>
+Universidad Peruana de Ciencias Aplicadas<br>
+Carrera de Ingeniería de Software
+</p>
+
+<br>
+
+<p>
+<strong>1ASI0729</strong><br>
+<strong>Desarrollo de Aplicaciones Open Source</strong>
+</p>
+
+<p>
+NRC<br>
+<strong>7750</strong>
+</p>
+
+<h3>Informe del Trabajo Final</h3>
+
+<p>
+Docente<br>
+<strong>Bautista Ubillús, Efraín Ricardo</strong>
+</p>
+
+<br>
+
+<p>
+Equipo<br>
+<strong>CleanCode</strong>
+</p>
+
+<p>
+Proyecto<br>
+<strong>MaquiGest</strong>
+</p>
+
+<br>
+
+<p><strong>Integrantes</strong></p>
+
+<p>
+<span style="display:inline-block; width:120px; text-align:left;"><strong>Código</strong></span>
+<span style="display:inline-block; width:300px; text-align:left;"><strong>Apellidos y Nombres</strong></span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202115277</span>
+<span style="display:inline-block; width:300px; text-align:left;">Delgado Perez, James Caleb</span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202111529</span>
+<span style="display:inline-block; width:300px; text-align:left;">Montalvo Vasquez, Bruno Rodrigo</span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202410211</span>
+<span style="display:inline-block; width:300px; text-align:left;">Manosalva Tovar, Miroslav</span>
+</p>
+
+<br>
+
+<p><strong>Período 202620</strong></p>
+
+<br>
+
+<p><strong>Septiembre 2026</strong></p>
+
+</div>
+
+<div style="page-break-after: always;"></div>
 
 
 ## Registro de Versiones del Informe
