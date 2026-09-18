@@ -2759,6 +2759,23 @@ En conjunto, el User Flow Diagram permite verificar que las acciones y decisione
 
 ### 4.6.2. Software Architecture Context Diagram
 
+A partir del Ubiquitous Language (2.5) y de las épicas de 3.1, la solución se organiza en cinco bounded contexts, que son la base de los diagramas de esta sección y de las siguientes:
+
+| Bounded context | Responsabilidad | Épicas que cubre |
+|---|---|---|
+| **IAM** | Registro, autenticación y roles de usuario (empresa de alquiler / empresa constructora). | EP01 |
+| **Profiles** | Datos de la empresa y perfil público de proveedor con su historial de cumplimiento. | EP01 (US03), término "Perfil de Proveedor" |
+| **Inventory** | Equipos, categorías, tarifas, estado del equipo y disponibilidad por periodo. | EP02 |
+| **Rentals** | Solicitudes de alquiler, contratos, entregas y devoluciones. | EP03, EP05 |
+| **Maintenance** | Mantenimientos programados y realizados, incidencias e historial del equipo. | EP04 |
+| **Subscription Plan** | Gestión de planes de suscripción, procesamiento de pagos periódicos y control de facturación mediante pasarelas externas. | EP06 |
+
+MaquiGest se representa como un único sistema de software en el centro del diagrama, rodeado por las personas que lo utilizan y los sistemas externos con los que interactúa. Las personas corresponden a los roles del Ubiquitous Language: el Operador de Alquiler (Rental Operator), que administra el inventario, los mantenimientos, incidencias y el ciclo completo del alquiler; el Jefe de Obra (Construction Manager), que busca maquinaria, verifica disponibilidad y solicita alquileres para sus proyectos de construcción; el Administrador del Sistema (System Administrator), responsable de monitorear la plataforma, la seguridad y las cuentas; y el Visitante, que conoce la propuesta de valor y evalúa el servicio desde la Landing Page.
+
+![Software Architecture Context Diagram](./assets/md-images-chapter4/context-diagram.png)
+
+El sistema se apoya en tres servicios externos esenciales para su funcionamiento operativo, de pago y comercial: SendGrid, que maneja el servicio de correo electrónico para notificaciones transaccionales, confirmaciones de reserva y alertas de cambio de estado; Stripe, que actúa como pasarela de pago externa para procesar de forma segura las transacciones de suscripción de los usuarios; y Google Maps Platform, que proporciona servicios de geolocalización y mapas para coordinar eficientemente las entregas y devoluciones de la maquinaria en las diferentes obras.
+
 ### 4.6.3. Software Architecture Container Diagrams
 
 ### 4.6.4. Software Architecture Components Diagrams
