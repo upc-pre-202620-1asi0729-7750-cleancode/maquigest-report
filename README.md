@@ -2786,6 +2786,10 @@ El sistema se apoya en tres servicios externos esenciales para su funcionamiento
 
 ![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-web-app.png)
 
+#### General Component Diagram: RESTful API Application (Bounded Contexts)
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-restful-api.png)
+
 ## 4.7. Software Object-Oriented Design
 
 ### 4.7.1. Class Diagrams
