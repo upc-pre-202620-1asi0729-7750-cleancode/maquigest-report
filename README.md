@@ -1340,52 +1340,114 @@ Then el sistema registra la solicitud de contacto
 
 ## 4.1. Style Guidelines
 
-Los Style Guidelines establecen los lineamientos visuales utilizados en el diseño de la interfaz, con el propósito de mantener una experiencia coherente y consistente a lo largo del producto digital. 
+Las **Style Guidelines** de MaquiGest establecen las decisiones visuales y de interacción que deben mantenerse de forma consistente en la Landing Page y en la Web Application. Estas pautas funcionan como referencia común para el equipo al momento de diseñar e implementar interfaces, assets y componentes, evitando variaciones innecesarias entre productos y dispositivos.
 
+La propuesta toma como base la identidad ya implementada en la Landing Page de MaquiGest y la extiende a la Web Application. Además, se adoptan principios de **Material Design** para la jerarquía, los estados, el feedback visual y la consistencia de los componentes. En la futura implementación de la Web Application, estos criterios se alinean con el uso de **Angular Material**.
 
 ### 4.1.1. General Style Guidelines
 
-**Branding**: El isotipo de MaquiGest representa la combinación de los dos conceptos principales que conforman el nombre de la plataforma: maquinaria y gestión. Su diseño parte de una forma geométrica inspirada en la inicial “M”, integrando elementos visuales asociados a la maquinaria de construcción. 
+#### Tone of Voice
 
-<img src = "assets/md-images-isotype/isotypeMaquiGest.png" width = 300px>
-<br><br><br>
+El tono de comunicación de MaquiGest se define como **serio, formal, respetuoso y sereno**. La plataforma se dirige principalmente a empresas que necesitan controlar operaciones de alquiler y a pequeñas empresas constructoras que requieren maquinaria para sus proyectos, por lo que la comunicación debe transmitir control, claridad y confianza.
 
-**Typography:** Se ha escogido la tipografía Inter debido a su excelente legibilidad, tanto en textos pequeños como en títulos y botones. Además, es una tipografía moderna y profesional, características que se adaptan favorablemente a las necesidades y objetivos de nuestra plataforma. 
+- **Serio:** se priorizan mensajes útiles y orientados a la operación del negocio.
+- **Formal:** se emplean expresiones claras y profesionales, evitando lenguaje ambiguo o excesivamente coloquial.
+- **Respetuoso:** los mensajes de ayuda, error y validación orientan al usuario sin atribuirle culpa.
+- **Sereno:** incluso en estados de mantenimiento, retraso o incidencia, la interfaz informa la situación y la acción disponible sin recurrir a mensajes alarmistas.
 
-<img src = "assets/md-images-typography/inter_typography.png" width = 300px>
-<br><br>
+#### Branding
 
-**Spacing:** Se establece un sistema de espaciado consistente con el propósito de mantener una interfaz ordenada, legible y visualmente equilibrada. La separación entre textos, botones, campos de formulario, tarjetas y secciones permite diferenciar y agrupar los elementos según su relación, evitando la saturación visual y facilitando el recorrido del contenido. Asimismo, mantener valores de espaciado definidos contribuye a la consistencia entre los diferentes componentes de MaquiGest y favorece su adaptación a distintos tamaños de pantalla.
+MaquiGest utiliza una identidad visual asociada a la gestión de maquinaria y a la digitalización de operaciones. El logotipo combina una **M** con elementos gráficos vinculados a maquinaria pesada, mientras que el naranja funciona como acento de energía y acción. El azul oscuro refuerza los atributos de confianza, control y estabilidad.
 
-**Dimensiones (Tonos de voz):** El lenguaje de MaquiGest apunta a una comunicación profesional, clara, directa y orientada a la acción, buscando transmitir confianza y facilitar que los usuarios comprendan rápidamente la información y las acciones disponibles en la plataforma.
-- **Enfoque:** Nuestro enfoque es profesional y práctico. Por un lado, es profesional porque buscamos transmitir confianza, seriedad y seguridad en la gestión de las operaciones. Por otro lado, es práctico porque comunicamos soluciones concretas y útiles para las necesidades de nuestros usuarios. De esta manera, evitamos presentar información innecesaria y nos enfocamos en facilitar la realización de las tareas.
-- **Lenguaje:** Establecemos un lenguaje claro y directo, priorizando términos conocidos por las empresas del sector de alquiler de maquinaria y construcción. Evitamos tecnicismos innecesarios y utilizamos expresiones sencillas que permitan comprender rápidamente las funciones, instrucciones, mensajes y acciones disponibles en la plataforma.
-- **Estilo de comunicación:** Nuestro estilo de comunicación será profesional, cercano y orientado a la acción. Los mensajes serán breves y fáciles de comprender, utilizando verbos que indiquen claramente qué puede hacer el usuario, como registrar, consultar, reservar, alquilar o devolver. Asimismo, los mensajes de confirmación, advertencia y error proporcionarán información concreta para que el usuario pueda comprender la situación y saber qué acción realizar.
+El logotipo completo se utiliza en cabeceras, hero sections y piezas promocionales. El isotipo se reserva para espacios compactos como favicon, navegación móvil o identificadores de aplicación. Debe mantenerse la proporción original del recurso y evitar cambios arbitrarios de color, rotación, deformación o fondos que reduzcan el contraste.
 
+#### Typography
+
+La familia tipográfica principal es **Inter**, importada en la implementación actual de la Landing Page con pesos `400`, `500`, `600`, `700`, `800` y `900`. Se seleccionó por su alta legibilidad en pantallas y por su comportamiento consistente en interfaces con cards, formularios, dashboards y tablas.
+
+Se establece la siguiente jerarquía como referencia:
+
+| Nivel | Referencia de uso | Peso sugerido |
+|---|---|---:|
+| H1 / Hero | Mensaje principal de Landing Page y títulos de alto impacto | 700–800 |
+| H2 / Section title | Títulos de Benefits, Features, Solutions, Plans, etc. | 700 |
+| H3 / Card title | Títulos de cards, planes y módulos de aplicación | 600–700 |
+| Body | Descripciones, formularios, tablas y contenido general | 400 |
+| Caption / Helper | Badges, metadatos, ayudas y estados | 400–500 |
+| Button label | CTA y acciones operativas | 600 |
+
+#### Colors
+
+La paleta se toma de los tokens presentes en `css/global.css` de la Landing Page actual.
+
+| Token | Hex | Aplicación |
+|---|---|---|
+| Primary | `#1E3A5F` | Branding, títulos, navegación y elementos principales |
+| Primary Dark | `#1E293B` | Texto de alto contraste y superficies oscuras |
+| Primary Light | `#E2E8F0` | Fondos suaves, selección y superficies secundarias |
+| Secondary | `#2563EB` | Enlaces, focus y acciones secundarias |
+| Accent | `#F59E0B` | CTA principal y acciones destacadas |
+| Background | `#F8FAFC` | Fondo general de la experiencia |
+| Surface | `#FFFFFF` | Cards, formularios y paneles |
+| Text Muted | `#64748B` | Descripciones, metadatos y texto auxiliar |
+| Border | `#E2E8F0` | Bordes, divisores y contornos |
+
+En la Web Application se utilizan además colores semánticos para estados de operación: verde para disponibilidad o éxito, azul para estados confirmados, naranja para mantenimiento o atención requerida y rojo para error o acciones críticas.
+
+#### Spacing
+
+El sistema de espaciado se organiza a partir de una base de **8 px**, utilizando principalmente `8`, `16`, `24`, `32` y `48 px` para márgenes, paddings y separación entre bloques. La implementación actual también define radios de `10 px`, `16 px`, `24 px`, `30 px` y `999 px` para pills.
+
+El ancho compartido de contenido de la Landing Page es de **1080 px** (`--page-max-width`), con adaptación progresiva a pantallas de menor tamaño. Las cards y paneles utilizan sombras suaves para generar jerarquía sin sobrecargar la interfaz.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/general-style-guidelines-maquigest.png"
+       alt="General Style Guidelines de MaquiGest"
+       width="100%">
+</p>
 
 ### 4.1.2. Web Style Guidelines
 
-1. Diseño Responsivo y Adaptabilidad
-- **Adaptación fluida:** El sitio utiliza un sistema de retícula flexible basado en CSS Flexbox y Media Queries. Por un lado, Flexbox permite distribuir y reorganizar los elementos de manera flexible según el espacio disponible; por otro, las Media Queries permiten modificar esta distribución en función del tamaño de la pantalla.
-- **Puntos de ruptura (breakpoints):** Se establece un punto de ruptura en 980 px, a partir del cual la navegación cambia de una barra horizontal a un menú vertical optimizado para pantallas de menor tamaño. Asimismo, las tarjetas de servicios (planes) pasan de una disposición en cuadrícula (grid) a una organización vertical.
+Las Web Style Guidelines trasladan la identidad general de MaquiGest a interfaces web responsive. La Landing Page utiliza una navegación horizontal y una organización secuencial de contenido, mientras que la Web Application utiliza navegación por módulos, cards, formularios, filtros y tablas o listas operativas.
 
-2. Sistema de Layout y Patrones de Lectura
-- **Patrón de lectura:** La Landing Page presenta principalmente un patrón de lectura vertical y centrado, guiado por una clara jerarquía visual. En la sección principal (hero), la atención se dirige desde el encabezado y el título principal hacia la descripción, las llamadas a la acción (CTA) y, posteriormente, los elementos visuales inferiores. Este recorrido favorece una exploración secuencial del contenido y la identificación de las acciones principales. 
-- **Jerarquía Visual:** La interfaz establece una jerarquía visual clara mediante variaciones de tamaño, color, contraste, peso tipográfico y espaciado. Los títulos principales reciben mayor protagonismo, seguidos por los textos descriptivos y las llamadas a la acción (CTA). Asimismo, el uso de colores diferenciados permite destacar las acciones prioritarias y orientar al usuario durante el recorrido del contenido. 
-3. Elementos Visuales
-- **Imágenes:** La identidad visual de la página utiliza dos versiones del logotipo de MaquiGest: una versión en azul oscuro, destinada principalmente a fondos claros, y una versión en blanco, utilizada sobre fondos oscuros para garantizar un contraste y una legibilidad adecuados. 
-4. Componentes de Interacción
-- **Botón primario (Action):** Botón de color naranja con texto en azul oscuro, utilizado para destacar la acción principal “Solicitar demo”. Al seleccionarlo, dirige al usuario a una sección donde puede completar un formulario con los datos de su empresa para solicitar posteriormente una demostración del funcionamiento de la plataforma. 
-- **Enlaces de navegación:** Enlaces ubicados en la barra de navegación superior que permiten dirigir al usuario hacia distintas secciones de la página. Presentan un estado hover que oscurece ligeramente el texto al posicionar el cursor sobre ellos. 
-- **Estados visuales:** Cada elemento interactivo cuenta con dos estados claramente definidos: default y hover.
-5. Formularios y Entradas de Datos
-- **Claridad y visualización:** El formulario de solicitud de demostración presenta una estructura clara y organizada, utilizando distintos tipos de campos según la información requerida: campos de texto, una lista desplegable y un área de texto. Cada campo cuenta con una etiqueta descriptiva y los campos obligatorios se identifican mediante un asterisco (*), mientras que el campo no requerido se señala explícitamente como opcional. Finalmente, el formulario presenta un botón de acción principal claramente diferenciado para enviar la solicitud. 
-6. Accesibilidad y Estándares de Calidad:
-Se evalúa el cumplimiento de los principios de accesibilidad establecidos por las Web Content Accessibility Guidelines (WCAG): perceptible:  operable, comprensible y robusto. 
-- **Perceptible:** El contenido presenta una estructura visual clara, con textos legibles y un contraste adecuado entre los elementos y sus fondos. La información relevante puede distinguirse mediante diferentes recursos visuales, como tamaño, tipografía y color. 
-- **Operable:** Los elementos interactivos de la página pueden utilizarse mediante diferentes métodos de entrada. La navegación mediante teclado permite recorrer enlaces, botones y campos de formulario, facilitando la interacción sin depender exclusivamente del mouse. 
-- **Comprensible:** La interfaz utiliza textos, etiquetas y acciones claramente identificables. Los formularios indican los campos obligatorios y opcionales, mientras que la organización y comportamiento de los componentes permiten al usuario comprender las acciones disponibles. 
-- **Robusto:** El código utiliza correctamente elementos HTML semánticos y componentes apropiados según su función, favoreciendo una correcta interpretación del contenido por navegadores y tecnologías de asistencia. 
+#### Material Design and Components
+
+El lenguaje visual de MaquiGest toma **Material Design** como referencia para la jerarquía, la separación de superficies, la consistencia de acciones, el feedback y los estados de interacción. Para la Web Application, la implementación se plantea con componentes compatibles con **Angular Material**, manteniendo la identidad propia de MaquiGest mediante sus tokens de color, tipografía y espaciado.
+
+Los componentes principales son:
+
+| Componente | Criterio de diseño |
+|---|---|
+| Primary CTA | Acción principal visible; utiliza `Accent` o `Primary` según el contexto |
+| Secondary Button | Acción complementaria en variante outline o superficie blanca |
+| Input / Select / Textarea | Label visible, borde consistente y estados de focus, error y disabled |
+| Search Bar | Búsqueda directa por nombre o código, complementada con filtros |
+| Status Badge | Etiqueta breve que comunica disponibilidad o estado operativo |
+| Metric Card | Resumen de indicadores principales en dashboards |
+| Data Table / List | Tabla en desktop; reorganización en cards o listas cuando el ancho sea reducido |
+| Sidebar / Header | Navegación principal de Web Application / Landing Page |
+
+#### Responsive Web Design
+
+- **Desktop Web Browser:** estructura de hasta 12 columnas; Landing Page con header horizontal y Web Application con sidebar persistente.
+- **Tablet / Small Laptop:** reducción de columnas, mayor compactación de cards y reorganización progresiva de tablas.
+- **Mobile Web Browser:** distribución de una columna, menú desplegable, controles de ancho disponible y transformación de tablas extensas en listas o cards.
+
+#### Interaction States
+
+Los elementos interactivos deben contemplar los estados **default, hover, focus, disabled, success y error**. El focus de teclado debe ser claramente visible. La Landing Page actual implementa `:focus-visible` mediante un outline azul de `3 px`, con offset de `4 px`.
+
+#### Internationalization and Accessibility
+
+MaquiGest considera **English (`en_US`)** como idioma predeterminado y **Latin American Spanish (`es_419`)** como idioma alternativo. La Landing Page actual ya utiliza contenido en inglés, atributos `data-es` para su variante en español y un selector `EN / ES`.
+
+Para accesibilidad, se consideran atributos ARIA en controles y secciones, estructura semántica, textos alternativos, foco visible y respeto por la preferencia `prefers-reduced-motion`. Estas decisiones deben mantenerse en la Web Application.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/web-style-guidelines-maquigest.png"
+       alt="Web Style Guidelines de MaquiGest"
+       width="100%">
+</p>
 
 ## 4.2. Information Architecture
 
@@ -1393,131 +1455,97 @@ Para el desarrollo del proyecto, la Arquitectura de la Información se plantea c
 
 ### 4.2.1. Organization Systems
 
-**Organización jerárquica visual:** Empecemos con la vista de nuestro segmento principal: las empresas de alquiler de maquinaria. En la parte lateral de la plataforma se encontrarán las siguientes opciones de navegación: Dashboard, Maquinaria, Solicitudes de alquiler, Reservas, Alquileres, Mantenimiento, Clientes y Reportes.
+La Information Architecture de MaquiGest organiza la información de forma que tanto los visitantes de la Landing Page como los usuarios de la Web Application puedan identificar con rapidez dónde se encuentra cada contenido o acción. La propuesta combina organización jerárquica, secuencial, por tópicos y por audiencia.
 
-Al ingresar a la plataforma, el usuario se encontrará en la sección Dashboard, donde podrá visualizar y monitorear información relevante, como la cantidad de maquinaria disponible, maquinaria alquilada, maquinaria en mantenimiento y próximas reservas. Asimismo, en esta sección se encontrarán las principales acciones que puede realizar el usuario, como registrar una maquinaria, gestionar solicitudes de alquiler y registrar un alquiler.
+### 4.2.1. Organization Systems
 
-Además, en la parte inferior del Dashboard se visualizarán las próximas reservas, los alquileres activos, la maquinaria que requiere mantenimiento y la actividad reciente, permitiendo al usuario tener una visión general del estado de sus operaciones.
+En la **Landing Page**, la información se organiza principalmente de manera **jerárquica y secuencial**. El visitante comienza con la propuesta de valor en Home y continúa hacia Benefits, Features, About, Solutions, Plans, Demo y Contact. Esta secuencia acompaña el proceso de conocimiento, evaluación y conversión del visitante.
 
-Continuamos con la vista de nuestro segundo segmento: las pequeñas empresas constructoras. En la parte lateral de la plataforma se encontrarán las siguientes opciones de navegación: Dashboard, Buscar maquinaria, Mis solicitudes, Mis reservas, Mis alquileres y Perfil.
+En la **Web Application**, la organización es principalmente **por tópicos y por audiencia**. Después de la autenticación, la navegación se adapta al tipo de organización:
 
-Al ingresar a la plataforma, el usuario se encontrará en la sección Dashboard, donde podrá visualizar información relevante sobre sus solicitudes y alquileres, como las reservas próximas, los alquileres activos y las fechas de devolución. De esta manera, podrá conocer rápidamente el estado de la maquinaria que está utilizando o que ha solicitado para sus proyectos.
+- La **empresa de alquiler de maquinaria** accede a Dashboard, Equipment, Rental Requests, Reservations, Rentals, Maintenance, Plan & Subscription y Profile.
+- La **empresa constructora** accede a Dashboard, Search Equipment, Equipment Detail, My Requests, My Reservations, My Rentals y Profile.
 
-Asimismo, en esta sección se encontrarán las principales acciones que puede realizar el usuario, como buscar maquinaria, realizar una solicitud de alquiler y consultar sus alquileres activos.
+También existe organización **secuencial** dentro del ciclo operativo: consulta o registro de maquinaria → solicitud → reserva → alquiler → entrega/devolución → inspección o mantenimiento → disponibilidad.
 
-Debajo de estas acciones se visualizará información complementaria, como las solicitudes pendientes, las reservas próximas, los alquileres activos, las fechas de devolución y la actividad reciente, permitiendo al usuario tener una visión general de la maquinaria que ha solicitado, tiene reservada o se encuentra actualmente en alquiler.
-
-**Organización Secuencial:** Para la organización secuencial del segmento de empresas de alquiler de maquinaria, se ha definido un flujo basado en el ciclo de gestión de la maquinaria dentro de MaquiGest. El proceso comienza con el registro de la maquinaria, donde se ingresan sus principales características, datos de identificación, estado y disponibilidad.
-
-Una vez registrada, la maquinaria puede ser consultada y administrada dentro del inventario. Cuando una empresa constructora envía una solicitud de alquiler, la empresa de alquiler puede revisar la disponibilidad de la maquinaria y evaluar la solicitud. Si esta es aprobada, se confirma una reserva para el período solicitado.
-
-Posteriormente, la reserva da paso al proceso de alquiler, en el cual se establecen las condiciones correspondientes y se coordina la entrega de la maquinaria. Una vez realizada la entrega, el alquiler pasa a estar activo y la empresa puede realizar seguimiento a su estado durante el período establecido.
-
-Al finalizar el alquiler, se registra la devolución de la maquinaria y se realiza una inspección para verificar su condición física y operativa. Si durante la inspección se detecta algún daño, incidencia o necesidad de mantenimiento, la maquinaria pasa al proceso de mantenimiento correspondiente. En caso contrario, vuelve a estar disponible para una nueva solicitud de alquiler.
-
-De esta manera, la organización secuencial permite que el usuario siga un flujo lógico y ordenado que acompaña el ciclo de vida de la maquinaria, desde su registro y disponibilidad inicial hasta su alquiler, devolución, inspección y posterior disponibilidad, reduciendo la necesidad de gestionar estos procesos de manera aislada en diferentes secciones de la plataforma.
-
-**Organización matricial:** En la sección de Maquinaria, los usuarios podrán visualizar la información de las maquinarias registradas mediante una estructura matricial. Cada maquinaria se mostrará en una fila, mientras que sus principales características se organizarán en diferentes columnas, como nombre o código, categoría, estado, ubicación, disponibilidad y acciones disponibles.
-
-Esta organización permitirá a los usuarios consultar, comparar y gestionar rápidamente las diferentes maquinarias registradas en la plataforma, sin necesidad de acceder individualmente al detalle de cada una. Asimismo, se podrán aplicar filtros para facilitar la búsqueda de una maquinaria específica según criterios como categoría, estado, ubicación o disponibilidad.
-
-Las acciones disponibles en cada fila permitirán acceder a operaciones relacionadas con la gestión de la maquinaria, como consultar su información detallada, actualizar sus datos o revisar su estado dentro del ciclo de alquiler y mantenimiento.
-
-De esta manera, la organización matricial permitirá presentar una gran cantidad de información de forma estructurada y comparable, facilitando la consulta, búsqueda y gestión del inventario de maquinaria dentro de MaquiGest.
-
-**Sistemas de categorización:**
-
-- **Por tópicos:** La información y las funcionalidades de la plataforma se organizan de acuerdo con los principales conceptos del dominio, como Maquinaria, Solicitudes de alquiler, Reservas, Alquileres, Mantenimiento, Clientes y Reportes.
-
-- **Por audiencia:** La plataforma presenta información, opciones de navegación y funcionalidades diferentes según el segmento de usuario. Las empresas de alquiler de maquinaria acceden principalmente a funciones relacionadas con la gestión de maquinaria, solicitudes, reservas, alquileres, clientes y mantenimiento; mientras que las pequeñas empresas constructoras acceden a funciones orientadas a la búsqueda de maquinaria, envío y seguimiento de solicitudes, reservas y alquileres.
-
+<p align="center">
+  <img src="./assets/images/chapter-4/information-architecture-maquigest.png"
+       alt="Information Architecture de MaquiGest"
+       width="100%">
+</p>
 
 ### 4.2.2. Labeling Systems
 
-**Etiquetas para la navegación principal:**
+El sistema de etiquetado utiliza términos cortos, reconocibles y consistentes con las tareas del dominio. El idioma de interfaz predeterminado es inglés, manteniendo equivalentes en español mediante i18n.
 
-- **Dashboard:** Vista general del estado de la maquinaria, solicitudes de alquiler, reservas, alquileres y mantenimientos.
+| Contexto | Etiqueta principal | Asociación esperada |
+|---|---|---|
+| Landing Page | `Home` | Propuesta de valor y accesos principales |
+| Landing Page | `Benefits` | Beneficios del uso de MaquiGest |
+| Landing Page | `Features` | Capacidades principales del producto |
+| Landing Page | `Solutions` | Soluciones para los segmentos objetivo |
+| Landing Page | `Plans` | Planes Essential, Professional y Growth |
+| Landing Page | `Request demo` | Solicitud de demostración |
+| Web Application – Rental company | `Equipment` | Inventario y estado de maquinaria |
+| Web Application – Rental company | `Rental Requests` | Solicitudes recibidas |
+| Web Application – Rental company | `Reservations` | Reservas confirmadas |
+| Web Application – Rental company | `Rentals` | Alquileres activos y seguimiento |
+| Web Application – Rental company | `Maintenance` | Inspecciones, incidencias y mantenimiento |
+| Web Application – Construction company | `Search Equipment` | Búsqueda de maquinaria disponible |
+| Web Application – Construction company | `My Requests` | Solicitudes enviadas |
+| Web Application – Construction company | `My Reservations` | Reservas confirmadas del usuario |
+| Web Application – Construction company | `My Rentals` | Alquileres vigentes e historial operativo |
 
-- **Maquinaria:** Permite registrar, consultar y administrar la maquinaria perteneciente a la empresa de alquiler.
-
-- **Solicitudes de alquiler:** Permite consultar, evaluar, aprobar o rechazar las solicitudes de alquiler enviadas por los clientes.
-
-- **Reservas:** Permite consultar y administrar las reservas confirmadas de maquinaria para determinados períodos.
-
-- **Alquileres:** Permite administrar los alquileres, consultar sus detalles y realizar seguimiento a su estado durante el ciclo de alquiler.
-
-- **Mantenimiento:** Permite gestionar inspecciones, mantenimientos, incidencias y reparaciones relacionadas con la maquinaria.
-
-- **Clientes:** Permite registrar y consultar la información de las empresas clientes que solicitan y alquilan maquinaria.
-
-- **Reportes:** Permite consultar información resumida sobre alquileres, utilización de maquinaria, ingresos y mantenimiento.
-
-**Etiquetas para acciones:**
-
-- **Registrar maquinaria:** Permite agregar una nueva maquinaria al inventario de la empresa.
-
-- **Editar maquinaria:** Permite modificar la información de una maquinaria previamente registrada.
-
-- **Ver disponibilidad:** Permite consultar si una maquinaria se encuentra disponible para un período determinado.
-
-- **Revisar solicitud:** Permite consultar la información de una solicitud de alquiler enviada por un cliente.
-
-- **Aprobar solicitud:** Permite aceptar una solicitud de alquiler cuando la maquinaria se encuentra disponible y se cumplen las condiciones requeridas.
-
-- **Rechazar solicitud:** Permite rechazar una solicitud de alquiler cuando esta no puede ser atendida.
-
-- **Confirmar reserva:** Permite confirmar la asignación de una maquinaria a un cliente para un período determinado después de aprobar su solicitud.
-
-- **Registrar alquiler:** Permite registrar formalmente un alquiler asociado a una reserva confirmada.
-
-- **Registrar entrega:** Permite registrar la entrega de la maquinaria al cliente.
-
-- **Registrar devolución:** Permite registrar el retorno de la maquinaria al finalizar el alquiler.
-
-- **Inspeccionar maquinaria:** Permite registrar la verificación del estado físico y operativo de la maquinaria después de su devolución.
-
-- **Registrar mantenimiento:** Permite registrar una actividad de mantenimiento realizada sobre una maquinaria.
-
-- **Programar mantenimiento:** Permite establecer un mantenimiento que deberá realizarse sobre una maquinaria en una fecha o período determinado.
-
-- **Registrar incidencia:** Permite registrar daños, fallas u otros problemas relacionados con una maquinaria.
-
-- **Ver detalles:** Permite consultar la información completa relacionada con un registro.
-
-- **Editar:** Permite modificar la información de un registro cuando corresponda.
-
-- **Eliminar:** Permite eliminar un registro cuando las reglas del proceso lo permitan.
+Los estados se comunican con etiquetas breves como `Available`, `Reserved`, `On rent`, `Maintenance`, `Confirmed`, `Pending` e `Inspection pending`, acompañadas por color pero sin depender exclusivamente de él.
 
 ### 4.2.3. SEO Tags and Meta Tags
-- Titulo:
-```html
-<title>MaquiGest | Gestión de alquiler de maquinaria</title>
-```
 
-- Descripción:
-```html
-<meta name="description" content="Gestiona el alquiler de maquinaria para construcción en un solo lugar. Controla equipos, reservas, alquileres, mantenimiento y operaciones con MaquiGest."> 
-```
+Los SEO Tags y Meta Tags permiten describir correctamente las principales páginas de la experiencia. En la Landing Page se conservan los valores actualmente implementados. Para la Web Application se establecen valores coherentes con su propósito operativo.
 
-- Palabras clave (keywords):
-```html
-<meta name="keywords" content="alquiler de maquinaria, gestión de maquinaria, alquiler de equipos, maquinaria para construcción, software de alquiler, gestión de alquileres, MaquiGest"> 
-```
+| Producto | Tag | Valor |
+|---|---|---|
+| Landing Page | `title` | `MaquiGest` | Equipment rental management` |
+| Landing Page | `description` | `Manage construction equipment rentals in one place. Organize inventory, availability, reservations, rentals and maintenance with MaquiGest.` |
+| Landing Page | `keywords` | `equipment rental, construction equipment, rental management software, MaquiGest` |
+| Landing Page | `author` | `CleanCode` |
+| Web Application | `title` | `MaquiGest` | Equipment rental workspace` |
+| Web Application | `description` | `Manage equipment, rental requests, reservations, rentals and maintenance in the MaquiGest workspace.` |
+| Web Application | `keywords` | `equipment management, rental requests, reservations, rentals, maintenance, MaquiGest` |
+| Web Application | `author` | `CleanCode` |
 
-- Autor:
-```html
-<meta name="author" content="CleanCode"> 
-```
+Como metadatos transversales se utiliza `charset=UTF-8` y un `viewport` adaptable a dispositivos. El documento HTML actual declara `lang="en-US"`; la variante en español se gestiona mediante i18n.
+
 ### 4.2.4. Searching Systems
 
-- **Sistema de búsqueda local:** Dentro de la sección “Maquinaria”, se dispone de una barra de búsqueda que permite localizar maquinaria mediante su nombre, código o categoría. Adicionalmente, se incorporan filtros que permiten refinar los resultados según categoría, estado, ubicación y disponibilidad.
+El sistema de búsqueda se concentra en las zonas donde el volumen de registros puede dificultar el acceso directo a la información. En la Landing Page, la necesidad de búsqueda se resuelve principalmente mediante navegación por secciones y CTA, mientras que en la Web Application se incorpora búsqueda operativa y filtros.
+
+| Área | Búsqueda / filtros | Presentación de resultados |
+|---|---|---|
+| Equipment – empresa de alquiler | Nombre, código, categoría, estado, ubicación y disponibilidad | Tabla en desktop; cards/lista en mobile |
+| Rental Requests | Estado, cliente y período | Listado priorizado por estado y fecha |
+| Reservations | Estado y rango de fechas | Tabla o cards con equipo, cliente y período |
+| Rentals | Estado, cliente, equipo y fecha de devolución | Tabla con badges de estado y alertas temporales |
+| Maintenance | Equipo, estado, tipo de mantenimiento y fecha | Listado de tareas e incidencias |
+| Equipment Search – constructora | Nombre/categoría, ubicación, disponibilidad y rango de fechas | Catálogo de cards con datos esenciales del equipo |
+
+El criterio principal es combinar **búsqueda directa** —cuando el usuario conoce el nombre o código— con **búsqueda exploratoria por filtros** cuando necesita comparar alternativas.
 
 ### 4.2.5. Navigation Systems
 
-- **Sistema de navegación global:** Se implementa mediante una barra lateral (sidebar) que permite al usuario acceder a las principales secciones de la plataforma. Para las empresas de alquiler de maquinaria, las opciones principales son Dashboard, Maquinaria, Solicitudes de alquiler, Reservas, Alquileres, Mantenimiento, Clientes y Reportes. Para las pequeñas empresas constructoras, la navegación incluye Dashboard, Buscar maquinaria, Mis solicitudes, Mis reservas, Mis alquileres y Perfil.
+MaquiGest utiliza distintos niveles de navegación para ayudar al usuario a completar sus objetivos sin perder contexto.
 
-- **Botones de Acción Rápida:** En el Dashboard se incorporan accesos directos a las acciones más frecuentes de acuerdo con el segmento del usuario. Para las empresas de alquiler se incluyen acciones como “Registrar maquinaria” y “Gestionar solicitudes de alquiler”, mientras que para las empresas constructoras se incluyen acciones como “Buscar maquinaria” y “Realizar solicitud de alquiler”.
+| Tipo de navegación | Aplicación en MaquiGest |
+|---|---|
+| Global | Header de Landing Page y sidebar principal de la Web Application |
+| Local | Módulos específicos como Equipment, Rentals, Maintenance o My Requests |
+| Contextual | `View details`, editar, aprobar, rechazar, registrar entrega o devolución |
+| Utility | Selector `EN / ES`, Profile, Plan & Subscription y Sign out |
+| Quick actions | `Register equipment`, `Review requests`, `Register rental`, `Request demo` |
+| Responsive | Menú toggle/drawer en mobile y reorganización vertical de contenido |
 
+En la Landing Page, la navegación global conduce a `Home`, `Benefits`, `Features`, `About`, `Plans`, `Contact` y `Request demo`, mientras que `Solutions` forma parte de la secuencia de contenido. En la Web Application, la navegación se adapta al rol para evitar mostrar módulos irrelevantes.
+
+La navegación contextual permite avanzar entre las vistas que conforman el ciclo de alquiler, mientras que las quick actions reducen la cantidad de pasos para las tareas más frecuentes. En dispositivos móviles, la navegación principal se compacta en un menú desplegable y el contenido se presenta verticalmente para preservar legibilidad y facilidad de interacción.
 
 ## 4.3. Landing Page UI Design
 ### 4.3.1. Landing Page Wireframe
