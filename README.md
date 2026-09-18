@@ -747,6 +747,83 @@ Orientar la propuesta de MaquiGest hacia empresas que actualmente dependen de ho
 
 ### 2.2.1. Diseño de entrevistas
 
+**Segmento 1: Pequeñas y medianas empresas de alquiler de maquinaria**
+
+**Objetivo:** Conocer cómo gestionan actualmente sus máquinas y alquileres, qué problemas enfrentan y qué tan útil podría resultarles una solución como MaquiGest.
+
+**Contexto**
+
+1. ¿A qué se dedica actualmente su empresa y qué tipo de maquinaria suelen alquilar?
+
+2. ¿Quién se encarga normalmente de gestionar los alquileres y las máquinas?
+
+**Situación actual**
+
+3. Cuando un cliente quiere alquilar una máquina, ¿cómo realizan normalmente todo el proceso?
+
+4. ¿Cómo saben qué máquinas están disponibles, alquiladas o fuera de servicio?
+
+5. ¿Qué herramientas utilizan actualmente para llevar el control de sus máquinas y alquileres?
+
+**Problemas**
+
+6. ¿Cuál es la principal dificultad que tienen al gestionar sus alquileres?
+
+7. ¿Alguna vez han tenido problemas porque una máquina fue reservada para más de un cliente o no estaba disponible cuando debía estarlo?
+
+8. ¿Qué ocurre cuando una máquina es devuelta con algún daño o presenta una falla?
+
+9. ¿Cómo controlan actualmente los mantenimientos y cuándo una máquina puede volver a alquilarse?
+
+10. ¿Qué parte del proceso de alquiler les toma más tiempo o les genera más problemas?
+
+**Opinión sobre MaquiGest**
+
+> *"Estamos desarrollando MaquiGest, una plataforma pensada para pequeñas y medianas empresas de alquiler de maquinaria. La idea es permitir gestionar las máquinas y alquileres desde un solo lugar, desde la reserva hasta la devolución y mantenimiento, de una manera sencilla."*
+
+11. ¿Qué le parece esta idea? ¿Cree que podría ser útil para su empresa? ¿Por qué?
+
+12. Si pudiera mejorar una sola parte de la gestión de sus alquileres, ¿cuál sería?
+
+
+**Segmento 2: Pequeñas empresas constructoras**
+
+**Objetivo:** Conocer cómo buscan y alquilan maquinaria actualmente, qué dificultades encuentran y qué tan útil podría resultarles MaquiGest.
+
+**Contexto**
+
+1. ¿A qué tipo de proyectos de construcción o remodelación se dedica su empresa?
+
+2. ¿Con qué frecuencia necesitan alquilar maquinaria o equipos?
+
+**Situación actual**
+
+3. Cuando necesitan una máquina para un proyecto, ¿cómo buscan actualmente dónde alquilarla?
+
+4. ¿Cómo averiguan si una máquina está disponible para las fechas que necesitan?
+
+5. ¿Qué información necesitan conocer antes de decidir alquilar una máquina?
+
+**Problemas**
+
+6. ¿Cuál es la principal dificultad que encuentran cuando necesitan conseguir maquinaria?
+
+7. ¿Alguna vez han necesitado una máquina y no pudieron conseguirla cuando la necesitaban? ¿Qué ocurrió?
+
+8. ¿Han tenido problemas con la entrega, el uso o la devolución de una máquina alquilada?
+
+9. ¿Qué parte del proceso de conseguir y alquilar maquinaria les toma más tiempo?
+
+10. ¿Qué cambiarían de la forma en que actualmente buscan o alquilan maquinaria?
+
+**Opinión sobre MaquiGest**
+
+> *"Estamos desarrollando MaquiGest, una plataforma pensada para facilitar el alquiler de maquinaria. La idea es que las empresas puedan buscar equipos, consultar información y disponibilidad y gestionar sus alquileres desde un solo lugar, de una manera sencilla."*
+
+11. ¿Qué le parece esta idea? ¿Cree que podría ser útil para su empresa? ¿Por qué?
+
+12. Si pudiera encontrar toda la información de una máquina en un solo lugar, ¿qué información sería indispensable para usted?
+
 ### 2.2.2. Registro de entrevistas
 
 ### 2.2.3. Análisis de entrevistas
@@ -755,11 +832,51 @@ Orientar la propuesta de MaquiGest hacia empresas que actualmente dependen de ho
 
 ### 2.3.1. User Personas
 
+El user persona se construyó a partir de patrones encontrados en las entrevistas
+
+**Segmento objetivo 1: Pequeñas y medianas empresas de alquiler de maquinaria**
+![User Persona 1](./assets/md-images-chapter2/user-persona-armando-casas.png)
+
+**Segmento Objetivo 2: Pequeñas empresas constructoras**
+![User Persona 2](./assets/md-images-chapter2/user-persona-andrea-torres.png)
+
 ### 2.3.2. User Task Matrix
+
+| TASK | Armando Casas (Empresa de alquiler) Frecuencia | Armando Casas (Empresa de alquiler) Importancia | Andrea Torres (Empresa constructora) Frecuencia | Andrea Torres (Empresa constructora) Importancia |
+| :---- | :---: | :---: | :---: | :---: |
+| **Consultar el inventario de maquinaria** | **Often** | **High** | **Sometimes** | **Medium** |
+| **Consultar la disponibilidad de una maquinaria** | **Often** | **High** | **Often** | **High** |
+| **Registrar o actualizar información de maquinaria** | **Often** | **High** | **Rarely** | **Low** |
+| **Gestionar reservas y solicitudes de alquiler** | **Often** | **High** | **Often** | **High** |
+| **Coordinar la entrega de maquinaria** | **Often** | **High** | **Often** | **High** |
+| **Registrar la devolución de maquinaria** | **Often** | **High** | **Sometimes** | **Medium** |
+| **Verificar el estado de la maquinaria después de un alquiler** | **Often** | **High** | **Sometimes** | **Medium** |
+| **Registrar incidentes o daños en una maquinaria** | **Sometimes** | **High** | **Sometimes** | **High** |
+| **Consultar el historial de mantenimiento de una maquinaria** | **Often** | **High** | **Rarely** | **Medium** |
+| **Programar o registrar mantenimientos** | **Sometimes** | **High** | **Rarely** | **Low** |
+| **Buscar maquinaria según las necesidades de un proyecto** | **Rarely** | **Low** | **Often** | **High** |
+| **Consultar características y condiciones de una maquinaria** | **Sometimes** | **Medium** | **Often** | **High** |
+| **Realizar seguimiento del estado de una solicitud o alquiler** | **Often** | **High** | **Often** | **High** |
 
 ### 2.3.3. User Journey Mapping
 
+**1. User Journey Map para el primer segmento**
+
+![User Journey Map](./assets/md-images-chapter2/user-journey-map1.png)
+
+**2. User Journey Map para el segundo segmento**
+
+![User Journey Map](./assets/md-images-chapter2/user-journey-map2.png)
+
 ### 2.3.4. Empathy Mapping
+
+**1. Empathy Map para el primer segmento**
+
+![Empathy Map](./assets/md-images-chapter2/empathy-map1.png)
+
+**2. Empathy Map para el segundo segmento**
+
+![Empathy Map](./assets/md-images-chapter2/empathy-map2.png)
 
 ## 2.4. Big Picture Event Storming
 
@@ -767,9 +884,7 @@ Orientar la propuesta de MaquiGest hacia empresas que actualmente dependen de ho
 
 # Capítulo III: Requirements Specification
 
-## 3.1. User Stories
-
-## 3.1. User Stories
+## 3.1. User Stories 
 
 <table>
 <tr>
@@ -827,6 +942,30 @@ And muestra los nuevos datos
 </tr>
 
 <tr>
+<td>US04</td>
+<td>Recuperar contraseña</td>
+<td>Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta.</td>
+<td>
+Given que el usuario solicita recuperación<br>
+When ingresa su correo<br>
+Then el sistema envía instrucciones de recuperación
+</td>
+<td>EP01</td>
+</tr>
+
+<tr>
+<td>US05</td>
+<td>Cerrar sesión</td>
+<td>Como usuario, quiero cerrar sesión para proteger mi cuenta.</td>
+<td>
+Given que el usuario está autenticado<br>
+When selecciona cerrar sesión<br>
+Then el sistema finaliza su sesión
+</td>
+<td>EP01</td>
+</tr>
+
+<tr>
 <td>EP02</td>
 <td>Gestión de maquinaria</td>
 <td>Epic orientado al registro, organización y consulta del inventario de maquinaria disponible para alquiler.</td>
@@ -835,7 +974,7 @@ And muestra los nuevos datos
 </tr>
 
 <tr>
-<td>US04</td>
+<td>US06</td>
 <td>Registrar maquinaria</td>
 <td>Como empresa de alquiler, quiero registrar mis máquinas y equipos para mantener organizado mi inventario.</td>
 <td>
@@ -848,7 +987,7 @@ And muestra el equipo registrado
 </tr>
 
 <tr>
-<td>US05</td>
+<td>US07</td>
 <td>Consultar maquinaria</td>
 <td>Como empresa de alquiler, quiero consultar las máquinas registradas para conocer la información de mis equipos.</td>
 <td>
@@ -861,7 +1000,7 @@ And muestra información relevante de cada equipo
 </tr>
 
 <tr>
-<td>US06</td>
+<td>US08</td>
 <td>Actualizar información de maquinaria</td>
 <td>Como empresa de alquiler, quiero actualizar la información de mis equipos para mantener el inventario actualizado.</td>
 <td>
@@ -873,7 +1012,7 @@ Then el sistema guarda la información actualizada
 </tr>
 
 <tr>
-<td>US07</td>
+<td>US09</td>
 <td>Consultar disponibilidad de maquinaria</td>
 <td>Como empresa de alquiler, quiero conocer la disponibilidad de cada equipo para evitar conflictos al gestionar nuevos alquileres.</td>
 <td>
@@ -885,7 +1024,7 @@ Then el sistema muestra si cada equipo está disponible, reservado o alquilado
 </tr>
 
 <tr>
-<td>US08</td>
+<td>US10</td>
 <td>Consultar estado de maquinaria</td>
 <td>Como empresa de alquiler, quiero conocer el estado de mis equipos para evitar alquilar maquinaria que no se encuentra en condiciones de uso.</td>
 <td>
@@ -906,7 +1045,7 @@ And permite identificar si está disponible para alquiler
 </tr>
 
 <tr>
-<td>US09</td>
+<td>US11</td>
 <td>Buscar maquinaria</td>
 <td>Como empresa constructora, quiero buscar maquinaria según mis necesidades para encontrar equipos adecuados para mi proyecto.</td>
 <td>
@@ -918,7 +1057,7 @@ Then el sistema muestra las maquinarias que coinciden con sus necesidades
 </tr>
 
 <tr>
-<td>US10</td>
+<td>US12</td>
 <td>Consultar información de maquinaria</td>
 <td>Como empresa constructora, quiero consultar las características de una maquinaria para determinar si es adecuada para mi proyecto.</td>
 <td>
@@ -930,7 +1069,7 @@ Then el sistema muestra sus características, estado y condiciones de alquiler
 </tr>
 
 <tr>
-<td>US11</td>
+<td>US13</td>
 <td>Consultar disponibilidad para un periodo</td>
 <td>Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado antes de solicitar el alquiler.</td>
 <td>
@@ -942,7 +1081,7 @@ Then el sistema indica si el equipo puede ser alquilado durante dicho periodo
 </tr>
 
 <tr>
-<td>US12</td>
+<td>US14</td>
 <td>Solicitar alquiler de maquinaria</td>
 <td>Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto.</td>
 <td>
@@ -956,6 +1095,50 @@ And muestra su estado
 
 <tr>
 <td>EP04</td>
+<td>Planes y suscripciones</td>
+<td>Epic orientado a la gestión de planes.</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>US15</td>
+<td>Visualizar planes disponibles</td>
+<td>Como usuario, quiero ver los planes para elegir uno.</td>
+<td>
+Given que el usuario accede a la sección de planes<br>
+When visualiza opciones<br>
+Then el sistema muestra los planes con sus características y precios
+</td>
+<td>EP04</td>
+</tr>
+
+<tr>
+<td>US16</td>
+<td>Suscribirse a un plan</td>
+<td>Como usuario, quiero suscribirme a un plan para acceder a funciones premium.</td>
+<td>
+Given que el usuario selecciona un plan<br>
+When confirma la suscripción<br>
+Then el sistema registra el plan
+</td>
+<td>EP04</td>
+</tr>
+
+<tr>
+<td>US17</td>
+<td>Cambiar de plan</td>
+<td>Como usuario, quiero cambiar de plan según mis necesidades.</td>
+<td>
+Given que el usuario tiene un plan activo<br>
+When selecciona otro<br>
+Then el sistema actualiza la suscripción
+</td>
+<td>EP04</td>
+</tr>
+
+<tr>
+<td>EP05</td>
 <td>Gestión de reservas y alquileres</td>
 <td>Epic orientado a la administración de reservas y al seguimiento del ciclo de alquiler de los equipos.</td>
 <td>-</td>
@@ -963,7 +1146,7 @@ And muestra su estado
 </tr>
 
 <tr>
-<td>US13</td>
+<td>US18</td>
 <td>Gestionar solicitudes de alquiler</td>
 <td>Como empresa de alquiler, quiero revisar las solicitudes recibidas para decidir cuáles atender y mantener control sobre mis alquileres.</td>
 <td>
@@ -972,11 +1155,11 @@ When el usuario consulta las solicitudes<br>
 Then el sistema muestra la información de cada solicitud<br>
 And permite identificar su estado
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>US14</td>
+<td>US19</td>
 <td>Confirmar o rechazar una solicitud</td>
 <td>Como empresa de alquiler, quiero aceptar o rechazar solicitudes de alquiler para controlar la disponibilidad de mis equipos.</td>
 <td>
@@ -985,11 +1168,11 @@ When el usuario selecciona aceptar o rechazar<br>
 Then el sistema actualiza el estado de la solicitud<br>
 And muestra el nuevo estado
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>US15</td>
+<td>US20</td>
 <td>Consultar alquileres activos</td>
 <td>Como empresa de alquiler, quiero consultar mis alquileres activos para conocer qué equipos están actualmente alquilados.</td>
 <td>
@@ -998,11 +1181,11 @@ When el usuario consulta sus alquileres<br>
 Then el sistema muestra los equipos alquilados<br>
 And muestra información del periodo correspondiente
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>US16</td>
+<td>US21</td>
 <td>Consultar estado de una solicitud de alquiler</td>
 <td>Como empresa constructora, quiero consultar el estado de mi solicitud para saber si mi alquiler fue aceptado, rechazado o aún está pendiente.</td>
 <td>
@@ -1010,11 +1193,11 @@ Given que el usuario ha realizado una solicitud<br>
 When consulta sus solicitudes<br>
 Then el sistema muestra el estado actualizado de cada una
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>US17</td>
+<td>US22</td>
 <td>Gestionar entregas y devoluciones</td>
 <td>Como empresa de alquiler, quiero registrar las entregas y devoluciones de maquinaria para mantener trazabilidad sobre los equipos alquilados.</td>
 <td>
@@ -1023,11 +1206,11 @@ When se registra la entrega o devolución<br>
 Then el sistema actualiza el estado del alquiler<br>
 And registra la operación realizada
 </td>
-<td>EP04</td>
+<td>EP05</td>
 </tr>
 
 <tr>
-<td>EP05</td>
+<td>EP06</td>
 <td>Gestión de mantenimiento e incidencias</td>
 <td>Epic orientado al seguimiento del estado operativo de la maquinaria y a la gestión de mantenimientos e incidencias.</td>
 <td>-</td>
@@ -1035,7 +1218,7 @@ And registra la operación realizada
 </tr>
 
 <tr>
-<td>US18</td>
+<td>US23</td>
 <td>Registrar mantenimiento</td>
 <td>Como empresa de alquiler, quiero registrar mantenimientos realizados a una maquinaria para mantener un historial de su estado operativo.</td>
 <td>
@@ -1044,11 +1227,11 @@ When el usuario registra un mantenimiento<br>
 Then el sistema almacena la información<br>
 And la relaciona con el equipo correspondiente
 </td>
-<td>EP05</td>
+<td>EP06</td>
 </tr>
 
 <tr>
-<td>US19</td>
+<td>US24</td>
 <td>Programar mantenimiento</td>
 <td>Como empresa de alquiler, quiero programar mantenimientos para evitar que los equipos sean utilizados cuando requieren atención.</td>
 <td>
@@ -1057,11 +1240,11 @@ When el usuario registra una fecha de mantenimiento<br>
 Then el sistema guarda la programación<br>
 And permite consultar el mantenimiento pendiente
 </td>
-<td>EP05</td>
+<td>EP06</td>
 </tr>
 
 <tr>
-<td>US20</td>
+<td>US25</td>
 <td>Registrar incidencia de maquinaria</td>
 <td>Como empresa de alquiler, quiero registrar incidencias de mis equipos para llevar un control de problemas y reparaciones.</td>
 <td>
@@ -1070,11 +1253,11 @@ When el usuario registra el problema<br>
 Then el sistema almacena la incidencia<br>
 And la relaciona con la maquinaria correspondiente
 </td>
-<td>EP05</td>
+<td>EP06</td>
 </tr>
 
 <tr>
-<td>US21</td>
+<td>US26</td>
 <td>Consultar historial de maquinaria</td>
 <td>Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus alquileres, incidencias y mantenimientos.</td>
 <td>
@@ -1082,11 +1265,11 @@ Given que existe una maquinaria registrada<br>
 When el usuario consulta su historial<br>
 Then el sistema muestra las operaciones asociadas al equipo
 </td>
-<td>EP05</td>
+<td>EP06</td>
 </tr>
 
 <tr>
-<td>EP06</td>
+<td>EP07</td>
 <td>Información y contratación del servicio</td>
 <td>Epic orientado a brindar información sobre MaquiGest y facilitar el contacto de potenciales clientes con la plataforma.</td>
 <td>-</td>
@@ -1094,7 +1277,7 @@ Then el sistema muestra las operaciones asociadas al equipo
 </tr>
 
 <tr>
-<td>US22</td>
+<td>US27</td>
 <td>Consultar información de MaquiGest</td>
 <td>Como visitante, quiero conocer las funcionalidades y beneficios de MaquiGest para determinar si la solución se adapta a las necesidades de mi empresa.</td>
 <td>
@@ -1102,11 +1285,11 @@ Given que el visitante accede al Landing Page<br>
 When revisa la información del producto<br>
 Then el sistema muestra sus principales funcionalidades y beneficios
 </td>
-<td>EP06</td>
+<td>EP07</td>
 </tr>
 
 <tr>
-<td>US23</td>
+<td>US28</td>
 <td>Solicitar demostración</td>
 <td>Como potencial cliente, quiero solicitar una demostración de MaquiGest para conocer cómo funciona antes de utilizar el servicio.</td>
 <td>
@@ -1115,11 +1298,11 @@ When completa y envía el formulario de demostración<br>
 Then el sistema registra la solicitud<br>
 And muestra un mensaje de confirmación
 </td>
-<td>EP06</td>
+<td>EP07</td>
 </tr>
 
 <tr>
-<td>US24</td>
+<td>US29</td>
 <td>Contactar con MaquiGest</td>
 <td>Como potencial cliente, quiero contactar con el equipo de MaquiGest para realizar consultas sobre el servicio.</td>
 <td>
@@ -1127,12 +1310,14 @@ Given que el visitante accede a la sección de contacto<br>
 When completa y envía sus datos y consulta<br>
 Then el sistema registra la solicitud de contacto
 </td>
-<td>EP06</td>
+<td>EP07</td>
 </tr>
 
 </table>
 
 ## 3.2. Impact Mapping
+
+![Impact Mapping](./assets/md-images-chapter3/impact-mapping.png)
 
 ## 3.3. Product Backlog
 
@@ -1157,10 +1342,341 @@ Then el sistema registra la solicitud de contacto
 ### 4.2.5. Navigation Systems
 
 ## 4.3. Landing Page UI Design
-
 ### 4.3.1. Landing Page Wireframe
 
+En esta sección se presentan los wireframes de la Landing Page de MaquiGest. Estos artefactos permiten definir la estructura inicial de la interfaz, la distribución de los contenidos y la jerarquía visual de los principales elementos antes de aplicar los estilos finales del producto. Asimismo, permiten evidenciar la traducción de las decisiones tomadas previamente en las secciones de Style Guidelines e Information Architecture hacia una propuesta concreta de interfaz para la Landing Page.
+
+La propuesta de wireframes organiza la experiencia de navegación de forma jerárquica y secuencial, guiando al visitante desde la comprensión inicial de la propuesta de valor de MaquiGest hasta las acciones de conversión, como la solicitud de una demostración o el envío de una consulta. La estructura general está compuesta por las secciones Home, Benefits, Features, About Us, Solutions, Plans, Request Demo y Contact, las cuales responden a las necesidades de los segmentos objetivo previamente identificados: pequeñas y medianas empresas de alquiler de maquinaria y pequeñas empresas constructoras.
+
+#### Desktop Web Browser
+
+La versión para Desktop Web Browser aprovecha el espacio horizontal para distribuir la información mediante bloques claramente diferenciados, facilitando la lectura, la comparación de contenido y la identificación de los principales llamados a la acción. La propuesta mantiene consistencia estructural entre secciones y aplica principios de jerarquía visual, alineación, proximidad y contraste, permitiendo que los visitantes comprendan de manera progresiva la solución ofrecida por MaquiGest.
+
+##### Home
+
+El wireframe de la sección Home presenta el primer contacto entre el visitante y la propuesta de valor de MaquiGest. En esta sección se ubican el encabezado de navegación, el mensaje principal del producto, una breve descripción y los principales Call To Action: “Solicitar Demo” y “Ver planes”. La composición está orientada a comunicar rápidamente el propósito de la plataforma y motivar al visitante a continuar explorando el sitio.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-home.png"
+       alt="Landing Page Wireframe - Home"
+       width="90%">
+</p>
+
+##### Benefits
+
+La sección Benefits organiza en tres bloques los principales beneficios de la solución. Esta disposición permite que el visitante identifique rápidamente el valor que ofrece MaquiGest, destacando aspectos como el control de disponibilidad, la centralización de operaciones y el seguimiento del estado de la maquinaria. La estructura mediante cards facilita la exploración y comparación de la información.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-benefits.png"
+       alt="Landing Page Wireframe - Benefits"
+       width="90%">
+</p>
+
+##### Features
+
+La sección Features presenta las funcionalidades principales de la plataforma mediante seis cards distribuidas en una retícula. Esta organización permite representar de forma clara y ordenada las herramientas más importantes de MaquiGest, como la gestión del inventario de maquinaria, disponibilidad, alquileres, entregas y devoluciones, mantenimiento e incidencias, y búsqueda o solicitud de equipos. La distribución busca favorecer la legibilidad y el reconocimiento visual de cada funcionalidad.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-features.png"
+       alt="Landing Page Wireframe - Features"
+       width="90%">
+</p>
+
+##### About Us
+
+La sección About Us comunica la identidad de la startup y la intención del producto. El wireframe emplea una composición de bloques que permite presentar información institucional de forma resumida, como la misión, la visión y los valores de CleanCode y MaquiGest. Esta organización contribuye a fortalecer la credibilidad de la propuesta y a comunicar el enfoque del equipo desarrollador.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-about-us.png"
+       alt="Landing Page Wireframe - About Us"
+       width="90%">
+</p>
+
+##### Solutions
+
+La sección Solutions traduce de forma directa los resultados del análisis de segmentos objetivo. Su estructura permite diferenciar visualmente las soluciones orientadas a pequeñas y medianas empresas de alquiler de maquinaria y a pequeñas empresas constructoras. De esta manera, cada visitante puede identificar rápidamente la propuesta de valor más cercana a sus necesidades y relacionarla con su contexto de uso.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-solutions.png"
+       alt="Landing Page Wireframe - Solutions"
+       width="90%">
+</p>
+
+##### Plans
+
+La sección Plans organiza la información comercial de la plataforma en tres tarjetas comparables. El objetivo de esta disposición es permitir que el visitante reconozca de manera sencilla las alternativas disponibles y evalúe la opción más adecuada para su negocio. El uso de cards refuerza la claridad, la comparación entre opciones y la orientación a la conversión.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-plans.png"
+       alt="Landing Page Wireframe - Plans"
+       width="90%">
+</p>
+
+##### Request Demo
+
+La sección Request Demo está orientada a la conversión del visitante. El wireframe organiza el contenido en dos áreas: una zona de explicación breve sobre la demostración y un formulario para registrar los datos del interesado. Esta distribución facilita la comprensión del propósito de la sección y reduce la fricción durante el proceso de contacto inicial con la startup.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-request-demo.png"
+       alt="Landing Page Wireframe - Request Demo"
+       width="90%">
+</p>
+
+##### Contact
+
+La sección Contact presenta un formulario orientado a consultas generales y se complementa con un footer informativo. Su estructura prioriza la claridad en la interacción, permitiendo que el visitante identifique fácilmente los campos necesarios para enviar un mensaje. Además, el footer funciona como cierre de la experiencia, reforzando la navegación, la identidad del producto y la información complementaria del sitio.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-contact.png"
+       alt="Landing Page Wireframe - Contact"
+       width="90%">
+</p>
+
+En conjunto, los wireframes de la Landing Page de MaquiGest evidencian una propuesta estructurada, coherente con la arquitectura de información y orientada a una experiencia de navegación clara, comprensible e inclusiva. La distribución de secciones, el uso de jerarquías visuales y la ubicación de los llamados a la acción buscan facilitar tanto la comprensión de la propuesta de valor como la interacción de los visitantes con el producto.
+
+#### Mobile Web Browser
+
+La versión para Mobile Web Browser adapta la estructura de la Landing Page de MaquiGest a una pantalla de menor ancho, priorizando la legibilidad, la navegación vertical y el acceso rápido a los principales llamados a la acción. Para ello, los contenidos se reorganizan en una sola columna, manteniendo la misma secuencia informativa definida en la versión desktop y preservando la coherencia con la arquitectura de información establecida previamente.
+
+En esta propuesta, el encabezado se simplifica mediante un menú hamburguesa, lo cual permite optimizar el espacio disponible sin perder acceso a las secciones principales del sitio. Asimismo, el Hero prioriza el mensaje principal del producto y los Call To Action “Solicitar Demo” y “Ver planes”, con una disposición centrada que facilita la lectura y la interacción desde dispositivos móviles.
+
+##### Home
+
+La sección Home en mobile presenta la propuesta de valor de MaquiGest de forma resumida, destacando el nombre del producto, una breve descripción y los principales Call To Action. La disposición vertical permite centrar la atención del visitante en el propósito de la Landing Page desde el inicio de la experiencia.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-home.png"
+       alt="Landing Page Wireframe - Mobile - Home"
+       width="40%">
+</p>
+
+##### Benefits
+
+La sección Benefits reorganiza la propuesta de beneficios en una sola card visible por bloque, priorizando la lectura secuencial y reduciendo la sobrecarga visual en pantallas pequeñas. Esta adaptación mantiene claridad en la presentación del valor de la plataforma.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-benefits.png"
+       alt="Landing Page Wireframe - Mobile - Benefits"
+       width="40%">
+</p>
+
+##### Features
+
+La sección Features adapta las funcionalidades principales a una experiencia vertical y progresiva. Cada funcionalidad se presenta en tarjetas individuales, permitiendo al usuario concentrarse en un elemento a la vez y comprender con facilidad las capacidades principales de MaquiGest.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-features.png"
+       alt="Landing Page Wireframe - Mobile - Features"
+       width="40%">
+</p>
+
+##### About Us
+
+La sección About Us en mobile conserva la información institucional de forma resumida y jerarquizada. Los bloques de contenido se disponen verticalmente para facilitar la lectura y mantener una presentación limpia y comprensible sobre la identidad de CleanCode y MaquiGest.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-about-us.png"
+       alt="Landing Page Wireframe - Mobile - About Us"
+       width="40%">
+</p>
+
+##### Solutions
+
+La sección Solutions mantiene la diferenciación de la propuesta de valor para los segmentos objetivo, reorganizando el contenido en formato vertical. Esta decisión favorece la identificación progresiva de cada solución y mejora la experiencia de lectura en dispositivos móviles.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-solutions.png"
+       alt="Landing Page Wireframe - Mobile - Solutions"
+       width="40%">
+</p>
+
+##### Plans
+
+La sección Plans reorganiza las alternativas disponibles en un formato vertical, permitiendo que cada plan sea visualizado individualmente. Esta adaptación mejora la comparación y facilita que el visitante identifique la opción más adecuada sin afectar la claridad del contenido.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-plans.png"
+       alt="Landing Page Wireframe - Mobile - Plans"
+       width="40%">
+</p>
+
+##### Request Demo
+
+La sección Request Demo en mobile prioriza la simplicidad de interacción, presentando el contenido explicativo y el formulario en una estructura vertical. Esta organización reduce la fricción y facilita el registro de datos desde una pantalla táctil.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-request-demo.png"
+       alt="Landing Page Wireframe - Mobile - Request Demo"
+       width="40%">
+</p>
+
+##### Contact
+
+La sección Contact adapta el formulario y el footer al entorno móvil, manteniendo una disposición clara de campos y botones para favorecer la interacción del visitante. De esta forma, se asegura una experiencia consistente y accesible al cierre del recorrido de la Landing Page.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-wireframe-mobile-contact.png"
+       alt="Landing Page Wireframe - Mobile - Contact"
+       width="40%">
+</p>
+
+En conjunto, la propuesta mobile mantiene la estructura, jerarquía y objetivos de conversión de la Landing Page de MaquiGest, adaptándolos a las características de navegación propias de dispositivos móviles. La organización en una sola columna, el uso de un menú simplificado y la disposición vertical de las cards y formularios contribuyen a una experiencia clara, comprensible e inclusiva.
+
 ### 4.3.2. Landing Page Mock-up
+
+En esta sección se presentan los mock-ups de la Landing Page de MaquiGest para las versiones Desktop Web Browser y Mobile Web Browser. A diferencia de los wireframes, los mock-ups incorporan los elementos visuales definidos para el producto, como colores, tipografía, iconografía, estilos de botones, cards, formularios y demás componentes de interfaz, permitiendo representar una versión más cercana al resultado final de la Landing Page.
+
+La propuesta mantiene la estructura y jerarquía establecidas previamente en los wireframes y aplica de manera consistente el Design System de MaquiGest. La identidad visual utiliza principalmente tonos azul oscuro, azul y naranja, acompañados de fondos claros que favorecen la legibilidad y permiten destacar los principales Call To Action.
+
+Asimismo, los mock-ups evidencian la aplicación de principios de jerarquía visual, alineación, proximidad, consistencia y contraste. La organización del contenido facilita que los visitantes comprendan progresivamente la propuesta de valor, conozcan los beneficios y funcionalidades del producto, identifiquen la solución correspondiente a su segmento, comparen los planes disponibles y puedan solicitar una demostración o ponerse en contacto con CleanCode.
+
+#### Landing Page Mock-up para Desktop Web Browser
+
+La versión Desktop Web Browser aprovecha el espacio horizontal para organizar los contenidos mediante una estructura clara y consistente. El Header mantiene visibles las principales opciones de navegación y los Call To Action, mientras que las diferentes secciones utilizan cards, bloques de contenido y formularios para facilitar la exploración de la información.
+
+La sección Home presenta la identidad de MaquiGest y comunica directamente su propuesta de valor mediante el mensaje principal “Organize your equipment. Stay on top of every rental.”. Los botones “Request demo” y “View plans” destacan las principales acciones disponibles para el visitante.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-home.png"
+       alt="Landing Page Mock-up - Home"
+       width="90%">
+</p>
+
+La sección Benefits presenta tres beneficios principales mediante cards diferenciadas visualmente: claridad sobre la disponibilidad de equipos, conexión de las operaciones de alquiler y cuidado de la maquinaria. Esta organización permite comunicar de forma rápida los principales resultados que MaquiGest busca ofrecer a sus usuarios.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-benefits.png"
+       alt="Landing Page Mock-up - Benefits"
+       width="90%">
+</p>
+
+La sección Features organiza las principales funcionalidades de MaquiGest mediante una retícula de seis cards. Entre ellas se encuentran la gestión del inventario de maquinaria, disponibilidad y reservas, seguimiento de alquileres, entregas y devoluciones, mantenimiento e incidencias, y búsqueda y solicitud de equipos. Esta disposición facilita la identificación y comprensión de las capacidades principales de la plataforma.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-features.png"
+       alt="Landing Page Mock-up - Features"
+       width="90%">
+</p>
+
+La sección About Us presenta a CleanCode como la startup responsable de MaquiGest. La información se organiza mediante bloques diferenciados para misión, visión y valores, reforzando la identidad del equipo y comunicando los principios que orientan el desarrollo del producto.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-about-us.png"
+       alt="Landing Page Mock-up - About Us"
+       width="90%">
+</p>
+
+La sección Solutions diferencia visualmente las propuestas dirigidas a los dos segmentos objetivo de MaquiGest. El primer bloque está orientado a empresas de alquiler de maquinaria que requieren centralizar información y operaciones durante todo el ciclo de alquiler. El segundo está dirigido a pequeñas empresas constructoras que necesitan buscar equipos, consultar disponibilidad y gestionar sus solicitudes de alquiler.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-solutions.png"
+       alt="Landing Page Mock-up - Solutions"
+       width="90%">
+</p>
+
+La sección Plans presenta los planes Essential, Professional y Growth mediante cards comparables. Cada alternativa muestra su precio referencial, propósito, principales funcionalidades y un Call To Action para solicitar una demostración. El plan Professional recibe un tratamiento visual destacado mediante la etiqueta “Recommended”, estableciendo una jerarquía entre las alternativas sin impedir su comparación.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-plans.png"
+       alt="Landing Page Mock-up - Plans"
+       width="90%">
+</p>
+
+La sección Request Demo utiliza una composición de dos columnas. En el lado izquierdo se explica brevemente el propósito de la demostración, mientras que en el lado derecho se presenta un formulario con los datos necesarios para registrar el interés del visitante. El botón “Send demo request” funciona como Call To Action principal de la sección y utiliza el color de acento para reforzar su visibilidad.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-request-demo.png"
+       alt="Landing Page Mock-up - Request Demo"
+       width="90%">
+</p>
+
+Finalmente, la sección Contact permite realizar consultas generales mediante un formulario simplificado compuesto por nombre, correo electrónico y mensaje. El Footer complementa el cierre de la experiencia mediante la identidad visual de MaquiGest, accesos de navegación, información de copyright y el enlace a los términos y condiciones.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-contact.png"
+       alt="Landing Page Mock-up - Contact"
+       width="90%">
+</p>
+
+En conjunto, los mock-ups para Desktop Web Browser muestran la evolución visual de los wireframes y evidencian la aplicación coherente de la identidad visual y del Design System de MaquiGest. La combinación de jerarquía visual, contraste, agrupación de contenido, componentes reutilizables y Call To Action claramente identificables busca proporcionar una experiencia clara, consistente y orientada a las necesidades de los segmentos objetivo.
+
+#### Landing Page Mock-up para Mobile Web Browser
+
+La versión Mobile Web Browser adapta la propuesta visual de la Landing Page de MaquiGest a pantallas de menor tamaño, manteniendo la misma estructura, identidad visual y objetivos de conversión definidos para la versión desktop. En esta adaptación, los contenidos se reorganizan en una sola columna, priorizando la lectura vertical, la claridad de los elementos interactivos y la facilidad de navegación desde dispositivos móviles.
+
+La propuesta conserva los lineamientos del Design System de MaquiGest mediante el uso consistente de colores, tipografía, botones, cards y formularios. Asimismo, se aplican principios de jerarquía visual, contraste, proximidad y consistencia para asegurar que la experiencia en dispositivos móviles continúe siendo clara, comprensible y alineada con las necesidades de los segmentos objetivo.
+
+La sección Home concentra la propuesta de valor principal de MaquiGest en una composición vertical. El mensaje central, los botones “Request demo” y “View plans”, y la presencia destacada del logotipo permiten que el visitante identifique rápidamente el propósito de la plataforma desde el inicio de la navegación.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-home.png"
+       alt="Landing Page Mock-up - Mobile - Home"
+       width="40%">
+</p>
+
+La sección Benefits reorganiza los beneficios principales en tarjetas apiladas verticalmente, favoreciendo la lectura secuencial y la comprensión rápida del valor de la solución. Esta disposición permite destacar con claridad la disponibilidad, la conexión de operaciones y el cuidado de la maquinaria.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-benefits.png"
+       alt="Landing Page Mock-up - Mobile - Benefits"
+       width="40%">
+</p>
+
+La sección Features presenta las funcionalidades principales de la plataforma mediante cards verticales, facilitando la lectura de cada capacidad del sistema en una pantalla reducida. Esta distribución permite al visitante reconocer progresivamente funciones como el inventario de maquinaria, disponibilidad y reservas, seguimiento de alquileres, entregas y devoluciones, mantenimiento e incidencias, y búsqueda o solicitud de equipos.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-features.png"
+       alt="Landing Page Mock-up - Mobile - Features"
+       width="40%">
+</p>
+
+La sección About Us adapta la información institucional de CleanCode y MaquiGest a una estructura vertical, presentando de forma clara la misión, visión y valores del equipo. El uso de bloques diferenciados favorece la legibilidad y evita la saturación de contenido en la interfaz móvil.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-about-us.png"
+       alt="Landing Page Mock-up - Mobile - About Us"
+       width="40%">
+</p>
+
+La sección Solutions mantiene la diferenciación de la propuesta de valor para los segmentos objetivo de MaquiGest. En la versión mobile, los bloques se presentan uno debajo del otro, permitiendo que el visitante identifique con claridad la solución orientada a empresas de alquiler de maquinaria y la propuesta dirigida a pequeñas empresas constructoras.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-solutions.png"
+       alt="Landing Page Mock-up - Mobile - Solutions"
+       width="40%">
+</p>
+
+La sección Plans reorganiza las alternativas disponibles en un formato vertical, permitiendo visualizar cada plan de manera individual. Esta adaptación mejora la comparación y mantiene una lectura clara de los planes Essential, Professional y Growth, así como de sus respectivas características y llamados a la acción.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-plans-1.png"
+       alt="Landing Page Mock-up - Mobile - Plans 1"
+       width="40%">
+</p>
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-plans-2.png"
+       alt="Landing Page Mock-up - Mobile - Plans 2"
+       width="40%">
+</p>
+
+La sección Request Demo combina una breve explicación de la demostración con un formulario adaptado a interacción táctil. La disposición en una sola columna facilita el ingreso de datos desde un dispositivo móvil y mantiene visible el Call To Action principal para enviar la solicitud.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-request-demo.png"
+       alt="Landing Page Mock-up - Mobile - Request Demo"
+       width="40%">
+</p>
+
+Finalmente, la sección Contact presenta un formulario simplificado para consultas generales y un footer adaptado al entorno móvil. La disposición vertical de los enlaces, el contenido institucional y la información complementaria permite cerrar la experiencia de navegación de manera ordenada y consistente con la identidad visual del producto.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/landing-page-mock-up-mobile-contact.png"
+       alt="Landing Page Mock-up - Mobile - Contact"
+       width="40%">
+</p>
+
+En conjunto, los mock-ups para Mobile Web Browser evidencian la adaptación del diseño visual de MaquiGest a dispositivos móviles, manteniendo coherencia con la versión desktop y aplicando de forma consistente el Design System del producto. La organización vertical, la claridad de los componentes y la visibilidad de los llamados a la acción contribuyen a una experiencia intuitiva, accesible y orientada a la conversión.
+
 
 ## 4.4. Web Applications UX/UI Design
 
