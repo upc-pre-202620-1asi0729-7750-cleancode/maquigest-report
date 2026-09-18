@@ -2816,7 +2816,7 @@ El sistema se apoya en tres servicios externos esenciales para su funcionamiento
 
 ![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-subscriptions-bounded-context.png)
 
-#### Detailed Internal Component Diagram (Rentals Bounded Context)
+#### Detailed Rentals Bounded Context 
 
 ![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-detailed-rentals-bounded-context.png)
 
