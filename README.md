@@ -1860,12 +1860,897 @@ En conjunto, los mock-ups para Mobile Web Browser evidencian la adaptación del 
 
 ### 4.4.1. Web Applications Wireframes
 
+Los wireframes de la Web Application de MaquiGest representan la estructura funcional y la organización de las principales interfaces antes de incorporar los elementos visuales definitivos del Design System. Estos artefactos permiten definir la jerarquía de información, los componentes de interacción y los recorridos principales que realizarán los usuarios dentro de la aplicación.
+
+Las interfaces consideran experiencias diferenciadas para los dos segmentos objetivo. Las empresas de alquiler de maquinaria disponen de funcionalidades orientadas a la gestión del inventario, solicitudes, reservas, alquileres y mantenimiento; mientras que las pequeñas empresas constructoras acceden a funcionalidades relacionadas con la búsqueda de maquinaria, consulta de disponibilidad, solicitud de alquiler y seguimiento de sus operaciones.
+
+Cada pantalla contempla una variante para Desktop Web Browser y otra para Mobile Web Browser. En escritorio se prioriza el uso de navegación lateral, tablas, cards y paneles; mientras que en mobile los contenidos se reorganizan verticalmente y las tablas se transforman en cards para conservar la legibilidad y facilidad de interacción.
+#### 1. Login
+
+**Propósito:** Permitir que los usuarios registrados accedan de forma segura a MaquiGest mediante sus credenciales.
+
+**Elementos clave:**
+- Logotipo de MaquiGest y selector de idioma.
+- Campo de correo electrónico y campo de contraseña.
+- Acción principal para iniciar sesión.
+- Enlace para recuperar la contraseña.
+- Enlace para crear una nueva cuenta.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-login-desktop-wireframe.png" alt="Wireframe de login para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-login-mobile-wireframe.png" alt="Wireframe de login para navegador móvil" width="40%">
+</p>
+
+#### 2. Registro de usuario
+
+**Propósito:** Permitir la creación de una cuenta y recopilar la información necesaria para identificar al usuario y su organización dentro de MaquiGest.
+
+**Elementos clave:**
+- Datos personales del usuario.
+- Correo electrónico y contraseña.
+- Información básica de la empresa.
+- Selección del tipo de organización.
+- Acción para crear la cuenta.
+- Enlace para volver al inicio de sesión.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-register-desktop-wireframe.png" alt="Wireframe de register para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-register-mobile-wireframe.png" alt="Wireframe de register para navegador móvil" width="40%">
+</p>
+
+#### 3. Recuperación de contraseña
+
+**Propósito:** Permitir que un usuario que no recuerda su contraseña solicite instrucciones para recuperar el acceso a su cuenta.
+
+**Elementos clave:**
+- Campo de correo electrónico.
+- Acción para enviar la solicitud de recuperación.
+- Mensaje informativo sobre el proceso.
+- Enlace para volver al inicio de sesión.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-recover-password-desktop-wireframe.png" alt="Wireframe de recover password para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-recover-password-mobile-wireframe.png" alt="Wireframe de recover password para navegador móvil" width="40%">
+</p>
+
+#### 4. Dashboard — Empresa de alquiler de maquinaria
+
+**Propósito:** Proporcionar al administrador una vista general de la disponibilidad de su maquinaria y de las operaciones de alquiler, facilitando la identificación de próximas entregas, devoluciones y necesidades de mantenimiento.
+
+**Elementos clave:**
+- Navegación lateral hacia Dashboard, Equipment, Rental requests, Reservations, Rentals, Maintenance, Clients y Reports.
+- Accesos rápidos para registrar maquinaria, revisar solicitudes y registrar un alquiler.
+- Indicadores de maquinaria disponible, maquinaria alquilada, maquinaria en mantenimiento y próximas reservas.
+- Listado de reservas confirmadas y resumen de alquileres activos con sus fechas de devolución.
+- Seguimiento de inspecciones, mantenimiento y actividad reciente.
+- Selector de idioma y acceso a la cuenta del administrador.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rental-dashboard-desktop-wireframe.png" alt="Wireframe de rental dashboard para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rental-dashboard-mobile-wireframe.png" alt="Wireframe de rental dashboard para navegador móvil" width="40%">
+</p>
+
+Los registros, cantidades y fechas se presentan como datos ilustrativos para representar la organización de la información.
+
+#### 5. Equipment — Gestión de maquinaria
+
+**Propósito:** Permitir que la empresa de alquiler consulte y administre la maquinaria registrada, identificando rápidamente su disponibilidad, estado y ubicación.
+
+**Elementos clave:**
+- Acción principal para registrar maquinaria.
+- Barra de búsqueda por nombre o código.
+- Filtros por categoría, estado, ubicación y disponibilidad.
+- Indicadores de equipos disponibles, alquilados y en mantenimiento.
+- Listado de maquinaria con código, categoría, ubicación y estado.
+- Acciones para consultar detalles y editar información.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-equipment-desktop-wireframe.png" alt="Wireframe de equipment para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-equipment-mobile-wireframe.png" alt="Wireframe de equipment para navegador móvil" width="40%">
+</p>
+
+#### 6. Rental Requests — Solicitudes de alquiler
+
+**Propósito:** Permitir que la empresa de alquiler revise las solicitudes recibidas y determine cuáles pueden ser atendidas de acuerdo con la disponibilidad de la maquinaria.
+
+**Elementos clave:**
+- Resumen de solicitudes pendientes, aprobadas y rechazadas.
+- Filtros por estado y fecha.
+- Información del solicitante, equipo solicitado y período.
+- Acciones para revisar, aprobar o rechazar solicitudes.
+- Etiquetas de estado claramente diferenciadas.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rental-requests-desktop-wireframe.png" alt="Wireframe de rental requests para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rental-requests-mobile-wireframe.png" alt="Wireframe de rental requests para navegador móvil" width="40%">
+</p>
+
+#### 7. Reservations — Reservas
+
+**Propósito:** Permitir que la empresa de alquiler consulte y administre las reservas confirmadas de maquinaria para determinados períodos.
+
+**Elementos clave:**
+- Listado de reservas confirmadas.
+- Equipo, cliente y período de reserva.
+- Próximas fechas de entrega.
+- Filtros por período y estado.
+- Acceso al detalle de la reserva.
+- Acción para continuar con el registro del alquiler.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-reservations-desktop-wireframe.png" alt="Wireframe de reservations para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-reservations-mobile-wireframe.png" alt="Wireframe de reservations para navegador móvil" width="40%">
+</p>
+
+#### 8. Rentals — Alquileres
+
+**Propósito:** Permitir que la empresa de alquiler consulte los alquileres activos y gestione las etapas de entrega y devolución de la maquinaria.
+
+**Elementos clave:**
+- Resumen de alquileres activos y próximos a vencer.
+- Información de equipo, cliente, fecha de inicio y devolución.
+- Estados del alquiler.
+- Acciones para registrar entrega y devolución.
+- Indicadores para devoluciones próximas o vencidas.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rentals-desktop-wireframe.png" alt="Wireframe de rentals para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rentals-mobile-wireframe.png" alt="Wireframe de rentals para navegador móvil" width="40%">
+</p>
+
+#### 9. Maintenance — Mantenimiento e incidencias
+
+**Propósito:** Permitir que la empresa de alquiler gestione inspecciones, incidencias, mantenimientos programados y el historial operativo de la maquinaria.
+
+**Elementos clave:**
+- Resumen de equipos en mantenimiento e inspecciones pendientes.
+- Listado de mantenimientos programados y en curso.
+- Registro de incidencias asociadas a maquinaria.
+- Fecha, tipo y estado de cada mantenimiento.
+- Acciones para registrar, programar o consultar mantenimiento.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-maintenance-desktop-wireframe.png" alt="Wireframe de maintenance para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-maintenance-mobile-wireframe.png" alt="Wireframe de maintenance para navegador móvil" width="40%">
+</p>
+
+#### 10. Dashboard — Empresa constructora
+
+**Propósito:** Proporcionar a la empresa constructora una vista general de sus solicitudes, reservas y alquileres, permitiéndole conocer rápidamente el estado de la maquinaria requerida para sus proyectos.
+
+**Elementos clave:**
+- Navegación hacia Dashboard, Search equipment, My requests, My reservations, My rentals y Profile.
+- Acción principal para buscar maquinaria.
+- Resumen de solicitudes pendientes y reservas próximas.
+- Alquileres activos y fechas de devolución.
+- Actividad reciente relacionada con solicitudes y alquileres.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-construction-dashboard-desktop-wireframe.png" alt="Wireframe de construction dashboard para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-construction-dashboard-mobile-wireframe.png" alt="Wireframe de construction dashboard para navegador móvil" width="40%">
+</p>
+
+#### 11. Equipment Search — Búsqueda de maquinaria
+
+**Propósito:** Permitir que la empresa constructora encuentre maquinaria de acuerdo con las necesidades de su proyecto.
+
+**Elementos clave:**
+- Barra de búsqueda.
+- Filtros por categoría, disponibilidad, ubicación y características.
+- Cards de maquinaria con nombre, código, categoría y estado.
+- Información resumida de disponibilidad.
+- Acción para consultar el detalle de un equipo.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-equipment-search-desktop-wireframe.png" alt="Wireframe de equipment search para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-equipment-search-mobile-wireframe.png" alt="Wireframe de equipment search para navegador móvil" width="40%">
+</p>
+
+#### 12. Equipment Detail — Detalle de maquinaria
+
+**Propósito:** Permitir que la empresa constructora consulte las características, condiciones y disponibilidad de una maquinaria antes de solicitar su alquiler.
+
+**Elementos clave:**
+- Nombre, código, categoría e información descriptiva del equipo.
+- Características y condiciones de alquiler.
+- Estado y disponibilidad.
+- Selección del período requerido.
+- Acción para consultar disponibilidad.
+- Acción principal para solicitar alquiler.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-equipment-detail-desktop-wireframe.png" alt="Wireframe de equipment detail para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-equipment-detail-mobile-wireframe.png" alt="Wireframe de equipment detail para navegador móvil" width="40%">
+</p>
+
+#### 13. My Requests — Mis solicitudes
+
+**Propósito:** Permitir que la empresa constructora consulte el estado de las solicitudes de alquiler realizadas.
+
+**Elementos clave:**
+- Listado de solicitudes realizadas.
+- Equipo solicitado y período requerido.
+- Fecha de creación.
+- Estados Pending, Approved y Rejected.
+- Acceso al detalle de cada solicitud.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-my-requests-desktop-wireframe.png" alt="Wireframe de my requests para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-my-requests-mobile-wireframe.png" alt="Wireframe de my requests para navegador móvil" width="40%">
+</p>
+
+#### 14. My Reservations — Mis reservas
+
+**Propósito:** Permitir que la empresa constructora consulte las reservas confirmadas y conozca las próximas fechas asociadas a la entrega de la maquinaria.
+
+**Elementos clave:**
+- Listado de reservas confirmadas.
+- Equipo y empresa de alquiler.
+- Período reservado.
+- Fecha o información de próxima entrega.
+- Acceso al detalle de la reserva.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-my-reservations-desktop-wireframe.png" alt="Wireframe de my reservations para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-my-reservations-mobile-wireframe.png" alt="Wireframe de my reservations para navegador móvil" width="40%">
+</p>
+
+#### 15. My Rentals — Mis alquileres
+
+**Propósito:** Permitir que la empresa constructora realice seguimiento de sus alquileres activos y conozca las fechas de devolución.
+
+**Elementos clave:**
+- Listado de alquileres activos.
+- Equipo alquilado y empresa proveedora.
+- Período del alquiler.
+- Fecha de devolución.
+- Indicadores para devoluciones próximas.
+- Acceso al detalle del alquiler.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-my-rentals-desktop-wireframe.png" alt="Wireframe de my rentals para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-my-rentals-mobile-wireframe.png" alt="Wireframe de my rentals para navegador móvil" width="40%">
+</p>
+
+#### 16. Profile — Perfil
+
+**Propósito:** Permitir que el usuario consulte y actualice su información personal, de contacto y de organización.
+
+**Elementos clave:**
+- Información personal.
+- Información de contacto.
+- Datos básicos de la organización.
+- Acción para editar y guardar cambios.
+- Acción para cerrar sesión.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-profile-desktop-wireframe.png" alt="Wireframe de profile para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-profile-mobile-wireframe.png" alt="Wireframe de profile para navegador móvil" width="40%">
+</p>
+
+#### 17. Plan & Subscription — Plan y suscripción
+
+**Propósito:** Permitir que la empresa consulte el plan actual y compare las alternativas disponibles para cambiar su suscripción.
+
+**Elementos clave:**
+- Plan actual y estado de la suscripción.
+- Comparación de planes disponibles.
+- Precio y funcionalidades principales.
+- Acción para seleccionar o cambiar de plan.
+- Información complementaria sobre la suscripción.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-plan-subscription-desktop-wireframe.png" alt="Wireframe de plan subscription para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-plan-subscription-mobile-wireframe.png" alt="Wireframe de plan subscription para navegador móvil" width="40%">
+</p>
+
 ### 4.4.2. Web Applications Wireflow Diagrams
+
+Los wireflow diagrams de la Web Application de **MaquiGest** representan la relación entre las principales pantallas del sistema y permiten visualizar el recorrido general de navegación que realizan los usuarios dentro de la plataforma. A diferencia de los wireframes, que muestran la estructura individual de cada interfaz, el wireflow permite comprender cómo se conectan las pantallas entre sí y cómo fluye la experiencia de uso de acuerdo con las acciones y decisiones del usuario.
+
+En el caso de MaquiGest, se ha definido un wireflow general que integra los principales recorridos de la aplicación web, desde las pantallas de autenticación hasta las interfaces específicas para los dos segmentos principales de usuarios: las **empresas de alquiler de maquinaria** y las **empresas constructoras**. De esta forma, se representa de manera global la navegación principal del sistema, así como las pantallas clave que intervienen en el proceso de gestión y solicitud de maquinaria.
+
+El recorrido inicia en la pantalla de **Login**, desde la cual el usuario puede registrarse en caso de no contar con una cuenta o recuperar su contraseña si no recuerda sus credenciales. Una vez completado el proceso de autenticación o registro, el flujo contempla una decisión relacionada con el tipo de empresa usuaria. Esta decisión divide la navegación en dos ramas principales.
+
+Por un lado, la rama correspondiente a la **empresa de alquiler de maquinaria** conduce al dashboard principal de administración. Desde esta vista se accede a pantallas orientadas a la gestión interna de la operación, tales como **Equipment**, **Rental Requests**, **Reservations**, **Rentals**, **Maintenance**, **Plan & Subscription** y **Profile**. Estas interfaces permiten registrar y administrar maquinaria, revisar solicitudes de alquiler, gestionar reservas confirmadas, controlar alquileres activos, programar mantenimientos y administrar la suscripción del servicio.
+
+Por otro lado, la rama correspondiente a la **empresa constructora** conduce a su propio dashboard, desde el cual el usuario puede navegar hacia **Equipment Search**, **Equipment Detail**, **My Requests**, **My Reservations**, **My Rentals** y **Profile**. Este recorrido permite buscar maquinaria disponible, consultar sus características, enviar solicitudes de alquiler y dar seguimiento a las reservas y alquileres realizados.
+
+Asimismo, el wireflow incorpora una salida general mediante la acción de **sign out**, representando el cierre de sesión como parte del ciclo de navegación de la aplicación. En conjunto, este diagrama permite validar que las pantallas diseñadas en la sección 4.4.1 se encuentran conectadas de manera coherente y alineadas con los objetivos funcionales definidos para cada segmento de usuario.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-general-wireflow.png"
+       alt="General wireflow of the MaquiGest Web Application"
+       width="100%">
+</p>
 
 ### 4.4.3. Web Applications Mock-ups
 
+Los mock-ups de la Web Application de MaquiGest representan la propuesta visual de alta fidelidad de las interfaces definidas mediante los wireframes. Estas vistas incorporan los elementos establecidos en el Design System de MaquiGest, como la tipografía Inter, los colores corporativos, la iconografía, los botones, cards, formularios, etiquetas de estado y componentes de navegación.
+
+La propuesta utiliza azul oscuro para la identidad y navegación principal, naranja para destacar las acciones prioritarias, azul para enlaces y acciones secundarias, y fondos claros para mantener una interfaz ordenada y legible. Los componentes mantienen una jerarquía visual consistente y comunican los estados mediante etiquetas textuales, evitando depender únicamente del color.
+
+Las variantes Desktop Web Browser y Mobile Web Browser conservan la misma arquitectura de información y los mismos objetivos de tarea, adaptando únicamente la distribución y densidad de los componentes al espacio disponible.
+#### 1. Login
+
+**Propósito:** Presentar una interfaz que permita que los usuarios registrados accedan de forma segura a MaquiGest mediante sus credenciales.
+
+**Elementos clave:**
+- Logotipo de MaquiGest y selector de idioma.
+- Campo de correo electrónico y campo de contraseña.
+- Acción principal para iniciar sesión.
+- Enlace para recuperar la contraseña.
+- Enlace para crear una nueva cuenta.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-login-desktop-mockup.png" alt="Mockup de login para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-login-mobile-mockup.png" alt="Mockup de login para navegador móvil" width="40%">
+</p>
+
+#### 2. Registro de usuario
+
+**Propósito:** Permitir la creación de una cuenta y recopilar la información necesaria para identificar al usuario y su organización dentro de MaquiGest.
+
+**Elementos clave:**
+- Datos personales del usuario.
+- Correo electrónico y contraseña.
+- Información básica de la empresa.
+- Selección del tipo de organización.
+- Acción para crear la cuenta.
+- Enlace para volver al inicio de sesión.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-register-desktop-mockup.png" alt="Mockup de register para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-register-mobile-mockup.png" alt="Mockup de register para navegador móvil" width="40%">
+</p>
+
+#### 3. Recuperación de contraseña
+
+**Propósito:** Presentar una interfaz que permita que un usuario que no recuerda su contraseña solicite instrucciones para recuperar el acceso a su cuenta.
+
+**Elementos clave:**
+- Campo de correo electrónico.
+- Acción para enviar la solicitud de recuperación.
+- Mensaje informativo sobre el proceso.
+- Enlace para volver al inicio de sesión.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-recover-password-desktop-mockup.png" alt="Mockup de recover password para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-recover-password-mobile-mockup.png" alt="Mockup de recover password para navegador móvil" width="40%">
+</p>
+
+#### 4. Dashboard — Empresa de alquiler de maquinaria
+
+**Propósito:** Presentar visualmente al administrador una vista general de la disponibilidad de su maquinaria y de las operaciones de alquiler, facilitando la identificación de próximas entregas, devoluciones y necesidades de mantenimiento.
+
+**Elementos clave:**
+- Navegación lateral hacia Dashboard, Equipment, Rental requests, Reservations, Rentals, Maintenance, Clients y Reports.
+- Accesos rápidos para registrar maquinaria, revisar solicitudes y registrar un alquiler.
+- Indicadores de maquinaria disponible, maquinaria alquilada, maquinaria en mantenimiento y próximas reservas.
+- Listado de reservas confirmadas y resumen de alquileres activos con sus fechas de devolución.
+- Seguimiento de inspecciones, mantenimiento y actividad reciente.
+- Selector de idioma y acceso a la cuenta del administrador.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rental-dashboard-desktop-mockup.png" alt="Mockup de rental dashboard para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rental-dashboard-mobile-mockup.png" alt="Mockup de rental dashboard para navegador móvil" width="40%">
+</p>
+
+Esta propuesta utiliza datos ilustrativos y representa el diseño visual de la pantalla. Las interacciones se desarrollarán posteriormente al conectar las vistas en el prototipo.
+
+#### 5. Equipment — Gestión de maquinaria
+
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler consulte y administre la maquinaria registrada, identificando rápidamente su disponibilidad, estado y ubicación.
+
+**Elementos clave:**
+- Acción principal para registrar maquinaria.
+- Barra de búsqueda por nombre o código.
+- Filtros por categoría, estado, ubicación y disponibilidad.
+- Indicadores de equipos disponibles, alquilados y en mantenimiento.
+- Listado de maquinaria con código, categoría, ubicación y estado.
+- Acciones para consultar detalles y editar información.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-equipment-desktop-mockup.png" alt="Mockup de equipment para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-equipment-mobile-mockup.png" alt="Mockup de equipment para navegador móvil" width="40%">
+</p>
+
+#### 6. Rental Requests — Solicitudes de alquiler
+
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler revise las solicitudes recibidas y determine cuáles pueden ser atendidas de acuerdo con la disponibilidad de la maquinaria.
+
+**Elementos clave:**
+- Resumen de solicitudes pendientes, aprobadas y rechazadas.
+- Filtros por estado y fecha.
+- Información del solicitante, equipo solicitado y período.
+- Acciones para revisar, aprobar o rechazar solicitudes.
+- Etiquetas de estado claramente diferenciadas.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rental-requests-desktop-mockup.png" alt="Mockup de rental requests para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rental-requests-mobile-mockup.png" alt="Mockup de rental requests para navegador móvil" width="40%">
+</p>
+
+#### 7. Reservations — Reservas
+
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler consulte y administre las reservas confirmadas de maquinaria para determinados períodos.
+
+**Elementos clave:**
+- Listado de reservas confirmadas.
+- Equipo, cliente y período de reserva.
+- Próximas fechas de entrega.
+- Filtros por período y estado.
+- Acceso al detalle de la reserva.
+- Acción para continuar con el registro del alquiler.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-reservations-desktop-mockup.png" alt="Mockup de reservations para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-reservations-mobile-mockup.png" alt="Mockup de reservations para navegador móvil" width="40%">
+</p>
+
+#### 8. Rentals — Alquileres
+
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler consulte los alquileres activos y gestione las etapas de entrega y devolución de la maquinaria.
+
+**Elementos clave:**
+- Resumen de alquileres activos y próximos a vencer.
+- Información de equipo, cliente, fecha de inicio y devolución.
+- Estados del alquiler.
+- Acciones para registrar entrega y devolución.
+- Indicadores para devoluciones próximas o vencidas.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rentals-desktop-mockup.png" alt="Mockup de rentals para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-rentals-mobile-mockup.png" alt="Mockup de rentals para navegador móvil" width="40%">
+</p>
+
+#### 9. Maintenance — Mantenimiento e incidencias
+
+**Propósito:** Presentar una interfaz que permita que la empresa de alquiler gestione inspecciones, incidencias, mantenimientos programados y el historial operativo de la maquinaria.
+
+**Elementos clave:**
+- Resumen de equipos en mantenimiento e inspecciones pendientes.
+- Listado de mantenimientos programados y en curso.
+- Registro de incidencias asociadas a maquinaria.
+- Fecha, tipo y estado de cada mantenimiento.
+- Acciones para registrar, programar o consultar mantenimiento.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-maintenance-desktop-mockup.png" alt="Mockup de maintenance para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-maintenance-mobile-mockup.png" alt="Mockup de maintenance para navegador móvil" width="40%">
+</p>
+
+#### 10. Dashboard — Empresa constructora
+
+**Propósito:** Presentar visualmente a la empresa constructora una vista general de sus solicitudes, reservas y alquileres, permitiéndole conocer rápidamente el estado de la maquinaria requerida para sus proyectos.
+
+**Elementos clave:**
+- Navegación hacia Dashboard, Search equipment, My requests, My reservations, My rentals y Profile.
+- Acción principal para buscar maquinaria.
+- Resumen de solicitudes pendientes y reservas próximas.
+- Alquileres activos y fechas de devolución.
+- Actividad reciente relacionada con solicitudes y alquileres.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-construction-dashboard-desktop-mockup.png" alt="Mockup de construction dashboard para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-construction-dashboard-mobile-mockup.png" alt="Mockup de construction dashboard para navegador móvil" width="40%">
+</p>
+
+#### 11. Equipment Search — Búsqueda de maquinaria
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora encuentre maquinaria de acuerdo con las necesidades de su proyecto.
+
+**Elementos clave:**
+- Barra de búsqueda.
+- Filtros por categoría, disponibilidad, ubicación y características.
+- Cards de maquinaria con nombre, código, categoría y estado.
+- Información resumida de disponibilidad.
+- Acción para consultar el detalle de un equipo.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-equipment-search-desktop-mockup.png" alt="Mockup de equipment search para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-equipment-search-mobile-mockup.png" alt="Mockup de equipment search para navegador móvil" width="40%">
+</p>
+
+#### 12. Equipment Detail — Detalle de maquinaria
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora consulte las características, condiciones y disponibilidad de una maquinaria antes de solicitar su alquiler.
+
+**Elementos clave:**
+- Nombre, código, categoría e información descriptiva del equipo.
+- Características y condiciones de alquiler.
+- Estado y disponibilidad.
+- Selección del período requerido.
+- Acción para consultar disponibilidad.
+- Acción principal para solicitar alquiler.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-equipment-detail-desktop-mockup.png" alt="Mockup de equipment detail para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-equipment-detail-mobile-mockup.png" alt="Mockup de equipment detail para navegador móvil" width="40%">
+</p>
+
+#### 13. My Requests — Mis solicitudes
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora consulte el estado de las solicitudes de alquiler realizadas.
+
+**Elementos clave:**
+- Listado de solicitudes realizadas.
+- Equipo solicitado y período requerido.
+- Fecha de creación.
+- Estados Pending, Approved y Rejected.
+- Acceso al detalle de cada solicitud.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-my-requests-desktop-mockup.png" alt="Mockup de my requests para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-my-requests-mobile-mockup.png" alt="Mockup de my requests para navegador móvil" width="40%">
+</p>
+
+#### 14. My Reservations — Mis reservas
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora consulte las reservas confirmadas y conozca las próximas fechas asociadas a la entrega de la maquinaria.
+
+**Elementos clave:**
+- Listado de reservas confirmadas.
+- Equipo y empresa de alquiler.
+- Período reservado.
+- Fecha o información de próxima entrega.
+- Acceso al detalle de la reserva.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-my-reservations-desktop-mockup.png" alt="Mockup de my reservations para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-my-reservations-mobile-mockup.png" alt="Mockup de my reservations para navegador móvil" width="40%">
+</p>
+
+#### 15. My Rentals — Mis alquileres
+
+**Propósito:** Presentar una interfaz que permita que la empresa constructora realice seguimiento de sus alquileres activos y conozca las fechas de devolución.
+
+**Elementos clave:**
+- Listado de alquileres activos.
+- Equipo alquilado y empresa proveedora.
+- Período del alquiler.
+- Fecha de devolución.
+- Indicadores para devoluciones próximas.
+- Acceso al detalle del alquiler.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-my-rentals-desktop-mockup.png" alt="Mockup de my rentals para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-my-rentals-mobile-mockup.png" alt="Mockup de my rentals para navegador móvil" width="40%">
+</p>
+
+#### 16. Profile — Perfil
+
+**Propósito:** Presentar una interfaz que permita que el usuario consulte y actualice su información personal, de contacto y de organización.
+
+**Elementos clave:**
+- Información personal.
+- Información de contacto.
+- Datos básicos de la organización.
+- Acción para editar y guardar cambios.
+- Acción para cerrar sesión.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-profile-desktop-mockup.png" alt="Mockup de profile para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-profile-mobile-mockup.png" alt="Mockup de profile para navegador móvil" width="40%">
+</p>
+
+#### 17. Plan & Subscription — Plan y suscripción
+
+**Propósito:** Presentar una interfaz que permita que la empresa consulte el plan actual y compare las alternativas disponibles para cambiar su suscripción.
+
+**Elementos clave:**
+- Plan actual y estado de la suscripción.
+- Comparación de planes disponibles.
+- Precio y funcionalidades principales.
+- Acción para seleccionar o cambiar de plan.
+- Información complementaria sobre la suscripción.
+
+**Desktop Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-plan-subscription-desktop-mockup.png" alt="Mockup de plan subscription para escritorio" width="100%">
+</p>
+
+**Mobile Web Browser**
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-plan-subscription-mobile-mockup.png" alt="Mockup de plan subscription para navegador móvil" width="40%">
+</p>
+
+
+
 ### 4.4.4. Web Applications User Flow Diagrams
 
+El User Flow Diagram de la Web Application de **MaquiGest** representa las acciones, decisiones y resultados que atraviesan los usuarios durante los principales procesos de la plataforma. A diferencia del wireflow, que se enfoca en la relación y navegación entre pantallas, el user flow incorpora puntos de decisión y validaciones que permiten comprender cómo progresa cada tarea hasta alcanzar un resultado determinado.
+
+El flujo inicia con el acceso a MaquiGest. Si el usuario ya mantiene una sesión activa, el sistema recupera dicha sesión y lo dirige al Dashboard correspondiente. En caso contrario, se presenta la pantalla de Login, desde la cual el usuario puede iniciar sesión, registrarse o iniciar el proceso de recuperación de contraseña. Durante el inicio de sesión se validan las credenciales ingresadas; si son correctas, se crea una sesión activa y se continúa hacia la aplicación, mientras que, si son incorrectas, se muestra un mensaje de error y el usuario permanece en la pantalla de acceso.
+
+Cuando el usuario todavía no posee una cuenta, el flujo conduce hacia el proceso de registro, donde completa la información requerida, selecciona el tipo de empresa y crea su cuenta. Una vez completado correctamente el registro, el sistema confirma la operación y permite regresar al Login. De forma similar, el flujo de recuperación de contraseña solicita el correo electrónico registrado, envía las instrucciones correspondientes y posteriormente permite volver a la pantalla de inicio de sesión.
+
+Después de la autenticación, el flujo se divide según el tipo de organización registrada en MaquiGest. Esta decisión permite ofrecer funcionalidades y recorridos diferentes para las **empresas de alquiler de maquinaria** y las **pequeñas empresas constructoras**, manteniendo una experiencia adaptada a las necesidades de cada segmento.
+
+#### Flujo de la empresa de alquiler de maquinaria
+
+La empresa de alquiler accede a un Dashboard orientado al control de sus operaciones. Desde la navegación principal puede gestionar las siguientes áreas:
+
+- **Equipment:** permite consultar el inventario, registrar nueva maquinaria, actualizar información, revisar disponibilidad y acceder al detalle de cada equipo.
+- **Rental Requests:** permite revisar las solicitudes recibidas y decidir si una solicitud debe aprobarse o rechazarse. Una solicitud aprobada puede generar una reserva.
+- **Reservations:** permite consultar las reservas confirmadas, revisar sus detalles, administrar su estado y cancelar una reserva cuando corresponda.
+- **Rentals:** permite consultar alquileres activos, registrar la entrega de la maquinaria, actualizar su estado, registrar la devolución y cerrar el alquiler.
+- **Maintenance:** permite consultar el estado de los equipos, registrar mantenimientos, actualizar su progreso y volver a marcar una maquinaria como disponible cuando corresponda.
+- **Plan & Subscription:** permite visualizar los planes disponibles, seleccionar un plan, registrar la información necesaria para la suscripción y activar el servicio.
+- **Profile:** permite consultar y actualizar la información de la cuenta y de la empresa, además de gestionar preferencias y credenciales.
+
+Dentro de este recorrido, uno de los principales puntos de decisión ocurre durante la revisión de una solicitud de alquiler. Si la empresa decide rechazarla, el sistema registra el nuevo estado y finaliza dicho proceso. Si la solicitud es aprobada, se genera una reserva que posteriormente puede continuar hacia el proceso de alquiler.
+
+#### Flujo de la empresa constructora
+
+La empresa constructora accede a un Dashboard orientado al seguimiento de sus solicitudes y alquileres. Desde esta interfaz puede realizar los siguientes procesos:
+
+- **Search Equipment:** permite buscar maquinaria y aplicar filtros según las necesidades del proyecto.
+- **Equipment Detail:** permite consultar las características, condiciones y disponibilidad del equipo seleccionado.
+- **My Requests:** permite realizar seguimiento al estado de las solicitudes enviadas y consultar si fueron aprobadas, rechazadas o permanecen pendientes.
+- **My Reservations:** permite consultar las reservas confirmadas y revisar sus principales datos.
+- **My Rentals:** permite realizar seguimiento de los alquileres activos, sus fechas y los procesos relacionados con la entrega y devolución.
+- **Profile:** permite consultar y actualizar la información de la cuenta y de la organización.
+
+Durante el proceso de búsqueda se verifica la disponibilidad del equipo para el período requerido. Si la maquinaria no está disponible, el usuario puede modificar las fechas o regresar a la búsqueda para seleccionar otra alternativa. Si se encuentra disponible, puede continuar con la solicitud de alquiler y posteriormente realizar su seguimiento desde My Requests.
+
+Finalmente, ambos recorridos convergen en la acción **Sign out**, mediante la cual se cierra la sesión activa y finaliza el recorrido dentro de la Web Application.
+
+#### General User Flow of MaquiGest Web Application
+
+**Purpose:** Representar las principales acciones, decisiones y recorridos que realizan los usuarios de MaquiGest desde la autenticación hasta la ejecución de los procesos principales correspondientes a cada segmento.
+
+**Key elements:**
+
+- Acceso, registro y recuperación de contraseña.
+- Validación de sesión y credenciales.
+- Selección y reconocimiento del tipo de empresa.
+- Flujo operativo para empresas de alquiler de maquinaria.
+- Flujo de búsqueda y solicitud para empresas constructoras.
+- Puntos de decisión durante la aprobación de solicitudes y la disponibilidad de maquinaria.
+- Gestión de perfil y suscripción.
+- Cierre de sesión como finalización del recorrido.
+
+<p align="center">
+  <img src="./assets/images/chapter-4/webapp-general-user-flow.png"
+       alt="General User Flow Diagram of the MaquiGest Web Application"
+       width="100%">
+</p>
+
+En conjunto, el User Flow Diagram permite verificar que las acciones y decisiones de los usuarios mantienen coherencia con las interfaces definidas en los wireframes y mock-ups, y proporciona una base para establecer posteriormente las interacciones del prototipo de la Web Application.
 ## 4.5. Web Applications Prototyping
 
 ## 4.6. Domain-Driven Software Architecture
