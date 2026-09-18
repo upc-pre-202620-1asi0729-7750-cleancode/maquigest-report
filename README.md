@@ -2792,21 +2792,25 @@ El sistema se apoya en tres servicios externos esenciales para su funcionamiento
 
 #### DDD Layer Diagrams by Bounded Context
 
-#### A. IAM Bounded Context
-
-![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-iam-bounded-context.png)
-
-#### B. Inventory Bounded Context
+#### A. Inventory Bounded Context
 
 ![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-inventory-bounded-context.png)
 
-#### C. Rentals Bounded Context
+#### B. Rentals Bounded Context
 
 ![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-rentals-bounded-context.png)
 
-#### D. Maintenance Bounded Context
+#### C. Maintenance Bounded Context
 
 ![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-maintenance-bounded-context.png)
+
+#### D. Profiles Bounded Context
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-profiles-bounded-context.png)
+
+#### E. IAM Bounded Context
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-iam-bounded-context.png)
 
 ## 4.7. Software Object-Oriented Design
 
