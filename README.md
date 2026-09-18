@@ -2778,6 +2778,8 @@ El sistema se apoya en tres servicios externos esenciales para su funcionamiento
 
 ### 4.6.3. Software Architecture Container Diagrams
 
+![Software Architecture Container Diagram](./assets/md-images-chapter4/container-diagram.png)
+
 ### 4.6.4. Software Architecture Components Diagrams
 
 ## 4.7. Software Object-Oriented Design
