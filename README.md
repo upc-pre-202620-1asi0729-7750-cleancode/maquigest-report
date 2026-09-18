@@ -2862,6 +2862,8 @@ El sistema se apoya en tres servicios externos esenciales para su funcionamiento
 
 ### 4.8.1. Database Diagrams
 
+![Database Diagram — Subscription](./assets/md-images-chapter4/database-diagram.png)
+
 # Capítulo V: Product Implementation, Validation & Deployment
 
 ## 5.1. Software Configuration Management
