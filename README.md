@@ -2782,6 +2782,44 @@ El sistema se apoya en tres servicios externos esenciales para su funcionamiento
 
 ### 4.6.4. Software Architecture Components Diagrams
 
+#### Component Diagram: Web Application (SPA - Front-end)
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-web-app.png)
+
+#### General Component Diagram: RESTful API Application (Bounded Contexts)
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-restful-api.png)
+
+#### DDD Layer Diagrams by Bounded Context
+
+#### A. Inventory Bounded Context
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-inventory-bounded-context.png)
+
+#### B. Rentals Bounded Context
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-rentals-bounded-context.png)
+
+#### C. Maintenance Bounded Context
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-maintenance-bounded-context.png)
+
+#### D. Profiles Bounded Context
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-profiles-bounded-context.png)
+
+#### E. IAM Bounded Context
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-iam-bounded-context.png)
+
+#### F. Subscription Bounded Context
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-subscriptions-bounded-context.png)
+
+#### Detailed Rentals Bounded Context 
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-detailed-rentals-bounded-context.png)
+
 ## 4.7. Software Object-Oriented Design
 
 ### 4.7.1. Class Diagrams
