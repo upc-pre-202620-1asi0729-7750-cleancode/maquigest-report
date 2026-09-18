@@ -2796,14 +2796,17 @@ El sistema se apoya en tres servicios externos esenciales para su funcionamiento
 
 ![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-iam-bounded-context.png)
 
-#### A. Inventory Bounded Context
+#### B. Inventory Bounded Context
 
 ![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-inventory-bounded-context.png)
 
-#### A. Rentals Bounded Context
+#### C. Rentals Bounded Context
 
 ![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-rentals-bounded-context.png)
 
+#### D. Maintenance Bounded Context
+
+![Software Architecture Components Diagram](./assets/md-images-chapter4/component-diagram-maintenance-bounded-context.png)
 
 ## 4.7. Software Object-Oriented Design
 
