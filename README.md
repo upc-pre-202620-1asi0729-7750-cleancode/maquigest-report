@@ -3664,8 +3664,6 @@ CompanyProfile guarda los datos de la empresa y compone un value object Address 
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
-# Capítulo V: Product Implementation, Validation & Deployment
-
 ## 5.1. Software Configuration Management
 
 La gestión de la configuración de software en MaquiGest tiene como propósito mantener el control sobre los artefactos producidos durante el desarrollo del proyecto, garantizar la trazabilidad de los cambios realizados por los integrantes del equipo y asegurar que las diferentes versiones del producto puedan ser identificadas, integradas y desplegadas de manera organizada.
@@ -4010,92 +4008,73 @@ El alcance funcional del Sprint se encuentra relacionado principalmente con el E
 
 Para el control de versiones se utilizaron Git y GitHub aplicando GitFlow y Conventional Commits. Al finalizar el Sprint se generó la primera versión estable del Landing Page, identificada mediante el tag `v1.0.0` y publicada mediante Netlify.
 
+
 #### 5.2.1.1. Sprint Planning 1
 
-El Sprint Planning 1 permitió establecer el alcance de la primera iteración de implementación de MaquiGest, seleccionar las User Stories relacionadas con el Landing Page y organizar las actividades necesarias para desarrollar y desplegar una primera versión funcional del producto.
+El Sprint Planning 1 permitió definir el alcance de la primera iteración del proyecto MaquiGest, orientada a implementar y desplegar la primera versión funcional del Landing Page. Durante este Sprint, el equipo priorizó la comunicación de la propuesta de valor del producto, la presentación de sus principales funcionalidades, beneficios, soluciones y planes, así como la implementación de mecanismos de contacto, solicitud de demostración, navegación responsive e internacionalización.
 
-A continuación, se presenta el resumen correspondiente al Sprint Planning Meeting:
+A continuación, se presenta la tabla resumen del Sprint Planning 1:
 
-| Campo | Descripción |
-| --- | --- |
-| **Sprint #** | Sprint 1 |
-| **Sprint Planning Background** | Primera iteración orientada a la implementación, integración y despliegue de la primera versión funcional del Landing Page de MaquiGest. |
-| **Date** | Pendiente de confirmar |
-| **Time** | Pendiente de confirmar |
-| **Location** | Pendiente de confirmar |
-| **Prepared By** | Pendiente de confirmar |
-| **Attendees (to planning meeting)** | Daga Chávez, Joaquín Leonardo / Delgado Perez, James Caleb / Manosalva Tovar, Miroslav Oscar / Montalvo Vasquez, Bruno Rodrigo / Paredes Chávez, Carlos Augusto |
-| **Sprint n - 1 Review Summary** | Not applicable. Sprint 1 corresponde a la primera iteración del proyecto, por lo que no existe un Sprint anterior que revisar. |
-| **Sprint n - 1 Retrospective Summary** | Not applicable. Sprint 1 corresponde a la primera iteración del proyecto, por lo que no existe una retrospectiva correspondiente a un Sprint anterior. |
-| **Sprint Goal & User Stories** | `EP07 - Información y contratación del servicio` / `US27 - Consultar información de MaquiGest` / `US28 - Solicitar demostración` / `US29 - Contactar con MaquiGest` |
-| **Sprint 1 Goal** | Nuestro enfoque se centra en disponer de una primera versión funcional y desplegada del Landing Page de MaquiGest que permita a los visitantes comprender la propuesta de valor, los beneficios, las funcionalidades, las soluciones para los segmentos objetivo y los planes del producto. Creemos que esto brindará a las empresas interesadas una forma clara de evaluar la propuesta y comunicarse con CleanCode. Esto se confirmará cuando la versión publicada permita navegar por las principales secciones del Landing Page, consultar la información del producto y utilizar los formularios de solicitud de demostración y contacto mediante una experiencia responsive. |
-| **Sprint 1 Velocity** | Pendiente de definir a partir de los Story Points establecidos para las User Stories seleccionadas. |
-| **Sum of Story Points** | Pendiente de completar a partir del Product Backlog. |
+| Campo                   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|:------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Sprint #**            | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                         | **Sprint Planning Background**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Date**                | 2026-09-5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Time**                | 17:00                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Location**            | Reunión virtual(Discord)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Prepared By**         | Delgado Perez, James Caleb                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Attendees**           | Daga Chávez, Joaquín Leonardo / Delgado Perez, James Caleb / Manosalva Tovar, Miroslav Oscar / Montalvo Vasquez, Bruno Rodrigo / Paredes Chávez, Carlos Augusto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                         | **Sprint Goal & User Stories**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Sprint 1 Goal**       | Nuestro enfoque se centra en presentar la propuesta de valor de MaquiGest mediante una primera versión funcional y desplegada del Landing Page, permitiendo que los visitantes conozcan las principales funcionalidades, beneficios, soluciones y planes ofrecidos por la plataforma, puedan solicitar una demostración o contactar al equipo, y naveguen correctamente desde diferentes dispositivos y en los idiomas disponibles. Creemos que esto permitirá comunicar de manera clara el valor de MaquiGest a las empresas objetivo. Esto se confirmará cuando los visitantes puedan identificar la propuesta de valor, explorar las principales secciones, consultar los planes, utilizar los formularios disponibles, cambiar el idioma y navegar por el Landing Page sin pérdida de información.               |
+| **Sprint 1 Velocity**   | 10 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Sum of Story Points** | 10 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
-Durante el Sprint 1 se identificaron los principales aspectos funcionales y técnicos requeridos para implementar la primera versión del Landing Page.
+Durante el Sprint 1, el equipo organizó el trabajo mediante una distribución de líderes y colaboradores de acuerdo con los principales aspectos necesarios para implementar y entregar la primera versión del Landing Page de MaquiGest.
 
-Con el objetivo de organizar las responsabilidades del equipo se utiliza una Leadership-and-Collaboration Matrix (LACX). En esta matriz, `L` identifica al integrante que asumió el liderazgo de un aspecto del Sprint, mientras que `C` identifica a los integrantes que colaboraron en dicho aspecto.
+Los aspectos considerados fueron el desarrollo del Landing Page, que comprendió la implementación de las secciones y funcionalidades asociadas con la propuesta de valor, beneficios, funcionalidades, soluciones, planes, formularios, responsive design e internacionalización; la documentación del proyecto y de las evidencias del Sprint; y el despliegue y publicación de la primera versión estable del producto.
 
-Los aspectos establecidos mantienen relación con las actividades registradas posteriormente en el Sprint Backlog y con las contribuciones realizadas en el repositorio del Landing Page.
+La letra **L** identifica al integrante responsable principal de cada aspecto, mientras que la letra **C** identifica a los miembros que participaron como colaboradores en su implementación, revisión o documentación.
 
-| Team Member (Last Name, First Name) | GitHub Username | Project Setup & Navigation | Informational Sections | Conversion Forms | Visual Assets & Footer | Deployment |
-| --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Delgado Perez, James Caleb | `JAmsy06` | L | C |  |  | L |
-| Montalvo Vasquez, Bruno Rodrigo | `TartaroZ` | C | L | L |  |  |
-| Manosalva Tovar, Miroslav Oscar | `Miroa123` |  |  | C | L |  |
-| Daga Chávez, Joaquín Leonardo | `Eshnikeee` | C |  |  | C | C |
-| Paredes Chávez, Carlos Augusto | `CarlosUPC` |  |  |  |  | C |
-
-**Leyenda:**
-
-- `L`: Leader.
-- `C`: Collaborator.
-
-James Caleb Delgado Perez lideró la preparación de la estructura principal del proyecto y las actividades relacionadas con el despliegue, además de participar en la implementación de diferentes secciones informativas. Bruno Rodrigo Montalvo Vasquez lideró la implementación de diferentes secciones informativas y elementos de conversión, además de colaborar en la navegación. Miroslav Oscar Manosalva Tovar participó en los mecanismos de contacto y lideró las actividades asociadas con el Footer y recursos visuales. Joaquín Leonardo Daga Chávez colaboró en la preparación del proyecto, integración de recursos y configuración del despliegue. Carlos Augusto Paredes Chávez colaboró en las correcciones realizadas sobre la configuración de despliegue.
+| Team Member (Last Name, First Name) | GitHub Username | Landing Page Development | Report & Sprint Documentation | Deployment & Release |
+| :--- | :--- | :---: | :---: | :---: |
+| Delgado Perez, James Caleb | JAmsy06 | **L** | **L** | **L** |
+| Montalvo Vasquez, Bruno Rodrigo | TartaroZ | C | C | C |
+| Manosalva Tovar, Miroslav Oscar | Miroa123 | C | C | C |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | C | C | C |
+| Paredes Chávez, Carlos Augusto | CarlossUPC | C | C | C |
 
 #### 5.2.1.3. Sprint Backlog 1
 
-El Sprint Backlog 1 reúne las User Stories seleccionadas para alcanzar el Sprint Goal y los Work-Items/Tasks derivados de su descomposición.
+El Sprint Backlog 1 reúne los Work-items definidos para implementar la primera versión funcional del Landing Page de MaquiGest. Las tareas se derivan de las User Stories seleccionadas para el Sprint 1 y abarcan la presentación de la propuesta de valor, funcionalidades, soluciones, planes, solicitud de demostración, contacto, responsive design e internacionalización.
 
-Para este Sprint se seleccionaron las User Stories `US27`, `US28` y `US29`, pertenecientes al Epic `EP07 - Información y contratación del servicio`. También se consideran Technical Tasks necesarias para preparar el proyecto y realizar el despliegue del Landing Page.
-
-Como herramienta para gestionar y visualizar el Sprint Backlog se utiliza Trello. El Board organiza las tareas utilizando los estados `To-do`, `In-Process`, `To-Review` y `Done`.
-
-**Sprint Backlog 1 - Trello Board:**  
-`[PENDIENTE: insertar URL pública del Board de Trello]`
-
-<!--
-Agregar aquí la captura del Sprint Backlog cuando el Board de Trello esté listo.
+A continuación, se presenta el Sprint Backlog correspondiente al Sprint 1:
 
 <p align="center">
-  <img src="./assets/images/chapter-5/sprint-1-trello-board.png"
-       alt="MaquiGest Sprint Backlog 1 - Trello Board"
-       width="90%">
+  <img src="./assets/images/chapter-5/sprint-1-backlog-board.png"
+       alt="MaquiGest Sprint 1 Backlog Board"
+       width="95%">
 </p>
--->
-
 | Sprint # | Sprint 1 |
-| --- | --- |
+| :--- | :--- |
 
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
-| --- | --- | --- | --- | --- | ---: | --- | --- |
-| US27 | Consultar información de MaquiGest | TS01 | Prepare Landing Page base | Crear la estructura inicial del Landing Page utilizando HTML5, CSS3 y JavaScript. | Pendiente | James Caleb Delgado Perez | Done |
-| US27 | Consultar información de MaquiGest | TS02 | Implement Header and language switching | Implementar el Header, la navegación principal y el comportamiento de cambio de idioma. | Pendiente | James Caleb Delgado Perez / Bruno Rodrigo Montalvo Vasquez | Done |
-| US27 | Consultar información de MaquiGest | TS03 | Implement Home section | Implementar la propuesta de valor principal y los Call To Action del Landing Page. | Pendiente | James Caleb Delgado Perez | Done |
-| US27 | Consultar información de MaquiGest | TS04 | Implement Benefits section | Implementar la sección destinada a comunicar los principales beneficios de MaquiGest. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
-| US27 | Consultar información de MaquiGest | TS05 | Implement Features section | Implementar las cards destinadas a presentar las principales funcionalidades ofrecidas por MaquiGest. | Pendiente | James Caleb Delgado Perez | Done |
-| US27 | Consultar información de MaquiGest | TS06 | Implement About section | Implementar la información correspondiente a misión, visión y valores de CleanCode y MaquiGest. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
-| US27 | Consultar información de MaquiGest | TS07 | Implement Solutions section | Implementar las soluciones diferenciadas para empresas de alquiler de maquinaria y empresas constructoras. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
-| US27 | Consultar información de MaquiGest | TS08 | Implement Plans section | Implementar la presentación y comparación de los planes Essential, Professional y Growth. | Pendiente | James Caleb Delgado Perez | Done |
-| US27 | Consultar información de MaquiGest | TS09 | Integrate visual assets | Incorporar las imágenes, logotipos y demás recursos visuales requeridos por el Landing Page. | Pendiente | Joaquín Leonardo Daga Chávez | Done |
-| US27 | Consultar información de MaquiGest | TS10 | Implement Footer and Terms page | Implementar el Footer y la primera versión de Terms and Conditions. | Pendiente | Miroslav Oscar Manosalva Tovar | Done |
-| US28 | Solicitar demostración | TS11 | Implement Demo Request form | Implementar el formulario utilizado para solicitar una demostración y seleccionar un plan. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
-| US29 | Contactar con MaquiGest | TS12 | Implement Contact form | Implementar el formulario mediante el cual los potenciales clientes pueden realizar consultas al equipo. | Pendiente | Miroslav Oscar Manosalva Tovar | Done |
-| - | Technical Task | TS13 | Configure Netlify deployment | Configurar Netlify para permitir el despliegue y publicación del Landing Page. | Pendiente | James Caleb Delgado Perez | Done |
-| - | Technical Task | TS14 | Fix Netlify configuration | Realizar los ajustes necesarios sobre la configuración de Netlify para completar correctamente el despliegue. | Pendiente | Joaquín Leonardo Daga Chávez / Carlos Augusto Paredes Chávez | Done |
-| - | Technical Task | TS15 | Final deployment verification | Verificar la correcta publicación de la versión estable `v1.0.0` del Landing Page. | Pendiente | James Caleb Delgado Perez | Done |
+| :---: | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
+| US30 | Visualizar propuesta de valor | TS01 | Implement Home section | Implementar la sección principal del Landing Page con la propuesta de valor, descripción general de MaquiGest y sus principales Call-to-Action. | 4 hrs | Delgado Perez, James Caleb | Done |
+| US31 | Explorar funcionalidades principales | TS02 | Implement Benefits section | Implementar la sección de beneficios para comunicar el valor que MaquiGest ofrece a sus segmentos objetivo. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US31 | Explorar funcionalidades principales | TS03 | Implement Features section | Implementar la sección que presenta las principales funcionalidades ofrecidas por MaquiGest. | 4 hrs | Delgado Perez, James Caleb | Done |
+| US27 | Consultar información de MaquiGest | TS04 | Implement About Us section | Implementar la sección informativa sobre CleanCode y MaquiGest, incluyendo misión, visión y valores. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US32 | Identificar la solución para mi empresa | TS05 | Implement Solutions section | Implementar las soluciones diferenciadas para empresas de alquiler de maquinaria y empresas constructoras. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US15 | Visualizar planes disponibles | TS06 | Implement Plans section | Implementar la sección de planes mostrando las alternativas disponibles, sus características y precios. | 4 hrs | Delgado Perez, James Caleb | Done |
+| US28 | Solicitar demostración | TS07 | Implement Request Demo section | Implementar el formulario mediante el cual un potencial cliente puede solicitar una demostración de MaquiGest. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US29 | Contactar con MaquiGest | TS08 | Implement Contact section | Implementar el formulario de contacto para permitir que los visitantes realicen consultas al equipo de MaquiGest. | 4 hrs | Manosalva Tovar, Miroslav Oscar | Done |
+| US27 | Consultar información de MaquiGest | TS09 | Implement Footer | Implementar el footer con información complementaria, navegación y enlaces correspondientes al Landing Page. | 4 hrs | Manosalva Tovar, Miroslav Oscar | Done |
+| US34 | Consultar el Landing Page en diferentes dispositivos | TS10 | Implement responsive layout | Adaptar la estructura, navegación, cards, formularios y contenido del Landing Page para diferentes resoluciones de pantalla. | 4 hrs | Daga Chávez, Joaquín Leonardo | Done |
+| US35 | Cambiar el idioma del Landing Page | TS11 | Implement language switching | Implementar el cambio de idioma del Landing Page manteniendo la estructura, navegación y funcionalidades disponibles. | 4 hrs | Delgado Perez, James Caleb | Done |
+
+**Sprint Backlog URL:** https://trello.com/invite/b/6aae122df20cec3612b47569/ATTI06c8d708807538ede9c79fd09c1cf6974064CD0D/sprint-backlog-1-maquigest
+
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
