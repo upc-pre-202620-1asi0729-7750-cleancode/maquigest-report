@@ -852,7 +852,7 @@ Orientar la propuesta de MaquiGest hacia empresas que actualmente dependen de ho
 | Fecha de entrevista | 18 setiembre 2026 |
 | Duración | 02:48 |
 | Timing en el video | 00:00 - 02:48 |
-| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C|
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
   <img src="assets/md-images-chapter2/Cap2entrevista1.png" width="700">
@@ -872,7 +872,7 @@ Pedro González se desempeña como contratista en el rubro de alquiler de maquin
 | Fecha de entrevista | 18 setiembre 2026 |
 | Duración | 04:34 |
 | Timing en el video | 02:49 - 07:23 |
-| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C|
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
   <img src="assets/md-images-chapter2/Cap2entrevista2.png" width="700">
@@ -892,7 +892,7 @@ Carlos Rodríguez es técnico mecánico y también se dedica al alquiler de cami
 | Fecha de entrevista | 18 setiembre 2026 |
 | Duración | 03:13 |
 | Timing en el video | 07:24 - 10:38 |
-| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C|
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
   <img src="assets/md-images-chapter2/Cap2entrevista3.png" width="700">
@@ -912,7 +912,7 @@ Carmen Losada Paredes administra una pequeña empresa dedicada al alquiler de ca
 | Fecha de entrevista | 18 setiembre 2026 |
 | Duración | 04:22 |
 | Timing en el video | 10:39 - 14:59 |
-| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C|
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
   <img src="assets/md-images-chapter2/Cap2entrevista4.png" width="700">
@@ -932,7 +932,7 @@ Yovani Meléndez Zuleta es administrador de maquinaria en una empresa dedicada a
 | Fecha de entrevista | 18 setiembre 2026 |
 | Duración | 03:33 |
 | Timing en el video | 14:59 - 18:32 |
-| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C|
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
   <img src="assets/md-images-chapter2/Cap2entrevista5.png" width="700">
@@ -952,7 +952,7 @@ Sonia Gutiérrez trabaja en una empresa inmobiliaria ubicada en San Juan de Mira
 | Fecha de entrevista | 18 setiembre 2026 |
 | Duración | 02:50 |
 | Timing en el video | 18:33 - 21:22 |
-| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C|
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
   <img src="assets/md-images-chapter2/Cap2entrevista6.png" width="700">
