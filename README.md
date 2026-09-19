@@ -4063,17 +4063,14 @@ Para este Sprint se seleccionaron las User Stories `US27`, `US28` y `US29`, pert
 Como herramienta para gestionar y visualizar el Sprint Backlog se utiliza Trello. El Board organiza las tareas utilizando los estados `To-do`, `In-Process`, `To-Review` y `Done`.
 
 **Sprint Backlog 1 - Trello Board:**  
-`[PENDIENTE: insertar URL pública del Board de Trello]`
+[Trello](https://trello.com/invite/b/6aae122df20cec3612b47569/ATTI06c8d708807538ede9c79fd09c1cf6974064CD0D/sprint-backlog-1-maquigest)
 
-<!--
-Agregar aquí la captura del Sprint Backlog cuando el Board de Trello esté listo.
 
 <p align="center">
-  <img src="./assets/images/chapter-5/sprint-1-trello-board.png"
+  <img src="assets/md-images-chapter5/trello-sprint-backlog.PNG"
        alt="MaquiGest Sprint Backlog 1 - Trello Board"
        width="90%">
 </p>
--->
 
 | Sprint # | Sprint 1 |
 | --- | --- |
