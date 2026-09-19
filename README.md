@@ -47,6 +47,8 @@ Proyecto<br>
 <span style="display:inline-block; width:300px; text-align:left;"><strong>Apellidos y Nombres</strong></span>
 <br>
 
+<br>
+
 <span style="display:inline-block; width:120px; text-align:left;">U202115277</span>
 <span style="display:inline-block; width:300px; text-align:left;">Delgado Perez, James Caleb</span>
 <br>
@@ -61,6 +63,10 @@ Proyecto<br>
 
 <span style="display:inline-block; width:120px; text-align:left;">U202321613</span>
 <span style="display:inline-block; width:300px; text-align:left;">Paredes Chavez, Carlos Augusto</span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202219829</span>
+<span style="display:inline-block; width:300px; text-align:left;">Daga Chávez, Joaquin Leonardo</span>
 <br>
 
 </p>
