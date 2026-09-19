@@ -2825,7 +2825,7 @@ Additionally, the RESTful API communicates with external services such as **Goog
 
 Los diagramas de componentes de arquitectura de software presentan una vista detallada de la organización interna de los principales contenedores frontend y backend que conforman MaquiGest.
 
-A nivel de frontend, la Single Page Application desarrollada con Angular se organiza alrededor de los bounded contexts definidos para la solución: IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Una vista general de componentes muestra cómo estos contextos se integran dentro de la aplicación frontend, mientras que los diagramas individuales permiten observar la organización interna de cada bounded context mediante las capas Presentation, Application, Domain e Infrastructure.
+A nivel de frontend, la Single Page Application desarrollada con Angular se organiza alrededor de los bounded contexts definidos para la solución: IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Adicionalmente, Shared Frontend concentra componentes, modelos y capacidades técnicas transversales reutilizables por los diferentes contextos de la aplicación. Una vista general de componentes muestra cómo estos elementos se integran dentro de la aplicación frontend, mientras que los diagramas individuales permiten observar su organización interna mediante las capas Presentation, Application, Domain e Infrastructure, según corresponda.
 
 Además, para cada bounded context del frontend se presenta una vista adicional de la Presentation Layer, donde se muestran los componentes Angular concretos responsables de las páginas, formularios, vistas y elementos de interfaz correspondientes.
 
@@ -2998,6 +2998,24 @@ Este diagrama representa el detalle de la Presentation Layer del bounded context
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-subscriptions-presentation-component-diagram.png"
        alt="MaquiGest Subscriptions Frontend Presentation Layer Components Diagram"
+       width="90%">
+</p>
+
+#### Shared Frontend Components Diagram
+
+El Shared Frontend concentra capacidades transversales y reutilizables utilizadas por los diferentes bounded contexts de la Single Page Application de MaquiGest.
+
+La Presentation Layer contiene componentes comunes de interfaz como `LayoutComponent`, `NavigationComponent`, `LanguageSwitcherComponent` y `FooterComponent`. Estos elementos proporcionan la estructura visual compartida, la navegación principal, el cambio de idioma y contenido reutilizable entre las diferentes vistas de la aplicación.
+
+La Domain Layer contiene value objects reutilizables que no pertenecen exclusivamente a un bounded context, como `Money` y `DateRange`, permitiendo representar valores comunes mediante objetos autovalidados.
+
+Por su parte, la Infrastructure Layer proporciona mecanismos técnicos compartidos. `ApiClient` centraliza capacidades comunes para la comunicación HTTP con la MaquiGest REST API, `AuthInterceptor` incorpora la información de autenticación requerida en las solicitudes salientes y `LocalStorageService` proporciona acceso reutilizable al almacenamiento local del navegador.
+
+De esta manera, Shared Frontend evita duplicar capacidades técnicas y visuales comunes dentro de los bounded contexts y mantiene dichas responsabilidades separadas de los conceptos específicos del dominio.
+
+<p align="center">
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-shared-component-diagram.png"
+       alt="MaquiGest Shared Frontend Components Diagram"
        width="90%">
 </p>
 

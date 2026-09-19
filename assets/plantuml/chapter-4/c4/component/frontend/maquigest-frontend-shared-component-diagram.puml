@@ -1,0 +1,68 @@
+﻿@startuml
+title MaquiGest - Shared Frontend Component Diagram (DDD Layers)
+
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam roundcorner 8
+skinparam defaultFontName Arial
+skinparam defaultFontSize 14
+
+skinparam component {
+    BackgroundColor #82B4E6
+    BorderColor #4A90D9
+    FontColor #111111
+}
+
+skinparam rectangle {
+    BackgroundColor white
+    BorderColor #777777
+    FontColor #333333
+}
+
+skinparam ArrowColor #666666
+skinparam ArrowFontColor #666666
+
+rectangle "Shared Frontend\n[container]" as Shared #line.dashed {
+
+    rectangle "Infrastructure" as Infrastructure #line.dashed {
+
+        component "«component»\n**ApiClient**\n[Angular Service / HttpClient]\n\nProvides reusable HTTP\ncommunication capabilities\nfor frontend contexts." as ApiClient
+
+        component "«component»\n**AuthInterceptor**\n[Angular HttpInterceptor]\n\nAttaches authentication\ninformation to outgoing\nHTTP requests." as AuthInterceptor
+
+        component "«component»\n**LocalStorageService**\n[Angular Service]\n\nProvides reusable access\nto browser local storage." as LocalStorageService
+    }
+
+    rectangle "Domain" as Domain #line.dashed {
+
+        component "«component»\n**shared/domain/model**\n[Value Objects]\n\nMoney and DateRange:\nreusable self-validating values\nshared by frontend contexts." as SharedDomain
+    }
+
+    rectangle "Presentation" as Presentation #line.dashed {
+
+        component "«component»\n**LayoutComponent**\n[Angular Component]\n\nDefines the common application\nframe used by authenticated\nscreens." as Layout
+
+        component "«component»\n**NavigationComponent**\n[Angular Component]\n\nProvides the main navigation\nbetween application modules." as Navigation
+
+        component "«component»\n**LanguageSwitcherComponent**\n[Angular Component]\n\nAllows users to switch\nbetween English and Spanish." as LanguageSwitcher
+
+        component "«component»\n**FooterComponent**\n[Angular Component]\n\nProvides common footer\ncontent across the SPA." as Footer
+    }
+}
+
+rectangle "«container»\n**MaquiGest REST API**\n[Java / Spring Boot]\n\nExposes RESTful services\nconsumed by the frontend." as Backend #DDDDDD
+
+' Presentation relationships
+Layout --> Navigation : Renders
+Layout --> LanguageSwitcher : Renders
+Layout --> Footer : Renders
+
+' Shared infrastructure relationships
+ApiClient --> AuthInterceptor : Uses
+ApiClient --> Backend : Sends requests to\n[HTTPS / JSON]
+AuthInterceptor --> LocalStorageService : Reads session data
+
+' Shared domain usage
+ApiClient ..> SharedDomain : Uses shared values
+
+@enduml
