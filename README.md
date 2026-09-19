@@ -3059,6 +3059,10 @@ En conjunto, el User Flow Diagram permite verificar que las acciones y decisione
 
 ### 4.6.1. Design-Level Event Storming
 
+El Design-Level Event Storming permitió profundizar en los procesos identificados durante el Big Picture Event Storming, detallando los eventos, comandos, actores y reglas principales involucrados en el dominio de MaquiGest. Este análisis facilita la identificación de los límites y responsabilidades de los diferentes componentes del sistema.
+
+![Design-Level Event Storming](assets/images/chapter-4/design-level-event-storming.png)
+
 ### 4.6.2. Software Architecture Context Diagram
 
 El Software Architecture Context Diagram presenta a **MaquiGest** como un único sistema de software y muestra su interacción con los principales usuarios y servicios externos. En este nivel del C4 Model no se representan todavía los componentes internos, containers, bounded contexts ni tecnologías de implementación, ya que el objetivo es delimitar el alcance funcional de la solución y reconocer las dependencias externas con las que se comunica.
