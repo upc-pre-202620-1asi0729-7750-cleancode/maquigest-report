@@ -3219,6 +3219,7 @@ Finalmente, ambos recorridos convergen en la acción **Sign out**, mediante la c
 </p>
 
 En conjunto, el User Flow Diagram permite verificar que las acciones y decisiones de los usuarios mantienen coherencia con las interfaces definidas en los wireframes y mock-ups, y proporciona una base para establecer posteriormente las interacciones del prototipo de la Web Application.
+
 ## 4.5. Web Applications Prototyping
 
 En esta sección se presenta el prototipo interactivo de la aplicación web MaquiGest, desarrollado en Figma a partir de los mockups definidos previamente. El prototipo permite simular la navegación y las principales interacciones que realizarán los usuarios dentro de la plataforma, con el objetivo de validar la organización de las funcionalidades, la secuencia de navegación y los flujos planteados durante el diseño de la experiencia de usuario.
@@ -3252,7 +3253,7 @@ El prototipo correspondiente al segmento de empresas constructoras permite naveg
 <img src = assets/md-images-chapter4/screenshot_video_prototype.png>
 
 **Video de demostración:**  
-Link: [Prototype]https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAAnsDBhRKVQpR1PWOgAkTtAU7P-QO86FqFMmuM5NzuKJU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=zB4J8W 
+Link: [Prototype](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAAnsDBhRKVQpR1PWOgAkTtAU7P-QO86FqFMmuM5NzuKJU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=zB4J8W)
 
 ## 4.6. Domain-Driven Software Architecture
 
