@@ -4052,10 +4052,11 @@ El Sprint Backlog 1 reúne los Work-items definidos para implementar la primera 
 A continuación, se presenta el Sprint Backlog correspondiente al Sprint 1:
 
 <p align="center">
-  <img src="./assets/images/chapter-5/sprint-1-backlog-board.png"
+  <img src="./assets/images/chapter-5/sprint-1-backlog-board.PNG"
        alt="MaquiGest Sprint 1 Backlog Board"
        width="95%">
 </p>
+
 | Sprint # | Sprint 1 |
 | :--- | :--- |
 
