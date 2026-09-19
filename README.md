@@ -780,6 +780,90 @@ Then el sistema registra la solicitud de contacto
 <td>EP07</td>
 </tr>
 
+<tr>
+<td>EP08</td>
+<td>Landing Page de MaquiGest</td>
+<td>Epic orientado a presentar la propuesta de valor de MaquiGest y facilitar la navegación de los potenciales clientes hacia las funcionalidades y acciones principales de la plataforma.</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>US30</td>
+<td>Visualizar propuesta de valor</td>
+<td>Como visitante, quiero identificar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa a gestionar el alquiler de maquinaria.</td>
+<td>
+Given que el visitante accede al Landing Page<br>
+When visualiza la sección principal<br>
+Then el sistema muestra la propuesta de valor de MaquiGest<br>
+And presenta sus principales beneficios para la gestión de alquileres
+</td>
+<td>EP08</td>
+</tr>
+
+<tr>
+<td>US31</td>
+<td>Explorar funcionalidades principales</td>
+<td>Como potencial cliente, quiero conocer las principales funcionalidades de MaquiGest para identificar cuáles pueden ayudarme a gestionar mis operaciones de alquiler de maquinaria.</td>
+<td>
+Given que el visitante se encuentra en el Landing Page<br>
+When revisa la sección de funcionalidades<br>
+Then el sistema muestra las principales funcionalidades de MaquiGest<br>
+And presenta una descripción breve de cada funcionalidad
+</td>
+<td>EP08</td>
+</tr>
+
+<tr>
+<td>US32</td>
+<td>Identificar la solución para mi empresa</td>
+<td>Como visitante, quiero identificar cómo MaquiGest puede ayudar según mi tipo de empresa para conocer las funcionalidades relevantes para mis necesidades.</td>
+<td>
+Given que el visitante accede a la sección orientada a clientes<br>
+When selecciona o visualiza su tipo de empresa<br>
+Then el sistema presenta los beneficios relevantes para empresas de alquiler o empresas constructoras
+</td>
+<td>EP08</td>
+</tr>
+
+<tr>
+<td>US33</td>
+<td>Acceder a la Web Application</td>
+<td>Como visitante, quiero acceder a la Web Application desde el Landing Page para utilizar las funcionalidades de MaquiGest.</td>
+<td>
+Given que el visitante se encuentra en el Landing Page<br>
+When selecciona el CTA para acceder a la plataforma<br>
+Then el sistema redirige al visitante hacia la Web Application
+</td>
+<td>EP08</td>
+</tr>
+
+<tr>
+<td>US34</td>
+<td>Consultar el Landing Page en diferentes dispositivos</td>
+<td>Como visitante, quiero visualizar correctamente el Landing Page desde diferentes dispositivos para conocer MaquiGest sin importar el dispositivo que utilice.</td>
+<td>
+Given que el visitante accede al Landing Page desde un dispositivo<br>
+When navega por sus diferentes secciones<br>
+Then el sistema adapta correctamente el contenido a la resolución de pantalla<br>
+And permite utilizar las funcionalidades de navegación sin pérdida de información
+</td>
+<td>EP08</td>
+</tr>
+
+<tr>
+<td>US35</td>
+<td>Cambiar el idioma del Landing Page</td>
+<td>Como visitante, quiero cambiar el idioma del Landing Page para consultar la información de MaquiGest en el idioma de mi preferencia.</td>
+<td>
+Given que el visitante accede al Landing Page<br>
+When selecciona un idioma disponible<br>
+Then el sistema muestra el contenido del Landing Page en el idioma seleccionado<br>
+And mantiene la estructura y funcionalidad de la página
+</td>
+<td>EP08</td>
+</tr>
+
 </table>
 
 ## 3.2. Impact Mapping
