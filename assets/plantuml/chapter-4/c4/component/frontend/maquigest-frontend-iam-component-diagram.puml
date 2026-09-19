@@ -1,0 +1,41 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - IAM Frontend Components Diagram
+
+Container_Boundary(iamContext, "IAM Frontend Bounded Context\n[Angular Bounded Context Module]") {
+
+    Component(presentationLayer, "Presentation Layer", "Pages / Components / Routes", "Renders authentication views, handles user interaction, and delegates authentication actions.")
+
+    Component(applicationLayer, "Application Layer", "Facades / Services", "Coordinates authentication use cases, session state, and IAM frontend workflows.")
+
+    Component(infrastructureLayer, "Infrastructure Layer", "API Clients / Mappers", "Consumes IAM backend endpoints and maps API resources into frontend models.")
+
+    Component(domainLayer, "Domain Layer", "Models / Rules", "Defines authentication models, session rules, credentials, and frontend domain decisions.")
+}
+
+Container_Ext(profilesContext, "Profiles", "Frontend Context", "Uses authenticated account and user identity information.")
+
+Container_Ext(subscriptionsContext, "Subscriptions", "Frontend Context", "Uses authenticated account context for subscription management.")
+
+Container_Ext(sharedFrontend, "Shared Frontend", "Shared UI / Session", "Provides reusable UI primitives, session utilities, guards, and shared frontend services.")
+
+Container_Ext(backendApi, "MaquiGest Backend API", "External Container", "REST API consumed by the IAM frontend context.")
+
+Rel(presentationLayer, applicationLayer, "Dispatches UI actions")
+
+Rel(applicationLayer, infrastructureLayer, "Requests data")
+Rel(applicationLayer, domainLayer, "Applies authentication rules")
+
+Rel(applicationLayer, profilesContext, "Provides authenticated account context")
+Rel(applicationLayer, subscriptionsContext, "Provides authenticated account context")
+
+Rel(presentationLayer, sharedFrontend, "Uses layout / UI primitives")
+Rel(applicationLayer, sharedFrontend, "Uses session services")
+
+Rel(infrastructureLayer, backendApi, "Consumes IAM REST endpoints", "JSON / HTTPS")
+
+SHOW_LEGEND()
+
+@enduml

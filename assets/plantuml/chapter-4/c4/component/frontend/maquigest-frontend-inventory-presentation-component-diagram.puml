@@ -1,0 +1,29 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Inventory Frontend Presentation Layer Components Diagram
+
+Boundary(inventoryPresentation, "Inventory Presentation Layer [Angular]") {
+    Component(equipmentListComponent, "EquipmentListComponent", "Angular Component", "Displays machinery and equipment available in the inventory.")
+    Component(equipmentDetailComponent, "EquipmentDetailComponent", "Angular Component", "Displays detailed machinery information, rates, status, and availability.")
+    Component(equipmentFormComponent, "EquipmentFormComponent", "Angular Component", "Provides equipment registration and editing forms.")
+    Component(equipmentSearchComponent, "EquipmentSearchComponent", "Angular Component", "Provides machinery search interaction.")
+    Component(equipmentFilterComponent, "EquipmentFilterComponent", "Angular Component", "Provides category, status, and availability filtering.")
+    Component(availabilityBadgeComponent, "AvailabilityBadgeComponent", "Angular Component", "Displays equipment availability using a reusable visual indicator.")
+}
+
+Component(inventoryApplication, "Inventory Application Layer", "Facades / Services", "Coordinates inventory queries, equipment management, and availability use cases.")
+
+Rel(equipmentListComponent, inventoryApplication, "Requests equipment list")
+Rel(equipmentDetailComponent, inventoryApplication, "Requests equipment details")
+Rel(equipmentFormComponent, inventoryApplication, "Creates or updates equipment")
+
+Rel(equipmentListComponent, equipmentSearchComponent, "Uses")
+Rel(equipmentListComponent, equipmentFilterComponent, "Uses")
+Rel(equipmentListComponent, availabilityBadgeComponent, "Uses")
+Rel(equipmentDetailComponent, availabilityBadgeComponent, "Uses")
+
+SHOW_LEGEND()
+
+@enduml

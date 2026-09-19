@@ -1,0 +1,50 @@
+﻿@startuml "Rentals-Frontend-Detailed"
+
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Rentals Frontend Component Diagram (DDD Layers)
+
+Container_Ext(backendApi, "MaquiGest Backend API", "Java / Spring Boot", "Exposes rental, reservation, delivery and return-related RESTful services consumed by the Rentals frontend")
+
+Container_Boundary(rentals, "Rentals Frontend Bounded Context") {
+
+    Boundary(presentation, "Presentation") {
+        Component(rental_requests, "RentalRequestsComponent", "Angular Component", "Displays and manages rental requests")
+        Component(rental_request_detail, "RentalRequestDetailComponent", "Angular Component", "Displays detailed information for a selected rental request")
+        Component(reservations, "ReservationsComponent", "Angular Component", "Displays confirmed machinery reservations")
+        Component(active_rentals, "ActiveRentalsComponent", "Angular Component", "Displays currently active rental operations")
+        Component(delivery_form, "DeliveryFormComponent", "Angular Component", "Provides the interface for registering machinery delivery")
+        Component(return_form, "ReturnFormComponent", "Angular Component", "Provides the interface for registering machinery return")
+    }
+
+    Boundary(application, "Application") {
+        Component(rentals_application, "rentals/application", "Angular Services / Signals", "Coordinates rental requests, reservations, deliveries, active rentals, returns and frontend rental state")
+    }
+
+    Boundary(domain, "Domain") {
+        Component(rentals_domain, "rentals/domain/model", "Entities / Value Objects", "RentalRequest, Reservation, RentalContract, Delivery and Return models and rental business rules")
+    }
+
+    Boundary(infrastructure, "Infrastructure") {
+        Component(rentals_infrastructure, "rentals/infrastructure", "HTTP, Resources, Mappers", "Consumes Rentals REST endpoints and maps backend resources into frontend rental models")
+    }
+}
+
+Rel(rental_requests, rental_request_detail, "Navigates to")
+
+Rel(rental_requests, rentals_application, "Requests rental operations")
+Rel(rental_request_detail, rentals_application, "Requests rental details")
+Rel(reservations, rentals_application, "Requests reservation data")
+Rel(active_rentals, rentals_application, "Requests active rentals")
+Rel(delivery_form, rentals_application, "Registers delivery")
+Rel(return_form, rentals_application, "Registers return")
+
+Rel(rentals_application, rentals_domain, "Holds and applies rental state and rules")
+Rel(rentals_application, rentals_infrastructure, "Loads and updates rental data through")
+
+Rel(rentals_infrastructure, rentals_domain, "Maps resources into")
+Rel(rentals_infrastructure, backendApi, "Consumes Rentals REST endpoints", "HTTPS / JSON")
+
+SHOW_LEGEND()
+
+@enduml

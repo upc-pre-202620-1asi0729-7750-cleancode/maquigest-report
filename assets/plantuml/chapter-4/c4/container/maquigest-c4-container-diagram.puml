@@ -1,0 +1,42 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+title MaquiGest - Software Architecture Container Diagram
+
+Person(rentalOperator, "Rental Operator", "Manages machinery, rental requests, reservations, deliveries, returns, incidents and maintenance.")
+Person(constructionManager, "Construction Manager", "Searches machinery, checks availability, submits rental requests and monitors reservations and active rentals.")
+Person(systemAdministrator, "System Administrator", "Administers platform access and supervises platform operations.")
+
+System_Boundary(maquigest, "MaquiGest") {
+    Container(landingWebsite, "MaquiGest  Website", "HTML5, CSS3, JavaScript", "Public website that presents MaquiGest, its value proposition, benefits, features, solutions, subscription plans, demo request and contact information.")
+    Container(webAppHost, "MaquiGest Web Application Host", "Static Web Application Host", "Hosts and serves the compiled Angular application bundle, static assets and frontend runtime configuration.")
+    Container(spa, "MaquiGest Single Page Application", "Angular, TypeScript, Angular Material", "Authenticated web application used to manage machinery, profiles, rental operations, maintenance and subscriptions.")
+    Container(api, "MaquiGest RESTful API", "Java, Spring Boot, Spring Data JPA", "Provides application services and exposes REST endpoints for the MaquiGest business capabilities.")
+    ContainerDb(database, "MaquiGest Database", "MySQL", "Stores users, profiles, machinery, rental operations, maintenance records, subscriptions and related business information.")
+}
+
+System_Ext(googleMaps, "Google Maps Platform", "Provides mapping and geolocation services.")
+System_Ext(stripe, "Stripe", "Processes subscription payments.")
+System_Ext(sendGrid, "SendGrid", "Provides transactional email delivery.")
+
+Rel(rentalOperator, landingWebsite, "Visits public information", "HTTPS")
+Rel(constructionManager, landingWebsite, "Visits public information", "HTTPS")
+
+Rel(landingWebsite, webAppHost, "Opens application", "CTA Link / HTTPS")
+Rel(webAppHost, spa, "Delivers and renders SPA", "HTML / CSS / JavaScript")
+
+Rel(rentalOperator, spa, "Manages machinery and rental operations", "HTTPS")
+Rel(constructionManager, spa, "Searches equipment and manages rental requests", "HTTPS")
+Rel(systemAdministrator, spa, "Administers platform access and supervises operations", "HTTPS")
+
+Rel(spa, api, "Consumes REST services", "JSON / HTTPS")
+Rel(api, database, "Reads from and writes to", "JPA / JDBC")
+
+Rel(api, googleMaps, "Requests mapping and geolocation services", "HTTPS / REST")
+Rel(api, stripe, "Processes subscription payments", "HTTPS / API")
+Rel(api, sendGrid, "Sends transactional emails and notifications", "HTTPS / API")
+
+SHOW_LEGEND()
+
+@enduml

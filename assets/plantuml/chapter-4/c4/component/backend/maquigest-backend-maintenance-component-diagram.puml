@@ -1,0 +1,40 @@
+﻿@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Maintenance Backend Component Diagram
+
+Container(spa, "Single Page Application", "Angular", "Consumes maintenance-management capabilities provided by the MaquiGest backend.")
+
+Container_Boundary(maintenanceContext, "Maintenance Bounded Context\n[Java / Spring Boot]") {
+
+    Component(interfacesLayer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes endpoints for maintenance schedules, inspections, incidents, maintenance records, and equipment history.")
+
+    Component(applicationLayer, "Application Layer", "Application Services / Command and Query Services", "Coordinates maintenance scheduling, inspections, incident reporting, maintenance updates, and equipment-history use cases.")
+
+    Component(domainLayer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains maintenance records, inspections, incidents, maintenance status, and equipment-history business rules.")
+
+    Component(infrastructureLayer, "Infrastructure Layer", "Spring Data JPA / Repository Implementations", "Provides persistence implementations and technical adapters required by the Maintenance bounded context.")
+}
+
+Container_Ext(inventoryContext, "Inventory Bounded Context", "Backend Context", "Provides equipment information and receives maintenance-related status and availability changes.")
+
+Container_Ext(rentalsContext, "Rentals Bounded Context", "Backend Context", "Provides active rental context when incidents or maintenance events affect rented equipment.")
+
+ContainerDb(database, "MaquiGest Database", "MySQL", "Stores maintenance schedules, inspections, incidents, maintenance records, and equipment-history information.")
+
+Rel(spa, interfacesLayer, "Consumes Maintenance services", "JSON / HTTPS")
+
+Rel(interfacesLayer, applicationLayer, "Delegates requests")
+
+Rel(applicationLayer, domainLayer, "Executes maintenance domain operations")
+Rel(applicationLayer, infrastructureLayer, "Uses persistence capabilities")
+
+Rel(applicationLayer, inventoryContext, "Updates equipment status and availability")
+Rel(applicationLayer, rentalsContext, "Uses active rental context")
+
+Rel(infrastructureLayer, database, "Reads and writes Maintenance data", "JPA / SQL")
+
+SHOW_LEGEND()
+
+@enduml

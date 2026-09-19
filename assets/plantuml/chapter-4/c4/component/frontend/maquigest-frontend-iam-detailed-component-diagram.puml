@@ -1,0 +1,42 @@
+﻿@startuml "IAM-Frontend-Detailed"
+
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - IAM Frontend Component Diagram (DDD Layers)
+
+Container_Ext(backendApi, "MaquiGest Backend API", "Java / Spring Boot", "Exposes IAM RESTful services for authentication and account management")
+
+Container_Boundary(iam, "IAM Frontend Bounded Context") {
+
+    Boundary(presentation, "Presentation") {
+        Component(login, "LoginComponent", "Angular Component", "Renders the sign-in form and handles authentication interaction")
+        Component(register, "RegisterComponent", "Angular Component", "Renders the account registration form and handles registration interaction")
+        Component(recover_password, "RecoverPasswordComponent", "Angular Component", "Renders the password recovery form and handles recovery interaction")
+    }
+
+    Boundary(application, "Application") {
+        Component(iam_application, "iam/application", "Angular Services / Signals", "Coordinates authentication, registration, password recovery and frontend session state")
+    }
+
+    Boundary(domain, "Domain") {
+        Component(iam_domain, "iam/domain/model", "Models / Value Objects", "Credentials, Session and authentication-related frontend models and rules")
+    }
+
+    Boundary(infrastructure, "Infrastructure") {
+        Component(iam_infrastructure, "iam/infrastructure", "HTTP, Resources, Mappers", "Consumes IAM backend endpoints and maps API resources into frontend domain models")
+    }
+}
+
+Rel(login, iam_application, "Requests authentication")
+Rel(register, iam_application, "Requests account registration")
+Rel(recover_password, iam_application, "Requests password recovery")
+
+Rel(iam_application, iam_domain, "Holds and applies")
+Rel(iam_application, iam_infrastructure, "Loads data through")
+
+Rel(iam_infrastructure, iam_domain, "Builds")
+Rel(iam_infrastructure, backendApi, "Consumes IAM REST endpoints", "HTTPS / JSON")
+
+SHOW_LEGEND()
+
+@enduml
