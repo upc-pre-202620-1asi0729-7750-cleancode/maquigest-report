@@ -4370,7 +4370,7 @@ Las siguientes evidencias muestran las estadísticas individuales registradas po
 </p>
 
 <p align="center">
-  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-contributors-02.png"
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-contributors-02(1).png"
        alt="MaquiGest Sprint 1 Collaboration Evidence - GitHub Contributor Carlos"
        width="55%">
 </p>
