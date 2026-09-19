@@ -3660,6 +3660,8 @@ CompanyProfile guarda los datos de la empresa y compone un value object Address 
 
 ### 4.8.1. Database Diagrams
 
+El modelo de datos traduce las entidades de cada bounded context a tablas relacionales, conservando la separación por contexto: cada grupo de tablas pertenece a un único contexto y las referencias entre contextos se resuelven por identificador (equipment_id, company_profile_id, contract_id), nunca por tablas compartidas. Los value objects se aplanan en columnas de la entidad que los contiene (Address dentro de company_profiles, RentalRate dentro de equipments, RentalPeriod como start_date/end_date). Los estados se almacenan como cadenas cortas que corresponden a las enumeraciones del diseño de clases. El DBMS es MySQL, gestionado desde la API mediante Entity Framework Core y sus migraciones. Las columnas marcadas con asterisco son obligatorias.
+
 ![Database Diagram — Subscription](./assets/md-images-chapter4/database-diagram.png)
 
 # Capítulo V: Product Implementation, Validation & Deployment
