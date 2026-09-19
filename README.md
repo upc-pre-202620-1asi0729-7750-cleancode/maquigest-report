@@ -99,8 +99,23 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
 ### Entrega AV1:
 
 #### Participación por integrante:
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-contributors-01.png"
+       alt="Sprint 1 Team Collaboration Evidence - Contributors 01"
+       width="95%">
+</p>
 
-##### Commits en el Project Report:
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-contributors-02(1).png"
+       alt="Sprint 1 Team Collaboration Evidence - Contributors 02"
+       width="95%">
+</p>
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-commits.png"
+       alt="Sprint 1 Team Collaboration Evidence - Commits"
+       width="95%">
+</p>
 
 <div style="page-break-after: always;"></div>
 
