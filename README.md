@@ -3214,6 +3214,39 @@ Finalmente, ambos recorridos convergen en la acción **Sign out**, mediante la c
 En conjunto, el User Flow Diagram permite verificar que las acciones y decisiones de los usuarios mantienen coherencia con las interfaces definidas en los wireframes y mock-ups, y proporciona una base para establecer posteriormente las interacciones del prototipo de la Web Application.
 ## 4.5. Web Applications Prototyping
 
+En esta sección se presenta el prototipo interactivo de la aplicación web MaquiGest, desarrollado en Figma a partir de los mockups definidos previamente. El prototipo permite simular la navegación y las principales interacciones que realizarán los usuarios dentro de la plataforma, con el objetivo de validar la organización de las funcionalidades, la secuencia de navegación y los flujos planteados durante el diseño de la experiencia de usuario.
+
+Las decisiones de interacción mantienen relación con la Arquitectura de Información definida para MaquiGest, especialmente con el sistema de navegación global. Para ello, se utiliza una barra lateral o *sidebar* como principal mecanismo de acceso a las diferentes secciones de la aplicación. Esta estructura permite mantener una navegación consistente y predecible entre las distintas vistas del sistema.
+
+El prototipo contempla dos experiencias principales de navegación, correspondientes a los segmentos de **empresas de alquiler de maquinaria** y **empresas constructoras**. Aunque ambas mantienen una estructura visual similar y emplean el mismo patrón de navegación mediante una barra lateral, las opciones disponibles varían de acuerdo con las necesidades, responsabilidades y tareas de cada segmento.
+
+Para el segmento de **empresas de alquiler de maquinaria**, la interfaz identifica al usuario mediante la etiqueta **Rental Company** y proporciona acceso a las secciones **Dashboard, Equipment, Reservations, Rentals, Rental requests y Maintenance**. Esta organización permite centralizar las funcionalidades relacionadas con la gestión de los equipos, las reservas, los alquileres, las solicitudes recibidas y las actividades de mantenimiento.
+
+Las interacciones implementadas en este segmento permiten simular el desplazamiento entre las diferentes secciones y ejecutar acciones representativas de la administración de maquinaria y del proceso de alquiler. De esta manera, el prototipo refleja los principales recorridos establecidos previamente en los User Flow Diagrams y mantiene correspondencia con la estructura de navegación definida en la Arquitectura de Información.
+
+Por otro lado, para el segmento de **empresas constructoras**, la interfaz identifica al usuario mediante la etiqueta **Construction Company** y presenta las secciones **Dashboard, Search equipment, My reservations, My rentals y My requests**. En este caso, la estructura de navegación está orientada principalmente a facilitar la búsqueda de maquinaria disponible y la gestión de las reservas, alquileres y solicitudes realizadas por la empresa constructora.
+
+Las interacciones de este segmento permiten simular el proceso de exploración y búsqueda de equipos, así como el acceso a la información asociada con las operaciones realizadas por el usuario. De esta forma, se mantiene una estructura de navegación coherente con la utilizada por las empresas de alquiler, pero adaptada a las funciones específicas que corresponden a las empresas constructoras.
+
+En ambos segmentos se utilizan elementos de interacción como botones, opciones de navegación, formularios, campos de búsqueda, filtros, tablas y vistas de detalle, según las necesidades de cada flujo. Estas interacciones permiten representar de manera más realista el comportamiento esperado de la aplicación y facilitan la validación de los principales recorridos del usuario.
+
+Asimismo, el prototipo considera su adaptación para navegadores web en computadoras de escritorio y dispositivos móviles. En la versión Desktop se aprovecha el mayor espacio disponible para mostrar de manera simultánea los elementos de navegación y el contenido principal. En la versión Mobile, los componentes son reorganizados para adaptarse a las dimensiones reducidas de pantalla, procurando mantener la jerarquía de la información, la facilidad de navegación y el acceso a las principales funcionalidades.
+
+Como evidencia del funcionamiento del prototipo, se realizaron videos demostrativos en los que se presenta la navegación por las principales secciones de la aplicación y se explican los flujos de interacción implementados. Estos videos permiten evidenciar la relación entre los User Flow Diagrams, la Arquitectura de Información y las decisiones de interacción desarrolladas en el prototipo de MaquiGest.
+
+#### Rental Company Prototype
+
+El prototipo correspondiente al segmento de empresas de alquiler permite navegar por las secciones Dashboard, Equipment, Reservations, Rentals, Rental requests y Maintenance, simulando los principales procesos de gestión de maquinaria y alquiler.
+
+#### Construction Company Prototype
+
+El prototipo correspondiente al segmento de empresas constructoras permite navegar por las secciones Dashboard, Search equipment, My reservations, My rentals y My requests, simulando los principales procesos de búsqueda, reserva y alquiler de maquinaria.
+
+<img src = assets/md-images-chapter4/screenshot_video_prototype.png>
+
+**Video de demostración:**  
+Link: [Prototype]https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAAnsDBhRKVQpR1PWOgAkTtAU7P-QO86FqFMmuM5NzuKJU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=zB4J8W 
+
 ## 4.6. Domain-Driven Software Architecture
 
 ### 4.6.1. Design-Level Event Storming
