@@ -1153,6 +1153,24 @@ La siguiente imagen presenta el resultado del Big Picture Event Storming realiza
 
 ## 2.5. Ubiquitous Language
 
+A continuación, se presenta un glosario de términos y conceptos propios del dominio de MaquiGest, relacionados con la gestión del alquiler de maquinaria para empresas constructoras y empresas de alquiler. Los términos permiten establecer un lenguaje común entre los miembros del equipo y los stakeholders del negocio.
+
+* **Machinery (Maquinaria):** Equipo utilizado para realizar actividades de construcción que puede ser ofrecido en alquiler.
+* **Machinery Rental Company (Empresa de alquiler de maquinaria):** Empresa que administra maquinaria y la ofrece en alquiler a empresas que requieren estos equipos.
+* **Construction Company (Empresa constructora):** Empresa que requiere maquinaria para ejecutar actividades relacionadas con proyectos de construcción.
+* **Machinery Availability (Disponibilidad de maquinaria):** Condición que determina si una maquinaria se encuentra disponible para ser alquilada durante un periodo determinado.
+* **Machinery Condition (Condición de la maquinaria):** Estado físico y operativo de una maquinaria en un momento determinado.
+* **Rental Request (Solicitud de alquiler):** Solicitud realizada por una empresa constructora para alquilar una maquinaria durante un periodo determinado.
+* **Rental (Alquiler):** Acuerdo mediante el cual una empresa constructora utiliza una maquinaria proporcionada por una empresa de alquiler durante un periodo establecido.
+* **Rental Period (Periodo de alquiler):** Periodo establecido durante el cual una maquinaria permanece bajo responsabilidad de la empresa que la alquila.
+* **Delivery (Entrega):** Traslado y entrega de la maquinaria al cliente para iniciar el periodo de alquiler.
+* **Return (Devolución):** Entrega de la maquinaria por parte del cliente a la empresa de alquiler al finalizar el periodo de alquiler.
+* **Inspection (Inspección):** Evaluación de la maquinaria devuelta para verificar su condición física y operativa.
+* **Incident (Incidente):** Situación inesperada, como una falla o daño, que afecta la condición o funcionamiento de una maquinaria.
+* **Maintenance (Mantenimiento):** Actividades realizadas para conservar o recuperar la condición física y operativa de una maquinaria.
+* **Machinery History (Historial de maquinaria):** Historial de las actividades relevantes asociadas a una maquinaria, incluyendo alquileres, devoluciones, inspecciones, incidentes y mantenimientos.
+
+
 # Capítulo III: Requirements Specification
 
 ## 3.1. User Stories 
