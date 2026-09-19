@@ -3475,25 +3475,411 @@ https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-website
 **Deployment URL:**  
 https://maquigest-cleancode.netlify.app/
 
-## 5.2 Landing Page, Services & Applications Implementation
+## 5.2. Landing Page, Services & Applications Implementation
 
-###  5.2.1 Sprint 1
+En esta sección se explica y evidencia el proceso de implementación, pruebas, documentación y despliegue de los productos de software que conforman la solución MaquiGest.
 
-#### 5.2.1.1 Sprint Planning 1
+El avance del producto se organiza mediante Sprints. Para cada Sprint se documentan las actividades de planificación, la distribución de responsabilidades mediante una Leadership-and-Collaboration Matrix, el Sprint Backlog, las evidencias de desarrollo obtenidas del sistema de control de versiones, las evidencias de ejecución, la documentación de servicios cuando corresponda, las actividades de despliegue y las evidencias de colaboración del equipo.
 
-#### 5.2.1.2 Aspect Leaders and Collaborators
+Durante el Sprint 1, el alcance de implementación se concentró en desarrollar y desplegar la primera versión funcional del Landing Page de MaquiGest, utilizando HTML5, CSS3 y JavaScript.
+
+### 5.2.1. Sprint 1
+
+Durante el Sprint 1, el equipo CleanCode desarrolló la primera versión funcional y responsive del Landing Page de MaquiGest.
+
+La implementación se realizó tomando como referencia los Wireframes, Mock-ups, Style Guidelines e Information Architecture definidos previamente para el producto. Como resultado, el Landing Page permite comunicar la propuesta de valor de MaquiGest, presentar sus beneficios y funcionalidades principales, proporcionar información institucional sobre CleanCode y MaquiGest, diferenciar las soluciones dirigidas a los segmentos objetivo, presentar los planes disponibles y proporcionar mecanismos de interacción mediante los formularios de solicitud de demostración y contacto.
+
+El alcance funcional del Sprint se encuentra relacionado principalmente con el Epic `EP07 - Información y contratación del servicio` y las siguientes User Stories:
+
+- `US27 - Consultar información de MaquiGest`.
+- `US28 - Solicitar demostración`.
+- `US29 - Contactar con MaquiGest`.
+
+Para el control de versiones se utilizaron Git y GitHub aplicando GitFlow y Conventional Commits. Al finalizar el Sprint se generó la primera versión estable del Landing Page, identificada mediante el tag `v1.0.0` y publicada mediante Netlify.
+
+#### 5.2.1.1. Sprint Planning 1
+
+El Sprint Planning 1 permitió establecer el alcance de la primera iteración de implementación de MaquiGest, seleccionar las User Stories relacionadas con el Landing Page y organizar las actividades necesarias para desarrollar y desplegar una primera versión funcional del producto.
+
+A continuación, se presenta el resumen correspondiente al Sprint Planning Meeting:
+
+| Campo | Descripción |
+| --- | --- |
+| **Sprint #** | Sprint 1 |
+| **Sprint Planning Background** | Primera iteración orientada a la implementación, integración y despliegue de la primera versión funcional del Landing Page de MaquiGest. |
+| **Date** | Pendiente de confirmar |
+| **Time** | Pendiente de confirmar |
+| **Location** | Pendiente de confirmar |
+| **Prepared By** | Pendiente de confirmar |
+| **Attendees (to planning meeting)** | Daga Chávez, Joaquín Leonardo / Delgado Perez, James Caleb / Manosalva Tovar, Miroslav Oscar / Montalvo Vasquez, Bruno Rodrigo / Paredes Chávez, Carlos Augusto |
+| **Sprint n - 1 Review Summary** | Not applicable. Sprint 1 corresponde a la primera iteración del proyecto, por lo que no existe un Sprint anterior que revisar. |
+| **Sprint n - 1 Retrospective Summary** | Not applicable. Sprint 1 corresponde a la primera iteración del proyecto, por lo que no existe una retrospectiva correspondiente a un Sprint anterior. |
+| **Sprint Goal & User Stories** | `EP07 - Información y contratación del servicio` / `US27 - Consultar información de MaquiGest` / `US28 - Solicitar demostración` / `US29 - Contactar con MaquiGest` |
+| **Sprint 1 Goal** | Nuestro enfoque se centra en disponer de una primera versión funcional y desplegada del Landing Page de MaquiGest que permita a los visitantes comprender la propuesta de valor, los beneficios, las funcionalidades, las soluciones para los segmentos objetivo y los planes del producto. Creemos que esto brindará a las empresas interesadas una forma clara de evaluar la propuesta y comunicarse con CleanCode. Esto se confirmará cuando la versión publicada permita navegar por las principales secciones del Landing Page, consultar la información del producto y utilizar los formularios de solicitud de demostración y contacto mediante una experiencia responsive. |
+| **Sprint 1 Velocity** | Pendiente de definir a partir de los Story Points establecidos para las User Stories seleccionadas. |
+| **Sum of Story Points** | Pendiente de completar a partir del Product Backlog. |
+
+#### 5.2.1.2. Aspect Leaders and Collaborators
+
+Durante el Sprint 1 se identificaron los principales aspectos funcionales y técnicos requeridos para implementar la primera versión del Landing Page.
+
+Con el objetivo de organizar las responsabilidades del equipo se utiliza una Leadership-and-Collaboration Matrix (LACX). En esta matriz, `L` identifica al integrante que asumió el liderazgo de un aspecto del Sprint, mientras que `C` identifica a los integrantes que colaboraron en dicho aspecto.
+
+Los aspectos establecidos mantienen relación con las actividades registradas posteriormente en el Sprint Backlog y con las contribuciones realizadas en el repositorio del Landing Page.
+
+| Team Member (Last Name, First Name) | GitHub Username | Project Setup & Navigation | Informational Sections | Conversion Forms | Visual Assets & Footer | Deployment |
+| --- | --- | :---: | :---: | :---: | :---: | :---: |
+| Delgado Perez, James Caleb | `JAmsy06` | L | C |  |  | L |
+| Montalvo Vasquez, Bruno Rodrigo | `TartaroZ` | C | L | L |  |  |
+| Manosalva Tovar, Miroslav Oscar | `Miroa123` |  |  | C | L |  |
+| Daga Chávez, Joaquín Leonardo | `Eshnikeee` | C |  |  | C | C |
+| Paredes Chávez, Carlos Augusto | `CarlosUPC` |  |  |  |  | C |
+
+**Leyenda:**
+
+- `L`: Leader.
+- `C`: Collaborator.
+
+James Caleb Delgado Perez lideró la preparación de la estructura principal del proyecto y las actividades relacionadas con el despliegue, además de participar en la implementación de diferentes secciones informativas. Bruno Rodrigo Montalvo Vasquez lideró la implementación de diferentes secciones informativas y elementos de conversión, además de colaborar en la navegación. Miroslav Oscar Manosalva Tovar participó en los mecanismos de contacto y lideró las actividades asociadas con el Footer y recursos visuales. Joaquín Leonardo Daga Chávez colaboró en la preparación del proyecto, integración de recursos y configuración del despliegue. Carlos Augusto Paredes Chávez colaboró en las correcciones realizadas sobre la configuración de despliegue.
 
 #### 5.2.1.3. Sprint Backlog 1
 
+El Sprint Backlog 1 reúne las User Stories seleccionadas para alcanzar el Sprint Goal y los Work-Items/Tasks derivados de su descomposición.
+
+Para este Sprint se seleccionaron las User Stories `US27`, `US28` y `US29`, pertenecientes al Epic `EP07 - Información y contratación del servicio`. También se consideran Technical Tasks necesarias para preparar el proyecto y realizar el despliegue del Landing Page.
+
+Como herramienta para gestionar y visualizar el Sprint Backlog se utiliza Trello. El Board organiza las tareas utilizando los estados `To-do`, `In-Process`, `To-Review` y `Done`.
+
+**Sprint Backlog 1 - Trello Board:**  
+`[PENDIENTE: insertar URL pública del Board de Trello]`
+
+<!--
+Agregar aquí la captura del Sprint Backlog cuando el Board de Trello esté listo.
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-trello-board.png"
+       alt="MaquiGest Sprint Backlog 1 - Trello Board"
+       width="90%">
+</p>
+-->
+
+| Sprint # | Sprint 1 |
+| --- | --- |
+
+| Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
+| --- | --- | --- | --- | --- | ---: | --- | --- |
+| US27 | Consultar información de MaquiGest | TS01 | Prepare Landing Page base | Crear la estructura inicial del Landing Page utilizando HTML5, CSS3 y JavaScript. | Pendiente | James Caleb Delgado Perez | Done |
+| US27 | Consultar información de MaquiGest | TS02 | Implement Header and language switching | Implementar el Header, la navegación principal y el comportamiento de cambio de idioma. | Pendiente | James Caleb Delgado Perez / Bruno Rodrigo Montalvo Vasquez | Done |
+| US27 | Consultar información de MaquiGest | TS03 | Implement Home section | Implementar la propuesta de valor principal y los Call To Action del Landing Page. | Pendiente | James Caleb Delgado Perez | Done |
+| US27 | Consultar información de MaquiGest | TS04 | Implement Benefits section | Implementar la sección destinada a comunicar los principales beneficios de MaquiGest. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
+| US27 | Consultar información de MaquiGest | TS05 | Implement Features section | Implementar las cards destinadas a presentar las principales funcionalidades ofrecidas por MaquiGest. | Pendiente | James Caleb Delgado Perez | Done |
+| US27 | Consultar información de MaquiGest | TS06 | Implement About section | Implementar la información correspondiente a misión, visión y valores de CleanCode y MaquiGest. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
+| US27 | Consultar información de MaquiGest | TS07 | Implement Solutions section | Implementar las soluciones diferenciadas para empresas de alquiler de maquinaria y empresas constructoras. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
+| US27 | Consultar información de MaquiGest | TS08 | Implement Plans section | Implementar la presentación y comparación de los planes Essential, Professional y Growth. | Pendiente | James Caleb Delgado Perez | Done |
+| US27 | Consultar información de MaquiGest | TS09 | Integrate visual assets | Incorporar las imágenes, logotipos y demás recursos visuales requeridos por el Landing Page. | Pendiente | Joaquín Leonardo Daga Chávez | Done |
+| US27 | Consultar información de MaquiGest | TS10 | Implement Footer and Terms page | Implementar el Footer y la primera versión de Terms and Conditions. | Pendiente | Miroslav Oscar Manosalva Tovar | Done |
+| US28 | Solicitar demostración | TS11 | Implement Demo Request form | Implementar el formulario utilizado para solicitar una demostración y seleccionar un plan. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
+| US29 | Contactar con MaquiGest | TS12 | Implement Contact form | Implementar el formulario mediante el cual los potenciales clientes pueden realizar consultas al equipo. | Pendiente | Miroslav Oscar Manosalva Tovar | Done |
+| - | Technical Task | TS13 | Configure Netlify deployment | Configurar Netlify para permitir el despliegue y publicación del Landing Page. | Pendiente | James Caleb Delgado Perez | Done |
+| - | Technical Task | TS14 | Fix Netlify configuration | Realizar los ajustes necesarios sobre la configuración de Netlify para completar correctamente el despliegue. | Pendiente | Joaquín Leonardo Daga Chávez / Carlos Augusto Paredes Chávez | Done |
+| - | Technical Task | TS15 | Final deployment verification | Verificar la correcta publicación de la versión estable `v1.0.0` del Landing Page. | Pendiente | James Caleb Delgado Perez | Done |
+
 #### 5.2.1.4. Development Evidence for Sprint Review
+
+Durante el Sprint 1 se desarrolló la primera versión estable del Landing Page de MaquiGest. Los avances realizados incluyen la preparación de la estructura inicial del proyecto, navegación, internacionalización básica, implementación de las diferentes secciones informativas, formularios de conversión, integración de recursos visuales y configuración del despliegue.
+
+El desarrollo fue gestionado mediante el repositorio `maquigest-website`, utilizando ramas `feature/*` para las diferentes funcionalidades, `develop` como rama de integración y `main` como rama correspondiente a la versión estable.
+
+Los commits fueron redactados aplicando Conventional Commits. Además del Commit Message principal, cada commit cuenta con un Commit Message Body que proporciona información adicional sobre el cambio registrado.
+
+A continuación, se presentan los commits no asociados con operaciones de merge que evidencian los principales avances realizados durante el Sprint.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| --- | --- | --- | --- | --- | --- |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `main` | `304f2d4` | `Initial commit` | Initializes the repository for the MaquiGest Landing Page project. | 2026-09-07 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/setup-landing-base` | `cb1de32` | `chore(website): prepare readme and gitignore` | Prepares the project README and Git ignore rules for the Landing Page repository. | 2026-09-06 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/setup-landing-base` | `98e3a96` | `chore(website): add html css and javascript base` | Adds the initial HTML5, CSS3 and JavaScript structure used as the base of the Landing Page. | 2026-09-06 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/landing-header` | `421a0e4` | `feat(website): implement header and language switching` | Implements and refines the Landing Page header, navigation and language switching behavior. | 2026-09-08 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/landing-header` | `d798471` | `feat(website): implement header and language switching` | Implements and refines the Landing Page header, navigation and language switching behavior. | 2026-09-08 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/landing-header` | `cd3980b` | `feat(website): implement header and language switching` | Implements and refines the Landing Page header, navigation and language switching behavior. | 2026-09-08 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/landing-home` | `441f2a6` | `feat(website): implement home section` | Implements the Home section with the main value proposition and primary calls to action. | 2026-09-08 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/landing-benefits` | `6672cae` | `feat(website): implement benefits section` | Implements the Benefits section to communicate the main value provided by MaquiGest. | 2026-09-08 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/landing-features` | `48baabe` | `feat(website): implement features section` | Implements the Features section to present the main capabilities offered by MaquiGest. | 2026-09-08 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/landing-about` | `96a2656` | `style(website): prepare about section styles` | Adds the initial styles required by the About section before its complete implementation. | 2026-09-08 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/landing-about` | `493ed1d` | `feat(website): implement about section with startup mission vision and values` | Implements the About section with the mission, vision and values of CleanCode and MaquiGest. | 2026-09-08 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/landing-solutions` | `733918a` | `feat(website): implement target segment solutions section` | Implements the Solutions section for machinery rental companies and construction companies. | 2026-09-08 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/landing-plans` | `15645ed` | `feat(website): implement subscription plans section` | Implements the Essential, Professional and Growth subscription plans and their calls to action. | 2026-09-08 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/landing-demo` | `afd4c63` | `feat(website): implement demo request form and plan selection` | Implements the demo request form and supports subscription plan selection before submitting the request. | 2026-09-09 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/landing-contact` | `a9f35ae` | `feat(website): implement contact form` | Implements the contact form for potential customers to send inquiries to the MaquiGest team. | 2026-09-09 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `feature/landing-footer` | `84be364` | `feat(website): add footer and draft terms page` | Implements the Landing Page footer and adds the initial Terms and Conditions page. | 2026-09-09 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `develop` | `35ce43c` | `feat(website): add footer and draft terms page` | Integrates the footer and initial Terms and Conditions page into the Landing Page development version. | 2026-09-09 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `develop` | `132400c` | `feat(website): add new images` | Adds the visual image assets required by the different Landing Page sections. | 2026-09-09 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `develop` | `bd88235` | `fix(website): use transparent logos and PNG favicon` | Updates branding assets to use transparent logos and a PNG favicon across the Landing Page. | 2026-09-09 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `develop` | `c7ba406` | `chore(website): configure Netlify deployment` | Adds the Netlify configuration required to deploy and publish the MaquiGest Landing Page. | 2026-09-09 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `develop` | `52e2510` | `fix: correct Netlify configuration` | Adjusts the Netlify configuration to correct deployment settings for the MaquiGest Landing Page. | 2026-09-09 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `develop` | `0720c3b` | `fix: correct Netlify configuration` | Adjusts the Netlify configuration to correct deployment settings for the MaquiGest Landing Page. | 2026-09-09 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `develop` | `b96dd06` | `fix: correct Netlify configuration` | Adjusts the Netlify configuration to correct deployment settings for the MaquiGest Landing Page. | 2026-09-09 |
+| `upc-pre-202620-1asi0729-7750-cleancode/maquigest-website` | `develop` | `3bfa9c7` | `fix: remove BOM from Netlify configuration` | Removes the Byte Order Mark from the Netlify configuration file to prevent configuration parsing issues. | 2026-09-09 |
+
+La distribución de los commits no asociados con operaciones de merge registrados durante el Sprint 1 es la siguiente:
+
+| Team Member | GitHub Username | Number of Commits |
+| --- | --- | ---: |
+| James Caleb Delgado Perez | `JAmsy06` | 8 |
+| Bruno Rodrigo Montalvo Vasquez | `TartaroZ` | 7 |
+| Miroslav Oscar Manosalva Tovar | `Miroa123` | 4 |
+| Joaquín Leonardo Daga Chávez | `Eshnikeee` | 3 |
+| Carlos Augusto Paredes Chávez | `CarlosUPC` | 2 |
+| **Total** |  | **24** |
+
+La versión estable generada al finalizar este proceso corresponde al tag `v1.0.0`. El tag y la rama remota `main` se encuentran asociados al mismo commit de la versión estable:
+
+`e40e7ad3714c138dfbe637e3ec9f7bb330d2a1ef`
+
+De esta manera, las evidencias registradas permiten establecer trazabilidad entre las actividades realizadas durante el Sprint, los Work-Items definidos en el Sprint Backlog y las modificaciones almacenadas en el repositorio del Landing Page.
+
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
+Durante el Sprint 1 se completó la implementación y publicación de la primera versión funcional del Landing Page de MaquiGest. Esta versión permite que los visitantes conozcan la propuesta de valor del producto, sus principales beneficios y funcionalidades, las soluciones orientadas a los segmentos objetivo y los planes disponibles.
+
+Asimismo, se implementaron mecanismos de interacción dirigidos a potenciales clientes mediante los formularios de solicitud de demostración y contacto. El Landing Page también incorpora navegación entre secciones y cambio de idioma.
+
+La versión implementada durante el Sprint se encuentra desplegada públicamente mediante Netlify en la siguiente dirección:
+
+https://maquigest-cleancode.netlify.app/
+
+A continuación, se presentan las principales vistas correspondientes a la ejecución del producto desarrollado durante el Sprint 1.
+
+##### Home and Header
+
+La vista inicial presenta el Header de navegación y la propuesta de valor principal de MaquiGest. Desde esta sección, el visitante puede acceder a las principales áreas del Landing Page, cambiar el idioma y utilizar los Call To Action para solicitar una demostración o consultar los planes disponibles.
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-execution-evidence-home-header.png"
+       alt="MaquiGest Sprint 1 Execution Evidence - Home and Header"
+       width="90%">
+</p>
+
+##### Benefits
+
+La sección Benefits comunica los principales beneficios que MaquiGest ofrece a sus usuarios. Entre ellos se encuentran una mejor visualización de la disponibilidad de maquinaria, la centralización de las operaciones relacionadas con los alquileres y el seguimiento del estado de los equipos.
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-execution-evidence-benefits.png"
+       alt="MaquiGest Sprint 1 Execution Evidence - Benefits"
+       width="90%">
+</p>
+
+##### Features
+
+La sección Features presenta las principales funcionalidades contempladas por MaquiGest, entre ellas la gestión de inventario de maquinaria, disponibilidad y reservas, seguimiento de alquileres, entregas y devoluciones, mantenimiento e incidencias, así como búsqueda y solicitud de equipos.
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-execution-evidence-features.png"
+       alt="MaquiGest Sprint 1 Execution Evidence - Features"
+       width="90%">
+</p>
+
+##### About Us
+
+La sección About Us presenta información institucional sobre CleanCode, startup responsable del desarrollo de MaquiGest. Esta vista comunica la misión, visión y valores que orientan el desarrollo de la solución.
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-execution-evidence-about-us.png"
+       alt="MaquiGest Sprint 1 Execution Evidence - About Us"
+       width="90%">
+</p>
+
+##### Solutions
+
+La sección Solutions presenta de manera diferenciada la propuesta de MaquiGest para los dos segmentos objetivo del proyecto: empresas dedicadas al alquiler de maquinaria y empresas constructoras o contratistas que necesitan maquinaria para desarrollar sus proyectos.
+
+Para las empresas de alquiler, se presentan funcionalidades relacionadas con inventario, disponibilidad, reservas, entregas, devoluciones, incidencias y mantenimiento. Para las empresas constructoras y contratistas, se presentan funcionalidades orientadas a la búsqueda de maquinaria, consulta de disponibilidad, solicitud de equipos y seguimiento de los alquileres realizados.
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-execution-evidence-solutions.png"
+       alt="MaquiGest Sprint 1 Execution Evidence - Solutions"
+       width="90%">
+</p>
+
+##### Plans
+
+La sección Plans presenta tres alternativas de contratación: Essential, Professional y Growth. Cada plan muestra un conjunto diferenciado de funcionalidades y un precio mensual referencial en soles peruanos.
+
+Además, cada alternativa incorpora un Call To Action que permite al visitante continuar hacia el formulario de solicitud de demostración asociado con el plan seleccionado.
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-execution-evidence-plans.png"
+       alt="MaquiGest Sprint 1 Execution Evidence - Plans"
+       width="90%">
+</p>
+
+##### Request Demo
+
+La sección Request Demo proporciona un formulario mediante el cual un potencial cliente puede solicitar una demostración de MaquiGest.
+
+El formulario permite registrar el nombre completo, correo electrónico, nombre de la empresa, plan de interés e información adicional sobre lo que el usuario desea conocer durante la demostración.
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-execution-evidence-request-demo.png"
+       alt="MaquiGest Sprint 1 Execution Evidence - Request Demo"
+       width="90%">
+</p>
+
+##### Contact and Footer
+
+La sección Contact permite que los visitantes envíen consultas al equipo de MaquiGest mediante el registro de su nombre, correo electrónico y mensaje.
+
+Al finalizar el Landing Page se encuentra el Footer, que incorpora información resumida sobre MaquiGest, navegación complementaria hacia las principales secciones del sitio y acceso a los Terms and Conditions.
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-execution-evidence-contact-footer.png"
+       alt="MaquiGest Sprint 1 Execution Evidence - Contact and Footer"
+       width="90%">
+</p>
+
+Las evidencias presentadas permiten comprobar que las principales secciones definidas para el Landing Page fueron implementadas y se encuentran disponibles en la versión publicada correspondiente al Sprint 1.
+
+##### Product Navigation Video
+
+Como evidencia complementaria de ejecución se presentará un video en el que se demuestra la navegación por las principales secciones del Landing Page de MaquiGest y el comportamiento de los elementos interactivos implementados durante el Sprint.
+
+**Product Navigation Video:**  
+`[PENDIENTE: insertar URL del video de navegación]`
+
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 1, el alcance de implementación estuvo concentrado en el desarrollo y despliegue de la primera versión funcional del Landing Page de MaquiGest.
+
+En esta iteración no se implementaron RESTful Web Services correspondientes al backend de la solución. Por este motivo, durante el Sprint 1 no existen endpoints desarrollados ni documentación OpenAPI o Swagger asociada a servicios de aplicación.
+
+La implementación de los Web Services será realizada en Sprints posteriores, de acuerdo con la evolución del Product Backlog y con la arquitectura definida para MaquiGest, la cual contempla el desarrollo de una REST API utilizando Java, Spring Boot y Spring Data JPA.
+
+Por lo tanto, en el Sprint 1 esta sección no presenta evidencias de endpoints, métodos HTTP, parámetros o respuestas, debido a que el producto implementado durante esta iteración corresponde exclusivamente al Landing Page.
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
+Durante el Sprint 1 se realizaron las actividades necesarias para publicar la primera versión estable del Landing Page de MaquiGest en un entorno accesible públicamente.
+
+El código fuente del Landing Page se encuentra almacenado en el repositorio `maquigest-website`, perteneciente a la organización GitHub de CleanCode. La solución fue desarrollada utilizando HTML5, CSS3 y JavaScript y posteriormente integrada con Netlify para automatizar su publicación.
+
+##### Netlify Deployment
+
+Para el despliegue del Landing Page se utilizó Netlify mediante el proyecto `maquigest-cleancode`.
+
+El proyecto de Netlify se encuentra conectado directamente con el repositorio:
+
+`upc-pre-202620-1asi0729-7750-cleancode/maquigest-website`
+
+La configuración establece la rama `main` como fuente para el entorno de producción y mantiene habilitada la publicación automática de los cambios realizados sobre dicha rama.
+
+La versión desplegada corresponde al commit:
+
+`e40e7ad3714c138dfbe637e3ec9f7bb330d2a1ef`
+
+El Landing Page se encuentra disponible públicamente mediante la siguiente URL:
+
+https://maquigest-cleancode.netlify.app/
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-deployment-evidence-netlify-project.png"
+       alt="MaquiGest Sprint 1 Deployment Evidence - Netlify Project"
+       width="90%">
+</p>
+
+La evidencia anterior permite verificar el proyecto configurado en Netlify, su conexión con GitHub, la rama utilizada para producción y el commit correspondiente a la versión publicada.
+
+##### GitHub Release
+
+Una vez finalizada la implementación e integración del Sprint 1, se publicó la primera versión estable del Landing Page mediante GitHub Releases.
+
+La versión publicada fue identificada mediante el tag:
+
+`v1.0.0`
+
+El Release fue publicado con el nombre `MaquiGest Landing Page v1.0.0` y representa la primera versión estable desarrollada por el equipo CleanCode.
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-deployment-evidence-release-v1.0.0.png"
+       alt="MaquiGest Sprint 1 Deployment Evidence - GitHub Release v1.0.0"
+       width="90%">
+</p>
+
+En GitHub, el tag `v1.0.0` se encuentra asociado al mismo commit utilizado por la rama `main`:
+
+`e40e7ad3714c138dfbe637e3ec9f7bb330d2a1ef`
+
+De esta manera, se mantiene trazabilidad entre la versión almacenada en el repositorio, el Release generado y el producto publicado mediante Netlify.
+
+##### Production Environment
+
+El entorno de producción correspondiente al Sprint 1 se encuentra disponible en:
+
+https://maquigest-cleancode.netlify.app/
+
+La versión desplegada fue verificada comprobando la correcta carga del Landing Page, la navegación entre sus secciones, los recursos visuales, los formularios implementados y los elementos interactivos definidos para la primera versión del producto.
+
+Por lo tanto, las evidencias presentadas permiten comprobar que el Landing Page desarrollado durante el Sprint 1 fue integrado, versionado y desplegado satisfactoriamente en un entorno público.
+
 #### 5.2.1.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 1, el equipo CleanCode trabajó colaborativamente en la implementación, integración y despliegue de la primera versión del Landing Page de MaquiGest.
+
+Git y GitHub fueron utilizados como herramientas principales para administrar el código fuente y registrar las contribuciones realizadas durante la iteración. El trabajo se organizó mediante ramas destinadas al desarrollo de funcionalidades específicas, una rama `develop` utilizada para integración y la rama `main` correspondiente a la versión estable del producto.
+
+Las contribuciones realizadas por los integrantes pueden observarse mediante las herramientas de análisis proporcionadas por GitHub.
+
+##### GitHub Contributors
+
+GitHub Contributors permite visualizar la participación de los integrantes del equipo en el repositorio `maquigest-website`.
+
+La distribución de commits no asociados con operaciones de merge registrada para el Sprint 1 fue la siguiente:
+
+| Team Member | GitHub Username | Commits |
+| --- | --- | ---: |
+| James Caleb Delgado Perez | `JAmsy06` | 8 |
+| Bruno Rodrigo Montalvo Vasquez | `TartaroZ` | 7 |
+| Miroslav Oscar Manosalva Tovar | `Miroa123` | 4 |
+| Joaquín Leonardo Daga Chávez | `Eshnikeee` | 3 |
+| Carlos Augusto Paredes Chávez | `CarlossUPC` | 2 |
+| **Total** |  | **24** |
+
+Las siguientes evidencias muestran las estadísticas individuales registradas por GitHub para los integrantes del equipo.
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-contributors-01.png"
+       alt="MaquiGest Sprint 1 Collaboration Evidence - GitHub Contributors"
+       width="90%">
+</p>
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-contributors-02.png"
+       alt="MaquiGest Sprint 1 Collaboration Evidence - GitHub Contributor Carlos"
+       width="55%">
+</p>
+
+Las estadísticas muestran que los cinco integrantes cuentan con actividad registrada en el repositorio durante el desarrollo del Landing Page.
+
+Las contribuciones incluyen actividades relacionadas con la estructura inicial del proyecto, navegación, secciones informativas, formularios, recursos visuales y configuración del despliegue.
+
+##### Commit Activity
+
+La sección de estadísticas de GitHub permite observar también la actividad general de commits realizada sobre el repositorio.
+
+Durante el periodo correspondiente al Sprint 1 se registraron los 24 commits utilizados como evidencia del desarrollo del Landing Page.
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-commits.png"
+       alt="MaquiGest Sprint 1 Collaboration Evidence - Commit Activity"
+       width="90%">
+</p>
+
+La concentración de actividad registrada durante septiembre de 2026 corresponde al periodo de implementación e integración de la primera versión del Landing Page.
+
+La evidencia obtenida mediante GitHub permite establecer trazabilidad entre las contribuciones realizadas por los integrantes, los Work-Items definidos en el Sprint Backlog y los commits documentados previamente en la sección Development Evidence for Sprint Review.
+
+Asimismo, la participación registrada es consistente con la Leadership-and-Collaboration Matrix definida para el Sprint, en la que se distribuyeron responsabilidades relacionadas con la estructura del proyecto, las secciones informativas, los mecanismos de conversión, los recursos visuales y las actividades de despliegue.
 
 # Conclusiones
 
