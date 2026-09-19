@@ -3272,21 +3272,216 @@ Para la primera versión del Landing Page se generó la release `1.0.0`, acompa�
 **Deployment Platform:** Netlify  
 **Netlify Project:** `maquigest-cleancode`
 
-### 5.1.1. Software Development Environment Configuration
-
 ### 5.1.2. Source Code Management
 
+Para la gestión del código fuente y de los artefactos de documentación de MaquiGest, el equipo CleanCode utiliza **Git** como sistema de control de versiones distribuido y **GitHub** como plataforma remota para el almacenamiento, colaboración y seguimiento de los repositorios del proyecto.
+
+El uso de estas herramientas permite mantener un historial trazable de los cambios realizados, distribuir el trabajo entre los integrantes mediante ramas independientes y controlar la integración progresiva de las funcionalidades desarrolladas.
+
+La organización de GitHub de CleanCode centraliza actualmente los siguientes repositorios principales:
+
+| Producto | Repositorio | Propósito |
+| --- | --- | --- |
+| Project Report | `maquigest-report` | Contiene el informe del proyecto, diagramas, evidencias y documentación técnica. |
+| Landing Page | `maquigest-website` | Contiene la implementación del Landing Page de MaquiGest desarrollado con HTML, CSS y JavaScript. |
+
+A medida que avance el desarrollo del producto, se incorporarán los repositorios correspondientes a la Frontend Web Application y al RESTful API.
+
+#### GitFlow Workflow
+
+El equipo utiliza **GitFlow** como estrategia principal de ramificación para organizar el desarrollo de MaquiGest.
+
+La estrategia se basa en las ramas `main` y `develop`, complementadas por ramas temporales utilizadas para desarrollar funcionalidades, preparar versiones y realizar correcciones.
+
+Las principales ramas son:
+
+- `main`: contiene las versiones estables y publicables del producto.
+- `develop`: funciona como rama principal de integración durante el desarrollo.
+- `feature/*`: se utiliza para desarrollar nuevas funcionalidades o realizar modificaciones específicas.
+- `release/*`: se utiliza para preparar una nueva versión estable antes de integrarla en `main`.
+- `hotfix/*`: se reserva para correcciones urgentes que deban aplicarse sobre una versión estable.
+
+El flujo general utilizado por CleanCode es el siguiente:
+
+`feature/* → develop → release/* → main`
+
+Cada nueva tarea comienza normalmente desde `develop`, creando una rama `feature/*` independiente. Una vez completado y verificado el trabajo, la rama se integra nuevamente en `develop`.
+
+Cuando el conjunto de funcionalidades planificadas para una entrega se encuentra listo, se crea una rama `release/*`, donde se realizan las últimas verificaciones antes de integrar la versión en `main`.
+
+Ejemplos de ramas utilizadas durante el desarrollo del proyecto incluyen:
+
+- `feature/landing-header`
+- `feature/landing-home`
+- `feature/landing-about`
+- `feature/landing-features`
+- `feature/landing-solutions`
+- `feature/landing-benefits`
+- `feature/landing-plans`
+- `feature/landing-demo`
+- `feature/landing-contact`
+- `feature/landing-footer`
+- `feature/chapter-4-landing-page-ui-design`
+- `release/1.0.0`
+
+Este enfoque permite que cada integrante trabaje de manera independiente sin afectar directamente las versiones estables del proyecto.
+
+#### Semantic Versioning
+
+Las versiones estables de MaquiGest siguen los principios de **Semantic Versioning**, utilizando el formato:
+
+`MAJOR.MINOR.PATCH`
+
+donde:
+
+- **MAJOR** representa cambios importantes que pueden introducir incompatibilidades con versiones anteriores.
+- **MINOR** representa nuevas funcionalidades compatibles con la versión anterior.
+- **PATCH** representa correcciones o ajustes menores que no modifican las funcionalidades principales del producto.
+
+Para la primera versión estable del Landing Page se definió la versión:
+
+`1.0.0`
+
+Asimismo, se utilizaron tags en Git para identificar formalmente esta versión dentro del repositorio.
+
+Los tags asociados a esta primera entrega son:
+
+- `1.0.0`
+- `v1.0.0`
+
+El uso de tags permite identificar de forma precisa el estado del código correspondiente a una determinada versión y facilita su recuperación o despliegue cuando sea necesario.
+
+#### Conventional Commits
+
+Los mensajes de commit siguen la convención **Conventional Commits**, permitiendo identificar rápidamente el propósito de cada cambio realizado dentro de los repositorios.
+
+El formato general utilizado es:
+
+`type: short description`
+
+Entre los tipos de commit empleados se encuentran:
+
+| Tipo | Uso |
+| --- | --- |
+| `feat` | Incorporación de una nueva funcionalidad. |
+| `fix` | Corrección de errores. |
+| `docs` | Cambios relacionados con documentación. |
+| `style` | Cambios de formato o estilo que no alteran la lógica. |
+| `refactor` | Reestructuración del código sin modificar su comportamiento funcional. |
+| `chore` | Tareas de configuración, mantenimiento o soporte del proyecto. |
+
+Ejemplos de mensajes utilizados durante el desarrollo son:
+
+```
+feat: add landing page home section
+docs: add landing page UI design wireframes and mockups
+docs: center landing page design images
+fix: correct Netlify deployment configuration
+ ```
 ### 5.1.3. Source Code Style Guide & Conventions
+
+Con el propósito de mantener consistencia, legibilidad y mantenibilidad en el código fuente de MaquiGest, el equipo CleanCode establece convenciones comunes para el desarrollo del Landing Page.
+
+Todo el código fuente utiliza nomenclatura en inglés para variables, funciones, clases, identificadores y archivos, empleando nombres descriptivos relacionados con la responsabilidad de cada elemento.
+
+#### General Conventions
+
+Las principales convenciones adoptadas por el equipo son:
+
+- El código fuente debe escribirse en inglés.
+- Los nombres deben ser descriptivos y representar claramente su propósito.
+- Se debe evitar el uso de abreviaciones ambiguas.
+- Los archivos deben mantener una estructura organizada de acuerdo con su responsabilidad.
+- Se debe evitar código duplicado o que no sea utilizado.
+- Los cambios realizados en el repositorio deben seguir la convención Conventional Commits.
+
+#### HTML
+
+Para la estructura del Landing Page se utiliza HTML5, priorizando etiquetas semánticas y buenas prácticas de accesibilidad.
+
+Entre las principales etiquetas utilizadas se encuentran:
+
+- `header`: contiene el encabezado principal y la navegación inicial.
+- `nav`: agrupa los enlaces de navegación.
+- `main`: contiene el contenido principal del Landing Page.
+- `section`: delimita cada sección temática del sitio.
+- `div`: permite agrupar elementos visuales y estructurales.
+- `img`: incorpora recursos gráficos e incluye atributos `alt`.
+- `ul` / `li`: permite representar listas de elementos.
+- `a`: representa enlaces y Call-to-Action.
+- `p`: representa contenido textual.
+- `button`: representa acciones interactivas.
+- `form`: agrupa controles para el ingreso de información.
+- `footer`: contiene la información final del sitio.
+- `h1` - `h6`: establecen la jerarquía de títulos y subtítulos.
+
+Se utilizan identificadores y atributos descriptivos, así como atributos de accesibilidad cuando corresponde.
+
+#### CSS
+
+Para los estilos del Landing Page se utiliza CSS3.
+
+Los nombres de las clases utilizan la convención **kebab-case**.
+
+Ejemplos:
+
+```css
+.feature-card
+.subscription-plan
+.contact-form
+.navigation-menu
+```
 
 ### 5.1.4. Software Deployment Configuration
 
-## 5.2. Landing Page, Services & Applications Implementation
+La configuración de despliegue de MaquiGest permite publicar versiones estables de los productos desarrollados a partir de los repositorios administrados mediante GitHub, manteniendo trazabilidad entre el código fuente, las versiones liberadas y el producto disponible para los usuarios.
 
-### 5.2.1. Sprint 1
+Para la primera entrega del proyecto, el producto desplegado corresponde al **Landing Page de MaquiGest**, desarrollado con HTML5, CSS3 y JavaScript y almacenado en el repositorio `maquigest-website`.
 
-#### 5.2.1.1. Sprint Planning 1
+#### Landing Page Deployment
 
-#### 5.2.1.2. Aspect Leaders and Collaborators
+El Landing Page de MaquiGest se encuentra desplegado mediante **Netlify**, plataforma utilizada para publicar el sitio web y mantener disponible una versión accesible a través de Internet.
+
+El proyecto configurado en Netlify corresponde a:
+
+`maquigest-cleancode`
+
+La configuración necesaria para el despliegue se encuentra definida mediante el archivo:
+
+`netlify.toml`
+
+Este archivo permite establecer las instrucciones utilizadas por Netlify para procesar y publicar correctamente el contenido del repositorio.
+
+El flujo de desarrollo y publicación utilizado por CleanCode sigue la estrategia GitFlow adoptada para el proyecto:
+
+```text
+feature/*
+    ↓
+develop
+    ↓
+release/*
+    ↓
+main
+    ↓
+version tag
+    ↓
+Netlify
+    ↓
+Production
+```
+**Repository:**  
+https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-website
+
+**Deployment URL:**  
+https://maquigest-cleancode.netlify.app/
+
+## 5.2 Landing Page, Services & Applications Implementation
+
+###  5.2.1 Sprint 1
+
+#### 5.2.1.1 Sprint Planning 1
+
+#### 5.2.1.2 Aspect Leaders and Collaborators
 
 #### 5.2.1.3. Sprint Backlog 1
 
