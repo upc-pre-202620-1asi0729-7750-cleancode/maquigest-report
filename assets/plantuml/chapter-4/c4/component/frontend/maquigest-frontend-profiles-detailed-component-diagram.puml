@@ -1,0 +1,42 @@
+﻿@startuml "Profiles-Frontend-Detailed"
+
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Profiles Frontend Component Diagram (DDD Layers)
+
+Container_Ext(backendApi, "MaquiGest Backend API", "Java / Spring Boot", "Exposes profile and company-related RESTful services consumed by the Profiles frontend")
+
+Container_Boundary(profiles, "Profiles Frontend Bounded Context") {
+
+    Boundary(presentation, "Presentation") {
+        Component(profile_component, "ProfileComponent", "Angular Component", "Displays the authenticated user's profile information")
+        Component(edit_profile_component, "EditProfileComponent", "Angular Component", "Provides the interface for updating user profile information")
+        Component(company_profile_component, "CompanyProfileComponent", "Angular Component", "Displays and manages company profile information")
+    }
+
+    Boundary(application, "Application") {
+        Component(profiles_application, "profiles/application", "Angular Services / Signals", "Coordinates profile queries, profile updates, company profile state, and frontend use cases")
+    }
+
+    Boundary(domain, "Domain") {
+        Component(profiles_domain, "profiles/domain/model", "Models / Value Objects", "User, Company, SupplierProfile and profile-related frontend models and rules")
+    }
+
+    Boundary(infrastructure, "Infrastructure") {
+        Component(profiles_infrastructure, "profiles/infrastructure", "HTTP, Resources, Mappers", "Consumes Profiles REST endpoints and maps backend resources into frontend profile models")
+    }
+}
+
+Rel(profile_component, profiles_application, "Requests profile data")
+Rel(edit_profile_component, profiles_application, "Requests profile updates")
+Rel(company_profile_component, profiles_application, "Requests company profile operations")
+
+Rel(profiles_application, profiles_domain, "Holds and applies profile state and rules")
+Rel(profiles_application, profiles_infrastructure, "Loads and updates profile data through")
+
+Rel(profiles_infrastructure, profiles_domain, "Maps resources into")
+Rel(profiles_infrastructure, backendApi, "Consumes Profiles REST endpoints", "HTTPS / JSON")
+
+SHOW_LEGEND()
+
+@enduml

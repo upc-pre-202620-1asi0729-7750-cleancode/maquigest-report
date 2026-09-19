@@ -74,9 +74,9 @@ Proyecto<br>
 
 ## Registro de Versiones del Informe
 
-| Versión | Fecha |  Autor   |                                                  Descripción de modificación                                                   |
-| :-----: |:-----:|:--------:| :----------------------------------------------------------------------------------------------------------------------------: |
-|   AV1   |       |  Todos   | Se agregó la primera versión del informe, incluyendo carátula, registro de versiones, perfiles del equipo, análisis inicial del problema, artefactos de UX, arquitectura preliminar y evidencias del Sprint 1. |
+| Versión |   Fecha    |  Autor   |                                                  Descripción de modificación                                                   |
+| :-----: |:----------:|:--------:| :----------------------------------------------------------------------------------------------------------------------------: |
+|   AV1   | 19/09/2026 |  Todos   | Se agregó la primera versión del informe, incluyendo carátula, registro de versiones, perfiles del equipo, análisis inicial del problema, artefactos de UX, arquitectura preliminar y evidencias del Sprint 1. |
 
 <div style="page-break-after: always;"></div>
 
@@ -197,10 +197,10 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 
 En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Student Outcome 3.
 
-| Criterio específico | Acciones realizadas | Conclusiones |
-| :--- | :--- | :--- |
-| **Comunica oralmente con efectividad a diferentes rangos de audiencia.** | **Delgado Perez, James Caleb**<br>**AV1:**<br><br>**Montalvo Vasquez, Bruno Rodrigo**<br>**AV1:**<br><br>**Manosalva Tovar, Miroslav**<br>**AV1:** | **AV1:** |
-| **Comunica por escrito con efectividad a diferentes rangos de audiencia.** | **Delgado Perez, James Caleb**<br>**AV1:**<br><br>**Montalvo Vasquez, Bruno Rodrigo**<br>**AV1:**<br><br>**Manosalva Tovar, Miroslav**<br>**AV1:** | **AV1:** |
+| Criterio específico | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| :--- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Comunica oralmente con efectividad a diferentes rangos de audiencia.** | **Delgado Perez, James Caleb**<br>**AV1: Participé en la coordinación y comunicación de las decisiones tomadas durante el desarrollo de MaquiGest, explicando al equipo los avances relacionados con la propuesta del producto, el diseño de la Landing Page y la arquitectura de software. Asimismo, comuniqué las decisiones adoptadas para la organización del frontend mediante bounded contexts, las capas de Domain-Driven Design y los diagramas C4 de Context, Container y Components, facilitando que los integrantes comprendieran la estructura y responsabilidades de los diferentes componentes de la solución.**<br><br>**Montalvo Vasquez, Bruno Rodrigo**<br>**AV1:**<br><br>**Manosalva Tovar, Miroslav**<br>**AV1:**                                                                                                                                                                                                                                                                                                              | **AV1: El AV1 trató de presentar y explicar el avance del proyecto MaquiGest durante el Sprint 1: la problemática y propuesta de valor, los principales artefactos de UX y Product Design, la arquitectura planteada para la solución y, sobre todo, la primera versión funcional y desplegada de la Landing Page. También implicaba explicar cómo se organizó el trabajo del equipo y cómo se aplicaron herramientas y prácticas como GitFlow, GitHub, diseño en Figma y despliegue. El Statement define el AV1 como un Sprint Review de la semana 4, acompañado por el Final Project Keynote y el reporte individual de desempeño.** |
+| **Comunica por escrito con efectividad a diferentes rangos de audiencia.** | **Delgado Perez, James Caleb**<br>**AV1: Contribuí en la elaboración y mejora de la documentación técnica del proyecto MaquiGest. Desarrollé y documenté artefactos correspondientes al diseño de la Landing Page, incluyendo wireframes y mock-ups, y participé en la elaboración de la arquitectura de software mediante diagramas C4 de Context, Container y Components utilizando PlantUML. Asimismo, documenté la arquitectura frontend considerando los bounded contexts IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions, sus capas Presentation, Application, Domain e Infrastructure, así como los componentes compartidos de Shared Frontend. También participé en la implementación de secciones de la Landing Page, la configuración del despliegue mediante Netlify, el versionamiento con Git y GitHub, y la actualización del informe siguiendo las convenciones y estructura establecidas para el proyecto.**<br><br>**Montalvo Vasquez, Bruno Rodrigo**<br>**AV1:**<br><br>**Manosalva Tovar, Miroslav**<br>**AV1:** | **AV1: El AV1 trató de documentar formalmente todo ese avance en el informe del proyecto. Debía incluir carátula, registro de versiones, Collaboration Insights, Student Outcome, los capítulos I, II, III y IV, además del Capítulo V con Software Configuration Management y todo el Sprint 1: planificación, backlog, evidencias de desarrollo, ejecución, despliegue y colaboración. También se pedía tener implementada y desplegada la primera versión de la Landing Page.**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 <div style="page-break-after: always;"></div>
 
@@ -3071,7 +3071,7 @@ Los diagramas de componentes de arquitectura de software presentan una vista det
 
 A nivel de frontend, la Single Page Application desarrollada con Angular se organiza alrededor de los bounded contexts definidos para la solución: IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Adicionalmente, Shared Frontend concentra componentes, modelos y capacidades técnicas transversales reutilizables por los diferentes contextos de la aplicación. Una vista general de componentes muestra cómo estos elementos se integran dentro de la aplicación frontend, mientras que los diagramas individuales permiten observar su organización interna mediante las capas Presentation, Application, Domain e Infrastructure, según corresponda.
 
-Además, para cada bounded context del frontend se presenta una vista adicional de la Presentation Layer, donde se muestran los componentes Angular concretos responsables de las páginas, formularios, vistas y elementos de interfaz correspondientes.
+Además, para cada bounded context del frontend se presenta una vista detallada basada en las capas DDD Presentation, Application, Domain e Infrastructure. Estas vistas permiten identificar los componentes internos, sus responsabilidades, tecnologías y relaciones. Complementariamente, se mantiene una vista específica de la Presentation Layer, donde se muestran con mayor detalle los componentes Angular responsables de las páginas, formularios, vistas y elementos de interfaz correspondientes.
 
 A nivel de backend, la RESTful API desarrollada con Java y Spring Boot mantiene la misma organización basada en bounded contexts. Una vista general presenta los contextos contenidos dentro de la aplicación backend, mientras que los diagramas individuales descomponen cada bounded context en las capas Interfaces, Application, Domain e Infrastructure siguiendo principios de Domain-Driven Design.
 
@@ -3103,18 +3103,21 @@ IAM también proporciona información de la cuenta autenticada a otros contextos
        width="90%">
 </p>
 
-#### IAM Frontend Presentation Layer Components Diagram
 
-Este diagrama representa un mayor nivel de detalle de la Presentation Layer del bounded context IAM.
+#### IAM Frontend Detailed Component Diagram
 
-`LoginComponent` proporciona el formulario y la interacción para iniciar sesión. `RegisterComponent` permite realizar el proceso de creación de una cuenta, mientras que `RecoverPasswordComponent` administra la interacción correspondiente a la recuperación de contraseña.
+El IAM Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context IAM, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones existentes entre sus componentes.
 
-Estos componentes delegan los casos de uso correspondientes a la IAM Application Layer y utilizan componentes compartidos de interfaz cuando son necesarios.
+La Presentation Layer está conformada por `LoginComponent`, `RegisterComponent` y `RecoverPasswordComponent`, responsables de las principales interacciones relacionadas con autenticación, registro y recuperación de contraseña.
+
+La Application Layer coordina los casos de uso y el estado asociado con los procesos de autenticación y gestión de sesión. La Domain Layer concentra los modelos y reglas vinculados con credenciales, sesión y conceptos propios del contexto IAM. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la MaquiGest Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso a infraestructura y dominio, y cómo la infraestructura establece la comunicación con los servicios backend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-iam-presentation-component-diagram.png"
-       alt="MaquiGest IAM Frontend Presentation Layer Components Diagram"
-       width="90%">
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/IAM-Frontend-Detailed.png"
+       alt="MaquiGest IAM Frontend Detailed Component Diagram"
+       width="95%">
 </p>
 
 #### Profiles Frontend Components Diagram
@@ -3131,16 +3134,20 @@ Este bounded context también utiliza la información de la cuenta autenticada p
        width="90%">
 </p>
 
-#### Profiles Frontend Presentation Layer Components Diagram
+#### Profiles Frontend Detailed Component Diagram
 
-Este diagrama representa el detalle interno de la Presentation Layer del bounded context Profiles.
+El Profiles Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Profiles, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
 
-`ProfileComponent` muestra la información del perfil del usuario autenticado. `EditProfileComponent` permite modificar la información del perfil, mientras que `CompanyProfileComponent` proporciona la interfaz necesaria para visualizar y administrar la información correspondiente a la empresa.
+La Presentation Layer está conformada por `ProfileComponent`, `EditProfileComponent` y `CompanyProfileComponent`, responsables de visualizar y actualizar la información correspondiente a los perfiles de usuarios y empresas.
+
+La Application Layer coordina las consultas, actualizaciones y el estado relacionado con la gestión de perfiles. La Domain Layer concentra los modelos y reglas asociados con usuarios, empresas y perfiles. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la MaquiGest Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend relacionados con Profiles.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-profiles-presentation-component-diagram.png"
-       alt="MaquiGest Profiles Frontend Presentation Layer Components Diagram"
-       width="90%">
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Profiles-Frontend-Detailed.png"
+       alt="MaquiGest Profiles Frontend Detailed Component Diagram"
+       width="95%">
 </p>
 
 #### Inventory Frontend Components Diagram
@@ -3155,18 +3162,20 @@ Su Application Layer coordina los flujos relacionados con la gestión y consulta
        width="90%">
 </p>
 
-#### Inventory Frontend Presentation Layer Components Diagram
+#### Inventory Frontend Detailed Component Diagram
 
-Este diagrama representa el detalle de la Presentation Layer de Inventory y muestra los componentes Angular responsables de la interacción con la maquinaria.
+El Inventory Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Inventory, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
 
-`EquipmentListComponent` muestra la maquinaria disponible, mientras que `EquipmentDetailComponent` presenta información detallada del equipo, incluyendo tarifa, estado y disponibilidad. `EquipmentFormComponent` proporciona los formularios necesarios para registrar y editar equipos.
+La Presentation Layer está conformada por `EquipmentListComponent`, `EquipmentDetailComponent`, `EquipmentFormComponent`, `EquipmentSearchComponent`, `EquipmentFilterComponent` y `AvailabilityBadgeComponent`. Estos componentes soportan las principales interacciones relacionadas con consulta, detalle, registro, edición, búsqueda, filtrado y visualización de disponibilidad de maquinaria.
 
-Las funcionalidades de búsqueda y filtrado son administradas por `EquipmentSearchComponent` y `EquipmentFilterComponent`, mientras que `AvailabilityBadgeComponent` proporciona una representación visual reutilizable de la disponibilidad de cada equipo.
+La Application Layer coordina los casos de uso y el estado asociado con la gestión del inventario. La Domain Layer concentra los modelos y reglas relacionados con equipos, categorías, tarifas, disponibilidad y estado operativo. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la MaquiGest Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Inventory.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-inventory-presentation-component-diagram.png"
-       alt="MaquiGest Inventory Frontend Presentation Layer Components Diagram"
-       width="90%">
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Inventory-Frontend-Detailed.png"
+       alt="MaquiGest Inventory Frontend Detailed Component Diagram"
+       width="95%">
 </p>
 
 #### Rentals Frontend Components Diagram
@@ -3181,18 +3190,20 @@ Este contexto utiliza la información de los equipos y su disponibilidad proporc
        width="90%">
 </p>
 
-#### Rentals Frontend Presentation Layer Components Diagram
+#### Rentals Frontend Detailed Component Diagram
 
-Este diagrama muestra la descomposición de la Presentation Layer del bounded context Rentals.
+El Rentals Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Rentals, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
 
-`RentalRequestsComponent` muestra y administra las solicitudes de alquiler, mientras que `RentalRequestDetailComponent` presenta la información detallada de una solicitud seleccionada. `ReservationsComponent` muestra las reservas confirmadas y `ActiveRentalsComponent` presenta los alquileres actualmente activos.
+La Presentation Layer está conformada por `RentalRequestsComponent`, `RentalRequestDetailComponent`, `ReservationsComponent`, `ActiveRentalsComponent`, `DeliveryFormComponent` y `ReturnFormComponent`. Estos componentes soportan las principales interacciones relacionadas con solicitudes de alquiler, consulta de detalles, reservas, alquileres activos, entregas y devoluciones de maquinaria.
 
-`DeliveryFormComponent` y `ReturnFormComponent` proporcionan las interfaces necesarias para registrar las operaciones de entrega y devolución de maquinaria.
+La Application Layer coordina los casos de uso y el estado asociados con el ciclo de alquiler. La Domain Layer concentra los modelos y reglas relacionados con solicitudes de alquiler, reservas, contratos de alquiler, entregas y devoluciones. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la MaquiGest Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Rentals.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-rentals-presentation-component-diagram.png"
-       alt="MaquiGest Rentals Frontend Presentation Layer Components Diagram"
-       width="90%">
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Rentals-Frontend-Detailed.png"
+       alt="MaquiGest Rentals Frontend Detailed Component Diagram"
+       width="95%">
 </p>
 
 #### Maintenance Frontend Components Diagram
@@ -3207,18 +3218,20 @@ Este contexto colabora con Inventory para reflejar cambios en el estado y dispon
        width="90%">
 </p>
 
-#### Maintenance Frontend Presentation Layer Components Diagram
+#### Maintenance Frontend Detailed Component Diagram
 
-Este diagrama representa el detalle interno de la Presentation Layer del bounded context Maintenance.
+El Maintenance Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Maintenance, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
 
-`MaintenanceListComponent` muestra los mantenimientos programados y realizados, mientras que `MaintenanceDetailComponent` presenta información detallada del mantenimiento y del historial del equipo.
+La Presentation Layer está conformada por `MaintenanceListComponent`, `MaintenanceDetailComponent`, `IncidentFormComponent` e `InspectionComponent`. Estos componentes soportan las principales interacciones relacionadas con la consulta de mantenimientos, visualización de detalles, registro de incidencias y gestión de inspecciones de maquinaria.
 
-`IncidentFormComponent` permite registrar incidencias relacionadas con la maquinaria, mientras que `InspectionComponent` proporciona la interacción necesaria para las operaciones de inspección de los equipos.
+La Application Layer coordina los casos de uso y el estado asociados con las operaciones de mantenimiento. La Domain Layer concentra los modelos y reglas relacionados con mantenimientos, inspecciones, incidencias, estados de mantenimiento e historial de los equipos. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la MaquiGest Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Maintenance.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-maintenance-presentation-component-diagram.png"
-       alt="MaquiGest Maintenance Frontend Presentation Layer Components Diagram"
-       width="90%">
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Maintenance-Frontend-Detailed.png"
+       alt="MaquiGest Maintenance Frontend Detailed Component Diagram"
+       width="95%">
 </p>
 
 #### Subscriptions Frontend Components Diagram
@@ -3233,16 +3246,20 @@ Este contexto utiliza IAM para identificar la cuenta autenticada y Profiles para
        width="90%">
 </p>
 
-#### Subscriptions Frontend Presentation Layer Components Diagram
+#### Subscriptions Frontend Detailed Component Diagram
 
-Este diagrama representa el detalle de la Presentation Layer del bounded context Subscriptions.
+El Subscriptions Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Subscriptions, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
 
-`PlansComponent` muestra los planes de suscripción disponibles. `CurrentSubscriptionComponent` presenta la suscripción actual, su estado y la información relacionada con el plan contratado, mientras que `ChangePlanComponent` proporciona la interfaz necesaria para seleccionar y cambiar el plan de suscripción.
+La Presentation Layer está conformada por `PlansComponent`, `CurrentSubscriptionComponent` y `ChangePlanComponent`. Estos componentes soportan las principales interacciones relacionadas con la consulta de planes disponibles, visualización de la suscripción actual y modificación del plan contratado.
+
+La Application Layer coordina los casos de uso y el estado asociados con la gestión de suscripciones. La Domain Layer concentra los modelos y reglas relacionados con suscripciones, planes, períodos de facturación y estados de suscripción. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la MaquiGest Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Subscriptions.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-subscriptions-presentation-component-diagram.png"
-       alt="MaquiGest Subscriptions Frontend Presentation Layer Components Diagram"
-       width="90%">
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Subscriptions-Frontend-Detailed.png"
+       alt="MaquiGest Subscriptions Frontend Detailed Component Diagram"
+       width="95%">
 </p>
 
 #### Shared Frontend Components Diagram
