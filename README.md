@@ -473,7 +473,7 @@ Sabremos que MaquiGest está generando valor cuando observemos un incremento en 
 
 #### 1.2.2.4. Lean UX Canvas
 
-<img src = "assets/md-images-lean_ux_canva/CLEANCODE_MaquiGest.png" width="800px">
+<img src = "assets/md-images-lean_ux_canva/MaquiGestCleanCodeCanva.png" width="800px">
 
 ## 1.3. Segmentos objetivo
 
