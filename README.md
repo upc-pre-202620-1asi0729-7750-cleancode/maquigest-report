@@ -451,17 +451,23 @@ Sabremos que MaquiGest está generando valor cuando las empresas de alquiler uti
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-* Creemos que lograremos una mayor retención de clientes si los administradores de las empresas de alquiler pueden conocer rápidamente el estado, la ubicación y la disponibilidad de su equipo mediante un módulo centralizado de gestión de inventario.
+* Creemos que lograremos una mayor adopción y uso recurrente de MaquiGest si los administradores de pequeñas y medianas empresas de alquiler pueden conocer rápidamente el estado, la ubicación, la condición y la disponibilidad de sus equipos mediante un módulo centralizado de gestión de inventario.
 
-* Creemos que lograremos una mayor satisfacción y retención de los clientes si las empresas de alquiler pueden gestionar de manera eficiente las reservaciones y evitar conflictos de disponibilidad mediante un sistema automatizado de gestión de reservaciones.
+* Creemos que lograremos reducir los problemas relacionados con reservas y disponibilidad si los trabajadores responsables de las operaciones de alquiler pueden comprobar automáticamente si un equipo se encuentra disponible antes de confirmar una reserva mediante un sistema de gestión de reservas.
 
-* Creemos que aumentaremos el número de transacciones de alquiler completadas si los operadores de alquiler pueden gestionar los contratos, los pagos, las entregas y las devoluciones en un solo lugar mediante un módulo integrado de gestión de alquileres.
+* Creemos que aumentaremos la cantidad de operaciones de alquiler gestionadas mediante MaquiGest si los trabajadores de las empresas de alquiler pueden administrar contratos, tarifas, pagos, entregas y devoluciones desde un módulo integrado de gestión de alquileres.
 
-* Creemos que podremos aumentar la utilización de los equipos y reducir el tiempo de inactividad operativa si los administradores de las empresas de alquiler pueden monitorear de manera proactiva el estado y las necesidades de mantenimiento de sus equipos mediante un módulo de gestión de mantenimiento.
+* Creemos que lograremos mejorar el seguimiento operativo de los equipos si los trabajadores de las empresas de alquiler pueden registrar y consultar incidencias ocurridas durante un alquiler mediante una funcionalidad de gestión de incidencias.
 
-* Creemos que aumentaremos el número de transacciones de alquiler gestionadas a través de MaquiGest si los gerentes de construcción pueden encontrar rápidamente el equipo adecuado y disponible para sus proyectos mediante una interfaz de búsqueda y alquiler de equipo.
+* Creemos que podremos reducir el tiempo durante el cual los equipos permanecen fuera de operación por problemas no atendidos si los administradores pueden consultar el historial de inspecciones, reparaciones y mantenimientos y programar las próximas intervenciones mediante un módulo de gestión de mantenimiento.
 
-* Creemos que lograremos aumentar la retención de usuarios entre las empresas de construcción si los gerentes de obra pueden monitorear fácilmente sus alquileres activos, los costos y las fechas de devolución mediante una interfaz de seguimiento de alquileres.
+* Creemos que aumentaremos el número de solicitudes de alquiler realizadas mediante MaquiGest si los responsables de pequeñas empresas constructoras y contratistas pueden encontrar rápidamente maquinaria adecuada para sus proyectos mediante una interfaz de búsqueda con filtros por categoría y características.
+
+* Creemos que aumentaremos el número de solicitudes de alquiler gestionadas mediante la plataforma si los responsables de empresas constructoras y contratistas pueden conocer la disponibilidad de los equipos para las fechas requeridas antes de realizar una reserva mediante una funcionalidad de consulta de disponibilidad.
+
+* Creemos que aumentaremos el uso recurrente de MaquiGest por parte de pequeñas empresas constructoras y contratistas si sus responsables pueden consultar información clara sobre características, costos y condiciones de alquiler antes de realizar una solicitud mediante las vistas de detalle de los equipos.
+
+* Creemos que lograremos aumentar el uso recurrente de MaquiGest por parte de pequeñas empresas constructoras y contratistas si estas pueden consultar el estado de sus reservas y alquileres, las fechas correspondientes, los costos y las devoluciones previstas mediante una interfaz de seguimiento de alquileres.
 
 #### 1.2.2.4. Lean UX Canvas
 
