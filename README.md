@@ -272,43 +272,63 @@ Nuestros valores principales son los siguientes:
 
 Actualmente, muchas pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción gestionan sus operaciones mediante herramientas dispersas, como hojas de cálculo, documentos físicos, llamadas telefónicas y aplicaciones de mensajería. Aunque estos medios permiten registrar información básica, no proporcionan una visión integrada y actualizada sobre la disponibilidad, ubicación, condición y mantenimiento de cada equipo.
 
-El alquiler de maquinaria comprende distintas actividades que deben mantenerse coordinadas, entre ellas el registro del inventario, la consulta de disponibilidad, la creación de reservas, la elaboración de contratos, el registro de pagos, la programación de entregas, la recepción de devoluciones y la atención de incidencias. Cuando esta información se encuentra distribuida en diferentes medios, aumenta la posibilidad de generar reservas duplicadas, entregar equipos que no están disponibles, perder el seguimiento de los contratos o retrasar los mantenimientos correspondientes.
+El alquiler de maquinaria comprende distintas actividades que deben mantenerse coordinadas, entre ellas el registro del inventario, la consulta de disponibilidad, la creación de reservas, la elaboración de contratos, el registro de pagos, la programación de entregas, la recepción de devoluciones y la atención de incidencias. Cuando esta información se encuentra distribuida en diferentes medios, aumenta la posibilidad de generar reservas duplicadas, asignar equipos que no se encuentran disponibles, perder el seguimiento de los contratos o retrasar los mantenimientos correspondientes.
 
-Esta situación también afecta a las personas que necesitan alquilar maquinaria para remodelaciones, reparaciones u obras personales. La comunicación con las empresas suele realizarse mediante llamadas o mensajes, por lo que el cliente puede tener dificultades para conocer qué equipos están disponibles, cuáles son sus condiciones de alquiler y en qué estado se encuentra su solicitud.
+Esta situación también afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. La comunicación con las empresas proveedoras suele realizarse mediante llamadas telefónicas o aplicaciones de mensajería, lo que puede dificultar la consulta de equipos disponibles, las condiciones de alquiler, los costos y el seguimiento de las reservas o alquileres solicitados. Esta falta de información centralizada puede afectar la planificación de los recursos necesarios para ejecutar sus proyectos.
 
-Existen plataformas orientadas a empresas de alquiler de gran escala; sin embargo, pueden resultar complejas o poco accesibles para negocios pequeños que necesitan organizar sus operaciones sin incorporar sistemas sobredimensionados. En consecuencia, se identifica la necesidad de una solución especializada que centralice el ciclo de alquiler y que pueda ser utilizada tanto por las empresas proveedoras como por las personas interesadas en alquilar los equipos.
+Existen plataformas orientadas a empresas de alquiler de gran escala; sin embargo, estas pueden resultar complejas o poco accesibles para negocios pequeños y medianos que necesitan organizar sus operaciones sin incorporar sistemas sobredimensionados. Asimismo, las pequeñas empresas constructoras y contratistas requieren mecanismos más claros para consultar y gestionar el alquiler de los equipos necesarios para sus proyectos.
 
-MaquiGest abordará esta problemática mediante una plataforma SaaS que permitirá administrar en un único entorno el inventario, la disponibilidad, las reservas, los contratos, los pagos, las entregas, las devoluciones, las incidencias y el mantenimiento. De esta manera, las empresas podrán mantener un mejor control de sus equipos y los clientes podrán realizar sus procesos de alquiler de forma más organizada.
+En consecuencia, se identifica la oportunidad de desarrollar una solución especializada que centralice el ciclo de alquiler y facilite la interacción entre las empresas proveedoras de maquinaria y las organizaciones que requieren alquilar estos equipos.
+
+MaquiGest abordará esta problemática mediante una plataforma SaaS que permitirá administrar en un único entorno el inventario, la disponibilidad, las reservas, los contratos, los pagos, las entregas, las devoluciones, las incidencias y el mantenimiento. De esta manera, las pequeñas y medianas empresas de alquiler podrán mantener un mayor control sobre sus equipos y operaciones, mientras que las pequeñas empresas constructoras y contratistas podrán buscar maquinaria, consultar su disponibilidad, realizar solicitudes de alquiler y dar seguimiento a los equipos requeridos para sus proyectos.
 
 #### 5W & 2H
 
 **Who (¿Quiénes?)**
 
-La problemática afecta principalmente a los propietarios, administradores y trabajadores de pequeñas y medianas empresas dedicadas al alquiler de maquinaria para construcción. También afecta a personas que necesitan alquilar equipos para ejecutar remodelaciones, reparaciones u otros proyectos personales relacionados con la construcción.
+La problemática afecta principalmente a los propietarios, administradores y trabajadores de pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción. También afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala.
 
 **What (¿Qué?)**
 
-El problema principal es la ausencia de una plataforma especializada que permita administrar integralmente el ciclo de alquiler de la maquinaria. La información sobre inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento suele encontrarse distribuida en diferentes herramientas y medios de comunicación.
+El problema principal es la ausencia de una plataforma especializada que permita gestionar de manera integrada el ciclo de alquiler de maquinaria. La información relacionada con inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento suele encontrarse distribuida entre diferentes herramientas y medios de comunicación.
+
+Del lado de las empresas constructoras y contratistas, esta fragmentación también dificulta la búsqueda de equipos, la consulta de disponibilidad, el conocimiento de las condiciones de alquiler y el seguimiento de las solicitudes realizadas.
 
 **Where (¿Dónde?)**
 
-La problemática se presenta en las operaciones internas de las pequeñas y medianas empresas de alquiler y durante la comunicación con sus clientes. Abarca tanto la gestión administrativa del negocio como el seguimiento de los equipos que son entregados para obras de construcción de pequeña escala.
+La problemática se presenta tanto en las operaciones internas de las pequeñas y medianas empresas de alquiler como en la interacción que mantienen con pequeñas empresas constructoras y contratistas.
+
+Abarca la gestión administrativa y operativa del negocio de alquiler, así como los procesos mediante los cuales las empresas constructoras buscan, reservan, reciben, utilizan y devuelven la maquinaria necesaria para sus proyectos.
 
 **When (¿Cuándo?)**
 
-Puede manifestarse durante cualquier etapa del ciclo de alquiler: cuando un cliente consulta la disponibilidad, realiza una reserva, firma un contrato, efectúa un pago, recibe el equipo, comunica una incidencia, devuelve la maquinaria o cuando la empresa debe programar su mantenimiento.
+La problemática puede manifestarse durante cualquier etapa del ciclo de alquiler: cuando una empresa constructora consulta la disponibilidad de un equipo, solicita una reserva, acuerda las condiciones del alquiler, realiza un pago, recibe la maquinaria, comunica una incidencia o efectúa la devolución.
+
+También puede presentarse internamente cuando la empresa de alquiler necesita verificar disponibilidad, preparar una entrega, actualizar el estado de un equipo, registrar una devolución o programar su mantenimiento.
 
 **Why (¿Por qué?)**
 
-La problemática ocurre porque las herramientas utilizadas no se encuentran integradas y requieren que la información sea registrada o comprobada manualmente. Asimismo, muchas soluciones existentes están orientadas a operaciones de mayor escala y pueden resultar excesivamente complejas para pequeñas empresas.
+La problemática ocurre porque muchas de las herramientas utilizadas actualmente no se encuentran integradas y requieren que la información sea registrada, actualizada o comprobada manualmente.
+
+Además, algunas soluciones existentes están orientadas a empresas con operaciones de mayor escala y pueden resultar excesivamente complejas o poco accesibles para pequeñas y medianas empresas que necesitan gestionar sus procesos de alquiler de forma más sencilla.
+
+Por otro lado, las pequeñas empresas constructoras y contratistas suelen depender de llamadas o aplicaciones de mensajería para conocer la disponibilidad y condiciones de los equipos, lo que dificulta contar con información centralizada durante la planificación de sus proyectos.
 
 **How (¿Cómo?)**
 
-Las empresas revisan y actualizan manualmente hojas de cálculo, documentos, llamadas y conversaciones por mensajería para determinar el estado de sus alquileres. Esta forma de trabajo puede producir información desactualizada, registros duplicados, dificultades de coordinación y pérdida de trazabilidad sobre los equipos.
+Las empresas de alquiler revisan y actualizan manualmente hojas de cálculo, documentos, llamadas y conversaciones por mensajería para determinar el estado de sus equipos y alquileres.
+
+De forma paralela, las empresas constructoras y contratistas deben comunicarse directamente con los proveedores para consultar qué maquinaria se encuentra disponible, conocer sus condiciones y realizar seguimiento a sus solicitudes.
+
+Esta forma de trabajo puede producir información desactualizada, registros duplicados, conflictos de disponibilidad, dificultades de coordinación y pérdida de trazabilidad durante el proceso de alquiler.
 
 **How Much (¿Cuánto impacta?)**
 
-El impacto se refleja en el tiempo empleado para comprobar información, los posibles conflictos de disponibilidad, los retrasos en entregas y devoluciones, la inmovilización de equipos que requieren mantenimiento y la pérdida de oportunidades de alquiler. También puede afectar la confianza y satisfacción de los clientes. La dimensión cuantitativa de este impacto se determinará posteriormente mediante las entrevistas y la investigación de los segmentos objetivo.
+El impacto se refleja en el tiempo empleado para comprobar y actualizar información, los posibles conflictos de disponibilidad, los retrasos en las entregas y devoluciones, la inmovilización de equipos que requieren mantenimiento y la pérdida de oportunidades de alquiler.
+
+Para las pequeñas empresas constructoras y contratistas, también puede generar retrasos en la obtención de maquinaria, dificultades para planificar recursos y una mayor dependencia de comunicaciones manuales con los proveedores.
+
+Estas situaciones pueden afectar la eficiencia operativa de ambas partes y la calidad de la relación entre proveedor y cliente. La dimensión cuantitativa del impacto será determinada posteriormente mediante entrevistas, validaciones y la investigación realizada con los segmentos objetivo.
 
 #### Objetivos
 
@@ -350,90 +370,108 @@ El impacto se refleja en el tiempo empleado para comprobar información, los pos
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-La situación actual del sector de alquiler de maquinaria y equipos para pequeñas construcciones se ha centrado principalmente en empresas que gestionan sus operaciones mediante herramientas dispersas como hojas de cálculo, llamadas, mensajes y sistemas independientes, dificultando el control de la disponibilidad, reservas, contratos, entregas, devoluciones y mantenimiento de sus equipos.
+Actualmente, muchas pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción gestionan sus operaciones mediante herramientas dispersas, como hojas de cálculo, documentos, llamadas telefónicas y aplicaciones de mensajería. Esta forma de trabajo dificulta mantener información centralizada y actualizada sobre inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento. Como consecuencia, pueden presentarse conflictos de disponibilidad, registros duplicados, retrasos operativos y pérdida de trazabilidad durante el ciclo de alquiler.
 
-Lo que los productos y servicios existentes no logran abordar completamente es la necesidad de las pequeñas empresas de contar con una solución especializada, sencilla y accesible, que les permita gestionar de manera integral el ciclo de vida de su maquinaria sin enfrentarse a la complejidad de plataformas orientadas a operaciones de mayor escala.
+Esta problemática también afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. Estas empresas suelen depender de comunicaciones directas con los proveedores para consultar la disponibilidad de los equipos, conocer las condiciones de alquiler y realizar seguimiento a sus solicitudes, lo que puede dificultar la planificación de los recursos necesarios para sus proyectos.
 
-Nuestro producto abordará esta brecha mediante una plataforma SaaS especializada en pequeñas empresas de alquiler de maquinaria para construcción, que centralizará en un único lugar la gestión de inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento, permitiendo realizar un seguimiento del equipo durante todo su ciclo de alquiler.
+Aunque existen soluciones digitales orientadas a la gestión del alquiler de maquinaria y equipos, algunas están dirigidas a organizaciones con operaciones de mayor escala y pueden resultar excesivamente complejas o poco accesibles para pequeñas y medianas empresas. Esta situación representa para CleanCode la oportunidad de desarrollar una solución especializada que facilite la gestión del ciclo de alquiler y la interacción entre las empresas proveedoras de maquinaria y las pequeñas empresas constructoras y contratistas que requieren estos equipos.
 
-Nuestro enfoque inicial será pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos utilizados en proyectos de construcción de pequeña escala, que necesitan profesionalizar y organizar sus operaciones sin incorporar herramientas excesivamente complejas.
+MaquiGest abordará esta oportunidad mediante una plataforma SaaS que centralizará la gestión del inventario, disponibilidad, reservas, alquileres, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento. La plataforma permitirá a las empresas de alquiler mantener un mayor control sobre sus equipos y operaciones, mientras que las empresas constructoras y contratistas podrán buscar maquinaria, consultar su disponibilidad, realizar solicitudes y dar seguimiento a sus alquileres.
 
-Sabremos que hemos tenido éxito cuando veamos una adopción recurrente de la plataforma por parte de estas empresas, una reducción de errores relacionados con reservas y disponibilidad, un mayor control sobre el estado de los equipos y un incremento en el uso de funcionalidades como gestión de alquileres y mantenimiento
+El desarrollo de MaquiGest estará sujeto a las restricciones definidas para el proyecto. La solución deberá implementarse como una aplicación web distribuida compuesta por un Landing Page, una Web Application y un RESTful API propio; la lógica del servidor deberá desarrollarse con Java y tecnologías open-source; deberá integrarse al menos un servicio externo; y la interfaz deberá adaptarse a computadoras, tabletas y dispositivos móviles. Debido al alcance del ciclo académico, la primera versión priorizará las funcionalidades relacionadas con inventario, disponibilidad, reservas y alquileres.
 
+Sabremos que MaquiGest está generando valor cuando observemos un incremento en la cantidad de empresas de alquiler que utilizan recurrentemente la plataforma, una disminución en la cantidad de conflictos de disponibilidad y reservas duplicadas, una mayor proporción de equipos cuyo estado y mantenimiento se encuentran registrados y actualizados, y un incremento en la cantidad de solicitudes de alquiler realizadas y gestionadas mediante la plataforma por pequeñas empresas constructoras y contratistas. Estos resultados serán evaluados mediante métricas de uso de la plataforma, registros de operaciones y validaciones realizadas con los segmentos objetivo.
 #### 1.2.2.2. Lean UX Assumptions
 
 **Business Assumptions:**
-* Creemos que las pequeñas y medianas empresas de alquiler de equipo necesitan una solución digital especializada para gestionar sus operaciones de alquiler.
 
-* Creemos que las pequeñas empresas de construcción están dispuestas a utilizar una plataforma digital para buscar, reservar y gestionar el alquiler de equipo de construcción.
+- Creemos que las pequeñas y medianas empresas dedicadas al alquiler de maquinaria para construcción presentan dificultades para mantener actualizada y centralizada la información sobre inventario, disponibilidad, reservas, alquileres y mantenimiento cuando utilizan hojas de cálculo, documentos, llamadas y aplicaciones de mensajería.
 
-* Creemos que las empresas de alquiler de equipo están dispuestas a pagar una suscripción mensual de SaaS por una plataforma que centralice y simplifique sus operaciones de alquiler.
+- Creemos que estas empresas estarían dispuestas a reemplazar parte de sus procesos manuales por una plataforma web si esta les permite centralizar la información y reducir problemas relacionados con disponibilidad, seguimiento y duplicidad de registros.
 
-* Creemos que un modelo de suscripción de tres niveles puede adaptarse a las diferentes necesidades operativas y niveles de crecimiento de las pequeñas y medianas empresas de alquiler de equipo.
+- Creemos que las empresas de alquiler estarían dispuestas a pagar una suscripción mensual por MaquiGest si perciben que la plataforma reduce el tiempo requerido para gestionar sus operaciones y facilita el control de sus equipos.
+
+- Creemos que un modelo de suscripción con diferentes niveles puede adaptarse a empresas con distintos tamaños de inventario y necesidades operativas, siempre que cada plan ofrezca funcionalidades y capacidades diferenciadas.
+
+- Creemos que existe una oportunidad para una solución especializada en pequeñas y medianas empresas frente a plataformas de alquiler orientadas a organizaciones con operaciones de mayor escala o complejidad.
 
 **Business Outcome Assumptions:**
 
-* Creemos que MaquiGest logrará un número cada vez mayor de empresas de alquiler que paguen por el servicio gracias a la adopción de su plataforma SaaS.
+- Creemos que la adopción de MaquiGest podrá evidenciarse mediante un crecimiento en el número de empresas que registran maquinaria y utilizan recurrentemente las funcionalidades de disponibilidad, reservas y alquileres.
 
-* Creemos que MaquiGest  logrará una alta tasa de retención de clientes al brindar valor continuo a las empresas de alquiler de equipos.
+- Creemos que las empresas continuarán utilizando MaquiGest si experimentan una reducción de problemas relacionados con reservas duplicadas, información desactualizada y desconocimiento del estado de sus equipos.
 
-* Creemos que MaquiGest aumentará la adopción de planes de suscripción de mayor nivel a medida que las empresas de alquiler amplíen su inventario y sus necesidades operativas.
+- Creemos que el uso frecuente de las funcionalidades de inventario, reservas, alquileres y mantenimiento será un indicador de que MaquiGest está siendo incorporado dentro de las operaciones habituales de las empresas.
 
-* Creemos que la participación de las empresas de construcción aumentará el número de transacciones de alquiler gestionadas a través de la plataforma.
+- Creemos que algunas empresas estarán dispuestas a migrar hacia planes de mayor nivel cuando aumenten la cantidad de equipos gestionados o necesiten funcionalidades adicionales.
+
+- Creemos que la participación de pequeñas empresas constructoras y contratistas incrementará la cantidad de solicitudes y operaciones de alquiler gestionadas mediante la plataforma.
 
 **User Assumptions:**
 
-* Creemos que los propietarios y administradores de pequeñas y medianas empresas de alquiler de equipos son usuarios clave que necesitan supervisar el inventario, los alquileres, los ingresos y el mantenimiento de los equipos.
+- Creemos que los propietarios y administradores de pequeñas y medianas empresas de alquiler necesitan conocer el estado, ubicación, disponibilidad y condición de sus equipos para organizar sus operaciones.
 
-* Creemos que los operadores de alquiler son responsables de gestionar las reservaciones, los contratos, las entregas de equipo, las devoluciones y los incidentes.
+- Creemos que los trabajadores responsables de gestionar los alquileres necesitan consultar y actualizar reservas, contratos, entregas, devoluciones e incidencias sin depender de información distribuida entre diferentes herramientas.
 
-* Creemos que los gerentes de compras o los jefes de obra en pequeñas empresas constructoras son responsables de buscar y alquilar el equipo necesario para sus proyectos.
+- Creemos que las pequeñas empresas constructoras y contratistas necesitan encontrar maquinaria disponible en función de los requerimientos y fechas de sus proyectos.
 
-* Creemos que las empresas constructoras necesitan conocer la disponibilidad del equipo, las condiciones de alquiler y las fechas de devolución al gestionar sus proyectos.
+- Creemos que los responsables de gestionar el alquiler de maquinaria dentro de empresas constructoras necesitan conocer con anticipación la disponibilidad, características, costos y condiciones de los equipos antes de realizar una solicitud.
+
+- Creemos que las empresas constructoras y contratistas necesitan realizar seguimiento a sus reservas y alquileres para coordinar adecuadamente la recepción, utilización y devolución de la maquinaria.
 
 **User Outcome and Benefit Assumptions:**
 
-* Creemos que los administradores de las empresas de alquiler desean conocer rápidamente el estado, la ubicación y la disponibilidad de cada equipo para poder tomar mejores decisiones operativas.
+- Creemos que los administradores de empresas de alquiler podrán tomar mejores decisiones operativas si pueden identificar rápidamente qué equipos están disponibles, reservados, alquilados o en mantenimiento.
 
-* Creemos que los operadores de alquiler desean gestionar de manera eficiente las reservaciones, entregas y devoluciones para reducir los errores operativos y ahorrar tiempo.
+- Creemos que los trabajadores responsables de las operaciones de alquiler podrán reducir errores y tiempo de coordinación si la información sobre reservas, entregas y devoluciones se mantiene actualizada en un único sistema.
 
-* Creemos que los administradores de empresas de alquiler desean monitorear el estado de los equipos y el historial de mantenimiento para maximizar la disponibilidad y la vida útil de los mismos.
+- Creemos que disponer de un historial de incidencias y mantenimiento permitirá a las empresas identificar equipos que necesitan inspección o reparación antes de volver a ofrecerlos en alquiler.
 
-* Creemos que los gerentes de construcción desean encontrar rápidamente equipos adecuados y disponibles para obtener a tiempo los recursos necesarios para sus proyectos.
+- Creemos que las pequeñas empresas constructoras y contratistas podrán encontrar con mayor rapidez la maquinaria requerida si pueden consultar equipos mediante criterios como categoría, disponibilidad y características.
 
-* Creemos que las empresas constructoras desean contar con información clara sobre las condiciones de alquiler, los costos y las fechas de devolución para planificar mejor los recursos y gastos de sus proyectos.
+- Creemos que disponer de información clara sobre costos, condiciones y fechas de alquiler permitirá a las empresas constructoras planificar mejor los recursos y gastos asociados a sus proyectos.
+
+- Creemos que la posibilidad de consultar el estado de una reserva o alquiler reducirá la dependencia de llamadas y mensajes para realizar seguimiento a las solicitudes.
 
 **Feature Assumptions:**
 
-* Creemos que las empresas de alquiler necesitan un módulo de administración de inventario para registrar el equipo, sus características, ubicación, estado y disponibilidad.
+- Creemos que un módulo de inventario que permita registrar características, ubicación, condición y estado de disponibilidad facilitará a las empresas conocer la situación actual de cada equipo.
 
-* Creemos que las empresas de alquiler necesitan un sistema de reservaciones que verifique automáticamente la disponibilidad de los equipos y evite que se superpongan las reservaciones.
+- Creemos que un sistema de reservas que compruebe la disponibilidad antes de confirmar una solicitud ayudará a evitar la asignación de un mismo equipo a alquileres incompatibles.
 
-* Creemos que las empresas de alquiler necesitan un módulo integrado de gestión de alquileres para administrar contratos, tarifas, pagos, entregas y devoluciones.
+- Creemos que un módulo de gestión de alquileres que integre contratos, tarifas, pagos, entregas y devoluciones facilitará el seguimiento del proceso desde la reserva hasta la devolución del equipo.
 
-* Creemos que las empresas de alquiler necesitan un módulo de gestión de mantenimiento para registrar inspecciones, incidentes, reparaciones, costos y mantenimiento programado.
+- Creemos que un módulo de mantenimiento con historial de inspecciones, incidencias, reparaciones y mantenimientos programados permitirá identificar equipos que temporalmente no deberían encontrarse disponibles para alquiler.
 
-* Creemos que las empresas constructoras necesitan una interfaz de búsqueda y alquiler de equipos para encontrar la maquinaria adecuada, verificar la disponibilidad y solicitar alquileres de acuerdo con los requisitos de sus proyectos.
+- Creemos que una interfaz de búsqueda permitirá a las empresas constructoras y contratistas localizar maquinaria adecuada según las necesidades de sus proyectos.
 
-* Creemos que las empresas constructoras necesitan una interfaz de seguimiento de alquileres para monitorear sus alquileres activos, los períodos de alquiler, los costos y las fechas de devolución
+- Creemos que una funcionalidad para consultar disponibilidad permitirá a las empresas constructoras evaluar si un equipo puede ser utilizado durante las fechas requeridas antes de realizar una solicitud.
+
+- Creemos que una sección de seguimiento de reservas y alquileres permitirá a las empresas constructoras consultar el estado de sus solicitudes, períodos de alquiler, costos y fechas previstas de devolución.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-* Creemos que lograremos una mayor retención de clientes si los administradores de las empresas de alquiler pueden conocer rápidamente el estado, la ubicación y la disponibilidad de su equipo mediante un módulo centralizado de gestión de inventario.
+* Creemos que lograremos incrementar el uso recurrente de MaquiGest si los administradores de pequeñas y medianas empresas de alquiler pueden conocer rápidamente el estado, ubicación, condición y disponibilidad de sus equipos mediante un módulo centralizado de gestión de inventario.
 
-* Creemos que lograremos una mayor satisfacción y retención de los clientes si las empresas de alquiler pueden gestionar de manera eficiente las reservaciones y evitar conflictos de disponibilidad mediante un sistema automatizado de gestión de reservaciones.
+* Creemos que lograremos disminuir los conflictos de disponibilidad y reservas duplicadas si los trabajadores responsables de las operaciones de alquiler pueden confirmar una reserva con mayor seguridad al conocer previamente la disponibilidad del equipo mediante un sistema de gestión de reservas con validación de disponibilidad.
 
-* Creemos que aumentaremos el número de transacciones de alquiler completadas si los operadores de alquiler pueden gestionar los contratos, los pagos, las entregas y las devoluciones en un solo lugar mediante un módulo integrado de gestión de alquileres.
+* Creemos que lograremos incrementar la cantidad de operaciones de alquiler gestionadas mediante MaquiGest si los trabajadores de las empresas de alquiler pueden realizar el seguimiento del proceso de alquiler desde su formalización hasta la devolución del equipo mediante un módulo integrado de gestión de alquileres que centralice contratos, tarifas, pagos, entregas y devoluciones.
 
-* Creemos que podremos aumentar la utilización de los equipos y reducir el tiempo de inactividad operativa si los administradores de las empresas de alquiler pueden monitorear de manera proactiva el estado y las necesidades de mantenimiento de sus equipos mediante un módulo de gestión de mantenimiento.
+* Creemos que lograremos incrementar la trazabilidad de los equipos durante los alquileres si los trabajadores de las empresas de alquiler pueden registrar y consultar los problemas ocurridos durante su utilización mediante una funcionalidad de gestión de incidencias.
 
-* Creemos que aumentaremos el número de transacciones de alquiler gestionadas a través de MaquiGest si los gerentes de construcción pueden encontrar rápidamente el equipo adecuado y disponible para sus proyectos mediante una interfaz de búsqueda y alquiler de equipo.
+* Creemos que lograremos disminuir la cantidad de equipos que permanecen fuera de operación debido a mantenimientos no atendidos si los administradores de las empresas de alquiler pueden identificar oportunamente los equipos que requieren inspección o reparación mediante un módulo de mantenimiento con historial y programación de intervenciones.
 
-* Creemos que lograremos aumentar la retención de usuarios entre las empresas de construcción si los gerentes de obra pueden monitorear fácilmente sus alquileres activos, los costos y las fechas de devolución mediante una interfaz de seguimiento de alquileres.
+* Creemos que lograremos incrementar la cantidad de solicitudes de alquiler realizadas mediante MaquiGest si los responsables de pequeñas empresas constructoras y contratistas pueden encontrar con mayor rapidez maquinaria adecuada para sus proyectos mediante una interfaz de búsqueda con filtros por categoría y características.
+
+* Creemos que lograremos disminuir las solicitudes realizadas sobre equipos no disponibles si los responsables de pequeñas empresas constructoras y contratistas pueden verificar si la maquinaria estará disponible durante las fechas requeridas mediante una funcionalidad de consulta de disponibilidad.
+
+* Creemos que lograremos incrementar la cantidad de solicitudes de alquiler iniciadas mediante la plataforma si los responsables de pequeñas empresas constructoras y contratistas pueden evaluar con mayor facilidad si un equipo responde a las necesidades y presupuesto de su proyecto mediante una vista que muestre características, costos y condiciones de alquiler.
+
+* Creemos que lograremos incrementar el uso recurrente de MaquiGest por parte de pequeñas empresas constructoras y contratistas si sus responsables pueden conocer fácilmente el estado y las fechas relevantes de sus reservas y alquileres mediante una interfaz de seguimiento de alquileres.
 
 #### 1.2.2.4. Lean UX Canvas
 
-<img src = "assets/md-images-lean_ux_canva/CLEANCODE_MaquiGest.png" width="800px">
+<img src = "assets/md-images-lean_ux_canva/MaquiGestCleanCodeCanva.png" width="800px">
 
 ## 1.3. Segmentos objetivo
 
