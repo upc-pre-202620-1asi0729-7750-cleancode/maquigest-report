@@ -1,6 +1,6 @@
 ﻿@startuml
 
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
 title MaquiGest - Software Architecture Container Diagram
 
@@ -9,8 +9,8 @@ Person(constructionManager, "Construction Manager", "Searches machinery, checks 
 Person(systemAdministrator, "System Administrator", "Administers platform access and supervises platform operations.")
 
 System_Boundary(maquigest, "MaquiGest") {
-    Container(landingWebsite, "MaquiGest  Website", "HTML5, CSS3, JavaScript", "Public website that presents MaquiGest, its value proposition, benefits, features, solutions, subscription plans, demo request and contact information.")
-    Container(webAppHost, "MaquiGest Web Application Host", "Static Web Application Host", "Hosts and serves the compiled Angular application bundle, static assets and frontend runtime configuration.")
+    Container(landingWebsite, "MaquiGest Website", "HTML5, CSS3, JavaScript", "Public website that presents MaquiGest, its value proposition, benefits, features, solutions, subscription plans, demo request and contact information.")
+    Container(webAppHost, "MaquiGest Web Application Host", "Static Web Application Host", "Hosts and serves the compiled Angular application, static assets and runtime configuration required by the SPA.")
     Container(spa, "MaquiGest Single Page Application", "Angular, TypeScript, Angular Material", "Authenticated web application used to manage machinery, profiles, rental operations, maintenance and subscriptions.")
     Container(api, "MaquiGest RESTful API", "Java, Spring Boot, Spring Data JPA", "Provides application services and exposes REST endpoints for the MaquiGest business capabilities.")
     ContainerDb(database, "MaquiGest Database", "MySQL", "Stores users, profiles, machinery, rental operations, maintenance records, subscriptions and related business information.")
@@ -23,12 +23,17 @@ System_Ext(sendGrid, "SendGrid", "Provides transactional email delivery.")
 Rel(rentalOperator, landingWebsite, "Visits public information", "HTTPS")
 Rel(constructionManager, landingWebsite, "Visits public information", "HTTPS")
 
-Rel(landingWebsite, webAppHost, "Opens application", "CTA Link / HTTPS")
-Rel(webAppHost, spa, "Delivers and renders SPA", "HTML / CSS / JavaScript")
+Rel(landingWebsite, webAppHost, "Redirects to web application", "HTTPS")
 
-Rel(rentalOperator, spa, "Manages machinery and rental operations", "HTTPS")
-Rel(constructionManager, spa, "Searches equipment and manages rental requests", "HTTPS")
-Rel(systemAdministrator, spa, "Administers platform access and supervises operations", "HTTPS")
+Rel(rentalOperator, webAppHost, "Accesses web application", "HTTPS")
+Rel(constructionManager, webAppHost, "Accesses web application", "HTTPS")
+Rel(systemAdministrator, webAppHost, "Accesses web application", "HTTPS")
+
+Rel(webAppHost, spa, "Delivers SPA to browser", "HTML / CSS / JavaScript")
+
+Rel(rentalOperator, spa, "Manages machinery and rental operations", "Browser interaction")
+Rel(constructionManager, spa, "Searches equipment and manages rental requests", "Browser interaction")
+Rel(systemAdministrator, spa, "Administers platform access and supervises operations", "Browser interaction")
 
 Rel(spa, api, "Consumes REST services", "JSON / HTTPS")
 Rel(api, database, "Reads from and writes to", "JPA / JDBC")
