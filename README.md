@@ -1542,9 +1542,7 @@ And mantiene la estructura y funcionalidad de la página
 
 El Product Backlog de MaquiGest contiene las User Stories y Technical Stories identificadas para el desarrollo progresivo de la solución. El orden de los elementos responde principalmente al valor para el negocio y al alcance de las primeras iteraciones del proyecto.
 
-Para la AV1, la prioridad se concentra en la presentación de la propuesta de valor mediante la Landing Page y en la definición de las funcionalidades principales de MaquiGest. Las Technical Stories relacionadas con el RESTful API se incorporan como soporte técnico para las funcionalidades que serán implementadas progresivamente en las siguientes iteraciones.
-
-Las User Stories relacionadas con autenticación y seguridad se mantienen dentro del Product Backlog, pero se ubican hacia el final de la priorización, de acuerdo con el enfoque de Domain-Driven Design indicado para el proyecto.
+La prioridad se concentra en la presentación de la propuesta de valor mediante la Landing Page y en la definición de las funcionalidades principales de MaquiGest. Las Technical Stories relacionadas con el RESTful API se incorporan como soporte técnico para las funcionalidades que serán implementadas progresivamente en las siguientes iteraciones.
 
 | # Orden | Story ID | Tipo | Título | Descripción | Story Points |
 | :---: | :---: | :---: | :--- | :--- | :---: |
