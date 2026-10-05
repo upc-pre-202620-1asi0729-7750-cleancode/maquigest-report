@@ -272,43 +272,63 @@ Nuestros valores principales son los siguientes:
 
 Actualmente, muchas pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción gestionan sus operaciones mediante herramientas dispersas, como hojas de cálculo, documentos físicos, llamadas telefónicas y aplicaciones de mensajería. Aunque estos medios permiten registrar información básica, no proporcionan una visión integrada y actualizada sobre la disponibilidad, ubicación, condición y mantenimiento de cada equipo.
 
-El alquiler de maquinaria comprende distintas actividades que deben mantenerse coordinadas, entre ellas el registro del inventario, la consulta de disponibilidad, la creación de reservas, la elaboración de contratos, el registro de pagos, la programación de entregas, la recepción de devoluciones y la atención de incidencias. Cuando esta información se encuentra distribuida en diferentes medios, aumenta la posibilidad de generar reservas duplicadas, entregar equipos que no están disponibles, perder el seguimiento de los contratos o retrasar los mantenimientos correspondientes.
+El alquiler de maquinaria comprende distintas actividades que deben mantenerse coordinadas, entre ellas el registro del inventario, la consulta de disponibilidad, la creación de reservas, la elaboración de contratos, el registro de pagos, la programación de entregas, la recepción de devoluciones y la atención de incidencias. Cuando esta información se encuentra distribuida en diferentes medios, aumenta la posibilidad de generar reservas duplicadas, asignar equipos que no se encuentran disponibles, perder el seguimiento de los contratos o retrasar los mantenimientos correspondientes.
 
-Esta situación también afecta a las personas que necesitan alquilar maquinaria para remodelaciones, reparaciones u obras personales. La comunicación con las empresas suele realizarse mediante llamadas o mensajes, por lo que el cliente puede tener dificultades para conocer qué equipos están disponibles, cuáles son sus condiciones de alquiler y en qué estado se encuentra su solicitud.
+Esta situación también afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. La comunicación con las empresas proveedoras suele realizarse mediante llamadas telefónicas o aplicaciones de mensajería, lo que puede dificultar la consulta de equipos disponibles, las condiciones de alquiler, los costos y el seguimiento de las reservas o alquileres solicitados. Esta falta de información centralizada puede afectar la planificación de los recursos necesarios para ejecutar sus proyectos.
 
-Existen plataformas orientadas a empresas de alquiler de gran escala; sin embargo, pueden resultar complejas o poco accesibles para negocios pequeños que necesitan organizar sus operaciones sin incorporar sistemas sobredimensionados. En consecuencia, se identifica la necesidad de una solución especializada que centralice el ciclo de alquiler y que pueda ser utilizada tanto por las empresas proveedoras como por las personas interesadas en alquilar los equipos.
+Existen plataformas orientadas a empresas de alquiler de gran escala; sin embargo, estas pueden resultar complejas o poco accesibles para negocios pequeños y medianos que necesitan organizar sus operaciones sin incorporar sistemas sobredimensionados. Asimismo, las pequeñas empresas constructoras y contratistas requieren mecanismos más claros para consultar y gestionar el alquiler de los equipos necesarios para sus proyectos.
 
-MaquiGest abordará esta problemática mediante una plataforma SaaS que permitirá administrar en un único entorno el inventario, la disponibilidad, las reservas, los contratos, los pagos, las entregas, las devoluciones, las incidencias y el mantenimiento. De esta manera, las empresas podrán mantener un mejor control de sus equipos y los clientes podrán realizar sus procesos de alquiler de forma más organizada.
+En consecuencia, se identifica la oportunidad de desarrollar una solución especializada que centralice el ciclo de alquiler y facilite la interacción entre las empresas proveedoras de maquinaria y las organizaciones que requieren alquilar estos equipos.
+
+MaquiGest abordará esta problemática mediante una plataforma SaaS que permitirá administrar en un único entorno el inventario, la disponibilidad, las reservas, los contratos, los pagos, las entregas, las devoluciones, las incidencias y el mantenimiento. De esta manera, las pequeñas y medianas empresas de alquiler podrán mantener un mayor control sobre sus equipos y operaciones, mientras que las pequeñas empresas constructoras y contratistas podrán buscar maquinaria, consultar su disponibilidad, realizar solicitudes de alquiler y dar seguimiento a los equipos requeridos para sus proyectos.
 
 #### 5W & 2H
 
 **Who (¿Quiénes?)**
 
-La problemática afecta principalmente a los propietarios, administradores y trabajadores de pequeñas y medianas empresas dedicadas al alquiler de maquinaria para construcción. También afecta a personas que necesitan alquilar equipos para ejecutar remodelaciones, reparaciones u otros proyectos personales relacionados con la construcción.
+La problemática afecta principalmente a los propietarios, administradores y trabajadores de pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción. También afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala.
 
 **What (¿Qué?)**
 
-El problema principal es la ausencia de una plataforma especializada que permita administrar integralmente el ciclo de alquiler de la maquinaria. La información sobre inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento suele encontrarse distribuida en diferentes herramientas y medios de comunicación.
+El problema principal es la ausencia de una plataforma especializada que permita gestionar de manera integrada el ciclo de alquiler de maquinaria. La información relacionada con inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento suele encontrarse distribuida entre diferentes herramientas y medios de comunicación.
+
+Del lado de las empresas constructoras y contratistas, esta fragmentación también dificulta la búsqueda de equipos, la consulta de disponibilidad, el conocimiento de las condiciones de alquiler y el seguimiento de las solicitudes realizadas.
 
 **Where (¿Dónde?)**
 
-La problemática se presenta en las operaciones internas de las pequeñas y medianas empresas de alquiler y durante la comunicación con sus clientes. Abarca tanto la gestión administrativa del negocio como el seguimiento de los equipos que son entregados para obras de construcción de pequeña escala.
+La problemática se presenta tanto en las operaciones internas de las pequeñas y medianas empresas de alquiler como en la interacción que mantienen con pequeñas empresas constructoras y contratistas.
+
+Abarca la gestión administrativa y operativa del negocio de alquiler, así como los procesos mediante los cuales las empresas constructoras buscan, reservan, reciben, utilizan y devuelven la maquinaria necesaria para sus proyectos.
 
 **When (¿Cuándo?)**
 
-Puede manifestarse durante cualquier etapa del ciclo de alquiler: cuando un cliente consulta la disponibilidad, realiza una reserva, firma un contrato, efectúa un pago, recibe el equipo, comunica una incidencia, devuelve la maquinaria o cuando la empresa debe programar su mantenimiento.
+La problemática puede manifestarse durante cualquier etapa del ciclo de alquiler: cuando una empresa constructora consulta la disponibilidad de un equipo, solicita una reserva, acuerda las condiciones del alquiler, realiza un pago, recibe la maquinaria, comunica una incidencia o efectúa la devolución.
+
+También puede presentarse internamente cuando la empresa de alquiler necesita verificar disponibilidad, preparar una entrega, actualizar el estado de un equipo, registrar una devolución o programar su mantenimiento.
 
 **Why (¿Por qué?)**
 
-La problemática ocurre porque las herramientas utilizadas no se encuentran integradas y requieren que la información sea registrada o comprobada manualmente. Asimismo, muchas soluciones existentes están orientadas a operaciones de mayor escala y pueden resultar excesivamente complejas para pequeñas empresas.
+La problemática ocurre porque muchas de las herramientas utilizadas actualmente no se encuentran integradas y requieren que la información sea registrada, actualizada o comprobada manualmente.
+
+Además, algunas soluciones existentes están orientadas a empresas con operaciones de mayor escala y pueden resultar excesivamente complejas o poco accesibles para pequeñas y medianas empresas que necesitan gestionar sus procesos de alquiler de forma más sencilla.
+
+Por otro lado, las pequeñas empresas constructoras y contratistas suelen depender de llamadas o aplicaciones de mensajería para conocer la disponibilidad y condiciones de los equipos, lo que dificulta contar con información centralizada durante la planificación de sus proyectos.
 
 **How (¿Cómo?)**
 
-Las empresas revisan y actualizan manualmente hojas de cálculo, documentos, llamadas y conversaciones por mensajería para determinar el estado de sus alquileres. Esta forma de trabajo puede producir información desactualizada, registros duplicados, dificultades de coordinación y pérdida de trazabilidad sobre los equipos.
+Las empresas de alquiler revisan y actualizan manualmente hojas de cálculo, documentos, llamadas y conversaciones por mensajería para determinar el estado de sus equipos y alquileres.
+
+De forma paralela, las empresas constructoras y contratistas deben comunicarse directamente con los proveedores para consultar qué maquinaria se encuentra disponible, conocer sus condiciones y realizar seguimiento a sus solicitudes.
+
+Esta forma de trabajo puede producir información desactualizada, registros duplicados, conflictos de disponibilidad, dificultades de coordinación y pérdida de trazabilidad durante el proceso de alquiler.
 
 **How Much (¿Cuánto impacta?)**
 
-El impacto se refleja en el tiempo empleado para comprobar información, los posibles conflictos de disponibilidad, los retrasos en entregas y devoluciones, la inmovilización de equipos que requieren mantenimiento y la pérdida de oportunidades de alquiler. También puede afectar la confianza y satisfacción de los clientes. La dimensión cuantitativa de este impacto se determinará posteriormente mediante las entrevistas y la investigación de los segmentos objetivo.
+El impacto se refleja en el tiempo empleado para comprobar y actualizar información, los posibles conflictos de disponibilidad, los retrasos en las entregas y devoluciones, la inmovilización de equipos que requieren mantenimiento y la pérdida de oportunidades de alquiler.
+
+Para las pequeñas empresas constructoras y contratistas, también puede generar retrasos en la obtención de maquinaria, dificultades para planificar recursos y una mayor dependencia de comunicaciones manuales con los proveedores.
+
+Estas situaciones pueden afectar la eficiencia operativa de ambas partes y la calidad de la relación entre proveedor y cliente. La dimensión cuantitativa del impacto será determinada posteriormente mediante entrevistas, validaciones y la investigación realizada con los segmentos objetivo.
 
 #### Objetivos
 
@@ -350,90 +370,110 @@ El impacto se refleja en el tiempo empleado para comprobar información, los pos
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-La situación actual del sector de alquiler de maquinaria y equipos para pequeñas construcciones se ha centrado principalmente en empresas que gestionan sus operaciones mediante herramientas dispersas como hojas de cálculo, llamadas, mensajes y sistemas independientes, dificultando el control de la disponibilidad, reservas, contratos, entregas, devoluciones y mantenimiento de sus equipos.
+Actualmente, muchas pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción gestionan sus operaciones mediante herramientas dispersas, como hojas de cálculo, documentos, llamadas telefónicas y aplicaciones de mensajería. Esta forma de trabajo dificulta mantener información centralizada y actualizada sobre inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento. Como consecuencia, pueden presentarse conflictos de disponibilidad, registros duplicados, retrasos operativos y pérdida de trazabilidad durante el ciclo de alquiler.
 
-Lo que los productos y servicios existentes no logran abordar completamente es la necesidad de las pequeñas empresas de contar con una solución especializada, sencilla y accesible, que les permita gestionar de manera integral el ciclo de vida de su maquinaria sin enfrentarse a la complejidad de plataformas orientadas a operaciones de mayor escala.
+Esta problemática también afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. Estas empresas suelen depender de comunicaciones directas con los proveedores para consultar la disponibilidad de los equipos, conocer las condiciones de alquiler y realizar seguimiento a sus solicitudes, lo que puede dificultar la planificación de los recursos necesarios para sus proyectos.
 
-Nuestro producto abordará esta brecha mediante una plataforma SaaS especializada en pequeñas empresas de alquiler de maquinaria para construcción, que centralizará en un único lugar la gestión de inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento, permitiendo realizar un seguimiento del equipo durante todo su ciclo de alquiler.
+Aunque existen soluciones digitales orientadas a la gestión del alquiler de maquinaria y equipos, algunas están dirigidas a organizaciones con operaciones de mayor escala y pueden resultar excesivamente complejas o poco accesibles para pequeñas y medianas empresas. Esta situación representa para CleanCode la oportunidad de desarrollar una solución especializada que facilite la gestión del ciclo de alquiler y la interacción entre las empresas proveedoras de maquinaria y las pequeñas empresas constructoras y contratistas que requieren estos equipos.
 
-Nuestro enfoque inicial será pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos utilizados en proyectos de construcción de pequeña escala, que necesitan profesionalizar y organizar sus operaciones sin incorporar herramientas excesivamente complejas.
+MaquiGest abordará esta oportunidad mediante una plataforma SaaS que centralizará la gestión del inventario, disponibilidad, reservas, alquileres, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento. La plataforma permitirá a las empresas de alquiler mantener un mayor control sobre sus equipos y operaciones, mientras que las empresas constructoras y contratistas podrán buscar maquinaria, consultar su disponibilidad, realizar solicitudes y dar seguimiento a sus alquileres.
 
-Sabremos que hemos tenido éxito cuando veamos una adopción recurrente de la plataforma por parte de estas empresas, una reducción de errores relacionados con reservas y disponibilidad, un mayor control sobre el estado de los equipos y un incremento en el uso de funcionalidades como gestión de alquileres y mantenimiento
+El desarrollo de MaquiGest estará sujeto a las restricciones definidas para el proyecto. La solución deberá implementarse como una aplicación web distribuida compuesta por un Landing Page, una Web Application y un RESTful API propio; la lógica del servidor deberá desarrollarse con Java y tecnologías open-source; deberá integrarse al menos un servicio externo; y la interfaz deberá adaptarse a computadoras, tabletas y dispositivos móviles. Debido al alcance del ciclo académico, la primera versión priorizará las funcionalidades relacionadas con inventario, disponibilidad, reservas y alquileres.
 
+Sabremos que MaquiGest está generando valor cuando, durante una etapa inicial de validación, al menos 10 pequeñas y medianas empresas de alquiler utilicen recurrentemente la plataforma para gestionar sus operaciones, se registren al menos 50 equipos con información actualizada sobre su estado y disponibilidad, se gestionen al menos 30 reservas o alquileres mediante la plataforma y al menos 5 pequeñas empresas constructoras o contratistas realicen solicitudes de alquiler utilizando MaquiGest.
+
+Asimismo, se buscará registrar menos de 5 conflictos de disponibilidad o reservas duplicadas durante el período de evaluación. Estos resultados serán analizados mediante las métricas de uso de la plataforma, los registros de las operaciones realizadas y las validaciones efectuadas con los segmentos objetivo.
 #### 1.2.2.2. Lean UX Assumptions
 
 **Business Assumptions:**
-* Creemos que las pequeñas y medianas empresas de alquiler de equipo necesitan una solución digital especializada para gestionar sus operaciones de alquiler.
 
-* Creemos que las pequeñas empresas de construcción están dispuestas a utilizar una plataforma digital para buscar, reservar y gestionar el alquiler de equipo de construcción.
+- Creemos que las pequeñas y medianas empresas dedicadas al alquiler de maquinaria para construcción presentan dificultades para mantener actualizada y centralizada la información sobre inventario, disponibilidad, reservas, alquileres y mantenimiento cuando utilizan hojas de cálculo, documentos, llamadas y aplicaciones de mensajería.
 
-* Creemos que las empresas de alquiler de equipo están dispuestas a pagar una suscripción mensual de SaaS por una plataforma que centralice y simplifique sus operaciones de alquiler.
+- Creemos que estas empresas estarían dispuestas a reemplazar parte de sus procesos manuales por una plataforma web si esta les permite centralizar la información y reducir problemas relacionados con disponibilidad, seguimiento y duplicidad de registros.
 
-* Creemos que un modelo de suscripción de tres niveles puede adaptarse a las diferentes necesidades operativas y niveles de crecimiento de las pequeñas y medianas empresas de alquiler de equipo.
+- Creemos que las empresas de alquiler estarían dispuestas a pagar una suscripción mensual por MaquiGest si perciben que la plataforma reduce el tiempo requerido para gestionar sus operaciones y facilita el control de sus equipos.
+
+- Creemos que un modelo de suscripción con diferentes niveles puede adaptarse a empresas con distintos tamaños de inventario y necesidades operativas, siempre que cada plan ofrezca funcionalidades y capacidades diferenciadas.
+
+- Creemos que existe una oportunidad para una solución especializada en pequeñas y medianas empresas frente a plataformas de alquiler orientadas a organizaciones con operaciones de mayor escala o complejidad.
 
 **Business Outcome Assumptions:**
 
-* Creemos que MaquiGest logrará un número cada vez mayor de empresas de alquiler que paguen por el servicio gracias a la adopción de su plataforma SaaS.
+- Creemos que la adopción de MaquiGest podrá evidenciarse mediante un crecimiento en el número de empresas que registran maquinaria y utilizan recurrentemente las funcionalidades de disponibilidad, reservas y alquileres.
 
-* Creemos que MaquiGest  logrará una alta tasa de retención de clientes al brindar valor continuo a las empresas de alquiler de equipos.
+- Creemos que las empresas continuarán utilizando MaquiGest si experimentan una reducción de problemas relacionados con reservas duplicadas, información desactualizada y desconocimiento del estado de sus equipos.
 
-* Creemos que MaquiGest aumentará la adopción de planes de suscripción de mayor nivel a medida que las empresas de alquiler amplíen su inventario y sus necesidades operativas.
+- Creemos que el uso frecuente de las funcionalidades de inventario, reservas, alquileres y mantenimiento será un indicador de que MaquiGest está siendo incorporado dentro de las operaciones habituales de las empresas.
 
-* Creemos que la participación de las empresas de construcción aumentará el número de transacciones de alquiler gestionadas a través de la plataforma.
+- Creemos que algunas empresas estarán dispuestas a migrar hacia planes de mayor nivel cuando aumenten la cantidad de equipos gestionados o necesiten funcionalidades adicionales.
+
+- Creemos que la participación de pequeñas empresas constructoras y contratistas incrementará la cantidad de solicitudes y operaciones de alquiler gestionadas mediante la plataforma.
 
 **User Assumptions:**
 
-* Creemos que los propietarios y administradores de pequeñas y medianas empresas de alquiler de equipos son usuarios clave que necesitan supervisar el inventario, los alquileres, los ingresos y el mantenimiento de los equipos.
+- Creemos que los propietarios y administradores de pequeñas y medianas empresas de alquiler necesitan conocer el estado, ubicación, disponibilidad y condición de sus equipos para organizar sus operaciones.
 
-* Creemos que los operadores de alquiler son responsables de gestionar las reservaciones, los contratos, las entregas de equipo, las devoluciones y los incidentes.
+- Creemos que los trabajadores responsables de gestionar los alquileres necesitan consultar y actualizar reservas, contratos, entregas, devoluciones e incidencias sin depender de información distribuida entre diferentes herramientas.
 
-* Creemos que los gerentes de compras o los jefes de obra en pequeñas empresas constructoras son responsables de buscar y alquilar el equipo necesario para sus proyectos.
+- Creemos que las pequeñas empresas constructoras y contratistas necesitan encontrar maquinaria disponible en función de los requerimientos y fechas de sus proyectos.
 
-* Creemos que las empresas constructoras necesitan conocer la disponibilidad del equipo, las condiciones de alquiler y las fechas de devolución al gestionar sus proyectos.
+- Creemos que los responsables de gestionar el alquiler de maquinaria dentro de empresas constructoras necesitan conocer con anticipación la disponibilidad, características, costos y condiciones de los equipos antes de realizar una solicitud.
+
+- Creemos que las empresas constructoras y contratistas necesitan realizar seguimiento a sus reservas y alquileres para coordinar adecuadamente la recepción, utilización y devolución de la maquinaria.
 
 **User Outcome and Benefit Assumptions:**
 
-* Creemos que los administradores de las empresas de alquiler desean conocer rápidamente el estado, la ubicación y la disponibilidad de cada equipo para poder tomar mejores decisiones operativas.
+- Creemos que los administradores de empresas de alquiler podrán tomar mejores decisiones operativas si pueden identificar rápidamente qué equipos están disponibles, reservados, alquilados o en mantenimiento.
 
-* Creemos que los operadores de alquiler desean gestionar de manera eficiente las reservaciones, entregas y devoluciones para reducir los errores operativos y ahorrar tiempo.
+- Creemos que los trabajadores responsables de las operaciones de alquiler podrán reducir errores y tiempo de coordinación si la información sobre reservas, entregas y devoluciones se mantiene actualizada en un único sistema.
 
-* Creemos que los administradores de empresas de alquiler desean monitorear el estado de los equipos y el historial de mantenimiento para maximizar la disponibilidad y la vida útil de los mismos.
+- Creemos que disponer de un historial de incidencias y mantenimiento permitirá a las empresas identificar equipos que necesitan inspección o reparación antes de volver a ofrecerlos en alquiler.
 
-* Creemos que los gerentes de construcción desean encontrar rápidamente equipos adecuados y disponibles para obtener a tiempo los recursos necesarios para sus proyectos.
+- Creemos que las pequeñas empresas constructoras y contratistas podrán encontrar con mayor rapidez la maquinaria requerida si pueden consultar equipos mediante criterios como categoría, disponibilidad y características.
 
-* Creemos que las empresas constructoras desean contar con información clara sobre las condiciones de alquiler, los costos y las fechas de devolución para planificar mejor los recursos y gastos de sus proyectos.
+- Creemos que disponer de información clara sobre costos, condiciones y fechas de alquiler permitirá a las empresas constructoras planificar mejor los recursos y gastos asociados a sus proyectos.
+
+- Creemos que la posibilidad de consultar el estado de una reserva o alquiler reducirá la dependencia de llamadas y mensajes para realizar seguimiento a las solicitudes.
 
 **Feature Assumptions:**
 
-* Creemos que las empresas de alquiler necesitan un módulo de administración de inventario para registrar el equipo, sus características, ubicación, estado y disponibilidad.
+- Creemos que un módulo de inventario que permita registrar características, ubicación, condición y estado de disponibilidad facilitará a las empresas conocer la situación actual de cada equipo.
 
-* Creemos que las empresas de alquiler necesitan un sistema de reservaciones que verifique automáticamente la disponibilidad de los equipos y evite que se superpongan las reservaciones.
+- Creemos que un sistema de reservas que compruebe la disponibilidad antes de confirmar una solicitud ayudará a evitar la asignación de un mismo equipo a alquileres incompatibles.
 
-* Creemos que las empresas de alquiler necesitan un módulo integrado de gestión de alquileres para administrar contratos, tarifas, pagos, entregas y devoluciones.
+- Creemos que un módulo de gestión de alquileres que integre contratos, tarifas, pagos, entregas y devoluciones facilitará el seguimiento del proceso desde la reserva hasta la devolución del equipo.
 
-* Creemos que las empresas de alquiler necesitan un módulo de gestión de mantenimiento para registrar inspecciones, incidentes, reparaciones, costos y mantenimiento programado.
+- Creemos que un módulo de mantenimiento con historial de inspecciones, incidencias, reparaciones y mantenimientos programados permitirá identificar equipos que temporalmente no deberían encontrarse disponibles para alquiler.
 
-* Creemos que las empresas constructoras necesitan una interfaz de búsqueda y alquiler de equipos para encontrar la maquinaria adecuada, verificar la disponibilidad y solicitar alquileres de acuerdo con los requisitos de sus proyectos.
+- Creemos que una interfaz de búsqueda permitirá a las empresas constructoras y contratistas localizar maquinaria adecuada según las necesidades de sus proyectos.
 
-* Creemos que las empresas constructoras necesitan una interfaz de seguimiento de alquileres para monitorear sus alquileres activos, los períodos de alquiler, los costos y las fechas de devolución
+- Creemos que una funcionalidad para consultar disponibilidad permitirá a las empresas constructoras evaluar si un equipo puede ser utilizado durante las fechas requeridas antes de realizar una solicitud.
+
+- Creemos que una sección de seguimiento de reservas y alquileres permitirá a las empresas constructoras consultar el estado de sus solicitudes, períodos de alquiler, costos y fechas previstas de devolución.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-* Creemos que lograremos una mayor retención de clientes si los administradores de las empresas de alquiler pueden conocer rápidamente el estado, la ubicación y la disponibilidad de su equipo mediante un módulo centralizado de gestión de inventario.
+* Creemos que lograremos incrementar el uso recurrente de MaquiGest si los administradores de pequeñas y medianas empresas de alquiler pueden conocer rápidamente el estado, ubicación, condición y disponibilidad de sus equipos mediante un módulo centralizado de gestión de inventario.
 
-* Creemos que lograremos una mayor satisfacción y retención de los clientes si las empresas de alquiler pueden gestionar de manera eficiente las reservaciones y evitar conflictos de disponibilidad mediante un sistema automatizado de gestión de reservaciones.
+* Creemos que lograremos disminuir los conflictos de disponibilidad y reservas duplicadas si los trabajadores responsables de las operaciones de alquiler pueden confirmar una reserva con mayor seguridad al conocer previamente la disponibilidad del equipo mediante un sistema de gestión de reservas con validación de disponibilidad.
 
-* Creemos que aumentaremos el número de transacciones de alquiler completadas si los operadores de alquiler pueden gestionar los contratos, los pagos, las entregas y las devoluciones en un solo lugar mediante un módulo integrado de gestión de alquileres.
+* Creemos que lograremos incrementar la cantidad de operaciones de alquiler gestionadas mediante MaquiGest si los trabajadores de las empresas de alquiler pueden realizar el seguimiento del proceso de alquiler desde su formalización hasta la devolución del equipo mediante un módulo integrado de gestión de alquileres que centralice contratos, tarifas, pagos, entregas y devoluciones.
 
-* Creemos que podremos aumentar la utilización de los equipos y reducir el tiempo de inactividad operativa si los administradores de las empresas de alquiler pueden monitorear de manera proactiva el estado y las necesidades de mantenimiento de sus equipos mediante un módulo de gestión de mantenimiento.
+* Creemos que lograremos incrementar la trazabilidad de los equipos durante los alquileres si los trabajadores de las empresas de alquiler pueden registrar y consultar los problemas ocurridos durante su utilización mediante una funcionalidad de gestión de incidencias.
 
-* Creemos que aumentaremos el número de transacciones de alquiler gestionadas a través de MaquiGest si los gerentes de construcción pueden encontrar rápidamente el equipo adecuado y disponible para sus proyectos mediante una interfaz de búsqueda y alquiler de equipo.
+* Creemos que lograremos disminuir la cantidad de equipos que permanecen fuera de operación debido a mantenimientos no atendidos si los administradores de las empresas de alquiler pueden identificar oportunamente los equipos que requieren inspección o reparación mediante un módulo de mantenimiento con historial y programación de intervenciones.
 
-* Creemos que lograremos aumentar la retención de usuarios entre las empresas de construcción si los gerentes de obra pueden monitorear fácilmente sus alquileres activos, los costos y las fechas de devolución mediante una interfaz de seguimiento de alquileres.
+* Creemos que lograremos incrementar la cantidad de solicitudes de alquiler realizadas mediante MaquiGest si los responsables de pequeñas empresas constructoras y contratistas pueden encontrar con mayor rapidez maquinaria adecuada para sus proyectos mediante una interfaz de búsqueda con filtros por categoría y características.
+
+* Creemos que lograremos disminuir las solicitudes realizadas sobre equipos no disponibles si los responsables de pequeñas empresas constructoras y contratistas pueden verificar si la maquinaria estará disponible durante las fechas requeridas mediante una funcionalidad de consulta de disponibilidad.
+
+* Creemos que lograremos incrementar la cantidad de solicitudes de alquiler iniciadas mediante la plataforma si los responsables de pequeñas empresas constructoras y contratistas pueden evaluar con mayor facilidad si un equipo responde a las necesidades y presupuesto de su proyecto mediante una vista que muestre características, costos y condiciones de alquiler.
+
+* Creemos que lograremos incrementar el uso recurrente de MaquiGest por parte de pequeñas empresas constructoras y contratistas si sus responsables pueden conocer fácilmente el estado y las fechas relevantes de sus reservas y alquileres mediante una interfaz de seguimiento de alquileres.
 
 #### 1.2.2.4. Lean UX Canvas
 
-<img src = "assets/md-images-lean_ux_canva/CLEANCODE_MaquiGest.png" width="800px">
+<img src = "assets/md-images-lean_ux_canva/MaquiGestCleanCodeCanva.png" width="800px">
 
 ## 1.3. Segmentos objetivo
 
@@ -1255,12 +1295,17 @@ A continuación, se presenta un glosario de términos y conceptos propios del do
 <tr>
 <td>US01</td>
 <td>Registro de usuario</td>
-<td>Como usuario, quiero registrarme en MaquiGest para acceder a las funcionalidades de la plataforma.</td>
+<td>Como usuario, quiero registrarme en MaquiGest para poder acceder a las funcionalidades de la plataforma.</td>
 <td>
-Given que el usuario accede al formulario de registro<br>
-When ingresa sus datos correctamente<br>
-Then el sistema crea su cuenta<br>
-And muestra un mensaje de confirmación
+<b>Given</b> que el usuario proporciona datos válidos de registro<br>
+<b>When</b> envía la solicitud de registro<br>
+<b>Then</b> el sistema crea la cuenta del usuario<br>
+<b>And</b> confirma que el registro se realiza correctamente
+<br><br>
+<b>Given</b> que el usuario proporciona datos inválidos o incompletos<br>
+<b>When</b> envía la solicitud de registro<br>
+<b>Then</b> el sistema rechaza la solicitud<br>
+<b>And</b> indica los datos que deben corregirse
 </td>
 <td>EP01</td>
 </tr>
@@ -1268,11 +1313,17 @@ And muestra un mensaje de confirmación
 <tr>
 <td>US02</td>
 <td>Inicio de sesión</td>
-<td>Como usuario registrado, quiero iniciar sesión para acceder a las funcionalidades correspondientes a mi cuenta.</td>
+<td>Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta.</td>
 <td>
-Given que el usuario posee una cuenta registrada<br>
-When ingresa credenciales válidas<br>
-Then el sistema permite el acceso a la plataforma
+<b>Given</b> que el usuario posee una cuenta registrada<br>
+<b>When</b> proporciona credenciales válidas<br>
+<b>Then</b> el sistema autentica al usuario<br>
+<b>And</b> permite el acceso a su cuenta
+<br><br>
+<b>Given</b> que el usuario proporciona credenciales inválidas<br>
+<b>When</b> intenta iniciar sesión<br>
+<b>Then</b> el sistema rechaza la autenticación<br>
+<b>And</b> informa que las credenciales no son válidas
 </td>
 <td>EP01</td>
 </tr>
@@ -1280,36 +1331,48 @@ Then el sistema permite el acceso a la plataforma
 <tr>
 <td>US03</td>
 <td>Gestionar perfil</td>
-<td>Como usuario, quiero consultar y actualizar mis datos personales y de contacto para mantener mi información actualizada.</td>
+<td>Como usuario, quiero gestionar mi perfil para mantener actualizada mi información.</td>
 <td>
-Given que el usuario ha iniciado sesión<br>
-When modifica sus datos de perfil<br>
-Then el sistema guarda la información actualizada<br>
-And muestra los nuevos datos
+<b>Given</b> que el usuario tiene una cuenta registrada<br>
+<b>When</b> consulta su perfil<br>
+<b>Then</b> el sistema devuelve su información registrada
+<br><br>
+<b>Given</b> que el usuario modifica datos válidos de su perfil<br>
+<b>When</b> guarda los cambios<br>
+<b>Then</b> el sistema actualiza la información del perfil<br>
+<b>And</b> confirma la actualización realizada
 </td>
 <td>EP01</td>
 </tr>
 
 <tr>
 <td>US04</td>
-<td>Recuperar contraseña</td>
-<td>Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta.</td>
+<td>Cerrar sesión</td>
+<td>Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta.</td>
 <td>
-Given que el usuario solicita recuperación<br>
-When ingresa su correo<br>
-Then el sistema envía instrucciones de recuperación
+<b>Given</b> que el usuario tiene una sesión activa<br>
+<b>When</b> solicita cerrar sesión<br>
+<b>Then</b> el sistema finaliza la sesión
+<br><br>
+<b>Given</b> que el usuario no tiene una sesión activa<br>
+<b>When</b> solicita cerrar sesión<br>
+<b>Then</b> el sistema informa que no existe una sesión activa
 </td>
 <td>EP01</td>
 </tr>
 
 <tr>
 <td>US05</td>
-<td>Cerrar sesión</td>
-<td>Como usuario, quiero cerrar sesión para proteger mi cuenta.</td>
+<td>Recuperar contraseña</td>
+<td>Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla.</td>
 <td>
-Given que el usuario está autenticado<br>
-When selecciona cerrar sesión<br>
-Then el sistema finaliza su sesión
+<b>Given</b> que el usuario posee una cuenta registrada<br>
+<b>When</b> solicita recuperar su contraseña proporcionando sus datos de recuperación<br>
+<b>Then</b> el sistema registra la solicitud de recuperación
+<br><br>
+<b>Given</b> que los datos proporcionados no corresponden a una cuenta registrada<br>
+<b>When</b> el usuario solicita la recuperación<br>
+<b>Then</b> el sistema rechaza la solicitud
 </td>
 <td>EP01</td>
 </tr>
@@ -1325,12 +1388,15 @@ Then el sistema finaliza su sesión
 <tr>
 <td>US06</td>
 <td>Registrar maquinaria</td>
-<td>Como empresa de alquiler, quiero registrar mis máquinas y equipos para mantener organizado mi inventario.</td>
+<td>Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en MaquiGest.</td>
 <td>
-Given que el usuario tiene permisos para gestionar maquinaria<br>
-When registra los datos de un equipo<br>
-Then el sistema almacena la maquinaria en el inventario<br>
-And muestra el equipo registrado
+<b>Given</b> que la empresa de alquiler tiene permisos para gestionar maquinaria<br>
+<b>When</b> registra datos válidos de una maquinaria<br>
+<b>Then</b> el sistema almacena la maquinaria en el inventario
+<br><br>
+<b>Given</b> que la información de la maquinaria es incompleta o inválida<br>
+<b>When</b> la empresa intenta registrarla<br>
+<b>Then</b> el sistema rechaza el registro
 </td>
 <td>EP02</td>
 </tr>
@@ -1338,12 +1404,15 @@ And muestra el equipo registrado
 <tr>
 <td>US07</td>
 <td>Consultar maquinaria</td>
-<td>Como empresa de alquiler, quiero consultar las máquinas registradas para conocer la información de mis equipos.</td>
+<td>Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados.</td>
 <td>
-Given que existen equipos registrados<br>
-When el usuario consulta el inventario<br>
-Then el sistema muestra la lista de maquinaria<br>
-And muestra información relevante de cada equipo
+<b>Given</b> que existen maquinarias registradas<br>
+<b>When</b> la empresa consulta su inventario<br>
+<b>Then</b> el sistema devuelve las maquinarias registradas
+<br><br>
+<b>Given</b> que no existen maquinarias registradas<br>
+<b>When</b> la empresa consulta su inventario<br>
+<b>Then</b> el sistema informa que no existen equipos registrados
 </td>
 <td>EP02</td>
 </tr>
@@ -1351,11 +1420,15 @@ And muestra información relevante de cada equipo
 <tr>
 <td>US08</td>
 <td>Actualizar información de maquinaria</td>
-<td>Como empresa de alquiler, quiero actualizar la información de mis equipos para mantener el inventario actualizado.</td>
+<td>Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados.</td>
 <td>
-Given que existe una maquinaria registrada<br>
-When el usuario modifica sus datos<br>
-Then el sistema guarda la información actualizada
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> la empresa actualiza datos válidos del equipo<br>
+<b>Then</b> el sistema guarda la información actualizada
+<br><br>
+<b>Given</b> que la maquinaria indicada no existe<br>
+<b>When</b> la empresa intenta actualizarla<br>
+<b>Then</b> el sistema rechaza la operación
 </td>
 <td>EP02</td>
 </tr>
@@ -1363,11 +1436,15 @@ Then el sistema guarda la información actualizada
 <tr>
 <td>US09</td>
 <td>Consultar disponibilidad de maquinaria</td>
-<td>Como empresa de alquiler, quiero conocer la disponibilidad de cada equipo para evitar conflictos al gestionar nuevos alquileres.</td>
+<td>Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles.</td>
 <td>
-Given que existen equipos registrados<br>
-When el usuario consulta su disponibilidad<br>
-Then el sistema muestra si cada equipo está disponible, reservado o alquilado
+<b>Given</b> que existen maquinarias registradas<br>
+<b>When</b> la empresa consulta su disponibilidad<br>
+<b>Then</b> el sistema devuelve el estado de disponibilidad de los equipos
+<br><br>
+<b>Given</b> que una maquinaria no está disponible<br>
+<b>When</b> la empresa consulta su disponibilidad<br>
+<b>Then</b> el sistema indica que el equipo no se encuentra disponible
 </td>
 <td>EP02</td>
 </tr>
@@ -1375,14 +1452,34 @@ Then el sistema muestra si cada equipo está disponible, reservado o alquilado
 <tr>
 <td>US10</td>
 <td>Consultar estado de maquinaria</td>
-<td>Como empresa de alquiler, quiero conocer el estado de mis equipos para evitar alquilar maquinaria que no se encuentra en condiciones de uso.</td>
+<td>Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual.</td>
 <td>
-Given que existe una maquinaria registrada<br>
-When el usuario consulta su información<br>
-Then el sistema muestra su estado actual<br>
-And permite identificar si está disponible para alquiler
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> la empresa consulta su estado<br>
+<b>Then</b> el sistema devuelve la condición actual del equipo
+<br><br>
+<b>Given</b> que una maquinaria se encuentra en una condición que impide su alquiler<br>
+<b>When</b> la empresa consulta su estado<br>
+<b>Then</b> el sistema indica que el equipo no está disponible para alquiler
 </td>
 <td>EP02</td>
+</tr>
+
+<tr>
+<td>TS03</td>
+<td>Gestionar maquinaria mediante API REST</td>
+<td>Como desarrollador, quiero disponer de recursos REST para registrar, consultar y actualizar maquinaria para permitir la gestión del inventario desde la Web Application.</td>
+<td>
+<b>Given</b> que el usuario tiene permisos para gestionar maquinaria<br>
+<b>When</b> el cliente envía una solicitud válida para crear, consultar o actualizar una maquinaria<br>
+<b>Then</b> la API procesa la operación<br>
+<b>And</b> devuelve el recurso actualizado o la información solicitada
+<br><br>
+<b>Given</b> que el cliente envía una solicitud con datos inválidos<br>
+<b>When</b> la API procesa la solicitud<br>
+<b>Then</b> devuelve una respuesta HTTP de error correspondiente
+</td>
+<td>US06, US07, US08</td>
 </tr>
 
 <tr>
@@ -1396,11 +1493,15 @@ And permite identificar si está disponible para alquiler
 <tr>
 <td>US11</td>
 <td>Buscar maquinaria</td>
-<td>Como empresa constructora, quiero buscar maquinaria según mis necesidades para encontrar equipos adecuados para mi proyecto.</td>
+<td>Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades.</td>
 <td>
-Given que el usuario accede al catálogo de maquinaria<br>
-When busca o filtra equipos<br>
-Then el sistema muestra las maquinarias que coinciden con sus necesidades
+<b>Given</b> que existen maquinarias registradas<br>
+<b>When</b> la empresa constructora realiza una búsqueda válida<br>
+<b>Then</b> el sistema devuelve las maquinarias que coinciden con sus criterios
+<br><br>
+<b>Given</b> que no existen maquinarias que coincidan con los criterios de búsqueda<br>
+<b>When</b> la empresa realiza la búsqueda<br>
+<b>Then</b> el sistema informa que no existen resultados
 </td>
 <td>EP03</td>
 </tr>
@@ -1408,11 +1509,15 @@ Then el sistema muestra las maquinarias que coinciden con sus necesidades
 <tr>
 <td>US12</td>
 <td>Consultar información de maquinaria</td>
-<td>Como empresa constructora, quiero consultar las características de una maquinaria para determinar si es adecuada para mi proyecto.</td>
+<td>Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler.</td>
 <td>
-Given que el usuario visualiza una maquinaria<br>
-When selecciona el equipo<br>
-Then el sistema muestra sus características, estado y condiciones de alquiler
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> la empresa constructora consulta el equipo<br>
+<b>Then</b> el sistema devuelve la información y características de la maquinaria
+<br><br>
+<b>Given</b> que la maquinaria solicitada no existe<br>
+<b>When</b> la empresa constructora consulta la información<br>
+<b>Then</b> el sistema informa que la maquinaria no se encuentra registrada
 </td>
 <td>EP03</td>
 </tr>
@@ -1420,11 +1525,15 @@ Then el sistema muestra sus características, estado y condiciones de alquiler
 <tr>
 <td>US13</td>
 <td>Consultar disponibilidad para un periodo</td>
-<td>Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado antes de solicitar el alquiler.</td>
+<td>Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla.</td>
 <td>
-Given que el usuario selecciona una maquinaria y un periodo<br>
-When consulta su disponibilidad<br>
-Then el sistema indica si el equipo puede ser alquilado durante dicho periodo
+<b>Given</b> que existe una maquinaria registrada y un periodo válido<br>
+<b>When</b> la empresa constructora consulta la disponibilidad<br>
+<b>Then</b> el sistema indica si la maquinaria está disponible durante el periodo
+<br><br>
+<b>Given</b> que el periodo solicitado coincide con una operación existente que impide el alquiler<br>
+<b>When</b> la empresa consulta la disponibilidad<br>
+<b>Then</b> el sistema indica que la maquinaria no está disponible durante ese periodo
 </td>
 <td>EP03</td>
 </tr>
@@ -1434,12 +1543,49 @@ Then el sistema indica si el equipo puede ser alquilado durante dicho periodo
 <td>Solicitar alquiler de maquinaria</td>
 <td>Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto.</td>
 <td>
-Given que la maquinaria está disponible<br>
-When el usuario registra una solicitud de alquiler<br>
-Then el sistema registra la solicitud<br>
-And muestra su estado
+<b>Given</b> que la maquinaria está disponible durante el periodo solicitado<br>
+<b>When</b> la empresa constructora registra una solicitud de alquiler<br>
+<b>Then</b> el sistema registra la solicitud<br>
+<b>And</b> asigna su estado inicial
+<br><br>
+<b>Given</b> que la maquinaria no está disponible durante el periodo solicitado<br>
+<b>When</b> la empresa intenta registrar la solicitud<br>
+<b>Then</b> el sistema rechaza la solicitud
 </td>
 <td>EP03</td>
+</tr>
+
+<tr>
+<td>TS04</td>
+<td>Consultar disponibilidad mediante API REST</td>
+<td>Como desarrollador, quiero disponer de un recurso REST para consultar la disponibilidad de maquinaria durante un periodo para que la Web Application pueda mostrar los equipos disponibles.</td>
+<td>
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> el cliente solicita su disponibilidad indicando un periodo válido<br>
+<b>Then</b> la API devuelve la disponibilidad correspondiente
+<br><br>
+<b>Given</b> que el cliente solicita la disponibilidad con un periodo no válido<br>
+<b>When</b> la API procesa la solicitud<br>
+<b>Then</b> la API rechaza la solicitud y devuelve una respuesta HTTP de error
+</td>
+<td>US09, US13</td>
+</tr>
+
+<tr>
+<td>TS05</td>
+<td>Gestionar solicitudes de alquiler mediante API REST</td>
+<td>Como desarrollador, quiero disponer de recursos REST para crear y consultar solicitudes de alquiler para permitir que las empresas constructoras soliciten maquinaria y consulten sus solicitudes.</td>
+<td>
+<b>Given</b> que existe una maquinaria disponible<br>
+<b>When</b> el cliente envía una solicitud de alquiler con información válida<br>
+<b>Then</b> la API registra la solicitud<br>
+<b>And</b> devuelve el identificador y estado inicial de la solicitud
+<br><br>
+<b>Given</b> que el cliente consulta una solicitud existente<br>
+<b>When</b> envía una solicitud válida al recurso correspondiente<br>
+<b>Then</b> la API devuelve la información de la solicitud
+</td>
+<td>US14, US21</td>
 </tr>
 
 <tr>
@@ -1452,38 +1598,66 @@ And muestra su estado
 
 <tr>
 <td>US15</td>
-<td>Visualizar planes disponibles</td>
-<td>Como usuario, quiero ver los planes para elegir uno.</td>
+<td>Consultar planes</td>
+<td>Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece MaquiGest.</td>
 <td>
-Given que el usuario accede a la sección de planes<br>
-When visualiza opciones<br>
-Then el sistema muestra los planes con sus características y precios
+<b>Given</b> que existen planes disponibles<br>
+<b>When</b> el usuario consulta los planes<br>
+<b>Then</b> el sistema devuelve las opciones disponibles con sus características
+<br><br>
+<b>Given</b> que no existen planes configurados<br>
+<b>When</b> el usuario consulta los planes<br>
+<b>Then</b> el sistema informa que no existen opciones disponibles
 </td>
 <td>EP04</td>
 </tr>
 
 <tr>
 <td>US16</td>
-<td>Suscribirse a un plan</td>
-<td>Como usuario, quiero suscribirme a un plan para acceder a funciones premium.</td>
+<td>Seleccionar plan</td>
+<td>Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades.</td>
 <td>
-Given que el usuario selecciona un plan<br>
-When confirma la suscripción<br>
-Then el sistema registra el plan
+<b>Given</b> que existen planes disponibles<br>
+<b>When</b> el usuario selecciona un plan<br>
+<b>Then</b> el sistema registra la selección realizada
+<br><br>
+<b>Given</b> que el plan seleccionado no está disponible<br>
+<b>When</b> el usuario intenta seleccionarlo<br>
+<b>Then</b> el sistema rechaza la operación
 </td>
 <td>EP04</td>
 </tr>
 
 <tr>
 <td>US17</td>
-<td>Cambiar de plan</td>
-<td>Como usuario, quiero cambiar de plan según mis necesidades.</td>
+<td>Gestionar suscripción</td>
+<td>Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado.</td>
 <td>
-Given que el usuario tiene un plan activo<br>
-When selecciona otro<br>
-Then el sistema actualiza la suscripción
+<b>Given</b> que el usuario tiene una suscripción activa<br>
+<b>When</b> consulta su suscripción<br>
+<b>Then</b> el sistema devuelve la información del plan seleccionado
+<br><br>
+<b>Given</b> que el usuario selecciona una opción de gestión válida<br>
+<b>When</b> confirma el cambio correspondiente<br>
+<b>Then</b> el sistema actualiza la información de la suscripción
 </td>
 <td>EP04</td>
+</tr>
+
+<tr>
+<td>TS09</td>
+<td>Consultar planes y suscripciones mediante API REST</td>
+<td>Como desarrollador, quiero disponer de recursos REST para consultar los planes disponibles y gestionar la información básica de la suscripción para que la Web Application pueda mostrar y administrar estas opciones.</td>
+<td>
+<b>Given</b> que existen planes configurados<br>
+<b>When</b> el cliente solicita los planes disponibles<br>
+<b>Then</b> la API devuelve la información de los planes
+<br><br>
+<b>Given</b> que el cliente registra una selección válida<br>
+<b>When</b> la API procesa la solicitud<br>
+<b>Then</b> la API devuelve el estado correspondiente
+</td>
+<td>US15, US16, US17</td>
 </tr>
 
 <tr>
@@ -1497,12 +1671,16 @@ Then el sistema actualiza la suscripción
 <tr>
 <td>US18</td>
 <td>Gestionar solicitudes de alquiler</td>
-<td>Como empresa de alquiler, quiero revisar las solicitudes recibidas para decidir cuáles atender y mantener control sobre mis alquileres.</td>
+<td>Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas.</td>
 <td>
-Given que existen solicitudes de alquiler<br>
-When el usuario consulta las solicitudes<br>
-Then el sistema muestra la información de cada solicitud<br>
-And permite identificar su estado
+<b>Given</b> que existen solicitudes de alquiler<br>
+<b>When</b> la empresa de alquiler consulta sus solicitudes<br>
+<b>Then</b> el sistema devuelve las solicitudes registradas<br>
+<b>And</b> muestra su estado correspondiente
+<br><br>
+<b>Given</b> que no existen solicitudes registradas<br>
+<b>When</b> la empresa consulta las solicitudes<br>
+<b>Then</b> el sistema informa que no existen solicitudes
 </td>
 <td>EP05</td>
 </tr>
@@ -1510,12 +1688,15 @@ And permite identificar su estado
 <tr>
 <td>US19</td>
 <td>Confirmar o rechazar una solicitud</td>
-<td>Como empresa de alquiler, quiero aceptar o rechazar solicitudes de alquiler para controlar la disponibilidad de mis equipos.</td>
+<td>Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse.</td>
 <td>
-Given que existe una solicitud pendiente<br>
-When el usuario selecciona aceptar o rechazar<br>
-Then el sistema actualiza el estado de la solicitud<br>
-And muestra el nuevo estado
+<b>Given</b> que existe una solicitud pendiente<br>
+<b>When</b> la empresa de alquiler la confirma<br>
+<b>Then</b> el sistema actualiza el estado de la solicitud a confirmada
+<br><br>
+<b>Given</b> que existe una solicitud pendiente<br>
+<b>When</b> la empresa de alquiler la rechaza<br>
+<b>Then</b> el sistema actualiza el estado de la solicitud a rechazada
 </td>
 <td>EP05</td>
 </tr>
@@ -1523,12 +1704,16 @@ And muestra el nuevo estado
 <tr>
 <td>US20</td>
 <td>Consultar alquileres activos</td>
-<td>Como empresa de alquiler, quiero consultar mis alquileres activos para conocer qué equipos están actualmente alquilados.</td>
+<td>Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso.</td>
 <td>
-Given que existen alquileres activos<br>
-When el usuario consulta sus alquileres<br>
-Then el sistema muestra los equipos alquilados<br>
-And muestra información del periodo correspondiente
+<b>Given</b> que existen alquileres activos<br>
+<b>When</b> la empresa de alquiler consulta las operaciones en curso<br>
+<b>Then</b> el sistema devuelve los alquileres activos<br>
+<b>And</b> muestra el periodo correspondiente
+<br><br>
+<b>Given</b> que no existen alquileres activos<br>
+<b>When</b> la empresa consulta las operaciones en curso<br>
+<b>Then</b> el sistema informa que no existen alquileres activos
 </td>
 <td>EP05</td>
 </tr>
@@ -1536,11 +1721,15 @@ And muestra información del periodo correspondiente
 <tr>
 <td>US21</td>
 <td>Consultar estado de una solicitud de alquiler</td>
-<td>Como empresa constructora, quiero consultar el estado de mi solicitud para saber si mi alquiler fue aceptado, rechazado o aún está pendiente.</td>
+<td>Como empresa constructora, quiero consultar el estado de una solicitud de alquiler para conocer su situación actual.</td>
 <td>
-Given que el usuario ha realizado una solicitud<br>
-When consulta sus solicitudes<br>
-Then el sistema muestra el estado actualizado de cada una
+<b>Given</b> que existe una solicitud realizada por la empresa constructora<br>
+<b>When</b> consulta su estado<br>
+<b>Then</b> el sistema devuelve el estado actualizado de la solicitud
+<br><br>
+<b>Given</b> que la solicitud indicada no existe<br>
+<b>When</b> la empresa constructora consulta su estado<br>
+<b>Then</b> el sistema informa que la solicitud no existe
 </td>
 <td>EP05</td>
 </tr>
@@ -1548,14 +1737,51 @@ Then el sistema muestra el estado actualizado de cada una
 <tr>
 <td>US22</td>
 <td>Gestionar entregas y devoluciones</td>
-<td>Como empresa de alquiler, quiero registrar las entregas y devoluciones de maquinaria para mantener trazabilidad sobre los equipos alquilados.</td>
+<td>Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria.</td>
 <td>
-Given que existe un alquiler confirmado<br>
-When se registra la entrega o devolución<br>
-Then el sistema actualiza el estado del alquiler<br>
-And registra la operación realizada
+<b>Given</b> que existe un alquiler confirmado<br>
+<b>When</b> la empresa registra una entrega<br>
+<b>Then</b> el sistema registra la operación y actualiza el estado correspondiente
+<br><br>
+<b>Given</b> que existe un alquiler activo<br>
+<b>When</b> la empresa registra una devolución<br>
+<b>Then</b> el sistema registra la operación y actualiza el estado correspondiente
 </td>
 <td>EP05</td>
+</tr>
+
+<tr>
+<td>TS06</td>
+<td>Gestionar reservas y estados de alquiler mediante API REST</td>
+<td>Como desarrollador, quiero disponer de recursos REST para gestionar solicitudes, confirmaciones, rechazos y alquileres activos para soportar el ciclo de alquiler de MaquiGest.</td>
+<td>
+<b>Given</b> que existe una solicitud de alquiler registrada<br>
+<b>When</b> el usuario autorizado confirma o rechaza la solicitud<br>
+<b>Then</b> la API actualiza su estado<br>
+<b>And</b> devuelve el nuevo estado de la operación
+<br><br>
+<b>Given</b> que existen alquileres activos<br>
+<b>When</b> el cliente solicita su consulta<br>
+<b>Then</b> la API devuelve la información correspondiente
+</td>
+<td>US18, US19, US20</td>
+</tr>
+
+<tr>
+<td>TS07</td>
+<td>Gestionar entregas y devoluciones mediante API REST</td>
+<td>Como desarrollador, quiero disponer de recursos REST para registrar entregas y devoluciones de maquinaria para mantener la trazabilidad del ciclo de alquiler.</td>
+<td>
+<b>Given</b> que existe un alquiler confirmado<br>
+<b>When</b> el cliente registra una entrega o devolución válida<br>
+<b>Then</b> la API registra la operación<br>
+<b>And</b> actualiza el estado correspondiente del alquiler y de la maquinaria
+<br><br>
+<b>Given</b> que el alquiler indicado no permite registrar la operación solicitada<br>
+<b>When</b> el cliente envía la solicitud<br>
+<b>Then</b> la API rechaza la operación y devuelve una respuesta HTTP de error
+</td>
+<td>US22</td>
 </tr>
 
 <tr>
@@ -1569,12 +1795,16 @@ And registra la operación realizada
 <tr>
 <td>US23</td>
 <td>Registrar mantenimiento</td>
-<td>Como empresa de alquiler, quiero registrar mantenimientos realizados a una maquinaria para mantener un historial de su estado operativo.</td>
+<td>Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria.</td>
 <td>
-Given que existe una maquinaria registrada<br>
-When el usuario registra un mantenimiento<br>
-Then el sistema almacena la información<br>
-And la relaciona con el equipo correspondiente
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> la empresa registra un mantenimiento válido<br>
+<b>Then</b> el sistema almacena la información del mantenimiento<br>
+<b>And</b> la relaciona con la maquinaria correspondiente
+<br><br>
+<b>Given</b> que la maquinaria no existe<br>
+<b>When</b> la empresa intenta registrar el mantenimiento<br>
+<b>Then</b> el sistema rechaza la operación
 </td>
 <td>EP06</td>
 </tr>
@@ -1582,12 +1812,15 @@ And la relaciona con el equipo correspondiente
 <tr>
 <td>US24</td>
 <td>Programar mantenimiento</td>
-<td>Como empresa de alquiler, quiero programar mantenimientos para evitar que los equipos sean utilizados cuando requieren atención.</td>
+<td>Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria.</td>
 <td>
-Given que una maquinaria requiere mantenimiento<br>
-When el usuario registra una fecha de mantenimiento<br>
-Then el sistema guarda la programación<br>
-And permite consultar el mantenimiento pendiente
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> la empresa programa una fecha válida de mantenimiento<br>
+<b>Then</b> el sistema registra la programación
+<br><br>
+<b>Given</b> que la fecha proporcionada no es válida<br>
+<b>When</b> la empresa intenta programar el mantenimiento<br>
+<b>Then</b> el sistema rechaza la programación
 </td>
 <td>EP06</td>
 </tr>
@@ -1595,12 +1828,16 @@ And permite consultar el mantenimiento pendiente
 <tr>
 <td>US25</td>
 <td>Registrar incidencia de maquinaria</td>
-<td>Como empresa de alquiler, quiero registrar incidencias de mis equipos para llevar un control de problemas y reparaciones.</td>
+<td>Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria.</td>
 <td>
-Given que una maquinaria presenta una incidencia<br>
-When el usuario registra el problema<br>
-Then el sistema almacena la incidencia<br>
-And la relaciona con la maquinaria correspondiente
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> la empresa registra una incidencia válida<br>
+<b>Then</b> el sistema almacena la incidencia<br>
+<b>And</b> la relaciona con la maquinaria correspondiente
+<br><br>
+<b>Given</b> que la maquinaria indicada no existe<br>
+<b>When</b> la empresa intenta registrar la incidencia<br>
+<b>Then</b> el sistema rechaza la operación
 </td>
 <td>EP06</td>
 </tr>
@@ -1608,13 +1845,34 @@ And la relaciona con la maquinaria correspondiente
 <tr>
 <td>US26</td>
 <td>Consultar historial de maquinaria</td>
-<td>Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus alquileres, incidencias y mantenimientos.</td>
+<td>Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores.</td>
 <td>
-Given que existe una maquinaria registrada<br>
-When el usuario consulta su historial<br>
-Then el sistema muestra las operaciones asociadas al equipo
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> la empresa consulta su historial<br>
+<b>Then</b> el sistema devuelve los mantenimientos e incidencias asociados
+<br><br>
+<b>Given</b> que la maquinaria no tiene registros históricos<br>
+<b>When</b> la empresa consulta su historial<br>
+<b>Then</b> el sistema informa que no existen registros asociados
 </td>
 <td>EP06</td>
+</tr>
+
+<tr>
+<td>TS08</td>
+<td>Gestionar mantenimiento e incidencias mediante API REST</td>
+<td>Como desarrollador, quiero disponer de recursos REST para registrar y consultar mantenimientos e incidencias de maquinaria para conservar su historial operativo.</td>
+<td>
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> el cliente registra un mantenimiento o una incidencia válida<br>
+<b>Then</b> la API almacena la información asociada a la maquinaria<br>
+<b>And</b> devuelve una respuesta correspondiente a la operación
+<br><br>
+<b>Given</b> que existen registros históricos asociados a una maquinaria<br>
+<b>When</b> el cliente solicita el historial<br>
+<b>Then</b> la API devuelve la información correspondiente
+</td>
+<td>US23, US24, US25, US26</td>
 </tr>
 
 <tr>
@@ -1628,11 +1886,15 @@ Then el sistema muestra las operaciones asociadas al equipo
 <tr>
 <td>US27</td>
 <td>Consultar información de MaquiGest</td>
-<td>Como visitante, quiero conocer las funcionalidades y beneficios de MaquiGest para determinar si la solución se adapta a las necesidades de mi empresa.</td>
+<td>Como visitante, quiero consultar información de MaquiGest para conocer la solución y su propuesta de valor.</td>
 <td>
-Given que el visitante accede al Landing Page<br>
-When revisa la información del producto<br>
-Then el sistema muestra sus principales funcionalidades y beneficios
+<b>Given</b> que el visitante accede al Landing Page<br>
+<b>When</b> consulta la información de MaquiGest<br>
+<b>Then</b> el sistema proporciona información sobre la solución y su propuesta de valor
+<br><br>
+<b>Given</b> que el visitante consulta las características de la solución<br>
+<b>When</b> revisa la información disponible<br>
+<b>Then</b> el sistema presenta las funcionalidades principales de MaquiGest
 </td>
 <td>EP07</td>
 </tr>
@@ -1640,12 +1902,15 @@ Then el sistema muestra sus principales funcionalidades y beneficios
 <tr>
 <td>US28</td>
 <td>Solicitar demostración</td>
-<td>Como potencial cliente, quiero solicitar una demostración de MaquiGest para conocer cómo funciona antes de utilizar el servicio.</td>
+<td>Como visitante, quiero solicitar una demostración para conocer cómo funciona MaquiGest.</td>
 <td>
-Given que el visitante desea conocer la plataforma<br>
-When completa y envía el formulario de demostración<br>
-Then el sistema registra la solicitud<br>
-And muestra un mensaje de confirmación
+<b>Given</b> que el visitante desea conocer la solución<br>
+<b>When</b> proporciona los datos requeridos y registra la solicitud<br>
+<b>Then</b> el sistema registra la solicitud de demostración
+<br><br>
+<b>Given</b> que la información requerida está incompleta<br>
+<b>When</b> el visitante intenta registrar la solicitud<br>
+<b>Then</b> el sistema rechaza la solicitud
 </td>
 <td>EP07</td>
 </tr>
@@ -1653,11 +1918,15 @@ And muestra un mensaje de confirmación
 <tr>
 <td>US29</td>
 <td>Contactar con MaquiGest</td>
-<td>Como potencial cliente, quiero contactar con el equipo de MaquiGest para realizar consultas sobre el servicio.</td>
+<td>Como visitante, quiero contactar con MaquiGest para realizar consultas sobre la solución.</td>
 <td>
-Given que el visitante accede a la sección de contacto<br>
-When completa y envía sus datos y consulta<br>
-Then el sistema registra la solicitud de contacto
+<b>Given</b> que el visitante proporciona los datos requeridos<br>
+<b>When</b> registra una consulta de contacto<br>
+<b>Then</b> el sistema registra la solicitud de contacto
+<br><br>
+<b>Given</b> que faltan datos obligatorios<br>
+<b>When</b> el visitante registra la consulta<br>
+<b>Then</b> el sistema rechaza la solicitud
 </td>
 <td>EP07</td>
 </tr>
@@ -1673,12 +1942,15 @@ Then el sistema registra la solicitud de contacto
 <tr>
 <td>US30</td>
 <td>Visualizar propuesta de valor</td>
-<td>Como visitante, quiero identificar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa a gestionar el alquiler de maquinaria.</td>
+<td>Como visitante, quiero visualizar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa.</td>
 <td>
-Given que el visitante accede al Landing Page<br>
-When visualiza la sección principal<br>
-Then el sistema muestra la propuesta de valor de MaquiGest<br>
-And presenta sus principales beneficios para la gestión de alquileres
+<b>Given</b> que el visitante accede al Landing Page<br>
+<b>When</b> consulta la información principal de MaquiGest<br>
+<b>Then</b> el sistema presenta la propuesta de valor de MaquiGest
+<br><br>
+<b>Given</b> que el visitante consulta la propuesta de valor<br>
+<b>When</b> revisa la información presentada<br>
+<b>Then</b> el sistema comunica los principales beneficios de la solución
 </td>
 <td>EP08</td>
 </tr>
@@ -1686,12 +1958,15 @@ And presenta sus principales beneficios para la gestión de alquileres
 <tr>
 <td>US31</td>
 <td>Explorar funcionalidades principales</td>
-<td>Como potencial cliente, quiero conocer las principales funcionalidades de MaquiGest para identificar cuáles pueden ayudarme a gestionar mis operaciones de alquiler de maquinaria.</td>
+<td>Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con MaquiGest.</td>
 <td>
-Given que el visitante se encuentra en el Landing Page<br>
-When revisa la sección de funcionalidades<br>
-Then el sistema muestra las principales funcionalidades de MaquiGest<br>
-And presenta una descripción breve de cada funcionalidad
+<b>Given</b> que el visitante accede al Landing Page<br>
+<b>When</b> consulta las funcionalidades principales<br>
+<b>Then</b> el sistema presenta las funcionalidades disponibles
+<br><br>
+<b>Given</b> que el visitante consulta una funcionalidad<br>
+<b>When</b> revisa la información correspondiente<br>
+<b>Then</b> el sistema proporciona una descripción de su propósito
 </td>
 <td>EP08</td>
 </tr>
@@ -1699,11 +1974,15 @@ And presenta una descripción breve de cada funcionalidad
 <tr>
 <td>US32</td>
 <td>Identificar la solución para mi empresa</td>
-<td>Como visitante, quiero identificar cómo MaquiGest puede ayudar según mi tipo de empresa para conocer las funcionalidades relevantes para mis necesidades.</td>
+<td>Como visitante, quiero identificar si MaquiGest se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades.</td>
 <td>
-Given que el visitante accede a la sección orientada a clientes<br>
-When selecciona o visualiza su tipo de empresa<br>
-Then el sistema presenta los beneficios relevantes para empresas de alquiler o empresas constructoras
+<b>Given</b> que el visitante consulta la información dirigida a los segmentos objetivo<br>
+<b>When</b> revisa la información de su tipo de empresa<br>
+<b>Then</b> el sistema presenta los beneficios correspondientes
+<br><br>
+<b>Given</b> que el visitante evalúa sus necesidades<br>
+<b>When</b> compara la información disponible con su tipo de empresa<br>
+<b>Then</b> el sistema proporciona información para determinar la utilidad de MaquiGest
 </td>
 <td>EP08</td>
 </tr>
@@ -1711,39 +1990,99 @@ Then el sistema presenta los beneficios relevantes para empresas de alquiler o e
 <tr>
 <td>US33</td>
 <td>Acceder a la Web Application</td>
-<td>Como visitante, quiero acceder a la Web Application desde el Landing Page para utilizar las funcionalidades de MaquiGest.</td>
+<td>Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de MaquiGest.</td>
 <td>
-Given que el visitante se encuentra en el Landing Page<br>
-When selecciona el CTA para acceder a la plataforma<br>
-Then el sistema redirige al visitante hacia la Web Application
+<b>Given</b> que el visitante se encuentra en el Landing Page<br>
+<b>When</b> solicita acceder a la Web Application<br>
+<b>Then</b> el sistema dirige al visitante hacia la Web Application
+<br><br>
+<b>Given</b> que la Web Application se encuentra disponible<br>
+<b>When</b> el visitante solicita el acceso<br>
+<b>Then</b> el sistema establece correctamente la navegación hacia la plataforma
 </td>
 <td>EP08</td>
 </tr>
 
 <tr>
 <td>US34</td>
-<td>Consultar el Landing Page en diferentes dispositivos</td>
-<td>Como visitante, quiero visualizar correctamente el Landing Page desde diferentes dispositivos para conocer MaquiGest sin importar el dispositivo que utilice.</td>
+<td>Utilizar la plataforma desde dispositivos de diferentes tamaños</td>
+<td>Como usuario, quiero utilizar MaquiGest desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada.</td>
 <td>
-Given que el visitante accede al Landing Page desde un dispositivo<br>
-When navega por sus diferentes secciones<br>
-Then el sistema adapta correctamente el contenido a la resolución de pantalla<br>
-And permite utilizar las funcionalidades de navegación sin pérdida de información
+<b>Given</b> que el usuario accede a MaquiGest desde un dispositivo<br>
+<b>When</b> navega por la plataforma<br>
+<b>Then</b> el sistema adapta el contenido al tamaño de pantalla disponible
+<br><br>
+<b>Given</b> que el usuario accede desde otro tamaño de pantalla<br>
+<b>When</b> utiliza las funcionalidades disponibles<br>
+<b>Then</b> el sistema mantiene la información y funcionalidad sin pérdida de contenido
 </td>
 <td>EP08</td>
 </tr>
 
 <tr>
 <td>US35</td>
-<td>Cambiar el idioma del Landing Page</td>
-<td>Como visitante, quiero cambiar el idioma del Landing Page para consultar la información de MaquiGest en el idioma de mi preferencia.</td>
+<td>Utilizar la plataforma en diferentes idiomas</td>
+<td>Como usuario, quiero utilizar MaquiGest en diferentes idiomas para comprender y utilizar la plataforma.</td>
 <td>
-Given que el visitante accede al Landing Page<br>
-When selecciona un idioma disponible<br>
-Then el sistema muestra el contenido del Landing Page en el idioma seleccionado<br>
-And mantiene la estructura y funcionalidad de la página
+<b>Given</b> que existen idiomas disponibles<br>
+<b>When</b> el usuario selecciona un idioma<br>
+<b>Then</b> el sistema presenta el contenido en el idioma seleccionado
+<br><br>
+<b>Given</b> que el usuario cambia el idioma disponible<br>
+<b>When</b> continúa utilizando la plataforma<br>
+<b>Then</b> el sistema mantiene la información y funcionalidades en el idioma seleccionado
 </td>
 <td>EP08</td>
+</tr>
+
+<tr>
+<td>TS02</td>
+<td>Gestionar perfiles mediante API REST</td>
+<td>Como desarrollador, quiero disponer de recursos REST para consultar y actualizar los perfiles de los usuarios para permitir que la Web Application gestione su información.</td>
+<td>
+<b>Given</b> que existe un perfil registrado<br>
+<b>When</b> el cliente solicita la información del perfil mediante la API<br>
+<b>Then</b> la API devuelve los datos correspondientes
+<br><br>
+<b>Given</b> que el cliente envía información válida para actualizar un perfil<br>
+<b>When</b> la API procesa la solicitud<br>
+<b>Then</b> la API actualiza la información<br>
+<b>And</b> devuelve una respuesta de confirmación
+</td>
+<td>US03</td>
+</tr>
+
+<tr>
+<td>TS01</td>
+<td>Exponer API REST de MaquiGest</td>
+<td>Como desarrollador, quiero disponer de una API REST organizada para exponer los servicios de MaquiGest y permitir que la Web Application consuma las funcionalidades del dominio.</td>
+<td>
+<b>Given</b> que la API se encuentra disponible<br>
+<b>When</b> el cliente realiza una solicitud a un recurso válido<br>
+<b>Then</b> la API procesa la solicitud y devuelve una respuesta HTTP correspondiente<br>
+<b>And</b> los recursos cuentan con una estructura consistente de request/response
+<br><br>
+<b>Given</b> que el cliente realiza una solicitud a un recurso no válido<br>
+<b>When</b> la API procesa la solicitud<br>
+<b>Then</b> la API devuelve una respuesta HTTP de error correspondiente
+</td>
+<td>Transversal</td>
+</tr>
+
+<tr>
+<td>TS10</td>
+<td>Gestionar autenticación y autorización mediante API REST</td>
+<td>Como desarrollador, quiero disponer de mecanismos REST de autenticación y autorización para proteger los recursos de MaquiGest y controlar el acceso según el tipo de usuario.</td>
+<td>
+<b>Given</b> que existe una cuenta registrada<br>
+<b>When</b> el cliente envía credenciales válidas al recurso de autenticación<br>
+<b>Then</b> la API permite iniciar una sesión válida
+<br><br>
+<b>Given</b> que una solicitud intenta acceder a un recurso protegido sin autorización<br>
+<b>When</b> la API procesa la solicitud<br>
+<b>Then</b> la API rechaza la operación
+</td>
+<td>US01, US02, US04, US05</td>
 </tr>
 
 </table>
@@ -1754,47 +2093,57 @@ And mantiene la estructura y funcionalidad de la página
 
 ## 3.3. Product Backlog
 
-El Product Backlog de MaquiGest contiene las historias de usuario identificadas para el desarrollo de la solución. Estas se presentan en orden correlativo según su identificador, desde US01 hasta US35.
+El Product Backlog de MaquiGest contiene las User Stories y Technical Stories identificadas para el desarrollo progresivo de la solución. El orden de los elementos responde principalmente al valor para el negocio y al alcance de las primeras iteraciones del proyecto.
 
-| # Orden | User Story ID | Título | Descripción | Story Points |
-| :---: | :---: | :--- | :--- | :---: |
-| 1 | US01 | Registro de usuario | Como usuario, quiero registrarme en MaquiGest para poder acceder a las funcionalidades de la plataforma. | 5 |
-| 2 | US02 | Inicio de sesión | Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta. | 3 |
-| 3 | US03 | Gestionar perfil | Como usuario, quiero gestionar mi perfil para mantener actualizada mi información. | 3 |
-| 4 | US04 | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta. | 1 |
-| 5 | US05 | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla. | 3 |
-| 6 | US06 | Registrar maquinaria | Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en MaquiGest. | 5 |
-| 7 | US07 | Consultar maquinaria | Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados. | 3 |
-| 8 | US08 | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados. | 3 |
-| 9 | US09 | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles. | 5 |
-| 10 | US10 | Consultar estado de maquinaria | Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual. | 3 |
-| 11 | US11 | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades. | 5 |
-| 12 | US12 | Consultar información de maquinaria | Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler. | 3 |
-| 13 | US13 | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla. | 5 |
-| 14 | US14 | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | 5 |
-| 15 | US15 | Consultar planes | Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece MaquiGest. | 3 |
-| 16 | US16 | Seleccionar plan | Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades. | 3 |
-| 17 | US17 | Gestionar suscripción | Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado. | 5 |
-| 18 | US18 | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas. | 5 |
-| 19 | US19 | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse. | 3 |
-| 20 | US20 | Consultar alquileres activos | Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso. | 3 |
-| 21 | US21 | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de mi solicitud de alquiler para conocer su situación actual. | 3 |
-| 22 | US22 | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria. | 5 |
-| 23 | US23 | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria. | 5 |
-| 24 | US24 | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria. | 3 |
-| 25 | US25 | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria. | 3 |
-| 26 | US26 | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores. | 5 |
-| 27 | US27 | Consultar información de MaquiGest | Como visitante, quiero consultar información de MaquiGest para conocer la solución y su propuesta de valor. | 2 |
-| 28 | US28 | Solicitar demostración | Como visitante, quiero solicitar una demostración para conocer cómo funciona MaquiGest. | 2 |
-| 29 | US29 | Contactar con MaquiGest | Como visitante, quiero contactar con MaquiGest para realizar consultas sobre la solución. | 2 |
-| 30 | US30 | Visualizar propuesta de valor | Como visitante, quiero visualizar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa. | 2 |
-| 31 | US31 | Explorar funcionalidades principales | Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con MaquiGest. | 3 |
-| 32 | US32 | Identificar la solución para mi empresa | Como visitante, quiero identificar si MaquiGest se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades. | 3 |
-| 33 | US33 | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de MaquiGest. | 2 |
-| 34 | US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | Como usuario, quiero utilizar MaquiGest desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada. | 5 |
-| 35 | US35 | Utilizar la plataforma en diferentes idiomas | Como usuario, quiero utilizar MaquiGest en diferentes idiomas para comprender y utilizar la plataforma. | 5 |
+La prioridad se concentra en la presentación de la propuesta de valor mediante la Landing Page y en la definición de las funcionalidades principales de MaquiGest. Las Technical Stories relacionadas con el RESTful API se incorporan como soporte técnico para las funcionalidades que serán implementadas progresivamente en las siguientes iteraciones.
 
-<div style="page-break-before: always;"></div>
+| # Orden | Story ID | Tipo | Título | Descripción | Story Points |
+| :---: | :---: | :---: | :--- | :--- | :---: |
+| 1 | US30 | User Story | Visualizar propuesta de valor | Como visitante, quiero visualizar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa. | 2 |
+| 2 | US31 | User Story | Explorar funcionalidades principales | Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con MaquiGest. | 3 |
+| 3 | US32 | User Story | Identificar la solución para mi empresa | Como visitante, quiero identificar si MaquiGest se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades. | 3 |
+| 4 | US27 | User Story | Consultar información de MaquiGest | Como visitante, quiero consultar información de MaquiGest para conocer la solución y su propuesta de valor. | 2 |
+| 5 | US33 | User Story | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de MaquiGest. | 2 |
+| 6 | US28 | User Story | Solicitar demostración | Como visitante, quiero solicitar una demostración para conocer cómo funciona MaquiGest. | 2 |
+| 7 | US29 | User Story | Contactar con MaquiGest | Como visitante, quiero contactar con MaquiGest para realizar consultas sobre la solución. | 2 |
+| 8 | US34 | User Story | Utilizar la plataforma desde dispositivos de diferentes tamaños | Como usuario, quiero utilizar MaquiGest desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada. | 5 |
+| 9 | US35 | User Story | Utilizar la plataforma en diferentes idiomas | Como usuario, quiero utilizar MaquiGest en diferentes idiomas para comprender y utilizar la plataforma. | 5 |
+| 10 | US11 | User Story | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades. | 5 |
+| 11 | US12 | User Story | Consultar información de maquinaria | Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler. | 3 |
+| 12 | US13 | User Story | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla. | 5 |
+| 13 | US14 | User Story | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | 5 |
+| 14 | US06 | User Story | Registrar maquinaria | Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en MaquiGest. | 5 |
+| 15 | US07 | User Story | Consultar maquinaria | Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados. | 3 |
+| 16 | US08 | User Story | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados. | 3 |
+| 17 | US09 | User Story | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles. | 5 |
+| 18 | US10 | User Story | Consultar estado de maquinaria | Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual. | 3 |
+| 19 | TS03 | Technical Story | Gestionar maquinaria mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar, consultar y actualizar maquinaria para permitir la gestión del inventario desde la Web Application. | 5 |
+| 20 | TS04 | Technical Story | Consultar disponibilidad mediante API REST | Como desarrollador, quiero disponer de un recurso REST para consultar la disponibilidad de maquinaria durante un periodo para que la Web Application pueda mostrar los equipos disponibles. | 5 |
+| 21 | US18 | User Story | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas. | 5 |
+| 22 | US19 | User Story | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse. | 3 |
+| 23 | US20 | User Story | Consultar alquileres activos | Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso. | 3 |
+| 24 | US21 | User Story | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de una solicitud de alquiler para conocer su situación actual. | 3 |
+| 25 | US22 | User Story | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria. | 5 |
+| 26 | TS05 | Technical Story | Gestionar solicitudes de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para crear y consultar solicitudes de alquiler para permitir que las empresas constructoras soliciten maquinaria y consulten sus solicitudes. | 5 |
+| 27 | TS06 | Technical Story | Gestionar reservas y estados de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para gestionar solicitudes, confirmaciones, rechazos y alquileres activos para soportar el ciclo de alquiler de MaquiGest. | 5 |
+| 28 | TS07 | Technical Story | Gestionar entregas y devoluciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar entregas y devoluciones de maquinaria para mantener la trazabilidad del ciclo de alquiler. | 5 |
+| 29 | US23 | User Story | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria. | 5 |
+| 30 | US24 | User Story | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria. | 3 |
+| 31 | US25 | User Story | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria. | 3 |
+| 32 | US26 | User Story | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores. | 5 |
+| 33 | TS08 | Technical Story | Gestionar mantenimiento e incidencias mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar y consultar mantenimientos e incidencias de maquinaria para conservar su historial operativo. | 5 |
+| 34 | US15 | User Story | Consultar planes | Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece MaquiGest. | 3 |
+| 35 | US16 | User Story | Seleccionar plan | Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades. | 3 |
+| 36 | US17 | User Story | Gestionar suscripción | Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado. | 5 |
+| 37 | TS09 | Technical Story | Consultar planes y suscripciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar los planes disponibles y gestionar la información básica de la suscripción para que la Web Application pueda mostrar y administrar estas opciones. | 5 |
+| 38 | US03 | User Story | Gestionar perfil | Como usuario, quiero gestionar mi perfil para mantener actualizada mi información. | 3 |
+| 39 | TS02 | Technical Story | Gestionar perfiles mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar y actualizar los perfiles de los usuarios para permitir que la Web Application gestione su información. | 3 |
+| 40 | TS01 | Technical Story | Exponer API REST de MaquiGest | Como desarrollador, quiero disponer de una API REST organizada para exponer los servicios de MaquiGest y permitir que la Web Application consuma las funcionalidades del dominio. | 5 |
+| 41 | US01 | User Story | Registro de usuario | Como usuario, quiero registrarme en MaquiGest para poder acceder a las funcionalidades de la plataforma. | 5 |
+| 42 | US02 | User Story | Inicio de sesión | Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta. | 3 |
+| 43 | US04 | User Story | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta. | 1 |
+| 44 | US05 | User Story | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla. | 3 |
+| 45 | TS10 | Technical Story | Gestionar autenticación y autorización mediante API REST | Como desarrollador, quiero disponer de mecanismos REST de autenticación y autorización para proteger los recursos de MaquiGest y controlar el acceso según el tipo de usuario. | 5 |
 
 # Capítulo IV: Product Design
 
