@@ -1,0 +1,44 @@
+﻿@startuml "Subscriptions-Frontend-Detailed"
+
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Subscriptions Frontend Component Diagram (DDD Layers)
+
+Container_Ext(backendApi, "MaquiGest Backend API", "Java / Spring Boot", "Exposes subscription, plan and billing-related RESTful services consumed by the Subscriptions frontend")
+
+Container_Boundary(subscriptions, "Subscriptions Frontend Bounded Context") {
+
+    Boundary(presentation, "Presentation") {
+        Component(subscription_plans, "SubscriptionPlansComponent", "Angular Component", "Displays the available MaquiGest subscription plans")
+        Component(current_subscription, "CurrentSubscriptionComponent", "Angular Component", "Displays the organization's current subscription information")
+        Component(subscription_detail, "SubscriptionDetailComponent", "Angular Component", "Displays detailed subscription, plan and billing information")
+        Component(change_plan, "ChangePlanComponent", "Angular Component", "Provides the interface for changing the current subscription plan")
+    }
+
+    Boundary(application, "Application") {
+        Component(subscriptions_application, "subscriptions/application", "Angular Services / Signals", "Coordinates subscription queries, plan changes, subscription state and frontend billing-related use cases")
+    }
+
+    Boundary(domain, "Domain") {
+        Component(subscriptions_domain, "subscriptions/domain/model", "Entities / Value Objects", "Subscription, SubscriptionPlan, BillingPeriod and SubscriptionStatus models and business rules")
+    }
+
+    Boundary(infrastructure, "Infrastructure") {
+        Component(subscriptions_infrastructure, "subscriptions/infrastructure", "HTTP, Resources, Mappers", "Consumes Subscriptions REST endpoints and maps backend resources into frontend subscription models")
+    }
+}
+
+Rel(subscription_plans, subscriptions_application, "Requests available plans")
+Rel(current_subscription, subscriptions_application, "Requests current subscription")
+Rel(subscription_detail, subscriptions_application, "Requests subscription details")
+Rel(change_plan, subscriptions_application, "Requests plan change")
+
+Rel(subscriptions_application, subscriptions_domain, "Holds and applies subscription state and rules")
+Rel(subscriptions_application, subscriptions_infrastructure, "Loads and updates subscription data through")
+
+Rel(subscriptions_infrastructure, subscriptions_domain, "Maps resources into")
+Rel(subscriptions_infrastructure, backendApi, "Consumes Subscriptions REST endpoints", "HTTPS / JSON")
+
+SHOW_LEGEND()
+
+@enduml

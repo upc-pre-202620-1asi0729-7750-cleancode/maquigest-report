@@ -1,0 +1,46 @@
+﻿@startuml "Maintenance-Frontend-Detailed"
+
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Maintenance Frontend Component Diagram (DDD Layers)
+
+Container_Ext(backendApi, "MaquiGest Backend API", "Java / Spring Boot", "Exposes maintenance, inspection, incident and equipment-history RESTful services consumed by the Maintenance frontend")
+
+Container_Boundary(maintenance, "Maintenance Frontend Bounded Context") {
+
+    Boundary(presentation, "Presentation") {
+        Component(maintenance_list, "MaintenanceListComponent", "Angular Component", "Displays scheduled and completed maintenance activities")
+        Component(maintenance_detail, "MaintenanceDetailComponent", "Angular Component", "Displays detailed maintenance information and equipment history")
+        Component(incident_form, "IncidentFormComponent", "Angular Component", "Provides the interface for registering equipment incidents")
+        Component(inspection, "InspectionComponent", "Angular Component", "Provides inspection information and inspection-related interaction")
+    }
+
+    Boundary(application, "Application") {
+        Component(maintenance_application, "maintenance/application", "Angular Services / Signals", "Coordinates maintenance workflows, inspections, incidents, maintenance state and frontend use cases")
+    }
+
+    Boundary(domain, "Domain") {
+        Component(maintenance_domain, "maintenance/domain/model", "Entities / Value Objects", "Maintenance, Inspection, Incident, MaintenanceStatus and equipment-history models and business rules")
+    }
+
+    Boundary(infrastructure, "Infrastructure") {
+        Component(maintenance_infrastructure, "maintenance/infrastructure", "HTTP, Resources, Mappers", "Consumes Maintenance REST endpoints and maps backend resources into frontend maintenance models")
+    }
+}
+
+Rel(maintenance_list, maintenance_detail, "Navigates to")
+
+Rel(maintenance_list, maintenance_application, "Requests maintenance data")
+Rel(maintenance_detail, maintenance_application, "Requests maintenance details")
+Rel(incident_form, maintenance_application, "Registers incident")
+Rel(inspection, maintenance_application, "Manages inspection")
+
+Rel(maintenance_application, maintenance_domain, "Holds and applies maintenance state and rules")
+Rel(maintenance_application, maintenance_infrastructure, "Loads and updates maintenance data through")
+
+Rel(maintenance_infrastructure, maintenance_domain, "Maps resources into")
+Rel(maintenance_infrastructure, backendApi, "Consumes Maintenance REST endpoints", "HTTPS / JSON")
+
+SHOW_LEGEND()
+
+@enduml

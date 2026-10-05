@@ -57,7 +57,14 @@ Proyecto<br>
 
 <span style="display:inline-block; width:120px; text-align:left;">U202410211</span>
 <span style="display:inline-block; width:300px; text-align:left;">Manosalva Tovar, Miroslav</span>
-</p>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202321613</span>
+<span style="display:inline-block; width:300px; text-align:left;">Paredes Chavez, Carlos Augusto</span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202219829</span>
+<span style="display:inline-block; width:300px; text-align:left;">Daga Chávez, Joaquin Leonardo</span>
 
 <br>
 
@@ -74,9 +81,9 @@ Proyecto<br>
 
 ## Registro de Versiones del Informe
 
-| Versión | Fecha |  Autor   |                                                  Descripción de modificación                                                   |
-| :-----: |:-----:|:--------:| :----------------------------------------------------------------------------------------------------------------------------: |
-|   AV1   |       |  Todos   | Se agregó la primera versión del informe, incluyendo carátula, registro de versiones, perfiles del equipo, análisis inicial del problema, artefactos de UX, arquitectura preliminar y evidencias del Sprint 1. |
+| Versión |   Fecha    |  Autor   |                                                  Descripción de modificación                                                   |
+| :-----: |:----------:|:--------:| :----------------------------------------------------------------------------------------------------------------------------: |
+|   AV1   | 19/09/2026 |  Todos   | Se agregó la primera versión del informe, incluyendo carátula, registro de versiones, perfiles del equipo, análisis inicial del problema, artefactos de UX, arquitectura preliminar y evidencias del Sprint 1. |
 
 <div style="page-break-after: always;"></div>
 
@@ -92,8 +99,23 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
 ### Entrega AV1:
 
 #### Participación por integrante:
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-contributors-01.png"
+       alt="Sprint 1 Team Collaboration Evidence - Contributors 01"
+       width="95%">
+</p>
 
-##### Commits en el Project Report:
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-contributors-02(1).png"
+       alt="Sprint 1 Team Collaboration Evidence - Contributors 02"
+       width="95%">
+</p>
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-commits.png"
+       alt="Sprint 1 Team Collaboration Evidence - Commits"
+       width="95%">
+</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -197,10 +219,10 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 
 En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Student Outcome 3.
 
-| Criterio específico | Acciones realizadas | Conclusiones |
-| :--- | :--- | :--- |
-| **Comunica oralmente con efectividad a diferentes rangos de audiencia.** | **Delgado Perez, James Caleb**<br>**AV1:**<br><br>**Montalvo Vasquez, Bruno Rodrigo**<br>**AV1:**<br><br>**Manosalva Tovar, Miroslav**<br>**AV1:** | **AV1:** |
-| **Comunica por escrito con efectividad a diferentes rangos de audiencia.** | **Delgado Perez, James Caleb**<br>**AV1:**<br><br>**Montalvo Vasquez, Bruno Rodrigo**<br>**AV1:**<br><br>**Manosalva Tovar, Miroslav**<br>**AV1:** | **AV1:** |
+| Criterio específico | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| :--- |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Comunica oralmente con efectividad a diferentes rangos de audiencia.** | **Delgado Perez, James Caleb**<br>**AV1: Participé en la coordinación y comunicación de las decisiones tomadas durante el desarrollo de MaquiGest, explicando al equipo los avances relacionados con la propuesta del producto, el diseño de la Landing Page y la arquitectura de software. Asimismo, comuniqué las decisiones adoptadas para la organización del frontend mediante bounded contexts, las capas de Domain-Driven Design y los diagramas C4 de Context, Container y Components, facilitando que los integrantes comprendieran la estructura y responsabilidades de los diferentes componentes de la solución.**<br><br>**Montalvo Vasquez, Bruno Rodrigo**<br>**AV1: Durante el desarrollo de la primera entrega (AV1), lideré y comuniqué las actividades de investigación con usuarios (Needfinding), explicando al equipo la estructuración y el diseño del protocolo de entrevistas aplicadas a los segmentos objetivos. Presenté oralmente los hallazgos cualitativos obtenidos, justificando la definición del Impact Mapping y la derivación de necesidades en User Stories orientadas a generar valor real de negocio. Asimismo, comuniqué y sustenté las decisiones de diseño arquitectónico tomadas para la solución, transmitiendo de forma clara la estructuración de la arquitectura de software a nivel de backend mediante el modelo C4 (Context, Container, Component) y la organización del Product Backlog, asegurando una alineación estratégica del equipo respecto a los límites de dominio y la priorización de requerimientos.**<br><br>**Manosalva Tovar, Miroslav Oscar**<br>**AV1: Durante el desarrollo de la primera entrega de MaquiGest, participé activamente en el trabajo colaborativo del equipo mediante la elaboración y actualización de distintos artefactos correspondientes al proyecto. En el primer capítulo, estuve a cargo del desarrollo del Lean UX Process, incluyendo la definición del Problem Statement, los distintos tipos de Assumptions, la formulación de Hypothesis Statements, la elaboración del Lean UX Canvas y la identificación de los segmentos objetivos de la solución. Asimismo, en el cuarto capítulo desarrollé los Style Guidelines, considerando los General Style Guidelines y Web Style Guide, así como la Information Architecture, abarcando Organization Systems, Labeling Systems, SEO Tags and Meta Tags, Searching Systems y Navigation Systems. Para integrar estas contribuciones con el trabajo del resto del equipo, utilicé el repositorio compartido siguiendo el flujo de trabajo establecido: partiendo de la rama develop, trabajé las secciones asignadas en ramas específicas y posteriormente contribuí a su integración nuevamente en develop. Este proceso permitió mantener separadas las responsabilidades durante el desarrollo, revisar los cambios realizados e integrar progresivamente los aportes de cada integrante. Además, realicé revisiones y modificaciones sobre los artefactos elaborados a partir de observaciones e inconsistencias identificadas durante el trabajo, contribuyendo a la mejora continua de la documentación y al cumplimiento conjunto de los objetivos establecidos para la entrega.** <br><br>**Paredes Chavez, Carlos Augusto**<br>**AV1: Mi participación se centró en comunicar al equipo los resultados obtenidos durante el análisis de competidores y explicar cómo estos hallazgos podían contribuir a la definición y diferenciación de la propuesta de MaquiGest. Presenté las principales características, fortalezas y limitaciones identificadas en las soluciones analizadas, utilizando un lenguaje claro para facilitar su comprensión y aplicación en el proyecto. Asimismo, coordiné con los integrantes la organización del Sprint Backlog en Trello, explicando la distribución de las historias de usuario, su relación con los Epics y el orden establecido según el valor que aportan al negocio. De esta manera, contribuí a que el equipo mantuviera una comprensión compartida del alcance y de las prioridades del producto.**<br><br>**Daga Chávez, Joaquin Leonardo**<br>AV1: Participé en la comunicación y explicación de las decisiones de modelado de dominio y diseño de la solución dentro del equipo. Comuniqué de manera efectiva los hallazgos y la interpretación del análisis de entrevistas (Needfinding), facilitando que los integrantes comprendieran las necesidades de los usuarios. Asimismo, presenté y sustenté los artefactos correspondientes al Big Picture Event Storming y al Design Level Event Storming, explicando el flujo de eventos de dominio, los comandos, los agregados y las responsabilidades del sistema. También comuniqué los conceptos y términos acordados para el Ubiquitous Language, asegurando que todo el equipo mantuviera un vocabulario técnico y de negocio unificado y coherente durante el desarrollo del proyecto MaquiGest.                                                                                                                                                                                                                                                                                                                                                                                                                     | **AV1: El AV1 trató de presentar y explicar el avance del proyecto MaquiGest durante el Sprint 1: la problemática y propuesta de valor, los principales artefactos de UX y Product Design, la arquitectura planteada para la solución y, sobre todo, la primera versión funcional y desplegada de la Landing Page. También implicaba explicar cómo se organizó el trabajo del equipo y cómo se aplicaron herramientas y prácticas como GitFlow, GitHub, diseño en Figma y despliegue. El Statement define el AV1 como un Sprint Review de la semana 4, acompañado por el Final Project Keynote y el reporte individual de desempeño.** |
+| **Comunica por escrito con efectividad a diferentes rangos de audiencia.** | **Delgado Perez, James Caleb**<br>**AV1: Contribuí en la elaboración y mejora de la documentación técnica del proyecto MaquiGest. Desarrollé y documenté artefactos correspondientes al diseño de la Landing Page, incluyendo wireframes y mock-ups, y participé en la elaboración de la arquitectura de software mediante diagramas C4 de Context, Container y Components utilizando PlantUML. Asimismo, documenté la arquitectura frontend considerando los bounded contexts IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions, sus capas Presentation, Application, Domain e Infrastructure, así como los componentes compartidos de Shared Frontend. También participé en la implementación de secciones de la Landing Page, la configuración del despliegue mediante Netlify, el versionamiento con Git y GitHub, y la actualización del informe siguiendo las convenciones y estructura establecidas para el proyecto.**<br><br>**Montalvo Vasquez, Bruno Rodrigo**<br>**AV1: Redacté y documenté rigurosamente los artefactos clave del análisis de usuarios y modelado de dominio en el informe del proyecto. Estructuré la documentación completa del Needfinding, abarcando el diseño de entrevistas, el registro detallado de las entrevistas realizadas y la elaboración del Impact Mapping. Redacté y prioricé las User Stories del Product Backlog aplicando criterios INVEST y el formato estándar del curso. En el ámbito del diseño de software, documenté la arquitectura del backend mediante diagramas C4 (Context, Container y Component) utilizando PlantUML, los diagramas de clases por Bounded Context (IAM, Profiles, Subscriptions, Inventory, Rentals, Maintenance) integrando la descripción narrativa de agregados y value objects, y el diagrama relacional de base de datos (Database Diagram), garantizando la trazabilidad entre las User Stories, el modelo de dominio y la persistencia de datos.**<br><br>**Manosalva Tovar, Miroslav Oscar**<br>**AV1: En relación con la creación de un entorno colaborativo, la planificación de tareas y el cumplimiento de objetivos, mi participación se centró principalmente en actividades vinculadas con Lean UX, diseño e Information Architecture. A partir del análisis del problema abordado por MaquiGest, contribuí a establecer los segmentos objetivos y a estructurar el proceso Lean UX mediante la identificación de assumptions, la formulación de problemas e hipótesis y su posterior síntesis en el Lean UX Canvas, generando así una base que pudiera ser utilizada por el equipo para continuar con otras actividades de UX Research y definición de la solución. Asimismo, contribuí a establecer criterios para mantener una propuesta visual y estructural coherente mediante la documentación de los Style Guidelines y de la Information Architecture de la plataforma, definiendo aspectos relacionados con organización, etiquetado, navegación, búsqueda y elementos orientados al posicionamiento y descripción del contenido web. Estas actividades fueron desarrolladas siguiendo la estructura y los entregables establecidos para el proyecto, manteniendo coordinación con las demás secciones elaboradas por mis compañeros y utilizando el repositorio colaborativo como medio para organizar, documentar e integrar el trabajo. De esta manera, cumplí con las tareas que me fueron asignadas dentro de la planificación del equipo y contribuí a que los distintos artefactos mantuvieran coherencia con los objetivos y características definidas para MaquiGest.**<br><br>**Paredes Chavez, Carlos Augusto**<br>**AV1: Mi desempeño se enfocó en documentar de manera clara y organizada el análisis de competidores de MaquiGest y en estructurar el Sprint Backlog mediante Trello. En el análisis competitivo, registré información relevante sobre las características, propuestas de valor, fortalezas y debilidades de las alternativas existentes, procurando que los resultados fueran comprensibles y útiles para sustentar las decisiones del equipo. Además, organicé las 35 historias de usuario en el tablero de Trello, incorporando sus descripciones, criterios de aceptación, Epics relacionados y orden de prioridad. Esta información fue presentada con una estructura uniforme y coherente, permitiendo mantener la trazabilidad entre los requisitos definidos en el informe y su representación en la herramienta de gestión del proyecto.**<br><br>**Daga Chávez, Joaquin Leonardor**<br> AV1: Contribuí en la documentación formal y rigurosa de los artefactos clave de investigación y modelado estratégico y táctico del proyecto. Redacté y documenté detalladamente el análisis de entrevistas en la sección de Needfinding, así como la estructuración del Ubiquitous Language para unificar el glosario del sistema. En el ámbito del diseño de software, documenté y estructuré formalmente los diagramas y especificaciones de las secciones de 2.4. Big Picture Event Storming y 4.6.1. Design Level Event Storming, detallando los eventos de dominio, comandos, políticas y la organización táctica de los componentes. Toda la documentación fue integrada de manera ordenada en el informe del proyecto utilizando el repositorio de la organización bajo las pautas de control de versiones establecidas. | **AV1: El AV1 trató de documentar formalmente todo ese avance en el informe del proyecto. Debía incluir carátula, registro de versiones, Collaboration Insights, Student Outcome, los capítulos I, II, III y IV, además del Capítulo V con Software Configuration Management y todo el Sprint 1: planificación, backlog, evidencias de desarrollo, ejecución, despliegue y colaboración. También se pedía tener implementada y desplegada la primera versión de la Landing Page.**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 <div style="page-break-after: always;"></div>
 
@@ -241,6 +263,8 @@ Nuestros valores principales son los siguientes:
 | U202115277 | Delgado Perez, James Caleb      | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas | <img src="assets/md-images-members/james-delgado.jpeg" width="150px" /> | Soy estudiante de Ingeniería de Software y me apasiona la creación de productos digitales que simplifiquen procesos y ayuden a las personas a ahorrar tiempo para enfocarse en lo que realmente importa. Me motiva transformar problemas en soluciones prácticas, eficientes y con impacto real. Actualmente estoy fortaleciendo mis conocimientos en C# y tengo experiencia con C++, HTML, CSS, JavaScript y Java, este último desarrollado durante el curso de Diseño y Patrones de Software. Me interesa especialmente el área de frontend, bases de datos y aplicaciones web. Lo que más me motiva de este proyecto es que representa una gran oportunidad para incorporarme al mundo laboral, adquirir nuevos conocimientos y seguir fortaleciendo mi perfil profesional. Además, me considero una persona organizada, que aprende rápido y que trabaja bien en equipo. Fuera del ámbito académico y tecnológico, me gustan los deportes, y también encuentro en la programación y la música una forma de expresión y creatividad. |
 | U202111529 | Montalvo Vasquez, Bruno Rodrigo | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas | <img src="assets/md-images-members/bruno-montalvo.png" width="150px" /> | Soy Bruno Rodrigo Montalvo Vasquez, estudiante de la carrera de Ingeniería de Software. Me encuentro interesado y motivado por aprender nuevos temas relacionados con mi carrera. Asimismo, estoy abierto a trabajar con profesionales de mi área académica para mejorar mis conocimientos, adquirir experiencia y fortalecer mis habilidades de trabajo en equipo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |           
 | U202410211 | Manosalva Tovar, Miroslav       | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas | <img src="assets/md-images-members/miroslav-manosalva.jpeg" width="150px" /> | Soy Miroslav Manosalva Tovar, estudiante de Ingeniería de Software. Tengo conocimientos en el área de programación y experiencia en la elaboración de interfaces de usuario (UI), que puedo aportar al desarrollo de MaquiGest. Mi experiencia trabajando con interfaces me permite contribuir a la presentación de la información y a la organización visual de las funcionalidades de la plataforma. Me considero una persona responsable y persistente: procuro cumplir con las actividades que asumo y mantener el esfuerzo cuando encuentro dificultades. En este proyecto, busco aplicar mis conocimientos de programación y diseño de interfaces, seguir fortaleciendo mi formación y contribuir al desarrollo de una solución útil para sus usuarios. |
+| U202219829 | Daga Chávez, Joaquin Leonardo   | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas | <img src="assets/md-images-members/joaquin-daga.png" width="150px" /> | Soy estudiante de Ingeniería de Software con conocimientos en desarrollo de aplicaciones web, programación y bases de datos. Tengo experiencia trabajando con tecnologías como Java, Spring Boot, JavaScript, Angular y Vue, además de herramientas como Git y GitHub. Me considero una persona responsable, organizada y orientada al aprendizaje continuo. En este proyecto busco aplicar mis conocimientos, fortalecer mis habilidades técnicas y contribuir al trabajo colaborativo del equipo. |
+| U202321613 | Paredes Chávez, Carlos Augusto   | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas | <img src="assets/md-images-members/carlos-paredes.jpeg" width="150px" /> | Soy estudiante de Ingeniería de Software y tengo experiencia en el desarrollo de aplicaciones web, principalmente utilizando HTML, CSS, JavaScript, TypeScript y frameworks modernos. También cuento con conocimientos en bases de datos, control de versiones con Git y GitHub, y desarrollo tanto frontend como backend. Me interesa especialmente crear soluciones digitales funcionales, bien estructuradas y con una buena experiencia de usuario. Me considero una persona constante, responsable y con facilidad para aprender nuevas tecnologías. Busco seguir fortaleciendo mis conocimientos mediante proyectos prácticos que me permitan mejorar mis habilidades técnicas y prepararme para desenvolverme profesionalmente en el área de desarrollo de software. |
 
 ## 1.2. Solution Profile
 
@@ -248,43 +272,63 @@ Nuestros valores principales son los siguientes:
 
 Actualmente, muchas pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción gestionan sus operaciones mediante herramientas dispersas, como hojas de cálculo, documentos físicos, llamadas telefónicas y aplicaciones de mensajería. Aunque estos medios permiten registrar información básica, no proporcionan una visión integrada y actualizada sobre la disponibilidad, ubicación, condición y mantenimiento de cada equipo.
 
-El alquiler de maquinaria comprende distintas actividades que deben mantenerse coordinadas, entre ellas el registro del inventario, la consulta de disponibilidad, la creación de reservas, la elaboración de contratos, el registro de pagos, la programación de entregas, la recepción de devoluciones y la atención de incidencias. Cuando esta información se encuentra distribuida en diferentes medios, aumenta la posibilidad de generar reservas duplicadas, entregar equipos que no están disponibles, perder el seguimiento de los contratos o retrasar los mantenimientos correspondientes.
+El alquiler de maquinaria comprende distintas actividades que deben mantenerse coordinadas, entre ellas el registro del inventario, la consulta de disponibilidad, la creación de reservas, la elaboración de contratos, el registro de pagos, la programación de entregas, la recepción de devoluciones y la atención de incidencias. Cuando esta información se encuentra distribuida en diferentes medios, aumenta la posibilidad de generar reservas duplicadas, asignar equipos que no se encuentran disponibles, perder el seguimiento de los contratos o retrasar los mantenimientos correspondientes.
 
-Esta situación también afecta a las personas que necesitan alquilar maquinaria para remodelaciones, reparaciones u obras personales. La comunicación con las empresas suele realizarse mediante llamadas o mensajes, por lo que el cliente puede tener dificultades para conocer qué equipos están disponibles, cuáles son sus condiciones de alquiler y en qué estado se encuentra su solicitud.
+Esta situación también afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. La comunicación con las empresas proveedoras suele realizarse mediante llamadas telefónicas o aplicaciones de mensajería, lo que puede dificultar la consulta de equipos disponibles, las condiciones de alquiler, los costos y el seguimiento de las reservas o alquileres solicitados. Esta falta de información centralizada puede afectar la planificación de los recursos necesarios para ejecutar sus proyectos.
 
-Existen plataformas orientadas a empresas de alquiler de gran escala; sin embargo, pueden resultar complejas o poco accesibles para negocios pequeños que necesitan organizar sus operaciones sin incorporar sistemas sobredimensionados. En consecuencia, se identifica la necesidad de una solución especializada que centralice el ciclo de alquiler y que pueda ser utilizada tanto por las empresas proveedoras como por las personas interesadas en alquilar los equipos.
+Existen plataformas orientadas a empresas de alquiler de gran escala; sin embargo, estas pueden resultar complejas o poco accesibles para negocios pequeños y medianos que necesitan organizar sus operaciones sin incorporar sistemas sobredimensionados. Asimismo, las pequeñas empresas constructoras y contratistas requieren mecanismos más claros para consultar y gestionar el alquiler de los equipos necesarios para sus proyectos.
 
-MaquiGest abordará esta problemática mediante una plataforma SaaS que permitirá administrar en un único entorno el inventario, la disponibilidad, las reservas, los contratos, los pagos, las entregas, las devoluciones, las incidencias y el mantenimiento. De esta manera, las empresas podrán mantener un mejor control de sus equipos y los clientes podrán realizar sus procesos de alquiler de forma más organizada.
+En consecuencia, se identifica la oportunidad de desarrollar una solución especializada que centralice el ciclo de alquiler y facilite la interacción entre las empresas proveedoras de maquinaria y las organizaciones que requieren alquilar estos equipos.
+
+MaquiGest abordará esta problemática mediante una plataforma SaaS que permitirá administrar en un único entorno el inventario, la disponibilidad, las reservas, los contratos, los pagos, las entregas, las devoluciones, las incidencias y el mantenimiento. De esta manera, las pequeñas y medianas empresas de alquiler podrán mantener un mayor control sobre sus equipos y operaciones, mientras que las pequeñas empresas constructoras y contratistas podrán buscar maquinaria, consultar su disponibilidad, realizar solicitudes de alquiler y dar seguimiento a los equipos requeridos para sus proyectos.
 
 #### 5W & 2H
 
 **Who (¿Quiénes?)**
 
-La problemática afecta principalmente a los propietarios, administradores y trabajadores de pequeñas y medianas empresas dedicadas al alquiler de maquinaria para construcción. También afecta a personas que necesitan alquilar equipos para ejecutar remodelaciones, reparaciones u otros proyectos personales relacionados con la construcción.
+La problemática afecta principalmente a los propietarios, administradores y trabajadores de pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción. También afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala.
 
 **What (¿Qué?)**
 
-El problema principal es la ausencia de una plataforma especializada que permita administrar integralmente el ciclo de alquiler de la maquinaria. La información sobre inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento suele encontrarse distribuida en diferentes herramientas y medios de comunicación.
+El problema principal es la ausencia de una plataforma especializada que permita gestionar de manera integrada el ciclo de alquiler de maquinaria. La información relacionada con inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento suele encontrarse distribuida entre diferentes herramientas y medios de comunicación.
+
+Del lado de las empresas constructoras y contratistas, esta fragmentación también dificulta la búsqueda de equipos, la consulta de disponibilidad, el conocimiento de las condiciones de alquiler y el seguimiento de las solicitudes realizadas.
 
 **Where (¿Dónde?)**
 
-La problemática se presenta en las operaciones internas de las pequeñas y medianas empresas de alquiler y durante la comunicación con sus clientes. Abarca tanto la gestión administrativa del negocio como el seguimiento de los equipos que son entregados para obras de construcción de pequeña escala.
+La problemática se presenta tanto en las operaciones internas de las pequeñas y medianas empresas de alquiler como en la interacción que mantienen con pequeñas empresas constructoras y contratistas.
+
+Abarca la gestión administrativa y operativa del negocio de alquiler, así como los procesos mediante los cuales las empresas constructoras buscan, reservan, reciben, utilizan y devuelven la maquinaria necesaria para sus proyectos.
 
 **When (¿Cuándo?)**
 
-Puede manifestarse durante cualquier etapa del ciclo de alquiler: cuando un cliente consulta la disponibilidad, realiza una reserva, firma un contrato, efectúa un pago, recibe el equipo, comunica una incidencia, devuelve la maquinaria o cuando la empresa debe programar su mantenimiento.
+La problemática puede manifestarse durante cualquier etapa del ciclo de alquiler: cuando una empresa constructora consulta la disponibilidad de un equipo, solicita una reserva, acuerda las condiciones del alquiler, realiza un pago, recibe la maquinaria, comunica una incidencia o efectúa la devolución.
+
+También puede presentarse internamente cuando la empresa de alquiler necesita verificar disponibilidad, preparar una entrega, actualizar el estado de un equipo, registrar una devolución o programar su mantenimiento.
 
 **Why (¿Por qué?)**
 
-La problemática ocurre porque las herramientas utilizadas no se encuentran integradas y requieren que la información sea registrada o comprobada manualmente. Asimismo, muchas soluciones existentes están orientadas a operaciones de mayor escala y pueden resultar excesivamente complejas para pequeñas empresas.
+La problemática ocurre porque muchas de las herramientas utilizadas actualmente no se encuentran integradas y requieren que la información sea registrada, actualizada o comprobada manualmente.
+
+Además, algunas soluciones existentes están orientadas a empresas con operaciones de mayor escala y pueden resultar excesivamente complejas o poco accesibles para pequeñas y medianas empresas que necesitan gestionar sus procesos de alquiler de forma más sencilla.
+
+Por otro lado, las pequeñas empresas constructoras y contratistas suelen depender de llamadas o aplicaciones de mensajería para conocer la disponibilidad y condiciones de los equipos, lo que dificulta contar con información centralizada durante la planificación de sus proyectos.
 
 **How (¿Cómo?)**
 
-Las empresas revisan y actualizan manualmente hojas de cálculo, documentos, llamadas y conversaciones por mensajería para determinar el estado de sus alquileres. Esta forma de trabajo puede producir información desactualizada, registros duplicados, dificultades de coordinación y pérdida de trazabilidad sobre los equipos.
+Las empresas de alquiler revisan y actualizan manualmente hojas de cálculo, documentos, llamadas y conversaciones por mensajería para determinar el estado de sus equipos y alquileres.
+
+De forma paralela, las empresas constructoras y contratistas deben comunicarse directamente con los proveedores para consultar qué maquinaria se encuentra disponible, conocer sus condiciones y realizar seguimiento a sus solicitudes.
+
+Esta forma de trabajo puede producir información desactualizada, registros duplicados, conflictos de disponibilidad, dificultades de coordinación y pérdida de trazabilidad durante el proceso de alquiler.
 
 **How Much (¿Cuánto impacta?)**
 
-El impacto se refleja en el tiempo empleado para comprobar información, los posibles conflictos de disponibilidad, los retrasos en entregas y devoluciones, la inmovilización de equipos que requieren mantenimiento y la pérdida de oportunidades de alquiler. También puede afectar la confianza y satisfacción de los clientes. La dimensión cuantitativa de este impacto se determinará posteriormente mediante las entrevistas y la investigación de los segmentos objetivo.
+El impacto se refleja en el tiempo empleado para comprobar y actualizar información, los posibles conflictos de disponibilidad, los retrasos en las entregas y devoluciones, la inmovilización de equipos que requieren mantenimiento y la pérdida de oportunidades de alquiler.
+
+Para las pequeñas empresas constructoras y contratistas, también puede generar retrasos en la obtención de maquinaria, dificultades para planificar recursos y una mayor dependencia de comunicaciones manuales con los proveedores.
+
+Estas situaciones pueden afectar la eficiencia operativa de ambas partes y la calidad de la relación entre proveedor y cliente. La dimensión cuantitativa del impacto será determinada posteriormente mediante entrevistas, validaciones y la investigación realizada con los segmentos objetivo.
 
 #### Objetivos
 
@@ -326,90 +370,110 @@ El impacto se refleja en el tiempo empleado para comprobar información, los pos
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-La situación actual del sector de alquiler de maquinaria y equipos para pequeñas construcciones se ha centrado principalmente en empresas que gestionan sus operaciones mediante herramientas dispersas como hojas de cálculo, llamadas, mensajes y sistemas independientes, dificultando el control de la disponibilidad, reservas, contratos, entregas, devoluciones y mantenimiento de sus equipos.
+Actualmente, muchas pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción gestionan sus operaciones mediante herramientas dispersas, como hojas de cálculo, documentos, llamadas telefónicas y aplicaciones de mensajería. Esta forma de trabajo dificulta mantener información centralizada y actualizada sobre inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento. Como consecuencia, pueden presentarse conflictos de disponibilidad, registros duplicados, retrasos operativos y pérdida de trazabilidad durante el ciclo de alquiler.
 
-Lo que los productos y servicios existentes no logran abordar completamente es la necesidad de las pequeñas empresas de contar con una solución especializada, sencilla y accesible, que les permita gestionar de manera integral el ciclo de vida de su maquinaria sin enfrentarse a la complejidad de plataformas orientadas a operaciones de mayor escala.
+Esta problemática también afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. Estas empresas suelen depender de comunicaciones directas con los proveedores para consultar la disponibilidad de los equipos, conocer las condiciones de alquiler y realizar seguimiento a sus solicitudes, lo que puede dificultar la planificación de los recursos necesarios para sus proyectos.
 
-Nuestro producto abordará esta brecha mediante una plataforma SaaS especializada en pequeñas empresas de alquiler de maquinaria para construcción, que centralizará en un único lugar la gestión de inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento, permitiendo realizar un seguimiento del equipo durante todo su ciclo de alquiler.
+Aunque existen soluciones digitales orientadas a la gestión del alquiler de maquinaria y equipos, algunas están dirigidas a organizaciones con operaciones de mayor escala y pueden resultar excesivamente complejas o poco accesibles para pequeñas y medianas empresas. Esta situación representa para CleanCode la oportunidad de desarrollar una solución especializada que facilite la gestión del ciclo de alquiler y la interacción entre las empresas proveedoras de maquinaria y las pequeñas empresas constructoras y contratistas que requieren estos equipos.
 
-Nuestro enfoque inicial será pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos utilizados en proyectos de construcción de pequeña escala, que necesitan profesionalizar y organizar sus operaciones sin incorporar herramientas excesivamente complejas.
+MaquiGest abordará esta oportunidad mediante una plataforma SaaS que centralizará la gestión del inventario, disponibilidad, reservas, alquileres, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento. La plataforma permitirá a las empresas de alquiler mantener un mayor control sobre sus equipos y operaciones, mientras que las empresas constructoras y contratistas podrán buscar maquinaria, consultar su disponibilidad, realizar solicitudes y dar seguimiento a sus alquileres.
 
-Sabremos que hemos tenido éxito cuando veamos una adopción recurrente de la plataforma por parte de estas empresas, una reducción de errores relacionados con reservas y disponibilidad, un mayor control sobre el estado de los equipos y un incremento en el uso de funcionalidades como gestión de alquileres y mantenimiento
+El desarrollo de MaquiGest estará sujeto a las restricciones definidas para el proyecto. La solución deberá implementarse como una aplicación web distribuida compuesta por un Landing Page, una Web Application y un RESTful API propio; la lógica del servidor deberá desarrollarse con Java y tecnologías open-source; deberá integrarse al menos un servicio externo; y la interfaz deberá adaptarse a computadoras, tabletas y dispositivos móviles. Debido al alcance del ciclo académico, la primera versión priorizará las funcionalidades relacionadas con inventario, disponibilidad, reservas y alquileres.
 
+Sabremos que MaquiGest está generando valor cuando, durante una etapa inicial de validación, al menos 10 pequeñas y medianas empresas de alquiler utilicen recurrentemente la plataforma para gestionar sus operaciones, se registren al menos 50 equipos con información actualizada sobre su estado y disponibilidad, se gestionen al menos 30 reservas o alquileres mediante la plataforma y al menos 5 pequeñas empresas constructoras o contratistas realicen solicitudes de alquiler utilizando MaquiGest.
+
+Asimismo, se buscará registrar menos de 5 conflictos de disponibilidad o reservas duplicadas durante el período de evaluación. Estos resultados serán analizados mediante las métricas de uso de la plataforma, los registros de las operaciones realizadas y las validaciones efectuadas con los segmentos objetivo.
 #### 1.2.2.2. Lean UX Assumptions
 
 **Business Assumptions:**
-* Creemos que las pequeñas y medianas empresas de alquiler de equipo necesitan una solución digital especializada para gestionar sus operaciones de alquiler.
 
-* Creemos que las pequeñas empresas de construcción están dispuestas a utilizar una plataforma digital para buscar, reservar y gestionar el alquiler de equipo de construcción.
+- Creemos que las pequeñas y medianas empresas dedicadas al alquiler de maquinaria para construcción presentan dificultades para mantener actualizada y centralizada la información sobre inventario, disponibilidad, reservas, alquileres y mantenimiento cuando utilizan hojas de cálculo, documentos, llamadas y aplicaciones de mensajería.
 
-* Creemos que las empresas de alquiler de equipo están dispuestas a pagar una suscripción mensual de SaaS por una plataforma que centralice y simplifique sus operaciones de alquiler.
+- Creemos que estas empresas estarían dispuestas a reemplazar parte de sus procesos manuales por una plataforma web si esta les permite centralizar la información y reducir problemas relacionados con disponibilidad, seguimiento y duplicidad de registros.
 
-* Creemos que un modelo de suscripción de tres niveles puede adaptarse a las diferentes necesidades operativas y niveles de crecimiento de las pequeñas y medianas empresas de alquiler de equipo.
+- Creemos que las empresas de alquiler estarían dispuestas a pagar una suscripción mensual por MaquiGest si perciben que la plataforma reduce el tiempo requerido para gestionar sus operaciones y facilita el control de sus equipos.
+
+- Creemos que un modelo de suscripción con diferentes niveles puede adaptarse a empresas con distintos tamaños de inventario y necesidades operativas, siempre que cada plan ofrezca funcionalidades y capacidades diferenciadas.
+
+- Creemos que existe una oportunidad para una solución especializada en pequeñas y medianas empresas frente a plataformas de alquiler orientadas a organizaciones con operaciones de mayor escala o complejidad.
 
 **Business Outcome Assumptions:**
 
-* Creemos que MaquiGest logrará un número cada vez mayor de empresas de alquiler que paguen por el servicio gracias a la adopción de su plataforma SaaS.
+- Creemos que la adopción de MaquiGest podrá evidenciarse mediante un crecimiento en el número de empresas que registran maquinaria y utilizan recurrentemente las funcionalidades de disponibilidad, reservas y alquileres.
 
-* Creemos que MaquiGest  logrará una alta tasa de retención de clientes al brindar valor continuo a las empresas de alquiler de equipos.
+- Creemos que las empresas continuarán utilizando MaquiGest si experimentan una reducción de problemas relacionados con reservas duplicadas, información desactualizada y desconocimiento del estado de sus equipos.
 
-* Creemos que MaquiGest aumentará la adopción de planes de suscripción de mayor nivel a medida que las empresas de alquiler amplíen su inventario y sus necesidades operativas.
+- Creemos que el uso frecuente de las funcionalidades de inventario, reservas, alquileres y mantenimiento será un indicador de que MaquiGest está siendo incorporado dentro de las operaciones habituales de las empresas.
 
-* Creemos que la participación de las empresas de construcción aumentará el número de transacciones de alquiler gestionadas a través de la plataforma.
+- Creemos que algunas empresas estarán dispuestas a migrar hacia planes de mayor nivel cuando aumenten la cantidad de equipos gestionados o necesiten funcionalidades adicionales.
+
+- Creemos que la participación de pequeñas empresas constructoras y contratistas incrementará la cantidad de solicitudes y operaciones de alquiler gestionadas mediante la plataforma.
 
 **User Assumptions:**
 
-* Creemos que los propietarios y administradores de pequeñas y medianas empresas de alquiler de equipos son usuarios clave que necesitan supervisar el inventario, los alquileres, los ingresos y el mantenimiento de los equipos.
+- Creemos que los propietarios y administradores de pequeñas y medianas empresas de alquiler necesitan conocer el estado, ubicación, disponibilidad y condición de sus equipos para organizar sus operaciones.
 
-* Creemos que los operadores de alquiler son responsables de gestionar las reservaciones, los contratos, las entregas de equipo, las devoluciones y los incidentes.
+- Creemos que los trabajadores responsables de gestionar los alquileres necesitan consultar y actualizar reservas, contratos, entregas, devoluciones e incidencias sin depender de información distribuida entre diferentes herramientas.
 
-* Creemos que los gerentes de compras o los jefes de obra en pequeñas empresas constructoras son responsables de buscar y alquilar el equipo necesario para sus proyectos.
+- Creemos que las pequeñas empresas constructoras y contratistas necesitan encontrar maquinaria disponible en función de los requerimientos y fechas de sus proyectos.
 
-* Creemos que las empresas constructoras necesitan conocer la disponibilidad del equipo, las condiciones de alquiler y las fechas de devolución al gestionar sus proyectos.
+- Creemos que los responsables de gestionar el alquiler de maquinaria dentro de empresas constructoras necesitan conocer con anticipación la disponibilidad, características, costos y condiciones de los equipos antes de realizar una solicitud.
+
+- Creemos que las empresas constructoras y contratistas necesitan realizar seguimiento a sus reservas y alquileres para coordinar adecuadamente la recepción, utilización y devolución de la maquinaria.
 
 **User Outcome and Benefit Assumptions:**
 
-* Creemos que los administradores de las empresas de alquiler desean conocer rápidamente el estado, la ubicación y la disponibilidad de cada equipo para poder tomar mejores decisiones operativas.
+- Creemos que los administradores de empresas de alquiler podrán tomar mejores decisiones operativas si pueden identificar rápidamente qué equipos están disponibles, reservados, alquilados o en mantenimiento.
 
-* Creemos que los operadores de alquiler desean gestionar de manera eficiente las reservaciones, entregas y devoluciones para reducir los errores operativos y ahorrar tiempo.
+- Creemos que los trabajadores responsables de las operaciones de alquiler podrán reducir errores y tiempo de coordinación si la información sobre reservas, entregas y devoluciones se mantiene actualizada en un único sistema.
 
-* Creemos que los administradores de empresas de alquiler desean monitorear el estado de los equipos y el historial de mantenimiento para maximizar la disponibilidad y la vida útil de los mismos.
+- Creemos que disponer de un historial de incidencias y mantenimiento permitirá a las empresas identificar equipos que necesitan inspección o reparación antes de volver a ofrecerlos en alquiler.
 
-* Creemos que los gerentes de construcción desean encontrar rápidamente equipos adecuados y disponibles para obtener a tiempo los recursos necesarios para sus proyectos.
+- Creemos que las pequeñas empresas constructoras y contratistas podrán encontrar con mayor rapidez la maquinaria requerida si pueden consultar equipos mediante criterios como categoría, disponibilidad y características.
 
-* Creemos que las empresas constructoras desean contar con información clara sobre las condiciones de alquiler, los costos y las fechas de devolución para planificar mejor los recursos y gastos de sus proyectos.
+- Creemos que disponer de información clara sobre costos, condiciones y fechas de alquiler permitirá a las empresas constructoras planificar mejor los recursos y gastos asociados a sus proyectos.
+
+- Creemos que la posibilidad de consultar el estado de una reserva o alquiler reducirá la dependencia de llamadas y mensajes para realizar seguimiento a las solicitudes.
 
 **Feature Assumptions:**
 
-* Creemos que las empresas de alquiler necesitan un módulo de administración de inventario para registrar el equipo, sus características, ubicación, estado y disponibilidad.
+- Creemos que un módulo de inventario que permita registrar características, ubicación, condición y estado de disponibilidad facilitará a las empresas conocer la situación actual de cada equipo.
 
-* Creemos que las empresas de alquiler necesitan un sistema de reservaciones que verifique automáticamente la disponibilidad de los equipos y evite que se superpongan las reservaciones.
+- Creemos que un sistema de reservas que compruebe la disponibilidad antes de confirmar una solicitud ayudará a evitar la asignación de un mismo equipo a alquileres incompatibles.
 
-* Creemos que las empresas de alquiler necesitan un módulo integrado de gestión de alquileres para administrar contratos, tarifas, pagos, entregas y devoluciones.
+- Creemos que un módulo de gestión de alquileres que integre contratos, tarifas, pagos, entregas y devoluciones facilitará el seguimiento del proceso desde la reserva hasta la devolución del equipo.
 
-* Creemos que las empresas de alquiler necesitan un módulo de gestión de mantenimiento para registrar inspecciones, incidentes, reparaciones, costos y mantenimiento programado.
+- Creemos que un módulo de mantenimiento con historial de inspecciones, incidencias, reparaciones y mantenimientos programados permitirá identificar equipos que temporalmente no deberían encontrarse disponibles para alquiler.
 
-* Creemos que las empresas constructoras necesitan una interfaz de búsqueda y alquiler de equipos para encontrar la maquinaria adecuada, verificar la disponibilidad y solicitar alquileres de acuerdo con los requisitos de sus proyectos.
+- Creemos que una interfaz de búsqueda permitirá a las empresas constructoras y contratistas localizar maquinaria adecuada según las necesidades de sus proyectos.
 
-* Creemos que las empresas constructoras necesitan una interfaz de seguimiento de alquileres para monitorear sus alquileres activos, los períodos de alquiler, los costos y las fechas de devolución
+- Creemos que una funcionalidad para consultar disponibilidad permitirá a las empresas constructoras evaluar si un equipo puede ser utilizado durante las fechas requeridas antes de realizar una solicitud.
+
+- Creemos que una sección de seguimiento de reservas y alquileres permitirá a las empresas constructoras consultar el estado de sus solicitudes, períodos de alquiler, costos y fechas previstas de devolución.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-* Creemos que lograremos una mayor retención de clientes si los administradores de las empresas de alquiler pueden conocer rápidamente el estado, la ubicación y la disponibilidad de su equipo mediante un módulo centralizado de gestión de inventario.
+* Creemos que lograremos incrementar el uso recurrente de MaquiGest si los administradores de pequeñas y medianas empresas de alquiler pueden conocer rápidamente el estado, ubicación, condición y disponibilidad de sus equipos mediante un módulo centralizado de gestión de inventario.
 
-* Creemos que lograremos una mayor satisfacción y retención de los clientes si las empresas de alquiler pueden gestionar de manera eficiente las reservaciones y evitar conflictos de disponibilidad mediante un sistema automatizado de gestión de reservaciones.
+* Creemos que lograremos disminuir los conflictos de disponibilidad y reservas duplicadas si los trabajadores responsables de las operaciones de alquiler pueden confirmar una reserva con mayor seguridad al conocer previamente la disponibilidad del equipo mediante un sistema de gestión de reservas con validación de disponibilidad.
 
-* Creemos que aumentaremos el número de transacciones de alquiler completadas si los operadores de alquiler pueden gestionar los contratos, los pagos, las entregas y las devoluciones en un solo lugar mediante un módulo integrado de gestión de alquileres.
+* Creemos que lograremos incrementar la cantidad de operaciones de alquiler gestionadas mediante MaquiGest si los trabajadores de las empresas de alquiler pueden realizar el seguimiento del proceso de alquiler desde su formalización hasta la devolución del equipo mediante un módulo integrado de gestión de alquileres que centralice contratos, tarifas, pagos, entregas y devoluciones.
 
-* Creemos que podremos aumentar la utilización de los equipos y reducir el tiempo de inactividad operativa si los administradores de las empresas de alquiler pueden monitorear de manera proactiva el estado y las necesidades de mantenimiento de sus equipos mediante un módulo de gestión de mantenimiento.
+* Creemos que lograremos incrementar la trazabilidad de los equipos durante los alquileres si los trabajadores de las empresas de alquiler pueden registrar y consultar los problemas ocurridos durante su utilización mediante una funcionalidad de gestión de incidencias.
 
-* Creemos que aumentaremos el número de transacciones de alquiler gestionadas a través de MaquiGest si los gerentes de construcción pueden encontrar rápidamente el equipo adecuado y disponible para sus proyectos mediante una interfaz de búsqueda y alquiler de equipo.
+* Creemos que lograremos disminuir la cantidad de equipos que permanecen fuera de operación debido a mantenimientos no atendidos si los administradores de las empresas de alquiler pueden identificar oportunamente los equipos que requieren inspección o reparación mediante un módulo de mantenimiento con historial y programación de intervenciones.
 
-* Creemos que lograremos aumentar la retención de usuarios entre las empresas de construcción si los gerentes de obra pueden monitorear fácilmente sus alquileres activos, los costos y las fechas de devolución mediante una interfaz de seguimiento de alquileres.
+* Creemos que lograremos incrementar la cantidad de solicitudes de alquiler realizadas mediante MaquiGest si los responsables de pequeñas empresas constructoras y contratistas pueden encontrar con mayor rapidez maquinaria adecuada para sus proyectos mediante una interfaz de búsqueda con filtros por categoría y características.
+
+* Creemos que lograremos disminuir las solicitudes realizadas sobre equipos no disponibles si los responsables de pequeñas empresas constructoras y contratistas pueden verificar si la maquinaria estará disponible durante las fechas requeridas mediante una funcionalidad de consulta de disponibilidad.
+
+* Creemos que lograremos incrementar la cantidad de solicitudes de alquiler iniciadas mediante la plataforma si los responsables de pequeñas empresas constructoras y contratistas pueden evaluar con mayor facilidad si un equipo responde a las necesidades y presupuesto de su proyecto mediante una vista que muestre características, costos y condiciones de alquiler.
+
+* Creemos que lograremos incrementar el uso recurrente de MaquiGest por parte de pequeñas empresas constructoras y contratistas si sus responsables pueden conocer fácilmente el estado y las fechas relevantes de sus reservas y alquileres mediante una interfaz de seguimiento de alquileres.
 
 #### 1.2.2.4. Lean UX Canvas
 
-<img src = "assets/md-images-lean_ux_canva/CLEANCODE_MaquiGest.png" width="800px">
+<img src = "assets/md-images-lean_ux_canva/MaquiGestCleanCodeCanva.png" width="800px">
 
 ## 1.3. Segmentos objetivo
 
@@ -434,6 +498,8 @@ Pequeñas empresas constructoras y contratistas que necesitan alquilar maquinari
 * Aspectos psicográficos:
   - Comportamiento: Prefieren procesos de solicitud simples y rápidos.
   - Motivación: reducir costos y evitar retrasos en sus proyectos.
+
+<div style="page-break-before: always;"></div>
 
 # Capítulo II: Requirements Elicitation & Analysis
 
@@ -961,7 +1027,169 @@ Sonia Gutiérrez trabaja en una empresa inmobiliaria ubicada en San Juan de Mira
 **Resumen:**  
 Ana Rivera Quispe se dedica a la administración de pequeñas empresas dedicadas a la construcción de pequeños edificios, departamentos y casas. Requieren alquilar maquinaria con mucha frecuencia debido a la demanda de sus obras. Actualmente, buscan proveedores principalmente mediante redes sociales por ser un canal más rápido y confirman la disponibilidad conversando directamente con la persona encargada. La principal condición que evalúan antes de alquilar es que las máquinas se encuentren en buenas condiciones de operatividad. Señala que el mayor obstáculo y la parte que les toma más tiempo en todo el proceso es lograr comunicarse y conversar directamente con la persona indicada o el propietario de la máquina. Valora de forma positiva la propuesta del aplicativo centralizado, destacando que les permitiría encontrar los equipos adecuados de manera mucho más rápida.
 
-### 2.2.3. Análisis de entrevistas
+#### 2.2.3. Análisis de entrevistas
+
+### Primera entrevista - Pedro González (Segmento 1)
+
+La entrevista con Pedro González, contratista de una empresa de El Salvador dedicada al alquiler de maquinaria pesada, permitió conocer que actualmente gestionan sus alquileres principalmente mediante documentación y correos electrónicos. La empresa trabaja con maquinaria como tractores, camiones y mezcladoras.
+
+Para controlar el estado de las máquinas antes de entregarlas, realizan una revisión mediante fotografías y escaneo. La entrevista permitió identificar la necesidad de contar con una plataforma centralizada que facilite la gestión de máquinas, reservas, devoluciones y mantenimiento.
+
+#### Hallazgos importantes
+
+* El proceso actual de gestión se basa principalmente en documentación y correos electrónicos, lo que puede dificultar tener una visión centralizada del estado y disponibilidad de las máquinas.
+* La empresa necesita controlar qué maquinaria está disponible, alquilada o fuera de servicio para evitar problemas durante las reservas.
+* Antes de entregar una máquina, realizan una revisión mediante fotografías y escaneo para comprobar que salga en buenas condiciones.
+* Existe una necesidad de registrar y conservar evidencias del estado de cada equipo.
+* También resulta importante controlar posibles daños o fallas durante la devolución y relacionarlos con el historial de cada máquina.
+* La propuesta de una plataforma que centralice las reservas, disponibilidad, devolución y mantenimiento resulta pertinente para este tipo de empresas, especialmente para pequeñas y medianas empresas de alquiler de maquinaria.
+* La entrevista quedó incompleta, ya que el entrevistado no llegó a responder las preguntas sobre cuál es la principal dificultad del proceso, qué parte genera más problemas, su valoración concreta de la plataforma y qué aspecto mejoraría prioritariamente.
+
+### Segunda entrevista - Carlos Rodríguez (Segmento 1)
+
+La entrevista con Carlos Rodríguez, de 51 años, técnico mecánico y dedicado al alquiler de camiones en San Juan de Miraflores, permitió conocer que actualmente administra junto con su esposa una flota de cinco camiones utilizando principalmente un cuaderno de apuntes. Los alquileres se coordinan mediante llamadas telefónicas y registran manualmente dónde se encuentra cada vehículo, quién lo tiene alquilado y cuándo debe regresar al taller.
+
+Esta forma de gestión ha generado problemas de control, como reservas duplicadas cuando ambos coordinan con clientes diferentes. También presentan dificultades cuando los camiones sufren fallas durante los viajes, ya que deben realizar auxilios, reparaciones y mantenimientos antes de volver a alquilarlos.
+
+El entrevistado consideró que el aplicativo propuesto sería muy útil porque permitiría centralizar y automatizar el control, reducir tiempos y mejorar la precisión de la información.
+
+#### Hallazgos importantes
+
+* **Gestión actual:** utilizan un cuaderno para registrar camiones, clientes, ubicaciones, alquileres y retornos.
+* **Proceso de alquiler:** los clientes se comunican principalmente por teléfono con Carlos o su esposa.
+* **Problema de disponibilidad:** han tenido reservas duplicadas porque ambos pueden comprometer el mismo camión con clientes diferentes.
+* **Baja fluidez:** algunos camiones permanecen varios días sin alquilarse porque esperan llamadas de clientes.
+* **Fallos y devoluciones:** cuando un camión presenta problemas, debe regresar al taller para revisión y reparación antes de volver a estar disponible.
+* **Mantenimiento:** se realiza según los viajes y se registra manualmente en el cuaderno.
+* **Mayor dificultad:** las fallas durante la ruta generan problemas y requieren realizar auxilios, lo que consume bastante tiempo.
+* **Aceptación de la solución:** considera que el aplicativo permitiría tener un mejor control de todo el proceso, reemplazando los apuntes manuales por una gestión más práctica y automática.
+* **Necesidad principal identificada:** centralizar la disponibilidad, reservas, mantenimiento, ubicación y estado de los camiones para evitar errores y ahorrar tiempo.
+
+---
+
+### Tercera entrevista - Sonia Gutiérrez (Segmento 2)
+
+La entrevista muestra que una empresa inmobiliaria ubicada en San Juan de Miraflores necesita alquilar maquinaria aproximadamente cada 15 días para sus proyectos. Actualmente buscan proveedores por internet y deben comunicarse individualmente con cada uno para verificar la disponibilidad, el precio y las características de las máquinas.
+
+Una de las principales dificultades es encontrar equipos adecuados según el tamaño, peso y capacidad de carga que requieren, además de asegurarse de que estén completamente operativos. También señalaron que el proceso de búsqueda consume tiempo porque deben revisar diferentes páginas y proveedores por separado.
+
+La persona entrevistada consideró muy útil la plataforma propuesta, ya que permitiría encontrar en un solo lugar las máquinas disponibles, evitando buscar proveedor por proveedor.
+
+#### Hallazgos importantes
+
+* **Frecuencia de alquiler:** aproximadamente cada 15 días.
+* **Búsqueda actual:** utilizan internet para encontrar proveedores y luego contactan directamente con ellos.
+* **Información indispensable:** principalmente precio, capacidad de carga, peso que soporta y características de la maquinaria.
+* **Principal dificultad:** encontrar una máquina con el tamaño y capacidad adecuados para proyectos inmobiliarios y que esté 100 % operativa.
+* **Problema de disponibilidad:** han tenido ocasiones en las que necesitaban maquinaria, pero el proveedor ya tenía el equipo ocupado.
+* **Mayor pérdida de tiempo:** revisar diferentes páginas y consultar a los proveedores uno por uno.
+* **Necesidad identificada:** contar con una plataforma que reúna todas las maquinarias disponibles y sus proveedores en un solo lugar.
+* **Validación de la idea:** la propuesta fue considerada muy buena y útil, principalmente porque reduciría el tiempo de búsqueda y facilitaría la comparación de opciones.
+* **Funcionalidad clave:** mostrar claramente la disponibilidad y las especificaciones técnicas de cada máquina, especialmente su capacidad de carga.
+
+---
+
+### Cuarta entrevista - Giovanni Mena Zuleta (Segmento 2)
+
+La entrevista con Giovanni Mena Zuleta, de 49 años, administrador de maquinaria y de subconstrucción en San Juan de Lurigancho, permitió identificar que su empresa trabaja principalmente en obras de áreas verdes, parques y pistas, por lo que necesita alquilar maquinaria con mucha frecuencia.
+
+Actualmente buscan equipos mediante anuncios de internet y publicidad, y verifican la disponibilidad coordinando directamente con el encargado del alquiler. Una de sus principales dificultades es encontrar rápidamente proveedores y máquinas en buenas condiciones, ya que algunos equipos están en mal estado o ya fueron alquilados.
+
+El proceso de búsqueda mediante publicidad les genera pérdida de tiempo. El entrevistado consideró útil la plataforma propuesta porque facilitaría encontrar maquinaria, ahorrar tiempo y mejorar la coordinación entre la empresa y los proveedores.
+
+#### Hallazgos importantes
+
+* **Frecuencia de alquiler:** necesitan maquinaria muy frecuentemente debido a sus actividades.
+* **Tipo de proyectos:** áreas verdes, parques y pistas.
+* **Búsqueda actual:** anuncios en internet y otros medios publicitarios.
+* **Verificación de disponibilidad:** coordinan directamente con el encargado del alquiler.
+* **Información importante:** que la maquinaria esté en buenas condiciones y operativa para el trabajo.
+* **Principal dificultad:** localizar rápidamente al responsable del alquiler y encontrar equipos disponibles.
+* **Problemas de disponibilidad:** algunas máquinas ya estaban alquiladas y otras no se encontraban en buenas condiciones.
+* **Mayor pérdida de tiempo:** buscar mediante anuncios y publicidad en internet.
+* **Necesidad identificada:** facilitar la búsqueda y el contacto con proveedores desde un solo lugar.
+* **Validación de la plataforma:** considera que sería factible y útil, principalmente porque permitiría ahorrar tiempo durante el proceso de alquiler.
+* **Funcionalidad clave:** facilitar la comunicación y coordinación entre el cliente y el proveedor.
+
+---
+
+### Quinta entrevista - Carmen Glosada (Segmento 1)
+
+La entrevista con Carmen Glosada Paredes, de 51 años, administradora de una pequeña empresa de alquiler de camiones en San Juan de Lurigancho, permitió identificar que actualmente gestiona los alquileres mediante redes sociales y utiliza una base de datos en Excel para controlar la disponibilidad de sus unidades.
+
+A pesar de contar con este registro, han tenido problemas de control, incluyendo casos en los que una misma maquinaria fue alquilada a dos clientes. Cuando una unidad es entregada, elaboran un documento que registra que se encuentra en buenas condiciones y establece una penalidad en caso de daños durante la devolución.
+
+El mantenimiento y la disponibilidad también se controlan mediante Excel. La entrevistada señaló que el trámite del alquiler es una de las partes más tediosas del proceso y consideró que una plataforma centralizada sería útil porque podría facilitar la gestión y generar más oportunidades de alquiler.
+
+#### Hallazgos importantes
+
+* **Gestión actual:** la propietaria administra personalmente los alquileres.
+* **Contacto con clientes:** los clientes llegan principalmente mediante redes sociales.
+* **Control de disponibilidad:** utilizan una base de datos en Excel.
+* **Problema crítico:** han ocurrido reservas duplicadas de una misma maquinaria para dos clientes.
+* **Control de daños:** antes de entregar la maquinaria elaboran un documento que registra su buen estado y establece una penalidad por daños al devolverla.
+* **Mantenimiento:** actualmente también se controla mediante la base de datos.
+* **Principal dificultad:** el trámite y proceso del alquiler resulta tedioso.
+* **Necesidad identificada:** centralizar y simplificar el proceso completo, desde la reserva hasta la devolución y mantenimiento.
+* **Validación de la plataforma:** considera que sería útil porque podría facilitar la gestión y permitir más salidas de alquileres.
+
+---
+
+### Sexta entrevista - Ana Rivera (Segmento 1)
+
+La entrevista con Ana Rivera Quispe, de 36 años, administradora de pequeñas empresas en Los Olivos, permitió identificar que su empresa se dedica a la construcción de pequeños edificios, departamentos y casas, por lo que requiere maquinaria con frecuencia.
+
+Actualmente buscan equipos principalmente mediante redes sociales y verifican su disponibilidad comunicándose directamente con la persona encargada. La principal dificultad identificada es encontrar y contactar rápidamente a la persona indicada para gestionar el alquiler.
+
+Hasta el momento no han tenido problemas con la disponibilidad, entrega, uso o devolución de las máquinas. La entrevistada considera que una plataforma centralizada sería útil porque permitiría encontrar más rápidamente la maquinaria adecuada y facilitar el contacto con el propietario.
+
+#### Hallazgos importantes
+
+* **Tipo de proyectos:** construcción de pequeños edificios, departamentos y casas.
+* **Frecuencia de alquiler:** requieren maquinaria con bastante frecuencia.
+* **Búsqueda actual:** utilizan principalmente redes sociales porque consideran que es más rápido.
+* **Verificación de disponibilidad:** deben comunicarse directamente con la persona encargada.
+* **Información importante:** que la maquinaria se encuentre en buenas condiciones.
+* **Principal dificultad:** localizar y comunicarse con la persona indicada o propietaria de la máquina.
+* **Problemas de disponibilidad:** hasta el momento no han tenido casos en los que no consiguieran una máquina cuando la necesitaban.
+* **Entrega, uso y devolución:** tampoco han experimentado problemas hasta ahora.
+* **Mayor pérdida de tiempo:** establecer comunicación con el propietario o responsable de la maquinaria.
+* **Necesidad identificada:** facilitar la búsqueda y el contacto directo con los proveedores.
+* **Validación de la plataforma:** considera que sería útil para encontrar más rápidamente las máquinas indicadas y centralizar la información.
+
+#### Análisis general de entrevistas
+
+Se entrevistaron **6 personas/empresas vinculadas al alquiler o uso de maquinaria**. Los principales hallazgos identificados fueron los siguientes:
+
+### Gestión y búsqueda de maquinaria
+
+El principal problema identificado corresponde a la **gestión y búsqueda de maquinaria**, ya que **5 de 6 entrevistados (83%)** mencionaron dificultades relacionadas con encontrar proveedores, contactar a la persona encargada, verificar disponibilidad o gestionar el alquiler.
+
+Además, **4 de 6 entrevistados (67%)** utilizan herramientas manuales o poco centralizadas, como **cuadernos, Excel, documentación y llamadas**, mientras que **2 de 6 (33%)** dependen principalmente de **internet y redes sociales** para encontrar maquinaria.
+
+### Disponibilidad y reservas
+
+Un problema relevante para MaquiGest es el **control de disponibilidad y reservas**. **2 de 6 entrevistados (33%)** reportaron directamente problemas relacionados con **reservas duplicadas o falta de disponibilidad**, incluyendo casos en los que una misma máquina fue comprometida con dos clientes.
+
+Por otro lado, **4 de 6 entrevistados (67%)** señalaron como una necesidad importante poder conocer o verificar que la maquinaria se encuentre **disponible y en buenas condiciones** antes de realizar el alquiler.
+
+### Mantenimiento y condición de la maquinaria
+
+En relación con el mantenimiento y estado de las máquinas, **3 de 6 entrevistados (50%)** mencionaron explícitamente problemas o procesos relacionados con **fallas, reparaciones, mantenimiento o condiciones de la maquinaria**.
+
+Entre los casos mencionados se encuentran devoluciones con fallas, mantenimientos periódicos y la necesidad de comprobar que el equipo se encuentre operativo antes de realizar un alquiler.
+
+### Tiempo de búsqueda y coordinación
+
+Respecto al proceso de búsqueda, **4 de 6 entrevistados (67%)** identificaron la **búsqueda, comunicación o coordinación con proveedores** como una actividad que consume tiempo.
+
+Los entrevistados señalaron que deben buscar proveedor por proveedor, revisar anuncios, realizar llamadas o comunicarse directamente con los responsables para confirmar la disponibilidad de la maquinaria.
+
+### Aceptación de una plataforma como MaquiGest
+
+Finalmente, **6 de 6 entrevistados (100%)** mostraron una **respuesta favorable hacia una plataforma como MaquiGest**. Entre los principales beneficios mencionados se encuentran la posibilidad de **centralizar información, conocer la disponibilidad, reducir tiempos, mejorar el control y simplificar el proceso de alquiler**.
+
+En conjunto, los resultados evidencian oportunidades de mejora principalmente en la **búsqueda y gestión de maquinaria, control de disponibilidad, coordinación con proveedores y seguimiento del estado de los equipos**.
 
 ## 2.3. Needfinding
 
@@ -1013,9 +1241,35 @@ El user persona se construyó a partir de patrones encontrados en las entrevista
 
 ![Empathy Map](./assets/md-images-chapter2/empathy-map2.png)
 
-## 2.4. Big Picture Event Storming
+### 2.4. Big Picture Event Storming
+
+El Big Picture Event Storming permitió identificar y representar los principales eventos del dominio de MaquiGest, mostrando de manera general el flujo del negocio desde el registro de la maquinaria hasta su devolución, inspección y mantenimiento.
+
+La siguiente imagen presenta el resultado del Big Picture Event Storming realizado para el proyecto:
+
+![Big Picture Event Storming de MaquiGest](assets/md-images-chapter2/big-picture-event-storming.png)
+
 
 ## 2.5. Ubiquitous Language
+
+A continuación, se presenta un glosario de términos y conceptos propios del dominio de MaquiGest, relacionados con la gestión del alquiler de maquinaria para empresas constructoras y empresas de alquiler. Los términos permiten establecer un lenguaje común entre los miembros del equipo y los stakeholders del negocio.
+
+* **Machinery (Maquinaria):** Equipo utilizado para realizar actividades de construcción que puede ser ofrecido en alquiler.
+* **Machinery Rental Company (Empresa de alquiler de maquinaria):** Empresa que administra maquinaria y la ofrece en alquiler a empresas que requieren estos equipos.
+* **Construction Company (Empresa constructora):** Empresa que requiere maquinaria para ejecutar actividades relacionadas con proyectos de construcción.
+* **Machinery Availability (Disponibilidad de maquinaria):** Condición que determina si una maquinaria se encuentra disponible para ser alquilada durante un periodo determinado.
+* **Machinery Condition (Condición de la maquinaria):** Estado físico y operativo de una maquinaria en un momento determinado.
+* **Rental Request (Solicitud de alquiler):** Solicitud realizada por una empresa constructora para alquilar una maquinaria durante un periodo determinado.
+* **Rental (Alquiler):** Acuerdo mediante el cual una empresa constructora utiliza una maquinaria proporcionada por una empresa de alquiler durante un periodo establecido.
+* **Rental Period (Periodo de alquiler):** Periodo establecido durante el cual una maquinaria permanece bajo responsabilidad de la empresa que la alquila.
+* **Delivery (Entrega):** Traslado y entrega de la maquinaria al cliente para iniciar el periodo de alquiler.
+* **Return (Devolución):** Entrega de la maquinaria por parte del cliente a la empresa de alquiler al finalizar el periodo de alquiler.
+* **Inspection (Inspección):** Evaluación de la maquinaria devuelta para verificar su condición física y operativa.
+* **Incident (Incidente):** Situación inesperada, como una falla o daño, que afecta la condición o funcionamiento de una maquinaria.
+* **Maintenance (Mantenimiento):** Actividades realizadas para conservar o recuperar la condición física y operativa de una maquinaria.
+* **Machinery History (Historial de maquinaria):** Historial de las actividades relevantes asociadas a una maquinaria, incluyendo alquileres, devoluciones, inspecciones, incidentes y mantenimientos.
+
+<div style="page-break-before: always;"></div>
 
 # Capítulo III: Requirements Specification
 
@@ -1711,10 +1965,6 @@ Para el desarrollo del proyecto, la Arquitectura de la Información se plantea c
 
 ### 4.2.1. Organization Systems
 
-La Information Architecture de MaquiGest organiza la información de forma que tanto los visitantes de la Landing Page como los usuarios de la Web Application puedan identificar con rapidez dónde se encuentra cada contenido o acción. La propuesta combina organización jerárquica, secuencial, por tópicos y por audiencia.
-
-### 4.2.1. Organization Systems
-
 En la **Landing Page**, la información se organiza principalmente de manera **jerárquica y secuencial**. El visitante comienza con la propuesta de valor en Home y continúa hacia Benefits, Features, About, Solutions, Plans, Demo y Contact. Esta secuencia acompaña el proceso de conocimiento, evaluación y conversión del visitante.
 
 En la **Web Application**, la organización es principalmente **por tópicos y por audiencia**. Después de la autenticación, la navegación se adapta al tipo de organización:
@@ -1758,16 +2008,16 @@ Los estados se comunican con etiquetas breves como `Available`, `Reserved`, `On 
 
 Los SEO Tags y Meta Tags permiten describir correctamente las principales páginas de la experiencia. En la Landing Page se conservan los valores actualmente implementados. Para la Web Application se establecen valores coherentes con su propósito operativo.
 
-| Producto | Tag | Valor |
-|---|---|---|
-| Landing Page | `title` | `MaquiGest` | Equipment rental management` |
-| Landing Page | `description` | `Manage construction equipment rentals in one place. Organize inventory, availability, reservations, rentals and maintenance with MaquiGest.` |
-| Landing Page | `keywords` | `equipment rental, construction equipment, rental management software, MaquiGest` |
-| Landing Page | `author` | `CleanCode` |
-| Web Application | `title` | `MaquiGest` | Equipment rental workspace` |
-| Web Application | `description` | `Manage equipment, rental requests, reservations, rentals and maintenance in the MaquiGest workspace.` |
-| Web Application | `keywords` | `equipment management, rental requests, reservations, rentals, maintenance, MaquiGest` |
-| Web Application | `author` | `CleanCode` |
+| Producto | Tag | Valor                                                                                                                                                                        |
+|---|---|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Landing Page | `title` | `MaquiGest` \| Equipment rental management`                                                                                                                                  |
+| Landing Page | `description` | `Manage construction equipment rentals in one place. Organize inventory, availability, reservations, rentals and maintenance with MaquiGest.`                                |
+| Landing Page | `keywords` | `equipment rental, construction equipment, rental management software, MaquiGest`                                                                                            |
+| Landing Page | `author` | `CleanCode`                                                                                                                                                                  |
+| Web Application | `title` | `MaquiGest`                                                                                                                                   \| Equipment rental workspace` |
+| Web Application | `description` | `Manage equipment, rental requests, reservations, rentals and maintenance in the MaquiGest workspace.`                                                                       |
+| Web Application | `keywords` | `equipment management, rental requests, reservations, rentals, maintenance, MaquiGest`                                                                                       |
+| Web Application | `author` | `CleanCode`                                                                                                                                                                  |
 
 Como metadatos transversales se utiliza `charset=UTF-8` y un `viewport` adaptable a dispositivos. El documento HTML actual declara `lang="en-US"`; la variante en español se gestiona mediante i18n.
 
@@ -3037,9 +3287,46 @@ Finalmente, ambos recorridos convergen en la acción **Sign out**, mediante la c
 En conjunto, el User Flow Diagram permite verificar que las acciones y decisiones de los usuarios mantienen coherencia con las interfaces definidas en los wireframes y mock-ups, y proporciona una base para establecer posteriormente las interacciones del prototipo de la Web Application.
 ## 4.5. Web Applications Prototyping
 
+En esta sección se presenta el prototipo interactivo de la aplicación web MaquiGest, desarrollado en Figma a partir de los mockups definidos previamente. El prototipo permite simular la navegación y las principales interacciones que realizarán los usuarios dentro de la plataforma, con el objetivo de validar la organización de las funcionalidades, la secuencia de navegación y los flujos planteados durante el diseño de la experiencia de usuario.
+
+Las decisiones de interacción mantienen relación con la Arquitectura de Información definida para MaquiGest, especialmente con el sistema de navegación global. Para ello, se utiliza una barra lateral o *sidebar* como principal mecanismo de acceso a las diferentes secciones de la aplicación. Esta estructura permite mantener una navegación consistente y predecible entre las distintas vistas del sistema.
+
+El prototipo contempla dos experiencias principales de navegación, correspondientes a los segmentos de **empresas de alquiler de maquinaria** y **empresas constructoras**. Aunque ambas mantienen una estructura visual similar y emplean el mismo patrón de navegación mediante una barra lateral, las opciones disponibles varían de acuerdo con las necesidades, responsabilidades y tareas de cada segmento.
+
+Para el segmento de **empresas de alquiler de maquinaria**, la interfaz identifica al usuario mediante la etiqueta **Rental Company** y proporciona acceso a las secciones **Dashboard, Equipment, Reservations, Rentals, Rental requests y Maintenance**. Esta organización permite centralizar las funcionalidades relacionadas con la gestión de los equipos, las reservas, los alquileres, las solicitudes recibidas y las actividades de mantenimiento.
+
+Las interacciones implementadas en este segmento permiten simular el desplazamiento entre las diferentes secciones y ejecutar acciones representativas de la administración de maquinaria y del proceso de alquiler. De esta manera, el prototipo refleja los principales recorridos establecidos previamente en los User Flow Diagrams y mantiene correspondencia con la estructura de navegación definida en la Arquitectura de Información.
+
+Por otro lado, para el segmento de **empresas constructoras**, la interfaz identifica al usuario mediante la etiqueta **Construction Company** y presenta las secciones **Dashboard, Search equipment, My reservations, My rentals y My requests**. En este caso, la estructura de navegación está orientada principalmente a facilitar la búsqueda de maquinaria disponible y la gestión de las reservas, alquileres y solicitudes realizadas por la empresa constructora.
+
+Las interacciones de este segmento permiten simular el proceso de exploración y búsqueda de equipos, así como el acceso a la información asociada con las operaciones realizadas por el usuario. De esta forma, se mantiene una estructura de navegación coherente con la utilizada por las empresas de alquiler, pero adaptada a las funciones específicas que corresponden a las empresas constructoras.
+
+En ambos segmentos se utilizan elementos de interacción como botones, opciones de navegación, formularios, campos de búsqueda, filtros, tablas y vistas de detalle, según las necesidades de cada flujo. Estas interacciones permiten representar de manera más realista el comportamiento esperado de la aplicación y facilitan la validación de los principales recorridos del usuario.
+
+Asimismo, el prototipo considera su adaptación para navegadores web en computadoras de escritorio y dispositivos móviles. En la versión Desktop se aprovecha el mayor espacio disponible para mostrar de manera simultánea los elementos de navegación y el contenido principal. En la versión Mobile, los componentes son reorganizados para adaptarse a las dimensiones reducidas de pantalla, procurando mantener la jerarquía de la información, la facilidad de navegación y el acceso a las principales funcionalidades.
+
+Como evidencia del funcionamiento del prototipo, se realizaron videos demostrativos en los que se presenta la navegación por las principales secciones de la aplicación y se explican los flujos de interacción implementados. Estos videos permiten evidenciar la relación entre los User Flow Diagrams, la Arquitectura de Información y las decisiones de interacción desarrolladas en el prototipo de MaquiGest.
+
+#### Rental Company Prototype
+
+El prototipo correspondiente al segmento de empresas de alquiler permite navegar por las secciones Dashboard, Equipment, Reservations, Rentals, Rental requests y Maintenance, simulando los principales procesos de gestión de maquinaria y alquiler.
+
+#### Construction Company Prototype
+
+El prototipo correspondiente al segmento de empresas constructoras permite navegar por las secciones Dashboard, Search equipment, My reservations, My rentals y My requests, simulando los principales procesos de búsqueda, reserva y alquiler de maquinaria.
+
+<img src = assets/md-images-chapter4/screenshot_video_prototype.png>
+
+**Video de demostración:**  
+Link: [Prototype](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAAnsDBhRKVQpR1PWOgAkTtAU7P-QO86FqFMmuM5NzuKJU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=zB4J8W)
+
 ## 4.6. Domain-Driven Software Architecture
 
 ### 4.6.1. Design-Level Event Storming
+
+El Design-Level Event Storming permitió profundizar en los procesos identificados durante el Big Picture Event Storming, detallando los eventos, comandos, actores y reglas principales involucrados en el dominio de MaquiGest. Este análisis facilita la identificación de los límites y responsabilidades de los diferentes componentes del sistema.
+
+![Design-Level Event Storming](assets/images/chapter-4/design-level-event-storming.png)
 
 ### 4.6.2. Software Architecture Context Diagram
 
@@ -3083,7 +3370,7 @@ Los diagramas de componentes de arquitectura de software presentan una vista det
 
 A nivel de frontend, la Single Page Application desarrollada con Angular se organiza alrededor de los bounded contexts definidos para la solución: IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Adicionalmente, Shared Frontend concentra componentes, modelos y capacidades técnicas transversales reutilizables por los diferentes contextos de la aplicación. Una vista general de componentes muestra cómo estos elementos se integran dentro de la aplicación frontend, mientras que los diagramas individuales permiten observar su organización interna mediante las capas Presentation, Application, Domain e Infrastructure, según corresponda.
 
-Además, para cada bounded context del frontend se presenta una vista adicional de la Presentation Layer, donde se muestran los componentes Angular concretos responsables de las páginas, formularios, vistas y elementos de interfaz correspondientes.
+Además, para cada bounded context del frontend se presenta una vista detallada basada en las capas DDD Presentation, Application, Domain e Infrastructure. Estas vistas permiten identificar los componentes internos, sus responsabilidades, tecnologías y relaciones. Complementariamente, se mantiene una vista específica de la Presentation Layer, donde se muestran con mayor detalle los componentes Angular responsables de las páginas, formularios, vistas y elementos de interfaz correspondientes.
 
 A nivel de backend, la RESTful API desarrollada con Java y Spring Boot mantiene la misma organización basada en bounded contexts. Una vista general presenta los contextos contenidos dentro de la aplicación backend, mientras que los diagramas individuales descomponen cada bounded context en las capas Interfaces, Application, Domain e Infrastructure siguiendo principios de Domain-Driven Design.
 
@@ -3115,18 +3402,21 @@ IAM también proporciona información de la cuenta autenticada a otros contextos
        width="90%">
 </p>
 
-#### IAM Frontend Presentation Layer Components Diagram
 
-Este diagrama representa un mayor nivel de detalle de la Presentation Layer del bounded context IAM.
+#### IAM Frontend Detailed Component Diagram
 
-`LoginComponent` proporciona el formulario y la interacción para iniciar sesión. `RegisterComponent` permite realizar el proceso de creación de una cuenta, mientras que `RecoverPasswordComponent` administra la interacción correspondiente a la recuperación de contraseña.
+El IAM Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context IAM, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones existentes entre sus componentes.
 
-Estos componentes delegan los casos de uso correspondientes a la IAM Application Layer y utilizan componentes compartidos de interfaz cuando son necesarios.
+La Presentation Layer está conformada por `LoginComponent`, `RegisterComponent` y `RecoverPasswordComponent`, responsables de las principales interacciones relacionadas con autenticación, registro y recuperación de contraseña.
+
+La Application Layer coordina los casos de uso y el estado asociado con los procesos de autenticación y gestión de sesión. La Domain Layer concentra los modelos y reglas vinculados con credenciales, sesión y conceptos propios del contexto IAM. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la MaquiGest Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso a infraestructura y dominio, y cómo la infraestructura establece la comunicación con los servicios backend.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-iam-presentation-component-diagram.png"
-       alt="MaquiGest IAM Frontend Presentation Layer Components Diagram"
-       width="90%">
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/IAM-Frontend-Detailed.png"
+       alt="MaquiGest IAM Frontend Detailed Component Diagram"
+       width="95%">
 </p>
 
 #### Profiles Frontend Components Diagram
@@ -3143,16 +3433,20 @@ Este bounded context también utiliza la información de la cuenta autenticada p
        width="90%">
 </p>
 
-#### Profiles Frontend Presentation Layer Components Diagram
+#### Profiles Frontend Detailed Component Diagram
 
-Este diagrama representa el detalle interno de la Presentation Layer del bounded context Profiles.
+El Profiles Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Profiles, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
 
-`ProfileComponent` muestra la información del perfil del usuario autenticado. `EditProfileComponent` permite modificar la información del perfil, mientras que `CompanyProfileComponent` proporciona la interfaz necesaria para visualizar y administrar la información correspondiente a la empresa.
+La Presentation Layer está conformada por `ProfileComponent`, `EditProfileComponent` y `CompanyProfileComponent`, responsables de visualizar y actualizar la información correspondiente a los perfiles de usuarios y empresas.
+
+La Application Layer coordina las consultas, actualizaciones y el estado relacionado con la gestión de perfiles. La Domain Layer concentra los modelos y reglas asociados con usuarios, empresas y perfiles. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la MaquiGest Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend relacionados con Profiles.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-profiles-presentation-component-diagram.png"
-       alt="MaquiGest Profiles Frontend Presentation Layer Components Diagram"
-       width="90%">
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Profiles-Frontend-Detailed.png"
+       alt="MaquiGest Profiles Frontend Detailed Component Diagram"
+       width="95%">
 </p>
 
 #### Inventory Frontend Components Diagram
@@ -3167,18 +3461,20 @@ Su Application Layer coordina los flujos relacionados con la gestión y consulta
        width="90%">
 </p>
 
-#### Inventory Frontend Presentation Layer Components Diagram
+#### Inventory Frontend Detailed Component Diagram
 
-Este diagrama representa el detalle de la Presentation Layer de Inventory y muestra los componentes Angular responsables de la interacción con la maquinaria.
+El Inventory Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Inventory, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
 
-`EquipmentListComponent` muestra la maquinaria disponible, mientras que `EquipmentDetailComponent` presenta información detallada del equipo, incluyendo tarifa, estado y disponibilidad. `EquipmentFormComponent` proporciona los formularios necesarios para registrar y editar equipos.
+La Presentation Layer está conformada por `EquipmentListComponent`, `EquipmentDetailComponent`, `EquipmentFormComponent`, `EquipmentSearchComponent`, `EquipmentFilterComponent` y `AvailabilityBadgeComponent`. Estos componentes soportan las principales interacciones relacionadas con consulta, detalle, registro, edición, búsqueda, filtrado y visualización de disponibilidad de maquinaria.
 
-Las funcionalidades de búsqueda y filtrado son administradas por `EquipmentSearchComponent` y `EquipmentFilterComponent`, mientras que `AvailabilityBadgeComponent` proporciona una representación visual reutilizable de la disponibilidad de cada equipo.
+La Application Layer coordina los casos de uso y el estado asociado con la gestión del inventario. La Domain Layer concentra los modelos y reglas relacionados con equipos, categorías, tarifas, disponibilidad y estado operativo. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la MaquiGest Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Inventory.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-inventory-presentation-component-diagram.png"
-       alt="MaquiGest Inventory Frontend Presentation Layer Components Diagram"
-       width="90%">
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Inventory-Frontend-Detailed.png"
+       alt="MaquiGest Inventory Frontend Detailed Component Diagram"
+       width="95%">
 </p>
 
 #### Rentals Frontend Components Diagram
@@ -3193,18 +3489,20 @@ Este contexto utiliza la información de los equipos y su disponibilidad proporc
        width="90%">
 </p>
 
-#### Rentals Frontend Presentation Layer Components Diagram
+#### Rentals Frontend Detailed Component Diagram
 
-Este diagrama muestra la descomposición de la Presentation Layer del bounded context Rentals.
+El Rentals Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Rentals, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
 
-`RentalRequestsComponent` muestra y administra las solicitudes de alquiler, mientras que `RentalRequestDetailComponent` presenta la información detallada de una solicitud seleccionada. `ReservationsComponent` muestra las reservas confirmadas y `ActiveRentalsComponent` presenta los alquileres actualmente activos.
+La Presentation Layer está conformada por `RentalRequestsComponent`, `RentalRequestDetailComponent`, `ReservationsComponent`, `ActiveRentalsComponent`, `DeliveryFormComponent` y `ReturnFormComponent`. Estos componentes soportan las principales interacciones relacionadas con solicitudes de alquiler, consulta de detalles, reservas, alquileres activos, entregas y devoluciones de maquinaria.
 
-`DeliveryFormComponent` y `ReturnFormComponent` proporcionan las interfaces necesarias para registrar las operaciones de entrega y devolución de maquinaria.
+La Application Layer coordina los casos de uso y el estado asociados con el ciclo de alquiler. La Domain Layer concentra los modelos y reglas relacionados con solicitudes de alquiler, reservas, contratos de alquiler, entregas y devoluciones. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la MaquiGest Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Rentals.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-rentals-presentation-component-diagram.png"
-       alt="MaquiGest Rentals Frontend Presentation Layer Components Diagram"
-       width="90%">
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Rentals-Frontend-Detailed.png"
+       alt="MaquiGest Rentals Frontend Detailed Component Diagram"
+       width="95%">
 </p>
 
 #### Maintenance Frontend Components Diagram
@@ -3219,18 +3517,20 @@ Este contexto colabora con Inventory para reflejar cambios en el estado y dispon
        width="90%">
 </p>
 
-#### Maintenance Frontend Presentation Layer Components Diagram
+#### Maintenance Frontend Detailed Component Diagram
 
-Este diagrama representa el detalle interno de la Presentation Layer del bounded context Maintenance.
+El Maintenance Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Maintenance, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
 
-`MaintenanceListComponent` muestra los mantenimientos programados y realizados, mientras que `MaintenanceDetailComponent` presenta información detallada del mantenimiento y del historial del equipo.
+La Presentation Layer está conformada por `MaintenanceListComponent`, `MaintenanceDetailComponent`, `IncidentFormComponent` e `InspectionComponent`. Estos componentes soportan las principales interacciones relacionadas con la consulta de mantenimientos, visualización de detalles, registro de incidencias y gestión de inspecciones de maquinaria.
 
-`IncidentFormComponent` permite registrar incidencias relacionadas con la maquinaria, mientras que `InspectionComponent` proporciona la interacción necesaria para las operaciones de inspección de los equipos.
+La Application Layer coordina los casos de uso y el estado asociados con las operaciones de mantenimiento. La Domain Layer concentra los modelos y reglas relacionados con mantenimientos, inspecciones, incidencias, estados de mantenimiento e historial de los equipos. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la MaquiGest Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Maintenance.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-maintenance-presentation-component-diagram.png"
-       alt="MaquiGest Maintenance Frontend Presentation Layer Components Diagram"
-       width="90%">
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Maintenance-Frontend-Detailed.png"
+       alt="MaquiGest Maintenance Frontend Detailed Component Diagram"
+       width="95%">
 </p>
 
 #### Subscriptions Frontend Components Diagram
@@ -3245,16 +3545,20 @@ Este contexto utiliza IAM para identificar la cuenta autenticada y Profiles para
        width="90%">
 </p>
 
-#### Subscriptions Frontend Presentation Layer Components Diagram
+#### Subscriptions Frontend Detailed Component Diagram
 
-Este diagrama representa el detalle de la Presentation Layer del bounded context Subscriptions.
+El Subscriptions Frontend Detailed Component Diagram presenta una vista más completa de la organización interna del bounded context Subscriptions, integrando las capas Presentation, Application, Domain e Infrastructure y mostrando las relaciones entre sus componentes.
 
-`PlansComponent` muestra los planes de suscripción disponibles. `CurrentSubscriptionComponent` presenta la suscripción actual, su estado y la información relacionada con el plan contratado, mientras que `ChangePlanComponent` proporciona la interfaz necesaria para seleccionar y cambiar el plan de suscripción.
+La Presentation Layer está conformada por `PlansComponent`, `CurrentSubscriptionComponent` y `ChangePlanComponent`. Estos componentes soportan las principales interacciones relacionadas con la consulta de planes disponibles, visualización de la suscripción actual y modificación del plan contratado.
+
+La Application Layer coordina los casos de uso y el estado asociados con la gestión de suscripciones. La Domain Layer concentra los modelos y reglas relacionados con suscripciones, planes, períodos de facturación y estados de suscripción. Por su parte, la Infrastructure Layer permite consumir los servicios REST expuestos por la MaquiGest Backend API y transformar los recursos recibidos en modelos utilizados por el frontend.
+
+Este nivel de detalle permite observar cómo los componentes de presentación delegan las operaciones a la capa de aplicación, cómo esta coordina el acceso al dominio y a la infraestructura, y cómo la infraestructura establece la comunicación con los servicios backend correspondientes al contexto Subscriptions.
 
 <p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/frontend/maquigest-frontend-subscriptions-presentation-component-diagram.png"
-       alt="MaquiGest Subscriptions Frontend Presentation Layer Components Diagram"
-       width="90%">
+  <img src="./assets/plantuml/chapter-4/c4/component/frontend/Subscriptions-Frontend-Detailed.png"
+       alt="MaquiGest Subscriptions Frontend Detailed Component Diagram"
+       width="95%">
 </p>
 
 #### Shared Frontend Components Diagram
@@ -3383,47 +3687,53 @@ Este bounded context utiliza IAM para identificar la cuenta autenticada y Profil
 
 ### 4.7.1. Class Diagrams
 
-#### IAM
+#### Backend  Class Diagram
 
-![Class Diagram — IAM](./assets/md-images-chapter4/class-diagram-iam.png)
+![Class Diagram — Backend](./assets/md-images-chapter4/class-diagram-backend.png)
 
-`User` es la entidad central, con `role` (empresa de alquiler o constructora) y `status`. `Credentials` es un value object que encapsula la validación de correo y contraseña, y `Session` representa el token vigente. `AuthenticationService` orquesta registro, inicio y cierre de sesión (US01, US02) a través de `UserRepository`.
-
-#### Profiles
-
-![Class Diagram — Profiles](./assets/md-images-chapter4/class-diagram-profiles.png)
-
-`CompanyProfile` guarda los datos de la empresa (US03) y compone un value object `Address` con coordenadas, que alimenta la integración con Google Maps. `ProviderProfile` extiende el perfil de una empresa de alquiler con su reputación pública — alquileres completados y tasa de cumplimiento —, que corresponde al término "Perfil de Proveedor" del Ubiquitous Language.
+El diagrama general de clases del backend encapsula los Agregados principales (Aggregate Roots) de cada Bounded Context y define las fronteras de dominio. A fin de mantener el desacoplamiento dictado por la arquitectura DDD, la comunicación entre contextos se realiza estrictamente a través de referencias por identificadores primitivos (userId, equipmentId, planId, contractId), garantizando que cada contexto mantenga su persistencia y sus reglas de negocio aisladas.
 
 #### Inventory
 
 ![Class Diagram — Inventory](./assets/md-images-chapter4/class-diagram-inventory.png)
 
-`Equipment` es el agregado principal: pertenece a una `EquipmentCategory`, compone una `RentalRate` (tarifa diaria y semanal) y mantiene su `EquipmentStatus` (disponible, alquilado, en mantenimiento). Los `AvailabilityBlock` con su `DateRange` permiten responder `isAvailableFor(period)` sin superposiciones, que es la regla que evita las dobles reservas descritas en la problemática. `InventoryService` cubre el registro, la actualización, la búsqueda para constructoras y el cambio de estado (US04–US11).
+Equipment es el agregado principal: pertenece a una EquipmentCategory, compone una RentalRate (tarifa diaria y semanal) y mantiene su EquipmentStatus (disponible, alquilado, en mantenimiento). Los AvailabilityBlock con su DateRange permiten responder isAvailableFor(period) sin superposiciones, que es la regla que evita las dobles reservas descritas en la problemática. InventoryApplicationService cubre el registro, la actualización, la búsqueda para constructoras y el cambio de estado de la maquinaria.
 
 #### Rentals
 
 ![Class Diagram — Rentals](./assets/md-images-chapter4/class-diagram-rentals.png)
 
-`RentalRequest` modela la reservación: nace en estado `PENDING` y, al aceptarse, genera un `RentalContract` (US12–US16). El contrato compone un `RentalPeriod` y registra una `Delivery` y un `EquipmentReturn` (US17). `EquipmentReturn.requiresMaintenance()` es el punto donde una devolución con daño dispara el flujo del contexto Maintenance. `RentalService` orquesta el ciclo completo mediante los dos repositorios.
+RentalRequest modela la reservación: nace en estado PENDING y, al aceptarse, genera un RentalContract. El contrato compone un DateRange y registra una Delivery y un EquipmentReturn. EquipmentReturn.requiresMaintenance() es el punto de integración donde una devolución reportada con daño dispara el flujo dentro del contexto Maintenance. RentalApplicationService orquesta el ciclo completo de alquiler mediante los cuatro repositorios de infraestructura.
 
 #### Maintenance
 
 ![Class Diagram — Maintenance](./assets/md-images-chapter4/class-diagram-maintenance.png)
 
-`MaintenanceRecord` distingue mantenimientos preventivos y correctivos con su ciclo de estados (US18, US19). `Incident` registra daños o fallas con su severidad y puede originar un `MaintenanceRecord` (US20). `EquipmentHistory` es un modelo de lectura que agrega alquileres, incidencias y mantenimientos de un equipo para responder US21 sin acoplar el contexto a Rentals: solo consume un `RentalSummary` con los datos mínimos.
+MaintenanceRecord distingue mantenimientos preventivos y correctivos con su ciclo de estados. Incident registra daños o fallas operativas con su nivel de severidad y puede originar formalmente un MaintenanceRecord. MaintenanceApplicationService orquesta el flujo de atención técnica y actualiza el estado de disponibilidad del equipo en comunicación con el contexto Inventory.
 
 #### Subscription 
 
 ![Class Diagram — Subscription](./assets/md-images-chapter4/class-diagram-subscription-bounded-context.png)
+
+SubscriptionPlan define los términos de precios, beneficios y ciclo de facturación de la plataforma. UserSubscription vincula una cuenta de usuario con su plan activo mediante el value object DateRange y controla los estados de renovación o cancelación automática. SubscriptionApplicationService se integra con la pasarela externa de pagos para gestionar el flujo comercial de las membresías.
+
+#### IAM
+
+![Class Diagram — IAM](./assets/md-images-chapter4/class-diagram-iam.png)
+
+User es la entidad central, con role (empresa de alquiler o constructora) y status. Credentials es un value object que encapsula la validación de correo y contraseña, y SessionToken representa el token de acceso vigente. AuthenticationService orquesta el registro, el inicio y el cierre de sesión a través de UserRepository.
+
+#### Profiles
+
+![Class Diagram — Profiles](./assets/md-images-chapter4/class-diagram-profiles.png)
+
+CompanyProfile guarda los datos de la empresa y compone un value object Address con coordenadas geográficas, que alimenta la integración con mapas. ProviderProfile extiende el perfil de una empresa de alquiler con su reputación pública —alquileres completados y tasa de cumplimiento—, respondiendo al término "Perfil de Proveedor" del Ubiquitous Language.
 
 ## 4.8. Database Design
 
 ### 4.8.1. Database Diagrams
 
 ![Database Diagram — Subscription](./assets/md-images-chapter4/database-diagram.png)
-
-# Capítulo V: Product Implementation, Validation & Deployment
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
@@ -3771,92 +4081,74 @@ El alcance funcional del Sprint se encuentra relacionado principalmente con el E
 
 Para el control de versiones se utilizaron Git y GitHub aplicando GitFlow y Conventional Commits. Al finalizar el Sprint se generó la primera versión estable del Landing Page, identificada mediante el tag `v1.0.0` y publicada mediante Netlify.
 
+
 #### 5.2.1.1. Sprint Planning 1
 
-El Sprint Planning 1 permitió establecer el alcance de la primera iteración de implementación de MaquiGest, seleccionar las User Stories relacionadas con el Landing Page y organizar las actividades necesarias para desarrollar y desplegar una primera versión funcional del producto.
+El Sprint Planning 1 permitió definir el alcance de la primera iteración del proyecto MaquiGest, orientada a implementar y desplegar la primera versión funcional del Landing Page. Durante este Sprint, el equipo priorizó la comunicación de la propuesta de valor del producto, la presentación de sus principales funcionalidades, beneficios, soluciones y planes, así como la implementación de mecanismos de contacto, solicitud de demostración, navegación responsive e internacionalización.
 
-A continuación, se presenta el resumen correspondiente al Sprint Planning Meeting:
+A continuación, se presenta la tabla resumen del Sprint Planning 1:
 
-| Campo | Descripción |
-| --- | --- |
-| **Sprint #** | Sprint 1 |
-| **Sprint Planning Background** | Primera iteración orientada a la implementación, integración y despliegue de la primera versión funcional del Landing Page de MaquiGest. |
-| **Date** | Pendiente de confirmar |
-| **Time** | Pendiente de confirmar |
-| **Location** | Pendiente de confirmar |
-| **Prepared By** | Pendiente de confirmar |
-| **Attendees (to planning meeting)** | Daga Chávez, Joaquín Leonardo / Delgado Perez, James Caleb / Manosalva Tovar, Miroslav Oscar / Montalvo Vasquez, Bruno Rodrigo / Paredes Chávez, Carlos Augusto |
-| **Sprint n - 1 Review Summary** | Not applicable. Sprint 1 corresponde a la primera iteración del proyecto, por lo que no existe un Sprint anterior que revisar. |
-| **Sprint n - 1 Retrospective Summary** | Not applicable. Sprint 1 corresponde a la primera iteración del proyecto, por lo que no existe una retrospectiva correspondiente a un Sprint anterior. |
-| **Sprint Goal & User Stories** | `EP07 - Información y contratación del servicio` / `US27 - Consultar información de MaquiGest` / `US28 - Solicitar demostración` / `US29 - Contactar con MaquiGest` |
-| **Sprint 1 Goal** | Nuestro enfoque se centra en disponer de una primera versión funcional y desplegada del Landing Page de MaquiGest que permita a los visitantes comprender la propuesta de valor, los beneficios, las funcionalidades, las soluciones para los segmentos objetivo y los planes del producto. Creemos que esto brindará a las empresas interesadas una forma clara de evaluar la propuesta y comunicarse con CleanCode. Esto se confirmará cuando la versión publicada permita navegar por las principales secciones del Landing Page, consultar la información del producto y utilizar los formularios de solicitud de demostración y contacto mediante una experiencia responsive. |
-| **Sprint 1 Velocity** | Pendiente de definir a partir de los Story Points establecidos para las User Stories seleccionadas. |
-| **Sum of Story Points** | Pendiente de completar a partir del Product Backlog. |
+| Campo                   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|:------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Sprint #**            | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                         | **Sprint Planning Background**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Date**                | 2026-09-5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Time**                | 17:00                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Location**            | Reunión virtual(Discord)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Prepared By**         | Delgado Perez, James Caleb                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Attendees**           | Daga Chávez, Joaquín Leonardo / Delgado Perez, James Caleb / Manosalva Tovar, Miroslav Oscar / Montalvo Vasquez, Bruno Rodrigo / Paredes Chávez, Carlos Augusto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                         | **Sprint Goal & User Stories**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Sprint 1 Goal**       | Nuestro enfoque se centra en presentar la propuesta de valor de MaquiGest mediante una primera versión funcional y desplegada del Landing Page, permitiendo que los visitantes conozcan las principales funcionalidades, beneficios, soluciones y planes ofrecidos por la plataforma, puedan solicitar una demostración o contactar al equipo, y naveguen correctamente desde diferentes dispositivos y en los idiomas disponibles. Creemos que esto permitirá comunicar de manera clara el valor de MaquiGest a las empresas objetivo. Esto se confirmará cuando los visitantes puedan identificar la propuesta de valor, explorar las principales secciones, consultar los planes, utilizar los formularios disponibles, cambiar el idioma y navegar por el Landing Page sin pérdida de información.               |
+| **Sprint 1 Velocity**   | 10 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Sum of Story Points** | 10 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
-Durante el Sprint 1 se identificaron los principales aspectos funcionales y técnicos requeridos para implementar la primera versión del Landing Page.
+Durante el Sprint 1, el equipo organizó el trabajo mediante una distribución de líderes y colaboradores de acuerdo con los principales aspectos necesarios para implementar y entregar la primera versión del Landing Page de MaquiGest.
 
-Con el objetivo de organizar las responsabilidades del equipo se utiliza una Leadership-and-Collaboration Matrix (LACX). En esta matriz, `L` identifica al integrante que asumió el liderazgo de un aspecto del Sprint, mientras que `C` identifica a los integrantes que colaboraron en dicho aspecto.
+Los aspectos considerados fueron el desarrollo del Landing Page, que comprendió la implementación de las secciones y funcionalidades asociadas con la propuesta de valor, beneficios, funcionalidades, soluciones, planes, formularios, responsive design e internacionalización; la documentación del proyecto y de las evidencias del Sprint; y el despliegue y publicación de la primera versión estable del producto.
 
-Los aspectos establecidos mantienen relación con las actividades registradas posteriormente en el Sprint Backlog y con las contribuciones realizadas en el repositorio del Landing Page.
+La letra **L** identifica al integrante responsable principal de cada aspecto, mientras que la letra **C** identifica a los miembros que participaron como colaboradores en su implementación, revisión o documentación.
 
-| Team Member (Last Name, First Name) | GitHub Username | Project Setup & Navigation | Informational Sections | Conversion Forms | Visual Assets & Footer | Deployment |
-| --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Delgado Perez, James Caleb | `JAmsy06` | L | C |  |  | L |
-| Montalvo Vasquez, Bruno Rodrigo | `TartaroZ` | C | L | L |  |  |
-| Manosalva Tovar, Miroslav Oscar | `Miroa123` |  |  | C | L |  |
-| Daga Chávez, Joaquín Leonardo | `Eshnikeee` | C |  |  | C | C |
-| Paredes Chávez, Carlos Augusto | `CarlosUPC` |  |  |  |  | C |
-
-**Leyenda:**
-
-- `L`: Leader.
-- `C`: Collaborator.
-
-James Caleb Delgado Perez lideró la preparación de la estructura principal del proyecto y las actividades relacionadas con el despliegue, además de participar en la implementación de diferentes secciones informativas. Bruno Rodrigo Montalvo Vasquez lideró la implementación de diferentes secciones informativas y elementos de conversión, además de colaborar en la navegación. Miroslav Oscar Manosalva Tovar participó en los mecanismos de contacto y lideró las actividades asociadas con el Footer y recursos visuales. Joaquín Leonardo Daga Chávez colaboró en la preparación del proyecto, integración de recursos y configuración del despliegue. Carlos Augusto Paredes Chávez colaboró en las correcciones realizadas sobre la configuración de despliegue.
+| Team Member (Last Name, First Name) | GitHub Username | Landing Page Development | Report & Sprint Documentation | Deployment & Release |
+| :--- | :--- | :---: | :---: | :---: |
+| Delgado Perez, James Caleb | JAmsy06 | **L** | **L** | **L** |
+| Montalvo Vasquez, Bruno Rodrigo | TartaroZ | C | C | C |
+| Manosalva Tovar, Miroslav Oscar | Miroa123 | C | C | C |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | C | C | C |
+| Paredes Chávez, Carlos Augusto | CarlossUPC | C | C | C |
 
 #### 5.2.1.3. Sprint Backlog 1
 
-El Sprint Backlog 1 reúne las User Stories seleccionadas para alcanzar el Sprint Goal y los Work-Items/Tasks derivados de su descomposición.
+El Sprint Backlog 1 reúne los Work-items definidos para implementar la primera versión funcional del Landing Page de MaquiGest. Las tareas se derivan de las User Stories seleccionadas para el Sprint 1 y abarcan la presentación de la propuesta de valor, funcionalidades, soluciones, planes, solicitud de demostración, contacto, responsive design e internacionalización.
 
-Para este Sprint se seleccionaron las User Stories `US27`, `US28` y `US29`, pertenecientes al Epic `EP07 - Información y contratación del servicio`. También se consideran Technical Tasks necesarias para preparar el proyecto y realizar el despliegue del Landing Page.
-
-Como herramienta para gestionar y visualizar el Sprint Backlog se utiliza Trello. El Board organiza las tareas utilizando los estados `To-do`, `In-Process`, `To-Review` y `Done`.
-
-**Sprint Backlog 1 - Trello Board:**  
-`[PENDIENTE: insertar URL pública del Board de Trello]`
-
-<!--
-Agregar aquí la captura del Sprint Backlog cuando el Board de Trello esté listo.
+A continuación, se presenta el Sprint Backlog correspondiente al Sprint 1:
 
 <p align="center">
-  <img src="./assets/images/chapter-5/sprint-1-trello-board.png"
-       alt="MaquiGest Sprint Backlog 1 - Trello Board"
-       width="90%">
+  <img src="./assets/images/chapter-5/sprint-1-backlog-board.jpeg"
+       alt="MaquiGest Sprint 1 Backlog Board"
+       width="95%">
 </p>
--->
 
 | Sprint # | Sprint 1 |
-| --- | --- |
+| :--- | :--- |
 
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
-| --- | --- | --- | --- | --- | ---: | --- | --- |
-| US27 | Consultar información de MaquiGest | TS01 | Prepare Landing Page base | Crear la estructura inicial del Landing Page utilizando HTML5, CSS3 y JavaScript. | Pendiente | James Caleb Delgado Perez | Done |
-| US27 | Consultar información de MaquiGest | TS02 | Implement Header and language switching | Implementar el Header, la navegación principal y el comportamiento de cambio de idioma. | Pendiente | James Caleb Delgado Perez / Bruno Rodrigo Montalvo Vasquez | Done |
-| US27 | Consultar información de MaquiGest | TS03 | Implement Home section | Implementar la propuesta de valor principal y los Call To Action del Landing Page. | Pendiente | James Caleb Delgado Perez | Done |
-| US27 | Consultar información de MaquiGest | TS04 | Implement Benefits section | Implementar la sección destinada a comunicar los principales beneficios de MaquiGest. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
-| US27 | Consultar información de MaquiGest | TS05 | Implement Features section | Implementar las cards destinadas a presentar las principales funcionalidades ofrecidas por MaquiGest. | Pendiente | James Caleb Delgado Perez | Done |
-| US27 | Consultar información de MaquiGest | TS06 | Implement About section | Implementar la información correspondiente a misión, visión y valores de CleanCode y MaquiGest. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
-| US27 | Consultar información de MaquiGest | TS07 | Implement Solutions section | Implementar las soluciones diferenciadas para empresas de alquiler de maquinaria y empresas constructoras. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
-| US27 | Consultar información de MaquiGest | TS08 | Implement Plans section | Implementar la presentación y comparación de los planes Essential, Professional y Growth. | Pendiente | James Caleb Delgado Perez | Done |
-| US27 | Consultar información de MaquiGest | TS09 | Integrate visual assets | Incorporar las imágenes, logotipos y demás recursos visuales requeridos por el Landing Page. | Pendiente | Joaquín Leonardo Daga Chávez | Done |
-| US27 | Consultar información de MaquiGest | TS10 | Implement Footer and Terms page | Implementar el Footer y la primera versión de Terms and Conditions. | Pendiente | Miroslav Oscar Manosalva Tovar | Done |
-| US28 | Solicitar demostración | TS11 | Implement Demo Request form | Implementar el formulario utilizado para solicitar una demostración y seleccionar un plan. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
-| US29 | Contactar con MaquiGest | TS12 | Implement Contact form | Implementar el formulario mediante el cual los potenciales clientes pueden realizar consultas al equipo. | Pendiente | Miroslav Oscar Manosalva Tovar | Done |
-| - | Technical Task | TS13 | Configure Netlify deployment | Configurar Netlify para permitir el despliegue y publicación del Landing Page. | Pendiente | James Caleb Delgado Perez | Done |
-| - | Technical Task | TS14 | Fix Netlify configuration | Realizar los ajustes necesarios sobre la configuración de Netlify para completar correctamente el despliegue. | Pendiente | Joaquín Leonardo Daga Chávez / Carlos Augusto Paredes Chávez | Done |
-| - | Technical Task | TS15 | Final deployment verification | Verificar la correcta publicación de la versión estable `v1.0.0` del Landing Page. | Pendiente | James Caleb Delgado Perez | Done |
+| :---: | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
+| US30 | Visualizar propuesta de valor | TS01 | Implement Home section | Implementar la sección principal del Landing Page con la propuesta de valor, descripción general de MaquiGest y sus principales Call-to-Action. | 4 hrs | Delgado Perez, James Caleb | Done |
+| US31 | Explorar funcionalidades principales | TS02 | Implement Benefits section | Implementar la sección de beneficios para comunicar el valor que MaquiGest ofrece a sus segmentos objetivo. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US31 | Explorar funcionalidades principales | TS03 | Implement Features section | Implementar la sección que presenta las principales funcionalidades ofrecidas por MaquiGest. | 4 hrs | Delgado Perez, James Caleb | Done |
+| US27 | Consultar información de MaquiGest | TS04 | Implement About Us section | Implementar la sección informativa sobre CleanCode y MaquiGest, incluyendo misión, visión y valores. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US32 | Identificar la solución para mi empresa | TS05 | Implement Solutions section | Implementar las soluciones diferenciadas para empresas de alquiler de maquinaria y empresas constructoras. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US15 | Visualizar planes disponibles | TS06 | Implement Plans section | Implementar la sección de planes mostrando las alternativas disponibles, sus características y precios. | 4 hrs | Delgado Perez, James Caleb | Done |
+| US28 | Solicitar demostración | TS07 | Implement Request Demo section | Implementar el formulario mediante el cual un potencial cliente puede solicitar una demostración de MaquiGest. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US29 | Contactar con MaquiGest | TS08 | Implement Contact section | Implementar el formulario de contacto para permitir que los visitantes realicen consultas al equipo de MaquiGest. | 4 hrs | Manosalva Tovar, Miroslav Oscar | Done |
+| US27 | Consultar información de MaquiGest | TS09 | Implement Footer | Implementar el footer con información complementaria, navegación y enlaces correspondientes al Landing Page. | 4 hrs | Manosalva Tovar, Miroslav Oscar | Done |
+| US34 | Consultar el Landing Page en diferentes dispositivos | TS10 | Implement responsive layout | Adaptar la estructura, navegación, cards, formularios y contenido del Landing Page para diferentes resoluciones de pantalla. | 4 hrs | Daga Chávez, Joaquín Leonardo | Done |
+| US35 | Cambiar el idioma del Landing Page | TS11 | Implement language switching | Implementar el cambio de idioma del Landing Page manteniendo la estructura, navegación y funcionalidades disponibles. | 4 hrs | Delgado Perez, James Caleb | Done |
+
+**Sprint Backlog URL:** https://trello.com/invite/b/6aae122df20cec3612b47569/ATTI06c8d708807538ede9c79fd09c1cf6974064CD0D/sprint-backlog-1-maquigest
+
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
@@ -4020,7 +4312,7 @@ Las evidencias presentadas permiten comprobar que las principales secciones defi
 Como evidencia complementaria de ejecución se presentará un video en el que se demuestra la navegación por las principales secciones del Landing Page de MaquiGest y el comportamiento de los elementos interactivos implementados durante el Sprint.
 
 **Product Navigation Video:**  
-`[PENDIENTE: insertar URL del video de navegación]`
+Link:  [Execution evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQB0uUoEIdV6QLDgc4fXoOq0ATW99dVOedmBYAoBwVk7ltY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ndbK1p)
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
@@ -4128,7 +4420,7 @@ Las siguientes evidencias muestran las estadísticas individuales registradas po
 </p>
 
 <p align="center">
-  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-contributors-02.png"
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-contributors-02(1).png"
        alt="MaquiGest Sprint 1 Collaboration Evidence - GitHub Contributor Carlos"
        width="55%">
 </p>
@@ -4159,6 +4451,82 @@ Asimismo, la participación registrada es consistente con la Leadership-and-Coll
 
 ## Conclusiones y recomendaciones
 
+Durante el desarrollo del AV1 se logró consolidar la propuesta inicial de MaquiGest como una solución SaaS orientada a apoyar la gestión del alquiler de maquinaria y equipos para construcción. A partir del análisis del problema, los segmentos objetivo, los requisitos identificados y los artefactos de UX elaborados, se estableció una primera definición coherente del alcance funcional del producto y de los procesos principales que deberán ser soportados por la solución.
+
+La elaboración de las User Stories permitió organizar las necesidades identificadas en funcionalidades relacionadas con gestión de usuarios, maquinaria, alquileres, mantenimiento, suscripciones y experiencia web. Asimismo, las nuevas User Stories orientadas específicamente al Landing Page permitieron establecer una mayor trazabilidad entre los requisitos del producto, el Sprint Backlog y la implementación realizada durante el Sprint 1.
+
+En relación con Product Design, se definieron las principales decisiones visuales, de arquitectura de información y experiencia de usuario para el Landing Page y la futura Web Application. Los wireframes, mock-ups y demás artefactos elaborados permitieron establecer una representación progresiva de la experiencia propuesta para empresas de alquiler de maquinaria y empresas constructoras.
+
+A nivel de arquitectura de software, se estableció una propuesta basada en Domain-Driven Design y C4 Model. La solución fue organizada mediante los bounded contexts IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions, complementados por componentes compartidos. Los diagramas de Context, Container y Components permiten representar progresivamente la estructura de MaquiGest, las responsabilidades de cada elemento y las tecnologías consideradas para su futura implementación.
+
+Durante el Sprint 1 se implementó y desplegó la primera versión funcional del Landing Page de MaquiGest utilizando HTML5, CSS3 y JavaScript. La solución permite comunicar la propuesta de valor, presentar beneficios, funcionalidades, soluciones y planes, además de ofrecer mecanismos de solicitud de demostración y contacto. Asimismo, se incorporaron características responsive e internacionalización, y la versión desarrollada fue desplegada mediante Netlify.
+
+Como resultado del Sprint 1, el equipo también consolidó un flujo de trabajo colaborativo mediante Git y GitHub, aplicando GitFlow, Conventional Commits y versionamiento semántico. Las evidencias de desarrollo, despliegue y colaboración permiten mantener trazabilidad sobre los aportes realizados por los integrantes y sobre la evolución del producto durante esta primera iteración.
+
+Como recomendación para los siguientes Sprints, se deberá mantener la trazabilidad entre Product Backlog, Sprint Backlog, Tasks y commits, evitando inconsistencias entre los requisitos documentados y las funcionalidades implementadas. Asimismo, será necesario continuar evolucionando el Landing Page e integrar sus Call-to-Action con la primera versión funcional de la Web Application.
+
+También se recomienda mantener la arquitectura definida como referencia durante la implementación, procurando que la organización del código respete los bounded contexts y las responsabilidades establecidas para las capas Presentation, Application, Domain e Infrastructure. Finalmente, deberán continuar considerándose desde las siguientes iteraciones aspectos de accessibility, internationalization, responsive design, pruebas, documentación y despliegue para asegurar una evolución consistente de MaquiGest.
+
 # Bibliografía
 
+Angular. (s. f.). *Angular coding style guide*. https://angular.dev/style-guide
+
+C4 Model. (s. f.). *The C4 model for visualising software architecture*. https://c4model.com/
+
+Driessen, V. (2010). *A successful Git branching model*. https://nvie.com/posts/a-successful-git-branching-model/
+
+Figma. (s. f.). *Figma: The collaborative interface design tool*. https://www.figma.com/
+
+Google. (s. f.). *Google HTML/CSS Style Guide*. https://google.github.io/styleguide/htmlcssguide.html
+
+Google. (s. f.). *Google Java Style Guide*. https://google.github.io/styleguide/javaguide.html
+
+Google. (s. f.). *Google TypeScript Style Guide*. https://google.github.io/styleguide/tsguide.html
+
+Material Design. (s. f.). *Material Design*. https://m3.material.io/
+
+Netlify. (s. f.). *Netlify documentation*. https://docs.netlify.com/
+
+OpenAPI Initiative. (s. f.). *OpenAPI Specification*. https://spec.openapis.org/oas/latest.html
+
+PlantUML. (s. f.). *PlantUML documentation*. https://plantuml.com/
+
+Semantic Versioning. (s. f.). *Semantic Versioning 2.0.0*. https://semver.org/
+
+Spring. (s. f.). *Spring Boot reference documentation*. https://docs.spring.io/spring-boot/
+
+The Conventional Commits Contributors. (s. f.). *Conventional Commits*. https://www.conventionalcommits.org/
+
+W3C. (s. f.). *HTML5*. https://www.w3.org/TR/html5/
+
 # Anexos
+
+## Anexo A. Videos de Exposiciones
+
+En este anexo se registran progresivamente los videos correspondientes a las exposiciones realizadas durante las diferentes entregas del proyecto MaquiGest.
+
+| Entrega | Características del video                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Sobre el contenido | Integración y entrega |
+|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|-----------------------|
+| **AV1** | **Cantidad:** 1 video<br>**Enlace:** [Ver video AV1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQCYkWdlaHE1R4b1jMaRqSokAVYThGIeFB26oMbKBvlVoSU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HlscHY)<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-expo-av1`<br>**Formato:** `.mp4`<br>**Duración:** 10:56 | Video de exposición grupal correspondiente al AV1 de MaquiGest. Presenta el avance integral del proyecto hasta el Sprint 1, incluyendo Startup Profile, Solution Profile, segmentos objetivo, Requirements Elicitation & Analysis, Needfinding, User Stories, Product Backlog, Product Design, arquitectura de software, diseño e implementación de la Landing Page y las evidencias correspondientes al Sprint 1. | El video se publica en la plataforma indicada por el docente y constituye evidencia de la presentación del AV1. El material permite sustentar los artefactos desarrollados, la participación de los integrantes del equipo y los principales avances alcanzados durante el Sprint 1. |
+
+## Anexo B. Enlaces del proyecto
+
+En este anexo se consolidan los principales recursos digitales utilizados para el desarrollo, documentación, diseño, planificación y despliegue del proyecto MaquiGest durante el AV1.
+
+| Recurso | Descripción | Enlace                                                                                                                                                                                                                                                                                                       |
+|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Project Report** | Repositorio principal utilizado para la elaboración colaborativa, documentación y versionamiento del informe del proyecto MaquiGest. | [Ver Project Report](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-report)                                                                                                                                                                                                             |
+| **Landing Page Repository** | Repositorio que contiene el código fuente de la primera versión del Landing Page de MaquiGest. | [Ver Landing Page Repository](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-website)                                                                                                                                                                                                   |
+| **Landing Page Deployment** | Versión desplegada de la Landing Page correspondiente al Sprint 1. | [Ver Website](https://maquigest-cleancode.netlify.app/)                                                                                                                                                                                                                                                      |
+| **Sprint Backlog 1** | Tablero de Trello utilizado para organizar y realizar seguimiento de las User Stories, Work-items y Tasks correspondientes al Sprint 1. | [Ver Sprint Backlog 1](https://trello.com/invite/b/6aae122df20cec3612b47569/ATTI06c8d708807538ede9c79fd09c1cf6974064CD0D/sprint-backlog-1-maquigest)                                                                                                                                                         |
+| **UX/UI Design** | Archivo de Figma utilizado para la elaboración de wireframes, mock-ups y demás artefactos de diseño correspondientes al Landing Page y a la Web Application de MaquiGest. | [Ver UX/UI Design](https://www.figma.com/design/McIMjVZJcJU2rWnDmTpzkx/Untitled?node-id=0-1&t=vd5Q8XMWxgOIY0yD-1) <br/><br/> [Ver Web Applications Prototyping](https://www.figma.com/design/f9SPJMQHRhr2hgH4k9Pkvu/MaquiGest-%E2%80%94-Editable-Mockups---Design-System?node-id=12-18&t=hPHwtzwSGYv7SSup-1) |
+
+## Anexo C. Videos del proyecto
+
+En este anexo se consolidan los principales recursos audiovisuales utilizados como evidencia de investigación, prototipado y ejecución del proyecto MaquiGest durante el AV1.
+
+| Tipo de video | Características del video                                                                                                                | Sobre el contenido | Enlace                                                                                                                                                                                                                                                                                                                                                                                             |
+|---|------------------------------------------------------------------------------------------------------------------------------------------|---|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Needfinding Interviews** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-needfinding-sprint-1`<br>**Formato:** `.mp4`          | Consolida las entrevistas realizadas a representantes de los segmentos objetivo de MaquiGest. Las entrevistas permitieron identificar necesidades, problemas y oportunidades relacionadas con la gestión, búsqueda y alquiler de maquinaria. | [Ver Needfinding Interviews](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxWaWV3IjoiU2hhcmVEaWFsb2ctTGluayIsInJlZmVycmFsQXBwUGxhdGZvcm0iOiJXZWIiLCJyZWZlcnJhbE1vZGUiOiJ2aWV3In19%3D&e=8aWP0C) |
+| **Prototype Navigation** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-prototype-navigation-sprint-1`<br>**Formato:** `.mp4` | Presenta la navegación del prototipo interactivo de la Web Application de MaquiGest desarrollado en Figma. El video evidencia los principales recorridos definidos para empresas de alquiler de maquinaria y empresas constructoras, mostrando la relación entre los mock-ups, User Flow Diagrams y las interacciones del prototipo. | [Ver Prototype Navigation](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAAnsDBhRKVQpR1PWOgAkTtAU7P-QO86FqFMmuM5NzuKJU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=dB05rw)                                                |
+| **Execution Evidence** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-execution-evidence-sprint-1`<br>**Formato:** `.mp4`   | Presenta la navegación por la primera versión implementada y desplegada del Landing Page de MaquiGest. El video demuestra las principales secciones y elementos interactivos desarrollados durante el Sprint 1. | [Ver Execution Evidence]( https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQB0uUoEIdV6QLDgc4fXoOq0ATW99dVOedmBYAoBwVk7ltY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8xXN6S)                                                 |

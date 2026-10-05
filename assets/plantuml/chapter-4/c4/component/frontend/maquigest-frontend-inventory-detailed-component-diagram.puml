@@ -1,0 +1,50 @@
+﻿@startuml "Inventory-Frontend-Detailed"
+
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title MaquiGest - Inventory Frontend Component Diagram (DDD Layers)
+
+Container_Ext(backendApi, "MaquiGest Backend API", "Java / Spring Boot", "Exposes machinery, equipment and inventory-related RESTful services consumed by the Inventory frontend")
+
+Container_Boundary(inventory, "Inventory Frontend Bounded Context") {
+
+    Boundary(presentation, "Presentation") {
+        Component(equipment_list, "EquipmentListComponent", "Angular Component", "Displays machinery and equipment available in the inventory")
+        Component(equipment_detail, "EquipmentDetailComponent", "Angular Component", "Displays detailed machinery information, rates, status and availability")
+        Component(equipment_form, "EquipmentFormComponent", "Angular Component", "Provides machinery registration and editing interaction")
+        Component(equipment_filter, "EquipmentFilterComponent", "Angular Component", "Provides category, status and availability filtering")
+        Component(equipment_search, "EquipmentSearchComponent", "Angular Component", "Provides machinery search interaction")
+        Component(availability_badge, "AvailabilityBadgeComponent", "Angular Component", "Displays equipment availability using a reusable visual indicator")
+    }
+
+    Boundary(application, "Application") {
+        Component(inventory_application, "inventory/application", "Angular Services / Signals", "Coordinates equipment queries, inventory operations, availability state and frontend use cases")
+    }
+
+    Boundary(domain, "Domain") {
+        Component(inventory_domain, "inventory/domain/model", "Entities / Value Objects", "Equipment, Category, Rate, Availability and EquipmentStatus models and business rules")
+    }
+
+    Boundary(infrastructure, "Infrastructure") {
+        Component(inventory_infrastructure, "inventory/infrastructure", "HTTP, Resources, Mappers", "Consumes Inventory REST endpoints and maps backend resources into frontend inventory models")
+    }
+}
+
+Rel(equipment_list, equipment_filter, "Uses")
+Rel(equipment_list, equipment_search, "Uses")
+Rel(equipment_list, availability_badge, "Uses")
+Rel(equipment_detail, availability_badge, "Uses")
+
+Rel(equipment_list, inventory_application, "Requests equipment list")
+Rel(equipment_detail, inventory_application, "Requests equipment details")
+Rel(equipment_form, inventory_application, "Creates or updates equipment")
+
+Rel(inventory_application, inventory_domain, "Holds and applies inventory state and rules")
+Rel(inventory_application, inventory_infrastructure, "Loads and updates inventory data through")
+
+Rel(inventory_infrastructure, inventory_domain, "Maps resources into")
+Rel(inventory_infrastructure, backendApi, "Consumes Inventory REST endpoints", "HTTPS / JSON")
+
+SHOW_LEGEND()
+
+@enduml
