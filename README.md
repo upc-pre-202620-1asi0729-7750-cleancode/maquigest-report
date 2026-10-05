@@ -490,12 +490,17 @@ El user persona se construyó a partir de patrones encontrados en las entrevista
 <tr>
 <td>US01</td>
 <td>Registro de usuario</td>
-<td>Como usuario, quiero registrarme en MaquiGest para acceder a las funcionalidades de la plataforma.</td>
+<td>Como usuario, quiero registrarme en MaquiGest para poder acceder a las funcionalidades de la plataforma.</td>
 <td>
-Given que el usuario accede al formulario de registro<br>
-When ingresa sus datos correctamente<br>
-Then el sistema crea su cuenta<br>
-And muestra un mensaje de confirmación
+<b>Given</b> que el usuario proporciona datos válidos de registro<br>
+<b>When</b> envía la solicitud de registro<br>
+<b>Then</b> el sistema crea la cuenta del usuario<br>
+<b>And</b> confirma que el registro se realiza correctamente
+<br><br>
+<b>Given</b> que el usuario proporciona datos inválidos o incompletos<br>
+<b>When</b> envía la solicitud de registro<br>
+<b>Then</b> el sistema rechaza la solicitud<br>
+<b>And</b> indica los datos que deben corregirse
 </td>
 <td>EP01</td>
 </tr>
@@ -503,11 +508,17 @@ And muestra un mensaje de confirmación
 <tr>
 <td>US02</td>
 <td>Inicio de sesión</td>
-<td>Como usuario registrado, quiero iniciar sesión para acceder a las funcionalidades correspondientes a mi cuenta.</td>
+<td>Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta.</td>
 <td>
-Given que el usuario posee una cuenta registrada<br>
-When ingresa credenciales válidas<br>
-Then el sistema permite el acceso a la plataforma
+<b>Given</b> que el usuario posee una cuenta registrada<br>
+<b>When</b> proporciona credenciales válidas<br>
+<b>Then</b> el sistema autentica al usuario<br>
+<b>And</b> permite el acceso a su cuenta
+<br><br>
+<b>Given</b> que el usuario proporciona credenciales inválidas<br>
+<b>When</b> intenta iniciar sesión<br>
+<b>Then</b> el sistema rechaza la autenticación<br>
+<b>And</b> informa que las credenciales no son válidas
 </td>
 <td>EP01</td>
 </tr>
@@ -515,36 +526,48 @@ Then el sistema permite el acceso a la plataforma
 <tr>
 <td>US03</td>
 <td>Gestionar perfil</td>
-<td>Como usuario, quiero consultar y actualizar mis datos personales y de contacto para mantener mi información actualizada.</td>
+<td>Como usuario, quiero gestionar mi perfil para mantener actualizada mi información.</td>
 <td>
-Given que el usuario ha iniciado sesión<br>
-When modifica sus datos de perfil<br>
-Then el sistema guarda la información actualizada<br>
-And muestra los nuevos datos
+<b>Given</b> que el usuario tiene una cuenta registrada<br>
+<b>When</b> consulta su perfil<br>
+<b>Then</b> el sistema devuelve su información registrada
+<br><br>
+<b>Given</b> que el usuario modifica datos válidos de su perfil<br>
+<b>When</b> guarda los cambios<br>
+<b>Then</b> el sistema actualiza la información del perfil<br>
+<b>And</b> confirma la actualización realizada
 </td>
 <td>EP01</td>
 </tr>
 
 <tr>
 <td>US04</td>
-<td>Recuperar contraseña</td>
-<td>Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta.</td>
+<td>Cerrar sesión</td>
+<td>Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta.</td>
 <td>
-Given que el usuario solicita recuperación<br>
-When ingresa su correo<br>
-Then el sistema envía instrucciones de recuperación
+<b>Given</b> que el usuario tiene una sesión activa<br>
+<b>When</b> solicita cerrar sesión<br>
+<b>Then</b> el sistema finaliza la sesión
+<br><br>
+<b>Given</b> que el usuario no tiene una sesión activa<br>
+<b>When</b> solicita cerrar sesión<br>
+<b>Then</b> el sistema informa que no existe una sesión activa
 </td>
 <td>EP01</td>
 </tr>
 
 <tr>
 <td>US05</td>
-<td>Cerrar sesión</td>
-<td>Como usuario, quiero cerrar sesión para proteger mi cuenta.</td>
+<td>Recuperar contraseña</td>
+<td>Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla.</td>
 <td>
-Given que el usuario está autenticado<br>
-When selecciona cerrar sesión<br>
-Then el sistema finaliza su sesión
+<b>Given</b> que el usuario posee una cuenta registrada<br>
+<b>When</b> solicita recuperar su contraseña proporcionando sus datos de recuperación<br>
+<b>Then</b> el sistema registra la solicitud de recuperación
+<br><br>
+<b>Given</b> que los datos proporcionados no corresponden a una cuenta registrada<br>
+<b>When</b> el usuario solicita la recuperación<br>
+<b>Then</b> el sistema rechaza la solicitud
 </td>
 <td>EP01</td>
 </tr>
@@ -560,12 +583,15 @@ Then el sistema finaliza su sesión
 <tr>
 <td>US06</td>
 <td>Registrar maquinaria</td>
-<td>Como empresa de alquiler, quiero registrar mis máquinas y equipos para mantener organizado mi inventario.</td>
+<td>Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en MaquiGest.</td>
 <td>
-Given que el usuario tiene permisos para gestionar maquinaria<br>
-When registra los datos de un equipo<br>
-Then el sistema almacena la maquinaria en el inventario<br>
-And muestra el equipo registrado
+<b>Given</b> que la empresa de alquiler tiene permisos para gestionar maquinaria<br>
+<b>When</b> registra datos válidos de una maquinaria<br>
+<b>Then</b> el sistema almacena la maquinaria en el inventario
+<br><br>
+<b>Given</b> que la información de la maquinaria es incompleta o inválida<br>
+<b>When</b> la empresa intenta registrarla<br>
+<b>Then</b> el sistema rechaza el registro
 </td>
 <td>EP02</td>
 </tr>
@@ -573,12 +599,15 @@ And muestra el equipo registrado
 <tr>
 <td>US07</td>
 <td>Consultar maquinaria</td>
-<td>Como empresa de alquiler, quiero consultar las máquinas registradas para conocer la información de mis equipos.</td>
+<td>Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados.</td>
 <td>
-Given que existen equipos registrados<br>
-When el usuario consulta el inventario<br>
-Then el sistema muestra la lista de maquinaria<br>
-And muestra información relevante de cada equipo
+<b>Given</b> que existen maquinarias registradas<br>
+<b>When</b> la empresa consulta su inventario<br>
+<b>Then</b> el sistema devuelve las maquinarias registradas
+<br><br>
+<b>Given</b> que no existen maquinarias registradas<br>
+<b>When</b> la empresa consulta su inventario<br>
+<b>Then</b> el sistema informa que no existen equipos registrados
 </td>
 <td>EP02</td>
 </tr>
@@ -586,11 +615,15 @@ And muestra información relevante de cada equipo
 <tr>
 <td>US08</td>
 <td>Actualizar información de maquinaria</td>
-<td>Como empresa de alquiler, quiero actualizar la información de mis equipos para mantener el inventario actualizado.</td>
+<td>Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados.</td>
 <td>
-Given que existe una maquinaria registrada<br>
-When el usuario modifica sus datos<br>
-Then el sistema guarda la información actualizada
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> la empresa actualiza datos válidos del equipo<br>
+<b>Then</b> el sistema guarda la información actualizada
+<br><br>
+<b>Given</b> que la maquinaria indicada no existe<br>
+<b>When</b> la empresa intenta actualizarla<br>
+<b>Then</b> el sistema rechaza la operación
 </td>
 <td>EP02</td>
 </tr>
@@ -598,11 +631,15 @@ Then el sistema guarda la información actualizada
 <tr>
 <td>US09</td>
 <td>Consultar disponibilidad de maquinaria</td>
-<td>Como empresa de alquiler, quiero conocer la disponibilidad de cada equipo para evitar conflictos al gestionar nuevos alquileres.</td>
+<td>Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles.</td>
 <td>
-Given que existen equipos registrados<br>
-When el usuario consulta su disponibilidad<br>
-Then el sistema muestra si cada equipo está disponible, reservado o alquilado
+<b>Given</b> que existen maquinarias registradas<br>
+<b>When</b> la empresa consulta su disponibilidad<br>
+<b>Then</b> el sistema devuelve el estado de disponibilidad de los equipos
+<br><br>
+<b>Given</b> que una maquinaria no está disponible<br>
+<b>When</b> la empresa consulta su disponibilidad<br>
+<b>Then</b> el sistema indica que el equipo no se encuentra disponible
 </td>
 <td>EP02</td>
 </tr>
@@ -610,14 +647,34 @@ Then el sistema muestra si cada equipo está disponible, reservado o alquilado
 <tr>
 <td>US10</td>
 <td>Consultar estado de maquinaria</td>
-<td>Como empresa de alquiler, quiero conocer el estado de mis equipos para evitar alquilar maquinaria que no se encuentra en condiciones de uso.</td>
+<td>Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual.</td>
 <td>
-Given que existe una maquinaria registrada<br>
-When el usuario consulta su información<br>
-Then el sistema muestra su estado actual<br>
-And permite identificar si está disponible para alquiler
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> la empresa consulta su estado<br>
+<b>Then</b> el sistema devuelve la condición actual del equipo
+<br><br>
+<b>Given</b> que una maquinaria se encuentra en una condición que impide su alquiler<br>
+<b>When</b> la empresa consulta su estado<br>
+<b>Then</b> el sistema indica que el equipo no está disponible para alquiler
 </td>
 <td>EP02</td>
+</tr>
+
+<tr>
+<td>TS03</td>
+<td>Gestionar maquinaria mediante API REST</td>
+<td>Como desarrollador, quiero disponer de recursos REST para registrar, consultar y actualizar maquinaria para permitir la gestión del inventario desde la Web Application.</td>
+<td>
+<b>Given</b> que el usuario tiene permisos para gestionar maquinaria<br>
+<b>When</b> el cliente envía una solicitud válida para crear, consultar o actualizar una maquinaria<br>
+<b>Then</b> la API procesa la operación<br>
+<b>And</b> devuelve el recurso actualizado o la información solicitada
+<br><br>
+<b>Given</b> que el cliente envía una solicitud con datos inválidos<br>
+<b>When</b> la API procesa la solicitud<br>
+<b>Then</b> devuelve una respuesta HTTP de error correspondiente
+</td>
+<td>US06, US07, US08</td>
 </tr>
 
 <tr>
@@ -631,11 +688,15 @@ And permite identificar si está disponible para alquiler
 <tr>
 <td>US11</td>
 <td>Buscar maquinaria</td>
-<td>Como empresa constructora, quiero buscar maquinaria según mis necesidades para encontrar equipos adecuados para mi proyecto.</td>
+<td>Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades.</td>
 <td>
-Given que el usuario accede al catálogo de maquinaria<br>
-When busca o filtra equipos<br>
-Then el sistema muestra las maquinarias que coinciden con sus necesidades
+<b>Given</b> que existen maquinarias registradas<br>
+<b>When</b> la empresa constructora realiza una búsqueda válida<br>
+<b>Then</b> el sistema devuelve las maquinarias que coinciden con sus criterios
+<br><br>
+<b>Given</b> que no existen maquinarias que coincidan con los criterios de búsqueda<br>
+<b>When</b> la empresa realiza la búsqueda<br>
+<b>Then</b> el sistema informa que no existen resultados
 </td>
 <td>EP03</td>
 </tr>
@@ -643,11 +704,15 @@ Then el sistema muestra las maquinarias que coinciden con sus necesidades
 <tr>
 <td>US12</td>
 <td>Consultar información de maquinaria</td>
-<td>Como empresa constructora, quiero consultar las características de una maquinaria para determinar si es adecuada para mi proyecto.</td>
+<td>Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler.</td>
 <td>
-Given que el usuario visualiza una maquinaria<br>
-When selecciona el equipo<br>
-Then el sistema muestra sus características, estado y condiciones de alquiler
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> la empresa constructora consulta el equipo<br>
+<b>Then</b> el sistema devuelve la información y características de la maquinaria
+<br><br>
+<b>Given</b> que la maquinaria solicitada no existe<br>
+<b>When</b> la empresa constructora consulta la información<br>
+<b>Then</b> el sistema informa que la maquinaria no se encuentra registrada
 </td>
 <td>EP03</td>
 </tr>
@@ -655,11 +720,15 @@ Then el sistema muestra sus características, estado y condiciones de alquiler
 <tr>
 <td>US13</td>
 <td>Consultar disponibilidad para un periodo</td>
-<td>Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado antes de solicitar el alquiler.</td>
+<td>Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla.</td>
 <td>
-Given que el usuario selecciona una maquinaria y un periodo<br>
-When consulta su disponibilidad<br>
-Then el sistema indica si el equipo puede ser alquilado durante dicho periodo
+<b>Given</b> que existe una maquinaria registrada y un periodo válido<br>
+<b>When</b> la empresa constructora consulta la disponibilidad<br>
+<b>Then</b> el sistema indica si la maquinaria está disponible durante el periodo
+<br><br>
+<b>Given</b> que el periodo solicitado coincide con una operación existente que impide el alquiler<br>
+<b>When</b> la empresa consulta la disponibilidad<br>
+<b>Then</b> el sistema indica que la maquinaria no está disponible durante ese periodo
 </td>
 <td>EP03</td>
 </tr>
@@ -669,12 +738,49 @@ Then el sistema indica si el equipo puede ser alquilado durante dicho periodo
 <td>Solicitar alquiler de maquinaria</td>
 <td>Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto.</td>
 <td>
-Given que la maquinaria está disponible<br>
-When el usuario registra una solicitud de alquiler<br>
-Then el sistema registra la solicitud<br>
-And muestra su estado
+<b>Given</b> que la maquinaria está disponible durante el periodo solicitado<br>
+<b>When</b> la empresa constructora registra una solicitud de alquiler<br>
+<b>Then</b> el sistema registra la solicitud<br>
+<b>And</b> asigna su estado inicial
+<br><br>
+<b>Given</b> que la maquinaria no está disponible durante el periodo solicitado<br>
+<b>When</b> la empresa intenta registrar la solicitud<br>
+<b>Then</b> el sistema rechaza la solicitud
 </td>
 <td>EP03</td>
+</tr>
+
+<tr>
+<td>TS04</td>
+<td>Consultar disponibilidad mediante API REST</td>
+<td>Como desarrollador, quiero disponer de un recurso REST para consultar la disponibilidad de maquinaria durante un periodo para que la Web Application pueda mostrar los equipos disponibles.</td>
+<td>
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> el cliente solicita su disponibilidad indicando un periodo válido<br>
+<b>Then</b> la API devuelve la disponibilidad correspondiente
+<br><br>
+<b>Given</b> que el cliente solicita la disponibilidad con un periodo no válido<br>
+<b>When</b> la API procesa la solicitud<br>
+<b>Then</b> la API rechaza la solicitud y devuelve una respuesta HTTP de error
+</td>
+<td>US09, US13</td>
+</tr>
+
+<tr>
+<td>TS05</td>
+<td>Gestionar solicitudes de alquiler mediante API REST</td>
+<td>Como desarrollador, quiero disponer de recursos REST para crear y consultar solicitudes de alquiler para permitir que las empresas constructoras soliciten maquinaria y consulten sus solicitudes.</td>
+<td>
+<b>Given</b> que existe una maquinaria disponible<br>
+<b>When</b> el cliente envía una solicitud de alquiler con información válida<br>
+<b>Then</b> la API registra la solicitud<br>
+<b>And</b> devuelve el identificador y estado inicial de la solicitud
+<br><br>
+<b>Given</b> que el cliente consulta una solicitud existente<br>
+<b>When</b> envía una solicitud válida al recurso correspondiente<br>
+<b>Then</b> la API devuelve la información de la solicitud
+</td>
+<td>US14, US21</td>
 </tr>
 
 <tr>
@@ -687,38 +793,66 @@ And muestra su estado
 
 <tr>
 <td>US15</td>
-<td>Visualizar planes disponibles</td>
-<td>Como usuario, quiero ver los planes para elegir uno.</td>
+<td>Consultar planes</td>
+<td>Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece MaquiGest.</td>
 <td>
-Given que el usuario accede a la sección de planes<br>
-When visualiza opciones<br>
-Then el sistema muestra los planes con sus características y precios
+<b>Given</b> que existen planes disponibles<br>
+<b>When</b> el usuario consulta los planes<br>
+<b>Then</b> el sistema devuelve las opciones disponibles con sus características
+<br><br>
+<b>Given</b> que no existen planes configurados<br>
+<b>When</b> el usuario consulta los planes<br>
+<b>Then</b> el sistema informa que no existen opciones disponibles
 </td>
 <td>EP04</td>
 </tr>
 
 <tr>
 <td>US16</td>
-<td>Suscribirse a un plan</td>
-<td>Como usuario, quiero suscribirme a un plan para acceder a funciones premium.</td>
+<td>Seleccionar plan</td>
+<td>Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades.</td>
 <td>
-Given que el usuario selecciona un plan<br>
-When confirma la suscripción<br>
-Then el sistema registra el plan
+<b>Given</b> que existen planes disponibles<br>
+<b>When</b> el usuario selecciona un plan<br>
+<b>Then</b> el sistema registra la selección realizada
+<br><br>
+<b>Given</b> que el plan seleccionado no está disponible<br>
+<b>When</b> el usuario intenta seleccionarlo<br>
+<b>Then</b> el sistema rechaza la operación
 </td>
 <td>EP04</td>
 </tr>
 
 <tr>
 <td>US17</td>
-<td>Cambiar de plan</td>
-<td>Como usuario, quiero cambiar de plan según mis necesidades.</td>
+<td>Gestionar suscripción</td>
+<td>Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado.</td>
 <td>
-Given que el usuario tiene un plan activo<br>
-When selecciona otro<br>
-Then el sistema actualiza la suscripción
+<b>Given</b> que el usuario tiene una suscripción activa<br>
+<b>When</b> consulta su suscripción<br>
+<b>Then</b> el sistema devuelve la información del plan seleccionado
+<br><br>
+<b>Given</b> que el usuario selecciona una opción de gestión válida<br>
+<b>When</b> confirma el cambio correspondiente<br>
+<b>Then</b> el sistema actualiza la información de la suscripción
 </td>
 <td>EP04</td>
+</tr>
+
+<tr>
+<td>TS09</td>
+<td>Consultar planes y suscripciones mediante API REST</td>
+<td>Como desarrollador, quiero disponer de recursos REST para consultar los planes disponibles y gestionar la información básica de la suscripción para que la Web Application pueda mostrar y administrar estas opciones.</td>
+<td>
+<b>Given</b> que existen planes configurados<br>
+<b>When</b> el cliente solicita los planes disponibles<br>
+<b>Then</b> la API devuelve la información de los planes
+<br><br>
+<b>Given</b> que el cliente registra una selección válida<br>
+<b>When</b> la API procesa la solicitud<br>
+<b>Then</b> la API devuelve el estado correspondiente
+</td>
+<td>US15, US16, US17</td>
 </tr>
 
 <tr>
@@ -732,12 +866,16 @@ Then el sistema actualiza la suscripción
 <tr>
 <td>US18</td>
 <td>Gestionar solicitudes de alquiler</td>
-<td>Como empresa de alquiler, quiero revisar las solicitudes recibidas para decidir cuáles atender y mantener control sobre mis alquileres.</td>
+<td>Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas.</td>
 <td>
-Given que existen solicitudes de alquiler<br>
-When el usuario consulta las solicitudes<br>
-Then el sistema muestra la información de cada solicitud<br>
-And permite identificar su estado
+<b>Given</b> que existen solicitudes de alquiler<br>
+<b>When</b> la empresa de alquiler consulta sus solicitudes<br>
+<b>Then</b> el sistema devuelve las solicitudes registradas<br>
+<b>And</b> muestra su estado correspondiente
+<br><br>
+<b>Given</b> que no existen solicitudes registradas<br>
+<b>When</b> la empresa consulta las solicitudes<br>
+<b>Then</b> el sistema informa que no existen solicitudes
 </td>
 <td>EP05</td>
 </tr>
@@ -745,12 +883,15 @@ And permite identificar su estado
 <tr>
 <td>US19</td>
 <td>Confirmar o rechazar una solicitud</td>
-<td>Como empresa de alquiler, quiero aceptar o rechazar solicitudes de alquiler para controlar la disponibilidad de mis equipos.</td>
+<td>Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse.</td>
 <td>
-Given que existe una solicitud pendiente<br>
-When el usuario selecciona aceptar o rechazar<br>
-Then el sistema actualiza el estado de la solicitud<br>
-And muestra el nuevo estado
+<b>Given</b> que existe una solicitud pendiente<br>
+<b>When</b> la empresa de alquiler la confirma<br>
+<b>Then</b> el sistema actualiza el estado de la solicitud a confirmada
+<br><br>
+<b>Given</b> que existe una solicitud pendiente<br>
+<b>When</b> la empresa de alquiler la rechaza<br>
+<b>Then</b> el sistema actualiza el estado de la solicitud a rechazada
 </td>
 <td>EP05</td>
 </tr>
@@ -758,12 +899,16 @@ And muestra el nuevo estado
 <tr>
 <td>US20</td>
 <td>Consultar alquileres activos</td>
-<td>Como empresa de alquiler, quiero consultar mis alquileres activos para conocer qué equipos están actualmente alquilados.</td>
+<td>Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso.</td>
 <td>
-Given que existen alquileres activos<br>
-When el usuario consulta sus alquileres<br>
-Then el sistema muestra los equipos alquilados<br>
-And muestra información del periodo correspondiente
+<b>Given</b> que existen alquileres activos<br>
+<b>When</b> la empresa de alquiler consulta las operaciones en curso<br>
+<b>Then</b> el sistema devuelve los alquileres activos<br>
+<b>And</b> muestra el periodo correspondiente
+<br><br>
+<b>Given</b> que no existen alquileres activos<br>
+<b>When</b> la empresa consulta las operaciones en curso<br>
+<b>Then</b> el sistema informa que no existen alquileres activos
 </td>
 <td>EP05</td>
 </tr>
@@ -771,11 +916,15 @@ And muestra información del periodo correspondiente
 <tr>
 <td>US21</td>
 <td>Consultar estado de una solicitud de alquiler</td>
-<td>Como empresa constructora, quiero consultar el estado de mi solicitud para saber si mi alquiler fue aceptado, rechazado o aún está pendiente.</td>
+<td>Como empresa constructora, quiero consultar el estado de una solicitud de alquiler para conocer su situación actual.</td>
 <td>
-Given que el usuario ha realizado una solicitud<br>
-When consulta sus solicitudes<br>
-Then el sistema muestra el estado actualizado de cada una
+<b>Given</b> que existe una solicitud realizada por la empresa constructora<br>
+<b>When</b> consulta su estado<br>
+<b>Then</b> el sistema devuelve el estado actualizado de la solicitud
+<br><br>
+<b>Given</b> que la solicitud indicada no existe<br>
+<b>When</b> la empresa constructora consulta su estado<br>
+<b>Then</b> el sistema informa que la solicitud no existe
 </td>
 <td>EP05</td>
 </tr>
@@ -783,14 +932,51 @@ Then el sistema muestra el estado actualizado de cada una
 <tr>
 <td>US22</td>
 <td>Gestionar entregas y devoluciones</td>
-<td>Como empresa de alquiler, quiero registrar las entregas y devoluciones de maquinaria para mantener trazabilidad sobre los equipos alquilados.</td>
+<td>Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria.</td>
 <td>
-Given que existe un alquiler confirmado<br>
-When se registra la entrega o devolución<br>
-Then el sistema actualiza el estado del alquiler<br>
-And registra la operación realizada
+<b>Given</b> que existe un alquiler confirmado<br>
+<b>When</b> la empresa registra una entrega<br>
+<b>Then</b> el sistema registra la operación y actualiza el estado correspondiente
+<br><br>
+<b>Given</b> que existe un alquiler activo<br>
+<b>When</b> la empresa registra una devolución<br>
+<b>Then</b> el sistema registra la operación y actualiza el estado correspondiente
 </td>
 <td>EP05</td>
+</tr>
+
+<tr>
+<td>TS06</td>
+<td>Gestionar reservas y estados de alquiler mediante API REST</td>
+<td>Como desarrollador, quiero disponer de recursos REST para gestionar solicitudes, confirmaciones, rechazos y alquileres activos para soportar el ciclo de alquiler de MaquiGest.</td>
+<td>
+<b>Given</b> que existe una solicitud de alquiler registrada<br>
+<b>When</b> el usuario autorizado confirma o rechaza la solicitud<br>
+<b>Then</b> la API actualiza su estado<br>
+<b>And</b> devuelve el nuevo estado de la operación
+<br><br>
+<b>Given</b> que existen alquileres activos<br>
+<b>When</b> el cliente solicita su consulta<br>
+<b>Then</b> la API devuelve la información correspondiente
+</td>
+<td>US18, US19, US20</td>
+</tr>
+
+<tr>
+<td>TS07</td>
+<td>Gestionar entregas y devoluciones mediante API REST</td>
+<td>Como desarrollador, quiero disponer de recursos REST para registrar entregas y devoluciones de maquinaria para mantener la trazabilidad del ciclo de alquiler.</td>
+<td>
+<b>Given</b> que existe un alquiler confirmado<br>
+<b>When</b> el cliente registra una entrega o devolución válida<br>
+<b>Then</b> la API registra la operación<br>
+<b>And</b> actualiza el estado correspondiente del alquiler y de la maquinaria
+<br><br>
+<b>Given</b> que el alquiler indicado no permite registrar la operación solicitada<br>
+<b>When</b> el cliente envía la solicitud<br>
+<b>Then</b> la API rechaza la operación y devuelve una respuesta HTTP de error
+</td>
+<td>US22</td>
 </tr>
 
 <tr>
@@ -804,12 +990,16 @@ And registra la operación realizada
 <tr>
 <td>US23</td>
 <td>Registrar mantenimiento</td>
-<td>Como empresa de alquiler, quiero registrar mantenimientos realizados a una maquinaria para mantener un historial de su estado operativo.</td>
+<td>Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria.</td>
 <td>
-Given que existe una maquinaria registrada<br>
-When el usuario registra un mantenimiento<br>
-Then el sistema almacena la información<br>
-And la relaciona con el equipo correspondiente
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> la empresa registra un mantenimiento válido<br>
+<b>Then</b> el sistema almacena la información del mantenimiento<br>
+<b>And</b> la relaciona con la maquinaria correspondiente
+<br><br>
+<b>Given</b> que la maquinaria no existe<br>
+<b>When</b> la empresa intenta registrar el mantenimiento<br>
+<b>Then</b> el sistema rechaza la operación
 </td>
 <td>EP06</td>
 </tr>
@@ -817,12 +1007,15 @@ And la relaciona con el equipo correspondiente
 <tr>
 <td>US24</td>
 <td>Programar mantenimiento</td>
-<td>Como empresa de alquiler, quiero programar mantenimientos para evitar que los equipos sean utilizados cuando requieren atención.</td>
+<td>Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria.</td>
 <td>
-Given que una maquinaria requiere mantenimiento<br>
-When el usuario registra una fecha de mantenimiento<br>
-Then el sistema guarda la programación<br>
-And permite consultar el mantenimiento pendiente
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> la empresa programa una fecha válida de mantenimiento<br>
+<b>Then</b> el sistema registra la programación
+<br><br>
+<b>Given</b> que la fecha proporcionada no es válida<br>
+<b>When</b> la empresa intenta programar el mantenimiento<br>
+<b>Then</b> el sistema rechaza la programación
 </td>
 <td>EP06</td>
 </tr>
@@ -830,12 +1023,16 @@ And permite consultar el mantenimiento pendiente
 <tr>
 <td>US25</td>
 <td>Registrar incidencia de maquinaria</td>
-<td>Como empresa de alquiler, quiero registrar incidencias de mis equipos para llevar un control de problemas y reparaciones.</td>
+<td>Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria.</td>
 <td>
-Given que una maquinaria presenta una incidencia<br>
-When el usuario registra el problema<br>
-Then el sistema almacena la incidencia<br>
-And la relaciona con la maquinaria correspondiente
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> la empresa registra una incidencia válida<br>
+<b>Then</b> el sistema almacena la incidencia<br>
+<b>And</b> la relaciona con la maquinaria correspondiente
+<br><br>
+<b>Given</b> que la maquinaria indicada no existe<br>
+<b>When</b> la empresa intenta registrar la incidencia<br>
+<b>Then</b> el sistema rechaza la operación
 </td>
 <td>EP06</td>
 </tr>
@@ -843,13 +1040,34 @@ And la relaciona con la maquinaria correspondiente
 <tr>
 <td>US26</td>
 <td>Consultar historial de maquinaria</td>
-<td>Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus alquileres, incidencias y mantenimientos.</td>
+<td>Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores.</td>
 <td>
-Given que existe una maquinaria registrada<br>
-When el usuario consulta su historial<br>
-Then el sistema muestra las operaciones asociadas al equipo
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> la empresa consulta su historial<br>
+<b>Then</b> el sistema devuelve los mantenimientos e incidencias asociados
+<br><br>
+<b>Given</b> que la maquinaria no tiene registros históricos<br>
+<b>When</b> la empresa consulta su historial<br>
+<b>Then</b> el sistema informa que no existen registros asociados
 </td>
 <td>EP06</td>
+</tr>
+
+<tr>
+<td>TS08</td>
+<td>Gestionar mantenimiento e incidencias mediante API REST</td>
+<td>Como desarrollador, quiero disponer de recursos REST para registrar y consultar mantenimientos e incidencias de maquinaria para conservar su historial operativo.</td>
+<td>
+<b>Given</b> que existe una maquinaria registrada<br>
+<b>When</b> el cliente registra un mantenimiento o una incidencia válida<br>
+<b>Then</b> la API almacena la información asociada a la maquinaria<br>
+<b>And</b> devuelve una respuesta correspondiente a la operación
+<br><br>
+<b>Given</b> que existen registros históricos asociados a una maquinaria<br>
+<b>When</b> el cliente solicita el historial<br>
+<b>Then</b> la API devuelve la información correspondiente
+</td>
+<td>US23, US24, US25, US26</td>
 </tr>
 
 <tr>
@@ -863,11 +1081,15 @@ Then el sistema muestra las operaciones asociadas al equipo
 <tr>
 <td>US27</td>
 <td>Consultar información de MaquiGest</td>
-<td>Como visitante, quiero conocer las funcionalidades y beneficios de MaquiGest para determinar si la solución se adapta a las necesidades de mi empresa.</td>
+<td>Como visitante, quiero consultar información de MaquiGest para conocer la solución y su propuesta de valor.</td>
 <td>
-Given que el visitante accede al Landing Page<br>
-When revisa la información del producto<br>
-Then el sistema muestra sus principales funcionalidades y beneficios
+<b>Given</b> que el visitante accede al Landing Page<br>
+<b>When</b> consulta la información de MaquiGest<br>
+<b>Then</b> el sistema proporciona información sobre la solución y su propuesta de valor
+<br><br>
+<b>Given</b> que el visitante consulta las características de la solución<br>
+<b>When</b> revisa la información disponible<br>
+<b>Then</b> el sistema presenta las funcionalidades principales de MaquiGest
 </td>
 <td>EP07</td>
 </tr>
@@ -875,12 +1097,15 @@ Then el sistema muestra sus principales funcionalidades y beneficios
 <tr>
 <td>US28</td>
 <td>Solicitar demostración</td>
-<td>Como potencial cliente, quiero solicitar una demostración de MaquiGest para conocer cómo funciona antes de utilizar el servicio.</td>
+<td>Como visitante, quiero solicitar una demostración para conocer cómo funciona MaquiGest.</td>
 <td>
-Given que el visitante desea conocer la plataforma<br>
-When completa y envía el formulario de demostración<br>
-Then el sistema registra la solicitud<br>
-And muestra un mensaje de confirmación
+<b>Given</b> que el visitante desea conocer la solución<br>
+<b>When</b> proporciona los datos requeridos y registra la solicitud<br>
+<b>Then</b> el sistema registra la solicitud de demostración
+<br><br>
+<b>Given</b> que la información requerida está incompleta<br>
+<b>When</b> el visitante intenta registrar la solicitud<br>
+<b>Then</b> el sistema rechaza la solicitud
 </td>
 <td>EP07</td>
 </tr>
@@ -888,11 +1113,15 @@ And muestra un mensaje de confirmación
 <tr>
 <td>US29</td>
 <td>Contactar con MaquiGest</td>
-<td>Como potencial cliente, quiero contactar con el equipo de MaquiGest para realizar consultas sobre el servicio.</td>
+<td>Como visitante, quiero contactar con MaquiGest para realizar consultas sobre la solución.</td>
 <td>
-Given que el visitante accede a la sección de contacto<br>
-When completa y envía sus datos y consulta<br>
-Then el sistema registra la solicitud de contacto
+<b>Given</b> que el visitante proporciona los datos requeridos<br>
+<b>When</b> registra una consulta de contacto<br>
+<b>Then</b> el sistema registra la solicitud de contacto
+<br><br>
+<b>Given</b> que faltan datos obligatorios<br>
+<b>When</b> el visitante registra la consulta<br>
+<b>Then</b> el sistema rechaza la solicitud
 </td>
 <td>EP07</td>
 </tr>
@@ -908,12 +1137,15 @@ Then el sistema registra la solicitud de contacto
 <tr>
 <td>US30</td>
 <td>Visualizar propuesta de valor</td>
-<td>Como visitante, quiero identificar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa a gestionar el alquiler de maquinaria.</td>
+<td>Como visitante, quiero visualizar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa.</td>
 <td>
-Given que el visitante accede al Landing Page<br>
-When visualiza la sección principal<br>
-Then el sistema muestra la propuesta de valor de MaquiGest<br>
-And presenta sus principales beneficios para la gestión de alquileres
+<b>Given</b> que el visitante accede al Landing Page<br>
+<b>When</b> consulta la información principal de MaquiGest<br>
+<b>Then</b> el sistema presenta la propuesta de valor de MaquiGest
+<br><br>
+<b>Given</b> que el visitante consulta la propuesta de valor<br>
+<b>When</b> revisa la información presentada<br>
+<b>Then</b> el sistema comunica los principales beneficios de la solución
 </td>
 <td>EP08</td>
 </tr>
@@ -921,12 +1153,15 @@ And presenta sus principales beneficios para la gestión de alquileres
 <tr>
 <td>US31</td>
 <td>Explorar funcionalidades principales</td>
-<td>Como potencial cliente, quiero conocer las principales funcionalidades de MaquiGest para identificar cuáles pueden ayudarme a gestionar mis operaciones de alquiler de maquinaria.</td>
+<td>Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con MaquiGest.</td>
 <td>
-Given que el visitante se encuentra en el Landing Page<br>
-When revisa la sección de funcionalidades<br>
-Then el sistema muestra las principales funcionalidades de MaquiGest<br>
-And presenta una descripción breve de cada funcionalidad
+<b>Given</b> que el visitante accede al Landing Page<br>
+<b>When</b> consulta las funcionalidades principales<br>
+<b>Then</b> el sistema presenta las funcionalidades disponibles
+<br><br>
+<b>Given</b> que el visitante consulta una funcionalidad<br>
+<b>When</b> revisa la información correspondiente<br>
+<b>Then</b> el sistema proporciona una descripción de su propósito
 </td>
 <td>EP08</td>
 </tr>
@@ -934,11 +1169,15 @@ And presenta una descripción breve de cada funcionalidad
 <tr>
 <td>US32</td>
 <td>Identificar la solución para mi empresa</td>
-<td>Como visitante, quiero identificar cómo MaquiGest puede ayudar según mi tipo de empresa para conocer las funcionalidades relevantes para mis necesidades.</td>
+<td>Como visitante, quiero identificar si MaquiGest se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades.</td>
 <td>
-Given que el visitante accede a la sección orientada a clientes<br>
-When selecciona o visualiza su tipo de empresa<br>
-Then el sistema presenta los beneficios relevantes para empresas de alquiler o empresas constructoras
+<b>Given</b> que el visitante consulta la información dirigida a los segmentos objetivo<br>
+<b>When</b> revisa la información de su tipo de empresa<br>
+<b>Then</b> el sistema presenta los beneficios correspondientes
+<br><br>
+<b>Given</b> que el visitante evalúa sus necesidades<br>
+<b>When</b> compara la información disponible con su tipo de empresa<br>
+<b>Then</b> el sistema proporciona información para determinar la utilidad de MaquiGest
 </td>
 <td>EP08</td>
 </tr>
@@ -946,39 +1185,99 @@ Then el sistema presenta los beneficios relevantes para empresas de alquiler o e
 <tr>
 <td>US33</td>
 <td>Acceder a la Web Application</td>
-<td>Como visitante, quiero acceder a la Web Application desde el Landing Page para utilizar las funcionalidades de MaquiGest.</td>
+<td>Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de MaquiGest.</td>
 <td>
-Given que el visitante se encuentra en el Landing Page<br>
-When selecciona el CTA para acceder a la plataforma<br>
-Then el sistema redirige al visitante hacia la Web Application
+<b>Given</b> que el visitante se encuentra en el Landing Page<br>
+<b>When</b> solicita acceder a la Web Application<br>
+<b>Then</b> el sistema dirige al visitante hacia la Web Application
+<br><br>
+<b>Given</b> que la Web Application se encuentra disponible<br>
+<b>When</b> el visitante solicita el acceso<br>
+<b>Then</b> el sistema establece correctamente la navegación hacia la plataforma
 </td>
 <td>EP08</td>
 </tr>
 
 <tr>
 <td>US34</td>
-<td>Consultar el Landing Page en diferentes dispositivos</td>
-<td>Como visitante, quiero visualizar correctamente el Landing Page desde diferentes dispositivos para conocer MaquiGest sin importar el dispositivo que utilice.</td>
+<td>Utilizar la plataforma desde dispositivos de diferentes tamaños</td>
+<td>Como usuario, quiero utilizar MaquiGest desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada.</td>
 <td>
-Given que el visitante accede al Landing Page desde un dispositivo<br>
-When navega por sus diferentes secciones<br>
-Then el sistema adapta correctamente el contenido a la resolución de pantalla<br>
-And permite utilizar las funcionalidades de navegación sin pérdida de información
+<b>Given</b> que el usuario accede a MaquiGest desde un dispositivo<br>
+<b>When</b> navega por la plataforma<br>
+<b>Then</b> el sistema adapta el contenido al tamaño de pantalla disponible
+<br><br>
+<b>Given</b> que el usuario accede desde otro tamaño de pantalla<br>
+<b>When</b> utiliza las funcionalidades disponibles<br>
+<b>Then</b> el sistema mantiene la información y funcionalidad sin pérdida de contenido
 </td>
 <td>EP08</td>
 </tr>
 
 <tr>
 <td>US35</td>
-<td>Cambiar el idioma del Landing Page</td>
-<td>Como visitante, quiero cambiar el idioma del Landing Page para consultar la información de MaquiGest en el idioma de mi preferencia.</td>
+<td>Utilizar la plataforma en diferentes idiomas</td>
+<td>Como usuario, quiero utilizar MaquiGest en diferentes idiomas para comprender y utilizar la plataforma.</td>
 <td>
-Given que el visitante accede al Landing Page<br>
-When selecciona un idioma disponible<br>
-Then el sistema muestra el contenido del Landing Page en el idioma seleccionado<br>
-And mantiene la estructura y funcionalidad de la página
+<b>Given</b> que existen idiomas disponibles<br>
+<b>When</b> el usuario selecciona un idioma<br>
+<b>Then</b> el sistema presenta el contenido en el idioma seleccionado
+<br><br>
+<b>Given</b> que el usuario cambia el idioma disponible<br>
+<b>When</b> continúa utilizando la plataforma<br>
+<b>Then</b> el sistema mantiene la información y funcionalidades en el idioma seleccionado
 </td>
 <td>EP08</td>
+</tr>
+
+<tr>
+<td>TS02</td>
+<td>Gestionar perfiles mediante API REST</td>
+<td>Como desarrollador, quiero disponer de recursos REST para consultar y actualizar los perfiles de los usuarios para permitir que la Web Application gestione su información.</td>
+<td>
+<b>Given</b> que existe un perfil registrado<br>
+<b>When</b> el cliente solicita la información del perfil mediante la API<br>
+<b>Then</b> la API devuelve los datos correspondientes
+<br><br>
+<b>Given</b> que el cliente envía información válida para actualizar un perfil<br>
+<b>When</b> la API procesa la solicitud<br>
+<b>Then</b> la API actualiza la información<br>
+<b>And</b> devuelve una respuesta de confirmación
+</td>
+<td>US03</td>
+</tr>
+
+<tr>
+<td>TS01</td>
+<td>Exponer API REST de MaquiGest</td>
+<td>Como desarrollador, quiero disponer de una API REST organizada para exponer los servicios de MaquiGest y permitir que la Web Application consuma las funcionalidades del dominio.</td>
+<td>
+<b>Given</b> que la API se encuentra disponible<br>
+<b>When</b> el cliente realiza una solicitud a un recurso válido<br>
+<b>Then</b> la API procesa la solicitud y devuelve una respuesta HTTP correspondiente<br>
+<b>And</b> los recursos cuentan con una estructura consistente de request/response
+<br><br>
+<b>Given</b> que el cliente realiza una solicitud a un recurso no válido<br>
+<b>When</b> la API procesa la solicitud<br>
+<b>Then</b> la API devuelve una respuesta HTTP de error correspondiente
+</td>
+<td>Transversal</td>
+</tr>
+
+<tr>
+<td>TS10</td>
+<td>Gestionar autenticación y autorización mediante API REST</td>
+<td>Como desarrollador, quiero disponer de mecanismos REST de autenticación y autorización para proteger los recursos de MaquiGest y controlar el acceso según el tipo de usuario.</td>
+<td>
+<b>Given</b> que existe una cuenta registrada<br>
+<b>When</b> el cliente envía credenciales válidas al recurso de autenticación<br>
+<b>Then</b> la API permite iniciar una sesión válida
+<br><br>
+<b>Given</b> que una solicitud intenta acceder a un recurso protegido sin autorización<br>
+<b>When</b> la API procesa la solicitud<br>
+<b>Then</b> la API rechaza la operación
+</td>
+<td>US01, US02, US04, US05</td>
 </tr>
 
 </table>
