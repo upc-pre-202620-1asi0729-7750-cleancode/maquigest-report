@@ -2784,63 +2784,59 @@ Esta propuesta utiliza datos ilustrativos y representa el diseño visual de la p
 
 El User Flow Diagram de la Web Application de **MaquiGest** representa las acciones, decisiones y resultados que atraviesan los usuarios durante los principales procesos de la plataforma. A diferencia del wireflow, que se enfoca en la relación y navegación entre pantallas, el user flow incorpora puntos de decisión y validaciones que permiten comprender cómo progresa cada tarea hasta alcanzar un resultado determinado.
 
-El flujo inicia con el acceso a MaquiGest. Si el usuario ya mantiene una sesión activa, el sistema recupera dicha sesión y lo dirige al Dashboard correspondiente. En caso contrario, se presenta la pantalla de Login, desde la cual el usuario puede iniciar sesión, registrarse o iniciar el proceso de recuperación de contraseña. Durante el inicio de sesión se validan las credenciales ingresadas; si son correctas, se crea una sesión activa y se continúa hacia la aplicación, mientras que, si son incorrectas, se muestra un mensaje de error y el usuario permanece en la pantalla de acceso.
 
-Cuando el usuario todavía no posee una cuenta, el flujo conduce hacia el proceso de registro, donde completa la información requerida, selecciona el tipo de empresa y crea su cuenta. Una vez completado correctamente el registro, el sistema confirma la operación y permite regresar al Login. De forma similar, el flujo de recuperación de contraseña solicita el correo electrónico registrado, envía las instrucciones correspondientes y posteriormente permite volver a la pantalla de inicio de sesión.
+#### Authentication and Registration User Flow
 
-Después de la autenticación, el flujo se divide según el tipo de organización registrada en MaquiGest. Esta decisión permite ofrecer funcionalidades y recorridos diferentes para las **empresas de alquiler de maquinaria** y las **pequeñas empresas constructoras**, manteniendo una experiencia adaptada a las necesidades de cada segmento.
+El Authentication and Registration User Flow representa el proceso transversal mediante el cual una persona obtiene acceso a MaquiGest, independientemente del tipo de empresa a la que pertenece. El flujo contempla tanto el ingreso de usuarios existentes como la creación de nuevas cuentas, la recuperación de credenciales y la validación de las condiciones necesarias para acceder al workspace correspondiente.
 
-#### Flujo de la empresa de alquiler de maquinaria
+El recorrido comienza cuando el usuario abre la plataforma y el sistema comprueba si existe una sesión activa. En caso contrario, se presenta la pantalla de inicio de sesión, desde la cual el usuario puede autenticarse, registrarse o iniciar el proceso de recuperación de contraseña. Cuando las credenciales son válidas, el sistema identifica el tipo de compañía y redirige al usuario hacia el entorno que le corresponde.
 
-La empresa de alquiler accede a un Dashboard orientado al control de sus operaciones. Desde la navegación principal puede gestionar las siguientes áreas:
+Durante el registro se distingue entre los dos segmentos atendidos por MaquiGest: empresas de alquiler de maquinaria y empresas constructoras o contratistas. Las empresas constructoras pueden activar su cuenta directamente, mientras que las empresas de alquiler deben seleccionar un plan de suscripción y completar el proceso de pago antes de habilitar el acceso a las funcionalidades de la plataforma.
 
-- **Equipment:** permite consultar el inventario, registrar nueva maquinaria, actualizar información, revisar disponibilidad y acceder al detalle de cada equipo.
-- **Rental Requests:** permite revisar las solicitudes recibidas y decidir si una solicitud debe aprobarse o rechazarse. Una solicitud aprobada puede generar una reserva.
-- **Reservations:** permite consultar las reservas confirmadas, revisar sus detalles, administrar su estado y cancelar una reserva cuando corresponda.
-- **Rentals:** permite consultar alquileres activos, registrar la entrega de la maquinaria, actualizar su estado, registrar la devolución y cerrar el alquiler.
-- **Maintenance:** permite consultar el estado de los equipos, registrar mantenimientos, actualizar su progreso y volver a marcar una maquinaria como disponible cuando corresponda.
-- **Plan & Subscription:** permite visualizar los planes disponibles, seleccionar un plan, registrar la información necesaria para la suscripción y activar el servicio.
-- **Profile:** permite consultar y actualizar la información de la cuenta y de la empresa, además de gestionar preferencias y credenciales.
+Asimismo, el flujo contempla escenarios alternativos como credenciales incorrectas, pagos no completados, suscripciones inactivas y recuperación de contraseña mediante correo electrónico. De esta manera, el diagrama no representa únicamente el camino exitoso, sino también las principales situaciones que pueden presentarse durante el acceso.
 
-Dentro de este recorrido, uno de los principales puntos de decisión ocurre durante la revisión de una solicitud de alquiler. Si la empresa decide rechazarla, el sistema registra el nuevo estado y finaliza dicho proceso. Si la solicitud es aprobada, se genera una reserva que posteriormente puede continuar hacia el proceso de alquiler.
+En conjunto, este User Flow permite visualizar cómo MaquiGest controla la autenticación, creación de cuentas, diferenciación de segmentos, activación de suscripciones y acceso al workspace adecuado, constituyendo el punto de entrada común para los demás flujos funcionales del sistema.
 
-#### Flujo de la empresa constructora
+<img src = "assets/md-images-chapter4/user-flow-diagrams/UserFlow_Authentication.png" width = "800px">
 
-La empresa constructora accede a un Dashboard orientado al seguimiento de sus solicitudes y alquileres. Desde esta interfaz puede realizar los siguientes procesos:
+#### Rental Company Core Domain User Flow
 
-- **Search Equipment:** permite buscar maquinaria y aplicar filtros según las necesidades del proyecto.
-- **Equipment Detail:** permite consultar las características, condiciones y disponibilidad del equipo seleccionado.
-- **My Requests:** permite realizar seguimiento al estado de las solicitudes enviadas y consultar si fueron aprobadas, rechazadas o permanecen pendientes.
-- **My Reservations:** permite consultar las reservas confirmadas y revisar sus principales datos.
-- **My Rentals:** permite realizar seguimiento de los alquileres activos, sus fechas y los procesos relacionados con la entrega y devolución.
-- **Profile:** permite consultar y actualizar la información de la cuenta y de la organización.
+El Rental Company Core Domain User Flow representa las principales operaciones que realiza una empresa de alquiler de maquinaria dentro de MaquiGest una vez que ha obtenido acceso a su workspace. El flujo se concentra en las actividades directamente relacionadas con la administración de maquinaria y con el ciclo completo de atención de un alquiler.
 
-Durante el proceso de búsqueda se verifica la disponibilidad del equipo para el período requerido. Si la maquinaria no está disponible, el usuario puede modificar las fechas o regresar a la búsqueda para seleccionar otra alternativa. Si se encuentra disponible, puede continuar con la solicitud de alquiler y posteriormente realizar su seguimiento desde My Requests.
+El recorrido parte desde el Rental Company Dashboard, desde donde el usuario puede acceder a los módulos de Equipment, Rental Requests, Reservations, Rentals y Maintenance. Estos módulos representan las capacidades principales que permiten controlar la disponibilidad y utilización de la maquinaria.
 
-Finalmente, ambos recorridos convergen en la acción **Sign out**, mediante la cual se cierra la sesión activa y finaliza el recorrido dentro de la Web Application.
+En Equipment, la empresa administra su inventario mediante el registro de nuevos equipos, la actualización de información y la consulta de detalles. Esta información constituye la base para que la maquinaria pueda ser posteriormente encontrada y solicitada por empresas constructoras.
 
-#### General User Flow of MaquiGest Web Application
+En Rental Requests, la empresa revisa las solicitudes recibidas. Cada solicitud puede ser aprobada o rechazada. Cuando se aprueba, la empresa constructora es notificada y se genera una reserva asociada al equipo y al período solicitado. Si se rechaza, se registra el motivo correspondiente y se comunica la decisión al solicitante.
 
-**Purpose:** Representar las principales acciones, decisiones y recorridos que realizan los usuarios de MaquiGest desde la autenticación hasta la ejecución de los procesos principales correspondientes a cada segmento.
+El módulo Reservations permite administrar las asignaciones ya confirmadas. Una reserva puede consultarse, cancelarse o continuar hacia el registro de un alquiler. Esto establece una separación entre la intención inicialmente aprobada y la operación de alquiler que posteriormente será ejecutada.
 
-**Key elements:**
+En Rentals, la empresa administra las etapas operativas del servicio. El proveedor registra la entrega del equipo y posteriormente espera la confirmación de recepción por parte de la empresa constructora antes de considerar que la maquinaria se encuentra efectivamente en alquiler. Al finalizar el período, la constructora inicia la devolución y la empresa de alquiler revisa el retorno, inspecciona el equipo y confirma su recepción antes de completar el alquiler.
 
-- Acceso, registro y recuperación de contraseña.
-- Validación de sesión y credenciales.
-- Selección y reconocimiento del tipo de empresa.
-- Flujo operativo para empresas de alquiler de maquinaria.
-- Flujo de búsqueda y solicitud para empresas constructoras.
-- Puntos de decisión durante la aprobación de solicitudes y la disponibilidad de maquinaria.
-- Gestión de perfil y suscripción.
-- Cierre de sesión como finalización del recorrido.
+Finalmente, el módulo Maintenance permite programar mantenimientos, actualizar su estado y devolver un equipo a disponibilidad cuando nuevamente se encuentre en condiciones de ser alquilado.
 
-<p align="center">
-  <img src="./assets/images/chapter-4/webapp-general-user-flow.png"
-       alt="General User Flow Diagram of the MaquiGest Web Application"
-       width="100%">
-</p>
+Por ello, este User Flow representa el núcleo operativo de MaquiGest para las empresas proveedoras, ya que integra la administración del inventario con la recepción de solicitudes, confirmación de reservas, ejecución de alquileres, entregas, devoluciones y mantenimiento de los equipos.
 
-En conjunto, el User Flow Diagram permite verificar que las acciones y decisiones de los usuarios mantienen coherencia con las interfaces definidas en los wireframes y mock-ups, y proporciona una base para establecer posteriormente las interacciones del prototipo de la Web Application.
+<img src = "assets/md-images-chapter4/user-flow-diagrams/UserFlow_Rental_Company.png" width = "800px">
+
+#### Construction Company Core Domain User Flow
+
+El Construction Company Core Domain User Flow representa el recorrido principal de una pequeña empresa constructora o contratista que utiliza MaquiGest para encontrar maquinaria, solicitar su alquiler y realizar seguimiento a las operaciones asociadas.
+
+El flujo comienza desde el Construction Company Dashboard, desde donde el usuario puede acceder principalmente a Search Equipment, My Requests, My Reservations y My Rentals. A diferencia de la empresa de alquiler, este segmento no administra inventario propio dentro del sistema, sino que utiliza MaquiGest como medio para encontrar y contratar maquinaria ofrecida por proveedores.
+
+En Search Equipment, la empresa constructora explora el catálogo de maquinaria disponible, puede aplicar filtros según categoría, ubicación, disponibilidad u otras características, y acceder al detalle de un equipo. Desde esta vista puede seleccionar el período requerido y comprobar si la maquinaria se encuentra disponible para dichas fechas. Cuando la disponibilidad es favorable, puede generar una solicitud de alquiler.
+
+Las solicitudes realizadas pasan a My Requests, donde la constructora puede consultar su estado. Una solicitud puede encontrarse pendiente mientras espera la respuesta del proveedor, ser aprobada para continuar con el proceso o ser rechazada. Mientras corresponda, el usuario también puede cancelar solicitudes que todavía no hayan avanzado a etapas posteriores.
+
+Una vez confirmada la asignación del equipo, la operación pasa a My Reservations. Desde este módulo la empresa consulta las reservas vigentes, los equipos involucrados, los proveedores y los períodos confirmados. También puede cancelar una reserva cuando ya no requiera la maquinaria, notificando al proveedor y liberando el período previamente reservado.
+
+Posteriormente, cuando la reserva se convierte en alquiler, la operación aparece en My Rentals. Desde allí la constructora puede consultar la maquinaria que se encuentra en uso, revisar las fechas de devolución y realizar las acciones que le corresponden dentro de la operación. Cuando el proveedor registra una entrega, la constructora confirma que recibió el equipo. Al finalizar el uso de la maquinaria, la constructora inicia el proceso de devolución, quedando la confirmación final y la inspección en manos de la empresa de alquiler.
+
+En conjunto, este User Flow representa el journey principal de la empresa constructora dentro de MaquiGest, desde la búsqueda de una necesidad de maquinaria hasta la solicitud, reserva, recepción, uso y devolución del equipo. De esta manera, complementa el flujo de la empresa de alquiler y muestra cómo ambos segmentos interactúan dentro del mismo ciclo de negocio.
+
+<img src = "assets/md-images-chapter4/user-flow-diagrams/UserFlow_Construction_Company.png" width = "800px">
+
 ## 4.5. Web Applications Prototyping
 
 En esta sección se presenta el prototipo interactivo de la aplicación web MaquiGest, desarrollado en Figma a partir de los mockups definidos previamente. El prototipo permite simular la navegación y las principales interacciones que realizarán los usuarios dentro de la plataforma, con el objetivo de validar la organización de las funcionalidades, la secuencia de navegación y los flujos planteados durante el diseño de la experiencia de usuario.
