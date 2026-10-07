@@ -2797,8 +2797,7 @@ Asimismo, el flujo contempla escenarios alternativos como credenciales incorrect
 
 En conjunto, este User Flow permite visualizar cómo MaquiGest controla la autenticación, creación de cuentas, diferenciación de segmentos, activación de suscripciones y acceso al workspace adecuado, constituyendo el punto de entrada común para los demás flujos funcionales del sistema.
 
-<img src = "assets/md-images-chapter4/user-flow-diagrams
-/UserFlow_Authentication.png" width = "600px">
+<img src = "assets/md-images-chapter4/user-flow-diagrams/UserFlow_Authentication.png" width = "800px">
 
 #### Rental Company Core Domain User Flow
 
@@ -2818,8 +2817,7 @@ Finalmente, el módulo Maintenance permite programar mantenimientos, actualizar 
 
 Por ello, este User Flow representa el núcleo operativo de MaquiGest para las empresas proveedoras, ya que integra la administración del inventario con la recepción de solicitudes, confirmación de reservas, ejecución de alquileres, entregas, devoluciones y mantenimiento de los equipos.
 
-<img src = "assets/md-images-chapter4/user-flow-diagrams
-/UserFlow_Rental_Company.png" width = "600px">
+<img src = "assets/md-images-chapter4/user-flow-diagrams/UserFlow_Rental_Company.png" width = "800px">
 
 #### Construction Company Core Domain User Flow
 
@@ -2837,8 +2835,7 @@ Posteriormente, cuando la reserva se convierte en alquiler, la operación aparec
 
 En conjunto, este User Flow representa el journey principal de la empresa constructora dentro de MaquiGest, desde la búsqueda de una necesidad de maquinaria hasta la solicitud, reserva, recepción, uso y devolución del equipo. De esta manera, complementa el flujo de la empresa de alquiler y muestra cómo ambos segmentos interactúan dentro del mismo ciclo de negocio.
 
-<img src = "assets/md-images-chapter4/user-flow-diagrams
-/UserFlow_Construction_Company.png" width = "600px">
+<img src = "assets/md-images-chapter4/user-flow-diagrams/UserFlow_Construction_Company.png" width = "800px">
 
 ## 4.5. Web Applications Prototyping
 
