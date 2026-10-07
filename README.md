@@ -921,7 +921,7 @@ Orientar la propuesta de MaquiGest hacia empresas que actualmente dependen de ho
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista1.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista1.png" width="180">
 </p>
 
 **Resumen:**  
@@ -941,7 +941,7 @@ Pedro González se desempeña como contratista en el rubro de alquiler de maquin
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista2.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista2.png" width="180">
 </p>
 
 **Resumen:**  
@@ -961,7 +961,7 @@ Carlos Rodríguez es técnico mecánico y también se dedica al alquiler de cami
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista3.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista3.png" width="180">
 </p>
 
 **Resumen:**  
@@ -981,7 +981,7 @@ Carmen Losada Paredes administra una pequeña empresa dedicada al alquiler de ca
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista4.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista4.png" width="180">
 </p>
 
 **Resumen:**  
@@ -1001,7 +1001,7 @@ Yovani Meléndez Zuleta es administrador de maquinaria en una empresa dedicada a
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista5.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista5.png" width="180">
 </p>
 
 **Resumen:**  
@@ -1021,7 +1021,7 @@ Sonia Gutiérrez trabaja en una empresa inmobiliaria ubicada en San Juan de Mira
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista6.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista6.png" width="180">
 </p>
 
 **Resumen:**  
