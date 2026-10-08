@@ -63,7 +63,8 @@ Proyecto<br>
 <span style="display:inline-block; width:300px; text-align:left;">Paredes Chavez, Carlos Augusto</span>
 <br>
 
-</p>
+<span style="display:inline-block; width:120px; text-align:left;">U202219829</span>
+<span style="display:inline-block; width:300px; text-align:left;">Daga Chávez, Joaquin Leonardo</span>
 
 <br>
 
@@ -98,8 +99,23 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
 ### Entrega AV1:
 
 #### Participación por integrante:
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-contributors-01.png"
+       alt="Sprint 1 Team Collaboration Evidence - Contributors 01"
+       width="95%">
+</p>
 
-##### Commits en el Project Report:
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-contributors-02(1).png"
+       alt="Sprint 1 Team Collaboration Evidence - Contributors 02"
+       width="95%">
+</p>
+
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-commits.png"
+       alt="Sprint 1 Team Collaboration Evidence - Commits"
+       width="95%">
+</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -203,10 +219,10 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 
 En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Student Outcome 3.
 
-| Criterio específico | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| :--- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Comunica oralmente con efectividad a diferentes rangos de audiencia.** | **Delgado Perez, James Caleb**<br>**AV1: Participé en la coordinación y comunicación de las decisiones tomadas durante el desarrollo de MaquiGest, explicando al equipo los avances relacionados con la propuesta del producto, el diseño de la Landing Page y la arquitectura de software. Asimismo, comuniqué las decisiones adoptadas para la organización del frontend mediante bounded contexts, las capas de Domain-Driven Design y los diagramas C4 de Context, Container y Components, facilitando que los integrantes comprendieran la estructura y responsabilidades de los diferentes componentes de la solución.**<br><br>**Montalvo Vasquez, Bruno Rodrigo**<br>**AV1:**<br><br>**Manosalva Tovar, Miroslav Oscar**<br>**AV1: Durante el desarrollo de la primera entrega de MaquiGest, participé activamente en el trabajo colaborativo del equipo mediante la elaboración y actualización de distintos artefactos correspondientes al proyecto. En el primer capítulo, estuve a cargo del desarrollo del Lean UX Process, incluyendo la definición del Problem Statement, los distintos tipos de Assumptions, la formulación de Hypothesis Statements, la elaboración del Lean UX Canvas y la identificación de los segmentos objetivos de la solución. Asimismo, en el cuarto capítulo desarrollé los Style Guidelines, considerando los General Style Guidelines y Web Style Guide, así como la Information Architecture, abarcando Organization Systems, Labeling Systems, SEO Tags and Meta Tags, Searching Systems y Navigation Systems. Para integrar estas contribuciones con el trabajo del resto del equipo, utilicé el repositorio compartido siguiendo el flujo de trabajo establecido: partiendo de la rama develop, trabajé las secciones asignadas en ramas específicas y posteriormente contribuí a su integración nuevamente en develop. Este proceso permitió mantener separadas las responsabilidades durante el desarrollo, revisar los cambios realizados e integrar progresivamente los aportes de cada integrante. Además, realicé revisiones y modificaciones sobre los artefactos elaborados a partir de observaciones e inconsistencias identificadas durante el trabajo, contribuyendo a la mejora continua de la documentación y al cumplimiento conjunto de los objetivos establecidos para la entrega.** <br><br>**Paredes Chavez, Carlos Augusto**<br>**AV1: Mi participación se centró en comunicar al equipo los resultados obtenidos durante el análisis de competidores y explicar cómo estos hallazgos podían contribuir a la definición y diferenciación de la propuesta de MaquiGest. Presenté las principales características, fortalezas y limitaciones identificadas en las soluciones analizadas, utilizando un lenguaje claro para facilitar su comprensión y aplicación en el proyecto. Asimismo, coordiné con los integrantes la organización del Sprint Backlog en Trello, explicando la distribución de las historias de usuario, su relación con los Epics y el orden establecido según el valor que aportan al negocio. De esta manera, contribuí a que el equipo mantuviera una comprensión compartida del alcance y de las prioridades del producto.**                                                                                                                                                                                                                                                                                                        | **AV1: El AV1 trató de presentar y explicar el avance del proyecto MaquiGest durante el Sprint 1: la problemática y propuesta de valor, los principales artefactos de UX y Product Design, la arquitectura planteada para la solución y, sobre todo, la primera versión funcional y desplegada de la Landing Page. También implicaba explicar cómo se organizó el trabajo del equipo y cómo se aplicaron herramientas y prácticas como GitFlow, GitHub, diseño en Figma y despliegue. El Statement define el AV1 como un Sprint Review de la semana 4, acompañado por el Final Project Keynote y el reporte individual de desempeño.** |
-| **Comunica por escrito con efectividad a diferentes rangos de audiencia.** | **Delgado Perez, James Caleb**<br>**AV1: Contribuí en la elaboración y mejora de la documentación técnica del proyecto MaquiGest. Desarrollé y documenté artefactos correspondientes al diseño de la Landing Page, incluyendo wireframes y mock-ups, y participé en la elaboración de la arquitectura de software mediante diagramas C4 de Context, Container y Components utilizando PlantUML. Asimismo, documenté la arquitectura frontend considerando los bounded contexts IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions, sus capas Presentation, Application, Domain e Infrastructure, así como los componentes compartidos de Shared Frontend. También participé en la implementación de secciones de la Landing Page, la configuración del despliegue mediante Netlify, el versionamiento con Git y GitHub, y la actualización del informe siguiendo las convenciones y estructura establecidas para el proyecto.**<br><br>**Montalvo Vasquez, Bruno Rodrigo**<br>**AV1:**<br><br>**Manosalva Tovar, Miroslav Oscar**<br>**AV1: En relación con la creación de un entorno colaborativo, la planificación de tareas y el cumplimiento de objetivos, mi participación se centró principalmente en actividades vinculadas con Lean UX, diseño e Information Architecture. A partir del análisis del problema abordado por MaquiGest, contribuí a establecer los segmentos objetivos y a estructurar el proceso Lean UX mediante la identificación de assumptions, la formulación de problemas e hipótesis y su posterior síntesis en el Lean UX Canvas, generando así una base que pudiera ser utilizada por el equipo para continuar con otras actividades de UX Research y definición de la solución. Asimismo, contribuí a establecer criterios para mantener una propuesta visual y estructural coherente mediante la documentación de los Style Guidelines y de la Information Architecture de la plataforma, definiendo aspectos relacionados con organización, etiquetado, navegación, búsqueda y elementos orientados al posicionamiento y descripción del contenido web. Estas actividades fueron desarrolladas siguiendo la estructura y los entregables establecidos para el proyecto, manteniendo coordinación con las demás secciones elaboradas por mis compañeros y utilizando el repositorio colaborativo como medio para organizar, documentar e integrar el trabajo. De esta manera, cumplí con las tareas que me fueron asignadas dentro de la planificación del equipo y contribuí a que los distintos artefactos mantuvieran coherencia con los objetivos y características definidas para MaquiGest.**<br><br>**Paredes Chavez, Carlos Augusto**<br>**AV1: Mi desempeño se enfocó en documentar de manera clara y organizada el análisis de competidores de MaquiGest y en estructurar el Sprint Backlog mediante Trello. En el análisis competitivo, registré información relevante sobre las características, propuestas de valor, fortalezas y debilidades de las alternativas existentes, procurando que los resultados fueran comprensibles y útiles para sustentar las decisiones del equipo. Además, organicé las 35 historias de usuario en el tablero de Trello, incorporando sus descripciones, criterios de aceptación, Epics relacionados y orden de prioridad. Esta información fue presentada con una estructura uniforme y coherente, permitiendo mantener la trazabilidad entre los requisitos definidos en el informe y su representación en la herramienta de gestión del proyecto.** | **AV1: El AV1 trató de documentar formalmente todo ese avance en el informe del proyecto. Debía incluir carátula, registro de versiones, Collaboration Insights, Student Outcome, los capítulos I, II, III y IV, además del Capítulo V con Software Configuration Management y todo el Sprint 1: planificación, backlog, evidencias de desarrollo, ejecución, despliegue y colaboración. También se pedía tener implementada y desplegada la primera versión de la Landing Page.**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Criterio específico | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| :--- |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Comunica oralmente con efectividad a diferentes rangos de audiencia.** | **Delgado Perez, James Caleb**<br>**AV1: Participé en la coordinación y comunicación de las decisiones tomadas durante el desarrollo de MaquiGest, explicando al equipo los avances relacionados con la propuesta del producto, el diseño de la Landing Page y la arquitectura de software. Asimismo, comuniqué las decisiones adoptadas para la organización del frontend mediante bounded contexts, las capas de Domain-Driven Design y los diagramas C4 de Context, Container y Components, facilitando que los integrantes comprendieran la estructura y responsabilidades de los diferentes componentes de la solución.**<br><br>**Montalvo Vasquez, Bruno Rodrigo**<br>**AV1: Durante el desarrollo de la primera entrega (AV1), lideré y comuniqué las actividades de investigación con usuarios (Needfinding), explicando al equipo la estructuración y el diseño del protocolo de entrevistas aplicadas a los segmentos objetivos. Presenté oralmente los hallazgos cualitativos obtenidos, justificando la definición del Impact Mapping y la derivación de necesidades en User Stories orientadas a generar valor real de negocio. Asimismo, comuniqué y sustenté las decisiones de diseño arquitectónico tomadas para la solución, transmitiendo de forma clara la estructuración de la arquitectura de software a nivel de backend mediante el modelo C4 (Context, Container, Component) y la organización del Product Backlog, asegurando una alineación estratégica del equipo respecto a los límites de dominio y la priorización de requerimientos.**<br><br>**Manosalva Tovar, Miroslav Oscar**<br>**AV1: Durante el desarrollo de la primera entrega de MaquiGest, participé activamente en el trabajo colaborativo del equipo mediante la elaboración y actualización de distintos artefactos correspondientes al proyecto. En el primer capítulo, estuve a cargo del desarrollo del Lean UX Process, incluyendo la definición del Problem Statement, los distintos tipos de Assumptions, la formulación de Hypothesis Statements, la elaboración del Lean UX Canvas y la identificación de los segmentos objetivos de la solución. Asimismo, en el cuarto capítulo desarrollé los Style Guidelines, considerando los General Style Guidelines y Web Style Guide, así como la Information Architecture, abarcando Organization Systems, Labeling Systems, SEO Tags and Meta Tags, Searching Systems y Navigation Systems. Para integrar estas contribuciones con el trabajo del resto del equipo, utilicé el repositorio compartido siguiendo el flujo de trabajo establecido: partiendo de la rama develop, trabajé las secciones asignadas en ramas específicas y posteriormente contribuí a su integración nuevamente en develop. Este proceso permitió mantener separadas las responsabilidades durante el desarrollo, revisar los cambios realizados e integrar progresivamente los aportes de cada integrante. Además, realicé revisiones y modificaciones sobre los artefactos elaborados a partir de observaciones e inconsistencias identificadas durante el trabajo, contribuyendo a la mejora continua de la documentación y al cumplimiento conjunto de los objetivos establecidos para la entrega.** <br><br>**Paredes Chavez, Carlos Augusto**<br>**AV1: Mi participación se centró en comunicar al equipo los resultados obtenidos durante el análisis de competidores y explicar cómo estos hallazgos podían contribuir a la definición y diferenciación de la propuesta de MaquiGest. Presenté las principales características, fortalezas y limitaciones identificadas en las soluciones analizadas, utilizando un lenguaje claro para facilitar su comprensión y aplicación en el proyecto. Asimismo, coordiné con los integrantes la organización del Sprint Backlog en Trello, explicando la distribución de las historias de usuario, su relación con los Epics y el orden establecido según el valor que aportan al negocio. De esta manera, contribuí a que el equipo mantuviera una comprensión compartida del alcance y de las prioridades del producto.**<br><br>**Daga Chávez, Joaquin Leonardo**<br>AV1: Participé en la comunicación y explicación de las decisiones de modelado de dominio y diseño de la solución dentro del equipo. Comuniqué de manera efectiva los hallazgos y la interpretación del análisis de entrevistas (Needfinding), facilitando que los integrantes comprendieran las necesidades de los usuarios. Asimismo, presenté y sustenté los artefactos correspondientes al Big Picture Event Storming y al Design Level Event Storming, explicando el flujo de eventos de dominio, los comandos, los agregados y las responsabilidades del sistema. También comuniqué los conceptos y términos acordados para el Ubiquitous Language, asegurando que todo el equipo mantuviera un vocabulario técnico y de negocio unificado y coherente durante el desarrollo del proyecto MaquiGest.                                                                                                                                                                                                                                                                                                                                                                                                                     | **AV1: El AV1 trató de presentar y explicar el avance del proyecto MaquiGest durante el Sprint 1: la problemática y propuesta de valor, los principales artefactos de UX y Product Design, la arquitectura planteada para la solución y, sobre todo, la primera versión funcional y desplegada de la Landing Page. También implicaba explicar cómo se organizó el trabajo del equipo y cómo se aplicaron herramientas y prácticas como GitFlow, GitHub, diseño en Figma y despliegue. El Statement define el AV1 como un Sprint Review de la semana 4, acompañado por el Final Project Keynote y el reporte individual de desempeño.** |
+| **Comunica por escrito con efectividad a diferentes rangos de audiencia.** | **Delgado Perez, James Caleb**<br>**AV1: Contribuí en la elaboración y mejora de la documentación técnica del proyecto MaquiGest. Desarrollé y documenté artefactos correspondientes al diseño de la Landing Page, incluyendo wireframes y mock-ups, y participé en la elaboración de la arquitectura de software mediante diagramas C4 de Context, Container y Components utilizando PlantUML. Asimismo, documenté la arquitectura frontend considerando los bounded contexts IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions, sus capas Presentation, Application, Domain e Infrastructure, así como los componentes compartidos de Shared Frontend. También participé en la implementación de secciones de la Landing Page, la configuración del despliegue mediante Netlify, el versionamiento con Git y GitHub, y la actualización del informe siguiendo las convenciones y estructura establecidas para el proyecto.**<br><br>**Montalvo Vasquez, Bruno Rodrigo**<br>**AV1: Redacté y documenté rigurosamente los artefactos clave del análisis de usuarios y modelado de dominio en el informe del proyecto. Estructuré la documentación completa del Needfinding, abarcando el diseño de entrevistas, el registro detallado de las entrevistas realizadas y la elaboración del Impact Mapping. Redacté y prioricé las User Stories del Product Backlog aplicando criterios INVEST y el formato estándar del curso. En el ámbito del diseño de software, documenté la arquitectura del backend mediante diagramas C4 (Context, Container y Component) utilizando PlantUML, los diagramas de clases por Bounded Context (IAM, Profiles, Subscriptions, Inventory, Rentals, Maintenance) integrando la descripción narrativa de agregados y value objects, y el diagrama relacional de base de datos (Database Diagram), garantizando la trazabilidad entre las User Stories, el modelo de dominio y la persistencia de datos.**<br><br>**Manosalva Tovar, Miroslav Oscar**<br>**AV1: En relación con la creación de un entorno colaborativo, la planificación de tareas y el cumplimiento de objetivos, mi participación se centró principalmente en actividades vinculadas con Lean UX, diseño e Information Architecture. A partir del análisis del problema abordado por MaquiGest, contribuí a establecer los segmentos objetivos y a estructurar el proceso Lean UX mediante la identificación de assumptions, la formulación de problemas e hipótesis y su posterior síntesis en el Lean UX Canvas, generando así una base que pudiera ser utilizada por el equipo para continuar con otras actividades de UX Research y definición de la solución. Asimismo, contribuí a establecer criterios para mantener una propuesta visual y estructural coherente mediante la documentación de los Style Guidelines y de la Information Architecture de la plataforma, definiendo aspectos relacionados con organización, etiquetado, navegación, búsqueda y elementos orientados al posicionamiento y descripción del contenido web. Estas actividades fueron desarrolladas siguiendo la estructura y los entregables establecidos para el proyecto, manteniendo coordinación con las demás secciones elaboradas por mis compañeros y utilizando el repositorio colaborativo como medio para organizar, documentar e integrar el trabajo. De esta manera, cumplí con las tareas que me fueron asignadas dentro de la planificación del equipo y contribuí a que los distintos artefactos mantuvieran coherencia con los objetivos y características definidas para MaquiGest.**<br><br>**Paredes Chavez, Carlos Augusto**<br>**AV1: Mi desempeño se enfocó en documentar de manera clara y organizada el análisis de competidores de MaquiGest y en estructurar el Sprint Backlog mediante Trello. En el análisis competitivo, registré información relevante sobre las características, propuestas de valor, fortalezas y debilidades de las alternativas existentes, procurando que los resultados fueran comprensibles y útiles para sustentar las decisiones del equipo. Además, organicé las 35 historias de usuario en el tablero de Trello, incorporando sus descripciones, criterios de aceptación, Epics relacionados y orden de prioridad. Esta información fue presentada con una estructura uniforme y coherente, permitiendo mantener la trazabilidad entre los requisitos definidos en el informe y su representación en la herramienta de gestión del proyecto.**<br><br>**Daga Chávez, Joaquin Leonardor**<br> AV1: Contribuí en la documentación formal y rigurosa de los artefactos clave de investigación y modelado estratégico y táctico del proyecto. Redacté y documenté detalladamente el análisis de entrevistas en la sección de Needfinding, así como la estructuración del Ubiquitous Language para unificar el glosario del sistema. En el ámbito del diseño de software, documenté y estructuré formalmente los diagramas y especificaciones de las secciones de 2.4. Big Picture Event Storming y 4.6.1. Design Level Event Storming, detallando los eventos de dominio, comandos, políticas y la organización táctica de los componentes. Toda la documentación fue integrada de manera ordenada en el informe del proyecto utilizando el repositorio de la organización bajo las pautas de control de versiones establecidas. | **AV1: El AV1 trató de documentar formalmente todo ese avance en el informe del proyecto. Debía incluir carátula, registro de versiones, Collaboration Insights, Student Outcome, los capítulos I, II, III y IV, además del Capítulo V con Software Configuration Management y todo el Sprint 1: planificación, backlog, evidencias de desarrollo, ejecución, despliegue y colaboración. También se pedía tener implementada y desplegada la primera versión de la Landing Page.**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 <div style="page-break-after: always;"></div>
 
@@ -250,50 +266,69 @@ Nuestros valores principales son los siguientes:
 | U202219829 | Daga Chávez, Joaquin Leonardo   | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas | <img src="assets/md-images-members/joaquin-daga.png" width="150px" /> | Soy estudiante de Ingeniería de Software con conocimientos en desarrollo de aplicaciones web, programación y bases de datos. Tengo experiencia trabajando con tecnologías como Java, Spring Boot, JavaScript, Angular y Vue, además de herramientas como Git y GitHub. Me considero una persona responsable, organizada y orientada al aprendizaje continuo. En este proyecto busco aplicar mis conocimientos, fortalecer mis habilidades técnicas y contribuir al trabajo colaborativo del equipo. |
 | U202321613 | Paredes Chávez, Carlos Augusto   | Ingeniería de Software - Universidad Peruana de Ciencias Aplicadas | <img src="assets/md-images-members/carlos-paredes.jpeg" width="150px" /> | Soy estudiante de Ingeniería de Software y tengo experiencia en el desarrollo de aplicaciones web, principalmente utilizando HTML, CSS, JavaScript, TypeScript y frameworks modernos. También cuento con conocimientos en bases de datos, control de versiones con Git y GitHub, y desarrollo tanto frontend como backend. Me interesa especialmente crear soluciones digitales funcionales, bien estructuradas y con una buena experiencia de usuario. Me considero una persona constante, responsable y con facilidad para aprender nuevas tecnologías. Busco seguir fortaleciendo mis conocimientos mediante proyectos prácticos que me permitan mejorar mis habilidades técnicas y prepararme para desenvolverme profesionalmente en el área de desarrollo de software. |
 
-
 ## 1.2. Solution Profile
 
 ### 1.2.1. Antecedentes y problemática
 
 Actualmente, muchas pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción gestionan sus operaciones mediante herramientas dispersas, como hojas de cálculo, documentos físicos, llamadas telefónicas y aplicaciones de mensajería. Aunque estos medios permiten registrar información básica, no proporcionan una visión integrada y actualizada sobre la disponibilidad, ubicación, condición y mantenimiento de cada equipo.
 
-El alquiler de maquinaria comprende distintas actividades que deben mantenerse coordinadas, entre ellas el registro del inventario, la consulta de disponibilidad, la creación de reservas, la elaboración de contratos, el registro de pagos, la programación de entregas, la recepción de devoluciones y la atención de incidencias. Cuando esta información se encuentra distribuida en diferentes medios, aumenta la posibilidad de generar reservas duplicadas, entregar equipos que no están disponibles, perder el seguimiento de los contratos o retrasar los mantenimientos correspondientes.
+El alquiler de maquinaria comprende distintas actividades que deben mantenerse coordinadas, entre ellas el registro del inventario, la consulta de disponibilidad, la creación de reservas, la elaboración de contratos, el registro de pagos, la programación de entregas, la recepción de devoluciones y la atención de incidencias. Cuando esta información se encuentra distribuida en diferentes medios, aumenta la posibilidad de generar reservas duplicadas, asignar equipos que no se encuentran disponibles, perder el seguimiento de los contratos o retrasar los mantenimientos correspondientes.
 
-Esta situación también afecta a las personas que necesitan alquilar maquinaria para remodelaciones, reparaciones u obras personales. La comunicación con las empresas suele realizarse mediante llamadas o mensajes, por lo que el cliente puede tener dificultades para conocer qué equipos están disponibles, cuáles son sus condiciones de alquiler y en qué estado se encuentra su solicitud.
+Esta situación también afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. La comunicación con las empresas proveedoras suele realizarse mediante llamadas telefónicas o aplicaciones de mensajería, lo que puede dificultar la consulta de equipos disponibles, las condiciones de alquiler, los costos y el seguimiento de las reservas o alquileres solicitados. Esta falta de información centralizada puede afectar la planificación de los recursos necesarios para ejecutar sus proyectos.
 
-Existen plataformas orientadas a empresas de alquiler de gran escala; sin embargo, pueden resultar complejas o poco accesibles para negocios pequeños que necesitan organizar sus operaciones sin incorporar sistemas sobredimensionados. En consecuencia, se identifica la necesidad de una solución especializada que centralice el ciclo de alquiler y que pueda ser utilizada tanto por las empresas proveedoras como por las personas interesadas en alquilar los equipos.
+Existen plataformas orientadas a empresas de alquiler de gran escala; sin embargo, estas pueden resultar complejas o poco accesibles para negocios pequeños y medianos que necesitan organizar sus operaciones sin incorporar sistemas sobredimensionados. Asimismo, las pequeñas empresas constructoras y contratistas requieren mecanismos más claros para consultar y gestionar el alquiler de los equipos necesarios para sus proyectos.
 
-MaquiGest abordará esta problemática mediante una plataforma SaaS que permitirá administrar en un único entorno el inventario, la disponibilidad, las reservas, los contratos, los pagos, las entregas, las devoluciones, las incidencias y el mantenimiento. De esta manera, las empresas podrán mantener un mejor control de sus equipos y los clientes podrán realizar sus procesos de alquiler de forma más organizada.
+En consecuencia, se identifica la oportunidad de desarrollar una solución especializada que centralice el ciclo de alquiler y facilite la interacción entre las empresas proveedoras de maquinaria y las organizaciones que requieren alquilar estos equipos.
+
+MaquiGest abordará esta problemática mediante una plataforma SaaS que permitirá administrar en un único entorno el inventario, la disponibilidad, las reservas, los contratos, los pagos, las entregas, las devoluciones, las incidencias y el mantenimiento. De esta manera, las pequeñas y medianas empresas de alquiler podrán mantener un mayor control sobre sus equipos y operaciones, mientras que las pequeñas empresas constructoras y contratistas podrán buscar maquinaria, consultar su disponibilidad, realizar solicitudes de alquiler y dar seguimiento a los equipos requeridos para sus proyectos.
 
 #### 5W & 2H
 
 **Who (¿Quiénes?)**
 
-La problemática afecta principalmente a los propietarios, administradores y trabajadores de pequeñas y medianas empresas dedicadas al alquiler de maquinaria para construcción. También afecta a personas que necesitan alquilar equipos para ejecutar remodelaciones, reparaciones u otros proyectos personales relacionados con la construcción.
+La problemática afecta principalmente a los propietarios, administradores y trabajadores de pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción. También afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala.
 
 **What (¿Qué?)**
 
-El problema principal es la ausencia de una plataforma especializada que permita administrar integralmente el ciclo de alquiler de la maquinaria. La información sobre inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento suele encontrarse distribuida en diferentes herramientas y medios de comunicación.
+El problema principal es la ausencia de una plataforma especializada que permita gestionar de manera integrada el ciclo de alquiler de maquinaria. La información relacionada con inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento suele encontrarse distribuida entre diferentes herramientas y medios de comunicación.
+
+Del lado de las empresas constructoras y contratistas, esta fragmentación también dificulta la búsqueda de equipos, la consulta de disponibilidad, el conocimiento de las condiciones de alquiler y el seguimiento de las solicitudes realizadas.
 
 **Where (¿Dónde?)**
 
-La problemática se presenta en las operaciones internas de las pequeñas y medianas empresas de alquiler y durante la comunicación con sus clientes. Abarca tanto la gestión administrativa del negocio como el seguimiento de los equipos que son entregados para obras de construcción de pequeña escala.
+La problemática se presenta tanto en las operaciones internas de las pequeñas y medianas empresas de alquiler como en la interacción que mantienen con pequeñas empresas constructoras y contratistas.
+
+Abarca la gestión administrativa y operativa del negocio de alquiler, así como los procesos mediante los cuales las empresas constructoras buscan, reservan, reciben, utilizan y devuelven la maquinaria necesaria para sus proyectos.
 
 **When (¿Cuándo?)**
 
-Puede manifestarse durante cualquier etapa del ciclo de alquiler: cuando un cliente consulta la disponibilidad, realiza una reserva, firma un contrato, efectúa un pago, recibe el equipo, comunica una incidencia, devuelve la maquinaria o cuando la empresa debe programar su mantenimiento.
+La problemática puede manifestarse durante cualquier etapa del ciclo de alquiler: cuando una empresa constructora consulta la disponibilidad de un equipo, solicita una reserva, acuerda las condiciones del alquiler, realiza un pago, recibe la maquinaria, comunica una incidencia o efectúa la devolución.
+
+También puede presentarse internamente cuando la empresa de alquiler necesita verificar disponibilidad, preparar una entrega, actualizar el estado de un equipo, registrar una devolución o programar su mantenimiento.
 
 **Why (¿Por qué?)**
 
-La problemática ocurre porque las herramientas utilizadas no se encuentran integradas y requieren que la información sea registrada o comprobada manualmente. Asimismo, muchas soluciones existentes están orientadas a operaciones de mayor escala y pueden resultar excesivamente complejas para pequeñas empresas.
+La problemática ocurre porque muchas de las herramientas utilizadas actualmente no se encuentran integradas y requieren que la información sea registrada, actualizada o comprobada manualmente.
+
+Además, algunas soluciones existentes están orientadas a empresas con operaciones de mayor escala y pueden resultar excesivamente complejas o poco accesibles para pequeñas y medianas empresas que necesitan gestionar sus procesos de alquiler de forma más sencilla.
+
+Por otro lado, las pequeñas empresas constructoras y contratistas suelen depender de llamadas o aplicaciones de mensajería para conocer la disponibilidad y condiciones de los equipos, lo que dificulta contar con información centralizada durante la planificación de sus proyectos.
 
 **How (¿Cómo?)**
 
-Las empresas revisan y actualizan manualmente hojas de cálculo, documentos, llamadas y conversaciones por mensajería para determinar el estado de sus alquileres. Esta forma de trabajo puede producir información desactualizada, registros duplicados, dificultades de coordinación y pérdida de trazabilidad sobre los equipos.
+Las empresas de alquiler revisan y actualizan manualmente hojas de cálculo, documentos, llamadas y conversaciones por mensajería para determinar el estado de sus equipos y alquileres.
+
+De forma paralela, las empresas constructoras y contratistas deben comunicarse directamente con los proveedores para consultar qué maquinaria se encuentra disponible, conocer sus condiciones y realizar seguimiento a sus solicitudes.
+
+Esta forma de trabajo puede producir información desactualizada, registros duplicados, conflictos de disponibilidad, dificultades de coordinación y pérdida de trazabilidad durante el proceso de alquiler.
 
 **How Much (¿Cuánto impacta?)**
 
-El impacto se refleja en el tiempo empleado para comprobar información, los posibles conflictos de disponibilidad, los retrasos en entregas y devoluciones, la inmovilización de equipos que requieren mantenimiento y la pérdida de oportunidades de alquiler. También puede afectar la confianza y satisfacción de los clientes. La dimensión cuantitativa de este impacto se determinará posteriormente mediante las entrevistas y la investigación de los segmentos objetivo.
+El impacto se refleja en el tiempo empleado para comprobar y actualizar información, los posibles conflictos de disponibilidad, los retrasos en las entregas y devoluciones, la inmovilización de equipos que requieren mantenimiento y la pérdida de oportunidades de alquiler.
+
+Para las pequeñas empresas constructoras y contratistas, también puede generar retrasos en la obtención de maquinaria, dificultades para planificar recursos y una mayor dependencia de comunicaciones manuales con los proveedores.
+
+Estas situaciones pueden afectar la eficiencia operativa de ambas partes y la calidad de la relación entre proveedor y cliente. La dimensión cuantitativa del impacto será determinada posteriormente mediante entrevistas, validaciones y la investigación realizada con los segmentos objetivo.
 
 #### Objetivos
 
@@ -335,90 +370,110 @@ El impacto se refleja en el tiempo empleado para comprobar información, los pos
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-La situación actual del sector de alquiler de maquinaria y equipos para pequeñas construcciones se ha centrado principalmente en empresas que gestionan sus operaciones mediante herramientas dispersas como hojas de cálculo, llamadas, mensajes y sistemas independientes, dificultando el control de la disponibilidad, reservas, contratos, entregas, devoluciones y mantenimiento de sus equipos.
+Actualmente, muchas pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos para construcción gestionan sus operaciones mediante herramientas dispersas, como hojas de cálculo, documentos, llamadas telefónicas y aplicaciones de mensajería. Esta forma de trabajo dificulta mantener información centralizada y actualizada sobre inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento. Como consecuencia, pueden presentarse conflictos de disponibilidad, registros duplicados, retrasos operativos y pérdida de trazabilidad durante el ciclo de alquiler.
 
-Lo que los productos y servicios existentes no logran abordar completamente es la necesidad de las pequeñas empresas de contar con una solución especializada, sencilla y accesible, que les permita gestionar de manera integral el ciclo de vida de su maquinaria sin enfrentarse a la complejidad de plataformas orientadas a operaciones de mayor escala.
+Esta problemática también afecta a pequeñas empresas constructoras y contratistas que necesitan alquilar maquinaria para ejecutar proyectos de construcción de pequeña y mediana escala. Estas empresas suelen depender de comunicaciones directas con los proveedores para consultar la disponibilidad de los equipos, conocer las condiciones de alquiler y realizar seguimiento a sus solicitudes, lo que puede dificultar la planificación de los recursos necesarios para sus proyectos.
 
-Nuestro producto abordará esta brecha mediante una plataforma SaaS especializada en pequeñas empresas de alquiler de maquinaria para construcción, que centralizará en un único lugar la gestión de inventario, disponibilidad, reservas, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento, permitiendo realizar un seguimiento del equipo durante todo su ciclo de alquiler.
+Aunque existen soluciones digitales orientadas a la gestión del alquiler de maquinaria y equipos, algunas están dirigidas a organizaciones con operaciones de mayor escala y pueden resultar excesivamente complejas o poco accesibles para pequeñas y medianas empresas. Esta situación representa para CleanCode la oportunidad de desarrollar una solución especializada que facilite la gestión del ciclo de alquiler y la interacción entre las empresas proveedoras de maquinaria y las pequeñas empresas constructoras y contratistas que requieren estos equipos.
 
-Nuestro enfoque inicial será pequeñas y medianas empresas dedicadas al alquiler de maquinaria y equipos utilizados en proyectos de construcción de pequeña escala, que necesitan profesionalizar y organizar sus operaciones sin incorporar herramientas excesivamente complejas.
+MaquiGest abordará esta oportunidad mediante una plataforma SaaS que centralizará la gestión del inventario, disponibilidad, reservas, alquileres, contratos, pagos, entregas, devoluciones, incidencias y mantenimiento. La plataforma permitirá a las empresas de alquiler mantener un mayor control sobre sus equipos y operaciones, mientras que las empresas constructoras y contratistas podrán buscar maquinaria, consultar su disponibilidad, realizar solicitudes y dar seguimiento a sus alquileres.
 
-Sabremos que hemos tenido éxito cuando veamos una adopción recurrente de la plataforma por parte de estas empresas, una reducción de errores relacionados con reservas y disponibilidad, un mayor control sobre el estado de los equipos y un incremento en el uso de funcionalidades como gestión de alquileres y mantenimiento
+El desarrollo de MaquiGest estará sujeto a las restricciones definidas para el proyecto. La solución deberá implementarse como una aplicación web distribuida compuesta por un Landing Page, una Web Application y un RESTful API propio; la lógica del servidor deberá desarrollarse con Java y tecnologías open-source; deberá integrarse al menos un servicio externo; y la interfaz deberá adaptarse a computadoras, tabletas y dispositivos móviles. Debido al alcance del ciclo académico, la primera versión priorizará las funcionalidades relacionadas con inventario, disponibilidad, reservas y alquileres.
 
+Sabremos que MaquiGest está generando valor cuando, durante una etapa inicial de validación, al menos 10 pequeñas y medianas empresas de alquiler utilicen recurrentemente la plataforma para gestionar sus operaciones, se registren al menos 50 equipos con información actualizada sobre su estado y disponibilidad, se gestionen al menos 30 reservas o alquileres mediante la plataforma y al menos 5 pequeñas empresas constructoras o contratistas realicen solicitudes de alquiler utilizando MaquiGest.
+
+Asimismo, se buscará registrar menos de 5 conflictos de disponibilidad o reservas duplicadas durante el período de evaluación. Estos resultados serán analizados mediante las métricas de uso de la plataforma, los registros de las operaciones realizadas y las validaciones efectuadas con los segmentos objetivo.
 #### 1.2.2.2. Lean UX Assumptions
 
 **Business Assumptions:**
-* Creemos que las pequeñas y medianas empresas de alquiler de equipo necesitan una solución digital especializada para gestionar sus operaciones de alquiler.
 
-* Creemos que las pequeñas empresas de construcción están dispuestas a utilizar una plataforma digital para buscar, reservar y gestionar el alquiler de equipo de construcción.
+- Creemos que las pequeñas y medianas empresas dedicadas al alquiler de maquinaria para construcción presentan dificultades para mantener actualizada y centralizada la información sobre inventario, disponibilidad, reservas, alquileres y mantenimiento cuando utilizan hojas de cálculo, documentos, llamadas y aplicaciones de mensajería.
 
-* Creemos que las empresas de alquiler de equipo están dispuestas a pagar una suscripción mensual de SaaS por una plataforma que centralice y simplifique sus operaciones de alquiler.
+- Creemos que estas empresas estarían dispuestas a reemplazar parte de sus procesos manuales por una plataforma web si esta les permite centralizar la información y reducir problemas relacionados con disponibilidad, seguimiento y duplicidad de registros.
 
-* Creemos que un modelo de suscripción de tres niveles puede adaptarse a las diferentes necesidades operativas y niveles de crecimiento de las pequeñas y medianas empresas de alquiler de equipo.
+- Creemos que las empresas de alquiler estarían dispuestas a pagar una suscripción mensual por MaquiGest si perciben que la plataforma reduce el tiempo requerido para gestionar sus operaciones y facilita el control de sus equipos.
+
+- Creemos que un modelo de suscripción con diferentes niveles puede adaptarse a empresas con distintos tamaños de inventario y necesidades operativas, siempre que cada plan ofrezca funcionalidades y capacidades diferenciadas.
+
+- Creemos que existe una oportunidad para una solución especializada en pequeñas y medianas empresas frente a plataformas de alquiler orientadas a organizaciones con operaciones de mayor escala o complejidad.
 
 **Business Outcome Assumptions:**
 
-* Creemos que MaquiGest logrará un número cada vez mayor de empresas de alquiler que paguen por el servicio gracias a la adopción de su plataforma SaaS.
+- Creemos que la adopción de MaquiGest podrá evidenciarse mediante un crecimiento en el número de empresas que registran maquinaria y utilizan recurrentemente las funcionalidades de disponibilidad, reservas y alquileres.
 
-* Creemos que MaquiGest  logrará una alta tasa de retención de clientes al brindar valor continuo a las empresas de alquiler de equipos.
+- Creemos que las empresas continuarán utilizando MaquiGest si experimentan una reducción de problemas relacionados con reservas duplicadas, información desactualizada y desconocimiento del estado de sus equipos.
 
-* Creemos que MaquiGest aumentará la adopción de planes de suscripción de mayor nivel a medida que las empresas de alquiler amplíen su inventario y sus necesidades operativas.
+- Creemos que el uso frecuente de las funcionalidades de inventario, reservas, alquileres y mantenimiento será un indicador de que MaquiGest está siendo incorporado dentro de las operaciones habituales de las empresas.
 
-* Creemos que la participación de las empresas de construcción aumentará el número de transacciones de alquiler gestionadas a través de la plataforma.
+- Creemos que algunas empresas estarán dispuestas a migrar hacia planes de mayor nivel cuando aumenten la cantidad de equipos gestionados o necesiten funcionalidades adicionales.
+
+- Creemos que la participación de pequeñas empresas constructoras y contratistas incrementará la cantidad de solicitudes y operaciones de alquiler gestionadas mediante la plataforma.
 
 **User Assumptions:**
 
-* Creemos que los propietarios y administradores de pequeñas y medianas empresas de alquiler de equipos son usuarios clave que necesitan supervisar el inventario, los alquileres, los ingresos y el mantenimiento de los equipos.
+- Creemos que los propietarios y administradores de pequeñas y medianas empresas de alquiler necesitan conocer el estado, ubicación, disponibilidad y condición de sus equipos para organizar sus operaciones.
 
-* Creemos que los operadores de alquiler son responsables de gestionar las reservaciones, los contratos, las entregas de equipo, las devoluciones y los incidentes.
+- Creemos que los trabajadores responsables de gestionar los alquileres necesitan consultar y actualizar reservas, contratos, entregas, devoluciones e incidencias sin depender de información distribuida entre diferentes herramientas.
 
-* Creemos que los gerentes de compras o los jefes de obra en pequeñas empresas constructoras son responsables de buscar y alquilar el equipo necesario para sus proyectos.
+- Creemos que las pequeñas empresas constructoras y contratistas necesitan encontrar maquinaria disponible en función de los requerimientos y fechas de sus proyectos.
 
-* Creemos que las empresas constructoras necesitan conocer la disponibilidad del equipo, las condiciones de alquiler y las fechas de devolución al gestionar sus proyectos.
+- Creemos que los responsables de gestionar el alquiler de maquinaria dentro de empresas constructoras necesitan conocer con anticipación la disponibilidad, características, costos y condiciones de los equipos antes de realizar una solicitud.
+
+- Creemos que las empresas constructoras y contratistas necesitan realizar seguimiento a sus reservas y alquileres para coordinar adecuadamente la recepción, utilización y devolución de la maquinaria.
 
 **User Outcome and Benefit Assumptions:**
 
-* Creemos que los administradores de las empresas de alquiler desean conocer rápidamente el estado, la ubicación y la disponibilidad de cada equipo para poder tomar mejores decisiones operativas.
+- Creemos que los administradores de empresas de alquiler podrán tomar mejores decisiones operativas si pueden identificar rápidamente qué equipos están disponibles, reservados, alquilados o en mantenimiento.
 
-* Creemos que los operadores de alquiler desean gestionar de manera eficiente las reservaciones, entregas y devoluciones para reducir los errores operativos y ahorrar tiempo.
+- Creemos que los trabajadores responsables de las operaciones de alquiler podrán reducir errores y tiempo de coordinación si la información sobre reservas, entregas y devoluciones se mantiene actualizada en un único sistema.
 
-* Creemos que los administradores de empresas de alquiler desean monitorear el estado de los equipos y el historial de mantenimiento para maximizar la disponibilidad y la vida útil de los mismos.
+- Creemos que disponer de un historial de incidencias y mantenimiento permitirá a las empresas identificar equipos que necesitan inspección o reparación antes de volver a ofrecerlos en alquiler.
 
-* Creemos que los gerentes de construcción desean encontrar rápidamente equipos adecuados y disponibles para obtener a tiempo los recursos necesarios para sus proyectos.
+- Creemos que las pequeñas empresas constructoras y contratistas podrán encontrar con mayor rapidez la maquinaria requerida si pueden consultar equipos mediante criterios como categoría, disponibilidad y características.
 
-* Creemos que las empresas constructoras desean contar con información clara sobre las condiciones de alquiler, los costos y las fechas de devolución para planificar mejor los recursos y gastos de sus proyectos.
+- Creemos que disponer de información clara sobre costos, condiciones y fechas de alquiler permitirá a las empresas constructoras planificar mejor los recursos y gastos asociados a sus proyectos.
+
+- Creemos que la posibilidad de consultar el estado de una reserva o alquiler reducirá la dependencia de llamadas y mensajes para realizar seguimiento a las solicitudes.
 
 **Feature Assumptions:**
 
-* Creemos que las empresas de alquiler necesitan un módulo de administración de inventario para registrar el equipo, sus características, ubicación, estado y disponibilidad.
+- Creemos que un módulo de inventario que permita registrar características, ubicación, condición y estado de disponibilidad facilitará a las empresas conocer la situación actual de cada equipo.
 
-* Creemos que las empresas de alquiler necesitan un sistema de reservaciones que verifique automáticamente la disponibilidad de los equipos y evite que se superpongan las reservaciones.
+- Creemos que un sistema de reservas que compruebe la disponibilidad antes de confirmar una solicitud ayudará a evitar la asignación de un mismo equipo a alquileres incompatibles.
 
-* Creemos que las empresas de alquiler necesitan un módulo integrado de gestión de alquileres para administrar contratos, tarifas, pagos, entregas y devoluciones.
+- Creemos que un módulo de gestión de alquileres que integre contratos, tarifas, pagos, entregas y devoluciones facilitará el seguimiento del proceso desde la reserva hasta la devolución del equipo.
 
-* Creemos que las empresas de alquiler necesitan un módulo de gestión de mantenimiento para registrar inspecciones, incidentes, reparaciones, costos y mantenimiento programado.
+- Creemos que un módulo de mantenimiento con historial de inspecciones, incidencias, reparaciones y mantenimientos programados permitirá identificar equipos que temporalmente no deberían encontrarse disponibles para alquiler.
 
-* Creemos que las empresas constructoras necesitan una interfaz de búsqueda y alquiler de equipos para encontrar la maquinaria adecuada, verificar la disponibilidad y solicitar alquileres de acuerdo con los requisitos de sus proyectos.
+- Creemos que una interfaz de búsqueda permitirá a las empresas constructoras y contratistas localizar maquinaria adecuada según las necesidades de sus proyectos.
 
-* Creemos que las empresas constructoras necesitan una interfaz de seguimiento de alquileres para monitorear sus alquileres activos, los períodos de alquiler, los costos y las fechas de devolución
+- Creemos que una funcionalidad para consultar disponibilidad permitirá a las empresas constructoras evaluar si un equipo puede ser utilizado durante las fechas requeridas antes de realizar una solicitud.
+
+- Creemos que una sección de seguimiento de reservas y alquileres permitirá a las empresas constructoras consultar el estado de sus solicitudes, períodos de alquiler, costos y fechas previstas de devolución.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-* Creemos que lograremos una mayor retención de clientes si los administradores de las empresas de alquiler pueden conocer rápidamente el estado, la ubicación y la disponibilidad de su equipo mediante un módulo centralizado de gestión de inventario.
+* Creemos que lograremos incrementar el uso recurrente de MaquiGest si los administradores de pequeñas y medianas empresas de alquiler pueden conocer rápidamente el estado, ubicación, condición y disponibilidad de sus equipos mediante un módulo centralizado de gestión de inventario.
 
-* Creemos que lograremos una mayor satisfacción y retención de los clientes si las empresas de alquiler pueden gestionar de manera eficiente las reservaciones y evitar conflictos de disponibilidad mediante un sistema automatizado de gestión de reservaciones.
+* Creemos que lograremos disminuir los conflictos de disponibilidad y reservas duplicadas si los trabajadores responsables de las operaciones de alquiler pueden confirmar una reserva con mayor seguridad al conocer previamente la disponibilidad del equipo mediante un sistema de gestión de reservas con validación de disponibilidad.
 
-* Creemos que aumentaremos el número de transacciones de alquiler completadas si los operadores de alquiler pueden gestionar los contratos, los pagos, las entregas y las devoluciones en un solo lugar mediante un módulo integrado de gestión de alquileres.
+* Creemos que lograremos incrementar la cantidad de operaciones de alquiler gestionadas mediante MaquiGest si los trabajadores de las empresas de alquiler pueden realizar el seguimiento del proceso de alquiler desde su formalización hasta la devolución del equipo mediante un módulo integrado de gestión de alquileres que centralice contratos, tarifas, pagos, entregas y devoluciones.
 
-* Creemos que podremos aumentar la utilización de los equipos y reducir el tiempo de inactividad operativa si los administradores de las empresas de alquiler pueden monitorear de manera proactiva el estado y las necesidades de mantenimiento de sus equipos mediante un módulo de gestión de mantenimiento.
+* Creemos que lograremos incrementar la trazabilidad de los equipos durante los alquileres si los trabajadores de las empresas de alquiler pueden registrar y consultar los problemas ocurridos durante su utilización mediante una funcionalidad de gestión de incidencias.
 
-* Creemos que aumentaremos el número de transacciones de alquiler gestionadas a través de MaquiGest si los gerentes de construcción pueden encontrar rápidamente el equipo adecuado y disponible para sus proyectos mediante una interfaz de búsqueda y alquiler de equipo.
+* Creemos que lograremos disminuir la cantidad de equipos que permanecen fuera de operación debido a mantenimientos no atendidos si los administradores de las empresas de alquiler pueden identificar oportunamente los equipos que requieren inspección o reparación mediante un módulo de mantenimiento con historial y programación de intervenciones.
 
-* Creemos que lograremos aumentar la retención de usuarios entre las empresas de construcción si los gerentes de obra pueden monitorear fácilmente sus alquileres activos, los costos y las fechas de devolución mediante una interfaz de seguimiento de alquileres.
+* Creemos que lograremos incrementar la cantidad de solicitudes de alquiler realizadas mediante MaquiGest si los responsables de pequeñas empresas constructoras y contratistas pueden encontrar con mayor rapidez maquinaria adecuada para sus proyectos mediante una interfaz de búsqueda con filtros por categoría y características.
+
+* Creemos que lograremos disminuir las solicitudes realizadas sobre equipos no disponibles si los responsables de pequeñas empresas constructoras y contratistas pueden verificar si la maquinaria estará disponible durante las fechas requeridas mediante una funcionalidad de consulta de disponibilidad.
+
+* Creemos que lograremos incrementar la cantidad de solicitudes de alquiler iniciadas mediante la plataforma si los responsables de pequeñas empresas constructoras y contratistas pueden evaluar con mayor facilidad si un equipo responde a las necesidades y presupuesto de su proyecto mediante una vista que muestre características, costos y condiciones de alquiler.
+
+* Creemos que lograremos incrementar el uso recurrente de MaquiGest por parte de pequeñas empresas constructoras y contratistas si sus responsables pueden conocer fácilmente el estado y las fechas relevantes de sus reservas y alquileres mediante una interfaz de seguimiento de alquileres.
 
 #### 1.2.2.4. Lean UX Canvas
 
-<img src = "assets/md-images-lean_ux_canva/CLEANCODE_MaquiGest.png" width="800px">
+<img src = "assets/md-images-lean_ux_canva/MaquiGestCleanCodeCanva.png" width="800px">
 
 ## 1.3. Segmentos objetivo
 
@@ -443,6 +498,8 @@ Pequeñas empresas constructoras y contratistas que necesitan alquilar maquinari
 * Aspectos psicográficos:
   - Comportamiento: Prefieren procesos de solicitud simples y rápidos.
   - Motivación: reducir costos y evitar retrasos en sus proyectos.
+
+<div style="page-break-before: always;"></div>
 
 # Capítulo II: Requirements Elicitation & Analysis
 
@@ -864,7 +921,7 @@ Orientar la propuesta de MaquiGest hacia empresas que actualmente dependen de ho
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista1.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista1.png" width="180">
 </p>
 
 **Resumen:**  
@@ -884,7 +941,7 @@ Pedro González se desempeña como contratista en el rubro de alquiler de maquin
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista2.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista2.png" width="180">
 </p>
 
 **Resumen:**  
@@ -904,7 +961,7 @@ Carlos Rodríguez es técnico mecánico y también se dedica al alquiler de cami
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista3.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista3.png" width="180">
 </p>
 
 **Resumen:**  
@@ -924,7 +981,7 @@ Carmen Losada Paredes administra una pequeña empresa dedicada al alquiler de ca
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista4.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista4.png" width="180">
 </p>
 
 **Resumen:**  
@@ -944,7 +1001,7 @@ Yovani Meléndez Zuleta es administrador de maquinaria en una empresa dedicada a
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista5.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista5.png" width="180">
 </p>
 
 **Resumen:**  
@@ -964,7 +1021,7 @@ Sonia Gutiérrez trabaja en una empresa inmobiliaria ubicada en San Juan de Mira
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C)|
 
 <p align="center">
-  <img src="assets/md-images-chapter2/Cap2entrevista6.png" width="700">
+  <img src="assets/md-images-chapter2/Cap2entrevista6.png" width="180">
 </p>
 
 **Resumen:**  
@@ -1212,523 +1269,76 @@ A continuación, se presenta un glosario de términos y conceptos propios del do
 * **Maintenance (Mantenimiento):** Actividades realizadas para conservar o recuperar la condición física y operativa de una maquinaria.
 * **Machinery History (Historial de maquinaria):** Historial de las actividades relevantes asociadas a una maquinaria, incluyendo alquileres, devoluciones, inspecciones, incidentes y mantenimientos.
 
+<div style="page-break-before: always;"></div>
 
 # Capítulo III: Requirements Specification
 
-## 3.1. User Stories 
+## 3.1. User Stories
 
-<table>
-<tr>
-<th>Epic / Story ID</th>
-<th>Título</th>
-<th>Descripción</th>
-<th>Criterios de Aceptación</th>
-<th>Relacionado con</th>
-</tr>
+Las User Stories y Technical Stories representan los requisitos funcionales y técnicos identificados para el desarrollo progresivo de la solución. Las historias se organizan mediante Epics de acuerdo con las principales capacidades del producto, mientras que las Technical Stories permiten definir el soporte técnico necesario para implementar y evolucionar las funcionalidades de la solución.
 
-<tr>
-<td>EP01</td>
-<td>Gestión de usuarios y acceso</td>
-<td>Epic orientado al registro, autenticación y gestión básica de las cuentas de los usuarios de MaquiGest.</td>
-<td>-</td>
-<td>-</td>
-</tr>
-
-<tr>
-<td>US01</td>
-<td>Registro de usuario</td>
-<td>Como usuario, quiero registrarme en MaquiGest para acceder a las funcionalidades de la plataforma.</td>
-<td>
-Given que el usuario accede al formulario de registro<br>
-When ingresa sus datos correctamente<br>
-Then el sistema crea su cuenta<br>
-And muestra un mensaje de confirmación
-</td>
-<td>EP01</td>
-</tr>
-
-<tr>
-<td>US02</td>
-<td>Inicio de sesión</td>
-<td>Como usuario registrado, quiero iniciar sesión para acceder a las funcionalidades correspondientes a mi cuenta.</td>
-<td>
-Given que el usuario posee una cuenta registrada<br>
-When ingresa credenciales válidas<br>
-Then el sistema permite el acceso a la plataforma
-</td>
-<td>EP01</td>
-</tr>
-
-<tr>
-<td>US03</td>
-<td>Gestionar perfil</td>
-<td>Como usuario, quiero consultar y actualizar mis datos personales y de contacto para mantener mi información actualizada.</td>
-<td>
-Given que el usuario ha iniciado sesión<br>
-When modifica sus datos de perfil<br>
-Then el sistema guarda la información actualizada<br>
-And muestra los nuevos datos
-</td>
-<td>EP01</td>
-</tr>
-
-<tr>
-<td>US04</td>
-<td>Recuperar contraseña</td>
-<td>Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta.</td>
-<td>
-Given que el usuario solicita recuperación<br>
-When ingresa su correo<br>
-Then el sistema envía instrucciones de recuperación
-</td>
-<td>EP01</td>
-</tr>
-
-<tr>
-<td>US05</td>
-<td>Cerrar sesión</td>
-<td>Como usuario, quiero cerrar sesión para proteger mi cuenta.</td>
-<td>
-Given que el usuario está autenticado<br>
-When selecciona cerrar sesión<br>
-Then el sistema finaliza su sesión
-</td>
-<td>EP01</td>
-</tr>
-
-<tr>
-<td>EP02</td>
-<td>Gestión de maquinaria</td>
-<td>Epic orientado al registro, organización y consulta del inventario de maquinaria disponible para alquiler.</td>
-<td>-</td>
-<td>-</td>
-</tr>
-
-<tr>
-<td>US06</td>
-<td>Registrar maquinaria</td>
-<td>Como empresa de alquiler, quiero registrar mis máquinas y equipos para mantener organizado mi inventario.</td>
-<td>
-Given que el usuario tiene permisos para gestionar maquinaria<br>
-When registra los datos de un equipo<br>
-Then el sistema almacena la maquinaria en el inventario<br>
-And muestra el equipo registrado
-</td>
-<td>EP02</td>
-</tr>
-
-<tr>
-<td>US07</td>
-<td>Consultar maquinaria</td>
-<td>Como empresa de alquiler, quiero consultar las máquinas registradas para conocer la información de mis equipos.</td>
-<td>
-Given que existen equipos registrados<br>
-When el usuario consulta el inventario<br>
-Then el sistema muestra la lista de maquinaria<br>
-And muestra información relevante de cada equipo
-</td>
-<td>EP02</td>
-</tr>
-
-<tr>
-<td>US08</td>
-<td>Actualizar información de maquinaria</td>
-<td>Como empresa de alquiler, quiero actualizar la información de mis equipos para mantener el inventario actualizado.</td>
-<td>
-Given que existe una maquinaria registrada<br>
-When el usuario modifica sus datos<br>
-Then el sistema guarda la información actualizada
-</td>
-<td>EP02</td>
-</tr>
-
-<tr>
-<td>US09</td>
-<td>Consultar disponibilidad de maquinaria</td>
-<td>Como empresa de alquiler, quiero conocer la disponibilidad de cada equipo para evitar conflictos al gestionar nuevos alquileres.</td>
-<td>
-Given que existen equipos registrados<br>
-When el usuario consulta su disponibilidad<br>
-Then el sistema muestra si cada equipo está disponible, reservado o alquilado
-</td>
-<td>EP02</td>
-</tr>
-
-<tr>
-<td>US10</td>
-<td>Consultar estado de maquinaria</td>
-<td>Como empresa de alquiler, quiero conocer el estado de mis equipos para evitar alquilar maquinaria que no se encuentra en condiciones de uso.</td>
-<td>
-Given que existe una maquinaria registrada<br>
-When el usuario consulta su información<br>
-Then el sistema muestra su estado actual<br>
-And permite identificar si está disponible para alquiler
-</td>
-<td>EP02</td>
-</tr>
-
-<tr>
-<td>EP03</td>
-<td>Búsqueda y solicitud de alquiler</td>
-<td>Epic orientado a permitir que las pequeñas empresas constructoras encuentren maquinaria y gestionen solicitudes de alquiler.</td>
-<td>-</td>
-<td>-</td>
-</tr>
-
-<tr>
-<td>US11</td>
-<td>Buscar maquinaria</td>
-<td>Como empresa constructora, quiero buscar maquinaria según mis necesidades para encontrar equipos adecuados para mi proyecto.</td>
-<td>
-Given que el usuario accede al catálogo de maquinaria<br>
-When busca o filtra equipos<br>
-Then el sistema muestra las maquinarias que coinciden con sus necesidades
-</td>
-<td>EP03</td>
-</tr>
-
-<tr>
-<td>US12</td>
-<td>Consultar información de maquinaria</td>
-<td>Como empresa constructora, quiero consultar las características de una maquinaria para determinar si es adecuada para mi proyecto.</td>
-<td>
-Given que el usuario visualiza una maquinaria<br>
-When selecciona el equipo<br>
-Then el sistema muestra sus características, estado y condiciones de alquiler
-</td>
-<td>EP03</td>
-</tr>
-
-<tr>
-<td>US13</td>
-<td>Consultar disponibilidad para un periodo</td>
-<td>Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado antes de solicitar el alquiler.</td>
-<td>
-Given que el usuario selecciona una maquinaria y un periodo<br>
-When consulta su disponibilidad<br>
-Then el sistema indica si el equipo puede ser alquilado durante dicho periodo
-</td>
-<td>EP03</td>
-</tr>
-
-<tr>
-<td>US14</td>
-<td>Solicitar alquiler de maquinaria</td>
-<td>Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto.</td>
-<td>
-Given que la maquinaria está disponible<br>
-When el usuario registra una solicitud de alquiler<br>
-Then el sistema registra la solicitud<br>
-And muestra su estado
-</td>
-<td>EP03</td>
-</tr>
-
-<tr>
-<td>EP04</td>
-<td>Planes y suscripciones</td>
-<td>Epic orientado a la gestión de planes.</td>
-<td>-</td>
-<td>-</td>
-</tr>
-
-<tr>
-<td>US15</td>
-<td>Visualizar planes disponibles</td>
-<td>Como usuario, quiero ver los planes para elegir uno.</td>
-<td>
-Given que el usuario accede a la sección de planes<br>
-When visualiza opciones<br>
-Then el sistema muestra los planes con sus características y precios
-</td>
-<td>EP04</td>
-</tr>
-
-<tr>
-<td>US16</td>
-<td>Suscribirse a un plan</td>
-<td>Como usuario, quiero suscribirme a un plan para acceder a funciones premium.</td>
-<td>
-Given que el usuario selecciona un plan<br>
-When confirma la suscripción<br>
-Then el sistema registra el plan
-</td>
-<td>EP04</td>
-</tr>
-
-<tr>
-<td>US17</td>
-<td>Cambiar de plan</td>
-<td>Como usuario, quiero cambiar de plan según mis necesidades.</td>
-<td>
-Given que el usuario tiene un plan activo<br>
-When selecciona otro<br>
-Then el sistema actualiza la suscripción
-</td>
-<td>EP04</td>
-</tr>
-
-<tr>
-<td>EP05</td>
-<td>Gestión de reservas y alquileres</td>
-<td>Epic orientado a la administración de reservas y al seguimiento del ciclo de alquiler de los equipos.</td>
-<td>-</td>
-<td>-</td>
-</tr>
-
-<tr>
-<td>US18</td>
-<td>Gestionar solicitudes de alquiler</td>
-<td>Como empresa de alquiler, quiero revisar las solicitudes recibidas para decidir cuáles atender y mantener control sobre mis alquileres.</td>
-<td>
-Given que existen solicitudes de alquiler<br>
-When el usuario consulta las solicitudes<br>
-Then el sistema muestra la información de cada solicitud<br>
-And permite identificar su estado
-</td>
-<td>EP05</td>
-</tr>
-
-<tr>
-<td>US19</td>
-<td>Confirmar o rechazar una solicitud</td>
-<td>Como empresa de alquiler, quiero aceptar o rechazar solicitudes de alquiler para controlar la disponibilidad de mis equipos.</td>
-<td>
-Given que existe una solicitud pendiente<br>
-When el usuario selecciona aceptar o rechazar<br>
-Then el sistema actualiza el estado de la solicitud<br>
-And muestra el nuevo estado
-</td>
-<td>EP05</td>
-</tr>
-
-<tr>
-<td>US20</td>
-<td>Consultar alquileres activos</td>
-<td>Como empresa de alquiler, quiero consultar mis alquileres activos para conocer qué equipos están actualmente alquilados.</td>
-<td>
-Given que existen alquileres activos<br>
-When el usuario consulta sus alquileres<br>
-Then el sistema muestra los equipos alquilados<br>
-And muestra información del periodo correspondiente
-</td>
-<td>EP05</td>
-</tr>
-
-<tr>
-<td>US21</td>
-<td>Consultar estado de una solicitud de alquiler</td>
-<td>Como empresa constructora, quiero consultar el estado de mi solicitud para saber si mi alquiler fue aceptado, rechazado o aún está pendiente.</td>
-<td>
-Given que el usuario ha realizado una solicitud<br>
-When consulta sus solicitudes<br>
-Then el sistema muestra el estado actualizado de cada una
-</td>
-<td>EP05</td>
-</tr>
-
-<tr>
-<td>US22</td>
-<td>Gestionar entregas y devoluciones</td>
-<td>Como empresa de alquiler, quiero registrar las entregas y devoluciones de maquinaria para mantener trazabilidad sobre los equipos alquilados.</td>
-<td>
-Given que existe un alquiler confirmado<br>
-When se registra la entrega o devolución<br>
-Then el sistema actualiza el estado del alquiler<br>
-And registra la operación realizada
-</td>
-<td>EP05</td>
-</tr>
-
-<tr>
-<td>EP06</td>
-<td>Gestión de mantenimiento e incidencias</td>
-<td>Epic orientado al seguimiento del estado operativo de la maquinaria y a la gestión de mantenimientos e incidencias.</td>
-<td>-</td>
-<td>-</td>
-</tr>
-
-<tr>
-<td>US23</td>
-<td>Registrar mantenimiento</td>
-<td>Como empresa de alquiler, quiero registrar mantenimientos realizados a una maquinaria para mantener un historial de su estado operativo.</td>
-<td>
-Given que existe una maquinaria registrada<br>
-When el usuario registra un mantenimiento<br>
-Then el sistema almacena la información<br>
-And la relaciona con el equipo correspondiente
-</td>
-<td>EP06</td>
-</tr>
-
-<tr>
-<td>US24</td>
-<td>Programar mantenimiento</td>
-<td>Como empresa de alquiler, quiero programar mantenimientos para evitar que los equipos sean utilizados cuando requieren atención.</td>
-<td>
-Given que una maquinaria requiere mantenimiento<br>
-When el usuario registra una fecha de mantenimiento<br>
-Then el sistema guarda la programación<br>
-And permite consultar el mantenimiento pendiente
-</td>
-<td>EP06</td>
-</tr>
-
-<tr>
-<td>US25</td>
-<td>Registrar incidencia de maquinaria</td>
-<td>Como empresa de alquiler, quiero registrar incidencias de mis equipos para llevar un control de problemas y reparaciones.</td>
-<td>
-Given que una maquinaria presenta una incidencia<br>
-When el usuario registra el problema<br>
-Then el sistema almacena la incidencia<br>
-And la relaciona con la maquinaria correspondiente
-</td>
-<td>EP06</td>
-</tr>
-
-<tr>
-<td>US26</td>
-<td>Consultar historial de maquinaria</td>
-<td>Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus alquileres, incidencias y mantenimientos.</td>
-<td>
-Given que existe una maquinaria registrada<br>
-When el usuario consulta su historial<br>
-Then el sistema muestra las operaciones asociadas al equipo
-</td>
-<td>EP06</td>
-</tr>
-
-<tr>
-<td>EP07</td>
-<td>Información y contratación del servicio</td>
-<td>Epic orientado a brindar información sobre MaquiGest y facilitar el contacto de potenciales clientes con la plataforma.</td>
-<td>-</td>
-<td>-</td>
-</tr>
-
-<tr>
-<td>US27</td>
-<td>Consultar información de MaquiGest</td>
-<td>Como visitante, quiero conocer las funcionalidades y beneficios de MaquiGest para determinar si la solución se adapta a las necesidades de mi empresa.</td>
-<td>
-Given que el visitante accede al Landing Page<br>
-When revisa la información del producto<br>
-Then el sistema muestra sus principales funcionalidades y beneficios
-</td>
-<td>EP07</td>
-</tr>
-
-<tr>
-<td>US28</td>
-<td>Solicitar demostración</td>
-<td>Como potencial cliente, quiero solicitar una demostración de MaquiGest para conocer cómo funciona antes de utilizar el servicio.</td>
-<td>
-Given que el visitante desea conocer la plataforma<br>
-When completa y envía el formulario de demostración<br>
-Then el sistema registra la solicitud<br>
-And muestra un mensaje de confirmación
-</td>
-<td>EP07</td>
-</tr>
-
-<tr>
-<td>US29</td>
-<td>Contactar con MaquiGest</td>
-<td>Como potencial cliente, quiero contactar con el equipo de MaquiGest para realizar consultas sobre el servicio.</td>
-<td>
-Given que el visitante accede a la sección de contacto<br>
-When completa y envía sus datos y consulta<br>
-Then el sistema registra la solicitud de contacto
-</td>
-<td>EP07</td>
-</tr>
-
-<tr>
-<td>EP08</td>
-<td>Landing Page de MaquiGest</td>
-<td>Epic orientado a presentar la propuesta de valor de MaquiGest y facilitar la navegación de los potenciales clientes hacia las funcionalidades y acciones principales de la plataforma.</td>
-<td>-</td>
-<td>-</td>
-</tr>
-
-<tr>
-<td>US30</td>
-<td>Visualizar propuesta de valor</td>
-<td>Como visitante, quiero identificar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa a gestionar el alquiler de maquinaria.</td>
-<td>
-Given que el visitante accede al Landing Page<br>
-When visualiza la sección principal<br>
-Then el sistema muestra la propuesta de valor de MaquiGest<br>
-And presenta sus principales beneficios para la gestión de alquileres
-</td>
-<td>EP08</td>
-</tr>
-
-<tr>
-<td>US31</td>
-<td>Explorar funcionalidades principales</td>
-<td>Como potencial cliente, quiero conocer las principales funcionalidades de MaquiGest para identificar cuáles pueden ayudarme a gestionar mis operaciones de alquiler de maquinaria.</td>
-<td>
-Given que el visitante se encuentra en el Landing Page<br>
-When revisa la sección de funcionalidades<br>
-Then el sistema muestra las principales funcionalidades de MaquiGest<br>
-And presenta una descripción breve de cada funcionalidad
-</td>
-<td>EP08</td>
-</tr>
-
-<tr>
-<td>US32</td>
-<td>Identificar la solución para mi empresa</td>
-<td>Como visitante, quiero identificar cómo MaquiGest puede ayudar según mi tipo de empresa para conocer las funcionalidades relevantes para mis necesidades.</td>
-<td>
-Given que el visitante accede a la sección orientada a clientes<br>
-When selecciona o visualiza su tipo de empresa<br>
-Then el sistema presenta los beneficios relevantes para empresas de alquiler o empresas constructoras
-</td>
-<td>EP08</td>
-</tr>
-
-<tr>
-<td>US33</td>
-<td>Acceder a la Web Application</td>
-<td>Como visitante, quiero acceder a la Web Application desde el Landing Page para utilizar las funcionalidades de MaquiGest.</td>
-<td>
-Given que el visitante se encuentra en el Landing Page<br>
-When selecciona el CTA para acceder a la plataforma<br>
-Then el sistema redirige al visitante hacia la Web Application
-</td>
-<td>EP08</td>
-</tr>
-
-<tr>
-<td>US34</td>
-<td>Consultar el Landing Page en diferentes dispositivos</td>
-<td>Como visitante, quiero visualizar correctamente el Landing Page desde diferentes dispositivos para conocer MaquiGest sin importar el dispositivo que utilice.</td>
-<td>
-Given que el visitante accede al Landing Page desde un dispositivo<br>
-When navega por sus diferentes secciones<br>
-Then el sistema adapta correctamente el contenido a la resolución de pantalla<br>
-And permite utilizar las funcionalidades de navegación sin pérdida de información
-</td>
-<td>EP08</td>
-</tr>
-
-<tr>
-<td>US35</td>
-<td>Cambiar el idioma del Landing Page</td>
-<td>Como visitante, quiero cambiar el idioma del Landing Page para consultar la información de MaquiGest en el idioma de mi preferencia.</td>
-<td>
-Given que el visitante accede al Landing Page<br>
-When selecciona un idioma disponible<br>
-Then el sistema muestra el contenido del Landing Page en el idioma seleccionado<br>
-And mantiene la estructura y funcionalidad de la página
-</td>
-<td>EP08</td>
-</tr>
-
-</table>
+| Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con |
+| :---: | :--- | :--- | :--- | :--- |
+| **EP01** | **Gestión de usuarios y acceso** | Gestiona el registro, acceso, perfil y recuperación de acceso de los usuarios de MaquiGest. | N/A | — |
+| US01 | Registro de usuario | Como usuario, quiero registrarme en MaquiGest para poder acceder a las funcionalidades de la plataforma. | **Given** que el usuario proporciona la información obligatoria y válida, **When** solicita registrarse, **Then** el sistema crea su cuenta.<br><br>**Given** que el usuario proporciona información que ya se encuentra registrada, **When** solicita registrarse, **Then** el sistema rechaza el registro.<br><br>**Given** que faltan datos obligatorios o presentan un formato inválido, **When** solicita registrarse, **Then** el sistema rechaza la operación e informa la validación correspondiente. | EP01 |
+| US02 | Inicio de sesión | Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta. | **Given** que existe una cuenta con credenciales válidas, **When** el usuario inicia sesión, **Then** el sistema permite el acceso a su cuenta.<br><br>**Given** que las credenciales proporcionadas no son válidas, **When** el usuario intenta iniciar sesión, **Then** el sistema rechaza el acceso. | EP01 |
+| US03 | Gestionar perfil | Como usuario, quiero gestionar mi perfil para mantener actualizada mi información. | **Given** que existe un perfil de usuario, **When** el usuario proporciona información válida para actualizarlo, **Then** el sistema actualiza la información.<br><br>**Given** que la información proporcionada no cumple las validaciones establecidas, **When** el usuario intenta actualizar su perfil, **Then** el sistema rechaza los datos inválidos. | EP01 |
+| US04 | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla. | **Given** que existe una cuenta asociada a la información proporcionada, **When** el usuario solicita recuperar su contraseña, **Then** el sistema permite iniciar el proceso de recuperación.<br><br>**Given** que no existe una cuenta asociada a la información proporcionada, **When** el usuario solicita recuperar su contraseña, **Then** el sistema rechaza la solicitud. | EP01 |
+| US05 | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta. | **Given** que el usuario tiene una sesión activa, **When** solicita cerrar sesión, **Then** el sistema finaliza la sesión.<br><br>**Given** que no existe una sesión activa, **When** se solicita cerrar sesión, **Then** el sistema no permite continuar con una sesión autenticada. | EP01 |
+| TS02 | Gestionar perfiles mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar y actualizar los perfiles de los usuarios para permitir que la Web Application gestione su información. | **Given** que existe un perfil de usuario, **When** un cliente autorizado consulta el recurso correspondiente, **Then** la API devuelve la información del perfil.<br><br>**Given** que se proporciona información válida para actualizar un perfil, **When** el cliente realiza la solicitud, **Then** la API actualiza el perfil y devuelve la información correspondiente.<br><br>**Given** que la información proporcionada no es válida, **When** se solicita la actualización, **Then** la API rechaza la operación. | US03 |
+| **EP02** | **Gestión de maquinaria** | Permite administrar el inventario, información, disponibilidad y estado de la maquinaria de las empresas de alquiler. | N/A | — |
+| US06 | Registrar maquinaria | Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en MaquiGest. | **Given** que la empresa proporciona la información obligatoria de una maquinaria, **When** solicita registrarla, **Then** el sistema registra la maquinaria en el inventario.<br><br>**Given** que faltan datos obligatorios, **When** la empresa intenta registrar la maquinaria, **Then** el sistema rechaza el registro. | EP02 |
+| US07 | Consultar maquinaria | Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados. | **Given** que existen maquinarias registradas, **When** la empresa solicita consultarlas, **Then** el sistema devuelve las maquinarias correspondientes.<br><br>**Given** que no existen maquinarias registradas, **When** la empresa consulta su inventario, **Then** el sistema informa que no existen registros disponibles. | EP02 |
+| US08 | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados. | **Given** que existe una maquinaria registrada, **When** la empresa proporciona información válida para actualizarla, **Then** el sistema actualiza sus datos.<br><br>**Given** que la maquinaria no existe, **When** la empresa intenta actualizarla, **Then** el sistema rechaza la operación. | EP02 |
+| US09 | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles. | **Given** que existen maquinarias registradas, **When** la empresa consulta su disponibilidad, **Then** el sistema muestra el estado de disponibilidad correspondiente.<br><br>**Given** que una maquinaria se encuentra comprometida durante un periodo, **When** se consulta su disponibilidad, **Then** el sistema la identifica como no disponible para dicho periodo. | EP02 |
+| US10 | Consultar estado de maquinaria | Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual. | **Given** que existe una maquinaria registrada, **When** la empresa consulta su estado, **Then** el sistema devuelve su condición actual.<br><br>**Given** que la maquinaria no existe, **When** se solicita su estado, **Then** el sistema rechaza la consulta. | EP02 |
+| TS03 | Gestionar maquinaria mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar, consultar y actualizar maquinaria para permitir la gestión del inventario desde la Web Application. | **Given** que el usuario tiene permisos para gestionar maquinaria, **When** el cliente envía una solicitud válida para registrar, consultar o actualizar una maquinaria, **Then** la API procesa la operación.<br><br>**Given** que una operación de maquinaria se procesa correctamente, **When** la API responde, **Then** devuelve la información correspondiente del recurso.<br><br>**Given** que la solicitud contiene información inválida, **When** se procesa, **Then** la API rechaza la operación. | US06, US07, US08 |
+| TS04 | Consultar disponibilidad mediante API REST | Como desarrollador, quiero disponer de un recurso REST para consultar la disponibilidad de maquinaria durante un periodo para que la Web Application pueda mostrar los equipos disponibles. | **Given** que existe una maquinaria registrada, **When** el cliente solicita su disponibilidad para un periodo válido, **Then** la API devuelve la disponibilidad correspondiente.<br><br>**Given** que el periodo solicitado es inválido, **When** se realiza la consulta, **Then** la API rechaza la solicitud. | US09, US13 |
+| **EP03** | **Búsqueda y solicitud de alquiler** | Permite a las empresas constructoras buscar maquinaria, consultar sus características y disponibilidad y solicitar alquileres. | N/A | — |
+| US11 | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades. | **Given** que existen maquinarias registradas, **When** la empresa realiza una búsqueda válida, **Then** el sistema devuelve las maquinarias que coinciden con los criterios indicados.<br><br>**Given** que no existen maquinarias que coincidan con los criterios, **When** la empresa realiza una búsqueda, **Then** el sistema informa que no existen resultados. | EP03 |
+| US12 | Consultar información de maquinaria | Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler. | **Given** que existe una maquinaria registrada, **When** la empresa consulta su información, **Then** el sistema devuelve sus características.<br><br>**Given** que la maquinaria no existe, **When** la empresa solicita su información, **Then** el sistema rechaza la consulta. | EP03 |
+| US13 | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla. | **Given** que existe una maquinaria registrada, **When** la empresa consulta su disponibilidad para un periodo válido, **Then** el sistema indica si se encuentra disponible.<br><br>**Given** que la maquinaria se encuentra comprometida durante parte del periodo solicitado, **When** se consulta su disponibilidad, **Then** el sistema indica que no se encuentra disponible para dicho periodo. | EP03 |
+| US14 | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | **Given** que la maquinaria está disponible para el periodo solicitado, **When** la empresa registra una solicitud de alquiler válida, **Then** el sistema registra la solicitud con estado inicial PENDING.<br><br>**Given** que la maquinaria no está disponible para el periodo solicitado, **When** la empresa intenta solicitar el alquiler, **Then** el sistema rechaza la solicitud.<br><br>**Given** que la solicitud de alquiler se registra correctamente, **When** finaliza la creación de la solicitud, **Then** se genera la notificación correspondiente para la empresa de alquiler. | EP03 |
+| TS05 | Gestionar solicitudes de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para crear y consultar solicitudes de alquiler para permitir que las empresas constructoras soliciten maquinaria y consulten sus solicitudes. | **Given** que existe una maquinaria disponible, **When** el cliente envía una solicitud válida de alquiler, **Then** la API registra la solicitud y devuelve su identificador y estado inicial.<br><br>**Given** que existe una solicitud de alquiler, **When** el cliente autorizado consulta el recurso, **Then** la API devuelve la información correspondiente.<br><br>**Given** que la maquinaria no está disponible, **When** se intenta crear la solicitud, **Then** la API rechaza la operación. | US14, US21 |
+| **EP04** | **Planes y suscripciones** | Permite consultar y gestionar las opciones de suscripción disponibles para los usuarios de MaquiGest. | N/A | — |
+| US15 | Consultar planes | Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece MaquiGest. | **Given** que existen planes configurados, **When** el usuario consulta las opciones disponibles, **Then** el sistema muestra la información de los planes.<br><br>**Given** que no existen planes disponibles, **When** el usuario realiza la consulta, **Then** el sistema informa que no existen opciones disponibles. | EP04 |
+| US16 | Seleccionar plan | Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades. | **Given** que existen planes disponibles, **When** el usuario selecciona un plan válido, **Then** el sistema registra la selección correspondiente.<br><br>**Given** que el plan seleccionado no está disponible, **When** el usuario intenta seleccionarlo, **Then** el sistema rechaza la operación. | EP04 |
+| US17 | Gestionar suscripción | Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado. | **Given** que existe una suscripción asociada al usuario, **When** el usuario solicita consultar o modificar la información permitida, **Then** el sistema procesa la operación.<br><br>**Given** que no existe una suscripción válida, **When** el usuario intenta gestionarla, **Then** el sistema rechaza la operación. | EP04 |
+| TS09 | Consultar planes y suscripciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar los planes disponibles y gestionar la información básica de la suscripción para que la Web Application pueda mostrar y administrar estas opciones. | **Given** que existen planes configurados, **When** el cliente solicita los planes disponibles, **Then** la API devuelve la información correspondiente.<br><br>**Given** que se proporciona una selección de plan válida, **When** el cliente registra la selección, **Then** la API devuelve el estado correspondiente.<br><br>**Given** que la información proporcionada no es válida, **When** se procesa la solicitud, **Then** la API rechaza la operación. | US15, US16, US17 |
+| **EP05** | **Gestión de reservas y alquileres** | Permite administrar solicitudes, decisiones de alquiler, alquileres activos, entregas y devoluciones. | N/A | — |
+| US18 | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas. | **Given** que existen solicitudes de alquiler registradas, **When** la empresa consulta sus solicitudes, **Then** el sistema muestra las solicitudes recibidas y su información relevante.<br><br>**Given** que existen solicitudes pendientes, **When** la empresa consulta las solicitudes, **Then** el sistema permite identificar aquellas que se encuentran pendientes.<br><br>**Given** que no existen solicitudes registradas, **When** la empresa consulta las solicitudes, **Then** el sistema informa que no existen solicitudes disponibles. | EP05 |
+| US19 | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse. | **Given** que existe una solicitud pendiente, **When** la empresa de alquiler la confirma, **Then** el sistema actualiza su estado a CONFIRMED.<br><br>**Given** que existe una solicitud pendiente, **When** la empresa de alquiler la confirma, **Then** se genera una notificación por correo dirigida a la empresa constructora.<br><br>**Given** que existe una solicitud pendiente, **When** la empresa de alquiler la rechaza, **Then** el sistema actualiza su estado a REJECTED.<br><br>**Given** que existe una solicitud pendiente, **When** la empresa de alquiler la rechaza, **Then** se genera una notificación por correo dirigida a la empresa constructora.<br><br>**Given** que la solicitud no se encuentra pendiente, **When** la empresa intenta confirmarla o rechazarla, **Then** el sistema rechaza la operación. | EP05 |
+| US20 | Consultar alquileres activos | Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso. | **Given** que existen alquileres activos, **When** la empresa solicita consultarlos, **Then** el sistema devuelve los alquileres que se encuentran en curso.<br><br>**Given** que no existen alquileres activos, **When** la empresa realiza la consulta, **Then** el sistema informa que no existen alquileres en curso. | EP05 |
+| US21 | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de una solicitud de alquiler para conocer su situación actual. | **Given** que existe una solicitud asociada a la empresa constructora, **When** consulta su estado, **Then** el sistema devuelve el estado actual de la solicitud.<br><br>**Given** que la solicitud no existe o no pertenece a la empresa constructora, **When** se consulta su estado, **Then** el sistema rechaza la consulta. | EP05 |
+| US22 | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria. | **Given** que existe un alquiler confirmado, **When** la empresa registra una entrega válida, **Then** el sistema registra la entrega y actualiza el estado correspondiente.<br><br>**Given** que existe un alquiler en curso, **When** la empresa registra una devolución válida, **Then** el sistema registra la devolución y actualiza el estado de la maquinaria.<br><br>**Given** que no existe un alquiler válido asociado a la operación, **When** se intenta registrar una entrega o devolución, **Then** el sistema rechaza la operación. | EP05 |
+| TS06 | Gestionar reservas y estados de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para gestionar solicitudes, confirmaciones, rechazos y alquileres activos para soportar el ciclo de alquiler de MaquiGest. | **Given** que existe una solicitud de alquiler, **When** un usuario autorizado confirma o rechaza la solicitud, **Then** la API actualiza su estado.<br><br>**Given** que existe un alquiler activo, **When** el cliente autorizado consulta los alquileres activos, **Then** la API devuelve la información correspondiente.<br><br>**Given** que una operación no está permitida para el estado actual de la solicitud, **When** se intenta ejecutar, **Then** la API rechaza la operación. | US18, US19, US20 |
+| TS07 | Gestionar entregas y devoluciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar entregas y devoluciones de maquinaria para mantener la trazabilidad del ciclo de alquiler. | **Given** que existe un alquiler confirmado, **When** el cliente registra una entrega válida, **Then** la API registra la entrega y actualiza el estado correspondiente.<br><br>**Given** que existe un alquiler en curso, **When** el cliente registra una devolución válida, **Then** la API registra la devolución y actualiza el estado correspondiente.<br><br>**Given** que la operación no corresponde al estado actual del alquiler, **When** se registra la operación, **Then** la API la rechaza. | US22 |
+| **EP06** | **Gestión de mantenimiento e incidencias** | Permite registrar, programar y consultar mantenimientos e incidencias relacionadas con la maquinaria. | N/A | — |
+| US23 | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria. | **Given** que existe una maquinaria registrada, **When** la empresa proporciona información válida del mantenimiento, **Then** el sistema registra la intervención.<br><br>**Given** que la maquinaria no existe, **When** se intenta registrar un mantenimiento, **Then** el sistema rechaza la operación. | EP06 |
+| US24 | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria. | **Given** que existe una maquinaria registrada, **When** la empresa proporciona una fecha válida de mantenimiento, **Then** el sistema registra la programación.<br><br>**Given** que la fecha proporcionada no es válida, **When** la empresa intenta programar el mantenimiento, **Then** el sistema rechaza la operación. | EP06 |
+| US25 | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria. | **Given** que existe una maquinaria registrada, **When** la empresa registra una incidencia válida, **Then** el sistema almacena la incidencia.<br><br>**Given** que la maquinaria no existe, **When** se intenta registrar la incidencia, **Then** el sistema rechaza la operación. | EP06 |
+| US26 | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores. | **Given** que existe una maquinaria registrada, **When** la empresa consulta su historial, **Then** el sistema devuelve los mantenimientos e incidencias registrados.<br><br>**Given** que no existen registros históricos, **When** la empresa consulta el historial, **Then** el sistema informa que no existen registros disponibles. | EP06 |
+| TS08 | Gestionar mantenimiento e incidencias mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar y consultar mantenimientos e incidencias de maquinaria para conservar su historial operativo. | **Given** que existe una maquinaria registrada, **When** el cliente envía información válida de mantenimiento o incidencia, **Then** la API almacena la información.<br><br>**Given** que existen registros históricos, **When** el cliente consulta el historial, **Then** la API devuelve la información correspondiente.<br><br>**Given** que la maquinaria no existe, **When** se intenta registrar información, **Then** la API rechaza la operación. | US23, US24, US25, US26 |
+| **EP07** | **Información y contratación del servicio** | Permite a los visitantes conocer MaquiGest, solicitar una demostración y contactar con el equipo. | N/A | — |
+| US27 | Consultar información de MaquiGest | Como visitante, quiero consultar información de MaquiGest para conocer la solución y su propuesta de valor. | **Given** que el visitante accede a la información de MaquiGest, **When** consulta el contenido disponible, **Then** el sistema presenta información sobre la solución y su propuesta de valor.<br><br>**Given** que el visitante consulta la información, **When** navega por el contenido, **Then** puede identificar las características principales de MaquiGest. | EP07 |
+| US28 | Solicitar demostración | Como visitante, quiero solicitar una demostración para conocer cómo funciona MaquiGest. | **Given** que el visitante proporciona la información requerida, **When** solicita una demostración, **Then** el sistema registra la solicitud.<br><br>**Given** que faltan datos obligatorios, **When** el visitante solicita la demostración, **Then** el sistema rechaza la solicitud. | EP07 |
+| US29 | Contactar con MaquiGest | Como visitante, quiero contactar con MaquiGest para realizar consultas sobre la solución. | **Given** que el visitante proporciona la información requerida, **When** envía una consulta, **Then** el sistema registra el contacto.<br><br>**Given** que faltan datos obligatorios, **When** el visitante intenta enviar la consulta, **Then** el sistema rechaza el envío. | EP07 |
+| **EP08** | **Landing Page de MaquiGest** | Presenta la propuesta de valor, funcionalidades y soluciones de MaquiGest mediante una experiencia web accesible y adaptable. | N/A | — |
+| US30 | Visualizar propuesta de valor | Como visitante, quiero visualizar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa. | **Given** que el visitante accede al Landing Page, **When** consulta la propuesta de valor, **Then** el sistema presenta la información correspondiente.<br><br>**Given** que el visitante consulta la propuesta de valor, **When** continúa explorando el contenido, **Then** puede identificar el beneficio principal de MaquiGest. | EP08 |
+| US31 | Explorar funcionalidades principales | Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con MaquiGest. | **Given** que el visitante accede al contenido de funcionalidades, **When** consulta la información, **Then** el sistema presenta las funcionalidades principales de MaquiGest.<br><br>**Given** que el visitante revisa las funcionalidades, **When** consulta cada característica, **Then** puede comprender su propósito general. | EP08 |
+| US32 | Identificar la solución para mi empresa | Como visitante, quiero identificar si MaquiGest se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades. | **Given** que el visitante pertenece a uno de los segmentos objetivo, **When** consulta las soluciones disponibles, **Then** el sistema presenta información correspondiente a su tipo de empresa.<br><br>**Given** que el visitante revisa las soluciones, **When** compara la información con sus necesidades, **Then** puede identificar la propuesta correspondiente a su segmento. | EP08 |
+| US33 | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de MaquiGest. | **Given** que el visitante se encuentra en el Landing Page, **When** solicita acceder a la Web Application, **Then** el sistema dirige al visitante hacia la experiencia correspondiente.<br><br>**Given** que el acceso a la Web Application no se encuentra disponible, **When** el visitante intenta acceder, **Then** el sistema informa que el recurso no está disponible. | EP08 |
+| US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | Como usuario, quiero utilizar MaquiGest desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada. | **Given** que el usuario accede desde un dispositivo con una resolución determinada, **When** utiliza la plataforma, **Then** el contenido se adapta al tamaño de pantalla correspondiente.<br><br>**Given** que el usuario cambia el tamaño de pantalla, **When** continúa utilizando la plataforma, **Then** la información mantiene una presentación adecuada. | EP08 |
+| US35 | Utilizar la plataforma en diferentes idiomas | Como usuario, quiero utilizar MaquiGest en diferentes idiomas para comprender y utilizar la plataforma. | **Given** que existen idiomas disponibles, **When** el usuario selecciona un idioma, **Then** el sistema presenta el contenido disponible en el idioma seleccionado.<br><br>**Given** que el usuario selecciona otro idioma disponible, **When** continúa utilizando la plataforma, **Then** el contenido se actualiza al idioma correspondiente. | EP08 |
+| TS01 | Exponer API REST de MaquiGest | Como desarrollador, quiero disponer de una API REST organizada para exponer los servicios de MaquiGest y permitir que la Web Application consuma las funcionalidades del dominio. | **Given** que la API se encuentra disponible, **When** un cliente realiza una solicitud a un recurso válido, **Then** la API procesa la solicitud y devuelve la respuesta HTTP correspondiente.<br><br>**Given** que existen recursos REST definidos, **When** la Web Application los consume, **Then** los recursos mantienen una estructura consistente de solicitudes y respuestas. | Transversal |
+| TS10 | Gestionar autenticación y autorización mediante API REST | Como desarrollador, quiero disponer de mecanismos REST de autenticación y autorización para proteger los recursos de MaquiGest y controlar el acceso según el tipo de usuario. | **Given** que existe una cuenta registrada, **When** el cliente envía credenciales válidas al recurso de autenticación, **Then** la API permite establecer una sesión autorizada.<br><br>**Given** que un cliente solicita un recurso protegido sin autorización válida, **When** la API procesa la solicitud, **Then** rechaza el acceso.<br><br>**Given** que el usuario no posee permisos para un recurso, **When** intenta acceder, **Then** la API rechaza la operación. | US01, US02, US04, US05 |
+| TS11 | Enviar notificaciones transaccionales mediante SendGrid | Como desarrollador, quiero integrar un servicio de correo transaccional para notificar eventos relevantes del ciclo de alquiler. | **Given** que se registra correctamente una solicitud de alquiler, **When** el sistema procesa la creación de la solicitud, **Then** se envía un correo a la empresa de alquiler.<br><br>**Given** que una solicitud pendiente es confirmada, **When** el sistema procesa la confirmación, **Then** se envía un correo a la empresa constructora.<br><br>**Given** que una solicitud pendiente es rechazada, **When** el sistema procesa el rechazo, **Then** se envía un correo a la empresa constructora.<br><br>**Given** que SendGrid no permite completar el envío, **When** ocurre un error de comunicación, **Then** el sistema registra el error sin revertir una solicitud que ya fue creada o actualizada correctamente. | US14, US19 |
+| TS12 | Persistir información del dominio mediante JPA y MySQL | Como desarrollador, quiero persistir las entidades del dominio mediante Spring Data JPA y MySQL para conservar la información operativa de MaquiGest. | **Given** que se recibe una operación válida de registro, **When** la operación finaliza correctamente, **Then** la información queda almacenada en la base de datos.<br><br>**Given** que existe un registro almacenado, **When** se consulta mediante el recurso correspondiente, **Then** la API devuelve la información persistida.<br><br>**Given** que ocurre un error durante una operación de persistencia, **When** la operación no puede completarse, **Then** el sistema informa el fallo y evita comunicar un registro exitoso inexistente. | TS02, TS03, TS05, TS08, TS09 |
+| TS13 | Validar solicitudes de la API REST | Como desarrollador, quiero validar los datos recibidos por la API REST para evitar que información incompleta o inválida ingrese al dominio de MaquiGest. | **Given** que una solicitud contiene todos los datos obligatorios con valores válidos, **When** se procesa, **Then** la API permite continuar con la operación.<br><br>**Given** que una solicitud contiene datos obligatorios ausentes o inválidos, **When** se procesa, **Then** la API rechaza la solicitud e identifica los errores de validación.<br><br>**Given** que un periodo de alquiler presenta fechas incompatibles, **When** se solicita la operación, **Then** la API rechaza el periodo inválido. | TS02, TS03, TS04, TS05, TS07, TS09 |
+| TS14 | Gestionar errores y respuestas HTTP de la API REST | Como desarrollador, quiero centralizar el tratamiento de errores de la API REST para devolver respuestas consistentes ante operaciones exitosas o fallidas. | **Given** que una operación se completa correctamente, **When** la API responde, **Then** devuelve el código HTTP correspondiente y la información esperada.<br><br>**Given** que se solicita un recurso inexistente, **When** la API procesa la petición, **Then** devuelve una respuesta HTTP que representa el recurso no encontrado.<br><br>**Given** que una solicitud contiene datos inválidos, **When** la API procesa la petición, **Then** devuelve una respuesta de validación consistente.<br><br>**Given** que ocurre un error inesperado, **When** la API procesa la operación, **Then** devuelve una respuesta controlada sin exponer detalles internos sensibles. | TS01, TS02, TS03, TS04, TS05, TS06, TS07, TS08, TS09, TS10 |
+| TS15 | Documentar los recursos de la API REST mediante OpenAPI | Como desarrollador, quiero documentar los recursos, parámetros, respuestas y errores de la API REST mediante OpenAPI para facilitar su comprensión y consumo desde la Web Application. | **Given** que la API expone recursos REST, **When** se consulta su documentación, **Then** se muestran los endpoints y métodos disponibles.<br><br>**Given** que un recurso recibe parámetros o un cuerpo de solicitud, **When** se consulta su documentación, **Then** se describen los datos requeridos y sus restricciones principales.<br><br>**Given** que un recurso devuelve respuestas exitosas o errores previstos, **When** se consulta su documentación, **Then** se muestran los códigos de respuesta correspondientes. | TS01, TS02, TS03, TS04, TS05, TS06, TS07, TS08, TS09, TS10 |
+| TS16 | Integrar servicios de mapas para entregas y devoluciones | Como desarrollador, quiero integrar un servicio externo de mapas y geolocalización para apoyar la planificación de entregas y devoluciones de maquinaria. | **Given** que se dispone de una ubicación válida, **When** la aplicación solicita información geográfica al servicio externo, **Then** el sistema procesa la respuesta recibida.<br><br>**Given** que el servicio externo devuelve información válida, **When** la API procesa la respuesta, **Then** proporciona los datos necesarios para apoyar la operación de entrega o devolución.<br><br>**Given** que el servicio externo no está disponible, **When** se solicita información geográfica, **Then** el sistema gestiona el error sin exponer credenciales ni interrumpir operaciones ajenas a esa consulta. | US22, TS07 |
+| TS06 | Gestionar reservas y estados de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para gestionar solicitudes, confirmaciones, rechazos y alquileres activos para soportar el ciclo de alquiler de MaquiGest. | **Given** que existe una solicitud de alquiler, **When** un usuario autorizado confirma o rechaza la solicitud, **Then** la API actualiza su estado.<br><br>**Given** que existe un alquiler activo, **When** el cliente autorizado consulta los alquileres activos, **Then** la API devuelve la información correspondiente.<br><br>**Given** que una operación no está permitida para el estado actual de la solicitud, **When** se intenta ejecutar, **Then** la API rechaza la operación. | US18, US19, US20 |
 
 ## 3.2. Impact Mapping
 
@@ -1736,45 +1346,61 @@ And mantiene la estructura y funcionalidad de la página
 
 ## 3.3. Product Backlog
 
-El Product Backlog de MaquiGest contiene las historias de usuario identificadas para el desarrollo de la solución. Estas se presentan en orden correlativo según su identificador, desde US01 hasta US35.
+El Product Backlog contiene las User Stories y Technical Stories identificadas para el desarrollo progresivo de la solución. El orden de los elementos responde principalmente al valor para el negocio y al alcance de las primeras iteraciones del proyecto.
 
-| # Orden | User Story ID | Título | Descripción | Story Points |
-| :---: | :---: | :--- | :--- | :---: |
-| 1 | US01 | Registro de usuario | Como usuario, quiero registrarme en MaquiGest para poder acceder a las funcionalidades de la plataforma. | 5 |
-| 2 | US02 | Inicio de sesión | Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta. | 3 |
-| 3 | US03 | Gestionar perfil | Como usuario, quiero gestionar mi perfil para mantener actualizada mi información. | 3 |
-| 4 | US04 | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta. | 1 |
-| 5 | US05 | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla. | 3 |
-| 6 | US06 | Registrar maquinaria | Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en MaquiGest. | 5 |
-| 7 | US07 | Consultar maquinaria | Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados. | 3 |
-| 8 | US08 | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados. | 3 |
-| 9 | US09 | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles. | 5 |
-| 10 | US10 | Consultar estado de maquinaria | Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual. | 3 |
-| 11 | US11 | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades. | 5 |
-| 12 | US12 | Consultar información de maquinaria | Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler. | 3 |
-| 13 | US13 | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla. | 5 |
-| 14 | US14 | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | 5 |
-| 15 | US15 | Consultar planes | Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece MaquiGest. | 3 |
-| 16 | US16 | Seleccionar plan | Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades. | 3 |
-| 17 | US17 | Gestionar suscripción | Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado. | 5 |
-| 18 | US18 | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas. | 5 |
-| 19 | US19 | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse. | 3 |
-| 20 | US20 | Consultar alquileres activos | Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso. | 3 |
-| 21 | US21 | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de mi solicitud de alquiler para conocer su situación actual. | 3 |
-| 22 | US22 | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria. | 5 |
-| 23 | US23 | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria. | 5 |
-| 24 | US24 | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria. | 3 |
-| 25 | US25 | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria. | 3 |
-| 26 | US26 | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores. | 5 |
-| 27 | US27 | Consultar información de MaquiGest | Como visitante, quiero consultar información de MaquiGest para conocer la solución y su propuesta de valor. | 2 |
-| 28 | US28 | Solicitar demostración | Como visitante, quiero solicitar una demostración para conocer cómo funciona MaquiGest. | 2 |
-| 29 | US29 | Contactar con MaquiGest | Como visitante, quiero contactar con MaquiGest para realizar consultas sobre la solución. | 2 |
-| 30 | US30 | Visualizar propuesta de valor | Como visitante, quiero visualizar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa. | 2 |
-| 31 | US31 | Explorar funcionalidades principales | Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con MaquiGest. | 3 |
-| 32 | US32 | Identificar la solución para mi empresa | Como visitante, quiero identificar si MaquiGest se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades. | 3 |
-| 33 | US33 | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de MaquiGest. | 2 |
-| 34 | US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | Como usuario, quiero utilizar MaquiGest desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada. | 5 |
-| 35 | US35 | Utilizar la plataforma en diferentes idiomas | Como usuario, quiero utilizar MaquiGest en diferentes idiomas para comprender y utilizar la plataforma. | 5 |
+| # | Story ID | Tipo | Título | Descripción | Story Points |
+| :---: | :---: | :--- | :--- | :--- | :---: |
+| 1 | US30 | User Story | Visualizar propuesta de valor | Como visitante, quiero visualizar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa. | 2 |
+| 2 | US31 | User Story | Explorar funcionalidades principales | Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con MaquiGest. | 3 |
+| 3 | US32 | User Story | Identificar la solución para mi empresa | Como visitante, quiero identificar si MaquiGest se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades. | 3 |
+| 4 | US27 | User Story | Consultar información de MaquiGest | Como visitante, quiero consultar información de MaquiGest para conocer la solución y su propuesta de valor. | 2 |
+| 5 | US33 | User Story | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de MaquiGest. | 2 |
+| 6 | US28 | User Story | Solicitar demostración | Como visitante, quiero solicitar una demostración para conocer cómo funciona MaquiGest. | 2 |
+| 7 | US29 | User Story | Contactar con MaquiGest | Como visitante, quiero contactar con MaquiGest para realizar consultas sobre la solución. | 2 |
+| 8 | US34 | User Story | Utilizar la plataforma desde dispositivos de diferentes tamaños | Como usuario, quiero utilizar MaquiGest desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada. | 5 |
+| 9 | US35 | User Story | Utilizar la plataforma en diferentes idiomas | Como usuario, quiero utilizar MaquiGest en diferentes idiomas para comprender y utilizar la plataforma. | 5 |
+| 10 | US11 | User Story | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades. | 5 |
+| 11 | US12 | User Story | Consultar información de maquinaria | Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler. | 3 |
+| 12 | US13 | User Story | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla. | 5 |
+| 13 | US14 | User Story | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | 5 |
+| 14 | TS05 | Technical Story | Gestionar solicitudes de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para crear y consultar solicitudes de alquiler para permitir que las empresas constructoras soliciten maquinaria y consulten sus solicitudes. | 5 |
+| 15 | TS11 | Technical Story | Enviar notificaciones transaccionales mediante SendGrid | Como desarrollador, quiero integrar un servicio de correo transaccional para notificar eventos relevantes del ciclo de alquiler. | 5 |
+| 16 | US06 | User Story | Registrar maquinaria | Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en MaquiGest. | 5 |
+| 17 | US07 | User Story | Consultar maquinaria | Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados. | 3 |
+| 18 | US08 | User Story | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados. | 3 |
+| 19 | US09 | User Story | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles. | 5 |
+| 20 | US10 | User Story | Consultar estado de maquinaria | Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual. | 3 |
+| 21 | TS03 | Technical Story | Gestionar maquinaria mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar, consultar y actualizar maquinaria para permitir la gestión del inventario desde la Web Application. | 5 |
+| 22 | TS04 | Technical Story | Consultar disponibilidad mediante API REST | Como desarrollador, quiero disponer de un recurso REST para consultar la disponibilidad de maquinaria durante un periodo para que la Web Application pueda mostrar los equipos disponibles. | 5 |
+| 23 | US18 | User Story | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas. | 5 |
+| 24 | US19 | User Story | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse. | 3 |
+| 25 | US20 | User Story | Consultar alquileres activos | Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso. | 3 |
+| 26 | US21 | User Story | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de una solicitud de alquiler para conocer su situación actual. | 3 |
+| 27 | US22 | User Story | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria. | 5 |
+| 28 | TS06 | Technical Story | Gestionar reservas y estados de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para gestionar solicitudes, confirmaciones, rechazos y alquileres activos para soportar el ciclo de alquiler de MaquiGest. | 5 |
+| 29 | TS07 | Technical Story | Gestionar entregas y devoluciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar entregas y devoluciones de maquinaria para mantener la trazabilidad del ciclo de alquiler. | 5 |
+| 30 | TS16 | Technical Story | Integrar servicios de mapas para entregas y devoluciones | Como desarrollador, quiero integrar un servicio externo de mapas y geolocalización para apoyar la planificación de entregas y devoluciones de maquinaria. | 5 |
+| 31 | US23 | User Story | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria. | 5 |
+| 32 | US24 | User Story | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria. | 3 |
+| 33 | US25 | User Story | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria. | 3 |
+| 34 | US26 | User Story | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores. | 5 |
+| 35 | TS08 | Technical Story | Gestionar mantenimiento e incidencias mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar y consultar mantenimientos e incidencias de maquinaria para conservar su historial operativo. | 5 |
+| 36 | TS12 | Technical Story | Persistir información del dominio mediante JPA y MySQL | Como desarrollador, quiero persistir las entidades del dominio mediante Spring Data JPA y MySQL para conservar la información operativa de MaquiGest. | 5 |
+| 37 | TS13 | Technical Story | Validar solicitudes de la API REST | Como desarrollador, quiero validar los datos recibidos por la API REST para evitar que información incompleta o inválida ingrese al dominio de MaquiGest. | 3 |
+| 38 | TS14 | Technical Story | Gestionar errores y respuestas HTTP de la API REST | Como desarrollador, quiero centralizar el tratamiento de errores de la API REST para devolver respuestas consistentes ante operaciones exitosas o fallidas. | 3 |
+| 39 | US15 | User Story | Consultar planes | Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece MaquiGest. | 3 |
+| 40 | US16 | User Story | Seleccionar plan | Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades. | 3 |
+| 41 | US17 | User Story | Gestionar suscripción | Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado. | 5 |
+| 42 | TS09 | Technical Story | Consultar planes y suscripciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar los planes disponibles y gestionar la información básica de la suscripción para que la Web Application pueda mostrar y administrar estas opciones. | 5 |
+| 43 | US03 | User Story | Gestionar perfil | Como usuario, quiero gestionar mi perfil para mantener actualizada mi información. | 3 |
+| 44 | TS02 | Technical Story | Gestionar perfiles mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar y actualizar los perfiles de los usuarios para permitir que la Web Application gestione su información. | 3 |
+| 45 | TS01 | Technical Story | Exponer API REST de MaquiGest | Como desarrollador, quiero disponer de una API REST organizada para exponer los servicios de MaquiGest y permitir que la Web Application consuma las funcionalidades del dominio. | 5 |
+| 46 | TS15 | Technical Story | Documentar los recursos de la API REST mediante OpenAPI | Como desarrollador, quiero documentar los recursos, parámetros, respuestas y errores de la API REST mediante OpenAPI para facilitar su comprensión y consumo desde la Web Application. | 3 |
+| 47 | US01 | User Story | Registro de usuario | Como usuario, quiero registrarme en MaquiGest para poder acceder a las funcionalidades de la plataforma. | 5 |
+| 48 | US02 | User Story | Inicio de sesión | Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta. | 3 |
+| 49 | US04 | User Story | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta. | 1 |
+| 50 | US05 | User Story | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla. | 3 |
+| 51 | TS10 | Technical Story | Gestionar autenticación y autorización mediante API REST | Como desarrollador, quiero disponer de mecanismos REST de autenticación y autorización para proteger los recursos de MaquiGest y controlar el acceso según el tipo de usuario. | 5 |
 
 # Capítulo IV: Product Design
 
@@ -1895,10 +1521,6 @@ Para el desarrollo del proyecto, la Arquitectura de la Información se plantea c
 
 ### 4.2.1. Organization Systems
 
-La Information Architecture de MaquiGest organiza la información de forma que tanto los visitantes de la Landing Page como los usuarios de la Web Application puedan identificar con rapidez dónde se encuentra cada contenido o acción. La propuesta combina organización jerárquica, secuencial, por tópicos y por audiencia.
-
-### 4.2.1. Organization Systems
-
 En la **Landing Page**, la información se organiza principalmente de manera **jerárquica y secuencial**. El visitante comienza con la propuesta de valor en Home y continúa hacia Benefits, Features, About, Solutions, Plans, Demo y Contact. Esta secuencia acompaña el proceso de conocimiento, evaluación y conversión del visitante.
 
 En la **Web Application**, la organización es principalmente **por tópicos y por audiencia**. Después de la autenticación, la navegación se adapta al tipo de organización:
@@ -1942,16 +1564,16 @@ Los estados se comunican con etiquetas breves como `Available`, `Reserved`, `On 
 
 Los SEO Tags y Meta Tags permiten describir correctamente las principales páginas de la experiencia. En la Landing Page se conservan los valores actualmente implementados. Para la Web Application se establecen valores coherentes con su propósito operativo.
 
-| Producto | Tag | Valor |
-|---|---|---|
-| Landing Page | `title` | `MaquiGest` | Equipment rental management` |
-| Landing Page | `description` | `Manage construction equipment rentals in one place. Organize inventory, availability, reservations, rentals and maintenance with MaquiGest.` |
-| Landing Page | `keywords` | `equipment rental, construction equipment, rental management software, MaquiGest` |
-| Landing Page | `author` | `CleanCode` |
-| Web Application | `title` | `MaquiGest` | Equipment rental workspace` |
-| Web Application | `description` | `Manage equipment, rental requests, reservations, rentals and maintenance in the MaquiGest workspace.` |
-| Web Application | `keywords` | `equipment management, rental requests, reservations, rentals, maintenance, MaquiGest` |
-| Web Application | `author` | `CleanCode` |
+| Producto | Tag | Valor                                                                                                                                                                        |
+|---|---|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Landing Page | `title` | `MaquiGest` \| Equipment rental management`                                                                                                                                  |
+| Landing Page | `description` | `Manage construction equipment rentals in one place. Organize inventory, availability, reservations, rentals and maintenance with MaquiGest.`                                |
+| Landing Page | `keywords` | `equipment rental, construction equipment, rental management software, MaquiGest`                                                                                            |
+| Landing Page | `author` | `CleanCode`                                                                                                                                                                  |
+| Web Application | `title` | `MaquiGest`                                                                                                                                   \| Equipment rental workspace` |
+| Web Application | `description` | `Manage equipment, rental requests, reservations, rentals and maintenance in the MaquiGest workspace.`                                                                       |
+| Web Application | `keywords` | `equipment management, rental requests, reservations, rentals, maintenance, MaquiGest`                                                                                       |
+| Web Application | `author` | `CleanCode`                                                                                                                                                                  |
 
 Como metadatos transversales se utiliza `charset=UTF-8` y un `viewport` adaptable a dispositivos. El documento HTML actual declara `lang="en-US"`; la variante en español se gestiona mediante i18n.
 
@@ -3162,63 +2784,58 @@ Esta propuesta utiliza datos ilustrativos y representa el diseño visual de la p
 
 El User Flow Diagram de la Web Application de **MaquiGest** representa las acciones, decisiones y resultados que atraviesan los usuarios durante los principales procesos de la plataforma. A diferencia del wireflow, que se enfoca en la relación y navegación entre pantallas, el user flow incorpora puntos de decisión y validaciones que permiten comprender cómo progresa cada tarea hasta alcanzar un resultado determinado.
 
-El flujo inicia con el acceso a MaquiGest. Si el usuario ya mantiene una sesión activa, el sistema recupera dicha sesión y lo dirige al Dashboard correspondiente. En caso contrario, se presenta la pantalla de Login, desde la cual el usuario puede iniciar sesión, registrarse o iniciar el proceso de recuperación de contraseña. Durante el inicio de sesión se validan las credenciales ingresadas; si son correctas, se crea una sesión activa y se continúa hacia la aplicación, mientras que, si son incorrectas, se muestra un mensaje de error y el usuario permanece en la pantalla de acceso.
 
-Cuando el usuario todavía no posee una cuenta, el flujo conduce hacia el proceso de registro, donde completa la información requerida, selecciona el tipo de empresa y crea su cuenta. Una vez completado correctamente el registro, el sistema confirma la operación y permite regresar al Login. De forma similar, el flujo de recuperación de contraseña solicita el correo electrónico registrado, envía las instrucciones correspondientes y posteriormente permite volver a la pantalla de inicio de sesión.
+#### Authentication and Registration User Flow
 
-Después de la autenticación, el flujo se divide según el tipo de organización registrada en MaquiGest. Esta decisión permite ofrecer funcionalidades y recorridos diferentes para las **empresas de alquiler de maquinaria** y las **pequeñas empresas constructoras**, manteniendo una experiencia adaptada a las necesidades de cada segmento.
+El Authentication and Registration User Flow representa el proceso transversal mediante el cual una persona obtiene acceso a MaquiGest, independientemente del tipo de empresa a la que pertenece. El flujo contempla tanto el ingreso de usuarios existentes como la creación de nuevas cuentas, la recuperación de credenciales y la validación de las condiciones necesarias para acceder al workspace correspondiente.
 
-#### Flujo de la empresa de alquiler de maquinaria
+El recorrido comienza cuando el usuario abre la plataforma y el sistema comprueba si existe una sesión activa. En caso contrario, se presenta la pantalla de inicio de sesión, desde la cual el usuario puede autenticarse, registrarse o iniciar el proceso de recuperación de contraseña. Cuando las credenciales son válidas, el sistema identifica el tipo de compañía y redirige al usuario hacia el entorno que le corresponde.
 
-La empresa de alquiler accede a un Dashboard orientado al control de sus operaciones. Desde la navegación principal puede gestionar las siguientes áreas:
+Durante el registro se distingue entre los dos segmentos atendidos por MaquiGest: empresas de alquiler de maquinaria y empresas constructoras o contratistas. Las empresas constructoras pueden activar su cuenta directamente, mientras que las empresas de alquiler deben seleccionar un plan de suscripción y completar el proceso de pago antes de habilitar el acceso a las funcionalidades de la plataforma.
 
-- **Equipment:** permite consultar el inventario, registrar nueva maquinaria, actualizar información, revisar disponibilidad y acceder al detalle de cada equipo.
-- **Rental Requests:** permite revisar las solicitudes recibidas y decidir si una solicitud debe aprobarse o rechazarse. Una solicitud aprobada puede generar una reserva.
-- **Reservations:** permite consultar las reservas confirmadas, revisar sus detalles, administrar su estado y cancelar una reserva cuando corresponda.
-- **Rentals:** permite consultar alquileres activos, registrar la entrega de la maquinaria, actualizar su estado, registrar la devolución y cerrar el alquiler.
-- **Maintenance:** permite consultar el estado de los equipos, registrar mantenimientos, actualizar su progreso y volver a marcar una maquinaria como disponible cuando corresponda.
-- **Plan & Subscription:** permite visualizar los planes disponibles, seleccionar un plan, registrar la información necesaria para la suscripción y activar el servicio.
-- **Profile:** permite consultar y actualizar la información de la cuenta y de la empresa, además de gestionar preferencias y credenciales.
+Asimismo, el flujo contempla escenarios alternativos como credenciales incorrectas, pagos no completados, suscripciones inactivas y recuperación de contraseña mediante correo electrónico. De esta manera, el diagrama no representa únicamente el camino exitoso, sino también las principales situaciones que pueden presentarse durante el acceso.
 
-Dentro de este recorrido, uno de los principales puntos de decisión ocurre durante la revisión de una solicitud de alquiler. Si la empresa decide rechazarla, el sistema registra el nuevo estado y finaliza dicho proceso. Si la solicitud es aprobada, se genera una reserva que posteriormente puede continuar hacia el proceso de alquiler.
+En conjunto, este User Flow permite visualizar cómo MaquiGest controla la autenticación, creación de cuentas, diferenciación de segmentos, activación de suscripciones y acceso al workspace adecuado, constituyendo el punto de entrada común para los demás flujos funcionales del sistema.
 
-#### Flujo de la empresa constructora
+<img src = "assets/md-images-chapter4/user-flow-diagrams/UserFlow_Authentication.png" width = "800px">
 
-La empresa constructora accede a un Dashboard orientado al seguimiento de sus solicitudes y alquileres. Desde esta interfaz puede realizar los siguientes procesos:
+#### Rental Company Core Domain User Flow
 
-- **Search Equipment:** permite buscar maquinaria y aplicar filtros según las necesidades del proyecto.
-- **Equipment Detail:** permite consultar las características, condiciones y disponibilidad del equipo seleccionado.
-- **My Requests:** permite realizar seguimiento al estado de las solicitudes enviadas y consultar si fueron aprobadas, rechazadas o permanecen pendientes.
-- **My Reservations:** permite consultar las reservas confirmadas y revisar sus principales datos.
-- **My Rentals:** permite realizar seguimiento de los alquileres activos, sus fechas y los procesos relacionados con la entrega y devolución.
-- **Profile:** permite consultar y actualizar la información de la cuenta y de la organización.
+El Rental Company Core Domain User Flow representa las principales operaciones que realiza una empresa de alquiler de maquinaria dentro de MaquiGest una vez que ha obtenido acceso a su workspace. El flujo se concentra en las actividades directamente relacionadas con la administración de maquinaria y con el ciclo completo de atención de un alquiler.
 
-Durante el proceso de búsqueda se verifica la disponibilidad del equipo para el período requerido. Si la maquinaria no está disponible, el usuario puede modificar las fechas o regresar a la búsqueda para seleccionar otra alternativa. Si se encuentra disponible, puede continuar con la solicitud de alquiler y posteriormente realizar su seguimiento desde My Requests.
+El recorrido parte desde el Rental Company Dashboard, desde donde el usuario puede acceder a los módulos de Equipment, Rental Requests, Reservations, Rentals y Maintenance. Estos módulos representan las capacidades principales que permiten controlar la disponibilidad y utilización de la maquinaria.
 
-Finalmente, ambos recorridos convergen en la acción **Sign out**, mediante la cual se cierra la sesión activa y finaliza el recorrido dentro de la Web Application.
+En Equipment, la empresa administra su inventario mediante el registro de nuevos equipos, la actualización de información y la consulta de detalles. Esta información constituye la base para que la maquinaria pueda ser posteriormente encontrada y solicitada por empresas constructoras.
 
-#### General User Flow of MaquiGest Web Application
+En Rental Requests, la empresa revisa las solicitudes recibidas. Cada solicitud puede ser aprobada o rechazada. Cuando se aprueba, la empresa constructora es notificada y se genera una reserva asociada al equipo y al período solicitado. Si se rechaza, se registra el motivo correspondiente y se comunica la decisión al solicitante.
 
-**Purpose:** Representar las principales acciones, decisiones y recorridos que realizan los usuarios de MaquiGest desde la autenticación hasta la ejecución de los procesos principales correspondientes a cada segmento.
+El módulo Reservations permite administrar las asignaciones ya confirmadas. Una reserva puede consultarse, cancelarse o continuar hacia el registro de un alquiler. Esto establece una separación entre la intención inicialmente aprobada y la operación de alquiler que posteriormente será ejecutada.
 
-**Key elements:**
+En Rentals, la empresa administra las etapas operativas del servicio. El proveedor registra la entrega del equipo y posteriormente espera la confirmación de recepción por parte de la empresa constructora antes de considerar que la maquinaria se encuentra efectivamente en alquiler. Al finalizar el período, la constructora inicia la devolución y la empresa de alquiler revisa el retorno, inspecciona el equipo y confirma su recepción antes de completar el alquiler.
 
-- Acceso, registro y recuperación de contraseña.
-- Validación de sesión y credenciales.
-- Selección y reconocimiento del tipo de empresa.
-- Flujo operativo para empresas de alquiler de maquinaria.
-- Flujo de búsqueda y solicitud para empresas constructoras.
-- Puntos de decisión durante la aprobación de solicitudes y la disponibilidad de maquinaria.
-- Gestión de perfil y suscripción.
-- Cierre de sesión como finalización del recorrido.
+Finalmente, el módulo Maintenance permite programar mantenimientos, actualizar su estado y devolver un equipo a disponibilidad cuando nuevamente se encuentre en condiciones de ser alquilado.
 
-<p align="center">
-  <img src="./assets/images/chapter-4/webapp-general-user-flow.png"
-       alt="General User Flow Diagram of the MaquiGest Web Application"
-       width="100%">
-</p>
+Por ello, este User Flow representa el núcleo operativo de MaquiGest para las empresas proveedoras, ya que integra la administración del inventario con la recepción de solicitudes, confirmación de reservas, ejecución de alquileres, entregas, devoluciones y mantenimiento de los equipos.
 
-En conjunto, el User Flow Diagram permite verificar que las acciones y decisiones de los usuarios mantienen coherencia con las interfaces definidas en los wireframes y mock-ups, y proporciona una base para establecer posteriormente las interacciones del prototipo de la Web Application.
+<img src = "assets/md-images-chapter4/user-flow-diagrams/UserFlow_Rental_Company.png" width = "800px">
+
+#### Construction Company Core Domain User Flow
+
+El Construction Company Core Domain User Flow representa el recorrido principal de una pequeña empresa constructora o contratista que utiliza MaquiGest para encontrar maquinaria, solicitar su alquiler y realizar seguimiento a las operaciones asociadas.
+
+El flujo comienza desde el Construction Company Dashboard, desde donde el usuario puede acceder principalmente a Search Equipment, My Requests, My Reservations y My Rentals. A diferencia de la empresa de alquiler, este segmento no administra inventario propio dentro del sistema, sino que utiliza MaquiGest como medio para encontrar y contratar maquinaria ofrecida por proveedores.
+
+En Search Equipment, la empresa constructora explora el catálogo de maquinaria disponible, puede aplicar filtros según categoría, ubicación, disponibilidad u otras características, y acceder al detalle de un equipo. Desde esta vista puede seleccionar el período requerido y comprobar si la maquinaria se encuentra disponible para dichas fechas. Cuando la disponibilidad es favorable, puede generar una solicitud de alquiler.
+
+Las solicitudes realizadas pasan a My Requests, donde la constructora puede consultar su estado. Una solicitud puede encontrarse pendiente mientras espera la respuesta del proveedor, ser aprobada para continuar con el proceso o ser rechazada. Mientras corresponda, el usuario también puede cancelar solicitudes que todavía no hayan avanzado a etapas posteriores.
+
+Una vez confirmada la asignación del equipo, la operación pasa a My Reservations. Desde este módulo la empresa consulta las reservas vigentes, los equipos involucrados, los proveedores y los períodos confirmados. También puede cancelar una reserva cuando ya no requiera la maquinaria, notificando al proveedor y liberando el período previamente reservado.
+
+Posteriormente, cuando la reserva se convierte en alquiler, la operación aparece en My Rentals. Desde allí la constructora puede consultar la maquinaria que se encuentra en uso, revisar las fechas de devolución y realizar las acciones que le corresponden dentro de la operación. Cuando el proveedor registra una entrega, la constructora confirma que recibió el equipo. Al finalizar el uso de la maquinaria, la constructora inicia el proceso de devolución, quedando la confirmación final y la inspección en manos de la empresa de alquiler.
+
+En conjunto, este User Flow representa el journey principal de la empresa constructora dentro de MaquiGest, desde la búsqueda de una necesidad de maquinaria hasta la solicitud, reserva, recepción, uso y devolución del equipo. De esta manera, complementa el flujo de la empresa de alquiler y muestra cómo ambos segmentos interactúan dentro del mismo ciclo de negocio.
+
+<img src = "assets/md-images-chapter4/user-flow-diagrams/UserFlow_Construction_Company.png" width = "800px">
 
 ## 4.5. Web Applications Prototyping
 
@@ -3668,11 +3285,7 @@ CompanyProfile guarda los datos de la empresa y compone un value object Address 
 
 ### 4.8.1. Database Diagrams
 
-El modelo de datos traduce las entidades de cada bounded context a tablas relacionales, conservando la separación por contexto: cada grupo de tablas pertenece a un único contexto y las referencias entre contextos se resuelven por identificador (equipment_id, company_profile_id, contract_id), nunca por tablas compartidas. Los value objects se aplanan en columnas de la entidad que los contiene (Address dentro de company_profiles, RentalRate dentro de equipments, RentalPeriod como start_date/end_date). Los estados se almacenan como cadenas cortas que corresponden a las enumeraciones del diseño de clases. El DBMS es MySQL, gestionado desde la API mediante Entity Framework Core y sus migraciones. Las columnas marcadas con asterisco son obligatorias.
-
 ![Database Diagram — Subscription](./assets/md-images-chapter4/database-diagram.png)
-
-# Capítulo V: Product Implementation, Validation & Deployment
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
@@ -4020,89 +3633,74 @@ El alcance funcional del Sprint se encuentra relacionado principalmente con el E
 
 Para el control de versiones se utilizaron Git y GitHub aplicando GitFlow y Conventional Commits. Al finalizar el Sprint se generó la primera versión estable del Landing Page, identificada mediante el tag `v1.0.0` y publicada mediante Netlify.
 
+
 #### 5.2.1.1. Sprint Planning 1
 
-El Sprint Planning 1 permitió establecer el alcance de la primera iteración de implementación de MaquiGest, seleccionar las User Stories relacionadas con el Landing Page y organizar las actividades necesarias para desarrollar y desplegar una primera versión funcional del producto.
+El Sprint Planning 1 permitió definir el alcance de la primera iteración del proyecto MaquiGest, orientada a implementar y desplegar la primera versión funcional del Landing Page. Durante este Sprint, el equipo priorizó la comunicación de la propuesta de valor del producto, la presentación de sus principales funcionalidades, beneficios, soluciones y planes, así como la implementación de mecanismos de contacto, solicitud de demostración, navegación responsive e internacionalización.
 
-A continuación, se presenta el resumen correspondiente al Sprint Planning Meeting:
+A continuación, se presenta la tabla resumen del Sprint Planning 1:
 
-| Campo | Descripción |
-| --- | --- |
-| **Sprint #** | Sprint 1 |
-| **Sprint Planning Background** | Primera iteración orientada a la implementación, integración y despliegue de la primera versión funcional del Landing Page de MaquiGest. |
-| **Date** | Pendiente de confirmar |
-| **Time** | Pendiente de confirmar |
-| **Location** | Pendiente de confirmar |
-| **Prepared By** | Pendiente de confirmar |
-| **Attendees (to planning meeting)** | Daga Chávez, Joaquín Leonardo / Delgado Perez, James Caleb / Manosalva Tovar, Miroslav Oscar / Montalvo Vasquez, Bruno Rodrigo / Paredes Chávez, Carlos Augusto |
-| **Sprint n - 1 Review Summary** | Not applicable. Sprint 1 corresponde a la primera iteración del proyecto, por lo que no existe un Sprint anterior que revisar. |
-| **Sprint n - 1 Retrospective Summary** | Not applicable. Sprint 1 corresponde a la primera iteración del proyecto, por lo que no existe una retrospectiva correspondiente a un Sprint anterior. |
-| **Sprint Goal & User Stories** | `EP07 - Información y contratación del servicio` / `US27 - Consultar información de MaquiGest` / `US28 - Solicitar demostración` / `US29 - Contactar con MaquiGest` |
-| **Sprint 1 Goal** | Nuestro enfoque se centra en disponer de una primera versión funcional y desplegada del Landing Page de MaquiGest que permita a los visitantes comprender la propuesta de valor, los beneficios, las funcionalidades, las soluciones para los segmentos objetivo y los planes del producto. Creemos que esto brindará a las empresas interesadas una forma clara de evaluar la propuesta y comunicarse con CleanCode. Esto se confirmará cuando la versión publicada permita navegar por las principales secciones del Landing Page, consultar la información del producto y utilizar los formularios de solicitud de demostración y contacto mediante una experiencia responsive. |
-| **Sprint 1 Velocity** | Pendiente de definir a partir de los Story Points establecidos para las User Stories seleccionadas. |
-| **Sum of Story Points** | Pendiente de completar a partir del Product Backlog. |
+| Campo                   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|:------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Sprint #**            | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                         | **Sprint Planning Background**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Date**                | 2026-09-5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Time**                | 17:00                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Location**            | Reunión virtual(Discord)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Prepared By**         | Delgado Perez, James Caleb                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Attendees**           | Daga Chávez, Joaquín Leonardo / Delgado Perez, James Caleb / Manosalva Tovar, Miroslav Oscar / Montalvo Vasquez, Bruno Rodrigo / Paredes Chávez, Carlos Augusto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                         | **Sprint Goal & User Stories**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Sprint 1 Goal**       | Nuestro enfoque se centra en presentar la propuesta de valor de MaquiGest mediante una primera versión funcional y desplegada del Landing Page, permitiendo que los visitantes conozcan las principales funcionalidades, beneficios, soluciones y planes ofrecidos por la plataforma, puedan solicitar una demostración o contactar al equipo, y naveguen correctamente desde diferentes dispositivos y en los idiomas disponibles. Creemos que esto permitirá comunicar de manera clara el valor de MaquiGest a las empresas objetivo. Esto se confirmará cuando los visitantes puedan identificar la propuesta de valor, explorar las principales secciones, consultar los planes, utilizar los formularios disponibles, cambiar el idioma y navegar por el Landing Page sin pérdida de información.               |
+| **Sprint 1 Velocity**   | 10 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Sum of Story Points** | 10 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
-Durante el Sprint 1 se identificaron los principales aspectos funcionales y técnicos requeridos para implementar la primera versión del Landing Page.
+Durante el Sprint 1, el equipo organizó el trabajo mediante una distribución de líderes y colaboradores de acuerdo con los principales aspectos necesarios para implementar y entregar la primera versión del Landing Page de MaquiGest.
 
-Con el objetivo de organizar las responsabilidades del equipo se utiliza una Leadership-and-Collaboration Matrix (LACX). En esta matriz, `L` identifica al integrante que asumió el liderazgo de un aspecto del Sprint, mientras que `C` identifica a los integrantes que colaboraron en dicho aspecto.
+Los aspectos considerados fueron el desarrollo del Landing Page, que comprendió la implementación de las secciones y funcionalidades asociadas con la propuesta de valor, beneficios, funcionalidades, soluciones, planes, formularios, responsive design e internacionalización; la documentación del proyecto y de las evidencias del Sprint; y el despliegue y publicación de la primera versión estable del producto.
 
-Los aspectos establecidos mantienen relación con las actividades registradas posteriormente en el Sprint Backlog y con las contribuciones realizadas en el repositorio del Landing Page.
+La letra **L** identifica al integrante responsable principal de cada aspecto, mientras que la letra **C** identifica a los miembros que participaron como colaboradores en su implementación, revisión o documentación.
 
-| Team Member (Last Name, First Name) | GitHub Username | Project Setup & Navigation | Informational Sections | Conversion Forms | Visual Assets & Footer | Deployment |
-| --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Delgado Perez, James Caleb | `JAmsy06` | L | C |  |  | L |
-| Montalvo Vasquez, Bruno Rodrigo | `TartaroZ` | C | L | L |  |  |
-| Manosalva Tovar, Miroslav Oscar | `Miroa123` |  |  | C | L |  |
-| Daga Chávez, Joaquín Leonardo | `Eshnikeee` | C |  |  | C | C |
-| Paredes Chávez, Carlos Augusto | `CarlosUPC` |  |  |  |  | C |
-
-**Leyenda:**
-
-- `L`: Leader.
-- `C`: Collaborator.
-
-James Caleb Delgado Perez lideró la preparación de la estructura principal del proyecto y las actividades relacionadas con el despliegue, además de participar en la implementación de diferentes secciones informativas. Bruno Rodrigo Montalvo Vasquez lideró la implementación de diferentes secciones informativas y elementos de conversión, además de colaborar en la navegación. Miroslav Oscar Manosalva Tovar participó en los mecanismos de contacto y lideró las actividades asociadas con el Footer y recursos visuales. Joaquín Leonardo Daga Chávez colaboró en la preparación del proyecto, integración de recursos y configuración del despliegue. Carlos Augusto Paredes Chávez colaboró en las correcciones realizadas sobre la configuración de despliegue.
+| Team Member (Last Name, First Name) | GitHub Username | Landing Page Development | Report & Sprint Documentation | Deployment & Release |
+| :--- | :--- | :---: | :---: | :---: |
+| Delgado Perez, James Caleb | JAmsy06 | **L** | **L** | **L** |
+| Montalvo Vasquez, Bruno Rodrigo | TartaroZ | C | C | C |
+| Manosalva Tovar, Miroslav Oscar | Miroa123 | C | C | C |
+| Daga Chávez, Joaquín Leonardo | Eshnikeee | C | C | C |
+| Paredes Chávez, Carlos Augusto | CarlossUPC | C | C | C |
 
 #### 5.2.1.3. Sprint Backlog 1
 
-El Sprint Backlog 1 reúne las User Stories seleccionadas para alcanzar el Sprint Goal y los Work-Items/Tasks derivados de su descomposición.
+El Sprint Backlog 1 reúne los Work-items definidos para implementar la primera versión funcional del Landing Page de MaquiGest. Las tareas se derivan de las User Stories seleccionadas para el Sprint 1 y abarcan la presentación de la propuesta de valor, funcionalidades, soluciones, planes, solicitud de demostración, contacto, responsive design e internacionalización.
 
-Para este Sprint se seleccionaron las User Stories `US27`, `US28` y `US29`, pertenecientes al Epic `EP07 - Información y contratación del servicio`. También se consideran Technical Tasks necesarias para preparar el proyecto y realizar el despliegue del Landing Page.
-
-Como herramienta para gestionar y visualizar el Sprint Backlog se utiliza Trello. El Board organiza las tareas utilizando los estados `To-do`, `In-Process`, `To-Review` y `Done`.
-
-**Sprint Backlog 1 - Trello Board:**  
-[Trello](https://trello.com/invite/b/6aae122df20cec3612b47569/ATTI06c8d708807538ede9c79fd09c1cf6974064CD0D/sprint-backlog-1-maquigest)
-
+A continuación, se presenta el Sprint Backlog correspondiente al Sprint 1:
 
 <p align="center">
-  <img src="assets/md-images-chapter5/trello-sprint-backlog.PNG"
-       alt="MaquiGest Sprint Backlog 1 - Trello Board"
-       width="90%">
+  <img src="./assets/images/chapter-5/sprint-1-backlog-board.jpeg"
+       alt="MaquiGest Sprint 1 Backlog Board"
+       width="95%">
 </p>
 
 | Sprint # | Sprint 1 |
-| --- | --- |
+| :--- | :--- |
 
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
-| --- | --- | --- | --- | --- | ---: | --- | --- |
-| US27 | Consultar información de MaquiGest | TS01 | Prepare Landing Page base | Crear la estructura inicial del Landing Page utilizando HTML5, CSS3 y JavaScript. | Pendiente | James Caleb Delgado Perez | Done |
-| US27 | Consultar información de MaquiGest | TS02 | Implement Header and language switching | Implementar el Header, la navegación principal y el comportamiento de cambio de idioma. | Pendiente | James Caleb Delgado Perez / Bruno Rodrigo Montalvo Vasquez | Done |
-| US27 | Consultar información de MaquiGest | TS03 | Implement Home section | Implementar la propuesta de valor principal y los Call To Action del Landing Page. | Pendiente | James Caleb Delgado Perez | Done |
-| US27 | Consultar información de MaquiGest | TS04 | Implement Benefits section | Implementar la sección destinada a comunicar los principales beneficios de MaquiGest. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
-| US27 | Consultar información de MaquiGest | TS05 | Implement Features section | Implementar las cards destinadas a presentar las principales funcionalidades ofrecidas por MaquiGest. | Pendiente | James Caleb Delgado Perez | Done |
-| US27 | Consultar información de MaquiGest | TS06 | Implement About section | Implementar la información correspondiente a misión, visión y valores de CleanCode y MaquiGest. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
-| US27 | Consultar información de MaquiGest | TS07 | Implement Solutions section | Implementar las soluciones diferenciadas para empresas de alquiler de maquinaria y empresas constructoras. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
-| US27 | Consultar información de MaquiGest | TS08 | Implement Plans section | Implementar la presentación y comparación de los planes Essential, Professional y Growth. | Pendiente | James Caleb Delgado Perez | Done |
-| US27 | Consultar información de MaquiGest | TS09 | Integrate visual assets | Incorporar las imágenes, logotipos y demás recursos visuales requeridos por el Landing Page. | Pendiente | Joaquín Leonardo Daga Chávez | Done |
-| US27 | Consultar información de MaquiGest | TS10 | Implement Footer and Terms page | Implementar el Footer y la primera versión de Terms and Conditions. | Pendiente | Miroslav Oscar Manosalva Tovar | Done |
-| US28 | Solicitar demostración | TS11 | Implement Demo Request form | Implementar el formulario utilizado para solicitar una demostración y seleccionar un plan. | Pendiente | Bruno Rodrigo Montalvo Vasquez | Done |
-| US29 | Contactar con MaquiGest | TS12 | Implement Contact form | Implementar el formulario mediante el cual los potenciales clientes pueden realizar consultas al equipo. | Pendiente | Miroslav Oscar Manosalva Tovar | Done |
-| - | Technical Task | TS13 | Configure Netlify deployment | Configurar Netlify para permitir el despliegue y publicación del Landing Page. | Pendiente | James Caleb Delgado Perez | Done |
-| - | Technical Task | TS14 | Fix Netlify configuration | Realizar los ajustes necesarios sobre la configuración de Netlify para completar correctamente el despliegue. | Pendiente | Joaquín Leonardo Daga Chávez / Carlos Augusto Paredes Chávez | Done |
-| - | Technical Task | TS15 | Final deployment verification | Verificar la correcta publicación de la versión estable `v1.0.0` del Landing Page. | Pendiente | James Caleb Delgado Perez | Done |
+| :---: | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
+| US30 | Visualizar propuesta de valor | TS01 | Implement Home section | Implementar la sección principal del Landing Page con la propuesta de valor, descripción general de MaquiGest y sus principales Call-to-Action. | 4 hrs | Delgado Perez, James Caleb | Done |
+| US31 | Explorar funcionalidades principales | TS02 | Implement Benefits section | Implementar la sección de beneficios para comunicar el valor que MaquiGest ofrece a sus segmentos objetivo. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US31 | Explorar funcionalidades principales | TS03 | Implement Features section | Implementar la sección que presenta las principales funcionalidades ofrecidas por MaquiGest. | 4 hrs | Delgado Perez, James Caleb | Done |
+| US27 | Consultar información de MaquiGest | TS04 | Implement About Us section | Implementar la sección informativa sobre CleanCode y MaquiGest, incluyendo misión, visión y valores. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US32 | Identificar la solución para mi empresa | TS05 | Implement Solutions section | Implementar las soluciones diferenciadas para empresas de alquiler de maquinaria y empresas constructoras. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US15 | Visualizar planes disponibles | TS06 | Implement Plans section | Implementar la sección de planes mostrando las alternativas disponibles, sus características y precios. | 4 hrs | Delgado Perez, James Caleb | Done |
+| US28 | Solicitar demostración | TS07 | Implement Request Demo section | Implementar el formulario mediante el cual un potencial cliente puede solicitar una demostración de MaquiGest. | 4 hrs | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US29 | Contactar con MaquiGest | TS08 | Implement Contact section | Implementar el formulario de contacto para permitir que los visitantes realicen consultas al equipo de MaquiGest. | 4 hrs | Manosalva Tovar, Miroslav Oscar | Done |
+| US27 | Consultar información de MaquiGest | TS09 | Implement Footer | Implementar el footer con información complementaria, navegación y enlaces correspondientes al Landing Page. | 4 hrs | Manosalva Tovar, Miroslav Oscar | Done |
+| US34 | Consultar el Landing Page en diferentes dispositivos | TS10 | Implement responsive layout | Adaptar la estructura, navegación, cards, formularios y contenido del Landing Page para diferentes resoluciones de pantalla. | 4 hrs | Daga Chávez, Joaquín Leonardo | Done |
+| US35 | Cambiar el idioma del Landing Page | TS11 | Implement language switching | Implementar el cambio de idioma del Landing Page manteniendo la estructura, navegación y funcionalidades disponibles. | 4 hrs | Delgado Perez, James Caleb | Done |
+
+**Sprint Backlog URL:** https://trello.com/invite/b/6aae122df20cec3612b47569/ATTI06c8d708807538ede9c79fd09c1cf6974064CD0D/sprint-backlog-1-maquigest
+
 
 #### 5.2.1.4. Development Evidence for Sprint Review
 
@@ -4266,7 +3864,7 @@ Las evidencias presentadas permiten comprobar que las principales secciones defi
 Como evidencia complementaria de ejecución se presentará un video en el que se demuestra la navegación por las principales secciones del Landing Page de MaquiGest y el comportamiento de los elementos interactivos implementados durante el Sprint.
 
 **Product Navigation Video:**  
-`[PENDIENTE: insertar URL del video de navegación]`
+Link:  [Execution evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQB0uUoEIdV6QLDgc4fXoOq0ATW99dVOedmBYAoBwVk7ltY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ndbK1p)
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
@@ -4374,7 +3972,7 @@ Las siguientes evidencias muestran las estadísticas individuales registradas po
 </p>
 
 <p align="center">
-  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-contributors-02.png"
+  <img src="./assets/images/chapter-5/sprint-1-collaboration-evidence-contributors-02(1).png"
        alt="MaquiGest Sprint 1 Collaboration Evidence - GitHub Contributor Carlos"
        width="55%">
 </p>
@@ -4405,6 +4003,82 @@ Asimismo, la participación registrada es consistente con la Leadership-and-Coll
 
 ## Conclusiones y recomendaciones
 
+Durante el desarrollo del AV1 se logró consolidar la propuesta inicial de MaquiGest como una solución SaaS orientada a apoyar la gestión del alquiler de maquinaria y equipos para construcción. A partir del análisis del problema, los segmentos objetivo, los requisitos identificados y los artefactos de UX elaborados, se estableció una primera definición coherente del alcance funcional del producto y de los procesos principales que deberán ser soportados por la solución.
+
+La elaboración de las User Stories permitió organizar las necesidades identificadas en funcionalidades relacionadas con gestión de usuarios, maquinaria, alquileres, mantenimiento, suscripciones y experiencia web. Asimismo, las nuevas User Stories orientadas específicamente al Landing Page permitieron establecer una mayor trazabilidad entre los requisitos del producto, el Sprint Backlog y la implementación realizada durante el Sprint 1.
+
+En relación con Product Design, se definieron las principales decisiones visuales, de arquitectura de información y experiencia de usuario para el Landing Page y la futura Web Application. Los wireframes, mock-ups y demás artefactos elaborados permitieron establecer una representación progresiva de la experiencia propuesta para empresas de alquiler de maquinaria y empresas constructoras.
+
+A nivel de arquitectura de software, se estableció una propuesta basada en Domain-Driven Design y C4 Model. La solución fue organizada mediante los bounded contexts IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions, complementados por componentes compartidos. Los diagramas de Context, Container y Components permiten representar progresivamente la estructura de MaquiGest, las responsabilidades de cada elemento y las tecnologías consideradas para su futura implementación.
+
+Durante el Sprint 1 se implementó y desplegó la primera versión funcional del Landing Page de MaquiGest utilizando HTML5, CSS3 y JavaScript. La solución permite comunicar la propuesta de valor, presentar beneficios, funcionalidades, soluciones y planes, además de ofrecer mecanismos de solicitud de demostración y contacto. Asimismo, se incorporaron características responsive e internacionalización, y la versión desarrollada fue desplegada mediante Netlify.
+
+Como resultado del Sprint 1, el equipo también consolidó un flujo de trabajo colaborativo mediante Git y GitHub, aplicando GitFlow, Conventional Commits y versionamiento semántico. Las evidencias de desarrollo, despliegue y colaboración permiten mantener trazabilidad sobre los aportes realizados por los integrantes y sobre la evolución del producto durante esta primera iteración.
+
+Como recomendación para los siguientes Sprints, se deberá mantener la trazabilidad entre Product Backlog, Sprint Backlog, Tasks y commits, evitando inconsistencias entre los requisitos documentados y las funcionalidades implementadas. Asimismo, será necesario continuar evolucionando el Landing Page e integrar sus Call-to-Action con la primera versión funcional de la Web Application.
+
+También se recomienda mantener la arquitectura definida como referencia durante la implementación, procurando que la organización del código respete los bounded contexts y las responsabilidades establecidas para las capas Presentation, Application, Domain e Infrastructure. Finalmente, deberán continuar considerándose desde las siguientes iteraciones aspectos de accessibility, internationalization, responsive design, pruebas, documentación y despliegue para asegurar una evolución consistente de MaquiGest.
+
 # Bibliografía
 
+Angular. (s. f.). *Angular coding style guide*. https://angular.dev/style-guide
+
+C4 Model. (s. f.). *The C4 model for visualising software architecture*. https://c4model.com/
+
+Driessen, V. (2010). *A successful Git branching model*. https://nvie.com/posts/a-successful-git-branching-model/
+
+Figma. (s. f.). *Figma: The collaborative interface design tool*. https://www.figma.com/
+
+Google. (s. f.). *Google HTML/CSS Style Guide*. https://google.github.io/styleguide/htmlcssguide.html
+
+Google. (s. f.). *Google Java Style Guide*. https://google.github.io/styleguide/javaguide.html
+
+Google. (s. f.). *Google TypeScript Style Guide*. https://google.github.io/styleguide/tsguide.html
+
+Material Design. (s. f.). *Material Design*. https://m3.material.io/
+
+Netlify. (s. f.). *Netlify documentation*. https://docs.netlify.com/
+
+OpenAPI Initiative. (s. f.). *OpenAPI Specification*. https://spec.openapis.org/oas/latest.html
+
+PlantUML. (s. f.). *PlantUML documentation*. https://plantuml.com/
+
+Semantic Versioning. (s. f.). *Semantic Versioning 2.0.0*. https://semver.org/
+
+Spring. (s. f.). *Spring Boot reference documentation*. https://docs.spring.io/spring-boot/
+
+The Conventional Commits Contributors. (s. f.). *Conventional Commits*. https://www.conventionalcommits.org/
+
+W3C. (s. f.). *HTML5*. https://www.w3.org/TR/html5/
+
 # Anexos
+
+## Anexo A. Videos de Exposiciones
+
+En este anexo se registran progresivamente los videos correspondientes a las exposiciones realizadas durante las diferentes entregas del proyecto MaquiGest.
+
+| Entrega | Características del video                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Sobre el contenido | Integración y entrega |
+|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|-----------------------|
+| **AV1** | **Cantidad:** 1 video<br>**Enlace:** [Ver video AV1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQCYkWdlaHE1R4b1jMaRqSokAVYThGIeFB26oMbKBvlVoSU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HlscHY)<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-expo-av1`<br>**Formato:** `.mp4`<br>**Duración:** 10:56 | Video de exposición grupal correspondiente al AV1 de MaquiGest. Presenta el avance integral del proyecto hasta el Sprint 1, incluyendo Startup Profile, Solution Profile, segmentos objetivo, Requirements Elicitation & Analysis, Needfinding, User Stories, Product Backlog, Product Design, arquitectura de software, diseño e implementación de la Landing Page y las evidencias correspondientes al Sprint 1. | El video se publica en la plataforma indicada por el docente y constituye evidencia de la presentación del AV1. El material permite sustentar los artefactos desarrollados, la participación de los integrantes del equipo y los principales avances alcanzados durante el Sprint 1. |
+
+## Anexo B. Enlaces del proyecto
+
+En este anexo se consolidan los principales recursos digitales utilizados para el desarrollo, documentación, diseño, planificación y despliegue del proyecto MaquiGest durante el AV1.
+
+| Recurso | Descripción | Enlace                                                                                                                                                                                                                                                                                                       |
+|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Project Report** | Repositorio principal utilizado para la elaboración colaborativa, documentación y versionamiento del informe del proyecto MaquiGest. | [Ver Project Report](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-report)                                                                                                                                                                                                             |
+| **Landing Page Repository** | Repositorio que contiene el código fuente de la primera versión del Landing Page de MaquiGest. | [Ver Landing Page Repository](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-website)                                                                                                                                                                                                   |
+| **Landing Page Deployment** | Versión desplegada de la Landing Page correspondiente al Sprint 1. | [Ver Website](https://maquigest-cleancode.netlify.app/)                                                                                                                                                                                                                                                      |
+| **Sprint Backlog 1** | Tablero de Trello utilizado para organizar y realizar seguimiento de las User Stories, Work-items y Tasks correspondientes al Sprint 1. | [Ver Sprint Backlog 1](https://trello.com/invite/b/6aae122df20cec3612b47569/ATTI06c8d708807538ede9c79fd09c1cf6974064CD0D/sprint-backlog-1-maquigest)                                                                                                                                                         |
+| **UX/UI Design** | Archivo de Figma utilizado para la elaboración de wireframes, mock-ups y demás artefactos de diseño correspondientes al Landing Page y a la Web Application de MaquiGest. | [Ver UX/UI Design](https://www.figma.com/design/McIMjVZJcJU2rWnDmTpzkx/Untitled?node-id=0-1&t=vd5Q8XMWxgOIY0yD-1) <br/><br/> [Ver Web Applications Prototyping](https://www.figma.com/design/f9SPJMQHRhr2hgH4k9Pkvu/MaquiGest-%E2%80%94-Editable-Mockups---Design-System?node-id=12-18&t=hPHwtzwSGYv7SSup-1) |
+
+## Anexo C. Videos del proyecto
+
+En este anexo se consolidan los principales recursos audiovisuales utilizados como evidencia de investigación, prototipado y ejecución del proyecto MaquiGest durante el AV1.
+
+| Tipo de video | Características del video                                                                                                                | Sobre el contenido | Enlace                                                                                                                                                                                                                                                                                                                                                                                             |
+|---|------------------------------------------------------------------------------------------------------------------------------------------|---|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Needfinding Interviews** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-needfinding-sprint-1`<br>**Formato:** `.mp4`          | Consolida las entrevistas realizadas a representantes de los segmentos objetivo de MaquiGest. Las entrevistas permitieron identificar necesidades, problemas y oportunidades relacionadas con la gestión, búsqueda y alquiler de maquinaria. | [Ver Needfinding Interviews](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxWaWV3IjoiU2hhcmVEaWFsb2ctTGluayIsInJlZmVycmFsQXBwUGxhdGZvcm0iOiJXZWIiLCJyZWZlcnJhbE1vZGUiOiJ2aWV3In19%3D&e=8aWP0C) |
+| **Prototype Navigation** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-prototype-navigation-sprint-1`<br>**Formato:** `.mp4` | Presenta la navegación del prototipo interactivo de la Web Application de MaquiGest desarrollado en Figma. El video evidencia los principales recorridos definidos para empresas de alquiler de maquinaria y empresas constructoras, mostrando la relación entre los mock-ups, User Flow Diagrams y las interacciones del prototipo. | [Ver Prototype Navigation](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAAnsDBhRKVQpR1PWOgAkTtAU7P-QO86FqFMmuM5NzuKJU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=dB05rw)                                                |
+| **Execution Evidence** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-execution-evidence-sprint-1`<br>**Formato:** `.mp4`   | Presenta la navegación por la primera versión implementada y desplegada del Landing Page de MaquiGest. El video demuestra las principales secciones y elementos interactivos desarrollados durante el Sprint 1. | [Ver Execution Evidence]( https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQB0uUoEIdV6QLDgc4fXoOq0ATW99dVOedmBYAoBwVk7ltY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8xXN6S)                                                 |
