@@ -3053,6 +3053,76 @@ Conexión de la Capa:
 
 Envía las peticiones REST a SubscriptionApplicationService.
 
+#### IAM
+
+### A. Domain Layer
+
+
+![Class Diagram — IAM](./assets/md-images-chapter4/iam-domain.png)
+
+
+Explicación del Proceso:
+
+La entidad raíz User se compone del Value Object Credentials (correo y hash de
+contraseña) y gestiona los permisos con UserRole. (Verificar que UserRole y
+UserStatus estén conectados explícitamente a User).
+
+
+Conexión de la Capa:
+
+Declara UserRepository para la búsqueda y registro seguro de cuentas.
+
+
+### B. Application Layer
+
+
+![Class Diagram — IAM](./assets/md-images-chapter4/iam-application.png)
+
+
+Explicación del Proceso:
+
+AuthenticationService ejecuta la lógica de autenticación, generación de tokens
+SessionToken y validación de credenciales.
+
+
+Conexión de la Capa:
+
+Consulta UserRepository para validar el correo y la contraseña cifrada.
+
+
+### C. Infrastructure Layer
+
+
+![Class Diagram — IAM](./assets/md-images-chapter4/iam-infrastructure.png)
+
+
+Explicación del Proceso:
+
+UserRepositoryImpl implementa la persistencia de los usuarios mediante JPA.
+
+
+Conexión de la Capa:
+
+Conecta las operaciones de la aplicación con la tabla de usuarios en la base de
+datos.
+
+
+### D. Interfaces Layer
+
+
+![Class Diagram — IAM](./assets/md-images-chapter4/iam-interfaces.png)
+
+
+Explicación del Proceso:
+
+IAMController maneja los endpoints de /register, /login y /logout.  
+
+
+Conexión de la Capa:
+
+Recibe RegisterUserCommand o LoginCommand y los procesa con
+AuthenticationService.
+
 ## 4.8. Database Design
 
 ### 4.8.1. Database Diagrams
