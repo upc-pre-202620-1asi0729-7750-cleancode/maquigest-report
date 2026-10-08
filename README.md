@@ -127,6 +127,23 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
 
 <div style="page-break-after: always;"></div>
 
+### Entrega TB1:
+
+#### Participación por integrante:
+
+<p align="center">
+  <img src="./assets/md-images-chapter5/teamcolabo1.png"
+       alt="MaquiGest Sprint 2 Collaboration Evidence - GitHub Contributors"
+       width="90%">
+</p>
+
+<p align="center">
+  <img src="./assets/md-images-chapter5/teamcolabo2.png"
+       alt="MaquiGest Sprint 2 Collaboration Evidence - Commit Activity"
+       width="90%">
+</p>
+
+<div style="page-break-after: always;"></div>
 
 # Contenido
 
