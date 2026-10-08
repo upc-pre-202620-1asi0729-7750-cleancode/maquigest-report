@@ -2824,19 +2824,48 @@ El sistema se apoya en tres servicios externos esenciales para su funcionamiento
 
 ### 4.7.1. Class Diagrams
 
-#### Backend  Class Diagram
+## Inventory
+### A. Domain Layer
 
-![Class Diagram — Backend](./assets/md-images-chapter4/class-diagram-backend.png)
+![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-domain.png)
 
-El diagrama general de clases del backend encapsula los Agregados principales (Aggregate Roots) de cada Bounded Context y define las fronteras de dominio. A fin de mantener el desacoplamiento dictado por la arquitectura DDD, la comunicación entre contextos se realiza estrictamente a través de referencias por identificadores primitivos (userId, equipmentId, planId, contractId), garantizando que cada contexto mantenga su persistencia y sus reglas de negocio aisladas.
+Explicación del Proceso:
+La capa de dominio contiene el agregado raíz Equipment, el cual encapsula la lógica pura de la maquinaria. Equipment se relaciona con EquipmentCategory para su clasificación, utiliza el Value Object RentalRate para definir costos y gestiona bloques de indisponibilidad mediante AvailabilityBlock y DateRange.
 
-#### Inventory
+Conexión de la Capa:
+Las entidades del dominio declaran los puertos de persistencia (interfaces EquipmentRepository y EquipmentCategoryRepository). Estas interfaces pertenecen al dominio para cumplir con el principio de Inversión de Dependencias (DIP).
 
-![Class Diagram — Inventory](./assets/md-images-chapter4/class-diagram-inventory.png)
+### B. Application Layer
 
-Equipment es el agregado principal: pertenece a una EquipmentCategory, compone una RentalRate (tarifa diaria y semanal) y mantiene su EquipmentStatus (disponible, alquilado, en mantenimiento). Los AvailabilityBlock con su DateRange permiten responder isAvailableFor(period) sin superposiciones, que es la regla que evita las dobles reservas descritas en la problemática. InventoryApplicationService cubre el registro, la actualización, la búsqueda para constructoras y el cambio de estado de la maquinaria.
+![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-application.png)
 
-#### Rentals
+Explicación del Proceso:
+Contiene la clase InventoryApplicationService, responsable de coordinar los casos de uso como el registro de maquinaria (RegisterEquipmentCommand) y la verificación de disponibilidad para constructoras.
+
+Conexión de la Capa:
+InventoryApplicationService recibe llamadas desde la capa de Interfaces e interactúa directamente con el dominio invocando los métodos declarados en EquipmentRepository.
+
+### C. Infrastructure Layer
+
+![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-infrastructure.png)
+
+Explicación del Proceso:
+Implementa el acceso a datos mediante Spring Data JPA (EquipmentRepositoryImpl y EquipmentCategoryRepositoryImpl).
+
+Conexión de la Capa:
+Se conecta con la Capa de Dominio mediante una relación de Realización/Implementación de las interfaces de repositorio (EquipmentRepository), traduciendo los Value Objects del dominio a tablas de MySQL.
+
+### D. Interfaces Layer
+
+![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-interfaces.png)
+
+Explicación del Proceso:
+A través de InventoryController, expone los endpoints HTTP REST que reciben las solicitudes JSON del cliente Web Angular.
+
+Conexión de la Capa:
+Transforma las peticiones HTTP en objetos Command (ej. RegisterEquipmentCommand) y los envía a InventoryApplicationService.
+
+## Rentals
 
 ![Class Diagram — Rentals](./assets/md-images-chapter4/class-diagram-rentals.png)
 
