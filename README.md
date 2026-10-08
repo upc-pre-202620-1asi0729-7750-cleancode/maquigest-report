@@ -2906,6 +2906,152 @@ RentalsController gestiona las rutas REST para la creación y cambio de estado d
 Conexión de la Capa:
 Invoca los métodos expuestos por RentalApplicationService mapeando las respuestas a objetos DTO Response.
 
+#### Maintenance
+
+### A. Domain Layer
+
+
+![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-domain.png)
+
+
+Explicación del Proceso:
+
+Agrupa los agregados Incident (reportes de fallas) y MaintenanceRecord
+(reparaciones preventivas y correctivas).
+
+
+Conexión de la Capa:
+
+Un Incident en estado no resuelto se relaciona con un MaintenanceRecord.
+Declara la interfaz EquipmentStatusPort para notificar al contexto de
+inventario cuando una máquina entra a taller.
+
+
+### B. Application Layer
+
+
+![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-application.png)
+
+
+Explicación del Proceso:
+
+MaintenanceApplicationService ejecuta los comandos de reporte de averías
+(reportIncident), programación de mantenimientos (scheduleMaintenance) y cierre
+técnico (completeMaintenance).
+
+
+Conexión de la Capa:
+
+Llama a los repositorios de mantenimiento e informa a través de
+EquipmentStatusPort para cambiar el estado de la máquina a UNDER_MAINTENANCE.
+
+
+### C. Infrastructure Layer
+
+
+![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-infrastructure.png)
+
+
+Explicación del Proceso:
+
+Contiene IncidentRepositoryImpl, MaintenanceRecordRepositoryImpl y el adaptador
+InventoryEquipmentStatusAdapter.
+
+
+Conexión de la Capa:
+
+Conecta las llamadas de actualización de estado hacia la base de datos e
+interactúa con el módulo de inventario.
+
+
+### D. Interfaces Layer
+
+
+![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-interfaces.png)
+
+
+Explicación del Proceso:
+
+MaintenanceController mapea los endpoints de gestión de taller técnico.
+
+
+Conexión de la Capa:
+
+Envía las acciones del cliente Web a MaintenanceApplicationService.
+
+#### Subscription
+
+### A. Domain Layer
+
+
+![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-domain.png)
+
+
+Explicación del Proceso:
+
+Contiene el plan de suscripción SubscriptionPlan y la suscripción del usuario
+UserSubscription vinculada mediante el Value Object DateRange. (Asegurarse de
+conectar el Enum BillingCycle con una línea hacia SubscriptionPlan y utilizar
+el tipo de dato Boolean para autoRenew).
+
+
+Conexión de la Capa:
+
+Declara las interfaces UserSubscriptionRepository, SubscriptionPlanRepository y
+el puerto de pasarela de pago PaymentConnector.
+
+
+### B. Application Layer
+
+
+![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-application.png)
+
+
+Explicación del Proceso:
+
+SubscriptionApplicationService coordina la selección de planes y la facturación
+recurrente de los usuarios.
+
+
+Conexión de la Capa:
+
+Utiliza los repositorios de dominio y delega el cobro al puerto
+PaymentConnector.
+
+
+### C. Infrastructure Layer
+
+
+![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-infrastructure.png)
+
+
+Explicación del Proceso:
+
+Contiene las implementaciones JPA y el adaptador externo
+StripePaymentConnector.
+
+
+Conexión de la Capa:
+
+Realiza la integración de pagos con servicios de terceros y persiste el estado
+de la suscripción.
+
+
+### D. Interfaces Layer
+
+
+![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-interfaces.png)
+
+
+Explicación del Proceso:
+
+SubscriptionController expone las llamadas de selección, cambio o cancelación
+de planes.
+
+
+Conexión de la Capa:
+
+Envía las peticiones REST a SubscriptionApplicationService.
 
 ## 4.8. Database Design
 
