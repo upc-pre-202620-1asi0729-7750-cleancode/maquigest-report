@@ -64,6 +64,7 @@ Proyecto<br>
   </div>
 </div>
 
+<br>
 <p style="margin-top: 30px; margin-bottom: 12px;"><strong>Período 202620</strong></p>
 <br>
 <p><strong>Octubre 2026</strong></p>
