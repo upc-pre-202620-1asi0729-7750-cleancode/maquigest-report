@@ -2901,14 +2901,6 @@ Para facilitar su comprensión, el modelado se presenta mediante diagramas indiv
 
 ![Leyenda Design-Level Event Storming](assets/images/chapter-4/leyenda-designlevel.png)
 
-**IAM Bounded Context**
-
-![IAM Bounded Context](assets/images/chapter-4/iam-bounded-context.png)
-
-**Profiles Bounded Context**
-
-![Profiles Bounded Context](assets/images/chapter-4/profile-bounded-context.png)
-
 **Inventory Bounded Context**
 
 ![Inventory Bounded Context](assets/images/chapter-4/inventory-bounded-context.png)
@@ -2932,6 +2924,15 @@ Para facilitar su comprensión, el modelado se presenta mediante diagramas indiv
 **Generic IAM Bounded Context**
 
 ![Generic IAM Bounded Context](assets/images/chapter-4/generic-iam-bounded-context.png)
+
+**IAM Bounded Context**
+
+![IAM Bounded Context](assets/images/chapter-4/iam-bounded-context.png)
+
+**Profiles Bounded Context**
+
+![Profiles Bounded Context](assets/images/chapter-4/profile-bounded-context.png)
+
 
 ### 4.6.2. Software Architecture Context Diagram
 
