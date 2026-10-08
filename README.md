@@ -3123,6 +3123,77 @@ Conexión de la Capa:
 Recibe RegisterUserCommand o LoginCommand y los procesa con
 AuthenticationService.
 
+#### Profiles
+
+### A. Domain Layer
+
+
+![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-domain.png)
+
+
+Explicación del Proceso:
+
+CompanyProfile almacena los datos de la organización e integra el Value Object
+Address con coordenadas geográficas GeoCoordinates para la localización.
+ProviderProfile extiende el perfil para las empresas de alquiler con métricas
+de reputación. (Conectar los Enums CompanyType directamente con la entidad).
+
+
+Conexión de la Capa:
+
+Declara CompanyProfileRepository y ProviderProfileRepository.
+
+
+### B. Application Layer
+
+
+![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-application.png)
+
+
+Explicación del Proceso:
+
+ProfileApplicationService orquesta la creación y actualización de perfiles de
+empresa y de proveedores.
+
+
+Conexión de la Capa:
+
+Transforma los datos enviados por la interfaz e invoca a los repositorios de
+dominio.
+
+
+### C. Infrastructure Layer
+
+
+![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-infrastructure.png)
+
+
+Explicación del Proceso:
+
+Implementa los repositorios de perfiles con JPA.
+
+
+Conexión de la Capa:
+
+Guarda la información de las empresas en la base de datos.
+
+
+### D. Interfaces Layer
+
+
+![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-interfaces.png)
+
+
+Explicación del Proceso:
+
+ProfilesController gestiona los endpoints REST de lectura y actualización de
+perfiles.
+
+
+Conexión de la Capa:
+
+Pasa los Comandos DTO a ProfileApplicationService.
+
 ## 4.8. Database Design
 
 ### 4.8.1. Database Diagrams
