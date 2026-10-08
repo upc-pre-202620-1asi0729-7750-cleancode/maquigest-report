@@ -2,72 +2,77 @@
 
 <img src="assets/md-images-front/upc-logo.png" alt="Logo de la Universidad Peruana de Ciencias Aplicadas" width="90">
 
-<p style="margin-top: 15px; margin-bottom: 25px;">
+<p>
 Universidad Peruana de Ciencias Aplicadas<br>
 Carrera de Ingeniería de Software
 </p>
 
-<p style="margin-bottom: 15px;">
+<br>
+
+<p>
 <strong>1ASI0729</strong><br>
-<strong style="font-size: 1.1em;">Desarrollo de Aplicaciones Open Source</strong>
+<strong>Desarrollo de Aplicaciones Open Source</strong>
 </p>
 
-<p style="margin-bottom: 20px;">
+<p>
 NRC<br>
 <strong>7750</strong>
 </p>
 
-<h3 style="margin-top: 15px; margin-bottom: 20px;">Informe del Trabajo Final</h3>
+<h3>Informe del Trabajo Final</h3>
 
-<p style="margin-bottom: 20px;">
+<p>
 Docente<br>
 <strong>Bautista Ubillús, Efraín Ricardo</strong>
 </p>
 
-<p style="margin-bottom: 15px;">
+<br>
+
+<p>
 Equipo<br>
 <strong>CleanCode</strong>
 </p>
 
-<p style="margin-bottom: 25px;">
+<p>
 Proyecto<br>
 <strong>MaquiGest</strong>
 </p>
 
-<p style="margin-bottom: 15px;"><strong>Integrantes</strong></p>
+<br>
 
-<!-- Estructura sin tabla para evitar bordes en IntelliJ -->
-<div style="display: inline-block; text-align: left;">
-  <div style="margin-bottom: 8px;">
-    <strong style="display: inline-block; width: 120px;">Código</strong>
-    <strong>Apellidos y Nombres</strong>
-  </div>
-  <div style="margin-bottom: 4px;">
-    <span style="display: inline-block; width: 120px;">U202115277</span>
-    <span>Delgado Perez, James Caleb</span>
-  </div>
-  <div style="margin-bottom: 4px;">
-    <span style="display: inline-block; width: 120px;">U202111529</span>
-    <span>Montalvo Vasquez, Bruno Rodrigo</span>
-  </div>
-  <div style="margin-bottom: 4px;">
-    <span style="display: inline-block; width: 120px;">U202410211</span>
-    <span>Manosalva Tovar, Miroslav</span>
-  </div>
-  <div style="margin-bottom: 4px;">
-    <span style="display: inline-block; width: 120px;">U202321613</span>
-    <span>Paredes Chavez, Carlos Augusto</span>
-  </div>
-  <div style="margin-bottom: 4px;">
-    <span style="display: inline-block; width: 120px;">U202219829</span>
-    <span>Daga Chávez, Joaquin Leonardo</span>
-  </div>
-</div>
+<p><strong>Integrantes</strong></p>
+
+<p>
+<span style="display:inline-block; width:120px; text-align:left;"><strong>Código</strong></span>
+<span style="display:inline-block; width:300px; text-align:left;"><strong>Apellidos y Nombres</strong></span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202115277</span>
+<span style="display:inline-block; width:300px; text-align:left;">Delgado Perez, James Caleb</span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202111529</span>
+<span style="display:inline-block; width:300px; text-align:left;">Montalvo Vasquez, Bruno Rodrigo</span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202410211</span>
+<span style="display:inline-block; width:300px; text-align:left;">Manosalva Tovar, Miroslav</span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202321613</span>
+<span style="display:inline-block; width:300px; text-align:left;">Paredes Chavez, Carlos Augusto</span>
+<br>
+
+<span style="display:inline-block; width:120px; text-align:left;">U202219829</span>
+<span style="display:inline-block; width:300px; text-align:left;">Daga Chávez, Joaquin Leonardo</span>
 
 <br>
-<p style="margin-top: 30px; margin-bottom: 12px;"><strong>Período 202620</strong></p>
+
+<p><strong>Período 202620</strong></p>
+
 <br>
-<p><strong>Octubre 2026</strong></p>
+
+<p><strong>Septiembre 2026</strong></p>
 
 </div>
 
