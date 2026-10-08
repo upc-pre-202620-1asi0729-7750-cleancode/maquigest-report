@@ -2866,34 +2866,46 @@ Conexión de la Capa:
 Transforma las peticiones HTTP en objetos Command (ej. RegisterEquipmentCommand) y los envía a InventoryApplicationService.
 
 ## Rentals
+### A. Domain Layer
 
-![Class Diagram — Rentals](./assets/md-images-chapter4/class-diagram-rentals.png)
+![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-domain.png)
 
-RentalRequest modela la reservación: nace en estado PENDING y, al aceptarse, genera un RentalContract. El contrato compone un DateRange y registra una Delivery y un EquipmentReturn. EquipmentReturn.requiresMaintenance() es el punto de integración donde una devolución reportada con daño dispara el flujo dentro del contexto Maintenance. RentalApplicationService orquesta el ciclo completo de alquiler mediante los cuatro repositorios de infraestructura.
+Explicación del Proceso:
+Nace con el agregado RentalRequest en estado PENDING. Al aprobarse, genera la entidad RentalContract, que a su vez se compone de las entidades de seguimiento Delivery y EquipmentReturn.
 
-#### Maintenance
+Conexión de la Capa:
+Declara los repositorios del dominio (RentalRequestRepository, RentalContractRepository, EquipmentReturnRepository, DeliveryRepository) y el puerto de integración InventoryAvailabilityPort para validar disponibilidad.
 
-![Class Diagram — Maintenance](./assets/md-images-chapter4/class-diagram-maintenance.png)
+### B. Application Layer
 
-MaintenanceRecord distingue mantenimientos preventivos y correctivos con su ciclo de estados. Incident registra daños o fallas operativas con su nivel de severidad y puede originar formalmente un MaintenanceRecord. MaintenanceApplicationService orquesta el flujo de atención técnica y actualiza el estado de disponibilidad del equipo en comunicación con el contexto Inventory.
+![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-application.png)
 
-#### Subscription 
+Explicación del Proceso:
+RentalApplicationService orquesta las transacciones operativas: responder solicitudes (acceptRequest), registrar la entrega física en obra (registerDelivery) y procesar la devolución del equipo (registerReturn).
 
-![Class Diagram — Subscription](./assets/md-images-chapter4/class-diagram-subscription-bounded-context.png)
+Conexión de la Capa:
+Conecta las peticiones de interfaz con el dominio utilizando los repositorios e invocando el adaptador de disponibilidad hacia el contexto de Inventory.
 
-SubscriptionPlan define los términos de precios, beneficios y ciclo de facturación de la plataforma. UserSubscription vincula una cuenta de usuario con su plan activo mediante el value object DateRange y controla los estados de renovación o cancelación automática. SubscriptionApplicationService se integra con la pasarela externa de pagos para gestionar el flujo comercial de las membresías.
+### C. Infrastructure Layer
 
-#### IAM
+![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-infrastructure.png)
 
-![Class Diagram — IAM](./assets/md-images-chapter4/class-diagram-iam.png)
+Explicación del Proceso:
+Proporciona las clases concretas que implementan los repositorios JPA e incluye el adaptador InventoryAvailabilityAdapter.
 
-User es la entidad central, con role (empresa de alquiler o constructora) y status. Credentials es un value object que encapsula la validación de correo y contraseña, y SessionToken representa el token de acceso vigente. AuthenticationService orquesta el registro, el inicio y el cierre de sesión a través de UserRepository.
+Conexión de la Capa:
+Implementa las interfaces definidas en la capa de aplicación/dominio para realizar consultas en la base de datos MySQL.
 
-#### Profiles
+### D. Interfaces Layer
 
-![Class Diagram — Profiles](./assets/md-images-chapter4/class-diagram-profiles.png)
+![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-interfaces.png)
 
-CompanyProfile guarda los datos de la empresa y compone un value object Address con coordenadas geográficas, que alimenta la integración con mapas. ProviderProfile extiende el perfil de una empresa de alquiler con su reputación pública —alquileres completados y tasa de cumplimiento—, respondiendo al término "Perfil de Proveedor" del Ubiquitous Language.
+Explicación del Proceso:
+RentalsController gestiona las rutas REST para la creación y cambio de estado de los alquileres.
+
+Conexión de la Capa:
+Invoca los métodos expuestos por RentalApplicationService mapeando las respuestas a objetos DTO Response.
+
 
 ## 4.8. Database Design
 
