@@ -4649,6 +4649,87 @@ utilizaron los siguientes servicios web:
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
+Durante el Sprint 2 se realizó el despliegue de la Web Application de MaquiGest para disponer de una versión accesible desde Internet. El frontend desarrollado con Angular se publicó en Vercel y se configuró para consumir una API de demostración alojada en Render. Esta API utiliza Node.js y JSON Server para proporcionar los datos simulados necesarios durante la revisión del sprint.
+
+El código fuente del frontend y de la API de demostración se encuentra versionado en el repositorio `maquigest-webapp`. La configuración del entorno de producción de Angular establece una URL HTTPS pública para el consumo de los recursos de la aplicación. Asimismo, se ajustó la política CORS de la API para admitir solicitudes desde el dominio del frontend y los dominios de vista previa autorizados.
+
+**Evidencias del despliegue**
+
+- **Frontend desplegado:** Web Application publicada en Vercel.
+- **API de demostración desplegada:** servicio Node.js con JSON Server alojado en Render.
+- **Repositorio remoto:** código fuente del frontend y del servicio de demostración versionado en GitHub.
+- **Integración del frontend con la API:** configuración de la URL base pública en `src/environments/environment.ts`.
+- **Acceso desde la Landing Page:** incorporación del enlace hacia la Web Application desde el sitio público de MaquiGest alojado en Netlify.
+
+**Proceso de configuración e integración**
+
+1. Se versionó la implementación de la Web Application en GitHub y se integraron sus funcionalidades mediante GitFlow.
+2. Se publicó el frontend en Vercel. El historial de despliegues de GitHub registra un despliegue exitoso de producción asociado al commit `7e0887c64bba40ec9907b361da24715a266b1097`, correspondiente al tag `v1.0.1`.
+3. Se incorporó la API de demostración en `server/demo-api`. Su archivo `package.json` define `npm start` como comando de inicio, que ejecuta `node server.js`. El servicio utiliza el puerto proporcionado por la variable de entorno `PORT`.
+4. Se configuró la aplicación Angular para consumir la API mediante la URL `https://maquigest-demo-api.onrender.com/api/v1`.
+5. Se ajustó CORS para admitir el dominio `https://maquigest-webapp-cleancode.vercel.app` y las vistas previas autorizadas de MaquiGest en Vercel.
+6. Se incorporó el acceso a la Web Application desde la Landing Page, permitiendo continuar desde la presentación del producto hacia la aplicación.
+
+**URLs del despliegue**
+
+| Recurso | Plataforma | URL |
+|---|---|---|
+| Web Application | Vercel | [Acceder a MaquiGest Web Application](https://maquigest-webapp-cleancode.vercel.app/) |
+| API de demostración | Render | [URL base de la API](https://maquigest-demo-api.onrender.com/api/v1) |
+| Estado de la API | Render | [Comprobar disponibilidad del servicio](https://maquigest-demo-api.onrender.com/health) |
+| Landing Page | Netlify | [Acceder a MaquiGest Website](https://maquigest-cleancode.netlify.app/) |
+| Repositorio de la Web Application | GitHub | [Consultar código fuente](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp) |
+
+La URL base identifica el prefijo de los recursos de la API; para comprobar que el servicio responde se utiliza el endpoint `/health`.
+
+**Trazabilidad del despliegue**
+
+| Evidencia | Referencia |
+|---|---|
+| Versión de frontend registrada en producción | [v1.0.1](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/tree/v1.0.1) |
+| Commit del despliegue de producción | [7e0887c](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/7e0887c64bba40ec9907b361da24715a266b1097) |
+| Incorporación de la API pública de demostración | [dcebd92](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/dcebd92c41467a693af0de2d0efc93e83c5a37f2) |
+| Configuración de la conexión con Render | [c0939d6](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/c0939d67188a7024a5189f80f01e7074e5b644be) |
+| Ajuste de CORS para vistas previas | [924fb39](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/924fb39b20f72ac592bde6989b2262c4c5b987a5) |
+
+Las mejoras posteriores registradas en `develop` se distinguen del commit publicado en producción, manteniendo la trazabilidad entre el código integrado y la versión desplegada.
+
+**Capturas de evidencia**
+
+<p align="center"><strong>Frontend desplegado en Vercel</strong></p>
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-2-deployment-webapp-vercel.png" alt="Despliegue de producción de MaquiGest Web Application en Vercel" width="90%">
+</p>
+
+El panel del despliegue permite identificar el proyecto, su estado, el dominio público y el commit asociado a la publicación del frontend.
+
+<p align="center"><strong>API de demostración desplegada en Render</strong></p>
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-2-deployment-demo-api-render.png" alt="Servicio de la API de demostración de MaquiGest desplegado en Render" width="90%">
+</p>
+
+El panel del servicio permite identificar el nombre de la API, su estado y la URL pública utilizada por la Web Application.
+
+<p align="center"><strong>Comprobación de disponibilidad de la API</strong></p>
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-2-deployment-api-health.png" alt="Respuesta del endpoint health de la API de demostración de MaquiGest" width="90%">
+</p>
+
+La consulta al endpoint `/health` permite comprobar la respuesta del servicio de demostración desde su dirección pública.
+
+<p align="center"><strong>Web Application utilizando la API pública</strong></p>
+<p align="center">
+  <img src="./assets/images/chapter-5/sprint-2-deployment-webapp-api-data.png" alt="MaquiGest ejecutándose desde Vercel y consultando datos en la API de Render" width="90%">
+</p>
+
+La captura de una vista con registros y de su solicitud de red permite evidenciar el consumo de datos desde la API pública utilizada por la aplicación.
+
+**Resultado obtenido**
+
+La solución dispone de direcciones públicas para el frontend y su API de demostración, con trazabilidad del despliegue de producción hacia un commit y una versión del repositorio. Esta configuración permite realizar la revisión del frontend fuera del entorno local. En la comprobación realizada el 8 de octubre de 2026, la URL pública del frontend y los endpoints `/health` y `/api/v1/equipment` respondieron con HTTP 200; el endpoint de salud informó `status: ok` y el recurso de maquinaria devolvió registros de demostración.
+
+La API corresponde a un entorno de demostración con datos ficticios y almacenamiento temporal que se reinicializa al arrancar el servicio. La implementación del backend definitivo constituye una integración posterior del proyecto.
+
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
 Durante el Sprint 2, el equipo CleanCode trabajó colaborativamente en la estructura, desarrollo, integración y despliegue de la primera versión funcional de la Web Application de MaquiGest. Esta iteración permitió continuar el trabajo realizado durante el Sprint 1, pasando de la presentación de la propuesta de valor mediante el Landing Page hacia una primera experiencia funcional dentro de la plataforma.
