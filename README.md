@@ -2885,9 +2885,45 @@ Link: [Prototype](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_u
 
 ### 4.6.1. Design-Level Event Storming
 
-El Design-Level Event Storming permitió profundizar en los procesos identificados durante el Big Picture Event Storming, detallando los eventos, comandos, actores y reglas principales involucrados en el dominio de MaquiGest. Este análisis facilita la identificación de los límites y responsabilidades de los diferentes componentes del sistema.
+El Design-Level Event Storming permitió profundizar en los procesos identificados durante el Big Picture Event Storming, detallando los actores, comandos, agregados, eventos de dominio, modelos de lectura, políticas y reglas de negocio involucrados en MaquiGest.
 
-![Design-Level Event Storming](assets/images/chapter-4/design-level-event-storming.png)
+Para facilitar su comprensión, el modelado se presenta mediante diagramas individuales por Bounded Context, permitiendo identificar sus responsabilidades y las interacciones entre los componentes del sistema.
+
+**Leyenda de Design-Level Event Storming**
+
+![Leyenda Design-Level Event Storming](assets/images/chapter-4/leyenda-designlevel.png)
+
+**IAM Bounded Context**
+
+![IAM Bounded Context](assets/images/chapter-4/iam-bounded-context.png)
+
+**Profiles Bounded Context**
+
+![Profiles Bounded Context](assets/images/chapter-4/profile-bounded-context.png)
+
+**Inventory Bounded Context**
+
+![Inventory Bounded Context](assets/images/chapter-4/inventory-bounded-context.png)
+
+**Rentals Bounded Context**
+
+![Rentals Bounded Context](assets/images/chapter-4/rentals-bounded-context.png)
+
+**Maintenance Bounded Context**
+
+![Maintenance Bounded Context](assets/images/chapter-4/maintenance-bounded-context.png)
+
+**Subscription Plans Bounded Context**
+
+![Subscription Plans Bounded Context](assets/images/chapter-4/subscription-plans-bounded-context.png)
+
+**External Systems**
+
+![External Systems](assets/images/chapter-4/external-systems.png)
+
+**Generic IAM Bounded Context**
+
+![Generic IAM Bounded Context](assets/images/chapter-4/generic-iam-bounded-context.png)
 
 ### 4.6.2. Software Architecture Context Diagram
 
