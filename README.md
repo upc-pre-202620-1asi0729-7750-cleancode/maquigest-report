@@ -4421,7 +4421,92 @@ A continuación, se detalla la asignación de líderes (L) y colaboradores (C) p
 | Daga Chávez, Joaquín Leonardo | @Eshnikeee | C | C | C | L | C | C |
 | Paredes Chávez, Carlos Augusto | @CarlossUPC | C | C | C | C | L | C |
 
-#### 5.2.2.3. Sprint Backlog 2
+#### 5.2.2.3. Sprint Backlog 2  
+
+El objetivo principal de este segundo Sprint es avanzar desde el sitio público de MaquiGest hacia una primera versión funcional de la Web Application desarrollada con Angular. En este Sprint Backlog se priorizaron las historias relacionadas con la configuración inicial de la aplicación, la definición del sistema de enrutamiento, la implementación de las interfaces de registro e inicio de sesión, la gestión de sesión y cierre de sesión, y la redirección de los usuarios hacia el dashboard correspondiente según su tipo de empresa. Además, se incorporó la integración de los principales call-to-action de la Landing Page con las rutas de acceso y registro de la Web Application, permitiendo una transición directa desde el sitio público hacia la plataforma.
+
+ 
+Enlace de Seguimiento: [Tablero en Trello](https://trello.com/invite/b/6ac6eb79d3f78b5f6dd307f5/ATTIe2a6389a17802733260a1e3e24ffeff6F58CA512/sprint-backlog-2-maquigest) 
+  
+<img src="assets/images/chapter-5/trello-sprint-backlog-2.PNG" alt="trello-sprint-backlog-2">  
+
+
+| Sprint # | Sprint 2 |
+| :--- | :--- |
+
+| Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
+| :---: | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
+| US01 | Registro de usuario | T2-01 | Construir formulario de registro | Presentar los campos necesarios y sus validaciones en la Web App. | 5 | `JAmsy06` | Done |
+| US01 | Registro de usuario | T2-02 | Integrar flujo de registro | Enviar los datos a la API simulada y mostrar el resultado al usuario. | 4 | `JAmsy06` | Done |
+| US02 | Inicio de sesión | T2-03 | Construir vista de inicio de sesión | Presentar y validar los campos de acceso. | 4 | `JAmsy06` | Done |
+| US02 | Inicio de sesión | T2-04 | Gestionar sesión de usuario | Procesar el acceso y dirigir al usuario a la vista correspondiente. | 5 | `JAmsy06` | Done |
+| US03 | Gestionar perfil | T2-05 | Mostrar información del perfil | Consultar y presentar los datos del usuario autenticado. | 4 | `JAmsy06` | Done |
+| US03 | Gestionar perfil | T2-06 | Editar información del perfil | Permitir la actualización de los datos editables y mostrar el resultado. | 5 | `JAmsy06` | Done |
+| US04 | Cerrar sesión | T2-07 | Incorporar acción de cierre de sesión | Agregar la opción de salir en la navegación de la Web App. | 2 | `JAmsy06` | Done |
+| US04 | Cerrar sesión | T2-08 | Finalizar la sesión activa | Limpiar los datos de sesión y redirigir a la vista de acceso. | 3 | `JAmsy06` | Done |
+| US05 | Recuperar contraseña | T2-09 | Construir vista de recuperación | Permitir el ingreso del dato necesario para solicitar la recuperación. | 4 | `JAmsy06` | Done |
+| US05 | Recuperar contraseña | T2-10 | Mostrar resultado de la solicitud | Validar el formulario y comunicar al usuario el resultado del proceso. | 3 | `JAmsy06` | Done |
+| US06 | Registrar maquinaria | T2-11 | Construir formulario de maquinaria | Capturar los datos requeridos para registrar un equipo. | 5 | `JAmsy06` | Done |
+| US06 | Registrar maquinaria | T2-12 | Guardar maquinaria registrada | Integrar el formulario con la fuente de datos utilizada por la Web App. | 5 | `JAmsy06` | Done |
+| US07 | Consultar maquinaria | T2-13 | Construir listado de maquinaria | Mostrar los equipos registrados con su información resumida. | 4 | `JAmsy06` | Done |
+| US07 | Consultar maquinaria | T2-14 | Vincular listado y detalle | Permitir abrir la información de un equipo desde el listado. | 3 | `JAmsy06` | Done |
+| US08 | Actualizar información de maquinaria | T2-15 | Precargar datos del equipo | Mostrar la información actual de la maquinaria en un formulario editable. | 4 | `JAmsy06` | Done |
+| US08 | Actualizar información de maquinaria | T2-16 | Guardar cambios de maquinaria | Validar y enviar las modificaciones realizadas por el usuario. | 4 | `JAmsy06` | Done |
+| US09 | Consultar disponibilidad de maquinaria | T2-17 | Mostrar disponibilidad | Incorporar el estado de disponibilidad en las vistas de maquinaria. | 4 | `JAmsy06` | Done |
+| US09 | Consultar disponibilidad de maquinaria | T2-18 | Actualizar resultado de consulta | Presentar la disponibilidad correspondiente a los equipos consultados. | 4 | `JAmsy06` | Done |
+| US10 | Consultar estado de maquinaria | T2-19 | Mostrar estado del equipo | Presentar la condición registrada de cada maquinaria. | 3 | `JAmsy06` | Done |
+| US10 | Consultar estado de maquinaria | T2-20 | Incorporar estado en el detalle | Permitir consultar la condición del equipo junto con sus demás datos. | 3 | `JAmsy06` | Done |
+| US11 | Buscar maquinaria | T2-21 | Incorporar búsqueda | Permitir localizar maquinaria mediante un término ingresado por el usuario. | 4 | `JAmsy06` | Done |
+| US11 | Buscar maquinaria | T2-22 | Incorporar filtros | Permitir acotar los resultados según los criterios disponibles. | 4 | `JAmsy06` | Done |
+| US12 | Consultar información de maquinaria | T2-23 | Construir vista de detalle | Presentar las características de la maquinaria seleccionada. | 4 | `JAmsy06` | Done |
+| US12 | Consultar información de maquinaria | T2-24 | Cargar información seleccionada | Obtener y mostrar los datos del equipo abierto desde el listado o la búsqueda. | 3 | `JAmsy06` | Done |
+| US13 | Consultar disponibilidad para un periodo | T2-25 | Capturar periodo solicitado | Permitir que el usuario indique las fechas que desea consultar. | 3 | `JAmsy06` | Done |
+| US13 | Consultar disponibilidad para un periodo | T2-26 | Evaluar disponibilidad del periodo | Mostrar el resultado de la consulta para la maquinaria y las fechas seleccionadas. | 5 | `JAmsy06` | Done |
+| US14 | Solicitar alquiler de maquinaria | T2-27 | Construir solicitud de alquiler | Presentar los datos de la maquinaria y el periodo solicitado. | 5 | `JAmsy06` | Done |
+| US14 | Solicitar alquiler de maquinaria | T2-28 | Registrar solicitud | Enviar la solicitud y comunicar al usuario el resultado del registro. | 5 | `JAmsy06` | Done |
+| US15 | Consultar planes | T2-29 | Mostrar planes disponibles | Presentar las alternativas de suscripción en la Web App. | 4 | `JAmsy06` | Done |
+| US15 | Consultar planes | T2-30 | Mostrar características de cada plan | Permitir comparar la información relevante de las alternativas. | 3 | `JAmsy06` | Done |
+| US16 | Seleccionar plan | T2-31 | Incorporar selección de plan | Permitir elegir una de las alternativas presentadas. | 4 | `JAmsy06` | Done |
+| US16 | Seleccionar plan | T2-32 | Aplicar acceso según plan | Reflejar en la Web App las condiciones del plan seleccionado. | 5 | `JAmsy06` | Done |
+| US17 | Gestionar suscripción | T2-33 | Mostrar suscripción actual | Presentar al usuario la información de su plan vigente. | 4 | `JAmsy06` | Done |
+| US17 | Gestionar suscripción | T2-34 | Incorporar gestión del plan | Permitir realizar las acciones de administración disponibles para la suscripción. | 5 | `JAmsy06` | Done |
+| US18 | Gestionar solicitudes de alquiler | T2-35 | Mostrar solicitudes recibidas | Presentar a la empresa de alquiler sus solicitudes de maquinaria. | 4 | `JAmsy06` | Done |
+| US18 | Gestionar solicitudes de alquiler | T2-36 | Consultar detalle de solicitud | Permitir revisar los datos de una solicitud seleccionada. | 4 | `JAmsy06` | Done |
+| US19 | Confirmar o rechazar una solicitud | T2-37 | Incorporar acciones de decisión | Presentar las opciones de confirmación y rechazo de una solicitud. | 4 | `JAmsy06` | Done |
+| US19 | Confirmar o rechazar una solicitud | T2-38 | Registrar la decisión | Actualizar el estado de la solicitud y mostrar el resultado. | 4 | `JAmsy06` | Done |
+| US20 | Consultar alquileres activos | T2-39 | Mostrar alquileres en curso | Presentar las operaciones de alquiler que se encuentran activas. | 4 | `JAmsy06` | Done |
+| US20 | Consultar alquileres activos | T2-40 | Mostrar detalle del alquiler | Permitir revisar la maquinaria y los datos asociados a una operación activa. | 3 | `JAmsy06` | Done |
+| US21 | Consultar estado de una solicitud de alquiler | T2-41 | Listar solicitudes propias | Mostrar al solicitante sus solicitudes de alquiler. | 4 | `JAmsy06` | Done |
+| US21 | Consultar estado de una solicitud de alquiler | T2-42 | Mostrar estado de solicitud | Presentar el estado actual de la solicitud seleccionada. | 3 | `JAmsy06` | Done |
+| US22 | Gestionar entregas y devoluciones | T2-43 | Registrar entrega | Permitir registrar la entrega de la maquinaria asociada a un alquiler. | 5 | `JAmsy06` | Done |
+| US22 | Gestionar entregas y devoluciones | T2-44 | Registrar devolución | Permitir registrar el retorno de la maquinaria y actualizar la operación. | 5 | `JAmsy06` | Done |
+| US23 | Registrar mantenimiento | T2-45 | Construir formulario de mantenimiento | Capturar los datos de una intervención asociada a una maquinaria. | 4 | `JAmsy06` | Done |
+| US23 | Registrar mantenimiento | T2-46 | Guardar registro de mantenimiento | Registrar la intervención y mostrarla en la información del equipo. | 5 | `JAmsy06` | Done |
+| US24 | Programar mantenimiento | T2-47 | Capturar programación | Permitir indicar la maquinaria, fecha y datos de un mantenimiento futuro. | 4 | `JAmsy06` | Done |
+| US24 | Programar mantenimiento | T2-48 | Mostrar mantenimientos programados | Presentar las intervenciones registradas para próximas fechas. | 4 | `JAmsy06` | Done |
+| US25 | Registrar incidencia de maquinaria | T2-49 | Construir formulario de incidencia | Permitir describir una incidencia y asociarla a una maquinaria. | 4 | `JAmsy06` | Done |
+| US25 | Registrar incidencia de maquinaria | T2-50 | Guardar incidencia | Registrar el problema reportado y mostrar la confirmación correspondiente. | 4 | `JAmsy06` | Done |
+| US26 | Consultar historial de maquinaria | T2-51 | Mostrar historial de mantenimiento | Presentar las intervenciones registradas para el equipo seleccionado. | 4 | `JAmsy06` | Done |
+| US26 | Consultar historial de maquinaria | T2-52 | Mostrar historial de incidencias | Presentar los problemas registrados anteriormente para ese equipo. | 4 | `JAmsy06` | Done |
+| US27 | Consultar información de MaquiGest | T2-53 | Presentar información del producto | Mostrar qué es MaquiGest y a quién está dirigido en el Landing Page. | 3 | `TartaroZ` | Done |
+| US27 | Consultar información de MaquiGest | T2-54 | Presentar información del equipo | Mostrar la información institucional correspondiente a CleanCode. | 3 | `Miroa123` | Done |
+| US28 | Solicitar demostración | T2-55 | Construir formulario de demostración | Permitir que un visitante ingrese su solicitud desde el Landing Page. | 4 | `TartaroZ` | Done |
+| US28 | Solicitar demostración | T2-56 | Validar solicitud de demostración | Revisar los campos del formulario y mostrar su resultado al visitante. | 3 | `CarlossUPC` | Done |
+| US29 | Contactar con MaquiGest | T2-57 | Construir formulario de contacto | Permitir que el visitante redacte y envíe su consulta. | 4 | `Miroa123` | Done |
+| US29 | Contactar con MaquiGest | T2-58 | Mostrar confirmación de contacto | Informar al visitante si su consulta fue registrada. | 2 | `CarlossUPC` | Done |
+| US30 | Visualizar propuesta de valor | T2-59 | Presentar propuesta principal | Mostrar el mensaje principal de MaquiGest en la vista inicial. | 3 | `JAmsy06` | Done |
+| US30 | Visualizar propuesta de valor | T2-60 | Incorporar llamada a la acción | Dar al visitante una opción visible para continuar desde la vista inicial. | 2 | `CarlossUPC` | Done |
+| US31 | Explorar funcionalidades principales | T2-61 | Presentar funcionalidades | Mostrar las capacidades principales de MaquiGest en el Landing Page. | 4 | `JAmsy06` | Done |
+| US31 | Explorar funcionalidades principales | T2-62 | Presentar beneficios | Explicar los beneficios vinculados con esas funcionalidades. | 3 | `TartaroZ` | Done |
+| US32 | Identificar la solución para mi empresa | T2-63 | Presentar segmento de alquiler | Explicar la propuesta para empresas que alquilan maquinaria. | 3 | `TartaroZ` | Done |
+| US32 | Identificar la solución para mi empresa | T2-64 | Presentar segmento constructor | Explicar la propuesta para empresas que necesitan alquilar maquinaria. | 3 | `Miroa123` | Done |
+| US33 | Acceder a la Web Application | T2-65 | Vincular acceso desde el Landing Page | Configurar los enlaces que dirigen al visitante hacia la Web App. | 3 | `JAmsy06` | Done |
+| US33 | Acceder a la Web Application | T2-66 | Comprobar enlaces de acceso | Revisar el destino y la navegación de los enlaces publicados. | 2 | `Eshnikeee` | Done |
+| US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | T2-67 | Adaptar vistas a distintos anchos | Ajustar la presentación de las vistas principales en pantallas de distintos tamaños. | 5 | `CarlossUPC` | Done |
+| US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | T2-68 | Revisar navegación adaptable | Comprobar que menús, formularios y controles puedan utilizarse en esos tamaños. | 3 | `Miroa123` | Done |
+| US35 | Utilizar la plataforma en diferentes idiomas | T2-69 | Incorporar textos en español e inglés | Preparar los textos necesarios para las vistas incluidas en el alcance. | 5 | `JAmsy06` | Done |
+| US35 | Utilizar la plataforma en diferentes idiomas | T2-70 | Incorporar cambio de idioma | Permitir alternar los textos disponibles durante la navegación. | 3 | `Eshnikeee` | Done |
+
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
