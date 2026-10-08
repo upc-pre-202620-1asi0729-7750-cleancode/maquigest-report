@@ -4569,6 +4569,28 @@ Completando el segundo Sprint (Sprint 2), logramos implementar y desplegar exito
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
+En el segundo sprint, el equipo se enfocó en el desarrollo de
+la primera versión funcional de la aplicación web
+"Low-Cortisol". Para asegurar la operatividad y
+las pruebas de integración en esta etapa, se implementaron y
+utilizaron los siguientes servicios web:
+
+1.  **Integración de Fake API:** Se desarrolló y desplegó una
+    **Fake API** (utilizando JSON Server) para simular la
+    persistencia de datos. Esto permitió al equipo de frontend
+    trabajar en la visualización de datos reales antes de
+    la implementación final del backend en .NET.
+2.  **Actualización de Landing Page:** Se actualizó el sitio
+    informativo para incluir botones de llamada a la acción
+    (**Call-To-Action**) que redirigen directamente a la aplicación
+    web desplegada.
+3.  **Documentación de Endpoints:** A continuación, se detallan los servicios utilizados y sus respectivas funciones:
+
+| EndPoint | Funciones |
+| :--- | :--- |
+| `https://maquigest-cleancode.netlify.app/` | Desplegar la Landing Page informativa del producto. |
+| `https://maquigest-webapp-cleancode.vercel.app/` | Desplegar el Frontend de la aplicación web para interacción del usuario. |
+
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
