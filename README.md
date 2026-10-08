@@ -34,39 +34,35 @@ Proyecto<br>
 <strong>MaquiGest</strong>
 </p>
 
-<p style="margin-bottom: 12px;"><strong>Integrantes</strong></p>
+<p style="margin-bottom: 15px;"><strong>Integrantes</strong></p>
 
-<!-- Tabla alineada estrictamente al centro -->
-<table align="center" style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: none; text-align: left;">
-  <thead>
-    <tr style="border: none;">
-      <th style="border: none; padding: 2px 20px 6px 0px; text-align: left;"><strong>Código</strong></th>
-      <th style="border: none; padding: 2px 0px 6px 20px; text-align: left;"><strong>Apellidos y Nombres</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="border: none;">
-      <td style="border: none; padding: 2px 20px 2px 0px; text-align: left;">U202115277</td>
-      <td style="border: none; padding: 2px 0px 2px 20px; text-align: left;">Delgado Perez, James Caleb</td>
-    </tr>
-    <tr style="border: none;">
-      <td style="border: none; padding: 2px 20px 2px 0px; text-align: left;">U202111529</td>
-      <td style="border: none; padding: 2px 0px 2px 20px; text-align: left;">Montalvo Vasquez, Bruno Rodrigo</td>
-    </tr>
-    <tr style="border: none;">
-      <td style="border: none; padding: 2px 20px 2px 0px; text-align: left;">U202410211</td>
-      <td style="border: none; padding: 2px 0px 2px 20px; text-align: left;">Manosalva Tovar, Miroslav</td>
-    </tr>
-    <tr style="border: none;">
-      <td style="border: none; padding: 2px 20px 2px 0px; text-align: left;">U202321613</td>
-      <td style="border: none; padding: 2px 0px 2px 20px; text-align: left;">Paredes Chavez, Carlos Augusto</td>
-    </tr>
-    <tr style="border: none;">
-      <td style="border: none; padding: 2px 20px 2px 0px; text-align: left;">U202219829</td>
-      <td style="border: none; padding: 2px 0px 2px 20px; text-align: left;">Daga Chávez, Joaquin Leonardo</td>
-    </tr>
-  </tbody>
-</table>
+<!-- Estructura sin tabla para evitar bordes en IntelliJ -->
+<div style="display: inline-block; text-align: left;">
+  <div style="margin-bottom: 8px;">
+    <strong style="display: inline-block; width: 120px;">Código</strong>
+    <strong>Apellidos y Nombres</strong>
+  </div>
+  <div style="margin-bottom: 4px;">
+    <span style="display: inline-block; width: 120px;">U202115277</span>
+    <span>Delgado Perez, James Caleb</span>
+  </div>
+  <div style="margin-bottom: 4px;">
+    <span style="display: inline-block; width: 120px;">U202111529</span>
+    <span>Montalvo Vasquez, Bruno Rodrigo</span>
+  </div>
+  <div style="margin-bottom: 4px;">
+    <span style="display: inline-block; width: 120px;">U202410211</span>
+    <span>Manosalva Tovar, Miroslav</span>
+  </div>
+  <div style="margin-bottom: 4px;">
+    <span style="display: inline-block; width: 120px;">U202321613</span>
+    <span>Paredes Chavez, Carlos Augusto</span>
+  </div>
+  <div style="margin-bottom: 4px;">
+    <span style="display: inline-block; width: 120px;">U202219829</span>
+    <span>Daga Chávez, Joaquin Leonardo</span>
+  </div>
+</div>
 
 <p style="margin-top: 30px; margin-bottom: 12px;"><strong>Período 202620</strong></p>
 
