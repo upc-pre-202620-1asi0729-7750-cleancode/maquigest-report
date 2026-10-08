@@ -72,7 +72,7 @@ Proyecto<br>
 
 <br>
 
-<p><strong>Septiembre 2026</strong></p>
+<p><strong>Octubre 2026</strong></p>
 
 </div>
 
@@ -83,6 +83,7 @@ Proyecto<br>
 | Versión |   Fecha    |  Autor   |                                                  Descripción de modificación                                                   |
 | :-----: |:----------:|:--------:| :----------------------------------------------------------------------------------------------------------------------------: |
 |   AV1   | 19/09/2026 |  Todos   | Se agregó la primera versión del informe, incluyendo carátula, registro de versiones, perfiles del equipo, análisis inicial del problema, artefactos de UX, arquitectura preliminar y evidencias del Sprint 1. |
+|   TB1   | 08/10/2026 |  Todos   | Se actualizó el informe con los avances y correcciones del Sprint 2, incluyendo la actualización de User Stories y Product Backlog con Technical Stories para el RESTful API, correcciones de Impact Mapping, Problem Statement, Hypothesis Statements, User Flows, diagramas C4, diagramas de clases y Design-Level EventStorming. Asimismo, se documentó el Sprint Backlog 2 y se incorporaron las evidencias de desarrollo, despliegue, integración de la Landing Page con la Web Application y colaboración del equipo. |
 
 <div style="page-break-after: always;"></div>
 
@@ -94,6 +95,14 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
 #### Link del repositorio del Reporte:
 
 - https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-report
+
+#### Link del repositorio de la Website:
+
+- https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-website
+
+#### Link del repositorio del WebApp:
+
+- https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp
 
 ### Entrega AV1:
 
