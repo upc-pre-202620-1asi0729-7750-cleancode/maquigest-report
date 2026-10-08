@@ -36,24 +36,36 @@ Proyecto<br>
 
 <p style="margin-bottom: 15px;"><strong>Integrantes</strong></p>
 
-<!-- Alineación perfecta mediante bloque alineado a la izquierda -->
-<div style="display: inline-block; text-align: left; font-family: inherit;">
-  <div style="margin-bottom: 6px;">
-    <strong>Código&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apellidos y Nombres</strong>
+<!-- Estructura sin tabla para evitar bordes en IntelliJ -->
+<div style="display: inline-block; text-align: left;">
+  <div style="margin-bottom: 8px;">
+    <strong style="display: inline-block; width: 120px;">Código</strong>
+    <strong>Apellidos y Nombres</strong>
   </div>
-  <div>U202115277&nbsp;&nbsp;&nbsp;&nbsp;Delgado Perez, James Caleb</div>
-  <div>U202111529&nbsp;&nbsp;&nbsp;&nbsp;Montalvo Vasquez, Bruno Rodrigo</div>
-  <div>U202410211&nbsp;&nbsp;&nbsp;&nbsp;Manosalva Tovar, Miroslav</div>
-  <div>U202321613&nbsp;&nbsp;&nbsp;&nbsp;Paredes Chavez, Carlos Augusto</div>
-  <div>U202219829&nbsp;&nbsp;&nbsp;&nbsp;Daga Chávez, Joaquin Leonardo</div>
+  <div style="margin-bottom: 4px;">
+    <span style="display: inline-block; width: 120px;">U202115277</span>
+    <span>Delgado Perez, James Caleb</span>
+  </div>
+  <div style="margin-bottom: 4px;">
+    <span style="display: inline-block; width: 120px;">U202111529</span>
+    <span>Montalvo Vasquez, Bruno Rodrigo</span>
+  </div>
+  <div style="margin-bottom: 4px;">
+    <span style="display: inline-block; width: 120px;">U202410211</span>
+    <span>Manosalva Tovar, Miroslav</span>
+  </div>
+  <div style="margin-bottom: 4px;">
+    <span style="display: inline-block; width: 120px;">U202321613</span>
+    <span>Paredes Chavez, Carlos Augusto</span>
+  </div>
+  <div style="margin-bottom: 4px;">
+    <span style="display: inline-block; width: 120px;">U202219829</span>
+    <span>Daga Chávez, Joaquin Leonardo</span>
+  </div>
 </div>
 
+<p style="margin-top: 30px; margin-bottom: 12px;"><strong>Período 202620</strong></p>
 <br>
-
-<p style="margin-top: 25px; margin-bottom: 25px;"><strong>Período 202620</strong></p>
-
-<br>
-
 <p><strong>Octubre 2026</strong></p>
 
 </div>
