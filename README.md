@@ -4360,6 +4360,31 @@ En este Sprint se marca la transición hacia el desarrollo interactivo, enfocán
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
+En esta sección se presenta la matriz de Liderazgo y Colaboración (Leadership-and-Collaboration Matrix - LACX) definida para el Sprint 2. Para esta iteración, los aspectos funcionales se han organizado en cinco pilares principales, alineados con las historias de usuario completadas relacionadas con el registro, inicio de sesión, cierre de sesión, acceso diferenciado según el tipo de empresa y conexión entre la Landing Page y la Web Application.
+
+1. **Web App Access & Routing:** Configuración de la estructura de navegación de la Web Application, incluyendo las rutas necesarias para acceder a las vistas públicas y privadas, así como la redirección hacia el entorno correspondiente según el tipo de empresa autenticada.
+
+2. **IAM Presentation (Login & Register):** Diseño e implementación de las interfaces de registro e inicio de sesión, permitiendo que nuevos usuarios creen una cuenta, seleccionen el tipo de empresa al que pertenecen y que usuarios existentes accedan de forma segura a MaquiGest.
+
+3. **Session Management & Logout:** Gestión de la sesión del usuario dentro de la plataforma, permitiendo mantener el acceso mientras la sesión se encuentre activa y proporcionar una opción de cierre de sesión que finalice correctamente el acceso a la cuenta.
+
+4. **Role-Based Dashboard Access:** Implementación del acceso diferenciado después de la autenticación, de manera que las empresas de alquiler sean dirigidas al **Rental Company Dashboard** y las empresas constructoras o contratistas al **Construction Company Dashboard**, permitiendo que cada segmento acceda al entorno correspondiente a sus necesidades.
+
+5. **Landing Page to Web App Integration:** Integración de los principales call-to-action de la Landing Page con la Web Application, permitiendo que los visitantes puedan acceder directamente a las rutas de autenticación y registro de MaquiGest desde el sitio público.
+
+
+A continuación, se detalla la asignación de líderes (L) y colaboradores (C) para cada uno de estos aspectos
+
+
+
+| Member (Last Name, First Name) | GitHub Username | Web App Setup & Routing Leader (L) / Collaborator (C) | IAM Presentation (Login & Register) Leader (L) / Collaborator (C) | Session Management & Logout Leader (L) / Collaborator (C) | Role-Based Dashboard Access Leader (L) / Collaborator (C) | Landing Page to Web App Integration Leader (L) / Collaborator (C) | Testing & QA Leader (L) / Collaborator (C) |
+|---|---|---|---|---|---|---|---|
+| Delgado Perez, James Caleb | @JAmsy06 | L | C | C | C | C | C |
+| Montalvo Vasquez, Bruno Rodrigo | @TartaroZ | C | L | C | C | C | C |
+| Manosalva Tovar, Miroslav Oscar| @Miroa123 | C | C | L | C | C | C |
+| Daga Chávez, Joaquín Leonardo | @Eshnikeee | C | C | C | L | C | C |
+| Paredes Chávez, Carlos Augusto | @CarlossUPC | C | C | C | C | L | C |
+
 #### 5.2.2.3. Sprint Backlog 2
 
 #### 5.2.2.4. Development Evidence for Sprint Review
