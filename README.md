@@ -4521,6 +4521,52 @@ Enlace de Seguimiento: [Tablero en Trello](https://trello.com/invite/b/6ac6eb79d
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
+Completando el segundo Sprint (Sprint 2), logramos implementar y desplegar exitosamente las secciones principales de nuestra aplicación web MaquiGest, incluyendo la autenticación, la gestión de la plataforma y el diseño responsivo. A continuación, se detallan los avances del sistema a través de las evidencias de ejecución capturadas:
+
+1. **Landing Page y Acceso a la Plataforma:** Desde el sitio público de MaquiGest, los visitantes pueden consultar la propuesta de valor y hacer clic en el botón *"Ir a la aplicación"* para redirigirse al portal de autenticación.
+
+![Landing Page MaquiGest](assets/md-images-chapter5/execution1.png)
+
+2. **Inicio de Sesión (IAM):** Los usuarios registrados pueden ingresar sus credenciales (correo electrónico y contraseña) en la pantalla de inicio de sesión segura para ingresar a su espacio de trabajo.
+
+![Inicio de Sesión](assets/md-images-chapter5/execution2.png)
+
+3. **Dashboard de Empresa de Alquiler:** Una vez autenticado, el usuario accede al panel principal personalizado según su tipo de organización, donde puede visualizar el resumen operativo y la barra de navegación lateral.
+
+![Dashboard Principal](assets/md-images-chapter5/execution3.png)
+
+4. **Registro e Inventario de Maquinaria:** En la sección de equipamiento, la empresa puede registrar nuevas maquinarias completando información clave como código, nombre, descripción, categoría (excavadoras, cargadores, compactadores, generadores) y tarifa semanal.
+
+![Registro de Maquinaria](assets/md-images-chapter5/execution4.png)
+
+5. **Gestión de Solicitudes de Alquiler (Rental Requests):** Módulo que centraliza y permite filtrar por estado o fecha las solicitudes de alquiler recibidas por parte de las empresas constructoras.
+
+![Solicitudes de Alquiler](assets/md-images-chapter5/execution5.png)
+
+6. **Control de Operaciones de Alquiler (Rentals):** Vista operativa para monitorear los contratos confirmados, entregas pendientes de maquinaria en obra y fechas próximas de devolución.
+
+![Operaciones de Alquiler](assets/md-images-chapter5/execution6.png)
+
+7. **Gestión de Incidentes y Averías:** En la sección de mantenimiento, los usuarios pueden visualizar el historial de reportes de fallas de equipos e iniciar el registro de nuevas incidencias.
+
+![Gestión de Incidentes](assets/md-images-chapter5/execution7.png)
+
+8. **Programación de Mantenimiento:** Vista dedicada al seguimiento técnico preventivo y correctivo de la flota de maquinaria, mostrando contadores de registros completados, pendientes y equipos en taller.
+
+![Mantenimiento de Maquinaria](assets/md-images-chapter5/execution8.png)
+
+9. **Gestión de Planes y Suscripciones:** Módulo donde las empresas visualizan el estado de su plan activo (Growth), junto con las opciones disponibles (Essential, Professional) para realizar cambios o renovaciones de suscripción.
+
+![Planes y Suscripción](assets/md-images-chapter5/execution9.png)
+
+10. **Perfil de la Organización y Configuración:** Sección donde la empresa consulta y edita su información personal, de contacto y los datos legales de la organización registrada.
+
+![Perfil de Usuario y Empresa](assets/md-images-chapter5/execution10.png)
+
+---
+
+**Execution Evidence Video for Sprint 2 Review:** [Ver video de Execution Evidence Sprint 2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAwqQi2R2InR4-YR79VFdLbASSW4f6vc-y1ZfTtdcEs0EI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=z7LdCg)
+
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
