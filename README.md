@@ -203,6 +203,15 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
             - [5.2.1.6. Services Documentation Evidence for Sprint Review](#5216-services-documentation-evidence-for-sprint-review)
             - [5.2.1.7. Software Deployment Evidence for Sprint Review](#5217-software-deployment-evidence-for-sprint-review)
             - [5.2.1.8. Team Collaboration Insights during Sprint](#5218-team-collaboration-insights-during-sprint)
+        - [5.2.2. Sprint 2](#522-sprint-2)
+            - [5.2.2.1. Sprint Planning 2](#5221-sprint-planning-2)
+            - [5.2.2.2. Aspect Leaders and Collaborators](#5222-aspect-leaders-and-collaborators)
+            - [5.2.2.3. Sprint Backlog 2](#5223-sprint-backlog-2)
+            - [5.2.2.4. Development Evidence for Sprint Review](#5224-development-evidence-for-sprint-review)
+            - [5.2.2.5. Execution Evidence for Sprint Review](#5225-execution-evidence-for-sprint-review)
+            - [5.2.2.6. Services Documentation Evidence for Sprint Review](#5226-services-documentation-evidence-for-sprint-review)
+            - [5.2.2.7. Software Deployment Evidence for Sprint Review](#5227-software-deployment-evidence-for-sprint-review)
+            - [5.2.2.8. Team Collaboration Insights during Sprint](#5228-team-collaboration-insights-during-sprint)
 - [Conclusiones](#conclusiones)
     - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
 - [Bibliografía](#bibliografía)
@@ -4326,6 +4335,42 @@ La concentración de actividad registrada durante septiembre de 2026 corresponde
 La evidencia obtenida mediante GitHub permite establecer trazabilidad entre las contribuciones realizadas por los integrantes, los Work-Items definidos en el Sprint Backlog y los commits documentados previamente en la sección Development Evidence for Sprint Review.
 
 Asimismo, la participación registrada es consistente con la Leadership-and-Collaboration Matrix definida para el Sprint, en la que se distribuyeron responsabilidades relacionadas con la estructura del proyecto, las secciones informativas, los mecanismos de conversión, los recursos visuales y las actividades de despliegue.
+
+### 5.2.2. Sprint 2
+
+En este Sprint se marca la transición hacia el desarrollo interactivo, enfocándonos en la construcción y despliegue de la primera versión funcional de nuestra Frontend Web Application (SPA)
+
+#### 5.2.2.1. Sprint Planning 2
+
+| **Campo** | **Descripción** |
+|---|---|
+| **Sprint #** | **Sprint 2** |
+| | **Sprint Planning Background** |
+| **Date** | 2026-10-06 |
+| **Time** | 17:00 |
+| **Location** | Modalidad Remota por Discord |
+| **Prepared By** | Manosalva Tovar, Miroslav Oscar |
+| **Attendees** | Daga Chávez, Joaquín Leonardo / Delgado Perez, James Caleb / Manosalva Tovar, Miroslav Oscar / Montalvo Vasquez, Bruno Rodrigo / Paredes Chávez, Carlos Augusto |
+| **Sprint 1 Review Summary** | El equipo logró desarrollar y desplegar exitosamente la primera versión de la Landing Page de MaquiGest en GitHub Pages, completando los 27 Story Points comprometidos para el Sprint 1. Se implementaron las secciones destinadas a comunicar la propuesta de valor, funcionalidades principales, información de MaquiGest, segmentos objetivo, planes, solicitud de demostración y contacto. Asimismo, se implementó un diseño responsivo para diferentes dispositivos y soporte de internacionalización (i18n) para el cambio de idioma. |
+| **Sprint 1 Retrospective Summary** | El Sprint 1 permitió establecer una base sólida para la presencia pública de MaquiGest y validar la organización inicial del equipo. Como aspectos positivos, se logró completar el alcance comprometido y desplegar una Landing Page funcional, responsiva y con soporte para múltiples idiomas. Como oportunidad de mejora para el siguiente Sprint, se plantea reforzar la coordinación entre los integrantes, mejorar la distribución de responsabilidades y realizar validaciones más frecuentes durante el desarrollo para detectar ajustes antes del cierre de la iteración. |
+| | **Sprint Goal & User Stories.** |
+| **Sprint 2 Goal** | **Estamos concentrados en** brindar a los usuarios un entorno accesible y seguro donde puedan crear su cuenta, seleccionar el tipo de empresa al que pertenecen e ingresar por primera vez a su espacio de trabajo dentro de MaquiGest.<br><br>**Creemos que entregar** un proceso de registro e inicio de sesión claro, junto con una correcta diferenciación entre empresas de alquiler y empresas constructoras o contratistas, permitirá que los usuarios accedan rápidamente a las funcionalidades correspondientes a su rol dentro de la plataforma.<br><br>**Esto será confirmado cuando** los usuarios puedan registrarse sin inconvenientes, iniciar sesión de manera segura y acceder al dashboard correspondiente a su tipo de empresa, desde donde podrán comenzar a explorar las principales funcionalidades de MaquiGest. |
+| **Sprint 2 Velocity** | 97 Story Points |
+| **Sum of Story Points** | 97 Story Points |
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+#### 5.2.2.3. Sprint Backlog 2
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
 
 # Conclusiones
 
