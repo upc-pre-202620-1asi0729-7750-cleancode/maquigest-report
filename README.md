@@ -4634,6 +4634,63 @@ utilizaron los siguientes servicios web:
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
+Durante el Sprint 2, el equipo CleanCode trabajó colaborativamente en la estructura, desarrollo, integración y despliegue de la primera versión funcional de la Web Application de MaquiGest. Esta iteración permitió continuar el trabajo realizado durante el Sprint 1, pasando de la presentación de la propuesta de valor mediante el Landing Page hacia una primera experiencia funcional dentro de la plataforma.
+
+Git y GitHub fueron utilizados como herramientas principales para administrar el código fuente, coordinar el desarrollo de las funcionalidades y registrar las contribuciones realizadas durante la iteración. El trabajo se organizó mediante ramas destinadas al desarrollo de funcionalidades específicas, una rama `develop` utilizada para integración y la rama `main` correspondiente a la versión estable del producto.
+
+Durante este Sprint se trabajó principalmente en la configuración y estructura inicial de la Web Application, el sistema de navegación y routing, la presentación de los procesos de registro e inicio de sesión, el manejo de sesiones y cierre de sesión, la redirección hacia los dashboards según el tipo de empresa y la integración entre el Landing Page y la Web Application.
+
+Las contribuciones realizadas por los integrantes pueden observarse mediante las herramientas de análisis proporcionadas por GitHub.
+
+##### GitHub Contributors
+
+GitHub Contributors permite visualizar la participación de los integrantes del equipo en el repositorio `maquigest-website`.
+
+La distribución de commits no asociados con operaciones de merge registrada para el Sprint 1 fue la siguiente:
+
+| Team Member | GitHub Username | Commits |
+| --- | --- | ---: |
+| James Caleb Delgado Perez | `JAmsy06` | 31 |
+| Bruno Rodrigo Montalvo Vasquez | `TartaroZ` | 22 |
+| Miroslav Oscar Manosalva Tovar | `Miroa123` | 21 |
+| Joaquín Leonardo Daga Chávez | `Eshnikeee` | 21 |
+| Carlos Augusto Paredes Chávez | `CarlossUPC` | 21 |
+| **Total** |  | **116** |
+
+Las siguientes evidencias muestran las estadísticas individuales registradas por GitHub para los integrantes del equipo.
+
+<p align="center">
+  <img src="./assets/md-images-chapter5/teamcolabo1.png"
+       alt="MaquiGest Sprint 2 Collaboration Evidence - GitHub Contributors"
+       width="90%">
+</p>
+
+Las estadísticas permiten observar la participación de los cinco integrantes durante el desarrollo del Sprint 2. Las contribuciones estuvieron relacionadas con diferentes aspectos de la Web Application, incluyendo la configuración y estructura inicial del proyecto, routing y navegación, presentación de los procesos de autenticación y registro, manejo de sesiones y cierre de sesión, dashboards según el tipo de empresa, integración con el Landing Page, pruebas y actividades de despliegue.
+
+La distribución de responsabilidades se realizó de acuerdo con los aspectos definidos para el Sprint 2. James Caleb Delgado Perez participó como líder de Web App Setup & Routing; Bruno Rodrigo Montalvo Vasquez como líder de IAM Presentation; Miroslav Oscar Manosalva Tovar como líder de Session Management & Logout; Joaquín Leonardo Daga Chávez como líder de Role-Based Dashboard Access; y Carlos Augusto Paredes Chavez como líder de Landing Page to Web App Integration. Todos los integrantes participaron adicionalmente como colaboradores en los demás aspectos y en las actividades de Testing & QA.
+
+##### Commit Activity
+
+La sección de estadísticas de GitHub permite observar también la actividad general de commits realizada sobre el repositorio durante el Sprint 2.
+
+Durante este periodo se registró la actividad correspondiente al desarrollo e integración de la primera versión funcional de la Web Application de MaquiGest.
+
+<p align="center">
+  <img src="./assets/md-images-chapter5/teamcolabo2.png"
+       alt="MaquiGest Sprint 2 Collaboration Evidence - Commit Activity"
+       width="90%">
+</p>
+
+La actividad registrada durante octubre de 2026 corresponde al periodo de planificación, implementación, integración, pruebas y despliegue de la Web Application desarrollada durante el Sprint 2.
+
+Las contribuciones realizadas durante esta iteración permitieron establecer la estructura inicial de la aplicación frontend y desarrollar los principales flujos definidos para el Sprint. Entre ellos se encuentran el acceso a la Web Application, el registro de usuarios, el inicio de sesión, el manejo de sesión, el cierre de sesión y la redirección hacia los dashboards correspondientes según el tipo de empresa.
+
+Asimismo, se trabajó en la integración entre el Landing Page y la Web Application, permitiendo que los Call-to-Action definidos en el Landing Page conduzcan hacia la experiencia de la aplicación. De esta manera, se estableció una continuidad entre el trabajo realizado durante el Sprint 1 y la nueva funcionalidad desarrollada durante el Sprint 2.
+
+La evidencia obtenida mediante GitHub permite establecer trazabilidad entre las contribuciones realizadas por los integrantes, los Work-Items definidos en el Sprint Backlog 2 y los commits asociados al desarrollo de la Web Application.
+
+Asimismo, la actividad registrada es consistente con la Leadership-and-Collaboration Matrix definida para el Sprint 2, en la que se distribuyeron responsabilidades relacionadas con la configuración y routing de la Web Application, la presentación de los procesos de registro e inicio de sesión, la gestión de sesiones, el acceso a dashboards según el tipo de empresa, la integración con el Landing Page y las actividades de Testing & QA.
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
