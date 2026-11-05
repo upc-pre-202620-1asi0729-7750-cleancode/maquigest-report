@@ -5086,7 +5086,34 @@ Al corte de esta documentación, el RESTful Web Service todavía no cuenta con u
 El Sprint 3 permitió preparar la implementación del backend y la integración local con Angular. El despliegue público, la configuración de la base de datos cloud y la publicación de las versiones estables continúan pendientes. Esta sección deberá actualizarse con los proveedores, URLs, versiones y capturas definitivas antes de cerrar AV2.
 
 
+#### 5.2.3.8. Team Collaboration Insights during Sprint
 
+Durante el Sprint 3, el trabajo de implementación se concentró en la creación del RESTful Web Service y en la adaptación de la Web Application para consumir el backend. GitHub fue utilizado para organizar las funcionalidades mediante ramas feature y consolidarlas en `develop`.
+
+En `maquigest-platform` se utilizaron ramas independientes para configuración, Shared, IAM, Inventory, Subscriptions, Rentals, Profiles y Maintenance. En `maquigest-webapp` se utilizaron ramas para retirar la Fake API, implementar el historial de maquinaria y alinear los procesos de Inventory, Rentals y Maintenance con los contratos del backend.
+
+##### GitHub Contributors
+
+Al corte actual, el historial verificable de Sprint 3 presenta la siguiente distribución de commits sin incluir operaciones de merge:
+
+| Team Member | GitHub Username | maquigest-platform | maquigest-webapp | Total |
+|---|---|---:|---:|---:|
+| James Caleb Delgado Perez | `JAmsy06` | - | - | - |
+| Bruno Rodrigo Montalvo Vasquez | `TartaroZ` | - | - | - |
+| Miroslav Oscar Manosalva Tovar | `Miroa123` | - | - | - |
+| Carlos Augusto Paredes Chávez | `CarlossUPC` | - | - | - |
+| **Total** |  | **-** | **-** | **-** |
+<!-- | Joaquín Leonardo Daga Chávez | `Eshnikeee` | - | - | - | -->
+
+
+
+<!-- Poner la captura de GitHub Contributors de maquigest-platform y de GitHub Contributors de maquigest-webapp. -->
+
+##### Commit Activity
+
+La sección de estadísticas de GitHub permite observar también la actividad general de commits realizada sobre el repositorio durante el Sprint 3.
+
+<!-- agregar captura de Commit Activity de maquigest-platform. -->
 
 
 ---
