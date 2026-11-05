@@ -4812,6 +4812,39 @@ El Sprint 3 representa la transición de MaquiGest desde una Web Application res
 | **Sum of Story Points** | 94 Story Points |
 
 
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+En esta sección se presenta la Leadership-and-Collaboration Matrix definida para el Sprint 3. Los aspectos de la iteración corresponden a la implementación del RESTful Web Service, la integración con la Web Application y la preparación de la primera versión desplegable del backend.
+
+Los aspectos considerados son los siguientes:
+
+1. **Platform Architecture & Shared:** configuración de Spring Boot, perfiles de ejecución, persistencia, manejo común de resultados, errores, internacionalización y documentación OpenAPI.
+
+2. **IAM & Profiles:** registro de usuarios, autenticación con JWT, autorización, roles y administración de perfiles empresariales.
+
+3. **Inventory & Subscriptions:** gestión de maquinaria, categorías, disponibilidad, estados operativos, planes y suscripciones.
+
+4. **Rentals:** solicitudes de alquiler, aprobación, rechazo, reprogramación, reservas, entregas y devoluciones.
+
+5. **Maintenance:** incidencias, restricciones operativas, programación de mantenimiento e historial de maquinaria.
+
+6. **Web Application Integration:** retiro de la Fake API, adaptación de los servicios Angular y alineación de los contratos utilizados por el frontend.
+
+7. **Testing, Documentation & Deployment:** pruebas del dominio y aplicación, documentación Swagger y preparación del despliegue.
+
+La siguiente matriz conserva únicamente el liderazgo verificable mediante el historial actual de GitHub. Las participaciones adicionales deberán completarse según la distribución real acordada por el equipo.
+
+| Member (Last Name, First Name) | GitHub Username Leader (L) / Collaborator (C) | Platform & Shared Leader (L) / Collaborator (C) | IAM & Profiles Leader (L) / Collaborator (C) | Inventory & Subscriptions Leader (L) / Collaborator (C) | Rentals Leader (L) / Collaborator (C) | Maintenance Leader (L) / Collaborator (C) | Web App Integration Leader (L) / Collaborator (C) | Testing, Documentation & Deployment Leader (L) / Collaborator (C) |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Delgado Perez, James Caleb | `@JAmsy06` | C | L | L | C | C | C | L |
+| Montalvo Vasquez, Bruno Rodrigo | `@TartaroZ` | C | C | L | C | C | L | C |
+| Manosalva Tovar, Miroslav Oscar | `@Miroa123` | L | C | C | L | C | L | C |
+| Paredes Chávez, Carlos Augusto | `@CarlossUPC` | C | C | C | C | C | C | L |
+
+<!-- Ya lo modifican si quieren -->
+
+---
+
 
 
 ---
