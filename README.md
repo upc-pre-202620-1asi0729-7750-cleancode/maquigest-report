@@ -4960,6 +4960,71 @@ A continuación, se describen los escenarios que forman parte de la revisión de
 <!-- Subir video del evidence al Clipchamp con el nombre: upc-pre-202620-1asi0729-7750-cleancode-execution-evidence-sprint-3.mp4 -->
 
 
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 3 se incorporó Springdoc OpenAPI para generar la documentación de los recursos de `maquigest-platform`. Los endpoints se encuentran agrupados según los bounded contexts y pueden consultarse desde Swagger UI.
+
+**Repositorio del Web Service:** [maquigest-platform](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform)
+
+**Documentación local:** `http://localhost:8080/swagger-ui/index.html`
+
+**Especificación OpenAPI local:** `http://localhost:8080/v3/api-docs`
+
+**Documentación desplegada:** <!-- despliegue en render o en otro, algo así -->
+
+Exceptuando el registro, el inicio de sesión y la consulta de categorías, los recursos requieren un token JWT enviado mediante el encabezado `Authorization: Bearer <token>`.
+
+| Contexto | Método | Endpoint | Parámetro | Respuesta esperada |
+|---|:---:|---|---|---|
+| IAM | POST | `/api/v1/authentication/sign-up` | `firstName`, `lastName`, `email`, `password`, `companyName`, `role` | `201 Created`: cuenta empresarial registrada. |
+| IAM | POST | `/api/v1/authentication/sign-in` | `email`, `password` | `200 OK`: usuario autenticado y token JWT. |
+| IAM | GET | `/api/v1/authentication/me` | JWT | `200 OK`: correo y autoridades del usuario autenticado. |
+| Profiles | GET | `/api/v1/profiles` | Query opcional `userId` | `200 OK`: lista de perfiles empresariales. |
+| Profiles | GET | `/api/v1/profiles/{id}` | Path `id` | `200 OK`: perfil solicitado. |
+| Profiles | POST | `/api/v1/profiles` | Datos personales, empresa, contacto y dirección | `201 Created`: perfil creado. |
+| Profiles | PUT | `/api/v1/profiles/{id}` | Path `id` y datos actualizados | `200 OK`: perfil actualizado. |
+| Inventory | GET | `/api/v1/equipment-categories` | Sin parámetros | `200 OK`: categorías registradas. |
+| Inventory | GET | `/api/v1/equipment` | Query opcional `userId` | `200 OK`: maquinaria del marketplace o del propietario. |
+| Inventory | GET | `/api/v1/equipment/{id}` | Path `id` | `200 OK`: información de la maquinaria. |
+| Inventory | POST | `/api/v1/equipment` | `userId`, `code`, `name`, `description`, `categoryId`, `location`, tarifas y estado | `201 Created`: maquinaria registrada. |
+| Inventory | PATCH | `/api/v1/equipment/{id}` | Path `id` y datos editables | `200 OK`: maquinaria actualizada. |
+| Inventory | POST | `/api/v1/equipment/{id}/availability-blocks` | `startDate`, `endDate` | `201 Created`: periodo reservado. |
+| Inventory | PATCH | `/api/v1/equipment/{id}/operational-status` | `status` | `200 OK`: estado operativo actualizado. |
+| Inventory | DELETE | `/api/v1/equipment/{id}` | Path `id` | `204 No Content`: maquinaria eliminada. |
+| Inventory | GET | `/api/v1/equipment/{id}/availability` | Query `startDate`, `endDate` | `200 OK`: disponibilidad del periodo. |
+| Subscriptions | GET | `/api/v1/subscription-plans` | JWT | `200 OK`: planes disponibles. |
+| Subscriptions | GET | `/api/v1/user-subscriptions` | JWT | `200 OK`: suscripciones registradas. |
+| Subscriptions | GET | `/api/v1/user-subscriptions/{id}` | Path `id` | `200 OK`: suscripción solicitada. |
+| Subscriptions | POST | `/api/v1/user-subscriptions` | `userId`, `planId`, `startDate`, `endDate`, `status`, `autoRenew` | `201 Created`: suscripción creada. |
+| Subscriptions | PATCH | `/api/v1/user-subscriptions/{id}/cancel` | Path `id` | `200 OK`: suscripción cancelada. |
+| Rentals | GET | `/api/v1/rental-requests` | JWT | `200 OK`: solicitudes relacionadas con el usuario. |
+| Rentals | GET | `/api/v1/rental-requests/{id}` | Path `id` | `200 OK`: solicitud consultada. |
+| Rentals | POST | `/api/v1/rental-requests` | Maquinaria, participantes y periodo | `201 Created`: solicitud pendiente registrada. |
+| Rentals | PATCH | `/api/v1/rental-requests/{id}/period` | `startDate`, `endDate` | `200 OK`: periodo de la solicitud pendiente actualizado. |
+| Rentals | PUT | `/api/v1/rental-requests/{id}` | Datos de la solicitud y nuevo estado | `200 OK`: solicitud aprobada o rechazada. |
+| Rentals | GET | `/api/v1/rentals` | JWT | `200 OK`: alquileres relacionados con el usuario. |
+| Rentals | GET | `/api/v1/rentals/{id}` | Path `id` | `200 OK`: alquiler solicitado. |
+| Rentals | POST | `/api/v1/rentals` | Recurso de alquiler | `409 Conflict`: la creación directa está bloqueada; el alquiler se genera al aprobar una solicitud. |
+| Rentals | PUT | `/api/v1/rentals/{id}` | Recurso de alquiler | `200 OK` únicamente para lectura compatible sin cambios; las transiciones se ejecutan mediante entregas y devoluciones. |
+| Rentals | GET | `/api/v1/deliveries` | JWT | `200 OK`: entregas visibles para el usuario. |
+| Rentals | POST | `/api/v1/deliveries` | `rentalId`, `deliveredAt`, `notes` | `201 Created`: entrega registrada y alquiler activado. |
+| Rentals | GET | `/api/v1/equipment-returns` | JWT | `200 OK`: devoluciones visibles para el usuario. |
+| Rentals | POST | `/api/v1/equipment-returns` | `rentalId`, `returnedAt`, `notes`, `maintenanceRequired` | `201 Created`: devolución registrada y reserva liberada. |
+| Maintenance | GET | `/api/v1/incidents` | Query opcional `equipmentId` | `200 OK`: incidencias relacionadas con la empresa o maquinaria. |
+| Maintenance | GET | `/api/v1/incidents/{id}` | Path `id` | `200 OK`: incidencia solicitada. |
+| Maintenance | POST | `/api/v1/incidents` | `equipmentId`, `description`, `blocksRental` | `201 Created`: incidencia registrada. |
+| Maintenance | PATCH | `/api/v1/incidents/{id}` | `blocksRental`, `status`, `resolvedAt` | `200 OK`: incidencia actualizada o resuelta. |
+| Maintenance | POST | `/api/v1/incidents/equipment/{equipmentId}/reactivate` | `inspectionConfirmed` | `204 No Content`: maquinaria reactivada después de las validaciones. |
+| Maintenance | GET | `/api/v1/maintenances` | Query opcional `equipmentId` | `200 OK`: mantenimientos de la empresa autenticada. |
+| Maintenance | GET | `/api/v1/maintenances/{id}` | Path `id` | `200 OK`: mantenimiento solicitado. |
+| Maintenance | POST | `/api/v1/maintenances` | `equipmentId`, `performedAt`, `type`, `status` | `201 Created`: mantenimiento registrado o programado. |
+| Maintenance | PATCH | `/api/v1/maintenances/{id}` | `status`, `technician`, `acknowledge`, `notes` | `200 OK`: estado o avance actualizado. |
+| Maintenance | GET | `/api/v1/maintenances/{id}/activities` | Path `id` | `200 OK`: actividades del mantenimiento. |
+| Maintenance | GET | `/api/v1/maintenances/equipment/{equipmentId}/history` | Path `equipmentId` | `200 OK`: historial combinado de la maquinaria. |
+
+
+
+
 ---
 # Conclusiones
 
