@@ -4789,6 +4789,32 @@ La evidencia obtenida mediante GitHub permite establecer trazabilidad entre las 
 
 Asimismo, la actividad registrada es consistente con la Leadership-and-Collaboration Matrix definida para el Sprint 2, en la que se distribuyeron responsabilidades relacionadas con la configuración y routing de la Web Application, la presentación de los procesos de registro e inicio de sesión, la gestión de sesiones, el acceso a dashboards según el tipo de empresa, la integración con el Landing Page y las actividades de Testing & QA.
 
+### 5.2.3. Sprint 3
+
+El Sprint 3 representa la transición de MaquiGest desde una Web Application respaldada por una API simulada hacia una solución distribuida que incorpora un RESTful Web Service desarrollado con Java, Spring Boot, Spring Data JPA y MySQL.
+
+#### 5.2.3.1. Sprint Planning 3
+
+| **Campo** | **Descripción** |
+|---|---|
+| **Sprint #** | **Sprint 3** |
+|  | **Sprint Planning Background** |
+| **Date** | 2026-11-04 |
+| **Time** | 17:00 |
+| **Location** | Modalidad remota mediante Discord |
+| **Prepared By** | James Caleb |
+| **Attendees** | Daga Chávez, Joaquín Leonardo / Delgado Perez, James Caleb / Manosalva Tovar, Miroslav Oscar / Montalvo Vasquez, Bruno Rodrigo / Paredes Chávez, Carlos Augusto |
+| **Sprint 2 Review Summary** | Durante el Sprint 2 se implementó y desplegó la primera versión funcional de la Web Application de MaquiGest. La solución permitió presentar los procesos de autenticación, gestión de perfiles, maquinaria, solicitudes de alquiler, mantenimiento y suscripciones mediante una API de demostración desarrollada con JSON Server. También se integró la Landing Page con la Web Application y se publicaron ambas experiencias en Netlify y Vercel. |
+| **Sprint 2 Retrospective Summary** | El uso de una API simulada permitió validar anticipadamente las interfaces y los principales recorridos de la Web Application. Sin embargo, se identificó la necesidad de reemplazar la persistencia temporal por un backend que centralice las reglas del negocio, la seguridad, la autorización y el almacenamiento en MySQL. También se determinó que era necesario mejorar la trazabilidad entre los modelos DDD, los endpoints y las funcionalidades presentadas en Angular. |
+|  | **Sprint Goal & User Stories** |
+| **Sprint 3 Goal** | **Estamos concentrados en** implementar el primer RESTful Web Service de MaquiGest y conectarlo con la Web Application para respaldar los principales procesos operativos con reglas de negocio, seguridad y persistencia real.<br><br>**Creemos que entregar** una API organizada por bounded contexts, protegida mediante JWT y conectada con Angular permitirá sustituir la API simulada y disponer de una base técnica coherente con la arquitectura definida para el producto.<br><br>**Esto será confirmado cuando** los usuarios puedan registrarse, autenticarse y ejecutar los principales procesos de perfiles, maquinaria, alquileres, mantenimiento y suscripciones mediante los recursos de `maquigest-platform`, y cuando dichos recursos puedan consultarse mediante OpenAPI y Swagger. |
+| **Sprint 3 Velocity** | 86 Story Points completados en `develop`; 8 Story Points permanecen en progreso por funcionalidades externas pendientes. |
+| **Sum of Story Points** | 94 Story Points |
+
+
+
+
+---
 # Conclusiones
 
 ## Conclusiones y recomendaciones
