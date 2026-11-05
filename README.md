@@ -5121,25 +5121,39 @@ La sección de estadísticas de GitHub permite observar también la actividad ge
 
 ## Conclusiones y recomendaciones
 
-Durante el desarrollo de la TB1 se logró avanzar desde la definición inicial de MaquiGest hacia una primera versión funcional de la Web Application, complementando el trabajo realizado durante el Sprint 1 con las funcionalidades y artefactos correspondientes al Sprint 2. Esta entrega permitió continuar la evolución de la solución y validar aspectos relacionados con el acceso de los usuarios, la autenticación, el manejo de sesiones y la navegación según el tipo de empresa.
+Durante el Sprint 1, MaquiGest estableció su presencia pública mediante la implementación y despliegue de la Landing Page. Este producto permitió comunicar la propuesta de valor, los segmentos objetivo, las principales funcionalidades y los planes de la solución. También se incorporaron diseño responsivo, cambio de idioma y enlaces hacia la Web Application.
 
-En relación con los requisitos y la planificación del producto, se actualizaron las User Stories y el Product Backlog a partir de las observaciones recibidas en la entrega anterior. Se incorporaron Technical Stories relacionadas con el RESTful API, permitiendo representar de manera más completa los requerimientos técnicos que deberán soportar las funcionalidades de MaquiGest. Asimismo, se actualizaron las relaciones entre los requisitos funcionales y técnicos, mejorando la trazabilidad entre las necesidades del producto y la futura implementación de la solución.
+En el Sprint 2 se desarrolló y desplegó la primera versión de la Web Application con Angular. Esta versión presentó interfaces para autenticación, perfiles, inventario, solicitudes de alquiler, entregas, devoluciones, mantenimiento y suscripciones. Para demostrar estos recorridos se utilizó una API temporal desarrollada con JSON Server, desplegada en Render, mientras que la aplicación fue publicada en Vercel.
 
-Respecto a los artefactos de análisis y Lean UX, se realizaron correcciones al Problem Statement y a los Hypothesis Statements. El Problem Statement fue complementado con indicadores cuantificables que permiten establecer criterios para evaluar el valor generado por MaquiGest, mientras que los Hypothesis Statements fueron reformulados siguiendo el template de Lean UX, incorporando el Business Outcome, los usuarios involucrados, el User Outcome y la Feature propuesta. También se reorganizaron los User Flows, dividiendo el flujo original en Authentication and Registration User Flow, Rental Company Core Domain User Flow y Construction Company Core Domain User Flow, facilitando la comprensión de los recorridos principales de cada tipo de usuario.
+Durante el Sprint 3 se avanzó desde el uso de información simulada hacia un RESTful Web Service propio. El backend se desarrolló con Java, Spring Boot, Spring Data JPA y MySQL, y fue organizado mediante los bounded contexts IAM, Profiles, Inventory, Rentals, Maintenance, Subscriptions y Shared.
 
-A nivel de modelado y arquitectura, se realizaron correcciones y actualizaciones en los diagramas C4 y en los diagramas de clases correspondientes a los diferentes bounded contexts de MaquiGest. Estas modificaciones permitieron mejorar la representación de la estructura de la solución y mantener una mayor coherencia entre los conceptos del dominio, las responsabilidades de los componentes y las funcionalidades definidas en el Product Backlog. Asimismo, se realizaron correcciones en el Design-Level EventStorming, organizando los diagramas por Bounded Context e incorporando una leyenda estandarizada para representar actores, comandos, agregados, eventos de dominio, modelos de lectura, políticas y reglas de negocio.
+La implementación del backend sigue una separación entre dominio, aplicación, infraestructura e interfaces. También distingue los objetos del dominio de las entidades utilizadas para persistencia con JPA. Esta organización permite mantener las reglas del negocio separadas de los controladores REST y de la tecnología utilizada para almacenar la información.
 
-Durante el Sprint 2 se desarrolló la estructura, implementación y despliegue de la Web Application de MaquiGest. Se trabajó en la configuración inicial de la aplicación, el sistema de navegación y routing, la presentación de los procesos de registro e inicio de sesión, el manejo de sesión y cierre de sesión, así como la redirección hacia los dashboards correspondientes según el tipo de empresa. De esta manera, se obtuvo una primera versión funcional del entorno web que permite establecer la base para la incorporación progresiva de las funcionalidades principales de la plataforma.
+El backend implementa registro e inicio de sesión mediante JWT, perfiles empresariales, inventario de maquinaria, disponibilidad por periodos, solicitudes de alquiler, aprobación y rechazo, entregas, devoluciones, incidencias, mantenimiento, historial operativo, planes y suscripciones. Además, incorpora documentación OpenAPI, manejo de errores con `ProblemDetail`, mensajes internacionalizados y pruebas para componentes del dominio y de la aplicación.
 
-Asimismo, se avanzó en la integración entre la Landing Page y la Web Application mediante los Call-to-Action definidos para dirigir a los visitantes hacia la experiencia de la aplicación. Este avance permite conectar el trabajo realizado durante el Sprint 1 con la nueva iteración y establece una transición más coherente entre la presentación de la propuesta de valor de MaquiGest y el acceso a sus funcionalidades.
+La rama `develop` de `maquigest-webapp` fue desacoplada de la Fake API y configurada para consumir los recursos de `maquigest-platform` mediante `/api/v1`. La integración actual está preparada para ejecutarse localmente mediante un proxy que conecta Angular con el backend en el puerto 8080.
 
-En relación con la gestión del desarrollo, el equipo mantuvo el trabajo colaborativo mediante Git y GitHub, organizando las actividades del Sprint 2 y registrando las evidencias correspondientes al desarrollo, despliegue y colaboración. La definición de líderes y colaboradores para los diferentes aspectos del Sprint permitió distribuir responsabilidades entre los integrantes y facilitar el seguimiento de las actividades realizadas. Asimismo, las evidencias documentadas permiten mantener trazabilidad sobre la evolución de la solución durante esta iteración.
+### Recomendaciones
 
-Como resultado de la TB1, MaquiGest cuenta con una base funcional más completa para continuar con el desarrollo de las funcionalidades definidas en el Product Backlog. La Web Application establece la estructura necesaria para que los siguientes Sprints incorporen progresivamente las funcionalidades propias de la gestión de maquinaria, solicitudes de alquiler, reservas, entregas, devoluciones, mantenimiento y demás procesos definidos para la solución.
+1. Desplegar `maquigest-platform` junto con una instancia MySQL y publicar Swagger UI mediante una URL accesible desde Internet.
 
-Como recomendación para los siguientes Sprints, se deberá continuar manteniendo la trazabilidad entre User Stories, Technical Stories, Product Backlog, Sprint Backlog, Tasks, evidencias y commits, procurando que las funcionalidades implementadas permanezcan alineadas con los requisitos definidos. También será necesario continuar desarrollando el RESTful API y su integración con la Web Application, respetando la arquitectura basada en Domain-Driven Design y la separación de responsabilidades entre las capas y bounded contexts establecidos.
+2. Configurar la versión de producción de la Web Application para consumir el backend desplegado y registrar el dominio de Vercel dentro de los orígenes permitidos por CORS.
 
-Finalmente, se recomienda continuar validando las funcionalidades implementadas mediante pruebas y revisiones progresivas, especialmente en los procesos de autenticación, manejo de sesiones, navegación y control de acceso según el tipo de usuario. En las siguientes iteraciones también deberá mantenerse la consideración de aspectos como responsive design, accessibility, internationalization, documentación, despliegue e integración con los servicios externos definidos para MaquiGest, asegurando que la evolución de la solución mantenga coherencia funcional, técnica y de experiencia de usuario.
+3. Completar las notificaciones externas asociadas con la creación, aprobación y rechazo de solicitudes de alquiler, debido a que forman parte de los criterios de aceptación de US14 y US19.
+
+4. Implementar o retirar temporalmente la opción de recuperación de contraseña de la Web Application, ya que actualmente el frontend utiliza un endpoint que todavía no existe en el backend.
+
+5. Ejecutar pruebas de integración que cubran el recorrido completo entre Angular, Spring Boot y MySQL, incluyendo autenticación, maquinaria, solicitudes, entregas, devoluciones, mantenimiento y suscripciones.
+
+6. Revisar la correspondencia entre los Value Objects definidos en los diagramas de clases y los tipos utilizados por los modelos de dominio del backend.
+
+7. Incorporar un README en `maquigest-platform` con instrucciones de configuración, variables de entorno, perfiles de ejecución, pruebas y acceso a Swagger.
+
+8. Publicar versiones estables mediante ramas release y tags basados en Semantic Versioning, manteniendo sincronizadas las ramas `develop` y `main`.
+
+9. Mantener la trazabilidad entre Product Backlog, Sprint Backlog, commits, Pull Requests, endpoints, evidencias de ejecución y documentación del informe.
+
+---
 
 # Bibliografía
 
