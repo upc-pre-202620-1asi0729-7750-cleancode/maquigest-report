@@ -4843,7 +4843,47 @@ La siguiente matriz conserva únicamente el liderazgo verificable mediante el hi
 
 <!-- Ya lo modifican si quieren -->
 
----
+#### 5.2.3.3. Sprint Backlog 3
+
+El Sprint Backlog 3 se enfoca en la implementación e integración de los principales procesos funcionales de MaquiGest mediante el nuevo RESTful Web Service. Para mantener la relación con el Product Backlog, se utilizan los identificadores y Story Points previamente definidos para cada User Story.
+
+Enlace de seguimiento: [Tablero de Sprint Backlog 3](PENDIENTE)
+
+<!-- <img src="assets/images/chapter-5/trello-sprint-backlog-3.PNG" alt="trello-sprint-backlog-3"> -->
+
+| Sprint # | Sprint 3 |
+|:---|:---|
+
+| Story Id | Story Title | Task Id | Task Title | Task Description | Story Points | Assigned To | Status |
+|:---:|---|:---:|---|---|:---:|---|---|
+| US01 | Registro de usuario | T3-01 | Integrar registro con IAM | Implementar el registro de cuentas empresariales, validación de información, asignación de roles y persistencia segura de contraseñas. | 5 | `JAmsy06` | Done |
+| US02 | Inicio de sesión | T3-02 | Implementar autenticación JWT | Validar credenciales, emitir el token JWT y proteger los recursos que requieren autenticación. | 3 | `JAmsy06` | Done |
+| US03 | Gestionar perfil | T3-03 | Integrar perfiles empresariales | Permitir consultar, crear y actualizar el perfil correspondiente al usuario autenticado. | 3 | `JAmsy06` | Done |
+| US06 | Registrar maquinaria | T3-04 | Integrar registro de maquinaria | Implementar el registro de maquinaria con validación de propiedad, categoría, ubicación y tarifas. | 5 | `JAmsy06` | Done |
+| US07 | Consultar maquinaria | T3-05 | Consultar inventario y marketplace | Exponer el listado de maquinaria y permitir filtrar los equipos según su propietario. | 3 | `JAmsy06` | Done |
+| US08 | Actualizar información de maquinaria | T3-06 | Actualizar maquinaria registrada | Permitir que una empresa de alquiler modifique únicamente la maquinaria que le pertenece. | 3 | `JAmsy06` | Done |
+| US09 | Consultar disponibilidad de maquinaria | T3-07 | Integrar disponibilidad operativa | Consultar la disponibilidad y los periodos reservados de una maquinaria. | 5 | `JAmsy06` | Done |
+| US10 | Consultar estado de maquinaria | T3-08 | Gestionar estado operativo | Mostrar y actualizar el estado operativo de la maquinaria respetando las transiciones permitidas. | 3 | `JAmsy06` | Done |
+| US11 | Buscar maquinaria | T3-09 | Integrar búsqueda de maquinaria | Obtener la maquinaria disponible y aplicar los criterios de búsqueda utilizados por la Web Application. | 5 | `JAmsy06` | Done |
+| US12 | Consultar información de maquinaria | T3-10 | Consultar detalle de equipo | Exponer la información completa de una maquinaria mediante su identificador. | 3 | `JAmsy06` | Done |
+| US13 | Consultar disponibilidad para un periodo | T3-11 | Validar disponibilidad por fechas | Evaluar si una maquinaria se encuentra disponible durante un rango inclusivo de fechas. | 5 | `JAmsy06` | Done |
+| US14 | Solicitar alquiler de maquinaria | T3-12 | Registrar solicitud de alquiler | Crear solicitudes pendientes, validar disponibilidad y evitar solicitudes duplicadas o superpuestas. La notificación externa permanece pendiente. | 5 | `JAmsy06` | In Progress |
+| US15 | Consultar planes | T3-13 | Exponer catálogo de planes | Permitir que la Web Application consulte los planes de suscripción configurados. | 3 | `JAmsy06` | Done |
+| US16 | Seleccionar plan | T3-14 | Registrar selección de plan | Permitir que una empresa de alquiler cree una suscripción asociada con un plan activo. | 3 | `JAmsy06` | Done |
+| US17 | Gestionar suscripción | T3-15 | Consultar y cancelar suscripción | Mostrar la suscripción seleccionada y permitir su cancelación por parte de su propietario. | 5 | `JAmsy06` | Done |
+| US18 | Gestionar solicitudes de alquiler | T3-16 | Consultar solicitudes recibidas | Mostrar las solicitudes relacionadas con el usuario autenticado y permitir consultar sus detalles. | 5 | `JAmsy06` | Done |
+| US19 | Confirmar o rechazar una solicitud | T3-17 | Resolver solicitud pendiente | Permitir aprobar o rechazar una solicitud y crear el alquiler y la reserva de manera transaccional. La notificación por correo permanece pendiente. | 3 | `JAmsy06` | In Progress |
+| US20 | Consultar alquileres activos | T3-18 | Consultar operaciones de alquiler | Mostrar los alquileres en los que participa la empresa autenticada. | 3 | `JAmsy06` | Done |
+| US21 | Consultar estado de una solicitud de alquiler | T3-19 | Consultar solicitudes propias | Permitir que la empresa constructora consulte el estado actual de sus solicitudes. | 3 | `JAmsy06` | Done |
+| US22 | Gestionar entregas y devoluciones | T3-20 | Integrar ciclo de entrega y devolución | Registrar entregas y devoluciones, actualizar el alquiler y liberar la reserva correspondiente. | 5 | `JAmsy06` | Done |
+| US23 | Registrar mantenimiento | T3-21 | Registrar intervención realizada | Permitir registrar mantenimientos completados asociados con una maquinaria. | 5 | `JAmsy06` | Done |
+| US24 | Programar mantenimiento | T3-22 | Programar mantenimiento futuro | Permitir registrar y consultar mantenimientos programados para una maquinaria. | 3 | `JAmsy06` | Done |
+| US25 | Registrar incidencia de maquinaria | T3-23 | Integrar gestión de incidencias | Registrar incidencias y bloquear la disponibilidad de la maquinaria cuando corresponda. | 3 | `JAmsy06` | Done |
+| US26 | Consultar historial de maquinaria | T3-24 | Integrar historial operativo | Presentar una línea de tiempo con alquileres, incidencias, mantenimientos y actividades de una maquinaria. | 5 | `JAmsy06` | Done |
+
+<!--Ahí lo chequean-->
+
+
 
 
 
