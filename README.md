@@ -3204,11 +3204,7 @@ De esta manera, Shared Frontend evita duplicar capacidades técnicas y visuales 
 
 #### Backend General Components Diagram
 
-El Backend General Components Diagram presenta la organización general de la MaquiGest API Application implementada con Java y Spring Boot.
-
-El contenedor backend está organizado alrededor de seis bounded contexts de negocio: IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Adicionalmente, un componente Shared proporciona capacidades técnicas y transversales reutilizables por los diferentes contextos del backend.
-
-La Single Page Application desarrollada con Angular aparece fuera del límite del backend debido a que actúa como cliente de los servicios REST expuestos por la aplicación. De igual manera, la base de datos MySQL se representa fuera del límite de componentes del backend como el contenedor encargado de la persistencia de la información.
+El Backend General Components Diagram presenta la organización de MaquiGest Backend API en los bounded contexts IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. El componente Shared proporciona capacidades transversales, mientras que las integraciones entre contextos se realizan mediante contratos publicados, fachadas y Anti-Corruption Layers. La aplicación Angular consume los servicios REST y MySQL almacena la información administrada por cada contexto.
 
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-general-component-diagram.png"
@@ -3218,11 +3214,7 @@ La Single Page Application desarrollada con Angular aparece fuera del límite de
 
 #### IAM Backend Component Diagram
 
-El bounded context IAM del backend administra la autenticación, autorización, credenciales, usuarios, roles y control de acceso.
-
-La Interfaces Layer expone los endpoints REST relacionados con autenticación, registro y administración de cuentas. La Application Layer coordina los casos de uso correspondientes y delega las decisiones de negocio a la Domain Layer. Por su parte, la Infrastructure Layer proporciona los mecanismos de persistencia y adaptadores técnicos necesarios.
-
-Las capacidades relacionadas con seguridad son proporcionadas mediante mecanismos como Spring Security, codificación de contraseñas y autenticación basada en tokens. Además, este contexto puede comunicarse con el servicio externo de correo transaccional para soportar operaciones como recuperación de contraseña y notificaciones relacionadas con la cuenta.
+El IAM Backend Component Diagram representa los componentes responsables del registro, autenticación, autorización y administración de roles. Los servicios de aplicación utilizan los repositorios del dominio y los puertos de hashing y generación de tokens, implementados en Infrastructure mediante JPA, BCrypt y JWT. Las fachadas publicadas permiten que otros bounded contexts consulten información de identidad sin acceder al modelo interno de IAM.
 
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-iam-component-diagram.png"
@@ -3232,11 +3224,7 @@ Las capacidades relacionadas con seguridad son proporcionadas mediante mecanismo
 
 #### Profiles Backend Component Diagram
 
-El bounded context Profiles del backend administra la información correspondiente a usuarios, empresas, proveedores y clientes.
-
-La Interfaces Layer expone los endpoints REST relacionados con perfiles. La Application Layer coordina operaciones de registro, actualización de perfiles, gestión de información empresarial y consultas.
-
-La Domain Layer contiene los conceptos y reglas de negocio relacionados con los perfiles, mientras que la Infrastructure Layer proporciona las implementaciones de repositorios y mecanismos de persistencia. Profiles también colabora con IAM para identificar la cuenta autenticada asociada con cada perfil.
+El Profiles Backend Component Diagram muestra la administración de perfiles de empresa mediante controllers, servicios de comandos y consultas y el agregado `CompanyProfile`. Infrastructure proporciona la persistencia JPA, la integración con el directorio de IAM y el bridge que traduce los eventos del dominio después de confirmar la transacción.
 
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-profiles-component-diagram.png"
@@ -3246,13 +3234,7 @@ La Domain Layer contiene los conceptos y reglas de negocio relacionados con los 
 
 #### Inventory Backend Component Diagram
 
-El bounded context Inventory del backend administra la maquinaria, categorías, tarifas, estado operativo y disponibilidad.
-
-La Interfaces Layer expone los endpoints REST correspondientes a la gestión del inventario. La Application Layer coordina el registro y actualización de maquinaria, consultas de disponibilidad, gestión de tarifas y demás operaciones relacionadas con el inventario.
-
-La Domain Layer contiene los conceptos y reglas de negocio asociados con los equipos, mientras que la Infrastructure Layer proporciona las implementaciones de persistencia mediante Spring Data JPA.
-
-Rentals utiliza Inventory para validar la disponibilidad de la maquinaria, mientras que Maintenance interactúa con este contexto cuando las actividades de mantenimiento modifican el estado operativo o la disponibilidad de los equipos.
+El Inventory Backend Component Diagram representa la gestión de equipos, categorías, disponibilidad, tarifas y estados operativos. Los servicios de aplicación utilizan el agregado `Equipment` y los repositorios del dominio, mientras que Infrastructure implementa la persistencia mediante JPA. Las fachadas de Inventory publican operaciones controladas para Rentals y Maintenance.
 
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-inventory-component-diagram.png"
@@ -3262,11 +3244,7 @@ Rentals utiliza Inventory para validar la disponibilidad de la maquinaria, mient
 
 #### Rentals Backend Component Diagram
 
-El bounded context Rentals del backend administra el ciclo completo de alquiler, incluyendo solicitudes, reservas, contratos, entregas, alquileres activos y devoluciones.
-
-La Interfaces Layer expone las operaciones REST requeridas por el frontend. La Application Layer coordina los diferentes flujos del alquiler, mientras que la Domain Layer contiene los agregados, entidades, value objects y reglas de negocio correspondientes.
-
-La Infrastructure Layer proporciona las implementaciones necesarias para la persistencia. Rentals colabora con Inventory para verificar la disponibilidad de la maquinaria y con Profiles para obtener la información de las empresas y participantes involucrados en las operaciones de alquiler.
+El Rentals Backend Component Diagram representa el ciclo de solicitudes, alquileres, entregas y devoluciones. Los servicios y executors transaccionales modifican los agregados utilizando repositorios del dominio, mientras que los ACL adapters permiten reservar equipos en Inventory y validar capacidades en Subscriptions. El contexto también publica información de alquileres para Maintenance.
 
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-rentals-component-diagram.png"
@@ -3276,13 +3254,7 @@ La Infrastructure Layer proporciona las implementaciones necesarias para la pers
 
 #### Maintenance Backend Component Diagram
 
-El bounded context Maintenance del backend administra las programaciones de mantenimiento, inspecciones, incidencias, registros de mantenimiento e historial de mantenimiento de la maquinaria.
-
-La Interfaces Layer expone los endpoints REST relacionados con estas operaciones. La Application Layer coordina los casos de uso asociados con programación de mantenimiento, inspecciones, registro de incidencias y actualización de mantenimientos.
-
-La Domain Layer contiene los conceptos y reglas de negocio relacionados con el mantenimiento, mientras que la Infrastructure Layer proporciona las implementaciones de repositorios y mecanismos de persistencia.
-
-Maintenance colabora con Inventory para actualizar el estado y disponibilidad de la maquinaria y con Rentals cuando una actividad de mantenimiento o incidencia afecta a un equipo asociado con un alquiler activo.
+El Maintenance Backend Component Diagram muestra la gestión de incidentes, mantenimientos, actividades e historial de los equipos. Los servicios de aplicación utilizan los agregados Incident y Maintenance, mientras que los ACL adapters consumen las fachadas de Inventory, Rentals y Subscriptions. Los repository adapters implementan la persistencia del contexto mediante JPA.
 
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-maintenance-component-diagram.png"
@@ -3292,13 +3264,7 @@ Maintenance colabora con Inventory para actualizar el estado y disponibilidad de
 
 #### Subscriptions Backend Component Diagram
 
-El bounded context Subscriptions del backend administra los planes de suscripción, suscripciones activas, cambios de plan, estado de facturación y operaciones relacionadas con pagos.
-
-La Interfaces Layer expone los endpoints REST necesarios para la gestión de suscripciones. La Application Layer coordina la selección de planes, activación de suscripciones, cambios de plan, estado de facturación y operaciones relacionadas con pagos.
-
-La Domain Layer contiene los conceptos y reglas de negocio correspondientes a las suscripciones, mientras que la Infrastructure Layer proporciona los mecanismos de persistencia necesarios.
-
-Este bounded context utiliza IAM para identificar la cuenta autenticada y Profiles para asociar la suscripción con la información de la empresa. Asimismo, un Payment Connector integra el contexto con Stripe para realizar el procesamiento de los pagos correspondientes a las suscripciones.
+El Subscriptions Backend Component Diagram representa la administración de planes y suscripciones de usuario. Los servicios de aplicación utilizan `SubscriptionPlan`, `UserSubscription` y sus repositorios, mientras que la integración con IAM permite identificar al suscriptor. `SubscriptionsContextFacade` publica las capacidades de los planes activos para Rentals y Maintenance.
 
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-subscriptions-component-diagram.png"
