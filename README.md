@@ -3281,84 +3281,68 @@ El Subscriptions Backend Component Diagram representa la administración de plan
 
 ![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-domain.png)
 
-Explicación del Proceso:
-La capa de dominio contiene el agregado raíz Equipment, el cual encapsula la lógica pura de la maquinaria. Equipment se relaciona con EquipmentCategory para su clasificación, utiliza el Value Object RentalRate para definir costos y gestiona bloques de indisponibilidad mediante AvailabilityBlock y DateRange.
+**Explicación del Proceso:** El agregado Equipment concentra las reglas de disponibilidad, reserva y estado operativo. Se compone de bloques AvailabilityBlock, utiliza RentalRate y EquipmentStatus y se relaciona con EquipmentCategory.
 
-Conexión de la Capa:
-Las entidades del dominio declaran los puertos de persistencia (interfaces EquipmentRepository y EquipmentCategoryRepository). Estas interfaces pertenecen al dominio para cumplir con el principio de Inversión de Dependencias (DIP).
+**Conexión de la capa:** Los servicios de Application procesan los comandos y consultas del dominio. EquipmentRepository y EquipmentCategoryRepository permanecen como contratos de Domain implementados por Infrastructure.
 
 ### B. Application Layer
 
 ![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-application.png)
 
-Explicación del Proceso:
-Contiene la clase InventoryApplicationService, responsable de coordinar los casos de uso como el registro de maquinaria (RegisterEquipmentCommand) y la verificación de disponibilidad para constructoras.
+**Explicación del proceso:** Los command y query services coordinan la creación, actualización, consulta, reserva y cambio de estado de los equipos. Las fachadas de Inventory exponen operaciones controladas para otros contextos.
 
-Conexión de la Capa:
-InventoryApplicationService recibe llamadas desde la capa de Interfaces e interactúa directamente con el dominio invocando los métodos declarados en EquipmentRepository.
+**Conexión de la capa:** Los servicios dependen de los repositorios de Domain. InventoryRentalFacadeImpl e InventoryMaintenanceFacadeImpl implementan los contratos consumidos por Rentals y Maintenance.
 
 ### C. Infrastructure Layer
 
 ![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-infrastructure.png)
 
-Explicación del Proceso:
-Implementa el acceso a datos mediante Spring Data JPA (EquipmentRepositoryImpl y EquipmentCategoryRepositoryImpl).
+**Explicación del proceso:** Los repository adapters utilizan Spring Data JPA, entidades de persistencia y assemblers para almacenar equipos, categorías y bloques de disponibilidad.
 
-Conexión de la Capa:
-Se conecta con la Capa de Dominio mediante una relación de Realización/Implementación de las interfaces de repositorio (EquipmentRepository), traduciendo los Value Objects del dominio a tablas de MySQL.
+**Conexión de la capa:** EquipmentRepositoryImpl y EquipmentCategoryRepositoryImpl implementan los repositorios de Domain. Los assemblers traducen entre los agregados y las entidades JPA.
 
 ### D. Interfaces Layer
 
 ![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-interfaces.png)
 
-Explicación del Proceso:
-A través de InventoryController, expone los endpoints HTTP REST que reciben las solicitudes JSON del cliente Web Angular.
+**Explicación del proceso:** Los controllers exponen las operaciones REST relacionadas con equipos, categorías, disponibilidad y estado. Los resources y assemblers transforman las solicitudes y respuestas HTTP.
 
-Conexión de la Capa:
-Transforma las peticiones HTTP en objetos Command (ej. RegisterEquipmentCommand) y los envía a InventoryApplicationService.
+**Conexión de la capa:** Los controllers utilizan los servicios de Application. InventoryOwnershipPolicy consulta la identidad del usuario y las fachadas publicadas conectan Inventory con Rentals y Maintenance.
 
 ## Rentals
 ### A. Domain Layer
 
 ![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-domain.png)
 
-Explicación del Proceso:
-Nace con el agregado RentalRequest en estado PENDING. Al aprobarse, genera la entidad RentalContract, que a su vez se compone de las entidades de seguimiento Delivery y EquipmentReturn.
+**Explicación del proceso:** RentalRequest representa una solicitud y Rental el alquiler creado después de su aprobación. El alquiler se relaciona con Delivery, EquipmentReturn, RentalPeriod, RentalRequestStatus y RentalStatus.
 
-Conexión de la Capa:
-Declara los repositorios del dominio (RentalRequestRepository, RentalContractRepository, EquipmentReturnRepository, DeliveryRepository) y el puerto de integración InventoryAvailabilityPort para validar disponibilidad.
+**Conexión de la capa:** Los servicios de Application procesan los comandos y consultas. Los repositorios de solicitudes, alquileres, entregas y devoluciones se declaran en Domain y son implementados por Infrastructure.
 
 ### B. Application Layer
 
 ![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-application.png)
 
-Explicación del Proceso:
-RentalApplicationService orquesta las transacciones operativas: responder solicitudes (acceptRequest), registrar la entrega física en obra (registerDelivery) y procesar la devolución del equipo (registerReturn).
+**Explicación del proceso:** Los command services y executors transaccionales coordinan la creación, aprobación, reprogramación, entrega y devolución de los alquileres. Los query services recuperan la información visible para el actor autenticado.
 
-Conexión de la Capa:
-Conecta las peticiones de interfaz con el dominio utilizando los repositorios e invocando el adaptador de disponibilidad hacia el contexto de Inventory.
+**Conexión de la capa:** Application utiliza los repositorios de Domain y los puertos hacia Inventory y Subscriptions. `RentalsMaintenanceFacadeImpl` publica información de alquileres para Maintenance.
 
 ### C. Infrastructure Layer
 
 ![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-infrastructure.png)
 
-Explicación del Proceso:
-Proporciona las clases concretas que implementan los repositorios JPA e incluye el adaptador InventoryAvailabilityAdapter.
+**Explicación del proceso:** Los repository adapters implementan la persistencia de solicitudes, alquileres, entregas y devoluciones. El submission guard controla las solicitudes concurrentes realizadas sobre un mismo equipo.
 
-Conexión de la Capa:
-Implementa las interfaces definidas en la capa de aplicación/dominio para realizar consultas en la base de datos MySQL.
+**Conexión de la capa:** Los ACL adapters implementan los puertos de Application y consumen las fachadas de Inventory y Subscriptions. RentalIntegrationEventBridge traduce los eventos del dominio después del commit.
 
 ### D. Interfaces Layer
 
 ![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-interfaces.png)
 
-Explicación del Proceso:
-RentalsController gestiona las rutas REST para la creación y cambio de estado de los alquileres.
+**Explicación del proceso:** Los controllers exponen las operaciones REST de solicitudes, alquileres, entregas y devoluciones. Los resources y assemblers transforman las representaciones recibidas y devueltas por la API.
 
-Conexión de la Capa:
-Invoca los métodos expuestos por RentalApplicationService mapeando las respuestas a objetos DTO Response.
+**Conexión de la capa:** Los controllers dependen de los command y query services de Application. RentalActorPolicy valida al actor y RentalsExceptionHandler transforma los errores de aplicación.
 
-#### Maintenance
+## Maintenance
 
 ### A. Domain Layer
 
@@ -3366,17 +3350,9 @@ Invoca los métodos expuestos por RentalApplicationService mapeando las respuest
 ![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-domain.png)
 
 
-Explicación del Proceso:
+**Explicación del proceso:** Incident representa una falla reportada y Maintenance controla el ciclo de trabajo técnico. El mantenimiento agrupa actividades y utiliza MaintenanceType, MaintenanceStatus e IncidentStatus.
 
-Agrupa los agregados Incident (reportes de fallas) y MaintenanceRecord
-(reparaciones preventivas y correctivas).
-
-
-Conexión de la Capa:
-
-Un Incident en estado no resuelto se relaciona con un MaintenanceRecord.
-Declara la interfaz EquipmentStatusPort para notificar al contexto de
-inventario cuando una máquina entra a taller.
+**Conexión de la capa:** Los servicios de Application procesan los comandos y consultas. Los repositorios de incidentes, mantenimientos y actividades permanecen como contratos de Domain.
 
 
 ### B. Application Layer
@@ -3385,17 +3361,9 @@ inventario cuando una máquina entra a taller.
 ![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-application.png)
 
 
-Explicación del Proceso:
+**Explicación del proceso:** Los servicios y executors transaccionales coordinan el reporte y resolución de incidentes, el registro de mantenimientos, los cambios de estado y la reactivación de equipos.
 
-MaintenanceApplicationService ejecuta los comandos de reporte de averías
-(reportIncident), programación de mantenimientos (scheduleMaintenance) y cierre
-técnico (completeMaintenance).
-
-
-Conexión de la Capa:
-
-Llama a los repositorios de mantenimiento e informa a través de
-EquipmentStatusPort para cambiar el estado de la máquina a UNDER_MAINTENANCE.
+**Conexión de la capa:** Application utiliza los repositorios de Domain y los puertos hacia Inventory, Rentals y Subscriptions. Infrastructure proporciona los adapters que implementan esos puertos.
 
 
 ### C. Infrastructure Layer
@@ -3404,32 +3372,18 @@ EquipmentStatusPort para cambiar el estado de la máquina a UNDER_MAINTENANCE.
 ![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-infrastructure.png)
 
 
-Explicación del Proceso:
+**Explicación del proceso:** Los repository adapters, assemblers y entidades JPA almacenan incidentes, mantenimientos y actividades. Los ACL adapters traducen los contratos publicados por otros bounded contexts.
 
-Contiene IncidentRepositoryImpl, MaintenanceRecordRepositoryImpl y el adaptador
-InventoryEquipmentStatusAdapter.
-
-
-Conexión de la Capa:
-
-Conecta las llamadas de actualización de estado hacia la base de datos e
-interactúa con el módulo de inventario.
-
+**Conexión de la capa:** Los adapters JPA implementan los repositorios de Domain y los ACL adapters implementan los puertos de Application. El event bridge traduce los eventos después del commit.
 
 ### D. Interfaces Layer
 
 
 ![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-interfaces.png)
 
+**Explicación del proceso:** IncidentController y MaintenanceController exponen las operaciones REST y transforman la información mediante resources y assemblers.
 
-Explicación del Proceso:
-
-MaintenanceController mapea los endpoints de gestión de taller técnico.
-
-
-Conexión de la Capa:
-
-Envía las acciones del cliente Web a MaintenanceApplicationService.
+**Conexión de la capa:** Los controllers utilizan los servicios de Application. La política de actor valida la identidad autenticada y el exception handler transforma los errores del contexto.
 
 #### Subscription
 
@@ -3438,213 +3392,102 @@ Envía las acciones del cliente Web a MaintenanceApplicationService.
 
 ![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-domain.png)
 
+**Explicación del proceso:** SubscriptionPlan define las características y capacidades de un plan mediante SubscriptionPrice y PlanStatus. UserSubscription controla el periodo, plan y estado de una suscripción.
 
-Explicación del Proceso:
-
-Contiene el plan de suscripción SubscriptionPlan y la suscripción del usuario
-UserSubscription vinculada mediante el Value Object DateRange. (Asegurarse de
-conectar el Enum BillingCycle con una línea hacia SubscriptionPlan y utilizar
-el tipo de dato Boolean para autoRenew).
-
-
-Conexión de la Capa:
-
-Declara las interfaces UserSubscriptionRepository, SubscriptionPlanRepository y
-el puerto de pasarela de pago PaymentConnector.
-
+**Conexión de la capa:** Los servicios de Application procesan los comandos y consultas. SubscriptionPlanRepository y UserSubscriptionRepository son contratos de Domain implementados por Infrastructure.
 
 ### B. Application Layer
 
-
 ![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-application.png)
 
+**Explicación del proceso:** Los servicios coordinan la creación, cambio y cancelación de suscripciones, además de las consultas de planes y suscripciones. La fachada evalúa las capacidades de los planes activos.
 
-Explicación del Proceso:
-
-SubscriptionApplicationService coordina la selección de planes y la facturación
-recurrente de los usuarios.
-
-
-Conexión de la Capa:
-
-Utiliza los repositorios de dominio y delega el cobro al puerto
-PaymentConnector.
-
+**Conexión de la capa:** Los servicios utilizan los repositorios de Domain. IamSubscriberPort define la información del suscriptor requerida y es implementado por un ACL adapter de Infrastructure.
 
 ### C. Infrastructure Layer
 
-
 ![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-infrastructure.png)
 
+**Explicación del proceso:** Los repository adapters, assemblers y entidades JPA almacenan planes y suscripciones. SubscriptionPlanSeed registra los planes iniciales y el ACL de IAM obtiene la identidad del suscriptor.
 
-Explicación del Proceso:
-
-Contiene las implementaciones JPA y el adaptador externo
-StripePaymentConnector.
-
-
-Conexión de la Capa:
-
-Realiza la integración de pagos con servicios de terceros y persiste el estado
-de la suscripción.
-
+**Conexión de la capa:** Los adapters implementan los repositorios de Domain y el puerto de IAM definido en Application. El backend actual no contiene un adapter de Stripe ni un payment connector.
 
 ### D. Interfaces Layer
 
-
 ![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-interfaces.png)
 
+**Explicación del proceso:** Los controllers exponen la consulta de planes y la administración de suscripciones. Los assemblers generan los recursos utilizados en las respuestas REST.
 
-Explicación del Proceso:
-
-SubscriptionController expone las llamadas de selección, cambio o cancelación
-de planes.
-
-
-Conexión de la Capa:
-
-Envía las peticiones REST a SubscriptionApplicationService.
+**Conexión de la capa:** Los controllers dependen de los command y query services. La política de propiedad consulta IAM y SubscriptionsContextFacade es consumida por Rentals y Maintenance.
 
 #### IAM
 
 ### A. Domain Layer
 
-
 ![Class Diagram — IAM](./assets/md-images-chapter4/iam-domain.png)
 
+**Explicación del proceso:** `User` es el agregado raíz de identidad y administra los roles y el estado de la cuenta. Role, Roles y UserStatus representan los permisos y estados utilizados por el contexto.
 
-Explicación del Proceso:
-
-La entidad raíz User se compone del Value Object Credentials (correo y hash de
-contraseña) y gestiona los permisos con UserRole. (Verificar que UserRole y
-UserStatus estén conectados explícitamente a User).
-
-
-Conexión de la Capa:
-
-Declara UserRepository para la búsqueda y registro seguro de cuentas.
-
+**Conexión de la capa:** Los command services de Application procesan el registro, inicio de sesión y seeding. UserRepository y RoleRepository son contratos de Domain implementados por Infrastructure.
 
 ### B. Application Layer
 
-
 ![Class Diagram — IAM](./assets/md-images-chapter4/iam-application.png)
 
+**Explicación del proceso:** Los command services coordinan el registro, autenticación y creación de roles. Sus implementaciones utilizan repositorios, hashing y tokens, mientras que las fachadas publican información de identidad.
 
-Explicación del Proceso:
-
-AuthenticationService ejecuta la lógica de autenticación, generación de tokens
-SessionToken y validación de credenciales.
-
-
-Conexión de la Capa:
-
-Consulta UserRepository para validar el correo y la contraseña cifrada.
-
+**Conexión de la capa:** Application depende de los contratos de Domain y define los puertos HashingService y TokenService. Infrastructure proporciona las implementaciones de seguridad y persistencia.
 
 ### C. Infrastructure Layer
 
-
 ![Class Diagram — IAM](./assets/md-images-chapter4/iam-infrastructure.png)
 
+**Explicación del proceso:** Infrastructure contiene la configuración de Spring Security, el filtro bearer, las implementaciones JWT y BCrypt y los adapters de persistencia JPA.
 
-Explicación del Proceso:
-
-UserRepositoryImpl implementa la persistencia de los usuarios mediante JPA.
-
-
-Conexión de la Capa:
-
-Conecta las operaciones de la aplicación con la tabla de usuarios en la base de
-datos.
-
+**Conexión de la capa:** Los repository adapters implementan los contratos de Domain. BCrypt y JWT implementan los puertos de Application y UserDetailsServiceImpl adapta User al modelo de Spring Security.
 
 ### D. Interfaces Layer
 
-
 ![Class Diagram — IAM](./assets/md-images-chapter4/iam-interfaces.png)
 
+**Explicación del proceso:** Los controllers exponen el registro, inicio de sesión y consulta del usuario autenticado. Los resources y assemblers transforman las solicitudes REST en comandos y respuestas.
 
-Explicación del Proceso:
+**Conexión de la capa:** Los controllers utilizan UserCommandService y las fachadas implementadas en Application. Los demás bounded contexts consumen estas fachadas sin acceder al modelo interno de IAM.
 
-IAMController maneja los endpoints de /register, /login y /logout.  
-
-
-Conexión de la Capa:
-
-Recibe RegisterUserCommand o LoginCommand y los procesa con
-AuthenticationService.
-
-#### Profiles
+## Profiles
 
 ### A. Domain Layer
 
 
 ![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-domain.png)
 
+**Explicación del proceso:** `CompanyProfile` es el agregado raíz y utiliza los value objects PersonName, EmailAddress y CompanyAddress. El agregado registra eventos cuando el perfil es creado o actualizado.
 
-Explicación del Proceso:
-
-CompanyProfile almacena los datos de la organización e integra el Value Object
-Address con coordenadas geográficas GeoCoordinates para la localización.
-ProviderProfile extiende el perfil para las empresas de alquiler con métricas
-de reputación. (Conectar los Enums CompanyType directamente con la entidad).
-
-
-Conexión de la Capa:
-
-Declara CompanyProfileRepository y ProviderProfileRepository.
-
+**Conexión de la capa:** Los servicios de Application procesan los comandos y consultas. CompanyProfileRepository es el contrato de persistencia y userId relaciona el perfil con la identidad publicada por IAM.
 
 ### B. Application Layer
 
-
 ![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-application.png)
 
+**Explicación del proceso:** Los command y query services coordinan la creación, actualización, consulta y aprovisionamiento de los perfiles de empresa.
 
-Explicación del Proceso:
-
-ProfileApplicationService orquesta la creación y actualización de perfiles de
-empresa y de proveedores.
-
-
-Conexión de la Capa:
-
-Transforma los datos enviados por la interfaz e invoca a los repositorios de
-dominio.
-
+**Conexión de la capa:** Los servicios utilizan CompanyProfileRepository y IamCompanyDirectoryPort. Infrastructure implementa el puerto de IAM y el repositorio del dominio.
 
 ### C. Infrastructure Layer
 
-
 ![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-infrastructure.png)
 
+**Explicación del proceso:** Infrastructure contiene el repository adapter, los assemblers, la entidad JPA, el embeddable de dirección, el reconciler de perfiles, el ACL de IAM y el bridge de eventos.
 
-Explicación del Proceso:
-
-Implementa los repositorios de perfiles con JPA.
-
-
-Conexión de la Capa:
-
-Guarda la información de las empresas en la base de datos.
-
+**Conexión de la capa:** El repository adapter implementa el contrato de Domain, el ACL adapter implementa el puerto de Application y el event bridge traduce los eventos después del commit.
 
 ### D. Interfaces Layer
 
-
 ![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-interfaces.png)
 
+**Explicación del proceso:** CompanyProfileController expone las operaciones REST y utiliza resources y assemblers para transformar comandos y respuestas. ProfileOwnershipPolicy valida la propiedad del perfil.
 
-Explicación del Proceso:
-
-ProfilesController gestiona los endpoints REST de lectura y actualización de
-perfiles.
-
-
-Conexión de la Capa:
-
-Pasa los Comandos DTO a ProfileApplicationService.
+**Conexión de la capa:** El controller utiliza los servicios de Application, la política consulta IAM y el repositorio del dominio y los eventos de integración son publicados desde Infrastructure.
 
 ## 4.8. Database Design
 
