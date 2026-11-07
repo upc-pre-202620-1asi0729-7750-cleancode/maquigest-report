@@ -1,57 +1,44 @@
-﻿@startuml
-
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
-
-title MaquiGest - Backend General Components Diagram
-
-Container(spa, "Single Page Application", "Angular", "Provides MaquiGest functionality to authenticated users through their web browser.")
-
-Container_Boundary(backend, "MaquiGest Backend API Application\n[Java / Spring Boot]") {
-
-    Component(iamContext, "IAM Bounded Context", "Bounded Context Component", "Manages authentication, authorization, credentials, users, roles, and access control.")
-
-    Component(profilesContext, "Profiles Bounded Context", "Bounded Context Component", "Manages user, company, supplier, and customer profile information.")
-
-    Component(inventoryContext, "Inventory Bounded Context", "Bounded Context Component", "Manages machinery, categories, rates, equipment status, and availability.")
-
-    Component(rentalsContext, "Rentals Bounded Context", "Bounded Context Component", "Manages rental requests, reservations, contracts, deliveries, active rentals, and returns.")
-
-    Component(maintenanceContext, "Maintenance Bounded Context", "Bounded Context Component", "Manages maintenance schedules, inspections, incidents, and equipment maintenance history.")
-
-    Component(subscriptionsContext, "Subscriptions Bounded Context", "Bounded Context Component", "Manages subscription plans, active subscriptions, billing state, and plan changes.")
-
-    Component(sharedComponent, "Shared", "Shared Component", "Provides reusable cross-cutting capabilities, common abstractions, validation, configuration, and technical utilities.")
+@startuml
+!include _includes/C4_Component.puml
+title MaquiGest - Backend General Component Diagram
+Container(spa, "MaquiGest Web Application", "Angular", "Consumes the backend REST API.")
+Container_Boundary(backend, "MaquiGest Platform API [Java 27 / Spring Boot]") {
+ Component(iam, "IAM Bounded Context", "Spring Security, JWT, DDD", "Users, roles, authentication, authorization and identity contracts.")
+ Component(profiles, "Profiles Bounded Context", "DDD, CQRS, ACL, JPA", "Company profiles and IAM identity reconciliation.")
+ Component(inventory, "Inventory Bounded Context", "DDD, CQRS, ACL, JPA", "Equipment, categories, rates, availability and operational status.")
+ Component(rentals, "Rentals Bounded Context", "DDD, CQRS, ACL, JPA", "Requests, rentals, deliveries, returns and concurrency control.")
+ Component(maintenance, "Maintenance Bounded Context", "DDD, CQRS, ACL, JPA", "Incidents, maintenance lifecycle, activities and equipment history.")
+ Component(subscriptions, "Subscriptions Bounded Context", "DDD, CQRS, ACL, JPA", "Plans, subscriptions, entitlement and plan changes.")
+ Component(shared, "Shared Kernel", "Result, errors, events, auditing, OpenAPI, i18n", "Cross-cutting contracts and in-process domain-event publication.")
 }
-
-ContainerDb(database, "MaquiGest Database", "MySQL", "Stores persistent account, profile, machinery, rental, maintenance, and subscription information.")
-
-Rel(spa, iamContext, "Uses authentication services", "JSON / HTTPS")
-Rel(spa, profilesContext, "Uses profile services", "JSON / HTTPS")
-Rel(spa, inventoryContext, "Uses inventory services", "JSON / HTTPS")
-Rel(spa, rentalsContext, "Uses rental services", "JSON / HTTPS")
-Rel(spa, maintenanceContext, "Uses maintenance services", "JSON / HTTPS")
-Rel(spa, subscriptionsContext, "Uses subscription services", "JSON / HTTPS")
-
-Rel(profilesContext, iamContext, "Uses authenticated account identity")
-Rel(rentalsContext, inventoryContext, "Checks machinery availability")
-Rel(rentalsContext, profilesContext, "Uses company and participant profiles")
-Rel(maintenanceContext, inventoryContext, "Updates equipment status and availability")
-Rel(subscriptionsContext, iamContext, "Uses authenticated account identity")
-
-Rel(iamContext, sharedComponent, "Uses")
-Rel(profilesContext, sharedComponent, "Uses")
-Rel(inventoryContext, sharedComponent, "Uses")
-Rel(rentalsContext, sharedComponent, "Uses")
-Rel(maintenanceContext, sharedComponent, "Uses")
-Rel(subscriptionsContext, sharedComponent, "Uses")
-
-Rel(iamContext, database, "Persists")
-Rel(profilesContext, database, "Persists")
-Rel(inventoryContext, database, "Persists")
-Rel(rentalsContext, database, "Persists")
-Rel(maintenanceContext, database, "Persists")
-Rel(subscriptionsContext, database, "Persists")
-
+ContainerDb(db, "MaquiGest Database", "MySQL", "Stores the data owned by each bounded context.")
+Rel(spa, iam, "Authenticates and obtains JWT", "JSON/HTTPS")
+Rel(spa, profiles, "Manages company profiles", "JSON/HTTPS")
+Rel(spa, inventory, "Manages equipment", "JSON/HTTPS")
+Rel(spa, rentals, "Executes rental workflows", "JSON/HTTPS")
+Rel(spa, maintenance, "Executes maintenance workflows", "JSON/HTTPS")
+Rel(spa, subscriptions, "Manages subscriptions", "JSON/HTTPS")
+Rel(profiles, iam, "Reads company identity through published contracts")
+Rel(inventory, iam, "Validates equipment owner through actor facade")
+Rel(rentals, iam, "Validates rental actor through actor facade")
+Rel(maintenance, iam, "Validates maintenance actor through actor facade")
+Rel(subscriptions, iam, "Reads subscriber and actor identity")
+Rel(rentals, inventory, "Checks, reserves and releases equipment through ACL")
+Rel(rentals, subscriptions, "Checks rental entitlement through ACL")
+Rel(maintenance, inventory, "Changes equipment state through ACL")
+Rel(maintenance, rentals, "Reads active-rental context through ACL")
+Rel(maintenance, subscriptions, "Checks maintenance entitlement through ACL")
+Rel(iam, shared, "Uses shared result and infrastructure support")
+Rel(profiles, shared, "Uses results and domain-event publication")
+Rel(inventory, shared, "Uses shared result and infrastructure support")
+Rel(rentals, shared, "Uses results and domain-event publication")
+Rel(maintenance, shared, "Uses results and domain-event publication")
+Rel(subscriptions, shared, "Uses results and domain-event publication")
+Rel(iam, db, "Persists IAM data", "JPA/SQL")
+Rel(profiles, db, "Persists profile data", "JPA/SQL")
+Rel(inventory, db, "Persists inventory data", "JPA/SQL")
+Rel(rentals, db, "Persists rental data", "JPA/SQL")
+Rel(maintenance, db, "Persists maintenance data", "JPA/SQL")
+Rel(subscriptions, db, "Persists subscription data", "JPA/SQL")
 SHOW_LEGEND()
-
 @enduml

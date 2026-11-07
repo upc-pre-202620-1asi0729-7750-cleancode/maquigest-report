@@ -1,40 +1,43 @@
-﻿@startuml
-
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
-
+@startuml
+!include _includes/C4_Component.puml
 title MaquiGest - Maintenance Backend Component Diagram
-
-Container(spa, "Single Page Application", "Angular", "Consumes maintenance-management capabilities provided by the MaquiGest backend.")
-
-Container_Boundary(maintenanceContext, "Maintenance Bounded Context\n[Java / Spring Boot]") {
-
-    Component(interfacesLayer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes endpoints for maintenance schedules, inspections, incidents, maintenance records, and equipment history.")
-
-    Component(applicationLayer, "Application Layer", "Application Services / Command and Query Services", "Coordinates maintenance scheduling, inspections, incident reporting, maintenance updates, and equipment-history use cases.")
-
-    Component(domainLayer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains maintenance records, inspections, incidents, maintenance status, and equipment-history business rules.")
-
-    Component(infrastructureLayer, "Infrastructure Layer", "Spring Data JPA / Repository Implementations", "Provides persistence implementations and technical adapters required by the Maintenance bounded context.")
+Container(spa, "MaquiGest Web Application", "Angular", "Maintenance REST client")
+Container_Ext(iam, "IAM Bounded Context", "Published IAM contracts", "Provides authenticated actor identity.")
+Container_Ext(inventory, "Inventory Bounded Context", "InventoryMaintenanceFacade", "Provides equipment locking and status operations.")
+Container_Ext(rentals, "Rentals Bounded Context", "RentalsMaintenanceFacade", "Provides active-rental context and history.")
+Container_Ext(subscriptions, "Subscriptions Bounded Context", "SubscriptionsContextFacade", "Provides maintenance entitlement.")
+Container_Ext(shared, "Shared Domain Event Publisher", "Spring ApplicationEventPublisher", "Publishes aggregate events in process.")
+Container_Boundary(maintenance, "Maintenance Bounded Context [Java / Spring Boot]") {
+ Component(rest, "Maintenance REST Interface", "IncidentController / MaintenanceController", "Exposes incident, maintenance and history endpoints.")
+ Component(policy, "Maintenance Actor Policy", "MaintenanceActorPolicy", "Resolves and validates the authenticated actor.")
+ Component(app, "Maintenance Application Services", "Incident / maintenance command and query services", "Coordinates maintenance use cases.")
+ Component(executors, "Transactional Executors", "Incident / maintenance executors", "Applies aggregate and cross-context changes atomically.")
+ Component(domain, "Maintenance Domain", "Incident / Maintenance / MaintenanceActivity", "Enforces incident and maintenance lifecycle rules.")
+ Component(repoPorts, "Domain Repository Ports", "Incident / maintenance / activity repositories", "Defines persistence contracts owned by Domain.")
+ Component(externalPorts, "External Context Ports", "Inventory / Rentals / Subscription ports", "Defines capabilities required from other contexts.")
+ Component(aclAdapters, "Maintenance ACL Adapters", "Inventory / Rentals / Subscription adapters", "Implements external ports using published facades.")
+ Component(persistence, "Maintenance Persistence Adapters", "RepositoryImpl / assemblers / JPA", "Implements maintenance repository ports.")
+ Component(eventBridge, "Maintenance Event Bridge", "MaintenanceIntegrationEventBridge", "Translates post-commit domain events into integration events.")
+ Component(errors, "Maintenance Error Boundary", "MaintenanceException / handler", "Maps application failures to REST problem details.")
 }
-
-Container_Ext(inventoryContext, "Inventory Bounded Context", "Backend Context", "Provides equipment information and receives maintenance-related status and availability changes.")
-
-Container_Ext(rentalsContext, "Rentals Bounded Context", "Backend Context", "Provides active rental context when incidents or maintenance events affect rented equipment.")
-
-ContainerDb(database, "MaquiGest Database", "MySQL", "Stores maintenance schedules, inspections, incidents, maintenance records, and equipment-history information.")
-
-Rel(spa, interfacesLayer, "Consumes Maintenance services", "JSON / HTTPS")
-
-Rel(interfacesLayer, applicationLayer, "Delegates requests")
-
-Rel(applicationLayer, domainLayer, "Executes maintenance domain operations")
-Rel(applicationLayer, infrastructureLayer, "Uses persistence capabilities")
-
-Rel(applicationLayer, inventoryContext, "Updates equipment status and availability")
-Rel(applicationLayer, rentalsContext, "Uses active rental context")
-
-Rel(infrastructureLayer, database, "Reads and writes Maintenance data", "JPA / SQL")
-
+ContainerDb(db, "MaquiGest Database", "MySQL", "Maintenance tables")
+Rel(spa, rest, "Calls", "JSON/HTTPS")
+Rel(rest, policy, "Authorizes through")
+Rel(policy, iam, "Reads actor identity")
+Rel(rest, app, "Delegates")
+Rel(rest, errors, "Maps failures through")
+Rel(app, executors, "Executes transactional mutations")
+Rel(app, repoPorts, "Runs queries through")
+Rel(executors, domain, "Mutates aggregates")
+Rel(executors, repoPorts, "Uses")
+Rel(executors, externalPorts, "Uses")
+Rel(aclAdapters, externalPorts, "Implements")
+Rel(aclAdapters, inventory, "Calls inventory facade")
+Rel(aclAdapters, rentals, "Calls rentals facade")
+Rel(aclAdapters, subscriptions, "Calls entitlement facade")
+Rel(persistence, repoPorts, "Implements")
+Rel(persistence, db, "Reads and writes", "JPA/SQL")
+Rel(persistence, shared, "Publishes aggregate events through")
+Rel(shared, eventBridge, "Delivers domain events after commit")
 SHOW_LEGEND()
-
 @enduml

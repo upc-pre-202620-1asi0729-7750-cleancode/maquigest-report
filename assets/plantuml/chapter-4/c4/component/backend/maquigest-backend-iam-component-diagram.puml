@@ -1,40 +1,33 @@
-﻿@startuml
-
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
-
+@startuml
+!include _includes/C4_Component.puml
 title MaquiGest - IAM Backend Component Diagram
-
-Container(spa, "Single Page Application", "Angular", "Consumes authentication and account-access capabilities provided by the MaquiGest backend.")
-
-Container_Boundary(iamContext, "IAM Bounded Context\n[Java / Spring Boot]") {
-
-    Component(interfacesLayer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes authentication, registration, account access, and authorization endpoints to the frontend.")
-
-    Component(applicationLayer, "Application Layer", "Application Services / Command and Query Services", "Coordinates authentication, registration, credential management, and account-access use cases.")
-
-    Component(domainLayer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains users, credentials, roles, authentication rules, and IAM business logic.")
-
-    Component(infrastructureLayer, "Infrastructure Layer", "Spring Data JPA / Repository Implementations", "Provides persistence implementations and technical adapters required by the IAM bounded context.")
-
-    Component(securityConnector, "Security Connector", "Spring Security / JWT", "Provides authentication filters, password encoding, token generation, and authorization mechanisms.")
+Container(spa, "MaquiGest Web Application", "Angular", "IAM REST client")
+Container_Boundary(iam, "IAM Bounded Context [Java / Spring Boot]") {
+ Component(security, "Security Pipeline", "Spring Security / Bearer filter", "Validates JWT and restores the authenticated principal before controller execution.")
+ Component(rest, "IAM REST Interface", "AuthenticationController / AuthenticatedPrincipalController", "Exposes sign-up, sign-in and current-principal operations.")
+ Component(commands, "IAM Command Services", "UserCommandService / RoleCommandService", "Coordinates authentication, registration and role seeding.")
+ Component(facades, "Published Identity Facades", "IamActorFacade / CompanyDirectory / Subscriber", "Publishes context-neutral identity views to other contexts.")
+ Component(domain, "IAM Domain", "User / Role / Roles / UserStatus", "Enforces account and role invariants.")
+ Component(repoPorts, "Domain Repository Ports", "UserRepository / RoleRepository", "Defines persistence contracts owned by Domain.")
+ Component(persistence, "Persistence Adapters", "RepositoryImpl / assemblers / JPA", "Implements domain repositories and maps IAM data to MySQL.")
+ Component(identityReaders, "Identity Read Adapters", "CompanyDirectoryJpaReader / SubscriberJpaReader", "Provides identity projections used by published facades.")
+ Component(crypto, "Token and Hashing Adapters", "JJWT / BCrypt", "Implements TokenService and HashingService ports.")
+ Component(seed, "Role Seeder", "ApplicationReadyEventHandler", "Seeds required roles through RoleCommandService.")
 }
-
-ContainerDb(database, "MaquiGest Database", "MySQL", "Stores user accounts, credentials, roles, and authentication-related information.")
-
-System_Ext(sendGrid, "SendGrid", "Provides transactional email delivery for account and password-recovery notifications.")
-
-Rel(spa, interfacesLayer, "Consumes IAM services", "JSON / HTTPS")
-
-Rel(interfacesLayer, applicationLayer, "Delegates requests")
-
-Rel(applicationLayer, domainLayer, "Executes domain operations")
-Rel(applicationLayer, infrastructureLayer, "Uses persistence capabilities")
-Rel(applicationLayer, securityConnector, "Uses authentication and authorization services")
-
-Rel(infrastructureLayer, database, "Reads and writes IAM data", "JPA / SQL")
-
-Rel(applicationLayer, sendGrid, "Requests account and recovery emails", "HTTPS / API")
-
+ContainerDb(db, "MaquiGest Database", "MySQL", "IAM tables")
+Rel(spa, security, "Sends bearer token", "HTTPS")
+Rel(security, rest, "Allows authenticated request")
+Rel(rest, commands, "Delegates authentication commands")
+Rel(rest, facades, "Reads authenticated actor")
+Rel(commands, domain, "Executes domain behavior")
+Rel(commands, repoPorts, "Uses")
+Rel(commands, crypto, "Uses hashing and token ports")
+Rel(facades, repoPorts, "Reads actor aggregate")
+Rel(facades, identityReaders, "Reads identity projections")
+Rel(persistence, repoPorts, "Implements")
+Rel(identityReaders, db, "Queries", "JPA/SQL")
+Rel(persistence, db, "Reads and writes", "JPA/SQL")
+Rel(security, crypto, "Validates bearer token")
+Rel(seed, commands, "Seeds roles")
 SHOW_LEGEND()
-
 @enduml
