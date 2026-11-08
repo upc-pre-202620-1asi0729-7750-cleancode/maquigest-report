@@ -1,34 +1,63 @@
 @startuml
 !include _includes/C4_Component.puml
-title MaquiGest - Inventory Backend Component Diagram
-Container(spa, "MaquiGest Web Application", "Angular", "Inventory REST client")
-Container_Ext(iam, "IAM Bounded Context", "Published IAM contracts", "Provides authenticated actor identity.")
-Container_Ext(rentals, "Rentals Bounded Context", "Backend context", "Consumes the inventory rental facade.")
-Container_Ext(maintenance, "Maintenance Bounded Context", "Backend context", "Consumes the inventory maintenance facade.")
-Container_Boundary(inventory, "Inventory Bounded Context [Java / Spring Boot]") {
- Component(rest, "Inventory REST Interface", "EquipmentController / EquipmentCategoriesController", "Exposes equipment, category, availability and status operations.")
- Component(policy, "Inventory Ownership Policy", "InventoryOwnershipPolicy", "Checks equipment ownership with IAM.")
- Component(app, "Inventory Command and Query Services", "Equipment and category services", "Coordinates inventory use cases.")
- Component(facades, "Published Inventory Facades", "InventoryRentalFacade / InventoryMaintenanceFacade", "Exposes controlled inventory capabilities to Rentals and Maintenance.")
- Component(domain, "Inventory Domain", "Equipment / AvailabilityBlock / EquipmentCategory / RentalRate", "Enforces reservation, availability and operational-state rules.")
- Component(repoPorts, "Domain Repository Ports", "EquipmentRepository / EquipmentCategoryRepository", "Defines persistence contracts owned by Domain.")
- Component(persistence, "Inventory Persistence Adapters", "RepositoryImpl / assemblers / JPA", "Implements inventory repository ports.")
- Component(seed, "Category Seeder", "InventoryApplicationReadyEventHandler", "Seeds required equipment categories.")
+LAYOUT_TOP_DOWN()
+AddElementTag("Interfaces", $bgColor="#D6EAF8", $borderColor="#2471A3")
+AddElementTag("Application", $bgColor="#D5F5E3", $borderColor="#1E8449")
+AddElementTag("Domain", $bgColor="#FCF3CF", $borderColor="#B7950B")
+AddElementTag("Infrastructure", $bgColor="#F5EEF8", $borderColor="#7D3C98")
+title MaquiGest - Inventory Layered Component Diagram
+
+Container(spa, "MaquiGest Web Application", "Angular", "Consumes Inventory REST endpoints.")
+System_Ext(iam, "IAM Actor Contract", "Published actor identity.")
+System_Ext(rentals, "Rentals Bounded Context", "Consumes rental inventory capabilities.")
+System_Ext(maintenance, "Maintenance Bounded Context", "Consumes maintenance inventory capabilities.")
+ContainerDb(db, "MaquiGest Database", "MySQL", "Stores inventory tables.")
+
+Container_Boundary(context, "Inventory Bounded Context") {
+  Boundary(interfaces_layer, "Interfaces Layer") {
+    Component(inventoryRest, "REST Interface", "EquipmentController, EquipmentCategoriesController", "Exposes equipment, category, availability and status endpoints.", $tags="Interfaces")
+    Component(inventoryPolicy, "Ownership Policy", "InventoryOwnershipPolicy", "Validates actor identity and equipment ownership.", $tags="Interfaces")
+    Component(inventoryResources, "Resources and Assemblers", "resources / transform", "Maps HTTP representations and domain results.", $tags="Interfaces")
+    Component(inventoryPublished, "Published Inventory Contracts", "InventoryRentalFacade, InventoryMaintenanceFacade", "Exposes controlled inventory capabilities to other contexts.", $tags="Interfaces")
+  }
+  Boundary(application_layer, "Application Layer") {
+    Component(inventoryServices, "Command and Query Contracts", "Equipment and category services", "Defines inventory use cases.", $tags="Application")
+    Component(inventoryImpl, "Service Implementations", "internal command/query services", "Coordinates equipment and category operations.", $tags="Application")
+    Component(inventoryFacadeImpl, "Published Facade Implementations", "InventoryRentalFacadeImpl, InventoryMaintenanceFacadeImpl", "Executes controlled cross-context operations.", $tags="Application")
+    Component(inventorySeed, "Category Seed Handler", "InventoryApplicationReadyEventHandler", "Seeds equipment categories through Application.", $tags="Application")
+  }
+  Boundary(domain_layer, "Domain Layer") {
+    Component(inventoryAggregate, "Equipment Aggregate", "Equipment, AvailabilityBlock", "Enforces equipment availability and operational-state invariants.", $tags="Domain")
+    Component(inventoryCategory, "Equipment Category", "EquipmentCategory", "Represents the category catalog as a separately persisted entity.", $tags="Domain")
+    Component(inventoryValues, "Value Objects and Enums", "RentalRate, EquipmentStatus", "Represents rental rates and equipment status.", $tags="Domain")
+    Component(inventoryMessages, "Commands and Queries", "Equipment commands and queries", "Expresses inventory mutations and reads.", $tags="Domain")
+    Component(inventoryRepos, "Repository Ports", "EquipmentRepository, EquipmentCategoryRepository", "Defines persistence contracts owned by Domain.", $tags="Domain")
+  }
+  Boundary(infrastructure_layer, "Infrastructure Layer") {
+    Component(inventoryPersistence, "JPA Persistence Adapters", "RepositoryImpl, entities, assemblers", "Implements inventory repository ports and mappings.", $tags="Infrastructure")
+  }
 }
-ContainerDb(db, "MaquiGest Database", "MySQL", "Inventory tables")
-Rel(spa, rest, "Calls", "JSON/HTTPS")
-Rel(rest, policy, "Authorizes through")
-Rel(policy, iam, "Reads actor identity")
-Rel(policy, repoPorts, "Checks equipment owner")
-Rel(rest, app, "Delegates")
-Rel(app, domain, "Executes")
-Rel(app, repoPorts, "Uses")
-Rel(facades, domain, "Executes aggregate behavior")
-Rel(facades, repoPorts, "Locks and persists equipment")
-Rel(rentals, facades, "Checks, reserves and releases equipment")
-Rel(maintenance, facades, "Inspects and changes equipment status")
-Rel(persistence, repoPorts, "Implements")
-Rel(persistence, db, "Reads and writes", "JPA/SQL")
-Rel(seed, app, "Seeds categories")
+
+Rel(spa, inventoryRest, "Calls", "JSON/HTTPS")
+Rel(inventoryRest, inventoryPolicy, "Authorizes through")
+Rel(inventoryPolicy, iam, "Reads actor identity")
+Rel(inventoryPolicy, inventoryRepos, "Checks owner")
+Rel(inventoryRest, inventoryResources, "Maps")
+Rel(inventoryRest, inventoryServices, "Invokes")
+Rel(inventoryImpl, inventoryServices, "Implements")
+Rel(inventoryImpl, inventoryAggregate, "Executes behavior")
+Rel(inventoryImpl, inventoryCategory, "Uses catalog")
+Rel(inventoryImpl, inventoryRepos, "Uses")
+Rel(inventoryServices, inventoryMessages, "Handles")
+Rel(inventoryAggregate, inventoryValues, "Owns and uses")
+Rel(inventoryFacadeImpl, inventoryPublished, "Implements")
+Rel(inventoryFacadeImpl, inventoryAggregate, "Executes behavior")
+Rel(inventoryFacadeImpl, inventoryRepos, "Locks and persists")
+Rel(inventorySeed, inventoryServices, "Seeds through")
+Rel(inventoryPersistence, inventoryRepos, "Implements")
+Rel(inventoryPersistence, db, "Reads and writes", "JPA/SQL")
+Rel(rentals, inventoryPublished, "Checks and reserves equipment")
+Rel(maintenance, inventoryPublished, "Inspects and changes status")
+
 SHOW_LEGEND()
 @enduml

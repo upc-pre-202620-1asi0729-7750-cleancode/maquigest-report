@@ -1,40 +1,67 @@
 @startuml
 !include _includes/C4_Component.puml
-title MaquiGest - Subscriptions Backend Component Diagram
-Container(spa, "MaquiGest Web Application", "Angular", "Subscriptions REST client")
-Container_Ext(iam, "IAM Bounded Context", "Published IAM contracts", "Provides actor and subscriber identity.")
-Container_Ext(rentals, "Rentals Bounded Context", "Backend context", "Consumes subscription entitlement.")
-Container_Ext(maintenance, "Maintenance Bounded Context", "Backend context", "Consumes maintenance entitlement.")
-Container_Ext(shared, "Shared Domain Event Publisher", "Spring ApplicationEventPublisher", "Publishes aggregate events in process.")
-Container_Boundary(subscriptions, "Subscriptions Bounded Context [Java / Spring Boot]") {
- Component(rest, "Subscriptions REST Interface", "Plan / user-subscription controllers", "Exposes plan and subscription endpoints.")
- Component(policy, "Subscription Ownership Policy", "SubscriptionOwnershipPolicy", "Checks subscription ownership through IAM actor identity.")
- Component(app, "Subscription Application Services", "Command and query services", "Coordinates creation, plan changes, cancellation and queries.")
- Component(domain, "Subscriptions Domain", "SubscriptionPlan / UserSubscription / value objects", "Enforces plan and subscription lifecycle rules.")
- Component(repoPorts, "Domain Repository Ports", "Plan / user-subscription repositories", "Defines persistence contracts owned by Domain.")
- Component(iamPort, "IAM Subscriber Port", "IamSubscriberPort", "Defines subscriber information required by Application.")
- Component(iamAdapter, "IAM Subscriber ACL Adapter", "IamSubscriberAclAdapter", "Implements the IAM port using the published subscriber facade.")
- Component(facade, "Subscriptions Context Facade", "SubscriptionsContextFacadeImpl", "Publishes entitlement decisions to Rentals and Maintenance.")
- Component(persistence, "Subscriptions Persistence Adapters", "RepositoryImpl / assemblers / JPA", "Implements subscription repository ports.")
- Component(seed, "Subscription Plan Seed", "SubscriptionPlanSeed", "Seeds available plans through persistence.")
+LAYOUT_TOP_DOWN()
+AddElementTag("Interfaces", $bgColor="#D6EAF8", $borderColor="#2471A3")
+AddElementTag("Application", $bgColor="#D5F5E3", $borderColor="#1E8449")
+AddElementTag("Domain", $bgColor="#FCF3CF", $borderColor="#B7950B")
+AddElementTag("Infrastructure", $bgColor="#F5EEF8", $borderColor="#7D3C98")
+title MaquiGest - Subscriptions Layered Component Diagram
+
+Container(spa, "MaquiGest Web Application", "Angular", "Consumes Subscriptions REST endpoints.")
+System_Ext(iam, "IAM Published Contracts", "Actor and subscriber identity.")
+System_Ext(rentals, "Rentals Bounded Context", "Consumes rental entitlement.")
+System_Ext(maintenance, "Maintenance Bounded Context", "Consumes maintenance entitlement.")
+ContainerDb(db, "MaquiGest Database", "MySQL", "Stores subscription tables.")
+
+Container_Boundary(context, "Subscriptions Bounded Context") {
+  Boundary(interfaces_layer, "Interfaces Layer") {
+    Component(subscriptionsRest, "REST Interface", "plan and subscription controllers", "Exposes plan and user-subscription endpoints.", $tags="Interfaces")
+    Component(subscriptionsPolicy, "Ownership Policy", "SubscriptionOwnershipPolicy", "Validates actor identity and subscription ownership.", $tags="Interfaces")
+    Component(subscriptionsResources, "Resources and Assemblers", "resources / transform", "Maps HTTP resources and domain results.", $tags="Interfaces")
+    Component(subscriptionsPublished, "Published Entitlement Contract", "SubscriptionsContextFacade", "Publishes rental and maintenance entitlement decisions.", $tags="Interfaces")
+  }
+  Boundary(application_layer, "Application Layer") {
+    Component(subscriptionsServices, "Service Contracts", "command and query services", "Defines subscription use cases.", $tags="Application")
+    Component(subscriptionsImpl, "Service Implementations", "internal command/query services", "Coordinates subscription changes and queries.", $tags="Application")
+    Component(subscriptionsIamPort, "IAM Subscriber Port", "IamSubscriberPort", "Defines subscriber information required from IAM.", $tags="Application")
+    Component(subscriptionsFacadeImpl, "Entitlement Facade Implementation", "SubscriptionsContextFacadeImpl", "Implements the published entitlement contract.", $tags="Application")
+  }
+  Boundary(domain_layer, "Domain Layer") {
+    Component(subscriptionsAggregates, "Subscription Aggregates", "SubscriptionPlan, UserSubscription", "Protects plan and subscription lifecycle invariants.", $tags="Domain")
+    Component(subscriptionsValues, "Value Objects and Enums", "SubscriptionPrice, SubscriptionPeriod, statuses", "Represents price, active periods and lifecycle states.", $tags="Domain")
+    Component(subscriptionsMessages, "Commands and Queries", "subscription commands and queries", "Expresses subscription mutations and reads.", $tags="Domain")
+    Component(subscriptionsEvents, "Domain Events", "activated and cancelled events", "Records relevant subscription transitions.", $tags="Domain")
+    Component(subscriptionsRepos, "Repository Ports", "SubscriptionPlanRepository, UserSubscriptionRepository", "Defines persistence contracts owned by Domain.", $tags="Domain")
+  }
+  Boundary(infrastructure_layer, "Infrastructure Layer") {
+    Component(subscriptionsPersistence, "JPA Persistence Adapters", "RepositoryImpl, entities, assemblers", "Implements subscription repository ports and mappings.", $tags="Infrastructure")
+    Component(subscriptionsIamAcl, "IAM ACL Adapter", "IamSubscriberAclAdapter", "Implements the subscriber port using the IAM facade.", $tags="Infrastructure")
+    Component(subscriptionsSeed, "Plan Seed", "SubscriptionPlanSeed", "Creates the initial subscription plan catalog.", $tags="Infrastructure")
+  }
 }
-ContainerDb(db, "MaquiGest Database", "MySQL", "Subscription plan and user-subscription tables")
-Rel(spa, rest, "Calls", "JSON/HTTPS")
-Rel(rest, policy, "Authorizes through")
-Rel(policy, iam, "Reads actor identity")
-Rel(rest, app, "Delegates")
-Rel(app, domain, "Executes")
-Rel(app, repoPorts, "Uses")
-Rel(app, iamPort, "Uses")
-Rel(iamAdapter, iamPort, "Implements")
-Rel(iamAdapter, iam, "Calls subscriber facade")
-Rel(rentals, facade, "Checks rental entitlement")
-Rel(maintenance, facade, "Checks maintenance entitlement")
-Rel(facade, domain, "Evaluates plan semantics")
-Rel(facade, repoPorts, "Reads subscriptions and plans")
-Rel(persistence, repoPorts, "Implements")
-Rel(persistence, db, "Reads and writes", "JPA/SQL")
-Rel(persistence, shared, "Publishes subscription domain events through")
-Rel(seed, persistence, "Seeds plans")
+
+Rel(spa, subscriptionsRest, "Calls", "JSON/HTTPS")
+Rel(subscriptionsRest, subscriptionsPolicy, "Authorizes through")
+Rel(subscriptionsPolicy, iam, "Reads actor identity")
+Rel(subscriptionsRest, subscriptionsResources, "Maps")
+Rel(subscriptionsRest, subscriptionsServices, "Invokes")
+Rel(subscriptionsImpl, subscriptionsServices, "Implements")
+Rel(subscriptionsImpl, subscriptionsAggregates, "Executes behavior")
+Rel(subscriptionsImpl, subscriptionsRepos, "Uses")
+Rel(subscriptionsImpl, subscriptionsIamPort, "Uses")
+Rel(subscriptionsServices, subscriptionsMessages, "Handles")
+Rel(subscriptionsAggregates, subscriptionsValues, "Owns")
+Rel(subscriptionsAggregates, subscriptionsEvents, "Registers")
+Rel(subscriptionsFacadeImpl, subscriptionsPublished, "Implements")
+Rel(subscriptionsFacadeImpl, subscriptionsAggregates, "Evaluates plan semantics")
+Rel(subscriptionsFacadeImpl, subscriptionsRepos, "Reads plans and subscriptions")
+Rel(subscriptionsPersistence, subscriptionsRepos, "Implements")
+Rel(subscriptionsPersistence, db, "Reads and writes", "JPA/SQL")
+Rel(subscriptionsIamAcl, subscriptionsIamPort, "Implements")
+Rel(subscriptionsIamAcl, iam, "Calls subscriber facade")
+Rel(subscriptionsSeed, subscriptionsPersistence, "Seeds plan catalog")
+Rel(rentals, subscriptionsPublished, "Checks rental entitlement")
+Rel(maintenance, subscriptionsPublished, "Checks maintenance entitlement")
+
 SHOW_LEGEND()
 @enduml
