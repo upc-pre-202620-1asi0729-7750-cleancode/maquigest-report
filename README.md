@@ -3204,7 +3204,7 @@ De esta manera, Shared Frontend evita duplicar capacidades técnicas y visuales 
 
 #### Backend General Components Diagram
 
-El Backend General Components Diagram presenta la organización de MaquiGest Backend API en los bounded contexts IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. El componente Shared proporciona capacidades transversales, mientras que las integraciones entre contextos se realizan mediante contratos publicados, fachadas y Anti-Corruption Layers. La aplicación Angular consume los servicios REST y MySQL almacena la información administrada por cada contexto.
+El diagrama presenta la arquitectura general del backend de MaquiGest, desarrollado con Spring Boot y organizado en seis Bounded Contexts: IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions. Cada contexto encapsula responsabilidades específicas del negocio y se comunica con los demás mediante contratos definidos y adaptadores. Asimismo, se muestra el módulo Shared, los servicios REST consumidos por el frontend y la persistencia en MySQL.
 
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-general-component-diagram.png"
@@ -3214,7 +3214,7 @@ El Backend General Components Diagram presenta la organización de MaquiGest Bac
 
 #### IAM Backend Component Diagram
 
-El IAM Backend Component Diagram representa los componentes responsables del registro, autenticación, autorización y administración de roles. Los servicios de aplicación utilizan los repositorios del dominio y los puertos de hashing y generación de tokens, implementados en Infrastructure mediante JPA, BCrypt y JWT. Las fachadas publicadas permiten que otros bounded contexts consulten información de identidad sin acceder al modelo interno de IAM.
+El diagrama representa la organización del Bounded Context IAM mediante las capas Interfaces, Application, Domain e Infrastructure. Sus componentes gestionan el registro, la autenticación, los roles y la autorización de usuarios. Spring Security y JWT proporcionan los mecanismos de seguridad, mientras que los repositorios y adaptadores permiten persistir la información y publicar contratos de identidad utilizados por otros contextos.
 
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-iam-component-diagram.png"
@@ -3224,7 +3224,7 @@ El IAM Backend Component Diagram representa los componentes responsables del reg
 
 #### Profiles Backend Component Diagram
 
-El Profiles Backend Component Diagram muestra la administración de perfiles de empresa mediante controllers, servicios de comandos y consultas y el agregado `CompanyProfile`. Infrastructure proporciona la persistencia JPA, la integración con el directorio de IAM y el bridge que traduce los eventos del dominio después de confirmar la transacción.
+El diagrama muestra los componentes del Bounded Context Profiles, responsable de gestionar los perfiles empresariales. La capa Interfaces recibe las solicitudes, Application coordina los casos de uso, Domain concentra las reglas del agregado CompanyProfile e Infrastructure implementa la persistencia y la integración con IAM. Esta separación permite administrar la información de las empresas manteniendo las responsabilidades de cada capa.
 
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-profiles-component-diagram.png"
@@ -3234,7 +3234,7 @@ El Profiles Backend Component Diagram muestra la administración de perfiles de 
 
 #### Inventory Backend Component Diagram
 
-El Inventory Backend Component Diagram representa la gestión de equipos, categorías, disponibilidad, tarifas y estados operativos. Los servicios de aplicación utilizan el agregado `Equipment` y los repositorios del dominio, mientras que Infrastructure implementa la persistencia mediante JPA. Las fachadas de Inventory publican operaciones controladas para Rentals y Maintenance.
+El diagrama describe la estructura del Bounded Context Inventory, encargado de administrar equipos, categorías, tarifas, disponibilidad y estados operativos. Sus componentes se distribuyen entre las cuatro capas DDD, separando los controladores, servicios de aplicación, reglas del dominio y adaptadores de persistencia. Además, las fachadas publicadas permiten que Rentals y Maintenance interactúen con el inventario mediante contratos definidos.
 
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-inventory-component-diagram.png"
@@ -3244,7 +3244,7 @@ El Inventory Backend Component Diagram representa la gestión de equipos, catego
 
 #### Rentals Backend Component Diagram
 
-El Rentals Backend Component Diagram representa el ciclo de solicitudes, alquileres, entregas y devoluciones. Los servicios y executors transaccionales modifican los agregados utilizando repositorios del dominio, mientras que los ACL adapters permiten reservar equipos en Inventory y validar capacidades en Subscriptions. El contexto también publica información de alquileres para Maintenance.
+El diagrama representa los componentes del Bounded Context Rentals, responsable de gestionar solicitudes de alquiler, aprobaciones, entregas y devoluciones. La capa Application coordina los casos de uso y las operaciones transaccionales, mientras que Domain encapsula las reglas de RentalRequest y Rental. Infrastructure proporciona la persistencia y los adaptadores necesarios para interactuar con Inventory y Subscriptions, respetando los límites entre contextos.
 
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-rentals-component-diagram.png"
@@ -3254,7 +3254,7 @@ El Rentals Backend Component Diagram representa el ciclo de solicitudes, alquile
 
 #### Maintenance Backend Component Diagram
 
-El Maintenance Backend Component Diagram muestra la gestión de incidentes, mantenimientos, actividades e historial de los equipos. Los servicios de aplicación utilizan los agregados Incident y Maintenance, mientras que los ACL adapters consumen las fachadas de Inventory, Rentals y Subscriptions. Los repository adapters implementan la persistencia del contexto mediante JPA.
+El diagrama muestra la organización del Bounded Context Maintenance, encargado del registro de incidentes, la gestión de mantenimientos y el historial de actividades de los equipos. Sus capas separan la exposición de servicios, la coordinación de operaciones, las reglas del dominio y los mecanismos de persistencia. Asimismo, utiliza puertos y adaptadores para colaborar con Inventory, Rentals y Subscriptions sin incorporar directamente sus implementaciones internas.
 
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-maintenance-component-diagram.png"
@@ -3264,7 +3264,7 @@ El Maintenance Backend Component Diagram muestra la gestión de incidentes, mant
 
 #### Subscriptions Backend Component Diagram
 
-El Subscriptions Backend Component Diagram representa la administración de planes y suscripciones de usuario. Los servicios de aplicación utilizan `SubscriptionPlan`, `UserSubscription` y sus repositorios, mientras que la integración con IAM permite identificar al suscriptor. `SubscriptionsContextFacade` publica las capacidades de los planes activos para Rentals y Maintenance.
+El diagrama presenta los componentes del Bounded Context Subscriptions, responsable de administrar planes, suscripciones y condiciones de acceso a funcionalidades. Las capas DDD separan los servicios REST, los casos de uso, los agregados SubscriptionPlan y UserSubscription, y los adaptadores de persistencia. También se representan los contratos de integración con IAM y las fachadas que permiten a Rentals y Maintenance consultar los beneficios asociados a las suscripciones.
 
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-subscriptions-component-diagram.png"
