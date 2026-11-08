@@ -3281,79 +3281,78 @@ El diagrama presenta los componentes del Bounded Context Subscriptions, responsa
 
 ![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-domain.png)
 
-**Explicación del Proceso:** El agregado Equipment concentra las reglas de disponibilidad, reserva y estado operativo. Se compone de bloques AvailabilityBlock, utiliza RentalRate y EquipmentStatus y se relaciona con EquipmentCategory.
+**Explicación del Proceso:** El diagrama representa los agregados Equipment y EquipmentCategory, junto con la entidad AvailabilityBlock. Sus Value Objects modelan conceptos como EquipmentCode, EquipmentLocation, RentalRate, Money y AvailabilityPeriod, permitiendo gestionar los equipos, sus características y su disponibilidad.
 
-**Conexión de la capa:** Los servicios de Application procesan los comandos y consultas del dominio. EquipmentRepository y EquipmentCategoryRepository permanecen como contratos de Domain implementados por Infrastructure.
+**Conexión de la Capa:** Domain define las reglas de inventario que utilizan los servicios de Application para registrar, actualizar, consultar y reservar equipos. Los repositorios proporcionan los contratos necesarios para acceder a la información sin depender de JPA.
 
 ### B. Application Layer
 
 ![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-application.png)
 
-**Explicación del proceso:** Los command y query services coordinan la creación, actualización, consulta, reserva y cambio de estado de los equipos. Las fachadas de Inventory exponen operaciones controladas para otros contextos.
+**Explicación del Proceso:** El diagrama muestra los servicios que gestionan equipos, categorías, disponibilidad y cambios de estado operativo. Incluye los manejadores de comandos y consultas, la inicialización de categorías y las fachadas utilizadas para atender operaciones solicitadas desde Rentals y Maintenance.
 
-**Conexión de la capa:** Los servicios dependen de los repositorios de Domain. InventoryRentalFacadeImpl e InventoryMaintenanceFacadeImpl implementan los contratos consumidos por Rentals y Maintenance.
+**Conexión de la Capa:** Application coordina las operaciones recibidas desde Interfaces, utilizando las reglas y repositorios de Domain. Además, las fachadas implementadas en esta capa permiten colaborar con otros contextos mediante contratos publicados.
 
 ### C. Infrastructure Layer
 
 ![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-infrastructure.png)
 
-**Explicación del proceso:** Los repository adapters utilizan Spring Data JPA, entidades de persistencia y assemblers para almacenar equipos, categorías y bloques de disponibilidad.
+**Explicación del Proceso:** El diagrama muestra los repositorios JPA, las entidades de persistencia y los ensambladores que permiten almacenar y reconstruir equipos, categorías y bloques de disponibilidad. Los adaptadores implementan los contratos definidos en el dominio.
 
-**Conexión de la capa:** EquipmentRepositoryImpl y EquipmentCategoryRepositoryImpl implementan los repositorios de Domain. Los assemblers traducen entre los agregados y las entidades JPA.
+**Conexión de la Capa:** Infrastructure conecta los repositorios de Domain con la base de datos mediante Spring Data JPA. Los ensambladores mantienen la separación entre los objetos de negocio, incluidos sus Value Objects, y las estructuras utilizadas para persistirlos.
 
 ### D. Interfaces Layer
 
 ![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-interfaces.png)
 
-**Explicación del proceso:** Los controllers exponen las operaciones REST relacionadas con equipos, categorías, disponibilidad y estado. Los resources y assemblers transforman las solicitudes y respuestas HTTP.
+**Explicación del Proceso:** El diagrama presenta los controladores REST para administrar equipos y categorías, junto con los recursos y ensambladores correspondientes. También incluye la política InventoryOwnershipPolicy y las fachadas InventoryRentalFacade e InventoryMaintenanceFacade, que exponen información y operaciones específicas del inventario.
 
-**Conexión de la capa:** Los controllers utilizan los servicios de Application. InventoryOwnershipPolicy consulta la identidad del usuario y las fachadas publicadas conectan Inventory con Rentals y Maintenance.
+**Conexión de la Capa:** Interfaces conecta las solicitudes del cliente con los servicios de Application y transforma los resultados en respuestas HTTP. Las fachadas proporcionan puntos de integración para Rentals y Maintenance sin exponer directamente los agregados internos.
 
 ## Rentals
 ### A. Domain Layer
 
 ![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-domain.png)
 
-**Explicación del proceso:** RentalRequest representa una solicitud y Rental el alquiler creado después de su aprobación. El alquiler se relaciona con Delivery, EquipmentReturn, RentalPeriod, RentalRequestStatus y RentalStatus.
+**Explicación del Proceso:** El diagrama representa los agregados RentalRequest y Rental, junto con las entidades Delivery y EquipmentReturn. Incluye los Value Objects que expresan identificadores, periodos y observaciones del alquiler, así como los comandos, consultas y eventos asociados a la aprobación y ejecución del ciclo de alquiler.
 
-**Conexión de la capa:** Los servicios de Application procesan los comandos y consultas. Los repositorios de solicitudes, alquileres, entregas y devoluciones se declaran en Domain y son implementados por Infrastructure.
+**Conexión de la Capa:** Domain define las reglas que utiliza Application para gestionar solicitudes, aprobaciones, entregas y devoluciones. Sus repositorios permiten consultar y persistir cada elemento sin acoplar el modelo a una tecnología específica.
 
 ### B. Application Layer
 
 ![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-application.png)
 
-**Explicación del proceso:** Los command services y executors transaccionales coordinan la creación, aprobación, reprogramación, entrega y devolución de los alquileres. Los query services recuperan la información visible para el actor autenticado.
+**Explicación del Proceso:** El diagrama muestra los servicios responsables de procesar solicitudes de alquiler y coordinar su ciclo de vida. Los ejecutores transaccionales organizan operaciones que requieren consistencia, mientras que los puertos RentalEquipmentPort y RentalSubscriptionPort permiten consultar disponibilidad y condiciones de suscripción.
 
-**Conexión de la capa:** Application utiliza los repositorios de Domain y los puertos hacia Inventory y Subscriptions. `RentalsMaintenanceFacadeImpl` publica información de alquileres para Maintenance.
+**Conexión de la Capa:** Application recibe las operaciones de Interfaces, aplica las reglas del dominio y utiliza adaptadores de Infrastructure para colaborar con Inventory y Subscriptions. También implementa el contrato que permite a Maintenance consultar información relacionada con los alquileres.
 
 ### C. Infrastructure Layer
 
 ![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-infrastructure.png)
 
-**Explicación del proceso:** Los repository adapters implementan la persistencia de solicitudes, alquileres, entregas y devoluciones. El submission guard controla las solicitudes concurrentes realizadas sobre un mismo equipo.
+**Explicación del Proceso:** 
+El diagrama representa los adaptadores de persistencia de solicitudes, alquileres, entregas y devoluciones, junto con sus entidades JPA y ensambladores. También incluye los adaptadores de integración con Inventory y Subscriptions y el componente encargado de publicar eventos de integración.
 
-**Conexión de la capa:** Los ACL adapters implementan los puertos de Application y consumen las fachadas de Inventory y Subscriptions. RentalIntegrationEventBridge traduce los eventos del dominio después del commit.
+**Conexión de la Capa:** Infrastructure implementa los repositorios y puertos utilizados por Domain y Application. Los adaptadores permiten acceder a servicios de otros contextos, mientras que JPA gestiona la persistencia sin introducir dependencias tecnológicas en el modelo de alquileres.
 
 ### D. Interfaces Layer
 
 ![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-interfaces.png)
 
-**Explicación del proceso:** Los controllers exponen las operaciones REST de solicitudes, alquileres, entregas y devoluciones. Los resources y assemblers transforman las representaciones recibidas y devueltas por la API.
+**Explicación del Proceso:** El diagrama presenta los controladores REST para solicitudes, alquileres, entregas y devoluciones. Incluye los recursos utilizados para intercambiar información, la política de autorización RentalActorPolicy, los ensambladores y los mecanismos de manejo de excepciones.
 
-**Conexión de la capa:** Los controllers dependen de los command y query services de Application. RentalActorPolicy valida al actor y RentalsExceptionHandler transforma los errores de aplicación.
+**Conexión de la Capa:** Interfaces transforma las solicitudes HTTP en operaciones de Application y convierte los resultados en respuestas para el cliente. También expone contratos y eventos de integración que permiten la colaboración con otros Bounded Contexts.
 
 ## Maintenance
 
 ### A. Domain Layer
 
-
 ![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-domain.png)
 
 
-**Explicación del proceso:** Incident representa una falla reportada y Maintenance controla el ciclo de trabajo técnico. El mantenimiento agrupa actividades y utiliza MaintenanceType, MaintenanceStatus e IncidentStatus.
+**Explicación del Proceso:** El diagrama representa los agregados Incident y Maintenance, junto con la entidad MaintenanceActivity. Utiliza Value Objects como MaintenanceType, TechnicianName, IncidentDescription y RentalRestriction para expresar conceptos del negocio, además de comandos, consultas y eventos relacionados con incidentes y mantenimientos.
 
-**Conexión de la capa:** Los servicios de Application procesan los comandos y consultas. Los repositorios de incidentes, mantenimientos y actividades permanecen como contratos de Domain.
-
+**Conexión de la Capa:** Domain proporciona las reglas necesarias para registrar incidentes, gestionar mantenimientos y controlar sus estados. Application utiliza estas reglas mediante los agregados y repositorios, sin depender directamente de la infraestructura.
 
 ### B. Application Layer
 
@@ -3361,9 +3360,9 @@ El diagrama presenta los componentes del Bounded Context Subscriptions, responsa
 ![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-application.png)
 
 
-**Explicación del proceso:** Los servicios y executors transaccionales coordinan el reporte y resolución de incidentes, el registro de mantenimientos, los cambios de estado y la reactivación de equipos.
+**Explicación del Proceso:** El diagrama muestra los servicios que coordinan el registro y seguimiento de incidentes, la ejecución de mantenimientos y la consulta del historial de equipos. Incluye ejecutores transaccionales, proyecciones de consulta y puertos de integración con Inventory, Rentals y Subscriptions.
 
-**Conexión de la capa:** Application utiliza los repositorios de Domain y los puertos hacia Inventory, Rentals y Subscriptions. Infrastructure proporciona los adapters que implementan esos puertos.
+**Conexión de la Capa:** Application conecta los controladores con los modelos de Domain y utiliza puertos de salida para consultar información de los contextos relacionados. Infrastructure implementa dichos puertos y proporciona los mecanismos necesarios para persistir las operaciones.
 
 
 ### C. Infrastructure Layer
@@ -3372,18 +3371,18 @@ El diagrama presenta los componentes del Bounded Context Subscriptions, responsa
 ![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-infrastructure.png)
 
 
-**Explicación del proceso:** Los repository adapters, assemblers y entidades JPA almacenan incidentes, mantenimientos y actividades. Los ACL adapters traducen los contratos publicados por otros bounded contexts.
+**Explicación del Proceso:** El diagrama muestra los repositorios JPA y ensambladores empleados para persistir incidentes, mantenimientos y actividades. Asimismo, representa los adaptadores de integración con Inventory, Rentals y Subscriptions, junto con el puente responsable de publicar eventos de mantenimiento.
 
-**Conexión de la capa:** Los adapters JPA implementan los repositorios de Domain y los ACL adapters implementan los puertos de Application. El event bridge traduce los eventos después del commit.
+**Conexión de la Capa:** Infrastructure implementa los repositorios de Domain y los puertos de Application, proporcionando acceso a la base de datos y a los servicios externos del contexto. De esta manera, la lógica del mantenimiento permanece desacoplada de sus mecanismos técnicos.
 
 ### D. Interfaces Layer
 
 
 ![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-interfaces.png)
 
-**Explicación del proceso:** IncidentController y MaintenanceController exponen las operaciones REST y transforman la información mediante resources y assemblers.
+**Explicación del Proceso:** El diagrama presenta los controladores REST de incidentes y mantenimientos, junto con los recursos que representan su información y el historial de los equipos. También incluye la política MaintenanceActorPolicy, los ensambladores, el manejo de excepciones y los eventos de integración.
 
-**Conexión de la capa:** Los controllers utilizan los servicios de Application. La política de actor valida la identidad autenticada y el exception handler transforma los errores del contexto.
+**Conexión de la Capa:** Interfaces recibe las solicitudes del cliente, verifica las condiciones de autorización y delega los casos de uso a Application. Posteriormente, transforma los resultados en recursos REST y permite comunicar eventos relevantes a otros componentes.
 
 #### Subscription
 
@@ -3392,33 +3391,33 @@ El diagrama presenta los componentes del Bounded Context Subscriptions, responsa
 
 ![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-domain.png)
 
-**Explicación del proceso:** SubscriptionPlan define las características y capacidades de un plan mediante SubscriptionPrice y PlanStatus. UserSubscription controla el periodo, plan y estado de una suscripción.
+**Explicación del Proceso:** El diagrama representa los agregados SubscriptionPlan y UserSubscription, encargados de definir los planes disponibles y gestionar las suscripciones de los usuarios. Los Value Objects, como SubscriptionPrice, SubscriptionPeriod, SubscriptionPlanId y UserSubscriptionId, encapsulan los conceptos utilizados en las reglas de suscripción.
 
-**Conexión de la capa:** Los servicios de Application procesan los comandos y consultas. SubscriptionPlanRepository y UserSubscriptionRepository son contratos de Domain implementados por Infrastructure.
+**Conexión de la Capa:** Domain establece las reglas para crear, modificar y cancelar suscripciones, así como verificar su vigencia. Application utiliza estos modelos y los repositorios para ejecutar los casos de uso, manteniendo la independencia respecto a la persistencia.
 
 ### B. Application Layer
 
 ![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-application.png)
 
-**Explicación del proceso:** Los servicios coordinan la creación, cambio y cancelación de suscripciones, además de las consultas de planes y suscripciones. La fachada evalúa las capacidades de los planes activos.
+**Explicación del Proceso:** El diagrama muestra los servicios que coordinan la creación, cancelación, cambio de plan y consulta de suscripciones. Incluye el puerto IamSubscriberPort, utilizado para validar la condición del usuario, y la implementación de la fachada SubscriptionsContextFacade, que expone verificaciones de beneficios.
 
-**Conexión de la capa:** Los servicios utilizan los repositorios de Domain. IamSubscriberPort define la información del suscriptor requerida y es implementado por un ACL adapter de Infrastructure.
+**Conexión de la Capa:** Application conecta las operaciones recibidas desde Interfaces con los agregados y repositorios de Domain. También utiliza Infrastructure para consultar información de IAM y proporciona contratos que otros contextos emplean para verificar las condiciones de suscripción.
 
 ### C. Infrastructure Layer
 
 ![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-infrastructure.png)
 
-**Explicación del proceso:** Los repository adapters, assemblers y entidades JPA almacenan planes y suscripciones. SubscriptionPlanSeed registra los planes iniciales y el ACL de IAM obtiene la identidad del suscriptor.
+**Explicación del Proceso:** El diagrama muestra los repositorios JPA, entidades de persistencia y ensambladores responsables de almacenar planes y suscripciones. También incluye la inicialización del catálogo de planes y el adaptador IamSubscriberAclAdapter, encargado de integrar las validaciones de usuarios con IAM.
 
-**Conexión de la capa:** Los adapters implementan los repositorios de Domain y el puerto de IAM definido en Application. El backend actual no contiene un adapter de Stripe ni un payment connector.
+**Conexión de la Capa:** Infrastructure implementa los repositorios del dominio y el puerto de integración definido en Application. Mediante JPA y los adaptadores, conecta las operaciones de suscripción con la base de datos y con IAM sin acoplar el modelo de negocio a dichas implementaciones.
 
 ### D. Interfaces Layer
 
 ![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-interfaces.png)
 
-**Explicación del proceso:** Los controllers exponen la consulta de planes y la administración de suscripciones. Los assemblers generan los recursos utilizados en las respuestas REST.
+**Explicación del Proceso:** El diagrama presenta los controladores REST de planes y suscripciones, junto con los recursos y ensambladores utilizados para transformar solicitudes y respuestas. Incluye la política SubscriptionOwnershipPolicy y el contrato publicado SubscriptionsContextFacade.
 
-**Conexión de la capa:** Los controllers dependen de los command y query services. La política de propiedad consulta IAM y SubscriptionsContextFacade es consumida por Rentals y Maintenance.
+**Conexión de la Capa:** Interfaces comunica las solicitudes del cliente con los servicios de Application y verifica las condiciones de autorización. La fachada publicada permite que otros Bounded Contexts consulten los beneficios de una suscripción sin acceder a sus agregados internos.
 
 #### IAM
 
@@ -3426,33 +3425,33 @@ El diagrama presenta los componentes del Bounded Context Subscriptions, responsa
 
 ![Class Diagram — IAM](./assets/md-images-chapter4/iam-domain.png)
 
-**Explicación del proceso:** `User` es el agregado raíz de identidad y administra los roles y el estado de la cuenta. Role, Roles y UserStatus representan los permisos y estados utilizados por el contexto.
+**Explicación del Proceso:** El diagrama representa el modelo de identidad y acceso mediante el agregado User, la entidad Role y los Value Objects que encapsulan los datos personales, credenciales e identificadores. También incluye los comandos de registro y autenticación, así como los contratos de repositorio que permiten gestionar las reglas del dominio.
 
-**Conexión de la capa:** Los command services de Application procesan el registro, inicio de sesión y seeding. UserRepository y RoleRepository son contratos de Domain implementados por Infrastructure.
+**Conexión de la Capa:** La capa Application utiliza estos modelos y contratos para ejecutar los casos de uso de autenticación y administración de usuarios. Infrastructure implementa los repositorios, manteniendo separada la lógica del dominio de los mecanismos de persistencia.
 
 ### B. Application Layer
 
 ![Class Diagram — IAM](./assets/md-images-chapter4/iam-application.png)
 
-**Explicación del proceso:** Los command services coordinan el registro, autenticación y creación de roles. Sus implementaciones utilizan repositorios, hashing y tokens, mientras que las fachadas publican información de identidad.
+**Explicación del Proceso:** El diagrama muestra los servicios de aplicación que coordinan el registro de usuarios, la autenticación y la inicialización de roles. Utiliza puertos de hashing y generación de tokens, además de implementaciones de fachadas que permiten consultar información de identidad desde otros contextos.
 
-**Conexión de la capa:** Application depende de los contratos de Domain y define los puertos HashingService y TokenService. Infrastructure proporciona las implementaciones de seguridad y persistencia.
+**Conexión de la Capa:** Application recibe las operaciones solicitadas desde Interfaces, aplica las reglas del dominio mediante sus agregados y repositorios, y delega los servicios de seguridad y consulta de datos a los adaptadores de Infrastructure.
 
 ### C. Infrastructure Layer
 
 ![Class Diagram — IAM](./assets/md-images-chapter4/iam-infrastructure.png)
 
-**Explicación del proceso:** Infrastructure contiene la configuración de Spring Security, el filtro bearer, las implementaciones JWT y BCrypt y los adapters de persistencia JPA.
+**Explicación del Proceso:** El diagrama muestra la implementación técnica de la autenticación mediante Spring Security, JWT y BCrypt. También representa los repositorios JPA, entidades de persistencia, ensambladores y adaptadores que permiten almacenar usuarios y roles, además de proporcionar consultas de identidad.
 
-**Conexión de la capa:** Los repository adapters implementan los contratos de Domain. BCrypt y JWT implementan los puertos de Application y UserDetailsServiceImpl adapta User al modelo de Spring Security.
+*Conexión de la Capa:** Infrastructure implementa los contratos definidos por Domain y Application, conectándolos con la base de datos y los mecanismos de seguridad. De esta manera, los detalles tecnológicos permanecen separados de las reglas de negocio.
 
 ### D. Interfaces Layer
 
 ![Class Diagram — IAM](./assets/md-images-chapter4/iam-interfaces.png)
 
-**Explicación del proceso:** Los controllers exponen el registro, inicio de sesión y consulta del usuario autenticado. Los resources y assemblers transforman las solicitudes REST en comandos y respuestas.
+**Explicación del Proceso:** El diagrama presenta los controladores REST encargados del registro, inicio de sesión y consulta del usuario autenticado. Incluye los recursos de entrada y salida, los ensambladores que transforman datos hacia comandos del dominio y los contratos publicados para compartir información de identidad.
 
-**Conexión de la capa:** Los controllers utilizan UserCommandService y las fachadas implementadas en Application. Los demás bounded contexts consumen estas fachadas sin acceder al modelo interno de IAM.
+**Conexión de la Capa:** Interfaces comunica las solicitudes HTTP con los servicios de Application y transforma sus resultados en respuestas para el cliente. Las fachadas publicadas permiten que otros Bounded Contexts consulten información de IAM sin acceder directamente a sus entidades internas.
 
 ## Profiles
 
@@ -3461,33 +3460,33 @@ El diagrama presenta los componentes del Bounded Context Subscriptions, responsa
 
 ![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-domain.png)
 
-**Explicación del proceso:** `CompanyProfile` es el agregado raíz y utiliza los value objects PersonName, EmailAddress y CompanyAddress. El agregado registra eventos cuando el perfil es creado o actualizado.
+**Explicación del Proceso:** El diagrama representa el agregado CompanyProfile, encargado de gestionar la información de los perfiles empresariales. Sus Value Objects encapsulan conceptos como PersonName, EmailAddress, PhoneNumber y CompanyAddress, mientras que los comandos, consultas y eventos de dominio representan las operaciones relacionadas con los perfiles.
 
-**Conexión de la capa:** Los servicios de Application procesan los comandos y consultas. CompanyProfileRepository es el contrato de persistencia y userId relaciona el perfil con la identidad publicada por IAM.
+**Conexión de la Capa:** Domain proporciona a Application las reglas y contratos necesarios para crear, actualizar y consultar perfiles empresariales. La persistencia se mantiene desacoplada mediante el repositorio CompanyProfileRepository.
 
 ### B. Application Layer
 
 ![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-application.png)
 
-**Explicación del proceso:** Los command y query services coordinan la creación, actualización, consulta y aprovisionamiento de los perfiles de empresa.
+**Explicación del Proceso:** l diagrama muestra los servicios que coordinan la creación, actualización y consulta de perfiles empresariales. También incluye el puerto IamCompanyDirectoryPort, utilizado para obtener información de empresas registradas en IAM y apoyar el aprovisionamiento de perfiles.
 
-**Conexión de la capa:** Los servicios utilizan CompanyProfileRepository y IamCompanyDirectoryPort. Infrastructure implementa el puerto de IAM y el repositorio del dominio.
+**Conexión de la Capa:** Application conecta las solicitudes provenientes de Interfaces con el agregado CompanyProfile y su repositorio. Para obtener información de identidad, utiliza un puerto de salida cuya implementación se encuentra en Infrastructure.
 
 ### C. Infrastructure Layer
 
 ![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-infrastructure.png)
 
-**Explicación del proceso:** Infrastructure contiene el repository adapter, los assemblers, la entidad JPA, el embeddable de dirección, el reconciler de perfiles, el ACL de IAM y el bridge de eventos.
+**Explicación del Proceso:** El diagrama representa los adaptadores de persistencia, entidades JPA, ensambladores y componentes de integración con IAM. También incluye el mecanismo de conciliación de perfiles y el puente que transforma eventos del dominio en eventos de integración.
 
-**Conexión de la capa:** El repository adapter implementa el contrato de Domain, el ACL adapter implementa el puerto de Application y el event bridge traduce los eventos después del commit.
+**Conexión de la Capa:** Infrastructure implementa los repositorios y puertos requeridos por las capas internas, utilizando JPA para la persistencia y adaptadores para comunicarse con IAM. Esto permite mantener el modelo de CompanyProfile independiente de las tecnologías utilizadas.
 
 ### D. Interfaces Layer
 
 ![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-interfaces.png)
 
-**Explicación del proceso:** CompanyProfileController expone las operaciones REST y utiliza resources y assemblers para transformar comandos y respuestas. ProfileOwnershipPolicy valida la propiedad del perfil.
+**Explicación del Proceso:** El diagrama representa los adaptadores de persistencia, entidades JPA, ensambladores y componentes de integración con IAM. También incluye el mecanismo de conciliación de perfiles y el puente que transforma eventos del dominio en eventos de integración.
 
-**Conexión de la capa:** El controller utiliza los servicios de Application, la política consulta IAM y el repositorio del dominio y los eventos de integración son publicados desde Infrastructure.
+**Conexión de la Capa:** Infrastructure implementa los repositorios y puertos requeridos por las capas internas, utilizando JPA para la persistencia y adaptadores para comunicarse con IAM. Esto permite mantener el modelo de CompanyProfile independiente de las tecnologías utilizadas.
 
 ## 4.8. Database Design
 
