@@ -1,0 +1,301 @@
+@startuml
+top to bottom direction
+
+skinparam linetype ortho
+skinparam shadowing false
+skinparam packageStyle rectangle
+skinparam packageBackgroundColor white
+skinparam classBackgroundColor #F1F1F1
+skinparam classBorderColor #888888
+skinparam nodesep 35
+skinparam ranksep 55
+
+hide empty members
+
+title maquigest - database diagram
+
+package "iam" as bc_iam {
+
+  entity "users" as users {
+    * id : BIGINT <<PK, AI>>
+    --
+    * company_name : VARCHAR(180)
+    * email : VARCHAR(254) <<UNIQUE>>
+    * first_name : VARCHAR(100)
+    * last_name : VARCHAR(150)
+    * password : VARCHAR(120)
+    * status : ENUM('ACTIVE','INACTIVE')
+    * created_at : DATETIME(6)
+    * updated_at : DATETIME(6)
+  }
+
+  entity "roles" as roles {
+    * id : BIGINT <<PK, AI>>
+    --
+    * name : ENUM('ROLE_ADMIN','ROLE_CONSTRUCTION_COMPANY','ROLE_RENTAL_COMPANY','ROLE_USER') <<UNIQUE>>
+  }
+
+  entity "user_roles" as user_roles {
+    * user_id : BIGINT <<PK, FK>>
+    * role_id : BIGINT <<PK, FK>>
+    .. indexes and constraints ..
+    PRIMARY KEY (user_id, role_id)
+    INDEX (role_id)
+  }
+}
+
+package "profiles" as bc_profiles {
+
+  entity "company_profiles" as company_profiles {
+    * id : BIGINT <<PK, AI>>
+    --
+    * user_id : BIGINT <<UNIQUE, REF>>
+    * first_name : VARCHAR(100)
+    * last_name : VARCHAR(150)
+    * company_name : VARCHAR(180)
+    * contact_email : VARCHAR(254)
+    * phone_number : VARCHAR(40)
+    * address_street : VARCHAR(250)
+    * address_district : VARCHAR(120)
+    * address_city : VARCHAR(120)
+    * address_country : VARCHAR(120)
+    * address_latitude : DOUBLE
+    * address_longitude : DOUBLE
+    * version : BIGINT
+    * created_at : DATETIME(6)
+    * updated_at : DATETIME(6)
+    .. indexes ..
+    INDEX idx_company_profiles_company_name (company_name)
+  }
+}
+
+package "inventory" as bc_inventory {
+
+  entity "equipment_categories" as equipment_categories {
+    * id : BIGINT <<PK, AI>>
+    --
+    * name : VARCHAR(120) <<UNIQUE>>
+    * created_at : DATETIME(6)
+    * updated_at : DATETIME(6)
+  }
+
+  entity "equipment" as equipment {
+    * id : BIGINT <<PK, AI>>
+    --
+    * user_id : BIGINT <<REF>>
+    * category_id : BIGINT <<REF>>
+    * code : VARCHAR(60)
+    * name : VARCHAR(180)
+    * description : VARCHAR(3000)
+    * location : VARCHAR(200)
+    * daily_rate : DECIMAL(12,2)
+    * weekly_rate : DECIMAL(12,2)
+    * status : ENUM('AVAILABLE','MAINTENANCE','RENTED')
+    * version : BIGINT
+    * created_at : DATETIME(6)
+    * updated_at : DATETIME(6)
+    .. indexes and constraints ..
+    UNIQUE KEY uk_equipment_owner_code (user_id, code)
+  }
+
+  entity "equipment_availability_blocks" as availability_blocks {
+    * id : BIGINT <<PK, AI>>
+    --
+    * equipment_id : BIGINT <<FK>>
+    * start_date : DATE
+    * end_date : DATE
+    • released_at : DATETIME(6) <<NULL>>
+    * created_at : DATETIME(6)
+    * updated_at : DATETIME(6)
+    .. indexes ..
+    INDEX (equipment_id)
+  }
+}
+
+package "rentals" as bc_rentals {
+
+  entity "rental_requests" as rental_requests {
+    * id : BIGINT <<PK, AI>>
+    --
+    * equipment_id : BIGINT <<REF>>
+    * construction_user_id : BIGINT <<REF>>
+    * rental_company_user_id : BIGINT <<REF>>
+    * start_date : DATE
+    * end_date : DATE
+    * status : ENUM('APPROVED','PENDING','REJECTED')
+    * created_at : DATETIME(6)
+  }
+
+  entity "rentals" as rentals {
+    * id : BIGINT <<PK, AI>>
+    --
+    * request_id : BIGINT <<UNIQUE, REF>>
+    * equipment_id : BIGINT <<REF>>
+    * construction_user_id : BIGINT <<REF>>
+    * rental_company_user_id : BIGINT <<REF>>
+    * availability_block_id : BIGINT <<REF>>
+    * start_date : DATE
+    * end_date : DATE
+    * status : ENUM('ACTIVE','COMPLETED','CONFIRMED')
+  }
+
+  entity "deliveries" as deliveries {
+    * id : BIGINT <<PK, AI>>
+    --
+    * rental_id : BIGINT <<UNIQUE, REF>>
+    * delivered_at : DATETIME(6)
+    * notes : VARCHAR(2000)
+  }
+
+  entity "equipment_returns" as equipment_returns {
+    * id : BIGINT <<PK, AI>>
+    --
+    * rental_id : BIGINT <<UNIQUE, REF>>
+    * returned_at : DATETIME(6)
+    * notes : VARCHAR(2000)
+    * maintenance_required : BIT(1)
+  }
+
+  entity "rental_request_submission_guards" as submission_guards {
+    * id : BIGINT <<PK, AI>>
+    --
+    * equipment_id : BIGINT <<REF>>
+    * construction_user_id : BIGINT <<REF>>
+    .. indexes and constraints ..
+    UNIQUE KEY uk_rental_request_submission_guard_pair (equipment_id, construction_user_id)
+  }
+}
+
+package "maintenance" as bc_maintenance {
+
+  entity "maintenance_incidents" as incidents {
+    * id : BIGINT <<PK, AI>>
+    --
+    * equipment_id : BIGINT <<REF>>
+    * owner_user_id : BIGINT <<REF>>
+    * description : VARCHAR(3000)
+    * reported_at : DATETIME(6)
+    • resolved_at : DATETIME(6) <<NULL>>
+    * blocks_rental : BIT(1)
+    * status : ENUM('OPEN','RESOLVED')
+    * version : BIGINT
+    .. indexes ..
+    INDEX idx_mi_equipment (equipment_id)
+    INDEX idx_mi_owner (owner_user_id)
+  }
+
+  entity "maintenance_records" as maintenance_records {
+    * id : BIGINT <<PK, AI>>
+    --
+    * equipment_id : BIGINT <<REF>>
+    * owner_user_id : BIGINT <<REF>>
+    * performed_at : DATETIME(6)
+    * type : VARCHAR(120)
+    * status : ENUM('COMPLETED','IN_PROGRESS','SCHEDULED')
+    * technician : VARCHAR(180)
+    • acknowledged_at : DATETIME(6) <<NULL>>
+    * version : BIGINT
+    .. indexes ..
+    INDEX idx_mr_equipment (equipment_id)
+    INDEX idx_mr_owner (owner_user_id)
+  }
+
+  entity "maintenance_activities" as maintenance_activities {
+    * id : BIGINT <<PK, AI>>
+    --
+    * maintenance_id : BIGINT <<REF>>
+    * notes : VARCHAR(2000)
+    * occurred_at : DATETIME(6)
+    * status : ENUM('COMPLETED','IN_PROGRESS','SCHEDULED')
+    * technician : VARCHAR(180)
+    .. indexes ..
+    INDEX idx_ma_maintenance (maintenance_id)
+  }
+}
+
+package "subscriptions" as bc_subscriptions {
+
+  entity "subscription_plans" as subscription_plans {
+    * id : BIGINT <<PK, AI>>
+    --
+    * name : VARCHAR(100) <<UNIQUE>>
+    * description : VARCHAR(1000)
+    * price_amount : DECIMAL(12,2)
+    * price_currency : VARCHAR(3)
+    * billing_cycle : VARCHAR(30)
+    * status : ENUM('ACTIVE','INACTIVE')
+    * created_at : DATETIME(6)
+    * updated_at : DATETIME(6)
+  }
+
+  entity "user_subscriptions" as user_subscriptions {
+    * id : BIGINT <<PK, AI>>
+    --
+    * user_id : BIGINT <<REF>>
+    * plan_id : BIGINT <<REF>>
+    * start_date : DATETIME(6)
+    * end_date : DATETIME(6)
+    * status : ENUM('ACTIVE','CANCELLED','EXPIRED')
+    * auto_renew : BIT(1)
+    * version : BIGINT
+    * created_at : DATETIME(6)
+    * updated_at : DATETIME(6)
+    .. indexes ..
+    INDEX idx_user_subscriptions_owner (user_id)
+    INDEX idx_user_subscriptions_active (user_id, status, end_date)
+  }
+}
+
+users ||--o{ user_roles : "user_id"
+roles ||--o{ user_roles : "role_id"
+
+equipment ||--o{ availability_blocks : "equipment_id"
+
+' ==========================================================
+' logical references within bounded contexts
+' ==========================================================
+
+equipment ..> equipment_categories : "category_id"
+
+rentals ..> rental_requests : "request_id"
+rentals ..> availability_blocks : "availability_block_id"
+
+deliveries ..> rentals : "rental_id"
+equipment_returns ..> rentals : "rental_id"
+
+submission_guards ..> equipment : "equipment_id"
+
+maintenance_activities ..> maintenance_records : "maintenance_id"
+
+user_subscriptions ..> subscription_plans : "plan_id"
+
+company_profiles ..> users : "user_id"
+
+equipment ..> users : "user_id"
+
+rental_requests ..> equipment : "equipment_id"
+rental_requests ..> users : "construction_user_id"
+rental_requests ..> users : "rental_company_user_id"
+
+rentals ..> equipment : "equipment_id"
+rentals ..> users : "construction_user_id"
+rentals ..> users : "rental_company_user_id"
+
+submission_guards ..> users : "construction_user_id"
+
+incidents ..> equipment : "equipment_id"
+incidents ..> users : "owner_user_id"
+
+maintenance_records ..> equipment : "equipment_id"
+maintenance_records ..> users : "owner_user_id"
+
+user_subscriptions ..> users : "user_id"
+
+bc_iam -[hidden]right-> bc_profiles
+bc_profiles -[hidden]right-> bc_inventory
+
+bc_iam -[hidden]down-> bc_subscriptions
+bc_profiles -[hidden]down-> bc_rentals
+bc_inventory -[hidden]down-> bc_maintenance
+
+@enduml
