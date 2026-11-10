@@ -1,65 +1,53 @@
+
 @startuml
-!include _includes/C4_Component.puml
+!include <C4/C4_Component>
+
 LAYOUT_TOP_DOWN()
-AddElementTag("Interfaces", $bgColor="#D6EAF8", $borderColor="#2471A3")
-AddElementTag("Application", $bgColor="#D5F5E3", $borderColor="#1E8449")
-AddElementTag("Domain", $bgColor="#FCF3CF", $borderColor="#B7950B")
-AddElementTag("Infrastructure", $bgColor="#F5EEF8", $borderColor="#7D3C98")
-title MaquiGest - Profiles Layered Component Diagram
 
-Container(spa, "MaquiGest Web Application", "Angular", "Consumes Profiles REST endpoints.")
-System_Ext(iam, "IAM Published Contracts", "Actor and company directory facades.")
-ContainerDb(db, "MaquiGest Database", "MySQL", "Stores profile tables.")
-System_Ext(shared, "Shared Event Publication", "In-process post-commit event delivery.")
+title MaquiGest - Profiles Backend Component Diagram
 
-Container_Boundary(context, "Profiles Bounded Context") {
-  Boundary(interfaces_layer, "Interfaces Layer") {
-    Component(profilesRest, "REST Interface", "CompanyProfileController", "Exposes profile commands and queries.", $tags="Interfaces")
-    Component(profilesPolicy, "Ownership Policy", "ProfileOwnershipPolicy", "Validates actor identity and profile ownership.", $tags="Interfaces")
-    Component(profilesResources, "Resources and Assemblers", "resources / transform", "Maps REST resources and domain results.", $tags="Interfaces")
-    Component(profilesEventContract, "Integration Event Contract", "CompanyProfileIntegrationEvent", "Published language for profile changes.", $tags="Interfaces")
-  }
-  Boundary(application_layer, "Application Layer") {
-    Component(profilesServices, "Service Contracts", "CompanyProfileCommandService, CompanyProfileQueryService", "Defines profile use cases.", $tags="Application")
-    Component(profilesImpl, "Service Implementations", "internal.commandservices / queryservices", "Coordinates profile creation, update and retrieval.", $tags="Application")
-    Component(profilesIamPort, "IAM Directory Port", "IamCompanyDirectoryPort", "Defines the identity information required from IAM.", $tags="Application")
-  }
-  Boundary(domain_layer, "Domain Layer") {
-    Component(profilesAggregate, "CompanyProfile Aggregate", "CompanyProfile", "Protects company profile invariants.", $tags="Domain")
-    Component(profilesValues, "Value Objects", "PersonName, EmailAddress, CompanyAddress", "Represents validated profile concepts.", $tags="Domain")
-    Component(profilesMessages, "Commands and Queries", "Create/Update commands, Get queries", "Expresses profile intent and reads.", $tags="Domain")
-    Component(profilesEvents, "Domain Events", "CompanyProfileCreatedEvent, CompanyProfileUpdatedEvent", "Records relevant aggregate changes.", $tags="Domain")
-    Component(profilesRepo, "Repository Port", "CompanyProfileRepository", "Defines profile persistence operations.", $tags="Domain")
-  }
-  Boundary(infrastructure_layer, "Infrastructure Layer") {
-    Component(profilesPersistence, "JPA Persistence Adapter", "RepositoryImpl, entity, assembler, embeddable", "Implements the repository port and maps persistence data.", $tags="Infrastructure")
-    Component(profilesIamAdapter, "IAM ACL Adapter", "IamCompanyDirectoryAclAdapter", "Translates IAM published identities into the application port.", $tags="Infrastructure")
-    Component(profilesReconciler, "Profile Reconciler", "CompanyProfilesReconciler", "Creates missing profiles for active company identities.", $tags="Infrastructure")
-    Component(profilesBridge, "Integration Event Bridge", "CompanyProfileIntegrationEventBridge", "Translates post-commit domain events to integration events.", $tags="Infrastructure")
-  }
+Container_Boundary(profiles, "Profiles Bounded Context [Java / Spring Boot]") {
+
+    Boundary(interfaces_layer, "Interfaces Layer") {
+        Component(rest, "rest", "REST API Package", "Exposes company profile endpoints. Subpackages: resources, security, transform.")
+        Component(interface_events, "events", "Published Event Contract", "Defines integration events for company profile changes.")
+    }
+
+    Boundary(application_layer, "Application Layer") {
+        Component(app_commands, "commandservices", "Application Services", "Defines profile commands. internal.commandservices implements the use cases.")
+        Component(app_queries, "queryservices", "Application Services", "Defines profile queries. internal.queryservices implements the use cases.")
+        Component(app_ports, "ports", "Outbound Application Contracts", "Defines the IAM company directory capabilities required by Profiles.")
+    }
+
+    Boundary(domain_layer, "Domain Layer") {
+        Component(domain_model, "model", "Domain Model", "Subpackages: aggregates, commands, events, queries, valueobjects. Encapsulates company profile rules.")
+        Component(domain_repositories, "repositories", "Domain Repository Contracts", "Defines persistence operations for company profiles.")
+    }
+
+    Boundary(infrastructure_layer, "Infrastructure Layer") {
+        Component(jpa, "persistence.jpa", "JPA Persistence", "Subpackages: adapters, assemblers, embeddables, entities, repositories.")
+        Component(iam_acl, "acl.iam", "Anti-Corruption Layer", "Adapts IAM identity information to the Profiles application port.")
+        Component(event_bridge, "events", "Integration Event Adapter", "Translates domain events into integration events after transaction commit.")
+        Component(seed, "seed", "Profile Reconciliation", "Creates missing company profiles from IAM accounts at startup and periodically.")
+    }
 }
 
-Rel(spa, profilesRest, "Calls", "JSON/HTTPS")
-Rel(profilesRest, profilesPolicy, "Authorizes through")
-Rel(profilesPolicy, iam, "Reads actor identity")
-Rel(profilesPolicy, profilesRepo, "Checks ownership")
-Rel(profilesRest, profilesResources, "Maps")
-Rel(profilesRest, profilesServices, "Invokes")
-Rel(profilesImpl, profilesServices, "Implements")
-Rel(profilesImpl, profilesAggregate, "Executes behavior")
-Rel(profilesImpl, profilesRepo, "Uses")
-Rel(profilesImpl, profilesIamPort, "Uses")
-Rel(profilesServices, profilesMessages, "Handles")
-Rel(profilesAggregate, profilesValues, "Owns")
-Rel(profilesAggregate, profilesEvents, "Registers")
-Rel(profilesPersistence, profilesRepo, "Implements")
-Rel(profilesPersistence, db, "Reads and writes", "JPA/SQL")
-Rel(profilesIamAdapter, profilesIamPort, "Implements")
-Rel(profilesIamAdapter, iam, "Calls published facade")
-Rel(profilesReconciler, profilesServices, "Provisions through")
-Rel(profilesPersistence, shared, "Publishes aggregate events")
-Rel(shared, profilesBridge, "Delivers after commit")
-Rel(profilesBridge, profilesEventContract, "Publishes")
+Rel(rest, app_commands, "Invokes commands")
+Rel(rest, app_queries, "Invokes queries")
+
+Rel(app_commands, domain_model, "Applies domain rules")
+Rel(app_queries, domain_repositories, "Queries profiles")
+
+Rel(jpa, domain_repositories, "Implements repository contract")
+Rel(iam_acl, app_ports, "Implements IAM directory port")
+
+Rel(event_bridge, interface_events, "Publishes integration events")
+Rel(seed, app_commands, "Triggers profile reconciliation")
+
+Lay_D(rest, app_commands)
+Lay_D(app_commands, domain_model)
+Lay_D(domain_model, jpa)
 
 SHOW_LEGEND()
+
 @enduml

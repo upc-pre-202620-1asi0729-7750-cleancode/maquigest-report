@@ -1,82 +1,62 @@
+
 @startuml
-!include _includes/C4_Component.puml
+!include <C4/C4_Component>
+
 LAYOUT_TOP_DOWN()
-AddElementTag("Interfaces", $bgColor="#D6EAF8", $borderColor="#2471A3")
-AddElementTag("Application", $bgColor="#D5F5E3", $borderColor="#1E8449")
-AddElementTag("Domain", $bgColor="#FCF3CF", $borderColor="#B7950B")
-AddElementTag("Infrastructure", $bgColor="#F5EEF8", $borderColor="#7D3C98")
-title MaquiGest - Rentals Layered Component Diagram
 
-Container(spa, "MaquiGest Web Application", "Angular", "Consumes Rentals REST endpoints.")
-System_Ext(iam, "IAM Actor Contract", "Published actor identity.")
-System_Ext(inventory, "Inventory Published Contract", "Equipment availability and reservation facade.")
-System_Ext(subscriptions, "Subscriptions Published Contract", "Rental entitlement facade.")
-System_Ext(maintenance, "Maintenance Bounded Context", "Consumes rental context.")
-System_Ext(shared, "Shared Event Publication", "In-process post-commit event delivery.")
-ContainerDb(db, "MaquiGest Database", "MySQL", "Stores rental tables and lock rows.")
+title MaquiGest - Rentals Backend Component Diagram
 
-Container_Boundary(context, "Rentals Bounded Context") {
-  Boundary(interfaces_layer, "Interfaces Layer") {
-    Component(rentalsRest, "REST Interface", "request, rental, delivery and return controllers", "Exposes rental request and lifecycle endpoints.", $tags="Interfaces")
-    Component(rentalsPolicy, "Actor Policy", "RentalActorPolicy", "Resolves and validates the authenticated actor.", $tags="Interfaces")
-    Component(rentalsResources, "Resources and Assemblers", "resources / transform", "Maps HTTP resources and domain results.", $tags="Interfaces")
-    Component(rentalsPublished, "Published Maintenance Contract", "RentalsMaintenanceFacade", "Publishes active-rental information and history.", $tags="Interfaces")
-    Component(rentalsErrors, "REST Error Boundary", "RentalsExceptionHandler", "Maps application errors to HTTP problem details.", $tags="Interfaces")
-    Component(rentalsEventContract, "Integration Event Contract", "RentalIntegrationEvent", "Published language for rental changes.", $tags="Interfaces")
-  }
-  Boundary(application_layer, "Application Layer") {
-    Component(rentalsServices, "Service Contracts", "request/lifecycle command services, query service", "Defines rental use cases.", $tags="Application")
-    Component(rentalsCommandImpl, "Command Service Implementations", "RentalRequestCommandServiceImpl, RentalLifecycleCommandServiceImpl", "Converts transactional failures into application results.", $tags="Application")
-    Component(rentalsExecutors, "Transactional Executors", "request and lifecycle executors", "Coordinates aggregate and cross-context mutations atomically.", $tags="Application")
-    Component(rentalsQueryImpl, "Query Service Implementation", "RentalQueryServiceImpl", "Builds actor-visible rental views.", $tags="Application")
-    Component(rentalsPorts, "External Context Ports", "RentalEquipmentPort, RentalSubscriptionPort", "Defines capabilities required from Inventory and Subscriptions.", $tags="Application")
-    Component(rentalsFacadeImpl, "Maintenance Facade Implementation", "RentalsMaintenanceFacadeImpl", "Implements the published maintenance contract.", $tags="Application")
-  }
-  Boundary(domain_layer, "Domain Layer") {
-    Component(rentalsAggregates, "Rental Aggregates", "RentalRequest, Rental", "Protects request and rental lifecycle invariants.", $tags="Domain")
-    Component(rentalsRecords, "Delivery and Return Records", "Delivery, EquipmentReturn", "Stores immutable lifecycle records identified by rentalId.", $tags="Domain")
-    Component(rentalsValues, "Value Objects and Enums", "RentalPeriod, request/rental statuses", "Represents rental periods and lifecycle states.", $tags="Domain")
-    Component(rentalsMessages, "Commands and Queries", "rental commands and queries", "Expresses rental mutations and reads.", $tags="Domain")
-    Component(rentalsEvents, "Domain Events", "approved, activated and completed events", "Records relevant aggregate transitions.", $tags="Domain")
-    Component(rentalsRepos, "Repository Ports", "request, rental, delivery and return repositories", "Defines persistence contracts owned by Domain.", $tags="Domain")
-  }
-  Boundary(infrastructure_layer, "Infrastructure Layer") {
-    Component(rentalsPersistence, "JPA Persistence Adapters", "RepositoryImpl, entities, assemblers", "Implements rental repository ports and mappings.", $tags="Infrastructure")
-    Component(rentalsAcl, "ACL Adapters", "InventoryRentalAclAdapter, SubscriptionRentalAclAdapter", "Implements external ports using published facades.", $tags="Infrastructure")
-    Component(rentalsGuard, "Submission Concurrency Guard", "InnoDB pair lock repository", "Serializes overlapping request submission per pair.", $tags="Infrastructure")
-    Component(rentalsBridge, "Integration Event Bridge", "RentalIntegrationEventBridge", "Translates post-commit domain events to integration events.", $tags="Infrastructure")
-  }
+Container_Boundary(rentals, "Rentals Bounded Context [Java / Spring Boot]") {
+
+    Boundary(interfaces_layer, "Interfaces Layer") {
+        Component(rest, "rest", "REST API Package", "Rental request, rental lifecycle, delivery and return endpoints. Subpackages: resources, security, transform.")
+        Component(published_acl, "acl", "Published Rental Contract", "Provides active-rental information to Maintenance.")
+        Component(interface_events, "events", "Integration Event Contract", "Defines published rental integration events.")
+    }
+
+    Boundary(application_layer, "Application Layer") {
+        Component(commands, "commandservices", "Application Contracts", "Defines rental request and lifecycle commands.")
+        Component(queries, "queryservices", "Application Contracts", "Defines rental query operations.")
+        Component(internal_services, "internal", "Use Case Implementations", "Subpackages: commandservices, queryservices. Coordinates rental transactions and lifecycle operations.")
+        Component(ports, "ports", "Outbound Application Contracts", "Defines equipment availability and subscription entitlement capabilities.")
+        Component(application_acl, "acl", "Rental Facade Implementation", "Implements the maintenance-facing rental contract.")
+        Component(exceptions, "exceptions", "Application Errors", "Defines rental operation failures.")
+    }
+
+    Boundary(domain_layer, "Domain Layer") {
+        Component(domain_model, "model", "Domain Model", "Subpackages: aggregates, commands, entities, events, queries, valueobjects. Owns rental lifecycle rules.")
+        Component(domain_repositories, "repositories", "Repository Contracts", "Defines rental requests, rentals, deliveries and returns persistence.")
+    }
+
+    Boundary(infrastructure_layer, "Infrastructure Layer") {
+        Component(jpa, "persistence.jpa", "JPA Persistence", "Subpackages: adapters, assemblers, entities, repositories.")
+        Component(inventory_acl, "acl.inventory", "Anti-Corruption Layer", "Adapts Inventory equipment capabilities to rental operations.")
+        Component(subscriptions_acl, "acl.subscriptions", "Anti-Corruption Layer", "Adapts subscription entitlement decisions to rental operations.")
+        Component(event_bridge, "events", "Integration Event Bridge", "Publishes rental integration events after transaction commit.")
+    }
 }
 
-Rel(spa, rentalsRest, "Calls", "JSON/HTTPS")
-Rel(rentalsRest, rentalsPolicy, "Authorizes through")
-Rel(rentalsPolicy, iam, "Reads actor identity")
-Rel(rentalsRest, rentalsResources, "Maps")
-Rel(rentalsRest, rentalsServices, "Invokes")
-Rel(rentalsRest, rentalsErrors, "Maps failures through")
-Rel(rentalsCommandImpl, rentalsServices, "Implements command services")
-Rel(rentalsCommandImpl, rentalsExecutors, "Delegates transactions to")
-Rel(rentalsQueryImpl, rentalsServices, "Implements query flow")
-Rel(rentalsExecutors, rentalsAggregates, "Mutates")
-Rel(rentalsExecutors, rentalsRecords, "Creates lifecycle records")
-Rel(rentalsExecutors, rentalsRepos, "Uses")
-Rel(rentalsExecutors, rentalsPorts, "Uses")
-Rel(rentalsQueryImpl, rentalsRepos, "Queries")
-Rel(rentalsServices, rentalsMessages, "Handles")
-Rel(rentalsAggregates, rentalsValues, "Owns")
-Rel(rentalsAggregates, rentalsEvents, "Registers")
-Rel(rentalsFacadeImpl, rentalsPublished, "Implements")
-Rel(rentalsFacadeImpl, rentalsRepos, "Reads history")
-Rel(rentalsPersistence, rentalsRepos, "Implements")
-Rel(rentalsPersistence, rentalsGuard, "Acquires pair lock")
-Rel(rentalsPersistence, db, "Reads and writes", "JPA/SQL")
-Rel(rentalsAcl, rentalsPorts, "Implements")
-Rel(rentalsAcl, inventory, "Calls equipment facade")
-Rel(rentalsAcl, subscriptions, "Calls entitlement facade")
-Rel(rentalsPersistence, shared, "Publishes aggregate events")
-Rel(shared, rentalsBridge, "Delivers after commit")
-Rel(rentalsBridge, rentalsEventContract, "Publishes")
-Rel(maintenance, rentalsPublished, "Reads active-rental context")
+Rel(rest, commands, "Invokes commands")
+Rel(rest, queries, "Invokes queries")
+
+Rel(internal_services, commands, "Implements command contracts")
+Rel(internal_services, queries, "Implements query contracts")
+Rel(internal_services, domain_model, "Executes rental rules")
+Rel(internal_services, domain_repositories, "Uses repositories")
+Rel(internal_services, ports, "Requires external capabilities")
+
+Rel(application_acl, published_acl, "Implements published contract")
+Rel(application_acl, domain_repositories, "Queries rental records")
+
+Rel(jpa, domain_repositories, "Implements repository contracts")
+Rel(inventory_acl, ports, "Implements equipment port")
+Rel(subscriptions_acl, ports, "Implements entitlement port")
+Rel(event_bridge, interface_events, "Publishes integration events")
+
+Lay_D(rest, commands)
+Lay_D(commands, domain_model)
+Lay_D(domain_model, jpa)
 
 SHOW_LEGEND()
+
 @enduml

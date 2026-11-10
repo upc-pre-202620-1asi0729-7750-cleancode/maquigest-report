@@ -1,65 +1,60 @@
+
 @startuml
-!include _includes/C4_Component.puml
+!include <C4/C4_Component>
+
 LAYOUT_TOP_DOWN()
-AddElementTag("Interfaces", $bgColor="#D6EAF8", $borderColor="#2471A3")
-AddElementTag("Application", $bgColor="#D5F5E3", $borderColor="#1E8449")
-AddElementTag("Domain", $bgColor="#FCF3CF", $borderColor="#B7950B")
-AddElementTag("Infrastructure", $bgColor="#F5EEF8", $borderColor="#7D3C98")
-title MaquiGest - IAM Layered Component Diagram
 
-Container(spa, "MaquiGest Web Application", "Angular", "Consumes IAM REST endpoints.")
-ContainerDb(db, "MaquiGest Database", "MySQL", "Stores IAM tables.")
-System_Ext(consumers, "Other Bounded Contexts", "Consume published identity contracts.")
+title MaquiGest - IAM Backend Component Diagram
 
-Container_Boundary(context, "IAM Bounded Context") {
-  Boundary(interfaces_layer, "Interfaces Layer") {
-    Component(iamRest, "REST Interface", "AuthenticationController, AuthenticatedPrincipalController", "Authentication, registration and current-principal endpoints.", $tags="Interfaces")
-    Component(iamPublished, "Published Identity Contracts", "IamActorFacade, IamCompanyDirectoryFacade, IamSubscriberFacade", "Context-neutral identity contracts consumed by other bounded contexts.", $tags="Interfaces")
-    Component(iamResources, "REST Resources and Assemblers", "resources / transform", "Maps HTTP representations to commands and response resources.", $tags="Interfaces")
-  }
-  Boundary(application_layer, "Application Layer") {
-    Component(iamCommandContracts, "Command Service Contracts", "UserCommandService, RoleCommandService", "Defines IAM command use cases.", $tags="Application")
-    Component(iamCommandImpl, "Command Service Implementations", "internal.commandservices", "Coordinates sign-up, sign-in and role seeding.", $tags="Application")
-    Component(iamFacadeImpl, "Published Facade Implementations", "application.acl", "Implements the published identity contracts.", $tags="Application")
-    Component(iamOutboundPorts, "Security and Identity Ports", "HashingService, TokenService, identity readers", "Defines technical and projection capabilities required by Application.", $tags="Application")
-    Component(iamRoleSeed, "Role Seed Handler", "ApplicationReadyEventHandler", "Seeds required roles through the command service.", $tags="Application")
-  }
-  Boundary(domain_layer, "Domain Layer") {
-    Component(iamAggregate, "User Aggregate", "User, UserStatus", "Protects account state, credentials and assigned roles.", $tags="Domain")
-    Component(iamRole, "Role Model", "Role, Roles", "Represents roles and allowed role names.", $tags="Domain")
-    Component(iamCommands, "Commands", "SignUpCommand, SignInCommand, SeedRolesCommand", "Carries intent into IAM use cases.", $tags="Domain")
-    Component(iamRepoPorts, "Repository Ports", "UserRepository, RoleRepository", "Defines persistence contracts owned by Domain.", $tags="Domain")
-  }
-  Boundary(infrastructure_layer, "Infrastructure Layer") {
-    Component(iamSecurity, "Spring Security Adapter", "WebSecurityConfiguration, BearerAuthorizationRequestFilter, UserDetailsServiceImpl", "Restores authenticated principals and enforces request security.", $tags="Infrastructure")
-    Component(iamPersistence, "JPA Persistence Adapters", "RepositoryImpl, entities, assemblers", "Implements the domain repository ports.", $tags="Infrastructure")
-    Component(iamCrypto, "Hashing and Token Adapters", "BCrypt, JJWT", "Implements HashingService and TokenService.", $tags="Infrastructure")
-    Component(iamReaders, "Identity Projection Adapters", "IamCompanyDirectoryJpaReader, IamSubscriberJpaReader", "Implements the identity reader ports.", $tags="Infrastructure")
-  }
+Container_Boundary(iam, "IAM Bounded Context [Java / Spring Boot]") {
+
+    Boundary(interfaces_layer, "Interfaces Layer") {
+        Component(rest, "rest", "REST API Package", "Authentication and account endpoints. Subpackages: resources, transform.")
+        Component(published_acl, "acl", "Published Identity Contracts", "Exposes actor, company directory and subscriber identity capabilities.")
+    }
+
+    Boundary(application_layer, "Application Layer") {
+        Component(commands, "commandservices", "Application Contracts", "Defines user and role command operations.")
+        Component(internal_commands, "internal.commandservices", "Use Case Implementations", "Coordinates registration, authentication, accounts and roles.")
+        Component(event_handlers, "internal.eventhandlers", "Application Event Handling", "Initializes system roles when the application starts.")
+        Component(outbound, "internal.outboundservices", "Outbound Service Contracts", "Subpackages: hashing, tokens. Defines password hashing and token operations.")
+        Component(ports, "ports", "Application Ports", "Defines company directory and subscriber reading contracts.")
+        Component(application_acl, "acl", "Identity Facade Implementations", "Implements the identity contracts published to other contexts.")
+    }
+
+    Boundary(domain_layer, "Domain Layer") {
+        Component(domain_model, "model", "Domain Model", "Subpackages: aggregates, commands, entities, valueobjects. Owns account and role rules.")
+        Component(domain_repositories, "repositories", "Repository Contracts", "Defines user and role persistence operations.")
+    }
+
+    Boundary(infrastructure_layer, "Infrastructure Layer") {
+        Component(security, "authorization.sfs", "Spring Security", "Subpackages: configuration, model, pipeline, services.")
+        Component(bcrypt, "hashing.bcrypt", "Password Hashing Adapter", "Provides BCrypt hashing through its services package.")
+        Component(jwt, "tokens.jwt", "Token Adapter", "Provides JWT operations through its services package.")
+        Component(jpa, "persistence.jpa", "JPA Persistence", "Subpackages: adapters, assemblers, entities, repositories.")
+    }
 }
 
-Rel(spa, iamSecurity, "Sends bearer token", "HTTPS")
-Rel(iamSecurity, iamRest, "Authorizes request")
-Rel(iamRest, iamResources, "Maps request and response")
-Rel(iamRest, iamCommandContracts, "Invokes")
-Rel(iamCommandImpl, iamCommandContracts, "Implements")
-Rel(iamCommandImpl, iamAggregate, "Executes behavior")
-Rel(iamCommandImpl, iamRepoPorts, "Uses")
-Rel(iamCommandImpl, iamOutboundPorts, "Uses")
-Rel(iamFacadeImpl, iamPublished, "Implements")
-Rel(iamFacadeImpl, iamOutboundPorts, "Reads projections through")
-Rel(iamFacadeImpl, iamRepoPorts, "Reads user aggregate through")
-Rel(iamRoleSeed, iamCommandContracts, "Seeds roles through")
-Rel(iamAggregate, iamRole, "Contains role assignments")
-Rel(iamCommands, iamRole, "Uses role names")
-Rel(iamCommandContracts, iamCommands, "Handles")
-Rel(iamPersistence, iamRepoPorts, "Implements")
-Rel(iamCrypto, iamOutboundPorts, "Implements security ports")
-Rel(iamReaders, iamOutboundPorts, "Implements reader ports")
-Rel(iamPersistence, db, "Reads and writes", "JPA/SQL")
-Rel(iamReaders, db, "Reads projections", "JPA/SQL")
-Rel(iamSecurity, iamCrypto, "Validates token through")
-Rel(consumers, iamPublished, "Uses published language")
+Rel(rest, commands, "Invokes commands")
+Rel(internal_commands, commands, "Implements command contract")
+Rel(internal_commands, domain_model, "Applies domain rules")
+Rel(internal_commands, domain_repositories, "Uses repositories")
+Rel(internal_commands, outbound, "Uses hashing and token contracts")
+
+Rel(event_handlers, commands, "Seeds system roles")
+Rel(application_acl, published_acl, "Implements published contracts")
+
+Rel(bcrypt, outbound, "Implements hashing contract")
+Rel(jwt, outbound, "Implements token contract")
+Rel(jpa, domain_repositories, "Implements repository contracts")
+Rel(jpa, ports, "Implements identity readers")
+
+Rel(security, jwt, "Validates authentication tokens")
+
+Lay_D(rest, commands)
+Lay_D(commands, domain_model)
+Lay_D(domain_model, jpa)
 
 SHOW_LEGEND()
+
 @enduml

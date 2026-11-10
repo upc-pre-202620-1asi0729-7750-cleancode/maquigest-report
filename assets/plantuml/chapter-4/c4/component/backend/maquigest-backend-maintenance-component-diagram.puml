@@ -1,78 +1,60 @@
+
 @startuml
-!include _includes/C4_Component.puml
+!include <C4/C4_Component>
+
 LAYOUT_TOP_DOWN()
-AddElementTag("Interfaces", $bgColor="#D6EAF8", $borderColor="#2471A3")
-AddElementTag("Application", $bgColor="#D5F5E3", $borderColor="#1E8449")
-AddElementTag("Domain", $bgColor="#FCF3CF", $borderColor="#B7950B")
-AddElementTag("Infrastructure", $bgColor="#F5EEF8", $borderColor="#7D3C98")
-title MaquiGest - Maintenance Layered Component Diagram
 
-Container(spa, "MaquiGest Web Application", "Angular", "Consumes Maintenance REST endpoints.")
-System_Ext(iam, "IAM Actor Contract", "Published actor identity.")
-System_Ext(inventory, "Inventory Published Contract", "Equipment inspection and status facade.")
-System_Ext(rentals, "Rentals Published Contract", "Active-rental context facade.")
-System_Ext(subscriptions, "Subscriptions Published Contract", "Maintenance entitlement facade.")
-System_Ext(shared, "Shared Event Publication", "In-process post-commit event delivery.")
-ContainerDb(db, "MaquiGest Database", "MySQL", "Stores maintenance tables.")
+title MaquiGest - Maintenance Backend Component Diagram
 
-Container_Boundary(context, "Maintenance Bounded Context") {
-  Boundary(interfaces_layer, "Interfaces Layer") {
-    Component(maintenanceRest, "REST Interface", "IncidentController, MaintenanceController", "Exposes incident, maintenance and history endpoints.", $tags="Interfaces")
-    Component(maintenancePolicy, "Actor Policy", "MaintenanceActorPolicy", "Resolves and validates the authenticated actor.", $tags="Interfaces")
-    Component(maintenanceResources, "Resources and Assemblers", "resources / transform", "Maps HTTP resources and domain results.", $tags="Interfaces")
-    Component(maintenanceErrors, "REST Error Boundary", "MaintenanceExceptionHandler", "Maps application errors to HTTP problem details.", $tags="Interfaces")
-    Component(maintenanceEventContract, "Integration Event Contract", "MaintenanceIntegrationEvent", "Published language for maintenance changes.", $tags="Interfaces")
-  }
-  Boundary(application_layer, "Application Layer") {
-    Component(maintenanceServices, "Service Contracts", "incident/maintenance command services, query service", "Defines maintenance use cases.", $tags="Application")
-    Component(maintenanceCommandImpl, "Command Service Implementations", "IncidentCommandServiceImpl, MaintenanceCommandServiceImpl", "Converts transactional failures into application results.", $tags="Application")
-    Component(maintenanceExecutors, "Transactional Executors", "incident and maintenance executors", "Coordinates aggregate and cross-context mutations atomically.", $tags="Application")
-    Component(maintenanceQueryImpl, "Query Service Implementation", "MaintenanceQueryServiceImpl", "Builds maintenance and equipment history views.", $tags="Application")
-    Component(maintenancePorts, "External Context Ports", "inventory, rentals and subscription ports", "Defines capabilities required from other contexts.", $tags="Application")
-  }
-  Boundary(domain_layer, "Domain Layer") {
-    Component(maintenanceAggregates, "Maintenance Aggregates", "Incident, Maintenance", "Protects incident and maintenance lifecycle invariants.", $tags="Domain")
-    Component(maintenanceActivity, "Activity Record", "MaintenanceActivity", "Stores immutable activity history identified by maintenanceId.", $tags="Domain")
-    Component(maintenanceValues, "Value Objects and Enums", "MaintenanceType, statuses", "Represents maintenance types and lifecycle states.", $tags="Domain")
-    Component(maintenanceMessages, "Commands and Queries", "maintenance commands and queries", "Expresses maintenance mutations and reads.", $tags="Domain")
-    Component(maintenanceEvents, "Domain Events", "incident and maintenance events", "Records relevant aggregate transitions.", $tags="Domain")
-    Component(maintenanceRepos, "Repository Ports", "incident, maintenance and activity repositories", "Defines persistence contracts owned by Domain.", $tags="Domain")
-  }
-  Boundary(infrastructure_layer, "Infrastructure Layer") {
-    Component(maintenancePersistence, "JPA Persistence Adapters", "RepositoryImpl, entities, assemblers", "Implements maintenance repository ports and mappings.", $tags="Infrastructure")
-    Component(maintenanceAcl, "ACL Adapters", "Inventory, Rentals and Subscription adapters", "Implements external ports using published facades.", $tags="Infrastructure")
-    Component(maintenanceBridge, "Integration Event Bridge", "MaintenanceIntegrationEventBridge", "Translates post-commit domain events to integration events.", $tags="Infrastructure")
-  }
+Container_Boundary(maintenance, "Maintenance Bounded Context [Java / Spring Boot]") {
+
+    Boundary(interfaces_layer, "Interfaces Layer") {
+        Component(rest, "rest", "REST API Package", "Incident and maintenance endpoints. Subpackages: resources, security, transform.")
+        Component(interface_events, "events", "Integration Event Contract", "Defines published maintenance integration events.")
+    }
+
+    Boundary(application_layer, "Application Layer") {
+        Component(commands, "commandservices", "Application Contracts", "Defines incident and maintenance commands.")
+        Component(queries, "queryservices", "Application Contracts", "Defines maintenance query operations.")
+        Component(internal_services, "internal", "Use Case Implementations", "Subpackages: commandservices, queryservices. Coordinates maintenance transactions and lifecycle operations.")
+        Component(ports, "ports", "Outbound Application Contracts", "Defines required Inventory, Rentals and Subscriptions capabilities.")
+        Component(exceptions, "exceptions", "Application Errors", "Defines maintenance operation failures.")
+    }
+
+    Boundary(domain_layer, "Domain Layer") {
+        Component(domain_model, "model", "Domain Model", "Subpackages: aggregates, commands, entities, events, queries, valueobjects. Owns incident and maintenance lifecycle rules.")
+        Component(domain_repositories, "repositories", "Repository Contracts", "Defines incident, maintenance record and activity persistence.")
+    }
+
+    Boundary(infrastructure_layer, "Infrastructure Layer") {
+        Component(jpa, "persistence.jpa", "JPA Persistence", "Subpackages: adapters, assemblers, entities, repositories.")
+        Component(inventory_acl, "acl.inventory", "Anti-Corruption Layer", "Adapts equipment status and availability capabilities.")
+        Component(rentals_acl, "acl.rentals", "Anti-Corruption Layer", "Adapts active rental information.")
+        Component(subscriptions_acl, "acl.subscriptions", "Anti-Corruption Layer", "Adapts subscription entitlement decisions.")
+        Component(event_bridge, "events", "Integration Event Bridge", "Publishes maintenance integration events after transaction commit.")
+    }
 }
 
-Rel(spa, maintenanceRest, "Calls", "JSON/HTTPS")
-Rel(maintenanceRest, maintenancePolicy, "Authorizes through")
-Rel(maintenancePolicy, iam, "Reads actor identity")
-Rel(maintenanceRest, maintenanceResources, "Maps")
-Rel(maintenanceRest, maintenanceServices, "Invokes")
-Rel(maintenanceRest, maintenanceErrors, "Maps failures through")
-Rel(maintenanceCommandImpl, maintenanceServices, "Implements command services")
-Rel(maintenanceCommandImpl, maintenanceExecutors, "Delegates transactions to")
-Rel(maintenanceQueryImpl, maintenanceServices, "Implements query flow")
-Rel(maintenanceExecutors, maintenanceAggregates, "Mutates")
-Rel(maintenanceExecutors, maintenanceActivity, "Records activity")
-Rel(maintenanceExecutors, maintenanceRepos, "Uses")
-Rel(maintenanceExecutors, maintenancePorts, "Uses")
-Rel(maintenanceQueryImpl, maintenanceRepos, "Queries")
-Rel(maintenanceQueryImpl, maintenancePorts, "Uses")
-Rel(maintenanceServices, maintenanceMessages, "Handles")
-Rel(maintenanceAggregates, maintenanceValues, "Uses")
-Rel(maintenanceActivity, maintenanceValues, "Uses status")
-Rel(maintenanceAggregates, maintenanceEvents, "Registers")
-Rel(maintenancePersistence, maintenanceRepos, "Implements")
-Rel(maintenancePersistence, db, "Reads and writes", "JPA/SQL")
-Rel(maintenanceAcl, maintenancePorts, "Implements")
-Rel(maintenanceAcl, inventory, "Calls equipment facade")
-Rel(maintenanceAcl, rentals, "Calls rental-context facade")
-Rel(maintenanceAcl, subscriptions, "Calls entitlement facade")
-Rel(maintenancePersistence, shared, "Publishes aggregate events")
-Rel(shared, maintenanceBridge, "Delivers after commit")
-Rel(maintenanceBridge, maintenanceEventContract, "Publishes")
+Rel(rest, commands, "Invokes commands")
+Rel(rest, queries, "Invokes queries")
+
+Rel(internal_services, commands, "Implements command contracts")
+Rel(internal_services, queries, "Implements query contracts")
+Rel(internal_services, domain_model, "Executes maintenance rules")
+Rel(internal_services, domain_repositories, "Uses repositories")
+Rel(internal_services, ports, "Requires external capabilities")
+
+Rel(jpa, domain_repositories, "Implements repository contracts")
+Rel(inventory_acl, ports, "Implements equipment port")
+Rel(rentals_acl, ports, "Implements rental port")
+Rel(subscriptions_acl, ports, "Implements entitlement port")
+
+Rel(event_bridge, interface_events, "Publishes integration events")
+
+Lay_D(rest, commands)
+Lay_D(commands, domain_model)
+Lay_D(domain_model, jpa)
 
 SHOW_LEGEND()
+
 @enduml
