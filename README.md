@@ -3539,7 +3539,41 @@ El diagrama presenta los componentes del Bounded Context Subscriptions, responsa
 
 ### 4.8.1. Database Diagrams
 
-![Database Diagram — Subscription](./assets/md-images-chapter4/database-diagram.png)
+#### General Database Diagram
+![General Database Diagram](./assets/md-images-chapter4/database-diagram.png)
+
+Presenta la estructura general de la base de datos de MaquiGest, destacando las tablas y las relaciones entre sus contextos delimitados.
+
+#### IAM Database Diagram
+![Database Diagram — IAM](./assets/md-images-chapter4/iam-database.png)
+
+Ilustra la persistencia de usuarios, roles y sus asociaciones para la gestión de identidades y accesos.
+
+#### Inventory Database Diagram
+![Database Diagram — Inventory](./assets/md-images-chapter4/inventory-database.png)
+
+Describe la persistencia de equipos, categorías y bloques de disponibilidad, incluidas sus relaciones.
+
+#### Maintenance Database Diagram
+![Database Diagram — Maintenance](./assets/md-images-chapter4/maintenance-database.png)
+
+Representa incidentes de mantenimiento, registros de mantenimiento y actividades utilizadas para realizar el seguimiento del mantenimiento de los equipos.
+
+#### Profiles Database Diagram 
+![Database Diagram — Profiles](./assets/md-images-chapter4/profiles-database.png)
+
+Representa la información del perfil de la empresa, incluidos los datos de contacto y los atributos de dirección integrados.
+
+#### Rentals Database Diagram 
+![Database Diagram — Rentals](./assets/md-images-chapter4/rentals-database.png)
+
+Solicitudes de alquiler de modelos, alquileres, entregas, devoluciones y mecanismos de control de concurrencia empleados a lo largo del ciclo de vida del alquiler.
+
+#### Subscription Database Diagram 
+![Database Diagram — Subscription](./assets/md-images-chapter4/subscription-database.png)
+
+Solicitudes de alquiler de modelos, alquileres, entregas, devoluciones y mecanismos de control de concurrencia empleados a lo largo del ciclo de vida del alquiler.
+
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
