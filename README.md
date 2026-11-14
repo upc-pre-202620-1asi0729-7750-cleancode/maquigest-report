@@ -4988,47 +4988,90 @@ La siguiente matriz conserva únicamente el liderazgo verificable mediante el hi
 | Manosalva Tovar, Miroslav Oscar | `@Miroa123` | L | C | C | L | C | L | C |
 | Paredes Chávez, Carlos Augusto | `@CarlossUPC` | C | C | C | C | C | C | L |
 
-<!-- Ya lo modifican si quieren -->
 
-#### 5.2.3.3. Sprint Backlog 3
 
-El Sprint Backlog 3 se enfoca en la implementación e integración de los principales procesos funcionales de MaquiGest mediante el nuevo RESTful Web Service. Para mantener la relación con el Product Backlog, se utilizan los identificadores y Story Points previamente definidos para cada User Story.
 
-Enlace de seguimiento: [Tablero de Sprint Backlog 3](PENDIENTE)
+### 5.2.3.3. Sprint Backlog 3
 
-<!-- <img src="assets/images/chapter-5/trello-sprint-backlog-3.PNG" alt="trello-sprint-backlog-3"> -->
+During Sprint 3, the CleanCode team focused on implementing and integrating the MaquiGest RESTful Web Service with the Angular Web Application and MySQL database. The objective was to replace the previously used Fake API with a real backend based on Java 27, Spring Boot, Domain-Driven Design (DDD), CQRS, Spring Data JPA and JWT-based authentication.
 
-| Sprint # | Sprint 3 |
-|:---|:---|
+The sprint included the development of REST endpoints for company profiles, equipment management, availability, rental requests, deliveries, returns, maintenance, incidents and subscriptions. Additionally, the team worked on request validation, HTTP error handling, OpenAPI documentation and the integration of the backend with the frontend.
 
-| Story Id | Story Title | Task Id | Task Title | Task Description | Story Points | Assigned To | Status |
-|:---:|---|:---:|---|---|:---:|---|---|
-| US01 | Registro de usuario | T3-01 | Integrar registro con IAM | Implementar el registro de cuentas empresariales, validación de información, asignación de roles y persistencia segura de contraseñas. | 5 | `JAmsy06` | Done |
-| US02 | Inicio de sesión | T3-02 | Implementar autenticación JWT | Validar credenciales, emitir el token JWT y proteger los recursos que requieren autenticación. | 3 | `JAmsy06` | Done |
-| US03 | Gestionar perfil | T3-03 | Integrar perfiles empresariales | Permitir consultar, crear y actualizar el perfil correspondiente al usuario autenticado. | 3 | `JAmsy06` | Done |
-| US06 | Registrar maquinaria | T3-04 | Integrar registro de maquinaria | Implementar el registro de maquinaria con validación de propiedad, categoría, ubicación y tarifas. | 5 | `JAmsy06` | Done |
-| US07 | Consultar maquinaria | T3-05 | Consultar inventario y marketplace | Exponer el listado de maquinaria y permitir filtrar los equipos según su propietario. | 3 | `JAmsy06` | Done |
-| US08 | Actualizar información de maquinaria | T3-06 | Actualizar maquinaria registrada | Permitir que una empresa de alquiler modifique únicamente la maquinaria que le pertenece. | 3 | `JAmsy06` | Done |
-| US09 | Consultar disponibilidad de maquinaria | T3-07 | Integrar disponibilidad operativa | Consultar la disponibilidad y los periodos reservados de una maquinaria. | 5 | `JAmsy06` | Done |
-| US10 | Consultar estado de maquinaria | T3-08 | Gestionar estado operativo | Mostrar y actualizar el estado operativo de la maquinaria respetando las transiciones permitidas. | 3 | `JAmsy06` | Done |
-| US11 | Buscar maquinaria | T3-09 | Integrar búsqueda de maquinaria | Obtener la maquinaria disponible y aplicar los criterios de búsqueda utilizados por la Web Application. | 5 | `JAmsy06` | Done |
-| US12 | Consultar información de maquinaria | T3-10 | Consultar detalle de equipo | Exponer la información completa de una maquinaria mediante su identificador. | 3 | `JAmsy06` | Done |
-| US13 | Consultar disponibilidad para un periodo | T3-11 | Validar disponibilidad por fechas | Evaluar si una maquinaria se encuentra disponible durante un rango inclusivo de fechas. | 5 | `JAmsy06` | Done |
-| US14 | Solicitar alquiler de maquinaria | T3-12 | Registrar solicitud de alquiler | Crear solicitudes pendientes, validar disponibilidad y evitar solicitudes duplicadas o superpuestas. La notificación externa permanece pendiente. | 5 | `JAmsy06` | In Progress |
-| US15 | Consultar planes | T3-13 | Exponer catálogo de planes | Permitir que la Web Application consulte los planes de suscripción configurados. | 3 | `JAmsy06` | Done |
-| US16 | Seleccionar plan | T3-14 | Registrar selección de plan | Permitir que una empresa de alquiler cree una suscripción asociada con un plan activo. | 3 | `JAmsy06` | Done |
-| US17 | Gestionar suscripción | T3-15 | Consultar y cancelar suscripción | Mostrar la suscripción seleccionada y permitir su cancelación por parte de su propietario. | 5 | `JAmsy06` | Done |
-| US18 | Gestionar solicitudes de alquiler | T3-16 | Consultar solicitudes recibidas | Mostrar las solicitudes relacionadas con el usuario autenticado y permitir consultar sus detalles. | 5 | `JAmsy06` | Done |
-| US19 | Confirmar o rechazar una solicitud | T3-17 | Resolver solicitud pendiente | Permitir aprobar o rechazar una solicitud y crear el alquiler y la reserva de manera transaccional. La notificación por correo permanece pendiente. | 3 | `JAmsy06` | In Progress |
-| US20 | Consultar alquileres activos | T3-18 | Consultar operaciones de alquiler | Mostrar los alquileres en los que participa la empresa autenticada. | 3 | `JAmsy06` | Done |
-| US21 | Consultar estado de una solicitud de alquiler | T3-19 | Consultar solicitudes propias | Permitir que la empresa constructora consulte el estado actual de sus solicitudes. | 3 | `JAmsy06` | Done |
-| US22 | Gestionar entregas y devoluciones | T3-20 | Integrar ciclo de entrega y devolución | Registrar entregas y devoluciones, actualizar el alquiler y liberar la reserva correspondiente. | 5 | `JAmsy06` | Done |
-| US23 | Registrar mantenimiento | T3-21 | Registrar intervención realizada | Permitir registrar mantenimientos completados asociados con una maquinaria. | 5 | `JAmsy06` | Done |
-| US24 | Programar mantenimiento | T3-22 | Programar mantenimiento futuro | Permitir registrar y consultar mantenimientos programados para una maquinaria. | 3 | `JAmsy06` | Done |
-| US25 | Registrar incidencia de maquinaria | T3-23 | Integrar gestión de incidencias | Registrar incidencias y bloquear la disponibilidad de la maquinaria cuando corresponda. | 3 | `JAmsy06` | Done |
-| US26 | Consultar historial de maquinaria | T3-24 | Integrar historial operativo | Presentar una línea de tiempo con alquileres, incidencias, mantenimientos y actividades de una maquinaria. | 5 | `JAmsy06` | Done |
+To organize and monitor these activities, the team used a Trello board named **Spring Backlog 3 - MaquiGest**, following a Kanban workflow with the columns To-Do, In-Progress, Review and Done.
 
-<!--Ahí lo chequean-->
+**Sprint Goal:** Implement, integrate and validate the core MaquiGest backend services, enabling the Angular Web Application to execute real business operations through RESTful APIs and persist data in MySQL.
+
+**Sprint Backlog Board:** [Spring Backlog 3 - MaquiGest](URL_TRELLO_PENDIENTE)
+
+The following figures present the Sprint 3 board and its implementation progress.
+
+![Sprint 3 Backlog Overview](assets/images/sprint-3/trello/trello-sprint3-1.png)
+
+*Figure 1. Sprint 3 Trello board showing the To-Do, In-Progress, Review and Done columns.*
+
+![Sprint 3 Rental and Maintenance Tasks](assets/images/sprint-3/trello/trello-sprint3-2.png)
+
+*Figure 2. Completed technical stories related to rentals, equipment deliveries, returns, maintenance and subscriptions.*
+
+![Sprint 3 Backend Infrastructure Tasks](assets/images/sprint-3/trello/trello-sprint3-3.png)
+
+*Figure 3. Completed technical stories associated with authentication, REST API exposure, database persistence and request validation.*
+
+![Sprint 3 API Documentation Tasks](assets/images/sprint-3/trello/trello-sprint3-4.png)
+
+*Figure 4. Completed technical stories related to API documentation, company profiles and HTTP response handling.*
+
+#### Sprint Backlog 3 Task Distribution
+
+The Sprint Backlog contains 16 Technical Stories (TS01–TS16) associated with backend development and service integration.
+
+The task statuses were obtained from the Trello screenshots. The effort values are retrospective estimates proposed for this report, while the suggested assignees were derived from functional Git commit authorship. They must be validated by the team before being treated as original planning records.
+
+| Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
+|---|---|---|---|---|---:|---|---|
+| TS01 | REST API Exposure | TS01 | Expose MaquiGest REST API | Configure shared REST infrastructure, standardized resources and API exposure. | 12 | James Caleb (proposed) | Done |
+| TS02 | Company Profiles | TS02 | Manage company profiles through REST | Implement company profile operations, persistence, ownership validation and REST resources. | 14 | Bruno (proposed) | Done |
+| TS03 | Equipment Management | TS03 | Manage equipment through REST | Implement equipment registration, listing, updating and management operations. | 20 | Miroslav (proposed) | Done |
+| TS04 | Equipment Availability | TS04 | Check equipment availability | Implement equipment availability queries and reservation restrictions. | 12 | Miroslav (proposed) | Done |
+| TS05 | Rental Requests | TS05 | Manage rental requests through REST | Implement rental request creation, consultation and management operations. | 20 | CarlossUPC (proposed) | Done |
+| TS06 | Rental Reservations | TS06 | Manage reservations and rental statuses | Implement reservation coordination and rental lifecycle state transitions. | 18 | CarlossUPC (proposed) | Done |
+| TS07 | Deliveries and Returns | TS07 | Manage deliveries and returns | Implement equipment delivery, return registration and rental lifecycle validation. | 16 | CarlossUPC (proposed) | Done |
+| TS08 | Maintenance and Incidents | TS08 | Manage maintenance and incidents | Implement maintenance workflows, incident registration, resolution and operational restrictions. | 24 | CarlossUPC (proposed) | Done |
+| TS09 | Subscription Plans | TS09 | Consult plans and subscriptions | Implement subscription plan queries, lifecycle operations and REST resources. | 16 | Miroslav (proposed) | Done |
+| TS10 | Authentication and Authorization | TS10 | Manage authentication and authorization | Implement user registration, sign-in, JWT security and role-based authorization. | 20 | Bruno (proposed) | Done |
+| TS11 | Transactional Notifications | TS11 | Send notifications using SendGrid | Integrate an external transactional email service for business notifications. | 12 | Not confirmed | To-Do |
+| TS12 | Domain Persistence | TS12 | Persist domain information using JPA and MySQL | Configure JPA persistence entities, repositories, adapters and MySQL integration. | 20 | James Caleb (proposed) | Done |
+| TS13 | REST Request Validation | TS13 | Validate REST API requests | Implement request validation, domain constraints and localized validation messages. | 12 | James Caleb (proposed) | Done |
+| TS14 | HTTP Error Handling | TS14 | Manage REST API errors and HTTP responses | Standardize API responses, exception handling and appropriate HTTP status codes. | 12 | James Caleb (proposed) | Done |
+| TS15 | OpenAPI Documentation | TS15 | Document REST resources using OpenAPI | Configure Springdoc OpenAPI, Swagger UI and REST contract documentation. | 10 | James Caleb (proposed) | Done |
+| TS16 | Map Services Integration | TS16 | Integrate map services for deliveries and returns | Integrate external geographical services into delivery and return workflows. | 16 | Not confirmed | To-Do |
+
+#### Sprint Backlog Results
+
+At the time the Trello evidence was captured, the Sprint 3 backlog presented the following distribution:
+
+| Workflow Status | Number of Tasks | Percentage |
+|---|---:|---:|
+| To-Do | 2 | 12.5% |
+| In-Progress | 0 | 0% |
+| Review | 0 | 0% |
+| Done | 14 | 87.5% |
+| **Total** | **16** | **100%** |
+
+The estimated effort for all 16 Technical Stories is **254 hours**, of which **226 hours** correspond to tasks currently marked as Done and **28 hours** to pending tasks. These hours represent proposed effort estimates, not actual time-tracking results.
+
+The completed technical stories covered the REST API foundation, six bounded contexts, database persistence, authentication, authorization, request validation, HTTP error handling and API documentation.
+
+Two Technical Stories remained pending:
+
+- **TS11 — Transactional Notifications:** SendGrid integration was not completed during Sprint 3.
+- **TS16 — Map Services Integration:** External map services for equipment deliveries and returns were not integrated during Sprint 3.
+
+These pending tasks are explicitly distinguished from implemented functionality.
+
+The Sprint 3 results establish the backend foundation required for MaquiGest to operate using real RESTful services instead of simulated data. The implementation evidence, source-code history, API documentation and cloud deployment are presented in the following sections of this report.
+
+
 
 
 #### 5.2.3.4. Development Evidence for Sprint Review
