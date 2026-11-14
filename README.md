@@ -5645,6 +5645,12 @@ Sonia Gutiérrez trabaja en una empresa inmobiliaria. Opinó que el diseño visu
 **Resumen:**  
 Ana Rivera Quispe se dedica a la construcción de pequeños edificios. Señaló que la plataforma presenta un diseño limpio y ordenado. Sin embargo, al momento de evaluar la facilidad de navegación y la búsqueda de maquinaria o revisión de contratos, indicó que le resultaría complicado. Consideró útil contar con el selector de idioma debido a que no domina el inglés. Respecto a la información de los equipos y planes, reconoció que se entiende con claridad; sin embargo, al ser consultada sobre si utilizaría la plataforma de manera regular, comentó que aunque lo intentaría, le parecería bastante difícil en su día a día.
 
+## 5.4. Video About-the-Product.
+
+El video About-the-Product presenta de manera clara y dinámica la propuesta de valor de la solución, explicando el problema identificado, el segmento de usuarios objetivo y las principales funcionalidades que ofrece la plataforma. Asimismo, se muestra el recorrido de los usuarios a través de las interfaces desarrolladas, destacando cómo la aplicación contribuye a mejorar su experiencia y satisfacer sus necesidades. El contenido incluye una breve introducción al modelo de negocio, una demostración de las características más relevantes del producto y testimonios obtenidos durante el proceso de validación con usuarios potenciales.
+
+**Video About-the-Product:** [Ver video About-the-Product](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBughACCTT3TKceHs9kcIpFAenxCJlYrLbrMUlsc3tr8lU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=bde0Am)
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
