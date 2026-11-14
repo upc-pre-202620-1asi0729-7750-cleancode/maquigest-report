@@ -5702,6 +5702,11 @@ Finalmente, la elaboración del video About the Product y de la presentación Ab
 
 ---
 
+## Video About-the-team
+
+**Video about-the-team:** En esta sección se presenta el video About-The-Team del proyecto lowcortisol, el cual resume el proceso de desarrollo de la solución de monitoreo en tiempo real para la prevención y gestión de incidentes en tuberías de agua y gas. A través del video se muestran las principales actividades realizadas durante el desarrollo del proyecto, evidencias de las reuniones y sesiones de trabajo del equipo, así como los aportes individuales de cada integrante. Además, cada miembro comparte su experiencia, las responsabilidades asumidas, las competencias desarrolladas y la contribución realizada para alcanzar los objetivos del proyecto. Finalmente, se incluye la pauta de secuencias del contenido, una imagen representativa del video y los enlaces a las versiones publicadas en Microsoft Stream.
+**Video About-the-Team:** [Ver video About-the-Team](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDciBmwDFCQTJiqSUFUREH2AZgQaN2w8Tiqz_uIjISrxBw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=2494IX)
+
 # Bibliografía
 
 Angular. (s. f.). *Angular coding style guide*. https://angular.dev/style-guide
