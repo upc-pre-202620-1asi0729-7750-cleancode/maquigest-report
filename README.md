@@ -4710,7 +4710,7 @@ El objetivo principal de este segundo Sprint es avanzar desde el sitio público 
 | US05 | Cerrar sesión | T2-08 | Finalizar la sesión activa | Limpiar los datos de sesión y redirigir a la vista de acceso. | 3 | Delgado Perez, James Caleb | Done |
 
 #### 5.2.2.4. Development Evidence for Sprint Review
-La tabla presenta una selección de commits representativos de la implementación. La columna Commit Message conserva el mensaje original. Siguiendo la presentación utilizada en LowCortisol, la columna Commit Message Body incluye una descripción explicativa del cambio redactada para el informe; estos textos no corresponden a cuerpos adicionales almacenados en Git. Las fechas corresponden al registro del commit en la zona horaria de Perú (UTC−5).
+La tabla presenta una selección de commits representativos de la implementación. La columna Commit Message conserva el mensaje original. Siguiendo la presentación utilizada en MaquiGest, la columna Commit Message Body incluye una descripción explicativa del cambio redactada para el informe; estos textos no corresponden a cuerpos adicionales almacenados en Git. Las fechas corresponden al registro del commit en la zona horaria de Perú (UTC−5).
 
 En la columna Branch se indica la rama de desarrollo identificada en el historial de merge; cuando no se identifica una feature específica, se consigna `develop` como rama de integración verificada. Para los cierres de release se indica `main`.
 
@@ -5488,42 +5488,62 @@ Las evidencias presentadas muestran los componentes de MaquiGest desplegados en 
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
-Durante el Sprint 3, el trabajo de implementación se concentró en la creación del RESTful Web Service y en la adaptación de la Web Application para consumir el backend. GitHub fue utilizado para organizar las funcionalidades mediante ramas feature y consolidarlas en `develop`.
+Durante el Sprint 3, el trabajo de implementación se concentró en el desarrollo y despliegue del RESTful Web Service de MaquiGest, así como en la adaptación de la Web Application para consumir los servicios proporcionados por el backend. Esta iteración permitió integrar la lógica de negocio y la persistencia de datos con los procesos de la aplicación frontend.
 
-En `maquigest-platform` se utilizaron ramas independientes para configuración, Shared, IAM, Inventory, Subscriptions, Rentals, Profiles y Maintenance. En `maquigest-webapp` se utilizaron ramas para retirar la Fake API, implementar el historial de maquinaria y alinear los procesos de Inventory, Rentals y Maintenance con los contratos del backend.
+Git y GitHub fueron utilizados como herramientas principales para administrar el código fuente, coordinar el desarrollo de las funcionalidades y registrar las contribuciones realizadas durante la iteración. El trabajo se organizó mediante ramas feature destinadas a funcionalidades específicas, las cuales fueron integradas en la rama `develop` para consolidar los avances de ambos repositorios.
+
+En el repositorio `maquigest-platform` se utilizaron ramas independientes para desarrollar e integrar los componentes de configuración, Shared, IAM, Inventory, Subscriptions, Rentals, Profiles y Maintenance. Estas actividades comprendieron la exposición de servicios REST, la gestión de perfiles empresariales, la administración de maquinaria y su disponibilidad, las solicitudes y operaciones de alquiler, el mantenimiento y las incidencias, las suscripciones, la autenticación y autorización, la persistencia mediante JPA y MySQL, la validación de solicitudes, la gestión de errores HTTP y la documentación mediante OpenAPI.
+
+Por otro lado, en el repositorio `maquigest-webapp` se realizaron modificaciones para adaptar la aplicación frontend a los servicios del backend. Entre las actividades desarrolladas se encontraron el retiro de la Fake API, la implementación del historial de maquinaria y la adaptación de los procesos de Inventory, Rentals y Maintenance para alinearlos con los contratos y operaciones expuestos por el backend.
+
+Las contribuciones realizadas por los integrantes pueden observarse mediante las herramientas de análisis proporcionadas por GitHub.
 
 ##### GitHub Contributors
 
-Al corte actual, el historial verificable de Sprint 3 presenta la siguiente distribución de commits sin incluir operaciones de merge:
+GitHub Contributors permite visualizar la participación de los integrantes del equipo en el repositorio `maquigest-platform`.
 
-| Team Member | GitHub Username | maquigest-platform | maquigest-webapp | Total |
-|---|---|---:|---:|---:|
-| James Caleb Delgado Perez | `JAmsy06` | - | - | - |
-| Bruno Rodrigo Montalvo Vasquez | `TartaroZ` | - | - | - |
-| Miroslav Oscar Manosalva Tovar | `Miroa123` | - | - | - |
-| Carlos Augusto Paredes Chávez | `CarlossUPC` | - | - | - |
-| **Total** |  | **-** | **-** | **-** |
-<!-- | Joaquín Leonardo Daga Chávez | `Eshnikeee` | - | - | - | -->
+La distribución de commits registrada para el Sprint 3 fue la siguiente:
 
+| **Team Member**                | **GitHub Username** | **Commits** |
+| ------------------------------ | ------------------- | ----------: |
+| James Caleb Delgado Perez      | `JAmsy06`           | 30          |
+| Bruno Rodrigo Montalvo Vasquez | `TartaroZ`          | 29          |
+| Miroslav Oscar Manosalva Tovar | `Miroa123`          | 30          |
+| Carlos Augusto Paredes Chávez  | `CarlossUPC`        | 24          |
+| **Total**                      |                     | **113**     |
 
+Las estadísticas permiten observar la participación de los cuatro integrantes en el desarrollo del backend de MaquiGest. Las contribuciones estuvieron relacionadas con la implementación de los módulos principales, la integración de los servicios REST y los componentes técnicos necesarios para el funcionamiento de la plataforma.
 
-<!-- Poner la captura de GitHub Contributors de maquigest-platform y de GitHub Contributors de maquigest-webapp. -->
+<p align="center">
+  <img src="./assets/md-images-chapter5/teamcolabo6.png"
+       alt="MaquiGest Sprint 2 Collaboration Evidence - GitHub Contributors"
+       width="90%">
+</p>
 
 ##### Commit Activity
 
-La sección de estadísticas de GitHub permite observar también la actividad general de commits realizada sobre el repositorio durante el Sprint 3.
+<p align="center">
+  <img src="./assets/md-images-chapter5/teamcolabo7.png"
+       alt="MaquiGest Sprint 2 Collaboration Evidence - Commit Activity"
+       width="90%">
+</p>
 
-<!-- agregar captura de Commit Activity de maquigest-platform. -->
+La sección de estadísticas de GitHub permite observar también la actividad general de commits realizada sobre el repositorio `maquigest-platform` durante el Sprint 3.
 
+La actividad registrada corresponde principalmente al desarrollo de la infraestructura backend, la implementación de los módulos de negocio, la configuración de la persistencia, la seguridad y la exposición de los servicios REST.
 
----
+En conjunto, las contribuciones realizadas durante esta iteración permitieron desarrollar e integrar los principales servicios backend de MaquiGest, incluyendo la gestión de perfiles empresariales, maquinaria, disponibilidad, alquileres, mantenimiento, incidencias y suscripciones. Asimismo, se implementaron componentes transversales para la autenticación y autorización, la persistencia mediante JPA y MySQL, la validación de solicitudes, la gestión de errores HTTP y la documentación de la API mediante OpenAPI.
+
+Por otro lado, los cambios realizados en `maquigest-webapp` permitieron adaptar la aplicación frontend para consumir los servicios implementados, retirando la Fake API y alineando los procesos de Inventory, Rentals y Maintenance con los contratos del backend.
+
+La actividad registrada en GitHub proporciona trazabilidad de las contribuciones realizadas durante el Sprint 3 y evidencia el trabajo colaborativo del equipo en la implementación, integración y despliegue del backend de MaquiGest.
 
 ## 5.3. Validation Interviews.
 ### 5.3.1. Diseño de Entrevistas.
-En esta sección se presenta el diseño de entrevistaas de validación aplicado para la plataforma LowCortisol, con el objetivo de recopilar la percepción de nuestros usuarios anteriormente entrevistados respecto a la porpuesta de valor, la claridad de la información, la utilidad de las funcionalidades implementadas y la experiencia general de interacción con el producto digital. Estas entrevistados fueron planteadas para evaluar tanto el Landing Page como la Web Application, priorizando la validación de los flujos principales de navegación, monitoreo, alertas y visualización de información relevante para los segmentos objetivos.
+En esta sección se presenta el diseño de entrevistaas de validación aplicado para la plataforma MaquiGest, con el objetivo de recopilar la percepción de nuestros usuarios anteriormente entrevistados respecto a la porpuesta de valor, la claridad de la información, la utilidad de las funcionalidades implementadas y la experiencia general de interacción con el producto digital. Estas entrevistados fueron planteadas para evaluar tanto el Landing Page como la Web Application, priorizando la validación de los flujos principales de navegación, monitoreo, alertas y visualización de información relevante para los segmentos objetivos.
 
 
-**Objetivos de las entrevistas:** El objetivo principal de las entrevistas de validación fue conocer la opinión de los participantes sobre la experiencia de uso de LowCortisol, especialmente en relacion con:
+**Objetivos de las entrevistas:** El objetivo principal de las entrevistas de validación fue conocer la opinión de los participantes sobre la experiencia de uso de MaquiGest, especialmente en relacion con:
 
 
 * la comprensión de la propuesta de la plataforma.
@@ -5550,7 +5570,7 @@ Las preguntas utilizadas fueron las siguientes:
 Este bloque estuvo orientado a recoger apreciaciones cualitativas sobre la interfaz, la navegación, la utilidad de las funcionalidades y la satisfacción general con la solución.
 Las preguntas planteadas fueron las siguientes:
 
-* ¿Qué opinión tiene sobre el diseño visual y la apariencia general de nuestra plataforma LowCortisol?
+* ¿Qué opinión tiene sobre el diseño visual y la apariencia general de nuestra plataforma?
 * ¿Le resultó fácil y rápido navegar entre las diferentes secciones del sistema?
 * ¿Considera útil contar con el selector de idioma (EN/ES)?
 * ¿La información mostrada sobre los equipos, la disponibilidad o los planes de suscripción se entienden con claridad?
@@ -5860,7 +5880,7 @@ Finalmente, la elaboración del video About the Product y de la presentación Ab
 
 ## Video About-the-team
 
-**Video about-the-team:** En esta sección se presenta el video About-The-Team del proyecto lowcortisol, el cual resume el proceso de desarrollo de la solución de monitoreo en tiempo real para la prevención y gestión de incidentes en tuberías de agua y gas. A través del video se muestran las principales actividades realizadas durante el desarrollo del proyecto, evidencias de las reuniones y sesiones de trabajo del equipo, así como los aportes individuales de cada integrante. Además, cada miembro comparte su experiencia, las responsabilidades asumidas, las competencias desarrolladas y la contribución realizada para alcanzar los objetivos del proyecto. Finalmente, se incluye la pauta de secuencias del contenido, una imagen representativa del video y los enlaces a las versiones publicadas en Microsoft Stream.
+**Video about-the-team:** En esta sección se presenta el video About-The-Team del proyecto MaquiGest, el cual resume el proceso de desarrollo de la solución de monitoreo en tiempo real para la prevención y gestión de incidentes en tuberías de agua y gas. A través del video se muestran las principales actividades realizadas durante el desarrollo del proyecto, evidencias de las reuniones y sesiones de trabajo del equipo, así como los aportes individuales de cada integrante. Además, cada miembro comparte su experiencia, las responsabilidades asumidas, las competencias desarrolladas y la contribución realizada para alcanzar los objetivos del proyecto. Finalmente, se incluye la pauta de secuencias del contenido, una imagen representativa del video y los enlaces a las versiones publicadas en Microsoft Stream.
 **Video About-the-Team:** [Ver video About-the-Team](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDciBmwDFCQTJiqSUFUREH2AZgQaN2w8Tiqz_uIjISrxBw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=2494IX)
 
 # Bibliografía
