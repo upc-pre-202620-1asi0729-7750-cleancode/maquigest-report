@@ -4942,53 +4942,60 @@ Asimismo, la actividad registrada es consistente con la Leadership-and-Collabora
 
 El Sprint 3 representa la transición de MaquiGest desde una Web Application respaldada por una API simulada hacia una solución distribuida que incorpora un RESTful Web Service desarrollado con Java, Spring Boot, Spring Data JPA y MySQL.
 
+
+
 #### 5.2.3.1. Sprint Planning 3
 
-| **Campo** | **Descripción** |
-|---|---|
-| **Sprint #** | **Sprint 3** |
-|  | **Sprint Planning Background** |
-| **Date** | 2026-11-04 |
-| **Time** | 17:00 |
-| **Location** | Modalidad remota mediante Discord |
-| **Prepared By** | James Caleb |
-| **Attendees** | Daga Chávez, Joaquín Leonardo / Delgado Perez, James Caleb / Manosalva Tovar, Miroslav Oscar / Montalvo Vasquez, Bruno Rodrigo / Paredes Chávez, Carlos Augusto |
-| **Sprint 2 Review Summary** | Durante el Sprint 2 se implementó y desplegó la primera versión funcional de la Web Application de MaquiGest. La solución permitió presentar los procesos de autenticación, gestión de perfiles, maquinaria, solicitudes de alquiler, mantenimiento y suscripciones mediante una API de demostración desarrollada con JSON Server. También se integró la Landing Page con la Web Application y se publicaron ambas experiencias en Netlify y Vercel. |
-| **Sprint 2 Retrospective Summary** | El uso de una API simulada permitió validar anticipadamente las interfaces y los principales recorridos de la Web Application. Sin embargo, se identificó la necesidad de reemplazar la persistencia temporal por un backend que centralice las reglas del negocio, la seguridad, la autorización y el almacenamiento en MySQL. También se determinó que era necesario mejorar la trazabilidad entre los modelos DDD, los endpoints y las funcionalidades presentadas en Angular. |
-|  | **Sprint Goal & User Stories** |
-| **Sprint 3 Goal** | **Estamos concentrados en** implementar el primer RESTful Web Service de MaquiGest y conectarlo con la Web Application para respaldar los principales procesos operativos con reglas de negocio, seguridad y persistencia real.<br><br>**Creemos que entregar** una API organizada por bounded contexts, protegida mediante JWT y conectada con Angular permitirá sustituir la API simulada y disponer de una base técnica coherente con la arquitectura definida para el producto.<br><br>**Esto será confirmado cuando** los usuarios puedan registrarse, autenticarse y ejecutar los principales procesos de perfiles, maquinaria, alquileres, mantenimiento y suscripciones mediante los recursos de `maquigest-platform`, y cuando dichos recursos puedan consultarse mediante OpenAPI y Swagger. |
-| **Sprint 3 Velocity** | 86 Story Points completados en `develop`; 8 Story Points permanecen en progreso por funcionalidades externas pendientes. |
-| **Sum of Story Points** | 94 Story Points |
+El Sprint 3 de MaquiGest estuvo orientado a la consolidación funcional de la plataforma mediante el desarrollo de un RESTful Web Service propio, su integración con la Web Application implementada en Angular y la incorporación de persistencia de datos mediante MySQL. Durante la planificación, el equipo CleanCode priorizó la sustitución de la Fake API utilizada en el Sprint 2 por servicios reales desarrollados con Java y Spring Boot, organizados siguiendo principios de Domain-Driven Design (DDD), arquitectura por capas y Command Query Responsibility Segregation (CQRS).
 
+Asimismo, se consideraron la implementación de los principales procesos de negocio, la documentación de los endpoints mediante OpenAPI y Swagger UI, la ejecución de pruebas y la preparación de los entornos de despliegue correspondientes a la entrega AV2. La planificación y coordinación general del Sprint estuvieron lideradas por Delgado Perez, James Caleb, quien organizó el seguimiento de los avances técnicos, la integración de los componentes y las actividades necesarias para consolidar los entregables del proyecto.
+
+A continuación, se presenta la tabla resumen del Sprint Planning 3:
+
+| Campo | Descripción |
+| :--- | :--- |
+| **Sprint #** | Sprint 3 |
+| **Sprint Planning Background** | |
+| Date | 2026-11-04 |
+| Time | 05:00 PM |
+| Location | Reunión virtual mediante Discord. |
+| Prepared By | Delgado Perez, James Caleb |
+| Attendees (to planning meeting) | Delgado Perez, James Caleb / Montalvo Vasquez, Bruno Rodrigo / Manosalva Tovar, Miroslav Oscar / Paredes Chavez, Carlos Augusto |
+| Sprint 2 Review Summary | Durante el Sprint 2 se desarrolló y desplegó la primera versión funcional de la Web Application de MaquiGest utilizando Angular. Esta versión incorporó interfaces para autenticación, administración de perfiles empresariales, gestión de inventario, solicitudes de alquiler, entregas, devoluciones, mantenimiento y suscripciones. Para representar los principales recorridos funcionales se utilizó una Fake API implementada con JSON Server y desplegada en Render. Asimismo, se estableció la navegación entre la Landing Page y la Web Application, publicadas en Netlify y Vercel, respectivamente. Como resultado, el equipo consolidó una primera experiencia funcional que permitió establecer las bases para la integración con servicios RESTful propios durante el Sprint 3. |
+| Sprint 2 Retrospective Summary | El equipo identificó como principales fortalezas el desarrollo progresivo de las funcionalidades de la Web Application, la organización colaborativa mediante Git y GitHub y la disponibilidad de versiones desplegadas de los productos digitales. Como oportunidades de mejora, se reconoció la necesidad de sustituir la API simulada por un backend real, incorporar persistencia mediante MySQL, reforzar la seguridad y autorización de los servicios, mejorar la correspondencia entre los artefactos arquitectónicos y la implementación, y fortalecer las pruebas de integración. Asimismo, se identificó la importancia de mantener actualizadas las evidencias técnicas y la documentación de los servicios para facilitar su revisión durante la siguiente entrega. |
+| **Sprint Goal & User Stories** | |
+| Sprint 3 Goal | **Nuestro enfoque está en** permitir que las empresas constructoras y las empresas de alquiler de maquinaria utilicen los principales procesos de MaquiGest mediante una Web Application integrada con servicios RESTful propios y persistencia real de información.<br><br>**Creemos que esto proporcionará** una experiencia más confiable y funcional para ambos segmentos objetivo, al permitir consultar maquinaria, gestionar solicitudes de alquiler y acceder a información actualizada de sus operaciones mediante una plataforma integrada, sin depender de una API simulada.<br><br>**Esto se confirmará cuando** una empresa constructora pueda registrarse, autenticarse, consultar maquinaria disponible y registrar una solicitud de alquiler desde la Web Application; una empresa de alquiler pueda consultar y gestionar las solicitudes correspondientes; y los servicios REST utilizados estén disponibles mediante el backend desarrollado con Spring Boot y documentados a través de OpenAPI y Swagger UI. |
+| Sprint 3 Velocity | 86 Story Points completados en `develop` al corte documentado del Sprint 3, con 8 Story Points en progreso. Esta cifra representa el avance observado; la capacidad estimada inicialmente para el Sprint no consta por separado en el registro disponible. |
+| Sum of Story Points | 94 Story Points registrados para el Sprint 3. |
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
-En esta sección se presenta la Leadership-and-Collaboration Matrix definida para el Sprint 3. Los aspectos de la iteración corresponden a la implementación del RESTful Web Service, la integración con la Web Application y la preparación de la primera versión desplegable del backend.
+Durante el Sprint 3, el equipo CleanCode organizó sus responsabilidades considerando los principales aspectos funcionales y técnicos necesarios para consolidar MaquiGest. Estas actividades comprendieron el desarrollo del backend mediante Spring Boot, la integración de la Web Application desarrollada en Angular, la planificación y actualización del Sprint Backlog, las entrevistas de validación, la revisión de los artefactos arquitectónicos y de base de datos, la documentación técnica y el despliegue de la plataforma.
 
-Los aspectos considerados son los siguientes:
+El liderazgo general y la coordinación del Sprint estuvieron a cargo de Delgado Perez, James Caleb, quien asumió la organización de las actividades de desarrollo, integración, documentación y despliegue, así como el seguimiento de los entregables correspondientes a la AV2. Los demás integrantes participaron en la implementación de funcionalidades y asumieron responsabilidades específicas según las actividades asignadas.
 
-1. **Platform Architecture & Shared:** configuración de Spring Boot, perfiles de ejecución, persistencia, manejo común de resultados, errores, internacionalización y documentación OpenAPI.
+La distribución de responsabilidades se representa mediante una Leadership-and-Collaboration Matrix (LACX), en la cual la letra **L** identifica al integrante responsable principal de cada aspecto (Leader), mientras que la letra **C** identifica a los integrantes que participaron como colaboradores (Collaborators). Esta matriz permite visualizar la distribución de responsabilidades y mantener una coordinación efectiva durante el desarrollo del Sprint.
 
-2. **IAM & Profiles:** registro de usuarios, autenticación con JWT, autorización, roles y administración de perfiles empresariales.
+Los aspectos considerados fueron el desarrollo de servicios RESTful, la integración de la Web Application, las entrevistas de validación, la planificación del Sprint Backlog, la documentación técnica, el diseño de base de datos y el despliegue de la solución.
 
-3. **Inventory & Subscriptions:** gestión de maquinaria, categorías, disponibilidad, estados operativos, planes y suscripciones.
+| Team Member (Last Name, First Name) | GitHub Username | Backend REST Services | Web Application Integration | Validation Interview | Sprint Backlog | Documentation | Database Design | Deployment |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Delgado Perez, James Caleb | JAmsy06 | **L** | **L** | C | C | **L** | C | **L** |
+| Montalvo Vasquez, Bruno Rodrigo | TartaroZ | C | C | **L** | **L** | C | C | C |
+| Manosalva Tovar, Miroslav Oscar | Miroa123 | C | C | C | C | C | C | C |
+| Paredes Chavez, Carlos Augusto | CarlossUPC | C | C | C | C | C | **L** | C |
 
-4. **Rentals:** solicitudes de alquiler, aprobación, rechazo, reprogramación, reservas, entregas y devoluciones.
+En el desarrollo del backend, el equipo colaboró en la implementación de los servicios correspondientes a los Bounded Contexts IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions, junto con las capacidades transversales de Shared. James asumió la coordinación técnica general de estas actividades, participando en la integración de los componentes y en la preparación de la plataforma para su funcionamiento junto con la Web Application.
 
-5. **Maintenance:** incidencias, restricciones operativas, programación de mantenimiento e historial de maquinaria.
+Bruno contribuyó al desarrollo e integración del backend y asumió responsabilidades principales relacionadas con las entrevistas de validación, las evaluaciones heurísticas y la actualización de los artefactos de planificación, incluyendo las User Stories y el Product Backlog del Sprint 2. Asimismo, participó en la preparación de las evidencias de ejecución correspondientes al Sprint 3 y en las correcciones del Event Storming.
 
-6. **Web Application Integration:** retiro de la Fake API, adaptación de los servicios Angular y alineación de los contratos utilizados por el frontend.
+Miroslav participó en la implementación de funcionalidades del backend relacionadas con la gestión de maquinaria, las reglas de negocio, la disponibilidad y los servicios RESTful. También contribuyó a la revisión del Design-Level Event Storming y al análisis de las entrevistas de validación considerando criterios de usabilidad, arquitectura de información e Inclusive Design.
 
-7. **Testing, Documentation & Deployment:** pruebas del dominio y aplicación, documentación Swagger y preparación del despliegue.
+Carlos participó en el desarrollo del backend y asumió responsabilidades principales relacionadas con la corrección y actualización de los diagramas C4, los diagramas de clases, la representación de los componentes del backend y el diseño de base de datos. Estas actividades permitieron mejorar la coherencia entre los artefactos arquitectónicos, la estructura de persistencia y la implementación técnica de MaquiGest.
 
-La siguiente matriz conserva únicamente el liderazgo verificable mediante el historial actual de GitHub. Las participaciones adicionales deberán completarse según la distribución real acordada por el equipo.
+Adicionalmente, James lideró la documentación de los apartados del Sprint 3, incluyendo Sprint Backlog 3, Development Evidence for Sprint Review, Services Documentation Evidence for Sprint Review y Software Deployment Evidence for Sprint Review. También coordinó las actividades de integración y despliegue del backend en Northflank, la Web Application en Vercel y la Landing Page en Netlify, así como la preparación del video About the Product y la presentación About the Team.
 
-| Member (Last Name, First Name) | GitHub Username Leader (L) / Collaborator (C) | Platform & Shared Leader (L) / Collaborator (C) | IAM & Profiles Leader (L) / Collaborator (C) | Inventory & Subscriptions Leader (L) / Collaborator (C) | Rentals Leader (L) / Collaborator (C) | Maintenance Leader (L) / Collaborator (C) | Web App Integration Leader (L) / Collaborator (C) | Testing, Documentation & Deployment Leader (L) / Collaborator (C) |
-|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Delgado Perez, James Caleb | `@JAmsy06` | C | L | L | C | C | C | L |
-| Montalvo Vasquez, Bruno Rodrigo | `@TartaroZ` | C | C | L | C | C | L | C |
-| Manosalva Tovar, Miroslav Oscar | `@Miroa123` | L | C | C | L | C | L | C |
-| Paredes Chávez, Carlos Augusto | `@CarlossUPC` | C | C | C | C | C | C | L |
+Esta organización permitió distribuir las responsabilidades entre los cuatro integrantes, mantener una coordinación técnica centralizada y promover la colaboración durante las actividades de desarrollo, validación, documentación y despliegue. Como resultado, el equipo avanzó en la consolidación de MaquiGest como una plataforma web integrada con servicios RESTful propios y una base de datos MySQL.
 
 
 
@@ -5223,7 +5230,6 @@ El desarrollo comprendió los seis Bounded Contexts de la plataforma, la exposic
 Además, los commits muestran actividades de refactorización, validación y preparación de releases que contribuyeron a la consolidación técnica de la solución.
 
 En conclusión, las evidencias de desarrollo del Sprint 3 permiten relacionar las funcionalidades implementadas con cambios concretos de código fuente, manteniendo trazabilidad mediante ramas, commits y versiones del proyecto.
-
 
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
@@ -5494,41 +5500,56 @@ La sección de estadísticas de GitHub permite observar también la actividad ge
 
 
 ---
+
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
 
-Durante el Sprint 1, MaquiGest estableció su presencia pública mediante la implementación y despliegue de la Landing Page. Este producto permitió comunicar la propuesta de valor, los segmentos objetivo, las principales funcionalidades y los planes de la solución. También se incorporaron diseño responsivo, cambio de idioma y enlaces hacia la Web Application.
+Durante el Sprint 1, MaquiGest estableció su presencia pública mediante la implementación y el despliegue de la Landing Page en Netlify. Este primer producto permitió comunicar la propuesta de valor de CleanCode, identificar los segmentos objetivo y presentar las principales funcionalidades y planes de la plataforma SaaS orientada a la gestión y alquiler de maquinaria de construcción. Asimismo, se incorporaron características de diseño responsivo, internacionalización y mecanismos de navegación hacia la Web Application, estableciendo las bases de la experiencia digital del producto.
 
-En el Sprint 2 se desarrolló y desplegó la primera versión de la Web Application con Angular. Esta versión presentó interfaces para autenticación, perfiles, inventario, solicitudes de alquiler, entregas, devoluciones, mantenimiento y suscripciones. Para demostrar estos recorridos se utilizó una API temporal desarrollada con JSON Server, desplegada en Render, mientras que la aplicación fue publicada en Vercel.
+En el Sprint 2 se desarrolló y desplegó la primera versión funcional de la Web Application utilizando Angular. Esta versión incorporó interfaces para autenticación, administración de perfiles empresariales, gestión de inventario, solicitudes de alquiler, entregas, devoluciones, mantenimiento y suscripciones. Inicialmente, estas funcionalidades se apoyaron en una Fake API implementada con JSON Server y desplegada en Render, lo que permitió representar y validar los principales recorridos de usuario antes de disponer de un backend propio.
 
-Durante el Sprint 3 se avanzó desde el uso de información simulada hacia un RESTful Web Service propio. El backend se desarrolló con Java, Spring Boot, Spring Data JPA y MySQL, y fue organizado mediante los bounded contexts IAM, Profiles, Inventory, Rentals, Maintenance, Subscriptions y Shared.
+Durante el Sprint 3, el proyecto evolucionó hacia una arquitectura funcional integrada mediante el desarrollo de un RESTful Web Service con Java, Spring Boot, Spring Data JPA y MySQL. La implementación se estructuró alrededor de seis Bounded Contexts: IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions, complementados por el módulo transversal Shared. Esta organización permitió establecer una separación de responsabilidades basada en Domain-Driven Design (DDD), facilitando la evolución de las funcionalidades y reduciendo el acoplamiento entre los distintos dominios del negocio.
 
-La implementación del backend sigue una separación entre dominio, aplicación, infraestructura e interfaces. También distingue los objetos del dominio de las entidades utilizadas para persistencia con JPA. Esta organización permite mantener las reglas del negocio separadas de los controladores REST y de la tecnología utilizada para almacenar la información.
+La arquitectura del backend incorporó una separación entre las capas Domain, Application, Infrastructure e Interfaces, junto con la aplicación de Command Query Responsibility Segregation (CQRS) para distinguir las operaciones de escritura y consulta. Asimismo, se estableció una diferenciación entre los objetos del dominio y las entidades de persistencia utilizadas por JPA. Estas decisiones contribuyeron a mantener las reglas de negocio independientes de los controladores REST y de los mecanismos de almacenamiento, favoreciendo la mantenibilidad y organización del código.
 
-El backend implementa registro e inicio de sesión mediante JWT, perfiles empresariales, inventario de maquinaria, disponibilidad por periodos, solicitudes de alquiler, aprobación y rechazo, entregas, devoluciones, incidencias, mantenimiento, historial operativo, planes y suscripciones. Además, incorpora documentación OpenAPI, manejo de errores con `ProblemDetail`, mensajes internacionalizados y pruebas para componentes del dominio y de la aplicación.
+En el ámbito funcional, el backend permitió implementar los procesos principales de MaquiGest, incluyendo registro e inicio de sesión mediante JWT, administración de perfiles empresariales, gestión y disponibilidad de maquinaria, solicitudes de alquiler, aprobación y rechazo, entregas, devoluciones, registro de incidencias, mantenimiento y gestión de suscripciones. Además, se incorporaron mecanismos de manejo de errores mediante ProblemDetail, internacionalización de mensajes y pruebas automatizadas orientadas a validar componentes del dominio y de la aplicación.
 
-La rama `develop` de `maquigest-webapp` fue desacoplada de la Fake API y configurada para consumir los recursos de `maquigest-platform` mediante `/api/v1`. La integración actual está preparada para ejecutarse localmente mediante un proxy que conecta Angular con el backend en el puerto 8080.
+Uno de los principales avances del Sprint 3 fue el desacoplamiento de la Fake API de la Web Application y su integración con los recursos reales de maquigest-platform mediante los endpoints REST expuestos bajo `/api/v1`. Esto permitió conectar los componentes desarrollados con Angular y Spring Boot, utilizando una base de datos MySQL para la persistencia de información. De esta manera, MaquiGest dejó de depender de datos simulados para los principales flujos implementados y avanzó hacia una solución integrada entre frontend, backend y base de datos.
+
+Respecto a la documentación de servicios, se utilizó OpenAPI y Swagger UI para representar y consultar los endpoints del backend. Durante el Sprint Review se registraron evidencias de operaciones REST ejecutadas en el entorno de producción, incluyendo consultas de categorías de maquinaria y autenticación, con respuestas HTTP 200 OK. Estas verificaciones permitieron demostrar la disponibilidad de los servicios documentados y facilitaron la revisión de los contratos utilizados por la Web Application.
+
+En relación con el despliegue, se consolidó una arquitectura distribuida en servicios cloud. El backend de MaquiGest y la base de datos MySQL fueron desplegados en Northflank, la Web Application se publicó en Vercel y la Landing Page permaneció disponible en Netlify. Asimismo, se verificó el estado operativo de los servicios y la accesibilidad del esquema de base de datos mediante MySQL Workbench, identificándose 17 tablas correspondientes a la persistencia de la plataforma. Estas evidencias permitieron respaldar el avance del producto hacia un entorno de producción accesible mediante Internet.
+
+Paralelamente, se realizaron correcciones y actualizaciones en los artefactos de análisis, modelado y documentación del proyecto, incluyendo Event Storming, User Stories, Product Backlog, diagramas C4, diagramas de clases y diseño de base de datos. También se desarrollaron actividades de validación de usuarios y evaluación heurística, contribuyendo a identificar oportunidades de mejora en la experiencia propuesta. La utilización de Git, GitHub y GitFlow permitió organizar el trabajo colaborativo y mantener la trazabilidad de las modificaciones realizadas durante los distintos Sprints.
+
+Finalmente, la elaboración del video About the Product y de la presentación About the Team permitió complementar las evidencias técnicas mediante recursos audiovisuales orientados a comunicar el modelo de negocio, las funcionalidades y los beneficios de MaquiGest. En conjunto, los avances de los tres Sprints evidencian la evolución progresiva del proyecto, desde una propuesta inicial y una Landing Page funcional hasta una plataforma web conectada con un backend propio y una base de datos desplegada.
 
 ### Recomendaciones
 
-1. Desplegar `maquigest-platform` junto con una instancia MySQL y publicar Swagger UI mediante una URL accesible desde Internet.
+1. **Fortalecer la arquitectura DDD para la entrega final.** Revisar las observaciones identificadas sobre los Aggregates, Value Objects, invariantes de dominio y validaciones, contrastándolas con los principios de Domain-Driven Design y las indicaciones del docente. Las correcciones deberán evaluarse antes de implementarse, preservando la estabilidad de las funcionalidades existentes.
 
-2. Configurar la versión de producción de la Web Application para consumir el backend desplegado y registrar el dominio de Vercel dentro de los orígenes permitidos por CORS.
+2. **Completar la recuperación y verificación de cuentas.** Evaluar la implementación del flujo seguro de recuperación y restablecimiento de contraseñas, así como los mecanismos de verificación de correo electrónico, con el objetivo de mejorar la seguridad de las cuentas y completar las funcionalidades pendientes de autenticación.
 
-3. Completar las notificaciones externas asociadas con la creación, aprobación y rechazo de solicitudes de alquiler, debido a que forman parte de los criterios de aceptación de US14 y US19.
+3. **Evaluar la incorporación de notificaciones.** Revisar los criterios de aceptación relacionados con solicitudes de alquiler, cambios de estado y otros procesos que requieran comunicar información a los usuarios. De acuerdo con las observaciones del docente, se recomienda analizar la integración de notificaciones en los Bounded Contexts correspondientes, evitando introducir responsabilidades que no pertenezcan a sus respectivos dominios.
 
-4. Implementar o retirar temporalmente la opción de recuperación de contraseña de la Web Application, ya que actualmente el frontend utiliza un endpoint que todavía no existe en el backend.
+4. **Ampliar las pruebas de integración y validación funcional.** Continuar verificando los recorridos completos entre Angular, Spring Boot y MySQL, especialmente en autenticación, gestión de maquinaria, solicitudes de alquiler, entregas, devoluciones, mantenimiento y suscripciones. Se recomienda complementar las pruebas automatizadas existentes con escenarios funcionales que permitan detectar inconsistencias entre los componentes.
 
-5. Ejecutar pruebas de integración que cubran el recorrido completo entre Angular, Spring Boot y MySQL, incluyendo autenticación, maquinaria, solicitudes, entregas, devoluciones, mantenimiento y suscripciones.
+5. **Completar la documentación técnica del backend.** Incorporar y mantener actualizados los archivos README, las instrucciones de configuración del entorno, las variables necesarias para la ejecución, los perfiles de desarrollo y producción, las convenciones de arquitectura y los procedimientos para ejecutar pruebas y acceder a Swagger UI. Asimismo, se recomienda documentar las decisiones arquitectónicas relevantes mediante los artefactos correspondientes.
 
-6. Revisar la correspondencia entre los Value Objects definidos en los diagramas de clases y los tipos utilizados por los modelos de dominio del backend.
+6. **Mantener la consistencia entre arquitectura e implementación.** Verificar que los diagramas C4, diagramas de clases, modelos de base de datos y artefactos de Event Storming representen correctamente las responsabilidades y relaciones implementadas en los Bounded Contexts, evitando diferencias entre la documentación y el código fuente.
 
-7. Incorporar un README en `maquigest-platform` con instrucciones de configuración, variables de entorno, perfiles de ejecución, pruebas y acceso a Swagger.
+7. **Reforzar la seguridad y configuración de los entornos de producción.** Revisar la gestión de variables de entorno, credenciales, autenticación JWT, políticas CORS y conexiones a la base de datos, asegurando que las configuraciones necesarias para el funcionamiento de la Web Application se mantengan adecuadamente separadas entre desarrollo y producción.
 
-8. Publicar versiones estables mediante ramas release y tags basados en Semantic Versioning, manteniendo sincronizadas las ramas `develop` y `main`.
+8. **Conservar un proceso de publicación y versionamiento controlado.** Continuar utilizando GitFlow, Pull Requests, ramas release y tags basados en Semantic Versioning para mantener la trazabilidad de las versiones publicadas. Asimismo, verificar la sincronización entre las ramas develop y main antes de realizar nuevos despliegues.
 
-9. Mantener la trazabilidad entre Product Backlog, Sprint Backlog, commits, Pull Requests, endpoints, evidencias de ejecución y documentación del informe.
+9. **Mantener la trazabilidad entre requisitos, implementación y evidencias.** Continuar relacionando las User Stories, Technical Stories, Product Backlog, Sprint Backlog, commits, Pull Requests, endpoints REST, pruebas y evidencias del informe, de manera que cada avance funcional pueda identificarse y verificarse durante las siguientes evaluaciones.
+
+10. **Priorizar la estabilización de MaquiGest antes de la entrega final.** Concentrar los esfuerzos en corregir las observaciones pendientes, validar los principales procesos de negocio, revisar la experiencia de usuario y consolidar las evidencias técnicas y audiovisuales del producto, evitando incorporar nuevas funcionalidades que puedan comprometer el alcance o la estabilidad de la plataforma.
+
+---
+
 
 ---
 
