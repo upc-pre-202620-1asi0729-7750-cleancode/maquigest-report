@@ -1,39 +1,52 @@
-﻿@startuml
 
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+@startuml
+!include <C4/C4_Component>
+
+LAYOUT_TOP_DOWN()
 
 title MaquiGest - Inventory Backend Component Diagram
 
-Container(spa, "Single Page Application", "Angular", "Consumes inventory and machinery-management capabilities provided by the MaquiGest backend.")
+Container_Boundary(inventory, "Inventory Bounded Context [Java / Spring Boot]") {
 
-Container_Boundary(inventoryContext, "Inventory Bounded Context\n[Java / Spring Boot]") {
+    Boundary(interfaces_layer, "Interfaces Layer") {
+        Component(rest, "rest", "REST API Package", "Equipment and category endpoints. Subpackages: resources, security, transform.")
+        Component(published_acl, "acl", "Published Inventory Contracts", "Exposes equipment capabilities to Rentals and Maintenance.")
+    }
 
-    Component(interfacesLayer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes endpoints for machinery, categories, rates, status, and availability management.")
+    Boundary(application_layer, "Application Layer") {
+        Component(commands, "commandservices", "Application Contracts", "Defines equipment and category commands.")
+        Component(queries, "queryservices", "Application Contracts", "Defines equipment and category queries.")
+        Component(internal_services, "internal", "Use Case Implementations", "Subpackages: commandservices, queryservices. Coordinates inventory operations.")
+        Component(event_handlers, "internal.eventhandlers", "Application Event Handling", "Initializes the equipment category catalog.")
+        Component(application_acl, "acl", "Inventory Facade Implementations", "Implements the published inventory contracts.")
+    }
 
-    Component(applicationLayer, "Application Layer", "Application Services / Command and Query Services", "Coordinates machinery registration, updates, availability queries, rates, and inventory-management use cases.")
+    Boundary(domain_layer, "Domain Layer") {
+        Component(domain_model, "model", "Domain Model", "Subpackages: aggregates, commands, entities, queries, valueobjects. Owns inventory business rules.")
+        Component(domain_repositories, "repositories", "Repository Contracts", "Defines equipment and category persistence operations.")
+    }
 
-    Component(domainLayer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains equipment, category, rate, status, availability, and inventory-related business rules.")
-
-    Component(infrastructureLayer, "Infrastructure Layer", "Spring Data JPA / Repository Implementations", "Provides persistence implementations and technical adapters required by the Inventory bounded context.")
+    Boundary(infrastructure_layer, "Infrastructure Layer") {
+        Component(jpa, "persistence.jpa", "JPA Persistence", "Subpackages: adapters, assemblers, entities, repositories. Maps and persists inventory data.")
+    }
 }
 
-Container_Ext(rentalsContext, "Rentals Bounded Context", "Backend Context", "Uses machinery information and availability during rental operations.")
+Rel(rest, commands, "Invokes commands")
+Rel(rest, queries, "Invokes queries")
+Rel(internal_services, commands, "Implements command contracts")
+Rel(internal_services, queries, "Implements query contracts")
+Rel(internal_services, domain_model, "Applies inventory rules")
+Rel(internal_services, domain_repositories, "Uses repositories")
 
-Container_Ext(maintenanceContext, "Maintenance Bounded Context", "Backend Context", "Updates equipment status and availability when maintenance operations occur.")
+Rel(event_handlers, commands, "Seeds equipment categories")
+Rel(application_acl, published_acl, "Implements published contracts")
+Rel(application_acl, domain_repositories, "Accesses inventory")
 
-ContainerDb(database, "MaquiGest Database", "MySQL", "Stores machinery, categories, rates, equipment status, and availability information.")
+Rel(jpa, domain_repositories, "Implements repository contracts")
 
-Rel(spa, interfacesLayer, "Consumes Inventory services", "JSON / HTTPS")
-
-Rel(interfacesLayer, applicationLayer, "Delegates requests")
-
-Rel(applicationLayer, domainLayer, "Executes inventory domain operations")
-Rel(applicationLayer, infrastructureLayer, "Uses persistence capabilities")
-
-Rel(rentalsContext, applicationLayer, "Queries machinery availability")
-Rel(maintenanceContext, applicationLayer, "Updates equipment status")
-
-Rel(infrastructureLayer, database, "Reads and writes Inventory data", "JPA / SQL")
+Lay_D(rest, commands)
+Lay_D(commands, domain_model)
+Lay_D(domain_model, jpa)
 
 SHOW_LEGEND()
 

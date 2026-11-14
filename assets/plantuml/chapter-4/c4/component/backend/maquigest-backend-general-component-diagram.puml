@@ -1,56 +1,55 @@
-﻿@startuml
+@startuml
+!include <C4/C4_Component>
 
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+LAYOUT_TOP_DOWN()
 
-title MaquiGest - Backend General Components Diagram
+title MaquiGest - Backend Bounded Contexts Overview
 
-Container(spa, "Single Page Application", "Angular", "Provides MaquiGest functionality to authenticated users through their web browser.")
+Container(spa, "MaquiGest Web Application", "Angular", "Provides the browser-based user interface.")
 
-Container_Boundary(backend, "MaquiGest Backend API Application\n[Java / Spring Boot]") {
+ContainerDb(db, "MaquiGest Database", "MySQL", "Stores persistent bounded-context data.")
 
-    Component(iamContext, "IAM Bounded Context", "Bounded Context Component", "Manages authentication, authorization, credentials, users, roles, and access control.")
+Container_Boundary(backend, "MaquiGest Backend API [Java / Spring Boot]") {
 
-    Component(profilesContext, "Profiles Bounded Context", "Bounded Context Component", "Manages user, company, supplier, and customer profile information.")
+    Boundary(contexts, "Business Bounded Contexts") {
 
-    Component(inventoryContext, "Inventory Bounded Context", "Bounded Context Component", "Manages machinery, categories, rates, equipment status, and availability.")
+        Component(iam, "IAM Bounded Context", "Identity and Access Management", "Authentication, authorization, users, roles and identity contracts.")
 
-    Component(rentalsContext, "Rentals Bounded Context", "Bounded Context Component", "Manages rental requests, reservations, contracts, deliveries, active rentals, and returns.")
+        Component(profiles, "Profiles Bounded Context", "Company Profiles", "Company information, contact details and addresses.")
 
-    Component(maintenanceContext, "Maintenance Bounded Context", "Bounded Context Component", "Manages maintenance schedules, inspections, incidents, and equipment maintenance history.")
+        Component(inventory, "Inventory Bounded Context", "Equipment Management", "Equipment, categories, rental rates and availability.")
 
-    Component(subscriptionsContext, "Subscriptions Bounded Context", "Bounded Context Component", "Manages subscription plans, active subscriptions, billing state, and plan changes.")
+        Component(rentals, "Rentals Bounded Context", "Rental Management", "Rental requests, reservations, deliveries and returns.")
 
-    Component(sharedComponent, "Shared", "Shared Component", "Provides reusable cross-cutting capabilities, common abstractions, validation, configuration, and technical utilities.")
+        Component(maintenance, "Maintenance Bounded Context", "Maintenance Management", "Equipment incidents, maintenance records and activities.")
+
+        Component(subscriptions, "Subscriptions Bounded Context", "Subscription Management", "Subscription plans, memberships and entitlements.")
+    }
+
+    Component(shared, "Shared Module", "Shared Technical Support", "Common results, errors, auditing and event support.")
 }
 
-ContainerDb(database, "MaquiGest Database", "MySQL", "Stores persistent account, profile, machinery, rental, maintenance, and subscription information.")
+Rel(spa, backend, "Consumes backend REST APIs", "JSON/HTTPS")
 
-Rel(spa, iamContext, "Uses authentication services", "JSON / HTTPS")
-Rel(spa, profilesContext, "Uses profile services", "JSON / HTTPS")
-Rel(spa, inventoryContext, "Uses inventory services", "JSON / HTTPS")
-Rel(spa, rentalsContext, "Uses rental services", "JSON / HTTPS")
-Rel(spa, maintenanceContext, "Uses maintenance services", "JSON / HTTPS")
-Rel(spa, subscriptionsContext, "Uses subscription services", "JSON / HTTPS")
+Rel(backend, db, "Persists bounded-context data", "JPA/SQL")
 
-Rel(profilesContext, iamContext, "Uses authenticated account identity")
-Rel(rentalsContext, inventoryContext, "Checks machinery availability")
-Rel(rentalsContext, profilesContext, "Uses company and participant profiles")
-Rel(maintenanceContext, inventoryContext, "Updates equipment status and availability")
-Rel(subscriptionsContext, iamContext, "Uses authenticated account identity")
+Rel(profiles, iam, "Uses account identity")
 
-Rel(iamContext, sharedComponent, "Uses")
-Rel(profilesContext, sharedComponent, "Uses")
-Rel(inventoryContext, sharedComponent, "Uses")
-Rel(rentalsContext, sharedComponent, "Uses")
-Rel(maintenanceContext, sharedComponent, "Uses")
-Rel(subscriptionsContext, sharedComponent, "Uses")
+Rel(inventory, iam, "Resolves owner identity")
 
-Rel(iamContext, database, "Persists")
-Rel(profilesContext, database, "Persists")
-Rel(inventoryContext, database, "Persists")
-Rel(rentalsContext, database, "Persists")
-Rel(maintenanceContext, database, "Persists")
-Rel(subscriptionsContext, database, "Persists")
+Rel(subscriptions, iam, "Resolves subscriber identity")
+
+Rel(rentals, inventory, "Checks equipment availability")
+
+Rel(rentals, subscriptions, "Checks rental entitlements")
+
+Rel(maintenance, inventory, "Coordinates equipment availability")
+
+Rel(maintenance, rentals, "Checks active rentals")
+
+
+Rel(maintenance, shared, "Uses shared results and error handling")
+
 
 SHOW_LEGEND()
 

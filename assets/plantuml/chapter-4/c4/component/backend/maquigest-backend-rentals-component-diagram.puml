@@ -1,39 +1,61 @@
-﻿@startuml
 
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+@startuml
+!include <C4/C4_Component>
+
+LAYOUT_TOP_DOWN()
 
 title MaquiGest - Rentals Backend Component Diagram
 
-Container(spa, "Single Page Application", "Angular", "Consumes rental-management capabilities provided by the MaquiGest backend.")
+Container_Boundary(rentals, "Rentals Bounded Context [Java / Spring Boot]") {
 
-Container_Boundary(rentalsContext, "Rentals Bounded Context\n[Java / Spring Boot]") {
+    Boundary(interfaces_layer, "Interfaces Layer") {
+        Component(rest, "rest", "REST API Package", "Rental request, rental lifecycle, delivery and return endpoints. Subpackages: resources, security, transform.")
+        Component(published_acl, "acl", "Published Rental Contract", "Provides active-rental information to Maintenance.")
+        Component(interface_events, "events", "Integration Event Contract", "Defines published rental integration events.")
+    }
 
-    Component(interfacesLayer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes endpoints for rental requests, reservations, contracts, deliveries, active rentals, and returns.")
+    Boundary(application_layer, "Application Layer") {
+        Component(commands, "commandservices", "Application Contracts", "Defines rental request and lifecycle commands.")
+        Component(queries, "queryservices", "Application Contracts", "Defines rental query operations.")
+        Component(internal_services, "internal", "Use Case Implementations", "Subpackages: commandservices, queryservices. Coordinates rental transactions and lifecycle operations.")
+        Component(ports, "ports", "Outbound Application Contracts", "Defines equipment availability and subscription entitlement capabilities.")
+        Component(application_acl, "acl", "Rental Facade Implementation", "Implements the maintenance-facing rental contract.")
+        Component(exceptions, "exceptions", "Application Errors", "Defines rental operation failures.")
+    }
 
-    Component(applicationLayer, "Application Layer", "Application Services / Command and Query Services", "Coordinates rental requests, reservation workflows, contract operations, deliveries, returns, and rental lifecycle use cases.")
+    Boundary(domain_layer, "Domain Layer") {
+        Component(domain_model, "model", "Domain Model", "Subpackages: aggregates, commands, entities, events, queries, valueobjects. Owns rental lifecycle rules.")
+        Component(domain_repositories, "repositories", "Repository Contracts", "Defines rental requests, rentals, deliveries and returns persistence.")
+    }
 
-    Component(domainLayer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains rental requests, rental contracts, reservations, deliveries, returns, and rental business rules.")
-
-    Component(infrastructureLayer, "Infrastructure Layer", "Spring Data JPA / Repository Implementations", "Provides persistence implementations and technical adapters required by the Rentals bounded context.")
+    Boundary(infrastructure_layer, "Infrastructure Layer") {
+        Component(jpa, "persistence.jpa", "JPA Persistence", "Subpackages: adapters, assemblers, entities, repositories.")
+        Component(inventory_acl, "acl.inventory", "Anti-Corruption Layer", "Adapts Inventory equipment capabilities to rental operations.")
+        Component(subscriptions_acl, "acl.subscriptions", "Anti-Corruption Layer", "Adapts subscription entitlement decisions to rental operations.")
+        Component(event_bridge, "events", "Integration Event Bridge", "Publishes rental integration events after transaction commit.")
+    }
 }
 
-Container_Ext(inventoryContext, "Inventory Bounded Context", "Backend Context", "Provides machinery information, rates, status, and availability required by rental operations.")
+Rel(rest, commands, "Invokes commands")
+Rel(rest, queries, "Invokes queries")
 
-Container_Ext(profilesContext, "Profiles Bounded Context", "Backend Context", "Provides supplier, lessee, and company profile information required by rental operations.")
+Rel(internal_services, commands, "Implements command contracts")
+Rel(internal_services, queries, "Implements query contracts")
+Rel(internal_services, domain_model, "Executes rental rules")
+Rel(internal_services, domain_repositories, "Uses repositories")
+Rel(internal_services, ports, "Requires external capabilities")
 
-ContainerDb(database, "MaquiGest Database", "MySQL", "Stores rental requests, reservations, contracts, deliveries, returns, and active rental information.")
+Rel(application_acl, published_acl, "Implements published contract")
+Rel(application_acl, domain_repositories, "Queries rental records")
 
-Rel(spa, interfacesLayer, "Consumes Rentals services", "JSON / HTTPS")
+Rel(jpa, domain_repositories, "Implements repository contracts")
+Rel(inventory_acl, ports, "Implements equipment port")
+Rel(subscriptions_acl, ports, "Implements entitlement port")
+Rel(event_bridge, interface_events, "Publishes integration events")
 
-Rel(interfacesLayer, applicationLayer, "Delegates requests")
-
-Rel(applicationLayer, domainLayer, "Executes rental domain operations")
-Rel(applicationLayer, infrastructureLayer, "Uses persistence capabilities")
-
-Rel(applicationLayer, inventoryContext, "Checks machinery availability and equipment data")
-Rel(applicationLayer, profilesContext, "Uses company and participant profile data")
-
-Rel(infrastructureLayer, database, "Reads and writes Rentals data", "JPA / SQL")
+Lay_D(rest, commands)
+Lay_D(commands, domain_model)
+Lay_D(domain_model, jpa)
 
 SHOW_LEGEND()
 

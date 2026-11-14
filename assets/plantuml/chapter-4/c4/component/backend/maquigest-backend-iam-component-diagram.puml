@@ -1,39 +1,59 @@
-﻿@startuml
 
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+@startuml
+!include <C4/C4_Component>
+
+LAYOUT_TOP_DOWN()
 
 title MaquiGest - IAM Backend Component Diagram
 
-Container(spa, "Single Page Application", "Angular", "Consumes authentication and account-access capabilities provided by the MaquiGest backend.")
+Container_Boundary(iam, "IAM Bounded Context [Java / Spring Boot]") {
 
-Container_Boundary(iamContext, "IAM Bounded Context\n[Java / Spring Boot]") {
+    Boundary(interfaces_layer, "Interfaces Layer") {
+        Component(rest, "rest", "REST API Package", "Authentication and account endpoints. Subpackages: resources, transform.")
+        Component(published_acl, "acl", "Published Identity Contracts", "Exposes actor, company directory and subscriber identity capabilities.")
+    }
 
-    Component(interfacesLayer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes authentication, registration, account access, and authorization endpoints to the frontend.")
+    Boundary(application_layer, "Application Layer") {
+        Component(commands, "commandservices", "Application Contracts", "Defines user and role command operations.")
+        Component(internal_commands, "internal.commandservices", "Use Case Implementations", "Coordinates registration, authentication, accounts and roles.")
+        Component(event_handlers, "internal.eventhandlers", "Application Event Handling", "Initializes system roles when the application starts.")
+        Component(outbound, "internal.outboundservices", "Outbound Service Contracts", "Subpackages: hashing, tokens. Defines password hashing and token operations.")
+        Component(ports, "ports", "Application Ports", "Defines company directory and subscriber reading contracts.")
+        Component(application_acl, "acl", "Identity Facade Implementations", "Implements the identity contracts published to other contexts.")
+    }
 
-    Component(applicationLayer, "Application Layer", "Application Services / Command and Query Services", "Coordinates authentication, registration, credential management, and account-access use cases.")
+    Boundary(domain_layer, "Domain Layer") {
+        Component(domain_model, "model", "Domain Model", "Subpackages: aggregates, commands, entities, valueobjects. Owns account and role rules.")
+        Component(domain_repositories, "repositories", "Repository Contracts", "Defines user and role persistence operations.")
+    }
 
-    Component(domainLayer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains users, credentials, roles, authentication rules, and IAM business logic.")
-
-    Component(infrastructureLayer, "Infrastructure Layer", "Spring Data JPA / Repository Implementations", "Provides persistence implementations and technical adapters required by the IAM bounded context.")
-
-    Component(securityConnector, "Security Connector", "Spring Security / JWT", "Provides authentication filters, password encoding, token generation, and authorization mechanisms.")
+    Boundary(infrastructure_layer, "Infrastructure Layer") {
+        Component(security, "authorization.sfs", "Spring Security", "Subpackages: configuration, model, pipeline, services.")
+        Component(bcrypt, "hashing.bcrypt", "Password Hashing Adapter", "Provides BCrypt hashing through its services package.")
+        Component(jwt, "tokens.jwt", "Token Adapter", "Provides JWT operations through its services package.")
+        Component(jpa, "persistence.jpa", "JPA Persistence", "Subpackages: adapters, assemblers, entities, repositories.")
+    }
 }
 
-ContainerDb(database, "MaquiGest Database", "MySQL", "Stores user accounts, credentials, roles, and authentication-related information.")
+Rel(rest, commands, "Invokes commands")
+Rel(internal_commands, commands, "Implements command contract")
+Rel(internal_commands, domain_model, "Applies domain rules")
+Rel(internal_commands, domain_repositories, "Uses repositories")
+Rel(internal_commands, outbound, "Uses hashing and token contracts")
 
-System_Ext(sendGrid, "SendGrid", "Provides transactional email delivery for account and password-recovery notifications.")
+Rel(event_handlers, commands, "Seeds system roles")
+Rel(application_acl, published_acl, "Implements published contracts")
 
-Rel(spa, interfacesLayer, "Consumes IAM services", "JSON / HTTPS")
+Rel(bcrypt, outbound, "Implements hashing contract")
+Rel(jwt, outbound, "Implements token contract")
+Rel(jpa, domain_repositories, "Implements repository contracts")
+Rel(jpa, ports, "Implements identity readers")
 
-Rel(interfacesLayer, applicationLayer, "Delegates requests")
+Rel(security, jwt, "Validates authentication tokens")
 
-Rel(applicationLayer, domainLayer, "Executes domain operations")
-Rel(applicationLayer, infrastructureLayer, "Uses persistence capabilities")
-Rel(applicationLayer, securityConnector, "Uses authentication and authorization services")
-
-Rel(infrastructureLayer, database, "Reads and writes IAM data", "JPA / SQL")
-
-Rel(applicationLayer, sendGrid, "Requests account and recovery emails", "HTTPS / API")
+Lay_D(rest, commands)
+Lay_D(commands, domain_model)
+Lay_D(domain_model, jpa)
 
 SHOW_LEGEND()
 
