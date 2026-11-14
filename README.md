@@ -2922,42 +2922,29 @@ El Design-Level Event Storming permitió profundizar en los procesos identificad
 
 Para facilitar su comprensión, el modelado se presenta mediante diagramas individuales por Bounded Context, permitiendo identificar sus responsabilidades y las interacciones entre los componentes del sistema.
 
-**Leyenda de Design-Level Event Storming**
-
-![Leyenda Design-Level Event Storming](assets/images/chapter-4/leyenda-designlevel.png)
-
 **Inventory Bounded Context**
 
-![Inventory Bounded Context](assets/images/chapter-4/inventory-bounded-context.png)
+![Inventory Bounded Context](assets/images/chapter-4/inventory.png)
 
 **Rentals Bounded Context**
 
-![Rentals Bounded Context](assets/images/chapter-4/rentals-bounded-context.png)
+![Rentals Bounded Context](assets/images/chapter-4/rentals.png)
 
 **Maintenance Bounded Context**
 
-![Maintenance Bounded Context](assets/images/chapter-4/maintenance-bounded-context.png)
+![Maintenance Bounded Context](assets/images/chapter-4/maintenance.png)
 
 **Subscription Plans Bounded Context**
 
-![Subscription Plans Bounded Context](assets/images/chapter-4/subscription-plans-bounded-context.png)
-
-**External Systems**
-
-![External Systems](assets/images/chapter-4/external-systems.png)
-
-**Generic IAM Bounded Context**
-
-![Generic IAM Bounded Context](assets/images/chapter-4/generic-iam-bounded-context.png)
+![Subscription Plans Bounded Context](assets/images/chapter-4/suscribtions.png)
 
 **IAM Bounded Context**
 
-![IAM Bounded Context](assets/images/chapter-4/iam-bounded-context.png)
+![IAM Bounded Context](assets/images/chapter-4/iam.png)
 
 **Profiles Bounded Context**
 
-![Profiles Bounded Context](assets/images/chapter-4/profile-bounded-context.png)
-
+![Profiles Bounded Context](assets/images/chapter-4/profile.png)
 
 ### 4.6.2. Software Architecture Context Diagram
 
