@@ -5645,6 +5645,130 @@ Sonia Gutiérrez trabaja en una empresa inmobiliaria. Opinó que el diseño visu
 **Resumen:**  
 Ana Rivera Quispe se dedica a la construcción de pequeños edificios. Señaló que la plataforma presenta un diseño limpio y ordenado. Sin embargo, al momento de evaluar la facilidad de navegación y la búsqueda de maquinaria o revisión de contratos, indicó que le resultaría complicado. Consideró útil contar con el selector de idioma debido a que no domina el inglés. Respecto a la información de los equipos y planes, reconoció que se entiende con claridad; sin embargo, al ser consultada sobre si utilizaría la plataforma de manera regular, comentó que aunque lo intentaría, le parecería bastante difícil en su día a día.
 
+### 5.3.3. Evaluaciones según heurísticas.
+
+## UX Heuristics & Principles Evaluation
+
+**Usability – Inclusive Design – Information Architecture**
+
+**CARRERA:** Ingeniería de Software  
+**CURSO:** Desarrollo de Aplicaciones Open Source  
+**SECCIÓN:** 7750
+**AUDITOR:** CleanCode
+**CLIENTE(S):** Usuarios participantes de la validación
+
+**SITE o APP A EVALUAR:**  
+MaquiGest:https://maquigest-webapp-cleancode.vercel.app/
+
+---
+
+## TAREAS A EVALUAR
+
+El alcance de esta evaluación incluye la revisión de la experiencia de usuario de las siguientes tareas principales:
+
+Explorar el Landing Page e identificar la propuesta de valor del servicio.
+
+Navegar entre las principales secciones (dashboard, catálogo, perfil y solicitudes).
+
+Consultar el detalle y disponibilidad de equipos y maquinaria.
+
+Gestionar el registro, solicitud y cancelación de alquileres.
+
+Revisar el historial y estado de las órdenes o entregas.
+
+## ESCALA DE SEVERIDAD
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+|---------|---------|
+| 1 | Problema superficial: Inconsistencia estética menor o detalle visual de muy baja frecuencia que no afecta la interacción (se puede pasar por alto o priorizar baja corrección). |
+| 2 | Problema menor: Ocurre ocasionalmente o genera una pequeña fricción o duda momentánea en el usuario. |
+| 3 | Problema mayor: Ocurre frecuentemente o interrumpe de forma moderada el flujo principal de la plataforma. |
+| 4 | Problema muy grave: Bloquea por completo al usuario impidiendo finalizar una tarea crítica. |
+
+---
+
+## TABLA RESUMEN
+
+| # | Problema | Escala de severidad | Heurística / Principio violado |
+|---|---|---:|---|
+| 1 | Algunos botones de acción rápida en el dashboard muestran una jerarquía visual poco diferenciada. | 2 | Usability: Visibility of System Status |
+| 2 | Ciertos campos en los formularios de registro de equipos carecen de validación en tiempo real más amigable. | 2 | Usability: Error Prevention |
+| 3 | La distinción entre los estados de alquiler activo y cancelado en el listado general podría ser más intuitiva. | 3 | Usability: Recognition Rather Than Recall |
+| 4 | Algunos iconos en la barra de navegación lateral dependen demasiado de la interpretación visual sin texto secundario en resoluciones compactas. | 2 | Inclusive Design: Provide Comparable Experience |
+
+---
+
+## DESCRIPCIÓN DE PROBLEMAS
+
+### Problema #1: Algunos botones de acción rápida en el dashboard muestran una jerarquía visual poco diferenciada
+**Severidad:** 2
+
+**Heurística violada:**  
+Usabilidad – Visibilidad del estado del sistema
+
+**Problema:**  
+Durante la navegación general por el panel principal, se observó que las acciones secundarias y principales comparten pesos visuales muy similares, lo que puede generar una pequeña duda inicial en usuarios nuevos, aunque no impide completar la tarea.
+
+**Recomendación:**  
+Ajustar los contrastes y el tamaño de los componentes de llamada a la acción (CTA) principales para guiar de manera más natural la vista del usuario.
+
+**Captura:**
+
+![Evidencia de la heurística violada](assets/md-images-chapter5/dashboard-rental.png)
+
+### Problema #2: Ciertos campos en los formularios de registro de equipos carecen de validación en tiempo real más amigable
+
+**Severidad:** 2
+
+**Heurística violada:**  
+Usabilidad – Prevención de errores
+
+**Problema:**  
+Al rellenar los formularios para dar de alta o solicitar maquinaria, los mensajes de advertencia o campos obligatorios no siempre avisan de forma inmediata al usuario antes de enviar el formulario completo.
+
+**Recomendación:**  
+Implementar validaciones dinámicas que marquen en línea los campos correctos o pendientes para evitar fricciones innecesarias.
+
+**Captura:**
+
+![Evidencia de la heurística violada](assets/md-images-chapter5/equipment-rental.png)---
+
+### Problema #3: La distinción entre los estados de alquiler activo y cancelado en el listado general podría ser más intuitiva
+
+**Severidad:** 3
+
+**Heurística violada:**  
+Usabilidad – Reconocimiento antes que memorización
+
+**Problema:**  
+En la sección de gestión e historial de alquileres, los colores de estado entre un servicio activo y uno cancelado son sutiles, lo que obliga al usuario a leer detalladamente cada etiqueta en lugar de reconocer el estado de un vistazo.
+
+**Recomendación:**  
+Utilizar códigos de color más contrastados (por ejemplo, verde para activo, rojo o gris tenue para cancelado) acompañados de iconos normalizados.
+
+**Captura:**
+
+![Evidencia de la heurística violada](assets/md-images-chapter5/rentalRequest-rental.png)
+---
+
+### Problema #4: Algunos iconos en la barra de navegación lateral dependen demasiado de la interpretación visual sin texto secundario
+
+**Severidad:** 2
+
+**Heurística violada:**  
+Diseño Inclusivo – Proporcionar una experiencia equivalente para todos los usuarios
+
+**Problema:**  
+En vistas reducidas o ciertos módulos, la barra lateral compacta muestra únicamente iconos que, al carecer de etiquetas permanentes o tooltips rápidos, pueden restar agilidad a usuarios menos familiarizados con los símbolos de la plataforma.
+
+**Recomendación:**  
+Asegurar tooltips flotantes o descripciones emergentes claras al pasar el cursor sobre los iconos de navegación.
+
+**Captura:**
+
+![Evidencia de la heurística violada](assets/md-images-chapter5/subscription-rental.png)
 ## 5.4. Video About-the-Product.
 
 El video About-the-Product presenta de manera clara y dinámica la propuesta de valor de la solución, explicando el problema identificado, el segmento de usuarios objetivo y las principales funcionalidades que ofrece la plataforma. Asimismo, se muestra el recorrido de los usuarios a través de las interfaces desarrolladas, destacando cómo la aplicación contribuye a mejorar su experiencia y satisfacer sus necesidades. El contenido incluye una breve introducción al modelo de negocio, una demostración de las características más relevantes del producto y testimonios obtenidos durante el proceso de validación con usuarios potenciales.
