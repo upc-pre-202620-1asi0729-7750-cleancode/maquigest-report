@@ -5068,21 +5068,21 @@ La tabla mantiene las columnas solicitadas en el enunciado oficial del proyecto.
 
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
 |---|---|---|---|---|---:|---|---|
-| TS01 | Exposición de servicios REST | TS01 | Exponer API REST de MaquiGest | Configurar la infraestructura necesaria para publicar los servicios REST de los módulos de la plataforma. | 12 | James Caleb (propuesto) | Done |
-| TS02 | Gestión de perfiles empresariales | TS02 | Implementar servicios REST de perfiles | Desarrollar operaciones para registrar, consultar y administrar la información de las empresas. | 14 | Bruno (propuesto) | Done |
-| TS03 | Gestión de maquinaria | TS03 | Implementar servicios REST de maquinaria | Desarrollar operaciones para registrar, consultar, actualizar y administrar equipos de construcción. | 20 | Miroslav (propuesto) | Done |
-| TS04 | Disponibilidad de maquinaria | TS04 | Consultar disponibilidad de equipos | Implementar consultas y validaciones de disponibilidad relacionadas con las operaciones de alquiler. | 12 | Miroslav (propuesto) | Done |
-| TS05 | Solicitudes de alquiler | TS05 | Gestionar solicitudes de alquiler | Implementar operaciones para registrar, consultar y gestionar solicitudes de alquiler de equipos. | 20 | CarlossUPC (propuesto) | Done |
-| TS06 | Reservas y estados de alquiler | TS06 | Gestionar reservas y estados | Desarrollar operaciones para administrar las reservas y las transiciones de estado durante el alquiler. | 18 | CarlossUPC (propuesto) | Done |
-| TS07 | Entregas y devoluciones | TS07 | Gestionar entregas y devoluciones | Implementar operaciones para registrar la entrega y devolución de maquinaria, considerando las reglas del ciclo de alquiler. | 16 | CarlossUPC (propuesto) | Done |
-| TS08 | Mantenimiento e incidencias | TS08 | Implementar servicios de mantenimiento | Desarrollar operaciones para registrar incidencias, gestionar mantenimientos y consultar el historial correspondiente. | 24 | CarlossUPC (propuesto) | Done |
-| TS09 | Planes y suscripciones | TS09 | Implementar servicios de suscripciones | Desarrollar operaciones para consultar planes y gestionar el ciclo de vida de las suscripciones. | 16 | Miroslav (propuesto) | Done |
-| TS10 | Autenticación y autorización | TS10 | Implementar autenticación y seguridad | Desarrollar el registro e inicio de sesión, la autenticación JWT y las restricciones de acceso correspondientes. | 20 | Bruno (propuesto) | Done |
+| TS01 | Exposición de servicios REST | TS01 | Exponer API REST de MaquiGest | Configurar la infraestructura necesaria para publicar los servicios REST de los módulos de la plataforma. | 12 | James Caleb | Done |
+| TS02 | Gestión de perfiles empresariales | TS02 | Implementar servicios REST de perfiles | Desarrollar operaciones para registrar, consultar y administrar la información de las empresas. | 14 | Bruno | Done |
+| TS03 | Gestión de maquinaria | TS03 | Implementar servicios REST de maquinaria | Desarrollar operaciones para registrar, consultar, actualizar y administrar equipos de construcción. | 20 | Miroslav | Done |
+| TS04 | Disponibilidad de maquinaria | TS04 | Consultar disponibilidad de equipos | Implementar consultas y validaciones de disponibilidad relacionadas con las operaciones de alquiler. | 12 | Miroslav | Done |
+| TS05 | Solicitudes de alquiler | TS05 | Gestionar solicitudes de alquiler | Implementar operaciones para registrar, consultar y gestionar solicitudes de alquiler de equipos. | 20 | CarlossUPC | Done |
+| TS06 | Reservas y estados de alquiler | TS06 | Gestionar reservas y estados | Desarrollar operaciones para administrar las reservas y las transiciones de estado durante el alquiler. | 18 | CarlossUPC | Done |
+| TS07 | Entregas y devoluciones | TS07 | Gestionar entregas y devoluciones | Implementar operaciones para registrar la entrega y devolución de maquinaria, considerando las reglas del ciclo de alquiler. | 16 | CarlossUPC | Done |
+| TS08 | Mantenimiento e incidencias | TS08 | Implementar servicios de mantenimiento | Desarrollar operaciones para registrar incidencias, gestionar mantenimientos y consultar el historial correspondiente. | 24 | CarlossUPC | Done |
+| TS09 | Planes y suscripciones | TS09 | Implementar servicios de suscripciones | Desarrollar operaciones para consultar planes y gestionar el ciclo de vida de las suscripciones. | 16 | Miroslav | Done |
+| TS10 | Autenticación y autorización | TS10 | Implementar autenticación y seguridad | Desarrollar el registro e inicio de sesión, la autenticación JWT y las restricciones de acceso correspondientes. | 20 | Bruno | Done |
 | TS11 | Notificaciones transaccionales | TS11 | Integrar SendGrid | Integrar un servicio externo para el envío de notificaciones transaccionales relacionadas con las operaciones de MaquiGest. | 12 | Sin asignación confirmada | To-Do |
-| TS12 | Persistencia de información | TS12 | Implementar persistencia JPA y MySQL | Configurar entidades de persistencia, repositorios y adaptadores para almacenar información del dominio. | 20 | James Caleb (propuesto) | Done |
-| TS13 | Validación de solicitudes | TS13 | Validar requests de la API REST | Incorporar validaciones para los datos recibidos por los endpoints y controlar solicitudes incorrectas. | 12 | James Caleb (propuesto) | Done |
-| TS14 | Gestión de errores HTTP | TS14 | Estandarizar respuestas y errores | Implementar respuestas HTTP apropiadas y mecanismos de gestión de excepciones. | 12 | James Caleb (propuesto) | Done |
-| TS15 | Documentación de servicios | TS15 | Documentar API mediante OpenAPI | Configurar Springdoc OpenAPI y Swagger UI para documentar los recursos REST disponibles. | 10 | James Caleb (propuesto) | Done |
+| TS12 | Persistencia de información | TS12 | Implementar persistencia JPA y MySQL | Configurar entidades de persistencia, repositorios y adaptadores para almacenar información del dominio. | 20 | James Caleb | Done |
+| TS13 | Validación de solicitudes | TS13 | Validar requests de la API REST | Incorporar validaciones para los datos recibidos por los endpoints y controlar solicitudes incorrectas. | 12 | James Caleb | Done |
+| TS14 | Gestión de errores HTTP | TS14 | Estandarizar respuestas y errores | Implementar respuestas HTTP apropiadas y mecanismos de gestión de excepciones. | 12 | James Caleb | Done |
+| TS15 | Documentación de servicios | TS15 | Documentar API mediante OpenAPI | Configurar Springdoc OpenAPI y Swagger UI para documentar los recursos REST disponibles. | 10 | James Caleb | Done |
 | TS16 | Servicios de mapas | TS16 | Integrar servicios de mapas | Incorporar servicios geográficos externos para apoyar los procesos de entrega y devolución de maquinaria. | 16 | Sin asignación confirmada | To-Do |
 
 #### Seguimiento y resultados del Sprint Backlog
@@ -5111,8 +5111,6 @@ Por otro lado, se identificaron dos actividades que permanecían pendientes al m
 Estas actividades no se consideran funcionalidades implementadas en el presente Sprint.
 
 En conclusión, el Sprint Backlog 3 refleja la priorización del desarrollo de servicios reales y la integración técnica entre los componentes de MaquiGest. El estado de las tareas proporciona trazabilidad del trabajo realizado y permite identificar los requerimientos técnicos que permanecen pendientes para las siguientes iteraciones.
-
-
 
 ### 5.2.3.4. Development Evidence for Sprint Review
 
