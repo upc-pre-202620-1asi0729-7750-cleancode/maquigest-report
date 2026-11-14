@@ -72,7 +72,7 @@ Proyecto<br>
 
 <br>
 
-<p><strong>Octubre 2026</strong></p>
+<p><strong>Noviembre 2026</strong></p>
 
 </div>
 
@@ -84,6 +84,7 @@ Proyecto<br>
 | :-----: |:----------:|:--------:| :----------------------------------------------------------------------------------------------------------------------------: |
 |   AV1   | 19/09/2026 |  Todos   | Se agregó la primera versión del informe, incluyendo carátula, registro de versiones, perfiles del equipo, análisis inicial del problema, artefactos de UX, arquitectura preliminar y evidencias del Sprint 1. |
 |   TB1   | 08/10/2026 |  Todos   | Se actualizó el informe con los avances y correcciones del Sprint 2, incluyendo la actualización de User Stories y Product Backlog con Technical Stories para el RESTful API, correcciones de Impact Mapping, Problem Statement, Hypothesis Statements, User Flows, diagramas C4, diagramas de clases y Design-Level EventStorming. Asimismo, se documentó el Sprint Backlog 2 y se incorporaron las evidencias de desarrollo, despliegue, integración de la Landing Page con la Web Application y colaboración del equipo. |
+|   AV2   | 13/11/2026 |  Todos   | Se actualizó el informe con los avances y correcciones del Sprint 3, incluyendo la actualización de User Stories y Product Backlog con Technical Stories para el RESTful API, correcciones de diagramas C4, diagramas de clases y Design-Level EventStorming. Asimismo, se documentó el Sprint Backlog 3 y se incorporaron las evidencias de desarrollo, despliegue, integración del bakend a la webapp. |
 
 <div style="page-break-after: always;"></div>
 
@@ -92,6 +93,10 @@ Proyecto<br>
 
 A continuación, se presenta el repositorio utilizado para la elaboración colaborativa del informe del proyecto MaquiGest.
 
+#### Link de organización:
+
+- https://github.com/upc-pre-202620-1asi0729-7750-cleancode
+- 
 #### Link del repositorio del Reporte:
 
 - https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-report
@@ -104,6 +109,18 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
 
 - https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp
 
+#### Link del repositorio del Platform:
+
+- https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform
+
+#### Link del Swagger del Platform:
+
+- https://site--maquigest-backend--g7m4csgtks6m.code.run/swagger-ui/index.html
+
+#### Link del Especificación OpenAPI (JSON):
+
+- https://site--maquigest-backend--g7m4csgtks6m.code.run/v3/api-docs
+- 
 ### Entrega AV1:
 
 #### Participación por integrante:
@@ -140,6 +157,26 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
 <p align="center">
   <img src="./assets/md-images-chapter5/teamcolabo2.png"
        alt="MaquiGest Sprint 2 Collaboration Evidence - Commit Activity"
+       width="90%">
+</p>
+
+<div style="page-break-after: always;"></div>
+
+### Entrega AV2:
+
+#### Participación por integrante:
+
+##### Report
+
+<p align="center">
+  <img src="./assets/md-images-chapter5/teamcolabo3.png"
+       alt="MaquiGest Sprint 3 Collaboration Evidence - GitHub Contributors"
+       width="90%">
+</p>
+
+<p align="center">
+  <img src="./assets/md-images-chapter5/teamcolabo4.png"
+       alt="MaquiGest Sprint 3 Collaboration Evidence - Commit Activity"
        width="90%">
 </p>
 
@@ -246,6 +283,11 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
             - [5.2.3.6. Services Documentation Evidence for Sprint Review](#5236-services-documentation-evidence-for-sprint-review)
             - [5.2.3.7. Software Deployment Evidence for Sprint Review](#5237-software-deployment-evidence-for-sprint-review)
             - [5.2.3.8. Team Collaboration Insights during Sprint](#5238-team-collaboration-insights-during-sprint)
+    - [5.3. Validation Interviews]()
+            - [5.3.1. Diseño de Entrevistas](#531-diseño-de-entrevistas)
+            - [5.3.2. Registro de Entrevistas](#532-registro-de-entrevistas)
+            - [5.3.3. Evaluaciones según heuristicas](#533-evaluaciones-segun-heuristicas)
+    - [5.4. Video About-the-Product](#54-video-about-the-product)
 - [Conclusiones](#conclusiones)
     - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
 - [Bibliografía](#bibliografía)
@@ -1390,61 +1432,61 @@ Las User Stories y Technical Stories representan los requisitos funcionales y t�
 
 ## 3.3. Product Backlog
 
-El Product Backlog contiene las User Stories y Technical Stories identificadas para el desarrollo progresivo de la solución. El orden de los elementos responde principalmente al valor para el negocio y al alcance de las primeras iteraciones del proyecto.
+El Product Backlog contiene las User Stories y Technical Stories identificadas para el desarrollo progresivo de la solución. El orden de los elementos sigue la organización establecida en las épicas del proyecto, agrupando las historias funcionales y técnicas relacionadas con cada área de MaquiGest.
 
 | # | Story ID | Tipo | Título | Descripción | Story Points |
 | :---: | :---: | :--- | :--- | :--- | :---: |
-| 1 | US30 | User Story | Visualizar propuesta de valor | Como visitante, quiero visualizar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa. | 2 |
-| 2 | US31 | User Story | Explorar funcionalidades principales | Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con MaquiGest. | 3 |
-| 3 | US32 | User Story | Identificar la solución para mi empresa | Como visitante, quiero identificar si MaquiGest se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades. | 3 |
-| 4 | US27 | User Story | Consultar información de MaquiGest | Como visitante, quiero consultar información de MaquiGest para conocer la solución y su propuesta de valor. | 2 |
-| 5 | US33 | User Story | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de MaquiGest. | 2 |
-| 6 | US28 | User Story | Solicitar demostración | Como visitante, quiero solicitar una demostración para conocer cómo funciona MaquiGest. | 2 |
-| 7 | US29 | User Story | Contactar con MaquiGest | Como visitante, quiero contactar con MaquiGest para realizar consultas sobre la solución. | 2 |
-| 8 | US34 | User Story | Utilizar la plataforma desde dispositivos de diferentes tamaños | Como usuario, quiero utilizar MaquiGest desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada. | 5 |
-| 9 | US35 | User Story | Utilizar la plataforma en diferentes idiomas | Como usuario, quiero utilizar MaquiGest en diferentes idiomas para comprender y utilizar la plataforma. | 5 |
-| 10 | US11 | User Story | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades. | 5 |
-| 11 | US12 | User Story | Consultar información de maquinaria | Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler. | 3 |
-| 12 | US13 | User Story | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla. | 5 |
-| 13 | US14 | User Story | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | 5 |
-| 14 | TS05 | Technical Story | Gestionar solicitudes de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para crear y consultar solicitudes de alquiler para permitir que las empresas constructoras soliciten maquinaria y consulten sus solicitudes. | 5 |
-| 15 | TS11 | Technical Story | Enviar notificaciones transaccionales mediante SendGrid | Como desarrollador, quiero integrar un servicio de correo transaccional para notificar eventos relevantes del ciclo de alquiler. | 5 |
-| 16 | US06 | User Story | Registrar maquinaria | Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en MaquiGest. | 5 |
-| 17 | US07 | User Story | Consultar maquinaria | Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados. | 3 |
-| 18 | US08 | User Story | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados. | 3 |
-| 19 | US09 | User Story | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles. | 5 |
-| 20 | US10 | User Story | Consultar estado de maquinaria | Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual. | 3 |
-| 21 | TS03 | Technical Story | Gestionar maquinaria mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar, consultar y actualizar maquinaria para permitir la gestión del inventario desde la Web Application. | 5 |
-| 22 | TS04 | Technical Story | Consultar disponibilidad mediante API REST | Como desarrollador, quiero disponer de un recurso REST para consultar la disponibilidad de maquinaria durante un periodo para que la Web Application pueda mostrar los equipos disponibles. | 5 |
-| 23 | US18 | User Story | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas. | 5 |
-| 24 | US19 | User Story | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse. | 3 |
-| 25 | US20 | User Story | Consultar alquileres activos | Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso. | 3 |
-| 26 | US21 | User Story | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de una solicitud de alquiler para conocer su situación actual. | 3 |
-| 27 | US22 | User Story | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria. | 5 |
-| 28 | TS06 | Technical Story | Gestionar reservas y estados de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para gestionar solicitudes, confirmaciones, rechazos y alquileres activos para soportar el ciclo de alquiler de MaquiGest. | 5 |
-| 29 | TS07 | Technical Story | Gestionar entregas y devoluciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar entregas y devoluciones de maquinaria para mantener la trazabilidad del ciclo de alquiler. | 5 |
-| 30 | TS16 | Technical Story | Integrar servicios de mapas para entregas y devoluciones | Como desarrollador, quiero integrar un servicio externo de mapas y geolocalización para apoyar la planificación de entregas y devoluciones de maquinaria. | 5 |
-| 31 | US23 | User Story | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria. | 5 |
-| 32 | US24 | User Story | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria. | 3 |
-| 33 | US25 | User Story | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria. | 3 |
-| 34 | US26 | User Story | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores. | 5 |
-| 35 | TS08 | Technical Story | Gestionar mantenimiento e incidencias mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar y consultar mantenimientos e incidencias de maquinaria para conservar su historial operativo. | 5 |
-| 36 | TS12 | Technical Story | Persistir información del dominio mediante JPA y MySQL | Como desarrollador, quiero persistir las entidades del dominio mediante Spring Data JPA y MySQL para conservar la información operativa de MaquiGest. | 5 |
-| 37 | TS13 | Technical Story | Validar solicitudes de la API REST | Como desarrollador, quiero validar los datos recibidos por la API REST para evitar que información incompleta o inválida ingrese al dominio de MaquiGest. | 3 |
-| 38 | TS14 | Technical Story | Gestionar errores y respuestas HTTP de la API REST | Como desarrollador, quiero centralizar el tratamiento de errores de la API REST para devolver respuestas consistentes ante operaciones exitosas o fallidas. | 3 |
-| 39 | US15 | User Story | Consultar planes | Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece MaquiGest. | 3 |
-| 40 | US16 | User Story | Seleccionar plan | Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades. | 3 |
-| 41 | US17 | User Story | Gestionar suscripción | Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado. | 5 |
-| 42 | TS09 | Technical Story | Consultar planes y suscripciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar los planes disponibles y gestionar la información básica de la suscripción para que la Web Application pueda mostrar y administrar estas opciones. | 5 |
-| 43 | US03 | User Story | Gestionar perfil | Como usuario, quiero gestionar mi perfil para mantener actualizada mi información. | 3 |
-| 44 | TS02 | Technical Story | Gestionar perfiles mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar y actualizar los perfiles de los usuarios para permitir que la Web Application gestione su información. | 3 |
-| 45 | TS01 | Technical Story | Exponer API REST de MaquiGest | Como desarrollador, quiero disponer de una API REST organizada para exponer los servicios de MaquiGest y permitir que la Web Application consuma las funcionalidades del dominio. | 5 |
-| 46 | TS15 | Technical Story | Documentar los recursos de la API REST mediante OpenAPI | Como desarrollador, quiero documentar los recursos, parámetros, respuestas y errores de la API REST mediante OpenAPI para facilitar su comprensión y consumo desde la Web Application. | 3 |
-| 47 | US01 | User Story | Registro de usuario | Como usuario, quiero registrarme en MaquiGest para poder acceder a las funcionalidades de la plataforma. | 5 |
-| 48 | US02 | User Story | Inicio de sesión | Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta. | 3 |
-| 49 | US04 | User Story | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta. | 1 |
-| 50 | US05 | User Story | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla. | 3 |
-| 51 | TS10 | Technical Story | Gestionar autenticación y autorización mediante API REST | Como desarrollador, quiero disponer de mecanismos REST de autenticación y autorización para proteger los recursos de MaquiGest y controlar el acceso según el tipo de usuario. | 5 |
+| 1 | US06 | User Story | Registrar maquinaria | Como empresa de alquiler, quiero registrar maquinaria para mantener mi inventario disponible en MaquiGest. | 5 |
+| 2 | US07 | User Story | Consultar maquinaria | Como empresa de alquiler, quiero consultar mi maquinaria para conocer los equipos registrados. | 3 |
+| 3 | US08 | User Story | Actualizar información de maquinaria | Como empresa de alquiler, quiero actualizar la información de mi maquinaria para mantener sus datos actualizados. | 3 |
+| 4 | US09 | User Story | Consultar disponibilidad de maquinaria | Como empresa de alquiler, quiero consultar la disponibilidad de mi maquinaria para conocer qué equipos están disponibles. | 5 |
+| 5 | US10 | User Story | Consultar estado de maquinaria | Como empresa de alquiler, quiero consultar el estado de mi maquinaria para conocer su condición actual. | 3 |
+| 6 | TS03 | Technical Story | Gestionar maquinaria mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar, consultar y actualizar maquinaria para permitir la gestión del inventario desde la Web Application. | 5 |
+| 7 | TS04 | Technical Story | Consultar disponibilidad mediante API REST | Como desarrollador, quiero disponer de un recurso REST para consultar la disponibilidad de maquinaria durante un periodo para que la Web Application pueda mostrar los equipos disponibles. | 5 |
+| 8 | US11 | User Story | Buscar maquinaria | Como empresa constructora, quiero buscar maquinaria para encontrar equipos que se ajusten a mis necesidades. | 5 |
+| 9 | US12 | User Story | Consultar información de maquinaria | Como empresa constructora, quiero consultar la información de una maquinaria para conocer sus características antes de solicitar un alquiler. | 3 |
+| 10 | US13 | User Story | Consultar disponibilidad para un periodo | Como empresa constructora, quiero consultar la disponibilidad de una maquinaria para un periodo determinado para saber si puedo alquilarla. | 5 |
+| 11 | US14 | User Story | Solicitar alquiler de maquinaria | Como empresa constructora, quiero solicitar el alquiler de una maquinaria para utilizarla en mi proyecto. | 5 |
+| 12 | TS05 | Technical Story | Gestionar solicitudes de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para crear y consultar solicitudes de alquiler para permitir que las empresas constructoras soliciten maquinaria y consulten sus solicitudes. | 5 |
+| 13 | US18 | User Story | Gestionar solicitudes de alquiler | Como empresa de alquiler, quiero gestionar las solicitudes de alquiler para administrar las solicitudes recibidas. | 5 |
+| 14 | US19 | User Story | Confirmar o rechazar una solicitud | Como empresa de alquiler, quiero confirmar o rechazar una solicitud para determinar si el alquiler puede realizarse. | 3 |
+| 15 | US20 | User Story | Consultar alquileres activos | Como empresa de alquiler, quiero consultar los alquileres activos para conocer las operaciones que se encuentran en curso. | 3 |
+| 16 | US21 | User Story | Consultar estado de una solicitud de alquiler | Como empresa constructora, quiero consultar el estado de una solicitud de alquiler para conocer su situación actual. | 3 |
+| 17 | US22 | User Story | Gestionar entregas y devoluciones | Como empresa de alquiler, quiero gestionar las entregas y devoluciones para controlar el movimiento de la maquinaria. | 5 |
+| 18 | TS06 | Technical Story | Gestionar reservas y estados de alquiler mediante API REST | Como desarrollador, quiero disponer de recursos REST para gestionar solicitudes, confirmaciones, rechazos y alquileres activos para soportar el ciclo de alquiler de MaquiGest. | 5 |
+| 19 | TS07 | Technical Story | Gestionar entregas y devoluciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar entregas y devoluciones de maquinaria para mantener la trazabilidad del ciclo de alquiler. | 5 |
+| 20 | TS16 | Technical Story | Integrar servicios de mapas para entregas y devoluciones | Como desarrollador, quiero integrar un servicio externo de mapas y geolocalización para apoyar la planificación de entregas y devoluciones de maquinaria. | 5 |
+| 21 | US23 | User Story | Registrar mantenimiento | Como empresa de alquiler, quiero registrar mantenimientos para mantener un historial de las intervenciones realizadas a cada maquinaria. | 5 |
+| 22 | US24 | User Story | Programar mantenimiento | Como empresa de alquiler, quiero programar mantenimientos para organizar las próximas intervenciones de la maquinaria. | 3 |
+| 23 | US25 | User Story | Registrar incidencia de maquinaria | Como empresa de alquiler, quiero registrar incidencias para mantener un registro de los problemas ocurridos con la maquinaria. | 3 |
+| 24 | US26 | User Story | Consultar historial de maquinaria | Como empresa de alquiler, quiero consultar el historial de una maquinaria para conocer sus mantenimientos e incidencias anteriores. | 5 |
+| 25 | TS08 | Technical Story | Gestionar mantenimiento e incidencias mediante API REST | Como desarrollador, quiero disponer de recursos REST para registrar y consultar mantenimientos e incidencias de maquinaria para conservar su historial operativo. | 5 |
+| 26 | US15 | User Story | Consultar planes | Como usuario, quiero consultar los planes disponibles para conocer las opciones que ofrece MaquiGest. | 3 |
+| 27 | US16 | User Story | Seleccionar plan | Como usuario, quiero seleccionar un plan para elegir la opción que se adapte a mis necesidades. | 3 |
+| 28 | US17 | User Story | Gestionar suscripción | Como usuario, quiero gestionar mi suscripción para administrar el plan seleccionado. | 5 |
+| 29 | TS09 | Technical Story | Consultar planes y suscripciones mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar los planes disponibles y gestionar la información básica de la suscripción para que la Web Application pueda mostrar y administrar estas opciones. | 5 |
+| 30 | US27 | User Story | Consultar información de MaquiGest | Como visitante, quiero consultar información de MaquiGest para conocer la solución y su propuesta de valor. | 2 |
+| 31 | US28 | User Story | Solicitar demostración | Como visitante, quiero solicitar una demostración para conocer cómo funciona MaquiGest. | 2 |
+| 32 | US29 | User Story | Contactar con MaquiGest | Como visitante, quiero contactar con MaquiGest para realizar consultas sobre la solución. | 2 |
+| 33 | US30 | User Story | Visualizar propuesta de valor | Como visitante, quiero visualizar la propuesta de valor de MaquiGest para comprender cómo puede ayudar a mi empresa. | 2 |
+| 34 | US31 | User Story | Explorar funcionalidades principales | Como visitante, quiero explorar las funcionalidades principales para conocer qué puedo realizar con MaquiGest. | 3 |
+| 35 | US32 | User Story | Identificar la solución para mi empresa | Como visitante, quiero identificar si MaquiGest se adapta a mi tipo de empresa para determinar si la solución responde a mis necesidades. | 3 |
+| 36 | US33 | User Story | Acceder a la Web Application | Como visitante, quiero acceder a la Web Application desde la Landing Page para utilizar las funcionalidades de MaquiGest. | 2 |
+| 37 | US34 | User Story | Utilizar la plataforma desde dispositivos de diferentes tamaños | Como usuario, quiero utilizar MaquiGest desde diferentes tamaños de pantalla para acceder a la plataforma de manera adecuada. | 5 |
+| 38 | US35 | User Story | Utilizar la plataforma en diferentes idiomas | Como usuario, quiero utilizar MaquiGest en diferentes idiomas para comprender y utilizar la plataforma. | 5 |
+| 39 | TS01 | Technical Story | Exponer API REST de MaquiGest | Como desarrollador, quiero disponer de una API REST organizada para exponer los servicios de MaquiGest y permitir que la Web Application consuma las funcionalidades del dominio. | 5 |
+| 40 | TS10 | Technical Story | Gestionar autenticación y autorización mediante API REST | Como desarrollador, quiero disponer de mecanismos REST de autenticación y autorización para proteger los recursos de MaquiGest y controlar el acceso según el tipo de usuario. | 5 |
+| 41 | TS11 | Technical Story | Enviar notificaciones transaccionales mediante SendGrid | Como desarrollador, quiero integrar un servicio de correo transaccional para notificar eventos relevantes del ciclo de alquiler. | 5 |
+| 42 | TS12 | Technical Story | Persistir información del dominio mediante JPA y MySQL | Como desarrollador, quiero persistir las entidades del dominio mediante Spring Data JPA y MySQL para conservar la información operativa de MaquiGest. | 5 |
+| 43 | TS13 | Technical Story | Validar solicitudes de la API REST | Como desarrollador, quiero validar los datos recibidos por la API REST para evitar que información incompleta o inválida ingrese al dominio de MaquiGest. | 3 |
+| 44 | TS14 | Technical Story | Gestionar errores y respuestas HTTP de la API REST | Como desarrollador, quiero centralizar el tratamiento de errores de la API REST para devolver respuestas consistentes ante operaciones exitosas o fallidas. | 3 |
+| 45 | TS15 | Technical Story | Documentar los recursos de la API REST mediante OpenAPI | Como desarrollador, quiero documentar los recursos, parámetros, respuestas y errores de la API REST mediante OpenAPI para facilitar su comprensión y consumo desde la Web Application. | 3 |
+| 46 | US01 | User Story | Registro de usuario | Como usuario, quiero registrarme en MaquiGest para poder acceder a las funcionalidades de la plataforma. | 5 |
+| 47 | US02 | User Story | Inicio de sesión | Como usuario, quiero iniciar sesión para acceder de forma segura a mi cuenta. | 3 |
+| 48 | US03 | User Story | Gestionar perfil | Como usuario, quiero gestionar mi perfil para mantener actualizada mi información. | 3 |
+| 49 | US04 | User Story | Recuperar contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta en caso de olvidarla. | 3 |
+| 50 | US05 | User Story | Cerrar sesión | Como usuario, quiero cerrar sesión para proteger el acceso a mi cuenta. | 1 |
+| 51 | TS02 | Technical Story | Gestionar perfiles mediante API REST | Como desarrollador, quiero disponer de recursos REST para consultar y actualizar los perfiles de los usuarios para permitir que la Web Application gestione su información. | 3 |
 
 # Capítulo IV: Product Design
 
@@ -4583,95 +4625,92 @@ A continuación, se detalla la asignación de líderes (L) y colaboradores (C) p
 | Daga Chávez, Joaquín Leonardo | @Eshnikeee | C | C | C | L | C | C |
 | Paredes Chávez, Carlos Augusto | @CarlossUPC | C | C | C | C | L | C |
 
-#### 5.2.2.3. Sprint Backlog 2  
+#### 5.2.2.3. Sprint Backlog 2
 
 El objetivo principal de este segundo Sprint es avanzar desde el sitio público de MaquiGest hacia una primera versión funcional de la Web Application desarrollada con Angular. En este Sprint Backlog se priorizaron las historias relacionadas con la configuración inicial de la aplicación, la definición del sistema de enrutamiento, la implementación de las interfaces de registro e inicio de sesión, la gestión de sesión y cierre de sesión, y la redirección de los usuarios hacia el dashboard correspondiente según su tipo de empresa. Además, se incorporó la integración de los principales call-to-action de la Landing Page con las rutas de acceso y registro de la Web Application, permitiendo una transición directa desde el sitio público hacia la plataforma.
 
- 
-Enlace de Seguimiento: [Tablero en Trello](https://trello.com/invite/b/6ac6eb79d3f78b5f6dd307f5/ATTIe2a6389a17802733260a1e3e24ffeff6F58CA512/sprint-backlog-2-maquigest) 
-  
-<img src="assets/images/chapter-5/trello-sprint-backlog-2.PNG" alt="trello-sprint-backlog-2">  
+**Enlace de Seguimiento:** [Tablero en Trello](https://trello.com/invite/b/6ac6eb79d3f78b5f6dd307f5/ATTIe2a6389a17802733260a1e3e24ffeff6F58CA512/sprint-backlog-2)
 
+<img src="assets/images/chapter-5/trello-sprint-backlog-2.PNG" alt="trello-sprint-backlog-2">
 
 | Sprint # | Sprint 2 |
 | :--- | :--- |
 
-| Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
+| Story ID | Story Title | Task ID | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
 | :---: | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
-| US01 | Registro de usuario | T2-01 | Construir formulario de registro | Presentar los campos necesarios y sus validaciones en la Web App. | 5 | `JAmsy06` | Done |
-| US01 | Registro de usuario | T2-02 | Integrar flujo de registro | Enviar los datos a la API simulada y mostrar el resultado al usuario. | 4 | `JAmsy06` | Done |
-| US02 | Inicio de sesión | T2-03 | Construir vista de inicio de sesión | Presentar y validar los campos de acceso. | 4 | `JAmsy06` | Done |
-| US02 | Inicio de sesión | T2-04 | Gestionar sesión de usuario | Procesar el acceso y dirigir al usuario a la vista correspondiente. | 5 | `JAmsy06` | Done |
-| US03 | Gestionar perfil | T2-05 | Mostrar información del perfil | Consultar y presentar los datos del usuario autenticado. | 4 | `JAmsy06` | Done |
-| US03 | Gestionar perfil | T2-06 | Editar información del perfil | Permitir la actualización de los datos editables y mostrar el resultado. | 5 | `JAmsy06` | Done |
-| US04 | Cerrar sesión | T2-07 | Incorporar acción de cierre de sesión | Agregar la opción de salir en la navegación de la Web App. | 2 | `JAmsy06` | Done |
-| US04 | Cerrar sesión | T2-08 | Finalizar la sesión activa | Limpiar los datos de sesión y redirigir a la vista de acceso. | 3 | `JAmsy06` | Done |
-| US05 | Recuperar contraseña | T2-09 | Construir vista de recuperación | Permitir el ingreso del dato necesario para solicitar la recuperación. | 4 | `JAmsy06` | Done |
-| US05 | Recuperar contraseña | T2-10 | Mostrar resultado de la solicitud | Validar el formulario y comunicar al usuario el resultado del proceso. | 3 | `JAmsy06` | Done |
-| US06 | Registrar maquinaria | T2-11 | Construir formulario de maquinaria | Capturar los datos requeridos para registrar un equipo. | 5 | `JAmsy06` | Done |
-| US06 | Registrar maquinaria | T2-12 | Guardar maquinaria registrada | Integrar el formulario con la fuente de datos utilizada por la Web App. | 5 | `JAmsy06` | Done |
-| US07 | Consultar maquinaria | T2-13 | Construir listado de maquinaria | Mostrar los equipos registrados con su información resumida. | 4 | `JAmsy06` | Done |
-| US07 | Consultar maquinaria | T2-14 | Vincular listado y detalle | Permitir abrir la información de un equipo desde el listado. | 3 | `JAmsy06` | Done |
-| US08 | Actualizar información de maquinaria | T2-15 | Precargar datos del equipo | Mostrar la información actual de la maquinaria en un formulario editable. | 4 | `JAmsy06` | Done |
-| US08 | Actualizar información de maquinaria | T2-16 | Guardar cambios de maquinaria | Validar y enviar las modificaciones realizadas por el usuario. | 4 | `JAmsy06` | Done |
-| US09 | Consultar disponibilidad de maquinaria | T2-17 | Mostrar disponibilidad | Incorporar el estado de disponibilidad en las vistas de maquinaria. | 4 | `JAmsy06` | Done |
-| US09 | Consultar disponibilidad de maquinaria | T2-18 | Actualizar resultado de consulta | Presentar la disponibilidad correspondiente a los equipos consultados. | 4 | `JAmsy06` | Done |
-| US10 | Consultar estado de maquinaria | T2-19 | Mostrar estado del equipo | Presentar la condición registrada de cada maquinaria. | 3 | `JAmsy06` | Done |
-| US10 | Consultar estado de maquinaria | T2-20 | Incorporar estado en el detalle | Permitir consultar la condición del equipo junto con sus demás datos. | 3 | `JAmsy06` | Done |
-| US11 | Buscar maquinaria | T2-21 | Incorporar búsqueda | Permitir localizar maquinaria mediante un término ingresado por el usuario. | 4 | `JAmsy06` | Done |
-| US11 | Buscar maquinaria | T2-22 | Incorporar filtros | Permitir acotar los resultados según los criterios disponibles. | 4 | `JAmsy06` | Done |
-| US12 | Consultar información de maquinaria | T2-23 | Construir vista de detalle | Presentar las características de la maquinaria seleccionada. | 4 | `JAmsy06` | Done |
-| US12 | Consultar información de maquinaria | T2-24 | Cargar información seleccionada | Obtener y mostrar los datos del equipo abierto desde el listado o la búsqueda. | 3 | `JAmsy06` | Done |
-| US13 | Consultar disponibilidad para un periodo | T2-25 | Capturar periodo solicitado | Permitir que el usuario indique las fechas que desea consultar. | 3 | `JAmsy06` | Done |
-| US13 | Consultar disponibilidad para un periodo | T2-26 | Evaluar disponibilidad del periodo | Mostrar el resultado de la consulta para la maquinaria y las fechas seleccionadas. | 5 | `JAmsy06` | Done |
-| US14 | Solicitar alquiler de maquinaria | T2-27 | Construir solicitud de alquiler | Presentar los datos de la maquinaria y el periodo solicitado. | 5 | `JAmsy06` | Done |
-| US14 | Solicitar alquiler de maquinaria | T2-28 | Registrar solicitud | Enviar la solicitud y comunicar al usuario el resultado del registro. | 5 | `JAmsy06` | Done |
-| US15 | Consultar planes | T2-29 | Mostrar planes disponibles | Presentar las alternativas de suscripción en la Web App. | 4 | `JAmsy06` | Done |
-| US15 | Consultar planes | T2-30 | Mostrar características de cada plan | Permitir comparar la información relevante de las alternativas. | 3 | `JAmsy06` | Done |
-| US16 | Seleccionar plan | T2-31 | Incorporar selección de plan | Permitir elegir una de las alternativas presentadas. | 4 | `JAmsy06` | Done |
-| US16 | Seleccionar plan | T2-32 | Aplicar acceso según plan | Reflejar en la Web App las condiciones del plan seleccionado. | 5 | `JAmsy06` | Done |
-| US17 | Gestionar suscripción | T2-33 | Mostrar suscripción actual | Presentar al usuario la información de su plan vigente. | 4 | `JAmsy06` | Done |
-| US17 | Gestionar suscripción | T2-34 | Incorporar gestión del plan | Permitir realizar las acciones de administración disponibles para la suscripción. | 5 | `JAmsy06` | Done |
-| US18 | Gestionar solicitudes de alquiler | T2-35 | Mostrar solicitudes recibidas | Presentar a la empresa de alquiler sus solicitudes de maquinaria. | 4 | `JAmsy06` | Done |
-| US18 | Gestionar solicitudes de alquiler | T2-36 | Consultar detalle de solicitud | Permitir revisar los datos de una solicitud seleccionada. | 4 | `JAmsy06` | Done |
-| US19 | Confirmar o rechazar una solicitud | T2-37 | Incorporar acciones de decisión | Presentar las opciones de confirmación y rechazo de una solicitud. | 4 | `JAmsy06` | Done |
-| US19 | Confirmar o rechazar una solicitud | T2-38 | Registrar la decisión | Actualizar el estado de la solicitud y mostrar el resultado. | 4 | `JAmsy06` | Done |
-| US20 | Consultar alquileres activos | T2-39 | Mostrar alquileres en curso | Presentar las operaciones de alquiler que se encuentran activas. | 4 | `JAmsy06` | Done |
-| US20 | Consultar alquileres activos | T2-40 | Mostrar detalle del alquiler | Permitir revisar la maquinaria y los datos asociados a una operación activa. | 3 | `JAmsy06` | Done |
-| US21 | Consultar estado de una solicitud de alquiler | T2-41 | Listar solicitudes propias | Mostrar al solicitante sus solicitudes de alquiler. | 4 | `JAmsy06` | Done |
-| US21 | Consultar estado de una solicitud de alquiler | T2-42 | Mostrar estado de solicitud | Presentar el estado actual de la solicitud seleccionada. | 3 | `JAmsy06` | Done |
-| US22 | Gestionar entregas y devoluciones | T2-43 | Registrar entrega | Permitir registrar la entrega de la maquinaria asociada a un alquiler. | 5 | `JAmsy06` | Done |
-| US22 | Gestionar entregas y devoluciones | T2-44 | Registrar devolución | Permitir registrar el retorno de la maquinaria y actualizar la operación. | 5 | `JAmsy06` | Done |
-| US23 | Registrar mantenimiento | T2-45 | Construir formulario de mantenimiento | Capturar los datos de una intervención asociada a una maquinaria. | 4 | `JAmsy06` | Done |
-| US23 | Registrar mantenimiento | T2-46 | Guardar registro de mantenimiento | Registrar la intervención y mostrarla en la información del equipo. | 5 | `JAmsy06` | Done |
-| US24 | Programar mantenimiento | T2-47 | Capturar programación | Permitir indicar la maquinaria, fecha y datos de un mantenimiento futuro. | 4 | `JAmsy06` | Done |
-| US24 | Programar mantenimiento | T2-48 | Mostrar mantenimientos programados | Presentar las intervenciones registradas para próximas fechas. | 4 | `JAmsy06` | Done |
-| US25 | Registrar incidencia de maquinaria | T2-49 | Construir formulario de incidencia | Permitir describir una incidencia y asociarla a una maquinaria. | 4 | `JAmsy06` | Done |
-| US25 | Registrar incidencia de maquinaria | T2-50 | Guardar incidencia | Registrar el problema reportado y mostrar la confirmación correspondiente. | 4 | `JAmsy06` | Done |
-| US26 | Consultar historial de maquinaria | T2-51 | Mostrar historial de mantenimiento | Presentar las intervenciones registradas para el equipo seleccionado. | 4 | `JAmsy06` | Done |
-| US26 | Consultar historial de maquinaria | T2-52 | Mostrar historial de incidencias | Presentar los problemas registrados anteriormente para ese equipo. | 4 | `JAmsy06` | Done |
-| US27 | Consultar información de MaquiGest | T2-53 | Presentar información del producto | Mostrar qué es MaquiGest y a quién está dirigido en el Landing Page. | 3 | `TartaroZ` | Done |
-| US27 | Consultar información de MaquiGest | T2-54 | Presentar información del equipo | Mostrar la información institucional correspondiente a CleanCode. | 3 | `Miroa123` | Done |
-| US28 | Solicitar demostración | T2-55 | Construir formulario de demostración | Permitir que un visitante ingrese su solicitud desde el Landing Page. | 4 | `TartaroZ` | Done |
-| US28 | Solicitar demostración | T2-56 | Validar solicitud de demostración | Revisar los campos del formulario y mostrar su resultado al visitante. | 3 | `CarlossUPC` | Done |
-| US29 | Contactar con MaquiGest | T2-57 | Construir formulario de contacto | Permitir que el visitante redacte y envíe su consulta. | 4 | `Miroa123` | Done |
-| US29 | Contactar con MaquiGest | T2-58 | Mostrar confirmación de contacto | Informar al visitante si su consulta fue registrada. | 2 | `CarlossUPC` | Done |
-| US30 | Visualizar propuesta de valor | T2-59 | Presentar propuesta principal | Mostrar el mensaje principal de MaquiGest en la vista inicial. | 3 | `JAmsy06` | Done |
-| US30 | Visualizar propuesta de valor | T2-60 | Incorporar llamada a la acción | Dar al visitante una opción visible para continuar desde la vista inicial. | 2 | `CarlossUPC` | Done |
-| US31 | Explorar funcionalidades principales | T2-61 | Presentar funcionalidades | Mostrar las capacidades principales de MaquiGest en el Landing Page. | 4 | `JAmsy06` | Done |
-| US31 | Explorar funcionalidades principales | T2-62 | Presentar beneficios | Explicar los beneficios vinculados con esas funcionalidades. | 3 | `TartaroZ` | Done |
-| US32 | Identificar la solución para mi empresa | T2-63 | Presentar segmento de alquiler | Explicar la propuesta para empresas que alquilan maquinaria. | 3 | `TartaroZ` | Done |
-| US32 | Identificar la solución para mi empresa | T2-64 | Presentar segmento constructor | Explicar la propuesta para empresas que necesitan alquilar maquinaria. | 3 | `Miroa123` | Done |
-| US33 | Acceder a la Web Application | T2-65 | Vincular acceso desde el Landing Page | Configurar los enlaces que dirigen al visitante hacia la Web App. | 3 | `JAmsy06` | Done |
-| US33 | Acceder a la Web Application | T2-66 | Comprobar enlaces de acceso | Revisar el destino y la navegación de los enlaces publicados. | 2 | `Eshnikeee` | Done |
-| US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | T2-67 | Adaptar vistas a distintos anchos | Ajustar la presentación de las vistas principales en pantallas de distintos tamaños. | 5 | `CarlossUPC` | Done |
-| US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | T2-68 | Revisar navegación adaptable | Comprobar que menús, formularios y controles puedan utilizarse en esos tamaños. | 3 | `Miroa123` | Done |
-| US35 | Utilizar la plataforma en diferentes idiomas | T2-69 | Incorporar textos en español e inglés | Preparar los textos necesarios para las vistas incluidas en el alcance. | 5 | `JAmsy06` | Done |
-| US35 | Utilizar la plataforma en diferentes idiomas | T2-70 | Incorporar cambio de idioma | Permitir alternar los textos disponibles durante la navegación. | 3 | `Eshnikeee` | Done |
-
+| US06 | Registrar maquinaria | T2-11 | Construir formulario de maquinaria | Capturar los datos requeridos para registrar un equipo. | 5 | Delgado Perez, James Caleb | Done |
+| US06 | Registrar maquinaria | T2-12 | Guardar maquinaria registrada | Integrar el formulario con la fuente de datos utilizada por la Web App. | 5 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US07 | Consultar maquinaria | T2-13 | Construir listado de maquinaria | Mostrar los equipos registrados con su información resumida. | 4 | Manosalva Tovar, Miroslav Oscar | Done |
+| US07 | Consultar maquinaria | T2-14 | Vincular listado y detalle | Permitir abrir la información de un equipo desde el listado. | 3 | Delgado Perez, James Caleb | Done |
+| US08 | Actualizar información de maquinaria | T2-15 | Precargar datos del equipo | Mostrar la información actual de la maquinaria en un formulario editable. | 4 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US08 | Actualizar información de maquinaria | T2-16 | Guardar cambios de maquinaria | Validar y enviar las modificaciones realizadas por el usuario. | 4 | Delgado Perez, James Caleb | Done |
+| US09 | Consultar disponibilidad de maquinaria | T2-17 | Mostrar disponibilidad | Incorporar el estado de disponibilidad en las vistas de maquinaria. | 4 | Manosalva Tovar, Miroslav Oscar | Done |
+| US09 | Consultar disponibilidad de maquinaria | T2-18 | Actualizar resultado de consulta | Presentar la disponibilidad correspondiente a los equipos consultados. | 4 | Daga Chávez, Joaquín Leonardo | Done |
+| US10 | Consultar estado de maquinaria | T2-19 | Mostrar estado del equipo | Presentar la condición registrada de cada maquinaria. | 3 | Paredes Chávez, Carlos Augusto | Done |
+| US10 | Consultar estado de maquinaria | T2-20 | Incorporar estado en el detalle | Permitir consultar la condición del equipo junto con sus demás datos. | 3 | Delgado Perez, James Caleb | Done |
+| US11 | Buscar maquinaria | T2-21 | Incorporar búsqueda | Permitir localizar maquinaria mediante un término ingresado por el usuario. | 4 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US11 | Buscar maquinaria | T2-22 | Incorporar filtros | Permitir acotar los resultados según los criterios disponibles. | 4 | Delgado Perez, James Caleb | Done |
+| US12 | Consultar información de maquinaria | T2-23 | Construir vista de detalle | Presentar las características de la maquinaria seleccionada. | 4 | Manosalva Tovar, Miroslav Oscar | Done |
+| US12 | Consultar información de maquinaria | T2-24 | Cargar información seleccionada | Obtener y mostrar los datos del equipo abierto desde el listado o la búsqueda. | 3 | Daga Chávez, Joaquín Leonardo | Done |
+| US13 | Consultar disponibilidad para un periodo | T2-25 | Capturar periodo solicitado | Permitir que el usuario indique las fechas que desea consultar. | 3 | Paredes Chávez, Carlos Augusto | Done |
+| US13 | Consultar disponibilidad para un periodo | T2-26 | Evaluar disponibilidad del periodo | Mostrar el resultado de la consulta para la maquinaria y las fechas seleccionadas. | 5 | Delgado Perez, James Caleb | Done |
+| US14 | Solicitar alquiler de maquinaria | T2-27 | Construir solicitud de alquiler | Presentar los datos de la maquinaria y el periodo solicitado. | 5 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US14 | Solicitar alquiler de maquinaria | T2-28 | Registrar solicitud | Enviar la solicitud y comunicar al usuario el resultado del registro. | 5 | Delgado Perez, James Caleb | Done |
+| US18 | Gestionar solicitudes de alquiler | T2-35 | Mostrar solicitudes recibidas | Presentar a la empresa de alquiler sus solicitudes de maquinaria. | 4 | Manosalva Tovar, Miroslav Oscar | Done |
+| US18 | Gestionar solicitudes de alquiler | T2-36 | Consultar detalle de solicitud | Permitir revisar los datos de una solicitud seleccionada. | 4 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US19 | Confirmar o rechazar una solicitud | T2-37 | Incorporar acciones de decisión | Presentar las opciones de confirmación y rechazo de una solicitud. | 4 | Daga Chávez, Joaquín Leonardo | Done |
+| US19 | Confirmar o rechazar una solicitud | T2-38 | Registrar la decisión | Actualizar el estado de la solicitud y mostrar el resultado. | 4 | Delgado Perez, James Caleb | Done |
+| US20 | Consultar alquileres activos | T2-39 | Mostrar alquileres en curso | Presentar las operaciones de alquiler que se encuentran activas. | 4 | Paredes Chávez, Carlos Augusto | Done |
+| US20 | Consultar alquileres activos | T2-40 | Mostrar detalle del alquiler | Permitir revisar la maquinaria y los datos asociados a una operación activa. | 3 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US21 | Consultar estado de una solicitud de alquiler | T2-41 | Listar solicitudes propias | Mostrar al solicitante sus solicitudes de alquiler. | 4 | Manosalva Tovar, Miroslav Oscar | Done |
+| US21 | Consultar estado de una solicitud de alquiler | T2-42 | Mostrar estado de solicitud | Presentar el estado actual de la solicitud seleccionada. | 3 | Delgado Perez, James Caleb | Done |
+| US22 | Gestionar entregas y devoluciones | T2-43 | Registrar entrega | Permitir registrar la entrega de la maquinaria asociada a un alquiler. | 5 | Daga Chávez, Joaquín Leonardo | Done |
+| US22 | Gestionar entregas y devoluciones | T2-44 | Registrar devolución | Permitir registrar el retorno de la maquinaria y actualizar la operación. | 5 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US23 | Registrar mantenimiento | T2-45 | Construir formulario de mantenimiento | Capturar los datos de una intervención asociada a una maquinaria. | 4 | Delgado Perez, James Caleb | Done |
+| US23 | Registrar mantenimiento | T2-46 | Guardar registro de mantenimiento | Registrar la intervención y mostrarla en la información del equipo. | 5 | Manosalva Tovar, Miroslav Oscar | Done |
+| US24 | Programar mantenimiento | T2-47 | Capturar programación | Permitir indicar la maquinaria, fecha y datos de un mantenimiento futuro. | 4 | Paredes Chávez, Carlos Augusto | Done |
+| US24 | Programar mantenimiento | T2-48 | Mostrar mantenimientos programados | Presentar las intervenciones registradas para próximas fechas. | 4 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US25 | Registrar incidencia de maquinaria | T2-49 | Construir formulario de incidencia | Permitir describir una incidencia y asociarla a una maquinaria. | 4 | Delgado Perez, James Caleb | Done |
+| US25 | Registrar incidencia de maquinaria | T2-50 | Guardar incidencia | Registrar el problema reportado y mostrar la confirmación correspondiente. | 4 | Daga Chávez, Joaquín Leonardo | Done |
+| US26 | Consultar historial de maquinaria | T2-51 | Mostrar historial de mantenimiento | Presentar las intervenciones registradas para el equipo seleccionado. | 4 | Manosalva Tovar, Miroslav Oscar | Done |
+| US26 | Consultar historial de maquinaria | T2-52 | Mostrar historial de incidencias | Presentar los problemas registrados anteriormente para ese equipo. | 4 | Delgado Perez, James Caleb | Done |
+| US15 | Consultar planes | T2-29 | Mostrar planes disponibles | Presentar las alternativas de suscripción en la Web App. | 4 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US15 | Consultar planes | T2-30 | Mostrar características de cada plan | Permitir comparar la información relevante de las alternativas. | 3 | Daga Chávez, Joaquín Leonardo | Done |
+| US16 | Seleccionar plan | T2-31 | Incorporar selección de plan | Permitir elegir una de las alternativas presentadas. | 4 | Delgado Perez, James Caleb | Done |
+| US16 | Seleccionar plan | T2-32 | Aplicar acceso según plan | Reflejar en la Web App las condiciones del plan seleccionado. | 5 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US17 | Gestionar suscripción | T2-33 | Mostrar suscripción actual | Presentar al usuario la información de su plan vigente. | 4 | Manosalva Tovar, Miroslav Oscar | Done |
+| US17 | Gestionar suscripción | T2-34 | Incorporar gestión del plan | Permitir realizar las acciones de administración disponibles para la suscripción. | 5 | Delgado Perez, James Caleb | Done |
+| US27 | Consultar información de MaquiGest | T2-53 | Presentar información del producto | Mostrar qué es MaquiGest y a quién está dirigido en el Landing Page. | 3 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US27 | Consultar información de MaquiGest | T2-54 | Presentar información del equipo | Mostrar la información institucional correspondiente a CleanCode. | 3 | Daga Chávez, Joaquín Leonardo | Done |
+| US28 | Solicitar demostración | T2-55 | Construir formulario de demostración | Permitir que un visitante ingrese su solicitud desde el Landing Page. | 4 | Paredes Chávez, Carlos Augusto | Done |
+| US28 | Solicitar demostración | T2-56 | Validar solicitud de demostración | Revisar los campos del formulario y mostrar su resultado al visitante. | 3 | Delgado Perez, James Caleb | Done |
+| US29 | Contactar con MaquiGest | T2-57 | Construir formulario de contacto | Permitir que el visitante redacte y envíe su consulta. | 4 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US29 | Contactar con MaquiGest | T2-58 | Mostrar confirmación de contacto | Informar al visitante si su consulta fue registrada. | 2 | Manosalva Tovar, Miroslav Oscar | Done |
+| US30 | Visualizar propuesta de valor | T2-59 | Presentar propuesta principal | Mostrar el mensaje principal de MaquiGest en la vista inicial. | 3 | Daga Chávez, Joaquín Leonardo | Done |
+| US30 | Visualizar propuesta de valor | T2-60 | Incorporar llamada a la acción | Dar al visitante una opción visible para continuar desde la vista inicial. | 2 | Delgado Perez, James Caleb | Done |
+| US31 | Explorar funcionalidades principales | T2-61 | Presentar funcionalidades | Mostrar las capacidades principales de MaquiGest en el Landing Page. | 4 | Paredes Chávez, Carlos Augusto | Done |
+| US31 | Explorar funcionalidades principales | T2-62 | Presentar beneficios | Explicar los beneficios vinculados con esas funcionalidades. | 3 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US32 | Identificar la solución para mi empresa | T2-63 | Presentar segmento de alquiler | Explicar la propuesta para empresas que alquilan maquinaria. | 3 | Manosalva Tovar, Miroslav Oscar | Done |
+| US32 | Identificar la solución para mi empresa | T2-64 | Presentar segmento constructor | Explicar la propuesta para empresas que necesitan alquilar maquinaria. | 3 | Daga Chávez, Joaquín Leonardo | Done |
+| US33 | Acceder a la Web Application | T2-65 | Vincular acceso desde el Landing Page | Configurar los enlaces que dirigen al visitante hacia la Web App. | 3 | Delgado Perez, James Caleb | Done |
+| US33 | Acceder a la Web Application | T2-66 | Comprobar enlaces de acceso | Revisar el destino y la navegación de los enlaces publicados. | 2 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | T2-67 | Adaptar vistas a distintos anchos | Ajustar la presentación de las vistas principales en pantallas de distintos tamaños. | 5 | Paredes Chávez, Carlos Augusto | Done |
+| US34 | Utilizar la plataforma desde dispositivos de diferentes tamaños | T2-68 | Revisar navegación adaptable | Comprobar que menús, formularios y controles puedan utilizarse en esos tamaños. | 3 | Manosalva Tovar, Miroslav Oscar | Done |
+| US35 | Utilizar la plataforma en diferentes idiomas | T2-69 | Incorporar textos en español e inglés | Preparar los textos necesarios para las vistas incluidas en el alcance. | 5 | Delgado Perez, James Caleb | Done |
+| US35 | Utilizar la plataforma en diferentes idiomas | T2-70 | Incorporar cambio de idioma | Permitir alternar los textos disponibles durante la navegación. | 3 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US03 | Gestionar perfil | T2-05 | Mostrar información del perfil | Consultar y presentar los datos del usuario autenticado. | 4 | Manosalva Tovar, Miroslav Oscar | Done |
+| US03 | Gestionar perfil | T2-06 | Editar información del perfil | Permitir la actualización de los datos editables y mostrar el resultado. | 5 | Delgado Perez, James Caleb | Done |
+| US01 | Registro de usuario | T2-01 | Construir formulario de registro | Presentar los campos necesarios y sus validaciones en la Web App. | 5 | Delgado Perez, James Caleb | Done |
+| US01 | Registro de usuario | T2-02 | Integrar flujo de registro | Enviar los datos a la API simulada y mostrar el resultado al usuario. | 4 | Montalvo Vasquez, Bruno Rodrigo | Done |
+| US02 | Inicio de sesión | T2-03 | Construir vista de inicio de sesión | Presentar y validar los campos de acceso. | 4 | Manosalva Tovar, Miroslav Oscar | Done |
+| US02 | Inicio de sesión | T2-04 | Gestionar sesión de usuario | Procesar el acceso y dirigir al usuario a la vista correspondiente. | 5 | Delgado Perez, James Caleb | Done |
+| US04 | Recuperar contraseña | T2-09 | Construir vista de recuperación | Permitir el ingreso del dato necesario para solicitar la recuperación. | 4 | Daga Chávez, Joaquín Leonardo | Done |
+| US04 | Recuperar contraseña | T2-10 | Mostrar resultado de la solicitud | Validar el formulario y comunicar al usuario el resultado del proceso. | 3 | Paredes Chávez, Carlos Augusto | Done |
+| US05 | Cerrar sesión | T2-07 | Incorporar acción de cierre de sesión | Agregar la opción de salir en la navegación de la Web App. | 2 | Manosalva Tovar, Miroslav Oscar | Done |
+| US05 | Cerrar sesión | T2-08 | Finalizar la sesión activa | Limpiar los datos de sesión y redirigir a la vista de acceso. | 3 | Delgado Perez, James Caleb | Done |
 
 #### 5.2.2.4. Development Evidence for Sprint Review
-La tabla presenta una selección de commits representativos de la implementación. La columna Commit Message conserva el mensaje original. Siguiendo la presentación utilizada en LowCortisol, la columna Commit Message Body incluye una descripción explicativa del cambio redactada para el informe; estos textos no corresponden a cuerpos adicionales almacenados en Git. Las fechas corresponden al registro del commit en la zona horaria de Perú (UTC−5).
+La tabla presenta una selección de commits representativos de la implementación. La columna Commit Message conserva el mensaje original. Siguiendo la presentación utilizada en MaquiGest, la columna Commit Message Body incluye una descripción explicativa del cambio redactada para el informe; estos textos no corresponden a cuerpos adicionales almacenados en Git. Las fechas corresponden al registro del commit en la zona horaria de Perú (UTC−5).
 
 En la columna Branch se indica la rama de desarrollo identificada en el historial de merge; cuando no se identifica una feature específica, se consigna `develop` como rama de integración verificada. Para los cierres de release se indica `main`.
 
@@ -5029,21 +5068,21 @@ La tabla mantiene las columnas solicitadas en el enunciado oficial del proyecto.
 
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
 |---|---|---|---|---|---:|---|---|
-| TS01 | Exposición de servicios REST | TS01 | Exponer API REST de MaquiGest | Configurar la infraestructura necesaria para publicar los servicios REST de los módulos de la plataforma. | 12 | James Caleb (propuesto) | Done |
-| TS02 | Gestión de perfiles empresariales | TS02 | Implementar servicios REST de perfiles | Desarrollar operaciones para registrar, consultar y administrar la información de las empresas. | 14 | Bruno (propuesto) | Done |
-| TS03 | Gestión de maquinaria | TS03 | Implementar servicios REST de maquinaria | Desarrollar operaciones para registrar, consultar, actualizar y administrar equipos de construcción. | 20 | Miroslav (propuesto) | Done |
-| TS04 | Disponibilidad de maquinaria | TS04 | Consultar disponibilidad de equipos | Implementar consultas y validaciones de disponibilidad relacionadas con las operaciones de alquiler. | 12 | Miroslav (propuesto) | Done |
-| TS05 | Solicitudes de alquiler | TS05 | Gestionar solicitudes de alquiler | Implementar operaciones para registrar, consultar y gestionar solicitudes de alquiler de equipos. | 20 | CarlossUPC (propuesto) | Done |
-| TS06 | Reservas y estados de alquiler | TS06 | Gestionar reservas y estados | Desarrollar operaciones para administrar las reservas y las transiciones de estado durante el alquiler. | 18 | CarlossUPC (propuesto) | Done |
-| TS07 | Entregas y devoluciones | TS07 | Gestionar entregas y devoluciones | Implementar operaciones para registrar la entrega y devolución de maquinaria, considerando las reglas del ciclo de alquiler. | 16 | CarlossUPC (propuesto) | Done |
-| TS08 | Mantenimiento e incidencias | TS08 | Implementar servicios de mantenimiento | Desarrollar operaciones para registrar incidencias, gestionar mantenimientos y consultar el historial correspondiente. | 24 | CarlossUPC (propuesto) | Done |
-| TS09 | Planes y suscripciones | TS09 | Implementar servicios de suscripciones | Desarrollar operaciones para consultar planes y gestionar el ciclo de vida de las suscripciones. | 16 | Miroslav (propuesto) | Done |
-| TS10 | Autenticación y autorización | TS10 | Implementar autenticación y seguridad | Desarrollar el registro e inicio de sesión, la autenticación JWT y las restricciones de acceso correspondientes. | 20 | Bruno (propuesto) | Done |
+| TS01 | Exposición de servicios REST | TS01 | Exponer API REST de MaquiGest | Configurar la infraestructura necesaria para publicar los servicios REST de los módulos de la plataforma. | 12 | James Caleb | Done |
+| TS02 | Gestión de perfiles empresariales | TS02 | Implementar servicios REST de perfiles | Desarrollar operaciones para registrar, consultar y administrar la información de las empresas. | 14 | Bruno | Done |
+| TS03 | Gestión de maquinaria | TS03 | Implementar servicios REST de maquinaria | Desarrollar operaciones para registrar, consultar, actualizar y administrar equipos de construcción. | 20 | Miroslav | Done |
+| TS04 | Disponibilidad de maquinaria | TS04 | Consultar disponibilidad de equipos | Implementar consultas y validaciones de disponibilidad relacionadas con las operaciones de alquiler. | 12 | Miroslav | Done |
+| TS05 | Solicitudes de alquiler | TS05 | Gestionar solicitudes de alquiler | Implementar operaciones para registrar, consultar y gestionar solicitudes de alquiler de equipos. | 20 | CarlossUPC | Done |
+| TS06 | Reservas y estados de alquiler | TS06 | Gestionar reservas y estados | Desarrollar operaciones para administrar las reservas y las transiciones de estado durante el alquiler. | 18 | CarlossUPC | Done |
+| TS07 | Entregas y devoluciones | TS07 | Gestionar entregas y devoluciones | Implementar operaciones para registrar la entrega y devolución de maquinaria, considerando las reglas del ciclo de alquiler. | 16 | CarlossUPC | Done |
+| TS08 | Mantenimiento e incidencias | TS08 | Implementar servicios de mantenimiento | Desarrollar operaciones para registrar incidencias, gestionar mantenimientos y consultar el historial correspondiente. | 24 | CarlossUPC | Done |
+| TS09 | Planes y suscripciones | TS09 | Implementar servicios de suscripciones | Desarrollar operaciones para consultar planes y gestionar el ciclo de vida de las suscripciones. | 16 | Miroslav | Done |
+| TS10 | Autenticación y autorización | TS10 | Implementar autenticación y seguridad | Desarrollar el registro e inicio de sesión, la autenticación JWT y las restricciones de acceso correspondientes. | 20 | Bruno | Done |
 | TS11 | Notificaciones transaccionales | TS11 | Integrar SendGrid | Integrar un servicio externo para el envío de notificaciones transaccionales relacionadas con las operaciones de MaquiGest. | 12 | Sin asignación confirmada | To-Do |
-| TS12 | Persistencia de información | TS12 | Implementar persistencia JPA y MySQL | Configurar entidades de persistencia, repositorios y adaptadores para almacenar información del dominio. | 20 | James Caleb (propuesto) | Done |
-| TS13 | Validación de solicitudes | TS13 | Validar requests de la API REST | Incorporar validaciones para los datos recibidos por los endpoints y controlar solicitudes incorrectas. | 12 | James Caleb (propuesto) | Done |
-| TS14 | Gestión de errores HTTP | TS14 | Estandarizar respuestas y errores | Implementar respuestas HTTP apropiadas y mecanismos de gestión de excepciones. | 12 | James Caleb (propuesto) | Done |
-| TS15 | Documentación de servicios | TS15 | Documentar API mediante OpenAPI | Configurar Springdoc OpenAPI y Swagger UI para documentar los recursos REST disponibles. | 10 | James Caleb (propuesto) | Done |
+| TS12 | Persistencia de información | TS12 | Implementar persistencia JPA y MySQL | Configurar entidades de persistencia, repositorios y adaptadores para almacenar información del dominio. | 20 | James Caleb | Done |
+| TS13 | Validación de solicitudes | TS13 | Validar requests de la API REST | Incorporar validaciones para los datos recibidos por los endpoints y controlar solicitudes incorrectas. | 12 | James Caleb | Done |
+| TS14 | Gestión de errores HTTP | TS14 | Estandarizar respuestas y errores | Implementar respuestas HTTP apropiadas y mecanismos de gestión de excepciones. | 12 | James Caleb | Done |
+| TS15 | Documentación de servicios | TS15 | Documentar API mediante OpenAPI | Configurar Springdoc OpenAPI y Swagger UI para documentar los recursos REST disponibles. | 10 | James Caleb | Done |
 | TS16 | Servicios de mapas | TS16 | Integrar servicios de mapas | Incorporar servicios geográficos externos para apoyar los procesos de entrega y devolución de maquinaria. | 16 | Sin asignación confirmada | To-Do |
 
 #### Seguimiento y resultados del Sprint Backlog
@@ -5072,8 +5111,6 @@ Por otro lado, se identificaron dos actividades que permanecían pendientes al m
 Estas actividades no se consideran funcionalidades implementadas en el presente Sprint.
 
 En conclusión, el Sprint Backlog 3 refleja la priorización del desarrollo de servicios reales y la integración técnica entre los componentes de MaquiGest. El estado de las tareas proporciona trazabilidad del trabajo realizado y permite identificar los requerimientos técnicos que permanecen pendientes para las siguientes iteraciones.
-
-
 
 ### 5.2.3.4. Development Evidence for Sprint Review
 
@@ -5451,36 +5488,344 @@ Las evidencias presentadas muestran los componentes de MaquiGest desplegados en 
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
-Durante el Sprint 3, el trabajo de implementación se concentró en la creación del RESTful Web Service y en la adaptación de la Web Application para consumir el backend. GitHub fue utilizado para organizar las funcionalidades mediante ramas feature y consolidarlas en `develop`.
+Durante el Sprint 3, el trabajo de implementación se concentró en el desarrollo y despliegue del RESTful Web Service de MaquiGest, así como en la adaptación de la Web Application para consumir los servicios proporcionados por el backend. Esta iteración permitió integrar la lógica de negocio y la persistencia de datos con los procesos de la aplicación frontend.
 
-En `maquigest-platform` se utilizaron ramas independientes para configuración, Shared, IAM, Inventory, Subscriptions, Rentals, Profiles y Maintenance. En `maquigest-webapp` se utilizaron ramas para retirar la Fake API, implementar el historial de maquinaria y alinear los procesos de Inventory, Rentals y Maintenance con los contratos del backend.
+Git y GitHub fueron utilizados como herramientas principales para administrar el código fuente, coordinar el desarrollo de las funcionalidades y registrar las contribuciones realizadas durante la iteración. El trabajo se organizó mediante ramas feature destinadas a funcionalidades específicas, las cuales fueron integradas en la rama `develop` para consolidar los avances de ambos repositorios.
+
+En el repositorio `maquigest-platform` se utilizaron ramas independientes para desarrollar e integrar los componentes de configuración, Shared, IAM, Inventory, Subscriptions, Rentals, Profiles y Maintenance. Estas actividades comprendieron la exposición de servicios REST, la gestión de perfiles empresariales, la administración de maquinaria y su disponibilidad, las solicitudes y operaciones de alquiler, el mantenimiento y las incidencias, las suscripciones, la autenticación y autorización, la persistencia mediante JPA y MySQL, la validación de solicitudes, la gestión de errores HTTP y la documentación mediante OpenAPI.
+
+Por otro lado, en el repositorio `maquigest-webapp` se realizaron modificaciones para adaptar la aplicación frontend a los servicios del backend. Entre las actividades desarrolladas se encontraron el retiro de la Fake API, la implementación del historial de maquinaria y la adaptación de los procesos de Inventory, Rentals y Maintenance para alinearlos con los contratos y operaciones expuestos por el backend.
+
+Las contribuciones realizadas por los integrantes pueden observarse mediante las herramientas de análisis proporcionadas por GitHub.
 
 ##### GitHub Contributors
 
-Al corte actual, el historial verificable de Sprint 3 presenta la siguiente distribución de commits sin incluir operaciones de merge:
+GitHub Contributors permite visualizar la participación de los integrantes del equipo en el repositorio `maquigest-platform`.
 
-| Team Member | GitHub Username | maquigest-platform | maquigest-webapp | Total |
-|---|---|---:|---:|---:|
-| James Caleb Delgado Perez | `JAmsy06` | - | - | - |
-| Bruno Rodrigo Montalvo Vasquez | `TartaroZ` | - | - | - |
-| Miroslav Oscar Manosalva Tovar | `Miroa123` | - | - | - |
-| Carlos Augusto Paredes Chávez | `CarlossUPC` | - | - | - |
-| **Total** |  | **-** | **-** | **-** |
-<!-- | Joaquín Leonardo Daga Chávez | `Eshnikeee` | - | - | - | -->
+La distribución de commits registrada para el Sprint 3 fue la siguiente:
 
+| **Team Member**                | **GitHub Username** | **Commits** |
+| ------------------------------ | ------------------- | ----------: |
+| James Caleb Delgado Perez      | `JAmsy06`           | 30          |
+| Bruno Rodrigo Montalvo Vasquez | `TartaroZ`          | 29          |
+| Miroslav Oscar Manosalva Tovar | `Miroa123`          | 30          |
+| Carlos Augusto Paredes Chávez  | `CarlossUPC`        | 24          |
+| **Total**                      |                     | **113**     |
 
+Las estadísticas permiten observar la participación de los cuatro integrantes en el desarrollo del backend de MaquiGest. Las contribuciones estuvieron relacionadas con la implementación de los módulos principales, la integración de los servicios REST y los componentes técnicos necesarios para el funcionamiento de la plataforma.
 
-<!-- Poner la captura de GitHub Contributors de maquigest-platform y de GitHub Contributors de maquigest-webapp. -->
+<p align="center">
+  <img src="./assets/md-images-chapter5/teamcolabo6.png"
+       alt="MaquiGest Sprint 2 Collaboration Evidence - GitHub Contributors"
+       width="90%">
+</p>
 
 ##### Commit Activity
 
-La sección de estadísticas de GitHub permite observar también la actividad general de commits realizada sobre el repositorio durante el Sprint 3.
+<p align="center">
+  <img src="./assets/md-images-chapter5/teamcolabo7.png"
+       alt="MaquiGest Sprint 2 Collaboration Evidence - Commit Activity"
+       width="90%">
+</p>
 
-<!-- agregar captura de Commit Activity de maquigest-platform. -->
+La sección de estadísticas de GitHub permite observar también la actividad general de commits realizada sobre el repositorio `maquigest-platform` durante el Sprint 3.
 
+La actividad registrada corresponde principalmente al desarrollo de la infraestructura backend, la implementación de los módulos de negocio, la configuración de la persistencia, la seguridad y la exposición de los servicios REST.
+
+En conjunto, las contribuciones realizadas durante esta iteración permitieron desarrollar e integrar los principales servicios backend de MaquiGest, incluyendo la gestión de perfiles empresariales, maquinaria, disponibilidad, alquileres, mantenimiento, incidencias y suscripciones. Asimismo, se implementaron componentes transversales para la autenticación y autorización, la persistencia mediante JPA y MySQL, la validación de solicitudes, la gestión de errores HTTP y la documentación de la API mediante OpenAPI.
+
+Por otro lado, los cambios realizados en `maquigest-webapp` permitieron adaptar la aplicación frontend para consumir los servicios implementados, retirando la Fake API y alineando los procesos de Inventory, Rentals y Maintenance con los contratos del backend.
+
+La actividad registrada en GitHub proporciona trazabilidad de las contribuciones realizadas durante el Sprint 3 y evidencia el trabajo colaborativo del equipo en la implementación, integración y despliegue del backend de MaquiGest.
+
+## 5.3. Validation Interviews.
+### 5.3.1. Diseño de Entrevistas.
+En esta sección se presenta el diseño de entrevistaas de validación aplicado para la plataforma MaquiGest, con el objetivo de recopilar la percepción de nuestros usuarios anteriormente entrevistados respecto a la porpuesta de valor, la claridad de la información, la utilidad de las funcionalidades implementadas y la experiencia general de interacción con el producto digital. Estas entrevistados fueron planteadas para evaluar tanto el Landing Page como la Web Application, priorizando la validación de los flujos principales de navegación, monitoreo, alertas y visualización de información relevante para los segmentos objetivos.
+
+
+**Objetivos de las entrevistas:** El objetivo principal de las entrevistas de validación fue conocer la opinión de los participantes sobre la experiencia de uso de MaquiGest, especialmente en relacion con:
+
+
+* la comprensión de la propuesta de la plataforma.
+* la facilidad de navegación entre las secciones del sistema
+* la claridad de la información sobre monitoreo de agua y gas
+* la comprensión del estado de los dispositivos y sensores
+* el grado de satisfación general con la plataforma
+
+**Estructura de la entrevista**
+
+La entrevista fue diseñada en dos bloques: datos generales del entrevistado y preguntas de validación del producto.
+
+**A. Datos generales**
+
+Este bloque tuvo como finalidad identificar información básica del participante y contextualizar su perfil dentro de los segmentos objetivo.
+Las preguntas utilizadas fueron las siguientes:
+* ¿Cuál es su nombre?
+* ¿Cuántos años tiene?
+* ¿En qué distrito trabaja o reside?
+* ¿Cuál es su ocupación actual?
+
+**B. Preguntas de validación**
+
+Este bloque estuvo orientado a recoger apreciaciones cualitativas sobre la interfaz, la navegación, la utilidad de las funcionalidades y la satisfacción general con la solución.
+Las preguntas planteadas fueron las siguientes:
+
+* ¿Qué opinión tiene sobre el diseño visual y la apariencia general de nuestra plataforma?
+* ¿Le resultó fácil y rápido navegar entre las diferentes secciones del sistema?
+* ¿Considera útil contar con el selector de idioma (EN/ES)?
+* ¿La información mostrada sobre los equipos, la disponibilidad o los planes de suscripción se entienden con claridad?
+* ¿Le pareció sencillo buscar maquinaria y revisar el estado de sus solicitudes o contratos?
+* ¿Utilizaría nuestra plataforma de manera regular en su trabajo u operaciones diarias?
+
+### 5.3.2. Registro de entrevistas
+
+### Entrevista 1 — Judith Dávila
+
+| Campo | Detalle |
+|-------|---------|
+| Nombres y apellidos | Judith Dávila |
+| Edad | 44 años |
+| Distrito | Vitarte |
+| Segmento objetivo | Primer segmento objetivo: Pequeñas y medianas empresas de alquiler de maquinaria |
+| Fecha de entrevista | 13 noviembre 2026 |
+| Duración | 01:46 |
+| Timing en el video | 00:00 - 01:46 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)|
+
+<p align="center">
+  <img src="assets/md-images-chapter2/Cap5entrevista1.png" width="180">
+</p>
+
+**Resumen:**  
+Judith Dávila representa a una pequeña empresa dedicada al alquiler de tractores. Comentó que el diseño visual de la plataforma se ve limpio y claro. Sin embargo, indicó que no le resultó fácil navegar entre las secciones ni comprender la información de los equipos o planes de suscripción, debido a que no está muy familiarizada con el uso de computadoras. Valoró positivamente el selector de idioma de inglés a español porque le facilitaría el manejo. Señaló que la plataforma podría ser útil para quienes saben usar computadoras, pero en su caso particular no la utilizaría de manera regular en sus operaciones diarias por su poca familiaridad con el manejo de estos equipos.### Entrevista 2 — Carlos Rodríguez
+
+| Campo | Detalle |
+|-------|---------|
+| Nombres y apellidos | Carlos Rodríguez |
+| Edad | 51 años |
+| Distrito | San Juan de Miraflores |
+| Segmento objetivo | Primer segmento objetivo: Pequeñas y medianas empresas de alquiler de maquinaria |
+| Fecha de entrevista | 13 noviembre 2026 |
+| Duración | 02:17 |
+| Timing en el video | 01:47 - 04:04 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)|
+
+<p align="center">
+  <img src="assets/md-images-chapter2/Cap2entrevista2.png" width="180">
+</p>
+
+**Resumen:**  
+Carlos Rodríguez se desempeña como técnico mecánico y se dedica al alquiler de camiones de carga. Consideró que el diseño visual de la plataforma es muy práctico y asequible. Indicó que la navegación entre las secciones es fluida y está bien explicada, lo que evita complicaciones. Respecto al selector de idioma de inglés a español, lo calificó de muy práctico para ingresar de inmediato sin necesidad de adivinar o traducir. Aunque al principio mencionó que la información de los planes y equipos se le complica un poco por estar ingresando recién, confirmó que buscar maquinaria y revisar el estado de solicitudes es sencillo gracias a las indicaciones de la guía, y aseguró que sí utilizaría la plataforma de manera regular en su trabajo.
+
+### Entrevista 3 — Carmen Losada Paredes
+
+| Campo | Detalle |
+|-------|---------|
+| Nombres y apellidos | Carmen Losada Paredes |
+| Edad | 51 años |
+| Distrito | San Juan de Lurigancho |
+| Segmento objetivo | Primer segmento objetivo: Pequeñas y medianas empresas de alquiler de maquinaria |
+| Fecha de entrevista | 18 setiembre 2026 |
+| Duración | 01:56 |
+| Timing en el video | 04:05 - 06:01 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)|
+
+<p align="center">
+  <img src="assets/md-images-chapter2/Cap2entrevista3.png" width="180">
+</p>
+
+**Resumen:**  
+Carmen Losada Paredes administra una pequeña empresa que presta servicios de alquiler de camiones concreteros (mixers). Opinó que el diseño visual y la apariencia de la plataforma son buenos y le otorgan la facilidad de tener un control adecuado sobre sus maquinarias. Afirmó que la navegación entre las secciones es fácil y que todo está a la mano para su uso. Consideró muy útil el selector de idioma de inglés a español pensando en la atención a posibles clientes extranjeros. Destacó que la información sobre equipos y disponibilidad se entiende con claridad y permite identificar con precisión qué máquinas están operativas y disponibles. Concluyó afirmando que utilizaría la plataforma de manera regular en sus operaciones diarias para lograr un mejor control de sus unidades alquiladas y paradas.
+
+### Entrevista 4 — Saul Vásquez Simeon
+
+| Campo | Detalle |
+|-------|---------|
+| Nombres y apellidos | Saul Vásquez Simeon |
+| Edad | 44 años |
+| Distrito | San Juan de Lurigancho |
+| Segmento objetivo | Segundo segmento objetivo: Pequeñas empresas constructoras |
+| Fecha de entrevista | 13 noviembre 2026 |
+| Duración | 02:03 |
+| Timing en el video | 06:02 - 08:05 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)|
+
+<p align="center">
+  <img src="assets/md-images-chapter2/Cap5entrevista4.png" width="180">
+</p>
+
+**Resumen:**  
+Saul Vásquez Simeón se dedica al alquiler de miniconstructora de maquinarias. Señaló que el diseño visual y la apariencia de la plataforma son claros. Afirmó que la navegación entre las secciones del sistema resulta muy clara y sencilla. Respecto al selector de idioma de inglés a español, indicó que ayuda a notar las cosas de forma más clara. Explicó que la información mostrada sobre los equipos se entiende con total claridad, ya que detalla la ubicación, la clase de máquina y la tarifa diaria. Finalmente, confirmó que buscar maquinaria y revisar el estado de solicitudes o contratos es sencillo con el aplicativo, por lo que sí utilizaría la plataforma de manera regular en su trabajo.
+
+### Entrevista 5 — Sonia Gutiérrez
+
+| Campo | Detalle |
+|-------|---------|
+| Nombres y apellidos | Sonia Gutiérrez |
+| Edad | 41 años |
+| Distrito | San Juan de Miraflores |
+| Segmento objetivo | Segundo segmento objetivo: Pequeñas empresas constructoras |
+| Fecha de entrevista | 13 noviembre 2026 |
+| Duración | 01:47 |
+| Timing en el video | 08:06 - 09:53 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)|
+
+<p align="center">
+  <img src="assets/md-images-chapter2/Cap2entrevista5.png" width="180">
+</p>
+
+**Resumen:**  
+Sonia Gutiérrez trabaja en una empresa inmobiliaria. Opinó que el diseño visual de la plataforma es de mucha ayuda. Indicó que la navegación entre las secciones es ágil porque le ayuda a buscar con mayor rapidez la maquinaria que necesita. Valoró muy positivamente el selector de idioma de inglés a español al señalar que resulta de gran utilidad para quienes no dominan el inglés. Destacó que la información sobre disponibilidad y detalles técnicos de los equipos (como las toneladas) se comprende claramente, al igual que la revisión de fechas solicitadas y la aprobación de alquileres. Concluyó afirmando que utilizaría la plataforma de manera regular en sus operaciones diarias por ser una herramienta organizada y de gran apoyo.
+
+### Entrevista 6 — Ana Rivera Quispe
+
+| Campo | Detalle |
+|-------|---------|
+| Nombres y apellidos | Ana Rivera Quispe |
+| Edad | 36 años |
+| Distrito | Los Olivos |
+| Segmento objetivo | Segundo segmento objetivo: Pequeñas empresas constructoras |
+| Fecha de entrevista | 13 noviembre 2026 |
+| Duración | 01:34 |
+| Timing en el video | 09:54 - 11:28 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)|
+
+<p align="center">
+  <img src="assets/md-images-chapter2/Cap2entrevista6.png" width="180">
+</p>
+
+**Resumen:**  
+Ana Rivera Quispe se dedica a la construcción de pequeños edificios. Señaló que la plataforma presenta un diseño limpio y ordenado. Sin embargo, al momento de evaluar la facilidad de navegación y la búsqueda de maquinaria o revisión de contratos, indicó que le resultaría complicado. Consideró útil contar con el selector de idioma debido a que no domina el inglés. Respecto a la información de los equipos y planes, reconoció que se entiende con claridad; sin embargo, al ser consultada sobre si utilizaría la plataforma de manera regular, comentó que aunque lo intentaría, le parecería bastante difícil en su día a día.
+
+### 5.3.3. Evaluaciones según heurísticas.
+
+## UX Heuristics & Principles Evaluation
+
+**Usability – Inclusive Design – Information Architecture**
+
+**CARRERA:** Ingeniería de Software  
+**CURSO:** Desarrollo de Aplicaciones Open Source  
+**SECCIÓN:** 7750
+**AUDITOR:** CleanCode
+**CLIENTE(S):** Usuarios participantes de la validación
+
+**SITE o APP A EVALUAR:**  
+MaquiGest:https://maquigest-webapp-cleancode.vercel.app/
 
 ---
 
+## TAREAS A EVALUAR
+
+El alcance de esta evaluación incluye la revisión de la experiencia de usuario de las siguientes tareas principales:
+
+Explorar el Landing Page e identificar la propuesta de valor del servicio.
+
+Navegar entre las principales secciones (dashboard, catálogo, perfil y solicitudes).
+
+Consultar el detalle y disponibilidad de equipos y maquinaria.
+
+Gestionar el registro, solicitud y cancelación de alquileres.
+
+Revisar el historial y estado de las órdenes o entregas.
+
+## ESCALA DE SEVERIDAD
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+|---------|---------|
+| 1 | Problema superficial: Inconsistencia estética menor o detalle visual de muy baja frecuencia que no afecta la interacción (se puede pasar por alto o priorizar baja corrección). |
+| 2 | Problema menor: Ocurre ocasionalmente o genera una pequeña fricción o duda momentánea en el usuario. |
+| 3 | Problema mayor: Ocurre frecuentemente o interrumpe de forma moderada el flujo principal de la plataforma. |
+| 4 | Problema muy grave: Bloquea por completo al usuario impidiendo finalizar una tarea crítica. |
+
+---
+
+## TABLA RESUMEN
+
+| # | Problema | Escala de severidad | Heurística / Principio violado |
+|---|---|---:|---|
+| 1 | Algunos botones de acción rápida en el dashboard muestran una jerarquía visual poco diferenciada. | 2 | Usability: Visibility of System Status |
+| 2 | Ciertos campos en los formularios de registro de equipos carecen de validación en tiempo real más amigable. | 2 | Usability: Error Prevention |
+| 3 | La distinción entre los estados de alquiler activo y cancelado en el listado general podría ser más intuitiva. | 3 | Usability: Recognition Rather Than Recall |
+| 4 | Algunos iconos en la barra de navegación lateral dependen demasiado de la interpretación visual sin texto secundario en resoluciones compactas. | 2 | Inclusive Design: Provide Comparable Experience |
+
+---
+
+## DESCRIPCIÓN DE PROBLEMAS
+
+### Problema #1: Algunos botones de acción rápida en el dashboard muestran una jerarquía visual poco diferenciada
+**Severidad:** 2
+
+**Heurística violada:**  
+Usabilidad – Visibilidad del estado del sistema
+
+**Problema:**  
+Durante la navegación general por el panel principal, se observó que las acciones secundarias y principales comparten pesos visuales muy similares, lo que puede generar una pequeña duda inicial en usuarios nuevos, aunque no impide completar la tarea.
+
+**Recomendación:**  
+Ajustar los contrastes y el tamaño de los componentes de llamada a la acción (CTA) principales para guiar de manera más natural la vista del usuario.
+
+**Captura:**
+
+![Evidencia de la heurística violada](assets/md-images-chapter5/dashboard-rental.png)
+
+### Problema #2: Ciertos campos en los formularios de registro de equipos carecen de validación en tiempo real más amigable
+
+**Severidad:** 2
+
+**Heurística violada:**  
+Usabilidad – Prevención de errores
+
+**Problema:**  
+Al rellenar los formularios para dar de alta o solicitar maquinaria, los mensajes de advertencia o campos obligatorios no siempre avisan de forma inmediata al usuario antes de enviar el formulario completo.
+
+**Recomendación:**  
+Implementar validaciones dinámicas que marquen en línea los campos correctos o pendientes para evitar fricciones innecesarias.
+
+**Captura:**
+
+![Evidencia de la heurística violada](assets/md-images-chapter5/equipment-rental.png)---
+
+### Problema #3: La distinción entre los estados de alquiler activo y cancelado en el listado general podría ser más intuitiva
+
+**Severidad:** 3
+
+**Heurística violada:**  
+Usabilidad – Reconocimiento antes que memorización
+
+**Problema:**  
+En la sección de gestión e historial de alquileres, los colores de estado entre un servicio activo y uno cancelado son sutiles, lo que obliga al usuario a leer detalladamente cada etiqueta en lugar de reconocer el estado de un vistazo.
+
+**Recomendación:**  
+Utilizar códigos de color más contrastados (por ejemplo, verde para activo, rojo o gris tenue para cancelado) acompañados de iconos normalizados.
+
+**Captura:**
+
+![Evidencia de la heurística violada](assets/md-images-chapter5/rentalRequest-rental.png)
+---
+
+### Problema #4: Algunos iconos en la barra de navegación lateral dependen demasiado de la interpretación visual sin texto secundario
+
+**Severidad:** 2
+
+**Heurística violada:**  
+Diseño Inclusivo – Proporcionar una experiencia equivalente para todos los usuarios
+
+**Problema:**  
+En vistas reducidas o ciertos módulos, la barra lateral compacta muestra únicamente iconos que, al carecer de etiquetas permanentes o tooltips rápidos, pueden restar agilidad a usuarios menos familiarizados con los símbolos de la plataforma.
+
+**Recomendación:**  
+Asegurar tooltips flotantes o descripciones emergentes claras al pasar el cursor sobre los iconos de navegación.
+
+**Captura:**
+
+![Evidencia de la heurística violada](assets/md-images-chapter5/subscription-rental.png)
+## 5.4. Video About-the-Product.
+
+El video About-the-Product presenta de manera clara y dinámica la propuesta de valor de la solución, explicando el problema identificado, el segmento de usuarios objetivo y las principales funcionalidades que ofrece la plataforma. Asimismo, se muestra el recorrido de los usuarios a través de las interfaces desarrolladas, destacando cómo la aplicación contribuye a mejorar su experiencia y satisfacer sus necesidades. El contenido incluye una breve introducción al modelo de negocio, una demostración de las características más relevantes del producto y testimonios obtenidos durante el proceso de validación con usuarios potenciales.
+
+**Video About-the-Product:** [Ver video About-the-Product](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBughACCTT3TKceHs9kcIpFAenxCJlYrLbrMUlsc3tr8lU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=bde0Am)
 
 # Conclusiones
 
@@ -5532,6 +5877,11 @@ Finalmente, la elaboración del video About the Product y de la presentación Ab
 
 
 ---
+
+## Video About-the-team
+
+**Video about-the-team:** En esta sección se presenta el video About-The-Team del proyecto MaquiGest, el cual resume el proceso de desarrollo de la solución de monitoreo en tiempo real para la prevención y gestión de incidentes en tuberías de agua y gas. A través del video se muestran las principales actividades realizadas durante el desarrollo del proyecto, evidencias de las reuniones y sesiones de trabajo del equipo, así como los aportes individuales de cada integrante. Además, cada miembro comparte su experiencia, las responsabilidades asumidas, las competencias desarrolladas y la contribución realizada para alcanzar los objetivos del proyecto. Finalmente, se incluye la pauta de secuencias del contenido, una imagen representativa del video y los enlaces a las versiones publicadas en Microsoft Stream.
+**Video About-the-Team:** [Ver video About-the-Team](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDciBmwDFCQTJiqSUFUREH2AZgQaN2w8Tiqz_uIjISrxBw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=2494IX)
 
 # Bibliografía
 
@@ -5601,3 +5951,4 @@ En este anexo se consolidan los principales recursos audiovisuales utilizados co
 | **Execution Evidence** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-execution-evidence-sprint-3`<br>**Formato:** `.mp4`   | Presenta la navegación por la segunda versión implementada y desplegada de la plataforma, esta vez incluyendo el bakend. El video demuestra las principales secciones y elementos interactivos desarrollados durante el Sprint 3. | [Ver Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQCQPSedz_yQTYMZGNFGaxZzAceAU1lmkCiv5WLOBju6EDY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=oHWgfw)                                                 |
 | **About the Product** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-about-the-product-sprint-3`<br>**Formato:** `.mp4`   | Orientación promocional, resumiendo el modelo de negocio, las características y beneficios del producto,incluyendo algunas escenas de interacción con el producto y al menos una opinión por cada segmento objetivo. | [Ver About the Product](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBughACCTT3TKceHs9kcIpFAenxCJlYrLbrMUlsc3tr8lU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=bde0Am)                                                 |
 | **About the Team** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-about-the-team-sprint-3`<br>**Formato:** `.mp4`   | Video que resume el proceso de trabajo realizado, incluyendo escenas de sesiones de trabajo real del equipo. Incluye además el testimonio ante cámara de cada participante describiendo actividades realizadas, logro de outcomes y desarrollo de competencias alcanzados. | [Ver About the Team](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDciBmwDFCQTJiqSUFUREH2AZgQaN2w8Tiqz_uIjISrxBw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=2494IX)                                                 |
+| **Validation Interviews** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-about-the-team-sprint-3`<br>**Formato:** `.mp4` <br>**Formato:** `11:28`   | Consolida sesiones y entrevistas de validación en las que usuarios de los segmentos objetivo interactúen con el landing page y con los prototipos de experiencias web y mobile, manifestando sus observaciones. Para cada entrevista se debe incluir títulos con información del entrevistado, el segmento objetivo y la fecha de la entrevista | [Ver Validation Interview](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)                                                 |
