@@ -5705,12 +5705,12 @@ Ana Rivera Quispe se dedica a la construcción de pequeños edificios. Señaló 
 
 **CARRERA:** Ingeniería de Software  
 **CURSO:** Desarrollo de Aplicaciones Open Source  
-**SECCIÓN:** 7750
-**AUDITOR:** CleanCode
+**SECCIÓN:** 7750  
+**AUDITOR:** CleanCode  
 **CLIENTE(S):** Usuarios participantes de la validación
 
 **SITE o APP A EVALUAR:**  
-MaquiGest:https://maquigest-webapp-cleancode.vercel.app/
+MaquiGest: [https://maquigest-webapp-cleancode.vercel.app/](https://maquigest-webapp-cleancode.vercel.app/)
 
 ---
 
@@ -5718,15 +5718,11 @@ MaquiGest:https://maquigest-webapp-cleancode.vercel.app/
 
 El alcance de esta evaluación incluye la revisión de la experiencia de usuario de las siguientes tareas principales:
 
-Explorar el Landing Page e identificar la propuesta de valor del servicio.
-
-Navegar entre las principales secciones (dashboard, catálogo, perfil y solicitudes).
-
-Consultar el detalle y disponibilidad de equipos y maquinaria.
-
-Gestionar el registro, solicitud y cancelación de alquileres.
-
-Revisar el historial y estado de las órdenes o entregas.
+* Explorar el Landing Page e identificar la propuesta de valor del servicio.
+* Navegar entre las principales secciones (dashboard, catálogo, perfil y solicitudes).
+* Consultar el detalle y disponibilidad de equipos y maquinaria.
+* Gestionar el registro, solicitud y cancelación de alquileres.
+* Revisar el historial y estado de las órdenes o entregas.
 
 ## ESCALA DE SEVERIDAD
 
@@ -5770,6 +5766,8 @@ Ajustar los contrastes y el tamaño de los componentes de llamada a la acción (
 
 ![Evidencia de la heurística violada](assets/md-images-chapter5/dashboard-rental.png)
 
+---
+
 ### Problema #2: Ciertos campos en los formularios de registro de equipos carecen de validación en tiempo real más amigable
 
 **Severidad:** 2
@@ -5785,7 +5783,9 @@ Implementar validaciones dinámicas que marquen en línea los campos correctos o
 
 **Captura:**
 
-![Evidencia de la heurística violada](assets/md-images-chapter5/equipment-rental.png)---
+![Evidencia de la heurística violada](assets/md-images-chapter5/equipment-rental.png)
+
+---
 
 ### Problema #3: La distinción entre los estados de alquiler activo y cancelado en el listado general podría ser más intuitiva
 
@@ -5803,6 +5803,7 @@ Utilizar códigos de color más contrastados (por ejemplo, verde para activo, ro
 **Captura:**
 
 ![Evidencia de la heurística violada](assets/md-images-chapter5/rentalRequest-rental.png)
+
 ---
 
 ### Problema #4: Algunos iconos en la barra de navegación lateral dependen demasiado de la interpretación visual sin texto secundario
@@ -5821,7 +5822,10 @@ Asegurar tooltips flotantes o descripciones emergentes claras al pasar el cursor
 **Captura:**
 
 ![Evidencia de la heurística violada](assets/md-images-chapter5/subscription-rental.png)
-## 5.4. Video About-the-Product.
+
+---
+
+## 5.4. Video About-the-Product
 
 El video About-the-Product presenta de manera clara y dinámica la propuesta de valor de la solución, explicando el problema identificado, el segmento de usuarios objetivo y las principales funcionalidades que ofrece la plataforma. Asimismo, se muestra el recorrido de los usuarios a través de las interfaces desarrolladas, destacando cómo la aplicación contribuye a mejorar su experiencia y satisfacer sus necesidades. El contenido incluye una breve introducción al modelo de negocio, una demostración de las características más relevantes del producto y testimonios obtenidos durante el proceso de validación con usuarios potenciales.
 
@@ -5835,7 +5839,7 @@ Durante el Sprint 1, MaquiGest estableció su presencia pública mediante la imp
 
 En el Sprint 2 se desarrolló y desplegó la primera versión funcional de la Web Application utilizando Angular. Esta versión incorporó interfaces para autenticación, administración de perfiles empresariales, gestión de inventario, solicitudes de alquiler, entregas, devoluciones, mantenimiento y suscripciones. Inicialmente, estas funcionalidades se apoyaron en una Fake API implementada con JSON Server y desplegada en Render, lo que permitió representar y validar los principales recorridos de usuario antes de disponer de un backend propio.
 
-Durante el Sprint 3, el proyecto evolucionó hacia una arquitectura funcional integrada mediante el desarrollo de un RESTful Web Service con Java, Spring Boot, Spring Data JPA y MySQL. La implementación se estructuró alrededor de seis Bounded Contexts: IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions, complementados por el módulo transversal Shared. Esta organización permitió establecer una separación de responsabilidades basada en Domain-Driven Design (DDD), facilitando la evolución de las funcionalidades y reduciendo el acoplamiento entre los distintos dominios del negocio.
+Durante el Sprint 3, el proyecto evolucionó hacia una arquitectura funcional integrada mediante el desarrollo de un RESTful Web Service con Java, Spring Boot, Spring Data JPA y MySQL. La implementación se estructuró alrededor de seis Bounded Contexts: IAM, Profiles, Inventory, Rentals, Maintenance y Suscriptions, complementados por el módulo transversal Shared. Esta organización permitió establecer una separación de responsabilidades basada en Domain-Driven Design (DDD), facilitando la evolución de las funcionalidades y reduciendo el acoplamiento entre los distintos dominios del negocio.
 
 La arquitectura del backend incorporó una separación entre las capas Domain, Application, Infrastructure e Interfaces, junto con la aplicación de Command Query Responsibility Segregation (CQRS) para distinguir las operaciones de escritura y consulta. Asimismo, se estableció una diferenciación entre los objetos del dominio y las entidades de persistencia utilizadas por JPA. Estas decisiones contribuyeron a mantener las reglas de negocio independientes de los controladores REST y de los mecanismos de almacenamiento, favoreciendo la mantenibilidad y organización del código.
 
@@ -5854,33 +5858,24 @@ Finalmente, la elaboración del video About the Product y de la presentación Ab
 ### Recomendaciones
 
 1. **Fortalecer la arquitectura DDD para la entrega final.** Revisar las observaciones identificadas sobre los Aggregates, Value Objects, invariantes de dominio y validaciones, contrastándolas con los principios de Domain-Driven Design y las indicaciones del docente. Las correcciones deberán evaluarse antes de implementarse, preservando la estabilidad de las funcionalidades existentes.
-
 2. **Completar la recuperación y verificación de cuentas.** Evaluar la implementación del flujo seguro de recuperación y restablecimiento de contraseñas, así como los mecanismos de verificación de correo electrónico, con el objetivo de mejorar la seguridad de las cuentas y completar las funcionalidades pendientes de autenticación.
-
 3. **Evaluar la incorporación de notificaciones.** Revisar los criterios de aceptación relacionados con solicitudes de alquiler, cambios de estado y otros procesos que requieran comunicar información a los usuarios. De acuerdo con las observaciones del docente, se recomienda analizar la integración de notificaciones en los Bounded Contexts correspondientes, evitando introducir responsabilidades que no pertenezcan a sus respectivos dominios.
-
 4. **Ampliar las pruebas de integración y validación funcional.** Continuar verificando los recorridos completos entre Angular, Spring Boot y MySQL, especialmente en autenticación, gestión de maquinaria, solicitudes de alquiler, entregas, devoluciones, mantenimiento y suscripciones. Se recomienda complementar las pruebas automatizadas existentes con escenarios funcionales que permitan detectar inconsistencias entre los componentes.
-
 5. **Completar la documentación técnica del backend.** Incorporar y mantener actualizados los archivos README, las instrucciones de configuración del entorno, las variables necesarias para la ejecución, los perfiles de desarrollo y producción, las convenciones de arquitectura y los procedimientos para ejecutar pruebas y acceder a Swagger UI. Asimismo, se recomienda documentar las decisiones arquitectónicas relevantes mediante los artefactos correspondientes.
-
 6. **Mantener la consistencia entre arquitectura e implementación.** Verificar que los diagramas C4, diagramas de clases, modelos de base de datos y artefactos de Event Storming representen correctamente las responsabilidades y relaciones implementadas en los Bounded Contexts, evitando diferencias entre la documentación y el código fuente.
-
 7. **Reforzar la seguridad y configuración de los entornos de producción.** Revisar la gestión de variables de entorno, credenciales, autenticación JWT, políticas CORS y conexiones a la base de datos, asegurando que las configuraciones necesarias para el funcionamiento de la Web Application se mantengan adecuadamente separadas entre desarrollo y producción.
-
 8. **Conservar un proceso de publicación y versionamiento controlado.** Continuar utilizando GitFlow, Pull Requests, ramas release y tags basados en Semantic Versioning para mantener la trazabilidad de las versiones publicadas. Asimismo, verificar la sincronización entre las ramas develop y main antes de realizar nuevos despliegues.
-
 9. **Mantener la trazabilidad entre requisitos, implementación y evidencias.** Continuar relacionando las User Stories, Technical Stories, Product Backlog, Sprint Backlog, commits, Pull Requests, endpoints REST, pruebas y evidencias del informe, de manera que cada avance funcional pueda identificarse y verificarse durante las siguientes evaluaciones.
-
 10. **Priorizar la estabilización de MaquiGest antes de la entrega final.** Concentrar los esfuerzos en corregir las observaciones pendientes, validar los principales procesos de negocio, revisar la experiencia de usuario y consolidar las evidencias técnicas y audiovisuales del producto, evitando incorporar nuevas funcionalidades que puedan comprometer el alcance o la estabilidad de la plataforma.
 
 ---
 
-
 ---
 
-## Video About-the-team
+## Video About-the-Team
 
-**Video about-the-team:** En esta sección se presenta el video About-The-Team del proyecto MaquiGest, el cual resume el proceso de desarrollo de la solución de monitoreo en tiempo real para la prevención y gestión de incidentes en tuberías de agua y gas. A través del video se muestran las principales actividades realizadas durante el desarrollo del proyecto, evidencias de las reuniones y sesiones de trabajo del equipo, así como los aportes individuales de cada integrante. Además, cada miembro comparte su experiencia, las responsabilidades asumidas, las competencias desarrolladas y la contribución realizada para alcanzar los objetivos del proyecto. Finalmente, se incluye la pauta de secuencias del contenido, una imagen representativa del video y los enlaces a las versiones publicadas en Microsoft Stream.
+**Video About-the-Team:** En esta sección se presenta el video About-the-Team del proyecto MaquiGest, el cual resume el proceso de desarrollo de la solución para la gestión y alquiler de maquinaria de construcción. A través del video se muestran las principales actividades realizadas durante el desarrollo del proyecto, evidencias de las reuniones y sesiones de trabajo del equipo, así como los aportes individuales de cada integrante. Además, cada miembro comparte su experiencia, las responsabilidades asumidas, las competencias desarrolladas y la contribución realizada para alcanzar los objetivos del proyecto. Finalmente, se incluye la pauta de secuencias del contenido, una imagen representativa del video y los enlaces a las versiones publicadas en Microsoft Stream.
+
 **Video About-the-Team:** [Ver video About-the-Team](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDciBmwDFCQTJiqSUFUREH2AZgQaN2w8Tiqz_uIjISrxBw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=2494IX)
 
 # Bibliografía
@@ -5921,34 +5916,33 @@ W3C. (s. f.). *HTML5*. https://www.w3.org/TR/html5/
 
 En este anexo se registran progresivamente los videos correspondientes a las exposiciones realizadas durante las diferentes entregas del proyecto MaquiGest.
 
-| Entrega | Características del video                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Sobre el contenido | Integración y entrega |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|-----------------------|
+| Entrega | Características del video | Sobre el contenido | Integración y entrega |
+|---------|---------------------------|--------------------|-----------------------|
 | **AV1** | **Cantidad:** 1 video<br>**Enlace:** [Ver video AV1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQCYkWdlaHE1R4b1jMaRqSokAVYThGIeFB26oMbKBvlVoSU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HlscHY)<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-expo-av1`<br>**Formato:** `.mp4`<br>**Duración:** 10:56 | Video de exposición grupal correspondiente al AV1 de MaquiGest. Presenta el avance integral del proyecto hasta el Sprint 1, incluyendo Startup Profile, Solution Profile, segmentos objetivo, Requirements Elicitation & Analysis, Needfinding, User Stories, Product Backlog, Product Design, arquitectura de software, diseño e implementación de la Landing Page y las evidencias correspondientes al Sprint 1. | El video se publica en la plataforma indicada por el docente y constituye evidencia de la presentación del AV1. El material permite sustentar los artefactos desarrollados, la participación de los integrantes del equipo y los principales avances alcanzados durante el Sprint 1. |
-| **TB1** | **Cantidad:** 1 video<br>**Enlace:** [Ver video AV1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBS_QhSFlDCQ73TgpPlv3UMAR2tj58Jz9STtZKhR71Lmqo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=fdm2F6)<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-expo-tb1`<br>**Formato:** `.mp4`<br>**Duración:** 21:06 | Video de exposición grupal correspondiente al AV1 de MaquiGest. Presenta el avance integral del proyecto hasta el Sprint 2, incluyendo la web app. | El video se publica en la plataforma indicada por el docente y constituye evidencia de la presentación del AV1. El material permite sustentar los artefactos desarrollados, la participación de los integrantes del equipo y los principales avances alcanzados durante el Sprint 1. |
+| **TB1** | **Cantidad:** 1 video<br>**Enlace:** [Ver video TB1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBS_QhSFlDCQ73TgpPlv3UMAR2tj58Jz9STtZKhR71Lmqo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=fdm2F6)<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-expo-tb1`<br>**Formato:** `.mp4`<br>**Duración:** 21:06 | Video de exposición grupal correspondiente al TB1 de MaquiGest. Presenta el avance integral del proyecto hasta el Sprint 2 y Sprint 3, incluyendo la web app y el backend integrado. | El video se publica en la plataforma indicada por el docente y constituye evidencia de la presentación del TB1. El material permite sustentar los artefactos desarrollados, la participación de los integrantes del equipo y los principales avances alcanzados durante las etapas de desarrollo. |
 
 ## Anexo B. Enlaces del proyecto
 
-En este anexo se consolidan los principales recursos digitales utilizados para el desarrollo, documentación, diseño, planificación y despliegue del proyecto MaquiGest durante el AV1.
+En este anexo se consolidan los principales recursos digitales utilizados para el desarrollo, documentación, diseño, planificación y despliegue del proyecto MaquiGest.
 
-| Recurso | Descripción | Enlace                                                                                                                                                                                                                                                                                                       |
-|---------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Project Report** | Repositorio principal utilizado para la elaboración colaborativa, documentación y versionamiento del informe del proyecto MaquiGest. | [Ver Project Report](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-report)                                                                                                                                                                                                             |
-| **Landing Page Repository** | Repositorio que contiene el código fuente de la primera versión del Landing Page de MaquiGest. | [Ver Landing Page Repository](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-website)                                                                                                                                                                                                   |
-| **Landing Page Deployment** | Versión desplegada de la Landing Page correspondiente al Sprint 1. | [Ver Website](https://maquigest-cleancode.netlify.app/)                                                                                                                                                                                                                                                      |
-| **Sprint Backlog 1** | Tablero de Trello utilizado para organizar y realizar seguimiento de las User Stories, Work-items y Tasks correspondientes al Sprint 1. | [Ver Sprint Backlog 1](https://trello.com/invite/b/6aae122df20cec3612b47569/ATTI06c8d708807538ede9c79fd09c1cf6974064CD0D/sprint-backlog-1-maquigest)                                                                                                                                                         |
+| Recurso | Descripción | Enlace |
+|---------|-------------|--------|
+| **Project Report** | Repositorio principal utilizado para la elaboración colaborativa, documentación y versionamiento del informe del proyecto MaquiGest. | [Ver Project Report](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-report) |
+| **Landing Page Repository** | Repositorio que contiene el código fuente de la primera versión del Landing Page de MaquiGest. | [Ver Landing Page Repository](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-website) |
+| **Landing Page Deployment** | Versión desplegada de la Landing Page correspondiente al Sprint 1. | [Ver Website](https://maquigest-cleancode.netlify.app/) |
+| **Sprint Backlog 1** | Tablero de Trello utilizado para organizar y realizar seguimiento de las User Stories, Work-items y Tasks correspondientes al Sprint 1. | [Ver Sprint Backlog 1](https://trello.com/invite/b/6aae122df20cec3612b47569/ATTI06c8d708807538ede9c79fd09c1cf6974064CD0D/sprint-backlog-1-maquigest) |
 | **UX/UI Design** | Archivo de Figma utilizado para la elaboración de wireframes, mock-ups y demás artefactos de diseño correspondientes al Landing Page y a la Web Application de MaquiGest. | [Ver UX/UI Design](https://www.figma.com/design/McIMjVZJcJU2rWnDmTpzkx/Untitled?node-id=0-1&t=vd5Q8XMWxgOIY0yD-1) <br/><br/> [Ver Web Applications Prototyping](https://www.figma.com/design/f9SPJMQHRhr2hgH4k9Pkvu/MaquiGest-%E2%80%94-Editable-Mockups---Design-System?node-id=12-18&t=hPHwtzwSGYv7SSup-1) |
 
 ## Anexo C. Videos del proyecto
 
-En este anexo se consolidan los principales recursos audiovisuales utilizados como evidencia de investigación, prototipado y ejecución del proyecto MaquiGest durante el AV1.
+En este anexo se consolidan los principales recursos audiovisuales utilizados como evidencia de investigación, prototipado y ejecución del proyecto MaquiGest.
 
-| Tipo de video | Características del video                                                                                                                | Sobre el contenido | Enlace                                                                                                                                                                                                                                                                                                                                                                                             |
-|---|------------------------------------------------------------------------------------------------------------------------------------------|---|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Needfinding Interviews** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-needfinding-sprint-1`<br>**Formato:** `.mp4`          | Consolida las entrevistas realizadas a representantes de los segmentos objetivo de MaquiGest. Las entrevistas permitieron identificar necesidades, problemas y oportunidades relacionadas con la gestión, búsqueda y alquiler de maquinaria. | [Ver Needfinding Interviews](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxWaWV3IjoiU2hhcmVEaWFsb2ctTGluayIsInJlZmVycmFsQXBwUGxhdGZvcm0iOiJXZWIiLCJyZWZlcnJhbE1vZGUiOiJ2aWV3In19%3D&e=8aWP0C) |
-| **Prototype Navigation** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-prototype-navigation-sprint-1`<br>**Formato:** `.mp4` | Presenta la navegación del prototipo interactivo de la Web Application de MaquiGest desarrollado en Figma. El video evidencia los principales recorridos definidos para empresas de alquiler de maquinaria y empresas constructoras, mostrando la relación entre los mock-ups, User Flow Diagrams y las interacciones del prototipo. | [Ver Prototype Navigation](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAAnsDBhRKVQpR1PWOgAkTtAU7P-QO86FqFMmuM5NzuKJU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=dB05rw)                                                |
-| **Execution Evidence** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-execution-evidence-sprint-1`<br>**Formato:** `.mp4`   | Presenta la navegación por la primera versión implementada y desplegada del Landing Page de MaquiGest. El video demuestra las principales secciones y elementos interactivos desarrollados durante el Sprint 1. | [Ver Execution Evidence]( https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQB0uUoEIdV6QLDgc4fXoOq0ATW99dVOedmBYAoBwVk7ltY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8xXN6S)                                                 |
-| **Execution Evidence** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-execution-evidence-sprint-2`<br>**Formato:** `.mp4`   | Presenta la navegación por la primera versión implementada y desplegada de la web app de MaquiGest. El video demuestra las principales secciones y elementos interactivos desarrollados durante el Sprint 2. | [Ver Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAwqQi2R2InR4-YR79VFdLbASSW4f6vc-y1ZfTtdcEs0EI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=z7LdCg)                                                 |
-| **Execution Evidence** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-execution-evidence-sprint-3`<br>**Formato:** `.mp4`   | Presenta la navegación por la segunda versión implementada y desplegada de la plataforma, esta vez incluyendo el bakend. El video demuestra las principales secciones y elementos interactivos desarrollados durante el Sprint 3. | [Ver Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQCQPSedz_yQTYMZGNFGaxZzAceAU1lmkCiv5WLOBju6EDY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=oHWgfw)                                                 |
-| **About the Product** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-about-the-product-sprint-3`<br>**Formato:** `.mp4`   | Orientación promocional, resumiendo el modelo de negocio, las características y beneficios del producto,incluyendo algunas escenas de interacción con el producto y al menos una opinión por cada segmento objetivo. | [Ver About the Product](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBughACCTT3TKceHs9kcIpFAenxCJlYrLbrMUlsc3tr8lU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=bde0Am)                                                 |
-| **About the Team** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-about-the-team-sprint-3`<br>**Formato:** `.mp4`   | Video que resume el proceso de trabajo realizado, incluyendo escenas de sesiones de trabajo real del equipo. Incluye además el testimonio ante cámara de cada participante describiendo actividades realizadas, logro de outcomes y desarrollo de competencias alcanzados. | [Ver About the Team](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDciBmwDFCQTJiqSUFUREH2AZgQaN2w8Tiqz_uIjISrxBw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=2494IX)                                                 |
-| **Validation Interviews** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-about-the-team-sprint-3`<br>**Formato:** `.mp4` <br>**Formato:** `11:28`   | Consolida sesiones y entrevistas de validación en las que usuarios de los segmentos objetivo interactúen con el landing page y con los prototipos de experiencias web y mobile, manifestando sus observaciones. Para cada entrevista se debe incluir títulos con información del entrevistado, el segmento objetivo y la fecha de la entrevista | [Ver Validation Interview](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)                                                 |
+| Tipo de video | Características del video | Sobre el contenido | Enlace |
+|---|---|---|---|
+| **Needfinding Interviews** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-needfinding-sprint-1`<br>**Formato:** `.mp4` | Consolida las entrevistas realizadas a representantes de los segmentos objetivo de MaquiGest. Las entrevistas permitieron identificar necesidades, problemas y oportunidades relacionadas con la gestión, búsqueda y alquiler de maquinaria. | [Ver Needfinding Interviews](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQA5a8CNSsMpS4FCXtf1oudtAc2qhMOlDfRb31DJTwyH6q4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8aWP0C) |
+| **Prototype Navigation** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-prototype-navigation-sprint-1`<br>**Formato:** `.mp4` | Presenta la navegación del prototipo interactivo de la Web Application de MaquiGest desarrollado en Figma. El video evidencia los principales recorridos definidos para empresas de alquiler de maquinaria y empresas constructoras, mostrando la relación entre los mock-ups, User Flow Diagrams y las interacciones del prototipo. | [Ver Prototype Navigation](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAAnsDBhRKVQpR1PWOgAkTtAU7P-QO86FqFMmuM5NzuKJU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=dB05rw) |
+| **Execution Evidence** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-execution-evidence-sprint-1`<br>**Formato:** `.mp4` | Presenta la navegación por la primera versión implementada y desplegada del Landing Page de MaquiGest. El video demuestra las principales secciones y elementos interactivos desarrollados durante el Sprint 1. | [Ver Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQB0uUoEIdV6QLDgc4fXoOq0ATW99dVOedmBYAoBwVk7ltY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8xXN6S) |
+| **Execution Evidence** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-execution-evidence-sprint-2`<br>**Formato:** `.mp4` | Presenta la navegación por la primera versión implementada y desplegada de la web app de MaquiGest. El video demuestra las principales secciones y elementos interactivos desarrollados durante el Sprint 2. | [Ver Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAwqQi2R2InR4-YR79VFdLbASSW4f6vc-y1ZfTtdcEs0EI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=z7LdCg) |
+| **Execution Evidence** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-execution-evidence-sprint-3`<br>**Formato:** `.mp4` | Presenta la navegación por la segunda versión implementada y desplegada de la plataforma, esta vez incluyendo el backend. El video demuestra las principales secciones y elementos interactivos desarrollados durante el Sprint 3. | [Ver Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQCQPSedz_yQTYMZGNFGaxZzAceAU1lmkCiv5WLOBju6EDY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHAiOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=oHWgfw) |
+| **About the Product** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-about-the-product-sprint-3`<br>**Formato:** `.mp4` | Orientación promocional, resumiendo el modelo de negocio, las características y beneficios del producto, incluyendo algunas escenas de interacción con el producto y al menos una opinión por cada segmento objetivo. | [Ver About the Product](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBughACCTT3TKceHs9kcIpFAenxCJlYrLbrMUlsc3tr8lU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=bde0Am) |
+| **About the Team** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-about-the-team-sprint-3`<br>**Formato:** `.mp4` | Video que resume el proceso de trabajo realizado, incluyendo escenas de sesiones de trabajo real del equipo. Incluye además el testimonio ante cámara de cada participante describiendo actividades realizadas, logro de outcomes y desarrollo de competencias alcanzados. | [Ver About the Team](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDciBmwDFCQTJiqSUFUREH2AZgQaN2w8Tiqz_uIjISrxBw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=2494IX) |
