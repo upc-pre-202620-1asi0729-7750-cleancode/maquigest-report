@@ -1,46 +1,57 @@
-﻿@startuml
 
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+@startuml
+!include <C4/C4_Component>
+
+LAYOUT_TOP_DOWN()
 
 title MaquiGest - Subscriptions Backend Component Diagram
 
-Container(spa, "Single Page Application", "Angular", "Consumes subscription-management capabilities provided by the MaquiGest backend.")
+Container_Boundary(subscriptions, "Subscriptions Bounded Context [Java / Spring Boot]") {
 
-Container_Boundary(subscriptionsContext, "Subscriptions Bounded Context\n[Java / Spring Boot]") {
+    Boundary(interfaces_layer, "Interfaces Layer") {
+        Component(rest, "rest", "REST API Package", "Subscription plan and user subscription endpoints. Subpackages: resources, security, transform.")
+        Component(published_acl, "acl", "Published Subscription Contract", "Exposes entitlement decisions to other bounded contexts.")
+    }
 
-    Component(interfacesLayer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes endpoints for subscription plans, active subscriptions, plan changes, billing status, and subscription management.")
+    Boundary(application_layer, "Application Layer") {
+        Component(commands, "commandservices", "Application Contracts", "Defines subscription lifecycle commands.")
+        Component(queries, "queryservices", "Application Contracts", "Defines plan and user subscription queries.")
+        Component(internal_services, "internal", "Use Case Implementations", "Subpackages: commandservices, queryservices. Coordinates subscription operations.")
+        Component(ports, "ports", "Outbound Application Contract", "Defines required subscriber identity capabilities.")
+        Component(application_acl, "acl", "Subscription Facade Implementation", "Implements the published entitlement contract.")
+    }
 
-    Component(applicationLayer, "Application Layer", "Application Services / Command and Query Services", "Coordinates plan selection, subscription activation, plan changes, billing state, and subscription-related use cases.")
+    Boundary(domain_layer, "Domain Layer") {
+        Component(domain_model, "model", "Domain Model", "Subpackages: aggregates, commands, events, queries, valueobjects. Owns plan and subscription rules.")
+        Component(domain_repositories, "repositories", "Repository Contracts", "Defines plan and user subscription persistence.")
+    }
 
-    Component(domainLayer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains subscription plans, active subscriptions, billing status, and subscription-related business rules.")
-
-    Component(infrastructureLayer, "Infrastructure Layer", "Spring Data JPA / Repository Implementations", "Provides persistence implementations and technical adapters required by the Subscriptions bounded context.")
-
-    Component(paymentConnector, "Payment Connector", "Stripe SDK / REST API", "Integrates the Subscriptions bounded context with the external payment provider.")
+    Boundary(infrastructure_layer, "Infrastructure Layer") {
+        Component(jpa, "persistence.jpa", "JPA Persistence", "Subpackages: adapters, assemblers, entities, repositories. Maps and persists subscriptions.")
+        Component(jpa_seed, "persistence.jpa.seed", "Catalog Initialization", "Initializes subscription plans when the application starts.")
+        Component(iam_acl, "acl.iam", "Anti-Corruption Layer", "Adapts IAM subscriber information to the application port.")
+    }
 }
 
-Container_Ext(iamContext, "IAM Bounded Context", "Backend Context", "Provides authenticated account identity required for subscription ownership.")
+Rel(rest, commands, "Invokes commands")
+Rel(rest, queries, "Invokes queries")
 
-Container_Ext(profilesContext, "Profiles Bounded Context", "Backend Context", "Provides company and account profile information associated with subscriptions.")
+Rel(internal_services, commands, "Implements command contract")
+Rel(internal_services, queries, "Implements query contracts")
+Rel(internal_services, domain_model, "Executes subscription rules")
+Rel(internal_services, domain_repositories, "Uses repositories")
+Rel(internal_services, ports, "Requires subscriber identity")
 
-System_Ext(stripe, "Stripe", "External Payment Service", "Processes subscription payment transactions.")
+Rel(application_acl, published_acl, "Implements entitlement contract")
+Rel(application_acl, domain_repositories, "Checks subscription records")
 
-ContainerDb(database, "MaquiGest Database", "MySQL", "Stores plans, subscriptions, billing status, payment references, and subscription-related information.")
+Rel(jpa, domain_repositories, "Implements repository contracts")
+Rel(jpa_seed, jpa, "Initializes plan catalog")
+Rel(iam_acl, ports, "Implements subscriber identity port")
 
-Rel(spa, interfacesLayer, "Consumes Subscriptions services", "JSON / HTTPS")
-
-Rel(interfacesLayer, applicationLayer, "Delegates requests")
-
-Rel(applicationLayer, domainLayer, "Executes subscription domain operations")
-Rel(applicationLayer, infrastructureLayer, "Uses persistence capabilities")
-Rel(applicationLayer, paymentConnector, "Requests payment operations")
-
-Rel(applicationLayer, iamContext, "Uses authenticated account identity")
-Rel(applicationLayer, profilesContext, "Uses company profile information")
-
-Rel(paymentConnector, stripe, "Processes subscription payments", "HTTPS / API")
-
-Rel(infrastructureLayer, database, "Reads and writes Subscriptions data", "JPA / SQL")
+Lay_D(rest, commands)
+Lay_D(commands, domain_model)
+Lay_D(domain_model, jpa)
 
 SHOW_LEGEND()
 

@@ -1,36 +1,52 @@
-﻿@startuml
 
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+@startuml
+!include <C4/C4_Component>
+
+LAYOUT_TOP_DOWN()
 
 title MaquiGest - Profiles Backend Component Diagram
 
-Container(spa, "Single Page Application", "Angular", "Consumes profile-management capabilities provided by the MaquiGest backend.")
+Container_Boundary(profiles, "Profiles Bounded Context [Java / Spring Boot]") {
 
-Container_Boundary(profilesContext, "Profiles Bounded Context\n[Java / Spring Boot]") {
+    Boundary(interfaces_layer, "Interfaces Layer") {
+        Component(rest, "rest", "REST API Package", "Exposes company profile endpoints. Subpackages: resources, security, transform.")
+        Component(interface_events, "events", "Published Event Contract", "Defines integration events for company profile changes.")
+    }
 
-    Component(interfacesLayer, "Interfaces Layer", "REST Controllers / DTOs", "Exposes endpoints for user profiles, company profiles, supplier information, and profile updates.")
+    Boundary(application_layer, "Application Layer") {
+        Component(app_commands, "commandservices", "Application Services", "Defines profile commands. internal.commandservices implements the use cases.")
+        Component(app_queries, "queryservices", "Application Services", "Defines profile queries. internal.queryservices implements the use cases.")
+        Component(app_ports, "ports", "Outbound Application Contracts", "Defines the IAM company directory capabilities required by Profiles.")
+    }
 
-    Component(applicationLayer, "Application Layer", "Application Services / Command and Query Services", "Coordinates profile registration, profile updates, company information, and profile-query use cases.")
+    Boundary(domain_layer, "Domain Layer") {
+        Component(domain_model, "model", "Domain Model", "Subpackages: aggregates, commands, events, queries, valueobjects. Encapsulates company profile rules.")
+        Component(domain_repositories, "repositories", "Domain Repository Contracts", "Defines persistence operations for company profiles.")
+    }
 
-    Component(domainLayer, "Domain Layer", "Aggregates / Entities / Value Objects / Domain Services", "Contains user profile, company profile, supplier information, and profile-related business rules.")
-
-    Component(infrastructureLayer, "Infrastructure Layer", "Spring Data JPA / Repository Implementations", "Provides persistence implementations and technical adapters required by the Profiles bounded context.")
+    Boundary(infrastructure_layer, "Infrastructure Layer") {
+        Component(jpa, "persistence.jpa", "JPA Persistence", "Subpackages: adapters, assemblers, embeddables, entities, repositories.")
+        Component(iam_acl, "acl.iam", "Anti-Corruption Layer", "Adapts IAM identity information to the Profiles application port.")
+        Component(event_bridge, "events", "Integration Event Adapter", "Translates domain events into integration events after transaction commit.")
+        Component(seed, "seed", "Profile Reconciliation", "Creates missing company profiles from IAM accounts at startup and periodically.")
+    }
 }
 
-Container_Ext(iamContext, "IAM Bounded Context", "Backend Context", "Provides authenticated account identity and access information.")
+Rel(rest, app_commands, "Invokes commands")
+Rel(rest, app_queries, "Invokes queries")
 
-ContainerDb(database, "MaquiGest Database", "MySQL", "Stores user, company, supplier, and profile-related information.")
+Rel(app_commands, domain_model, "Applies domain rules")
+Rel(app_queries, domain_repositories, "Queries profiles")
 
-Rel(spa, interfacesLayer, "Consumes Profiles services", "JSON / HTTPS")
+Rel(jpa, domain_repositories, "Implements repository contract")
+Rel(iam_acl, app_ports, "Implements IAM directory port")
 
-Rel(interfacesLayer, applicationLayer, "Delegates requests")
+Rel(event_bridge, interface_events, "Publishes integration events")
+Rel(seed, app_commands, "Triggers profile reconciliation")
 
-Rel(applicationLayer, domainLayer, "Executes profile domain operations")
-Rel(applicationLayer, infrastructureLayer, "Uses persistence capabilities")
-
-Rel(applicationLayer, iamContext, "Uses authenticated account identity")
-
-Rel(infrastructureLayer, database, "Reads and writes Profiles data", "JPA / SQL")
+Lay_D(rest, app_commands)
+Lay_D(app_commands, domain_model)
+Lay_D(domain_model, jpa)
 
 SHOW_LEGEND()
 

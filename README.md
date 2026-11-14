@@ -3201,6 +3201,8 @@ De esta manera, Shared Frontend evita duplicar capacidades técnicas y visuales 
        width="90%">
 </p>
 
+
+
 #### Backend General Components Diagram
 
 El Backend General Components Diagram presenta la organización general de la MaquiGest API Application implementada con Java y Spring Boot.
@@ -3213,34 +3215,6 @@ La Single Page Application desarrollada con Angular aparece fuera del límite de
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-general-component-diagram.png"
        alt="MaquiGest Backend General Components Diagram"
        width="95%">
-</p>
-
-#### IAM Backend Component Diagram
-
-El bounded context IAM del backend administra la autenticación, autorización, credenciales, usuarios, roles y control de acceso.
-
-La Interfaces Layer expone los endpoints REST relacionados con autenticación, registro y administración de cuentas. La Application Layer coordina los casos de uso correspondientes y delega las decisiones de negocio a la Domain Layer. Por su parte, la Infrastructure Layer proporciona los mecanismos de persistencia y adaptadores técnicos necesarios.
-
-Las capacidades relacionadas con seguridad son proporcionadas mediante mecanismos como Spring Security, codificación de contraseñas y autenticación basada en tokens. Además, este contexto puede comunicarse con el servicio externo de correo transaccional para soportar operaciones como recuperación de contraseña y notificaciones relacionadas con la cuenta.
-
-<p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-iam-component-diagram.png"
-       alt="MaquiGest IAM Backend Component Diagram"
-       width="90%">
-</p>
-
-#### Profiles Backend Component Diagram
-
-El bounded context Profiles del backend administra la información correspondiente a usuarios, empresas, proveedores y clientes.
-
-La Interfaces Layer expone los endpoints REST relacionados con perfiles. La Application Layer coordina operaciones de registro, actualización de perfiles, gestión de información empresarial y consultas.
-
-La Domain Layer contiene los conceptos y reglas de negocio relacionados con los perfiles, mientras que la Infrastructure Layer proporciona las implementaciones de repositorios y mecanismos de persistencia. Profiles también colabora con IAM para identificar la cuenta autenticada asociada con cada perfil.
-
-<p align="center">
-  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-profiles-component-diagram.png"
-       alt="MaquiGest Profiles Backend Component Diagram"
-       width="90%">
 </p>
 
 #### Inventory Backend Component Diagram
@@ -3305,385 +3279,550 @@ Este bounded context utiliza IAM para identificar la cuenta autenticada y Profil
        width="90%">
 </p>
 
+#### IAM Backend Component Diagram
+
+El bounded context IAM del backend administra la autenticación, autorización, credenciales, usuarios, roles y control de acceso.
+
+La Interfaces Layer expone los endpoints REST relacionados con autenticación, registro y administración de cuentas. La Application Layer coordina los casos de uso correspondientes y delega las decisiones de negocio a la Domain Layer. Por su parte, la Infrastructure Layer proporciona los mecanismos de persistencia y adaptadores técnicos necesarios.
+
+Las capacidades relacionadas con seguridad son proporcionadas mediante mecanismos como Spring Security, codificación de contraseñas y autenticación basada en tokens. Además, este contexto puede comunicarse con el servicio externo de correo transaccional para soportar operaciones como recuperación de contraseña y notificaciones relacionadas con la cuenta.
+
+<p align="center">
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-iam-component-diagram.png"
+       alt="MaquiGest IAM Backend Component Diagram"
+       width="90%">
+</p>
+
+#### Profiles Backend Component Diagram
+
+El bounded context Profiles del backend administra la información correspondiente a usuarios, empresas, proveedores y clientes.
+
+La Interfaces Layer expone los endpoints REST relacionados con perfiles. La Application Layer coordina operaciones de registro, actualización de perfiles, gestión de información empresarial y consultas.
+
+La Domain Layer contiene los conceptos y reglas de negocio relacionados con los perfiles, mientras que la Infrastructure Layer proporciona las implementaciones de repositorios y mecanismos de persistencia. Profiles también colabora con IAM para identificar la cuenta autenticada asociada con cada perfil.
+
+<p align="center">
+  <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-profiles-component-diagram.png"
+       alt="MaquiGest Profiles Backend Component Diagram"
+       width="90%">
+</p>
+
 ## 4.7. Software Object-Oriented Design
+
 
 ### 4.7.1. Class Diagrams
 
+Los diagramas de clases de MaquiGest presentan la estructura interna de los Bounded Contexts de la plataforma, siguiendo los principios de Domain-Driven Design (DDD), Clean Architecture y separación de responsabilidades.
+
+Para facilitar su comprensión, los diagramas se organizan en cuatro capas: Domain, Application, Infrastructure e Interfaces. Cada capa cuenta con una vista general y, cuando corresponde, diagramas complementarios que detallan agregados, dependencias entre paquetes y componentes específicos de implementación.
+
 ## Inventory
+
 ### A. Domain Layer
 
-![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-domain.png)
+![Class Diagram — Inventory Domain](./assets/md-images-chapter4/inventory-domain.png)
 
-Explicación del Proceso:
-La capa de dominio contiene el agregado raíz Equipment, el cual encapsula la lógica pura de la maquinaria. Equipment se relaciona con EquipmentCategory para su clasificación, utiliza el Value Object RentalRate para definir costos y gestiona bloques de indisponibilidad mediante AvailabilityBlock y DateRange.
+**Explicación del Proceso:** Representa el dominio de Inventory mediante el agregado `Equipment`, sus entidades, Value Objects, eventos y contratos de repositorio.
 
-Conexión de la Capa:
-Las entidades del dominio declaran los puertos de persistencia (interfaces EquipmentRepository y EquipmentCategoryRepository). Estas interfaces pertenecen al dominio para cumplir con el principio de Inversión de Dependencias (DIP).
+**Conexión de la Capa:** Domain concentra las reglas de negocio relacionadas con los equipos y su disponibilidad, manteniéndose independiente de las tecnologías de persistencia.
+
+#### A.1. Equipment Aggregate
+
+![Class Diagram — Inventory Domain Equipment Aggregate](./assets/md-images-chapter4/inventory-domain-equipment-agreggate.png)
+
+**Descripción:** Detalla `Equipment` como Aggregate Root, sus atributos, operaciones, Value Objects, estados y reglas de disponibilidad.
 
 ### B. Application Layer
 
-![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-application.png)
+![Class Diagram — Inventory Application](./assets/md-images-chapter4/inventory-application.png)
 
-Explicación del Proceso:
-Contiene la clase InventoryApplicationService, responsable de coordinar los casos de uso como el registro de maquinaria (RegisterEquipmentCommand) y la verificación de disponibilidad para constructoras.
+**Explicación del Proceso:** Presenta los servicios de comandos y consultas que coordinan la gestión de equipos, categorías y disponibilidad.
 
-Conexión de la Capa:
-InventoryApplicationService recibe llamadas desde la capa de Interfaces e interactúa directamente con el dominio invocando los métodos declarados en EquipmentRepository.
+**Conexión de la Capa:** Application implementa los casos de uso mediante los contratos de Domain, separando las operaciones de lectura y escritura.
 
 ### C. Infrastructure Layer
 
-![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-infrastructure.png)
+![Class Diagram — Inventory Infrastructure](./assets/md-images-chapter4/inventory-infrastructure.png)
 
-Explicación del Proceso:
-Implementa el acceso a datos mediante Spring Data JPA (EquipmentRepositoryImpl y EquipmentCategoryRepositoryImpl).
+**Explicación del Proceso:** Presenta los principales componentes de persistencia, adaptadores e integración utilizados por Inventory.
 
-Conexión de la Capa:
-Se conecta con la Capa de Dominio mediante una relación de Realización/Implementación de las interfaces de repositorio (EquipmentRepository), traduciendo los Value Objects del dominio a tablas de MySQL.
+**Conexión de la Capa:** Infrastructure implementa los contratos definidos por las capas internas y proporciona acceso a la base de datos.
+
+#### C.1. Infrastructure Packages
+
+![Class Diagram — Inventory Infrastructure Packages](./assets/md-images-chapter4/inventory-infrastructure-packages.png)
+
+**Descripción:** Muestra la organización de los paquetes de infraestructura y las dependencias entre sus componentes.
+
+#### C.2. Infrastructure Persistence
+
+![Class Diagram — Inventory Infrastructure Persistence](./assets/md-images-chapter4/inventory-infrastructure-persistence.png)
+
+**Descripción:** Detalla las entidades JPA, repositorios, assemblers y adaptadores responsables de la persistencia de equipos y disponibilidad.
 
 ### D. Interfaces Layer
 
-![Class Diagram — Inventory](./assets/md-images-chapter4/inventory-interfaces.png)
+![Class Diagram — Inventory Interfaces](./assets/md-images-chapter4/inventory-interfaces.png)
 
-Explicación del Proceso:
-A través de InventoryController, expone los endpoints HTTP REST que reciben las solicitudes JSON del cliente Web Angular.
+**Explicación del Proceso:** Presenta los controladores REST, recursos, transformadores y contratos de integración del contexto.
 
-Conexión de la Capa:
-Transforma las peticiones HTTP en objetos Command (ej. RegisterEquipmentCommand) y los envía a InventoryApplicationService.
+**Conexión de la Capa:** Interfaces procesa solicitudes externas y delega las operaciones correspondientes a los servicios de Application.
+
+#### D.1. Interfaces Packages
+
+![Class Diagram — Inventory Interfaces Packages](./assets/md-images-chapter4/inventory-interfaces-packages.png)
+
+**Descripción:** Representa la estructura de paquetes de Interfaces y las dependencias entre REST, recursos, transformadores e integración.
+
+#### D.2. Interfaces REST
+
+![Class Diagram — Inventory Interfaces REST](./assets/md-images-chapter4/inventory-interfaces-rest.png)
+
+**Descripción:** Detalla los controladores REST, los modelos de entrada y salida y los transformadores utilizados en las operaciones HTTP.
+
+#### D.3. Interfaces ACL
+
+![Class Diagram — Inventory Interfaces ACL](./assets/md-images-chapter4/inventory-interfaces-acl.png)
+
+**Descripción:** Presenta los contratos de integración publicados por Inventory para facilitar la comunicación con otros Bounded Contexts.
 
 ## Rentals
-### A. Domain Layer
-
-![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-domain.png)
-
-Explicación del Proceso:
-Nace con el agregado RentalRequest en estado PENDING. Al aprobarse, genera la entidad RentalContract, que a su vez se compone de las entidades de seguimiento Delivery y EquipmentReturn.
-
-Conexión de la Capa:
-Declara los repositorios del dominio (RentalRequestRepository, RentalContractRepository, EquipmentReturnRepository, DeliveryRepository) y el puerto de integración InventoryAvailabilityPort para validar disponibilidad.
-
-### B. Application Layer
-
-![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-application.png)
-
-Explicación del Proceso:
-RentalApplicationService orquesta las transacciones operativas: responder solicitudes (acceptRequest), registrar la entrega física en obra (registerDelivery) y procesar la devolución del equipo (registerReturn).
-
-Conexión de la Capa:
-Conecta las peticiones de interfaz con el dominio utilizando los repositorios e invocando el adaptador de disponibilidad hacia el contexto de Inventory.
-
-### C. Infrastructure Layer
-
-![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-infrastructure.png)
-
-Explicación del Proceso:
-Proporciona las clases concretas que implementan los repositorios JPA e incluye el adaptador InventoryAvailabilityAdapter.
-
-Conexión de la Capa:
-Implementa las interfaces definidas en la capa de aplicación/dominio para realizar consultas en la base de datos MySQL.
-
-### D. Interfaces Layer
-
-![Class Diagram — Rentals](./assets/md-images-chapter4/rentals-interfaces.png)
-
-Explicación del Proceso:
-RentalsController gestiona las rutas REST para la creación y cambio de estado de los alquileres.
-
-Conexión de la Capa:
-Invoca los métodos expuestos por RentalApplicationService mapeando las respuestas a objetos DTO Response.
-
-#### Maintenance
 
 ### A. Domain Layer
 
+![Class Diagram — Rentals Domain](./assets/md-images-chapter4/rentals-domain.png)
 
-![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-domain.png)
+**Explicación del Proceso:** Representa los agregados `RentalRequest` y `Rental`, las entidades `Delivery` y `EquipmentReturn`, sus Value Objects, eventos y repositorios.
 
+**Conexión de la Capa:** Domain establece las reglas de negocio del ciclo de alquiler, desde la solicitud hasta su finalización.
 
-Explicación del Proceso:
+#### A.1. Rental Aggregate
 
-Agrupa los agregados Incident (reportes de fallas) y MaintenanceRecord
-(reparaciones preventivas y correctivas).
+![Class Diagram — Rentals Domain Rental Aggregate](./assets/md-images-chapter4/rentals-domain-rental-agreggate.png)
 
-
-Conexión de la Capa:
-
-Un Incident en estado no resuelto se relaciona con un MaintenanceRecord.
-Declara la interfaz EquipmentStatusPort para notificar al contexto de
-inventario cuando una máquina entra a taller.
-
+**Descripción:** Detalla el agregado `Rental`, su periodo, participantes, estados y referencias a los registros de entrega y devolución.
 
 ### B. Application Layer
 
+![Class Diagram — Rentals Application](./assets/md-images-chapter4/rentals-application.png)
 
-![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-application.png)
+**Explicación del Proceso:** Representa los servicios y ejecutores transaccionales que coordinan solicitudes, alquileres, entregas y devoluciones.
 
-
-Explicación del Proceso:
-
-MaintenanceApplicationService ejecuta los comandos de reporte de averías
-(reportIncident), programación de mantenimientos (scheduleMaintenance) y cierre
-técnico (completeMaintenance).
-
-
-Conexión de la Capa:
-
-Llama a los repositorios de mantenimiento e informa a través de
-EquipmentStatusPort para cambiar el estado de la máquina a UNDER_MAINTENANCE.
-
+**Conexión de la Capa:** Application ejecuta los casos de uso mediante los contratos de Domain y los puertos de integración con otros contextos.
 
 ### C. Infrastructure Layer
 
+![Class Diagram — Rentals Infrastructure](./assets/md-images-chapter4/rentals-infrastructure.png)
 
-![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-infrastructure.png)
+**Explicación del Proceso:** Presenta los componentes de persistencia JPA, adaptadores ACL y mecanismos de publicación de eventos.
 
+**Conexión de la Capa:** Infrastructure implementa los repositorios y puertos requeridos por Application, manteniendo desacoplado el dominio.
 
-Explicación del Proceso:
+#### C.1. Infrastructure Packages
 
-Contiene IncidentRepositoryImpl, MaintenanceRecordRepositoryImpl y el adaptador
-InventoryEquipmentStatusAdapter.
+![Class Diagram — Rentals Infrastructure Packages](./assets/md-images-chapter4/rentals-infrastructure-packages.png)
 
+**Descripción:** Representa la organización de los paquetes de persistencia, integración y eventos, junto con sus dependencias principales.
 
-Conexión de la Capa:
+#### C.2. Infrastructure Persistence
 
-Conecta las llamadas de actualización de estado hacia la base de datos e
-interactúa con el módulo de inventario.
+![Class Diagram — Rentals Infrastructure Persistence](./assets/md-images-chapter4/rentals-infrastructure-persistence.png)
 
+**Descripción:** Detalla las entidades JPA, repositorios, assemblers y adaptadores utilizados para almacenar solicitudes, alquileres, entregas y devoluciones.
 
 ### D. Interfaces Layer
 
+![Class Diagram — Rentals Interfaces](./assets/md-images-chapter4/rentals-interfaces.png)
 
-![Class Diagram — Maintenance](./assets/md-images-chapter4/maintenance-interfaces.png)
+**Explicación del Proceso:** Presenta los controladores REST, recursos, transformadores, contratos de integración y componentes de autorización del contexto.
 
+**Conexión de la Capa:** Interfaces transforma las solicitudes HTTP en operaciones de Application y expone las funcionalidades de alquiler.
 
-Explicación del Proceso:
+#### D.1. Interfaces Packages
 
-MaintenanceController mapea los endpoints de gestión de taller técnico.
+![Class Diagram — Rentals Interfaces Packages](./assets/md-images-chapter4/rentals-interfaces-packages.png)
 
+**Descripción:** Muestra la distribución de los paquetes de Interfaces y sus dependencias relacionadas con REST, recursos, integración y autorización.
 
-Conexión de la Capa:
+#### D.2. Interfaces REST
 
-Envía las acciones del cliente Web a MaintenanceApplicationService.
+![Class Diagram — Rentals Interfaces REST](./assets/md-images-chapter4/rentals-interfaces-rest.png)
 
-#### Subscription
+**Descripción:** Detalla los controladores REST, recursos y transformadores utilizados en la gestión HTTP de solicitudes, alquileres, entregas y devoluciones.
+
+#### D.3. Interfaces Security
+
+![Class Diagram — Rentals Interfaces Security](./assets/md-images-chapter4/rentals-interfaces-security.png)
+
+**Descripción:** Representa la política `RentalActorPolicy` y sus dependencias para identificar y validar los actores que participan en las operaciones de alquiler.
+
+## Maintenance
 
 ### A. Domain Layer
 
+![Class Diagram — Maintenance Domain](./assets/md-images-chapter4/maintenance-domain.png)
 
-![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-domain.png)
+**Explicación del Proceso:** Representa los agregados `Incident` y `Maintenance`, la entidad `MaintenanceActivity`, sus Value Objects, eventos y repositorios.
 
+**Conexión de la Capa:** Domain establece las reglas para registrar incidentes, gestionar mantenimientos y realizar el seguimiento de las actividades.
 
-Explicación del Proceso:
+#### A.1. Incident Aggregate
 
-Contiene el plan de suscripción SubscriptionPlan y la suscripción del usuario
-UserSubscription vinculada mediante el Value Object DateRange. (Asegurarse de
-conectar el Enum BillingCycle con una línea hacia SubscriptionPlan y utilizar
-el tipo de dato Boolean para autoRenew).
+![Class Diagram — Maintenance Domain Incident Aggregate](./assets/md-images-chapter4/maintenance-domain-incident-agreggate.png)
 
+**Descripción:** Detalla el agregado `Incident`, sus atributos, estados, restricciones de alquiler, Value Objects e invariantes.
 
-Conexión de la Capa:
+#### A.2. Maintenance Aggregate
 
-Declara las interfaces UserSubscriptionRepository, SubscriptionPlanRepository y
-el puerto de pasarela de pago PaymentConnector.
+![Class Diagram — Maintenance Domain Maintenance Aggregate](./assets/md-images-chapter4/maintenance-domain-maintenance-agreggate.png)
 
+**Descripción:** Presenta el agregado `Maintenance`, sus estados, información del técnico, fechas y relación con las actividades de mantenimiento.
 
 ### B. Application Layer
 
+![Class Diagram — Maintenance Application](./assets/md-images-chapter4/maintenance-application.png)
 
-![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-application.png)
+**Explicación del Proceso:** Presenta los servicios, ejecutores transaccionales y puertos que coordinan las operaciones de incidentes y mantenimientos.
 
+**Conexión de la Capa:** Application organiza los casos de uso mediante Domain y los contratos de integración con Inventory, Rentals y Subscriptions.
 
-Explicación del Proceso:
+#### B.1. Application Commands
 
-SubscriptionApplicationService coordina la selección de planes y la facturación
-recurrente de los usuarios.
+![Class Diagram — Maintenance Application Commands](./assets/md-images-chapter4/maintenance-application-commands.png)
 
+**Descripción:** Detalla los comandos y servicios responsables de ejecutar operaciones que modifican el estado de incidentes y mantenimientos.
 
-Conexión de la Capa:
+#### B.2. Application Queries
 
-Utiliza los repositorios de dominio y delega el cobro al puerto
-PaymentConnector.
+![Class Diagram — Maintenance Application Queries](./assets/md-images-chapter4/maintenance-application-queries.png)
 
+**Descripción:** Presenta las consultas, servicios de lectura y modelos de respuesta utilizados para recuperar información de mantenimiento.
 
 ### C. Infrastructure Layer
 
+![Class Diagram — Maintenance Infrastructure](./assets/md-images-chapter4/maintenance-infrastructure.png)
 
-![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-infrastructure.png)
+**Explicación del Proceso:** Representa los componentes de persistencia, integración y publicación de eventos del contexto.
 
+**Conexión de la Capa:** Infrastructure implementa los contratos técnicos necesarios para almacenar información y comunicarse con otros Bounded Contexts.
 
-Explicación del Proceso:
+#### C.1. Infrastructure Packages
 
-Contiene las implementaciones JPA y el adaptador externo
-StripePaymentConnector.
+![Class Diagram — Maintenance Infrastructure Packages](./assets/md-images-chapter4/maintenance-infrastructure-packages.png)
 
+**Descripción:** Muestra los paquetes de infraestructura y sus dependencias, incluyendo persistencia, integración y eventos.
 
-Conexión de la Capa:
+#### C.2. Infrastructure Persistence
 
-Realiza la integración de pagos con servicios de terceros y persiste el estado
-de la suscripción.
+![Class Diagram — Maintenance Infrastructure Persistence](./assets/md-images-chapter4/maintenance-infrastructure-persistence.png)
 
+**Descripción:** Detalla las entidades JPA, repositorios, assemblers y adaptadores utilizados para persistir incidentes, mantenimientos y actividades.
+
+#### C.3. Infrastructure ACL
+
+![Class Diagram — Maintenance Infrastructure ACL](./assets/md-images-chapter4/maintenance-infrastructure-acl.png)
+
+**Descripción:** Presenta los adaptadores ACL responsables de integrar Maintenance con los servicios de otros Bounded Contexts.
+
+#### C.4. Infrastructure Events
+
+![Class Diagram — Maintenance Infrastructure Events](./assets/md-images-chapter4/maintenance-infrastructure-events.png)
+
+**Descripción:** Representa los componentes encargados de gestionar la publicación y propagación de eventos relacionados con el mantenimiento.
 
 ### D. Interfaces Layer
 
+![Class Diagram — Maintenance Interfaces](./assets/md-images-chapter4/maintenance-interfaces.png)
 
-![Class Diagram — Subscription](./assets/md-images-chapter4/subscription-interfaces.png)
+**Explicación del Proceso:** Presenta los controladores REST, recursos, transformadores, manejo de errores y eventos del contexto.
 
+**Conexión de la Capa:** Interfaces expone las funcionalidades de Maintenance y delega la ejecución de los casos de uso a Application.
 
-Explicación del Proceso:
+#### D.1. Interfaces Packages
 
-SubscriptionController expone las llamadas de selección, cambio o cancelación
-de planes.
+![Class Diagram — Maintenance Interfaces Packages](./assets/md-images-chapter4/maintenance-interfaces-packages.png)
 
+**Descripción:** Muestra la organización de los paquetes de Interfaces y las dependencias entre los componentes REST y de integración.
 
-Conexión de la Capa:
+#### D.2. Interfaces REST
 
-Envía las peticiones REST a SubscriptionApplicationService.
+![Class Diagram — Maintenance Interfaces REST](./assets/md-images-chapter4/maintenance-interfaces-rest.png)
 
-#### IAM
+**Descripción:** Detalla los controladores, recursos y transformadores que permiten registrar, consultar y actualizar incidentes y mantenimientos.
+
+#### D.3. Interfaces Events
+
+![Class Diagram — Maintenance Interfaces Events](./assets/md-images-chapter4/maintenance-interfaces-events.png)
+
+**Descripción:** Presenta los eventos expuestos por el contexto para comunicar cambios relevantes a otros componentes de la plataforma.
+
+## Subscription
 
 ### A. Domain Layer
 
+![Class Diagram — Subscription Domain](./assets/md-images-chapter4/subscription-domain.png)
 
-![Class Diagram — IAM](./assets/md-images-chapter4/iam-domain.png)
+**Explicación del Proceso:** Representa los agregados SubscriptionPlan y UserSubscription, junto con sus Value Objects, eventos y contratos de repositorio.
 
+**Conexión de la Capa:** Domain define las reglas del catálogo de planes y del ciclo de vida de las suscripciones.
 
-Explicación del Proceso:
+#### A.1. SubscriptionPlan Aggregate
 
-La entidad raíz User se compone del Value Object Credentials (correo y hash de
-contraseña) y gestiona los permisos con UserRole. (Verificar que UserRole y
-UserStatus estén conectados explícitamente a User).
+![Class Diagram — Subscription Domain SubscriptionPlan Aggregate](./assets/md-images-chapter4/subscription-domain-subscription-plan-agreggate.png)
 
+**Descripción:** Detalla el agregado `SubscriptionPlan`, su precio, ciclo de facturación, estado, beneficios y Value Objects asociados.
 
-Conexión de la Capa:
+#### A.2. UserSubscription Aggregate
 
-Declara UserRepository para la búsqueda y registro seguro de cuentas.
+![Class Diagram — Subscription Domain UserSubscription Aggregate](./assets/md-images-chapter4/subscription-domain-user-subscription-agreggate.png)
 
+**Descripción:** Presenta el agregado `UserSubscription`, su periodo, plan seleccionado, estado y operaciones de modificación o cancelación.
 
 ### B. Application Layer
 
+![Class Diagram — Subscription Application](./assets/md-images-chapter4/subscription-application.png)
 
-![Class Diagram — IAM](./assets/md-images-chapter4/iam-application.png)
+**Explicación del Proceso:** Presenta los servicios de comandos y consultas, puertos de integración y modelos de lectura utilizados para gestionar suscripciones.
 
+**Conexión de la Capa:** Application coordina los casos de uso mediante Domain y utiliza los puertos necesarios para integrarse con IAM.
 
-Explicación del Proceso:
+#### B.1. Application Packages
 
-AuthenticationService ejecuta la lógica de autenticación, generación de tokens
-SessionToken y validación de credenciales.
+![Class Diagram — Subscription Application Packages](./assets/md-images-chapter4/subscription-application-packages.png)
 
-
-Conexión de la Capa:
-
-Consulta UserRepository para validar el correo y la contraseña cifrada.
-
+**Descripción:** Representa la distribución de los paquetes de comandos, consultas, servicios, puertos y modelos de lectura, junto con sus dependencias.
 
 ### C. Infrastructure Layer
 
+![Class Diagram — Subscription Infrastructure](./assets/md-images-chapter4/subscription-infrastructure.png)
 
-![Class Diagram — IAM](./assets/md-images-chapter4/iam-infrastructure.png)
+**Explicación del Proceso:** Presenta la persistencia JPA, inicialización de planes y adaptadores de integración con IAM.
 
+**Conexión de la Capa:** Infrastructure implementa los contratos de persistencia y los puertos requeridos por las capas internas.
 
-Explicación del Proceso:
+#### C.1. Infrastructure Packages
 
-UserRepositoryImpl implementa la persistencia de los usuarios mediante JPA.
+![Class Diagram — Subscription Infrastructure Packages](./assets/md-images-chapter4/subscription-infrastructure-packages.png)
 
+**Descripción:** Muestra la organización de los paquetes de infraestructura y las dependencias entre persistencia, inicialización e integración.
 
-Conexión de la Capa:
+#### C.2. Infrastructure Persistence
 
-Conecta las operaciones de la aplicación con la tabla de usuarios en la base de
-datos.
+![Class Diagram — Subscription Infrastructure Persistence](./assets/md-images-chapter4/subscription-infrastructure-persistence.png)
 
+**Descripción:** Detalla las entidades JPA, repositorios, assemblers y adaptadores utilizados para persistir planes y suscripciones.
 
 ### D. Interfaces Layer
 
+![Class Diagram — Subscription Interfaces](./assets/md-images-chapter4/subscription-interfaces.png)
 
-![Class Diagram — IAM](./assets/md-images-chapter4/iam-interfaces.png)
+**Explicación del Proceso:** Presenta los controladores REST, recursos, transformadores y contratos publicados por Subscriptions.
 
+**Conexión de la Capa:** Interfaces comunica las solicitudes externas con Application y permite exponer información de suscripciones a otros contextos.
 
-Explicación del Proceso:
+#### D.1. Interfaces Packages
 
-IAMController maneja los endpoints de /register, /login y /logout.  
+![Class Diagram — Subscription Interfaces Packages](./assets/md-images-chapter4/subscription-interfaces-packages.png)
 
+**Descripción:** Representa la estructura de los paquetes de Interfaces y sus dependencias con los servicios de Application.
 
-Conexión de la Capa:
+#### D.2. Interfaces REST
 
-Recibe RegisterUserCommand o LoginCommand y los procesa con
-AuthenticationService.
+![Class Diagram — Subscription Interfaces REST](./assets/md-images-chapter4/subscription-interfaces-rest.png)
 
-#### Profiles
+**Descripción:** Detalla los controladores REST, modelos de entrada y salida y transformadores utilizados en las operaciones de planes y suscripciones.
+
+## IAM
 
 ### A. Domain Layer
 
+![Class Diagram — IAM Domain](./assets/md-images-chapter4/iam-domain.png)
 
-![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-domain.png)
+**Explicación del Proceso:** Representa `User` como Aggregate Root, `Role` como entidad de catálogo y los Value Objects asociados a identidad, credenciales y estados.
 
+**Conexión de la Capa:** Domain define las reglas de identidad, usuarios y roles mediante un modelo independiente de las tecnologías de autenticación.
 
-Explicación del Proceso:
+#### A.1. User Aggregate
 
-CompanyProfile almacena los datos de la organización e integra el Value Object
-Address con coordenadas geográficas GeoCoordinates para la localización.
-ProviderProfile extiende el perfil para las empresas de alquiler con métricas
-de reputación. (Conectar los Enums CompanyType directamente con la entidad).
+![Class Diagram — IAM Domain User Aggregate](./assets/md-images-chapter4/iam-domain-user-aggregate.png)
 
-
-Conexión de la Capa:
-
-Declara CompanyProfileRepository y ProviderProfileRepository.
-
+**Descripción:** Detalla el agregado `User`, sus credenciales, roles, estados, operaciones y Value Objects asociados.
 
 ### B. Application Layer
 
+![Class Diagram — IAM Application](./assets/md-images-chapter4/iam-application.png)
 
-![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-application.png)
+**Explicación del Proceso:** Presenta los servicios de registro, autenticación, gestión de usuarios y roles, junto con los puertos de aplicación.
 
-
-Explicación del Proceso:
-
-ProfileApplicationService orquesta la creación y actualización de perfiles de
-empresa y de proveedores.
-
-
-Conexión de la Capa:
-
-Transforma los datos enviados por la interfaz e invoca a los repositorios de
-dominio.
-
+**Conexión de la Capa:** Application coordina las reglas de Domain y utiliza contratos para acceder a los mecanismos de autenticación e identidad.
 
 ### C. Infrastructure Layer
 
+![Class Diagram — IAM Infrastructure](./assets/md-images-chapter4/iam-infrastructure.png)
 
-![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-infrastructure.png)
+**Explicación del Proceso:** Presenta los componentes técnicos de autenticación, persistencia JPA y adaptación de repositorios.
 
+**Conexión de la Capa:** Infrastructure implementa los mecanismos necesarios para autenticar usuarios y persistir información de identidad.
 
-Explicación del Proceso:
+#### C.1. Infrastructure Packages
 
-Implementa los repositorios de perfiles con JPA.
+![Class Diagram — IAM Infrastructure Packages](./assets/md-images-chapter4/iam-infrastructure-packages.png)
 
+**Descripción:** Representa la organización de los paquetes de infraestructura y sus dependencias relacionadas con autenticación y persistencia.
 
-Conexión de la Capa:
+#### C.2. Infrastructure Persistence
 
-Guarda la información de las empresas en la base de datos.
+![Class Diagram — IAM Infrastructure Persistence](./assets/md-images-chapter4/iam-infrastructure-persistence.png)
 
+**Descripción:** Detalla las entidades JPA, repositorios, assemblers y adaptadores utilizados para persistir usuarios y roles.
+
+#### C.3. Infrastructure Authentication
+
+![Class Diagram — IAM Infrastructure Authentication](./assets/md-images-chapter4/iam-infrastructure-authentication.png)
+
+**Descripción:** Presenta los componentes de Spring Security, JWT y BCrypt utilizados para la autenticación y gestión segura de credenciales.
 
 ### D. Interfaces Layer
 
+![Class Diagram — IAM Interfaces](./assets/md-images-chapter4/iam-interfaces.png)
 
-![Class Diagram — Profiles](./assets/md-images-chapter4/profiles-interfaces.png)
+**Explicación del Proceso:** Presenta los controladores REST, recursos, transformadores y contratos de integración publicados por IAM.
 
+**Conexión de la Capa:** Interfaces expone las funcionalidades de identidad y autenticación, manteniendo encapsulado el modelo interno del contexto.
 
-Explicación del Proceso:
+#### D.1. Interfaces Packages
 
-ProfilesController gestiona los endpoints REST de lectura y actualización de
-perfiles.
+![Class Diagram — IAM Interfaces Packages](./assets/md-images-chapter4/iam-interfaces-packages.png)
 
+**Descripción:** Muestra la organización de los paquetes de Interfaces y sus dependencias relacionadas con REST e integración entre contextos.
 
-Conexión de la Capa:
+#### D.2. Interfaces REST
 
-Pasa los Comandos DTO a ProfileApplicationService.
+![Class Diagram — IAM Interfaces REST](./assets/md-images-chapter4/iam-interfaces-rest.png)
+
+**Descripción:** Detalla los controladores REST, recursos y transformadores utilizados en los procesos de registro, autenticación y consulta de usuarios.
+
+#### D.3. Interfaces ACL
+
+![Class Diagram — IAM Interfaces ACL](./assets/md-images-chapter4/iam-interfaces-acl.png)
+
+**Descripción:** Presenta los contratos publicados por IAM para proporcionar información de identidad a otros Bounded Contexts.
+
+## Profiles
+
+### A. Domain Layer
+
+![Class Diagram — Profiles Domain](./assets/md-images-chapter4/profiles-domain.png)
+
+**Explicación del Proceso:** Representa `CompanyProfile` como Aggregate Root, junto con sus Value Objects, eventos y contrato de repositorio.
+
+**Conexión de la Capa:** Domain concentra las reglas relacionadas con la información empresarial y mantiene el modelo desacoplado de la persistencia.
+
+#### A.1. CompanyProfile Aggregate
+
+![Class Diagram — Profiles Domain CompanyProfile Aggregate](./assets/md-images-chapter4/profiles-domain-company-profile-aggregate.png)
+
+**Descripción:** Detalla el agregado `CompanyProfile`, sus atributos de identidad empresarial, contacto, dirección y Value Objects asociados.
+
+### B. Application Layer
+
+![Class Diagram — Profiles Application](./assets/md-images-chapter4/profiles-application.png)
+
+**Explicación del Proceso:** Presenta los servicios de comandos y consultas que coordinan la creación, actualización y recuperación de perfiles empresariales.
+
+**Conexión de la Capa:** Application gestiona los casos de uso de Profiles y utiliza contratos de integración con IAM.
+
+### C. Infrastructure Layer
+
+![Class Diagram — Profiles Infrastructure](./assets/md-images-chapter4/profiles-infrastructure.png)
+
+**Explicación del Proceso:** Presenta los componentes de persistencia JPA, integración con IAM, reconciliación de perfiles y publicación de eventos.
+
+**Conexión de la Capa:** Infrastructure implementa los contratos técnicos que permiten almacenar perfiles y comunicarse con otros contextos.
+
+#### C.1. Infrastructure Packages
+
+![Class Diagram — Profiles Infrastructure Packages](./assets/md-images-chapter4/profiles-infrastructure-packages.png)
+
+**Descripción:** Muestra la organización de los paquetes de persistencia e integración y sus dependencias principales.
+
+#### C.2. Infrastructure Persistence
+
+![Class Diagram — Profiles Infrastructure Persistence](./assets/md-images-chapter4/profiles-infrastructure-persistence.png)
+
+**Descripción:** Detalla las entidades JPA, repositorios, assemblers y adaptadores utilizados para almacenar información de perfiles empresariales.
+
+#### C.3. Infrastructure Integration
+
+![Class Diagram — Profiles Infrastructure Integration](./assets/md-images-chapter4/profiles-infrastructure-integration.png)
+
+**Descripción:** Presenta los adaptadores y componentes responsables de sincronizar información de identidad y perfiles mediante integración con IAM.
+
+### D. Interfaces Layer
+
+![Class Diagram — Profiles Interfaces](./assets/md-images-chapter4/profiles-interfaces.png)
+
+**Explicación del Proceso:** Presenta los controladores REST, recursos, transformadores y componentes de integración del contexto.
+
+**Conexión de la Capa:** Interfaces recibe solicitudes relacionadas con perfiles empresariales y delega su procesamiento a Application.
+
+#### D.1. Interfaces Packages
+
+![Class Diagram — Profiles Interfaces Packages](./assets/md-images-chapter4/profiles-interfaces-package.png)
+
+**Descripción:** Representa la estructura de los paquetes de Interfaces y las relaciones entre componentes REST y eventos.
+
+#### D.2. Interfaces REST
+
+![Class Diagram — Profiles Interfaces REST](./assets/md-images-chapter4/profiles-interfaces-rest.png)
+
+**Descripción:** Detalla los controladores, recursos y transformadores utilizados para crear, consultar y actualizar perfiles empresariales.
+
+#### D.3. Interfaces Events
+
+![Class Diagram — Profiles Interfaces Events](./assets/md-images-chapter4/profiles-interfaces-events.png)
+
+**Descripción:** Presenta los eventos expuestos por Profiles para comunicar cambios relevantes en la información empresarial.
 
 ## 4.8. Database Design
 
 ### 4.8.1. Database Diagrams
 
-![Database Diagram — Subscription](./assets/md-images-chapter4/database-diagram.png)
+#### General Database Diagram
+![General Database Diagram](./assets/md-images-chapter4/database-diagram.png)
+
+Presenta la estructura general de la base de datos de MaquiGest, destacando las tablas y las relaciones entre sus contextos delimitados.
+
+#### Inventory Database Diagram
+![Database Diagram — Inventory](./assets/md-images-chapter4/inventory-database.png)
+
+Describe la persistencia de equipos, categorías y bloques de disponibilidad, incluidas sus relaciones.
+
+#### Rentals Database Diagram 
+![Database Diagram — Rentals](./assets/md-images-chapter4/rentals-database.png)
+
+Solicitudes de alquiler de modelos, alquileres, entregas, devoluciones y mecanismos de control de concurrencia empleados a lo largo del ciclo de vida del alquiler.
+
+#### Maintenance Database Diagram
+![Database Diagram — Maintenance](./assets/md-images-chapter4/maintenance-database.png)
+
+Representa incidentes de mantenimiento, registros de mantenimiento y actividades utilizadas para realizar el seguimiento del mantenimiento de los equipos.
+
+#### Subscription Database Diagram 
+![Database Diagram — Subscription](./assets/md-images-chapter4/subscription-database.png)
+
+Solicitudes de alquiler de modelos, alquileres, entregas, devoluciones y mecanismos de control de concurrencia empleados a lo largo del ciclo de vida del alquiler.
+
+#### IAM Database Diagram
+![Database Diagram — IAM](./assets/md-images-chapter4/iam-database.png)
+
+Ilustra la persistencia de usuarios, roles y sus asociaciones para la gestión de identidades y accesos.
+
+#### Profiles Database Diagram 
+![Database Diagram — Profiles](./assets/md-images-chapter4/profiles-database.png)
+
+Representa la información del perfil de la empresa, incluidos los datos de contacto y los atributos de dirección integrados.
+
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
