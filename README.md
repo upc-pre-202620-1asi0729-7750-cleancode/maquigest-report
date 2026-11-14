@@ -84,6 +84,7 @@ Proyecto<br>
 | :-----: |:----------:|:--------:| :----------------------------------------------------------------------------------------------------------------------------: |
 |   AV1   | 19/09/2026 |  Todos   | Se agregó la primera versión del informe, incluyendo carátula, registro de versiones, perfiles del equipo, análisis inicial del problema, artefactos de UX, arquitectura preliminar y evidencias del Sprint 1. |
 |   TB1   | 08/10/2026 |  Todos   | Se actualizó el informe con los avances y correcciones del Sprint 2, incluyendo la actualización de User Stories y Product Backlog con Technical Stories para el RESTful API, correcciones de Impact Mapping, Problem Statement, Hypothesis Statements, User Flows, diagramas C4, diagramas de clases y Design-Level EventStorming. Asimismo, se documentó el Sprint Backlog 2 y se incorporaron las evidencias de desarrollo, despliegue, integración de la Landing Page con la Web Application y colaboración del equipo. |
+|   AV2   | 08/10/2026 |  Todos   | Se actualizó el informe con los avances y correcciones del Sprint 3, incluyendo la actualización de User Stories y Product Backlog con Technical Stories para el RESTful API, correcciones de diagramas C4, diagramas de clases y Design-Level EventStorming. Asimismo, se documentó el Sprint Backlog 3 y se incorporaron las evidencias de desarrollo, despliegue, integración del bakend a la webapp. |
 
 <div style="page-break-after: always;"></div>
 
