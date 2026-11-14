@@ -237,6 +237,15 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
             - [5.2.2.6. Services Documentation Evidence for Sprint Review](#5226-services-documentation-evidence-for-sprint-review)
             - [5.2.2.7. Software Deployment Evidence for Sprint Review](#5227-software-deployment-evidence-for-sprint-review)
             - [5.2.2.8. Team Collaboration Insights during Sprint](#5228-team-collaboration-insights-during-sprint)
+        - [5.2.3. Sprint 3](#523-sprint-3)
+            - [5.2.3.1. Sprint Planning 3](#5231-sprint-planning-3)
+            - [5.2.3.2. Aspect Leaders and Collaborators](#5232-aspect-leaders-and-collaborators)
+            - [5.2.3.3. Sprint Backlog 3](#5233-sprint-backlog-3)
+            - [5.2.3.4. Development Evidence for Sprint Review](#5234-development-evidence-for-sprint-review)
+            - [5.2.3.5. Execution Evidence for Sprint Review](#5235-execution-evidence-for-sprint-review)
+            - [5.2.3.6. Services Documentation Evidence for Sprint Review](#5236-services-documentation-evidence-for-sprint-review)
+            - [5.2.3.7. Software Deployment Evidence for Sprint Review](#5237-software-deployment-evidence-for-sprint-review)
+            - [5.2.3.8. Team Collaboration Insights during Sprint](#5238-team-collaboration-insights-during-sprint)
 - [Conclusiones](#conclusiones)
     - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
 - [Bibliografía](#bibliografía)
@@ -4927,29 +4936,371 @@ La evidencia obtenida mediante GitHub permite establecer trazabilidad entre las 
 
 Asimismo, la actividad registrada es consistente con la Leadership-and-Collaboration Matrix definida para el Sprint 2, en la que se distribuyeron responsabilidades relacionadas con la configuración y routing de la Web Application, la presentación de los procesos de registro e inicio de sesión, la gestión de sesiones, el acceso a dashboards según el tipo de empresa, la integración con el Landing Page y las actividades de Testing & QA.
 
+### 5.2.3. Sprint 3
+
+El Sprint 3 representa la transición de MaquiGest desde una Web Application respaldada por una API simulada hacia una solución distribuida que incorpora un RESTful Web Service desarrollado con Java, Spring Boot, Spring Data JPA y MySQL.
+
+#### 5.2.3.1. Sprint Planning 3
+
+| **Campo** | **Descripción** |
+|---|---|
+| **Sprint #** | **Sprint 3** |
+|  | **Sprint Planning Background** |
+| **Date** | 2026-11-04 |
+| **Time** | 17:00 |
+| **Location** | Modalidad remota mediante Discord |
+| **Prepared By** | James Caleb |
+| **Attendees** | Daga Chávez, Joaquín Leonardo / Delgado Perez, James Caleb / Manosalva Tovar, Miroslav Oscar / Montalvo Vasquez, Bruno Rodrigo / Paredes Chávez, Carlos Augusto |
+| **Sprint 2 Review Summary** | Durante el Sprint 2 se implementó y desplegó la primera versión funcional de la Web Application de MaquiGest. La solución permitió presentar los procesos de autenticación, gestión de perfiles, maquinaria, solicitudes de alquiler, mantenimiento y suscripciones mediante una API de demostración desarrollada con JSON Server. También se integró la Landing Page con la Web Application y se publicaron ambas experiencias en Netlify y Vercel. |
+| **Sprint 2 Retrospective Summary** | El uso de una API simulada permitió validar anticipadamente las interfaces y los principales recorridos de la Web Application. Sin embargo, se identificó la necesidad de reemplazar la persistencia temporal por un backend que centralice las reglas del negocio, la seguridad, la autorización y el almacenamiento en MySQL. También se determinó que era necesario mejorar la trazabilidad entre los modelos DDD, los endpoints y las funcionalidades presentadas en Angular. |
+|  | **Sprint Goal & User Stories** |
+| **Sprint 3 Goal** | **Estamos concentrados en** implementar el primer RESTful Web Service de MaquiGest y conectarlo con la Web Application para respaldar los principales procesos operativos con reglas de negocio, seguridad y persistencia real.<br><br>**Creemos que entregar** una API organizada por bounded contexts, protegida mediante JWT y conectada con Angular permitirá sustituir la API simulada y disponer de una base técnica coherente con la arquitectura definida para el producto.<br><br>**Esto será confirmado cuando** los usuarios puedan registrarse, autenticarse y ejecutar los principales procesos de perfiles, maquinaria, alquileres, mantenimiento y suscripciones mediante los recursos de `maquigest-platform`, y cuando dichos recursos puedan consultarse mediante OpenAPI y Swagger. |
+| **Sprint 3 Velocity** | 86 Story Points completados en `develop`; 8 Story Points permanecen en progreso por funcionalidades externas pendientes. |
+| **Sum of Story Points** | 94 Story Points |
+
+
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+En esta sección se presenta la Leadership-and-Collaboration Matrix definida para el Sprint 3. Los aspectos de la iteración corresponden a la implementación del RESTful Web Service, la integración con la Web Application y la preparación de la primera versión desplegable del backend.
+
+Los aspectos considerados son los siguientes:
+
+1. **Platform Architecture & Shared:** configuración de Spring Boot, perfiles de ejecución, persistencia, manejo común de resultados, errores, internacionalización y documentación OpenAPI.
+
+2. **IAM & Profiles:** registro de usuarios, autenticación con JWT, autorización, roles y administración de perfiles empresariales.
+
+3. **Inventory & Subscriptions:** gestión de maquinaria, categorías, disponibilidad, estados operativos, planes y suscripciones.
+
+4. **Rentals:** solicitudes de alquiler, aprobación, rechazo, reprogramación, reservas, entregas y devoluciones.
+
+5. **Maintenance:** incidencias, restricciones operativas, programación de mantenimiento e historial de maquinaria.
+
+6. **Web Application Integration:** retiro de la Fake API, adaptación de los servicios Angular y alineación de los contratos utilizados por el frontend.
+
+7. **Testing, Documentation & Deployment:** pruebas del dominio y aplicación, documentación Swagger y preparación del despliegue.
+
+La siguiente matriz conserva únicamente el liderazgo verificable mediante el historial actual de GitHub. Las participaciones adicionales deberán completarse según la distribución real acordada por el equipo.
+
+| Member (Last Name, First Name) | GitHub Username Leader (L) / Collaborator (C) | Platform & Shared Leader (L) / Collaborator (C) | IAM & Profiles Leader (L) / Collaborator (C) | Inventory & Subscriptions Leader (L) / Collaborator (C) | Rentals Leader (L) / Collaborator (C) | Maintenance Leader (L) / Collaborator (C) | Web App Integration Leader (L) / Collaborator (C) | Testing, Documentation & Deployment Leader (L) / Collaborator (C) |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Delgado Perez, James Caleb | `@JAmsy06` | C | L | L | C | C | C | L |
+| Montalvo Vasquez, Bruno Rodrigo | `@TartaroZ` | C | C | L | C | C | L | C |
+| Manosalva Tovar, Miroslav Oscar | `@Miroa123` | L | C | C | L | C | L | C |
+| Paredes Chávez, Carlos Augusto | `@CarlossUPC` | C | C | C | C | C | C | L |
+
+<!-- Ya lo modifican si quieren -->
+
+#### 5.2.3.3. Sprint Backlog 3
+
+El Sprint Backlog 3 se enfoca en la implementación e integración de los principales procesos funcionales de MaquiGest mediante el nuevo RESTful Web Service. Para mantener la relación con el Product Backlog, se utilizan los identificadores y Story Points previamente definidos para cada User Story.
+
+Enlace de seguimiento: [Tablero de Sprint Backlog 3](PENDIENTE)
+
+<!-- <img src="assets/images/chapter-5/trello-sprint-backlog-3.PNG" alt="trello-sprint-backlog-3"> -->
+
+| Sprint # | Sprint 3 |
+|:---|:---|
+
+| Story Id | Story Title | Task Id | Task Title | Task Description | Story Points | Assigned To | Status |
+|:---:|---|:---:|---|---|:---:|---|---|
+| US01 | Registro de usuario | T3-01 | Integrar registro con IAM | Implementar el registro de cuentas empresariales, validación de información, asignación de roles y persistencia segura de contraseñas. | 5 | `JAmsy06` | Done |
+| US02 | Inicio de sesión | T3-02 | Implementar autenticación JWT | Validar credenciales, emitir el token JWT y proteger los recursos que requieren autenticación. | 3 | `JAmsy06` | Done |
+| US03 | Gestionar perfil | T3-03 | Integrar perfiles empresariales | Permitir consultar, crear y actualizar el perfil correspondiente al usuario autenticado. | 3 | `JAmsy06` | Done |
+| US06 | Registrar maquinaria | T3-04 | Integrar registro de maquinaria | Implementar el registro de maquinaria con validación de propiedad, categoría, ubicación y tarifas. | 5 | `JAmsy06` | Done |
+| US07 | Consultar maquinaria | T3-05 | Consultar inventario y marketplace | Exponer el listado de maquinaria y permitir filtrar los equipos según su propietario. | 3 | `JAmsy06` | Done |
+| US08 | Actualizar información de maquinaria | T3-06 | Actualizar maquinaria registrada | Permitir que una empresa de alquiler modifique únicamente la maquinaria que le pertenece. | 3 | `JAmsy06` | Done |
+| US09 | Consultar disponibilidad de maquinaria | T3-07 | Integrar disponibilidad operativa | Consultar la disponibilidad y los periodos reservados de una maquinaria. | 5 | `JAmsy06` | Done |
+| US10 | Consultar estado de maquinaria | T3-08 | Gestionar estado operativo | Mostrar y actualizar el estado operativo de la maquinaria respetando las transiciones permitidas. | 3 | `JAmsy06` | Done |
+| US11 | Buscar maquinaria | T3-09 | Integrar búsqueda de maquinaria | Obtener la maquinaria disponible y aplicar los criterios de búsqueda utilizados por la Web Application. | 5 | `JAmsy06` | Done |
+| US12 | Consultar información de maquinaria | T3-10 | Consultar detalle de equipo | Exponer la información completa de una maquinaria mediante su identificador. | 3 | `JAmsy06` | Done |
+| US13 | Consultar disponibilidad para un periodo | T3-11 | Validar disponibilidad por fechas | Evaluar si una maquinaria se encuentra disponible durante un rango inclusivo de fechas. | 5 | `JAmsy06` | Done |
+| US14 | Solicitar alquiler de maquinaria | T3-12 | Registrar solicitud de alquiler | Crear solicitudes pendientes, validar disponibilidad y evitar solicitudes duplicadas o superpuestas. La notificación externa permanece pendiente. | 5 | `JAmsy06` | In Progress |
+| US15 | Consultar planes | T3-13 | Exponer catálogo de planes | Permitir que la Web Application consulte los planes de suscripción configurados. | 3 | `JAmsy06` | Done |
+| US16 | Seleccionar plan | T3-14 | Registrar selección de plan | Permitir que una empresa de alquiler cree una suscripción asociada con un plan activo. | 3 | `JAmsy06` | Done |
+| US17 | Gestionar suscripción | T3-15 | Consultar y cancelar suscripción | Mostrar la suscripción seleccionada y permitir su cancelación por parte de su propietario. | 5 | `JAmsy06` | Done |
+| US18 | Gestionar solicitudes de alquiler | T3-16 | Consultar solicitudes recibidas | Mostrar las solicitudes relacionadas con el usuario autenticado y permitir consultar sus detalles. | 5 | `JAmsy06` | Done |
+| US19 | Confirmar o rechazar una solicitud | T3-17 | Resolver solicitud pendiente | Permitir aprobar o rechazar una solicitud y crear el alquiler y la reserva de manera transaccional. La notificación por correo permanece pendiente. | 3 | `JAmsy06` | In Progress |
+| US20 | Consultar alquileres activos | T3-18 | Consultar operaciones de alquiler | Mostrar los alquileres en los que participa la empresa autenticada. | 3 | `JAmsy06` | Done |
+| US21 | Consultar estado de una solicitud de alquiler | T3-19 | Consultar solicitudes propias | Permitir que la empresa constructora consulte el estado actual de sus solicitudes. | 3 | `JAmsy06` | Done |
+| US22 | Gestionar entregas y devoluciones | T3-20 | Integrar ciclo de entrega y devolución | Registrar entregas y devoluciones, actualizar el alquiler y liberar la reserva correspondiente. | 5 | `JAmsy06` | Done |
+| US23 | Registrar mantenimiento | T3-21 | Registrar intervención realizada | Permitir registrar mantenimientos completados asociados con una maquinaria. | 5 | `JAmsy06` | Done |
+| US24 | Programar mantenimiento | T3-22 | Programar mantenimiento futuro | Permitir registrar y consultar mantenimientos programados para una maquinaria. | 3 | `JAmsy06` | Done |
+| US25 | Registrar incidencia de maquinaria | T3-23 | Integrar gestión de incidencias | Registrar incidencias y bloquear la disponibilidad de la maquinaria cuando corresponda. | 3 | `JAmsy06` | Done |
+| US26 | Consultar historial de maquinaria | T3-24 | Integrar historial operativo | Presentar una línea de tiempo con alquileres, incidencias, mantenimientos y actividades de una maquinaria. | 5 | `JAmsy06` | Done |
+
+<!--Ahí lo chequean-->
+
+
+#### 5.2.3.4. Development Evidence for Sprint Review
+
+Durante el Sprint 3 se creó el repositorio `maquigest-platform` para implementar el RESTful Web Service de MaquiGest. El backend fue desarrollado con Java 27, Spring Boot 4.1.2, Spring Data JPA, Spring Security, JWT, MySQL y Springdoc OpenAPI.
+
+La implementación se organizó mediante GitFlow. Las funcionalidades fueron desarrolladas en ramas feature y posteriormente integradas en `develop`. También se actualizaron los servicios de `maquigest-webapp` para retirar la Fake API y adaptar el frontend a los contratos del nuevo backend.
+
+La tabla presenta una selección de commits representativos. Las fechas corresponden al registro de los commits en la zona horaria de Perú.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
+|---|---|---|---|---|---|
+| maquigest-platform | `feature/setup-platform-configuration` | [25b0bc7](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/25b0bc724e397d79ef70bc0813a17760d9fcd76a) | build: configure maven and project dependencies. | Se configuraron Maven, Java, Spring Boot y las dependencias principales del backend. | 2026-11-03 |
+| maquigest-platform | `feature/shared-bounded-context` | [6e06a74](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/6e06a74eaabf682e69f8165678ddc1eb3a0851cc) | feat(shared): implement result and application error patterns. | Se incorporaron estructuras comunes para representar resultados exitosos y errores de aplicación. | 2026-11-03 |
+| maquigest-platform | `feature/shared-bounded-context` | [d68047a](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/d68047a42db8f0110a76ee1e409fe1584213e5df) | feat(shared): configure OpenAPI and virtual threads. | Se configuraron OpenAPI, Swagger UI y el uso de virtual threads. | 2026-11-03 |
+| maquigest-platform | `feature/iam-authentication` | [527c024](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/527c0249e343ccea5acf7efcbca0761ca5d93b63) | feat(iam): expose company registration REST endpoint. | Se expuso el recurso REST para registrar cuentas empresariales. | 2026-11-03 |
+| maquigest-platform | `feature/iam-authentication` | [d4c9c9b](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/d4c9c9bc8958de6f605a83741ee34ad9a365cac0) | feat(iam): expose sign-in REST endpoint. | Se implementó el inicio de sesión y la emisión de JWT. | 2026-11-03 |
+| maquigest-platform | `feature/iam-authentication` | [fc5dfb5](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/fc5dfb573e5e7ac66f175ec02af5152b54256362) | feat(iam): configure stateless JWT web security. | Se protegieron los recursos mediante Spring Security y autenticación stateless. | 2026-11-03 |
+| maquigest-platform | `feature/equipment-management` | [2149006](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/214900625a7a87f373f6a666b83f8b94c1b39254) | feat(inventory): expose equipment management REST endpoints. | Se expusieron los recursos para consultar, registrar, actualizar y eliminar maquinaria. | 2026-11-03 |
+| maquigest-platform | `feature/inventory-operational-integration` | [bf79d9f](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/bf79d9f0144facb681e412a5e1007d5de1508ef1) | feat(inventory): expose equipment operational REST endpoints. | Se incorporaron disponibilidad, reservas y cambios de estado operativo. | 2026-11-04 |
+| maquigest-platform | `feature/subscriptions-bounded-context` | [38cc661](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/38cc6616c223729de23c97a983fda167cd507fff) | feat(subscriptions): expose subscription REST endpoints. | Se expusieron los recursos para planes y suscripciones. | 2026-11-04 |
+| maquigest-platform | `feature/rentals-bounded-context` | [8d65e38](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/8d65e387358e4d2a6588fcdf6b871b6fe3074224) | feat(rentals): expose rental lifecycle REST endpoints. | Se implementaron los endpoints de solicitudes, alquileres, entregas y devoluciones. | 2026-11-04 |
+| maquigest-platform | `feature/profiles-bounded-context` | [f6c1c04](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/f6c1c044886b4e574139cdb7d91fbc87691aae14) | feat(profiles): expose company profile REST contracts. | Se expusieron los contratos REST para perfiles empresariales. | 2026-11-04 |
+| maquigest-platform | `feature/maintenance-bounded-context` | [9c7dd83](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/9c7dd83040a4667ea69ba59ce160f7fa28bbfcd2) | feat(maintenance): expose REST workflows and localized errors. | Se incorporaron los flujos REST de incidencias, mantenimiento e historial. | 2026-11-04 |
+| maquigest-platform | `feature/rentals-pending-request-management` | [d2e19ff](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/d2e19ffff421372c20eaf080be848ca5288a1bd5) | feat(rentals): habilitar reprogramacion y prevenir duplicados | Se permitió reprogramar solicitudes pendientes y se añadieron controles contra solicitudes duplicadas. | 2026-11-04 |
+| maquigest-platform | `feature/rentals-pending-request-management` | [01b72d0](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/01b72d04ad558fec9808b86671be9477c3523940) | test(rentals): cubrir reprogramacion y concurrencia | Se agregaron pruebas para reprogramación y control de concurrencia. | 2026-11-04 |
+| maquigest-webapp | `feature/decouple-fake-api` | [5e257ec](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/5e257ec7e6d01babe41fd763a938cd72e788ccf0) | refactor(frontend): decouple fake API from Angular application | Se retiró la dependencia de Angular respecto de la Fake API utilizada durante el Sprint 2. | 2026-11-03 |
+| maquigest-webapp | `feature/us26-equipment-history` | [73752cb](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/73752cbffa3e0afac396a29d6a39497c278e116c) | feat(maintenance): implement US26 equipment history frontend | Se implementó en Angular la consulta del historial operativo de una maquinaria. | 2026-11-03 |
+| maquigest-webapp | `feature/inventory-operational-acl` | [fa92dd4](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/fa92dd459602b8df8fc374b733575cc47c0b3772) | feat(inventory): integrate server-side equipment availability checks. | Se integraron las consultas de disponibilidad realizadas por el servidor. | 2026-11-04 |
+| maquigest-webapp | `feature/inventory-operational-acl` | [8c41abb](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/8c41abb67c6bf9e392c010b2caeb800a2630e162) | feat(rentals): align inventory ACL with equipment operational API. | Se alinearon las operaciones de Rentals con los contratos operativos de Inventory. | 2026-11-04 |
+| maquigest-webapp | `feature/inventory-operational-acl` | [02b4fa0](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/02b4fa0e488d147c39192bd301d14a8fcc6d387f) | feat(maintenance): align incident equipment operations with backend. | Se adaptó la gestión de incidencias a los endpoints del backend. | 2026-11-04 |
+| maquigest-webapp | `feature/maintenance-atomic-workflows` | [42bc883](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/42bc88311968bd8ba4a7bf8002368b8bcc55d3bb) | feat(rentals): permitir editar periodos de solicitudes pendientes | Se integró la reprogramación de solicitudes pendientes en la Web Application. | 2026-11-04 |
+
+<!-- Por ahora es esto, creo que harán falta más. -->
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
+
+Durante el Sprint 3 se implementaron los principales procesos de MaquiGest sobre el nuevo RESTful Web Service. La evidencia de ejecución debe demostrar la comunicación entre la Web Application, el backend Spring Boot y la base de datos MySQL.
+
+A continuación, se describen los escenarios que forman parte de la revisión del Sprint 3.
+
+1. **Documentación del RESTful API:** Swagger UI presenta los recursos organizados por Authentication, Profiles, Equipment, Rentals, Maintenance y Subscriptions.
+<!--![SwaggerUI](assets/md-images-chapter5/swaggeruiResources.png) -->
+
+2. **Registro e inicio de sesión:** un usuario puede registrar una cuenta empresarial, iniciar sesión y recibir un token JWT para acceder a los recursos protegidos.
+<!--![Registro](assets/md-images-chapter5/backendRegistro.png) -->
+
+3. **Gestión de perfiles empresariales:** el usuario autenticado puede consultar y actualizar la información asociada con su empresa.
+<!--![Gestión de perfiles empresariales](assets/md-images-chapter5/backendPerfilEmpresarial.png) -->
+
+4. **Inventario de maquinaria:** una empresa de alquiler puede registrar, consultar y actualizar maquinaria, así como revisar su estado operativo y disponibilidad.
+<!--![Inventario de Maquinaria](assets/md-images-chapter5/backendInventarioMaquinaria.png) -->
+
+5. **Solicitud y reprogramación de alquiler:** una empresa constructora puede crear una solicitud de alquiler y modificar el periodo mientras permanezca en estado pendiente.
+<!--![Solicitud de alquiler](assets/md-images-chapter5/backendSolicitudAlquiler.png) -->
+
+6. **Aprobación, entrega y devolución:** una empresa de alquiler puede aprobar o rechazar una solicitud, registrar la entrega de la maquinaria y completar el alquiler mediante su devolución.
+<!--![Aprobacion de Solicitud](assets/md-images-chapter5/backendtratarSolicitud.png) -->
+
+7. **Incidencias y mantenimiento:** una empresa de alquiler puede registrar incidencias, bloquear temporalmente una maquinaria, programar mantenimientos y registrar actividades relacionadas.
+<!--![Incidencias y Mantenimiento](assets/md-images-chapter5/backendIncidencias.png) -->
+
+8. **Historial de maquinaria:** el sistema presenta una línea de tiempo que reúne alquileres, incidencias, mantenimientos y actividades registradas para una maquinaria.
+<!--![Historial de Maquinaria](assets/md-images-chapter5/backendHistorialMaquinaria.png) -->
+
+9. **Planes y suscripciones:** una empresa de alquiler puede consultar los planes, registrar una suscripción y cancelar su plan actual.
+<!--![Planes y suscripciones](assets/md-images-chapter5/backendPlanes.png) -->
+
+10. **Persistencia en MySQL:** las operaciones realizadas desde la Web Application se almacenan en la base de datos utilizada por el backend.
+<!--![Aprobacion de Solicitud](assets/md-images-chapter5/backendPersistencia.png) -->
+
+---
+
+**Execution Evidence Video for Sprint 3 Review:** [Ver video de Execution Evidence Sprint 3](PENDIENTE)
+
+<!-- Subir video del evidence al Clipchamp con el nombre: upc-pre-202620-1asi0729-7750-cleancode-execution-evidence-sprint-3.mp4 -->
+
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 3 se incorporó Springdoc OpenAPI para generar la documentación de los recursos de `maquigest-platform`. Los endpoints se encuentran agrupados según los bounded contexts y pueden consultarse desde Swagger UI.
+
+**Repositorio del Web Service:** [maquigest-platform](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform)
+
+**Documentación local:** `http://localhost:8080/swagger-ui/index.html`
+
+**Especificación OpenAPI local:** `http://localhost:8080/v3/api-docs`
+
+**Documentación desplegada:** <!-- despliegue en render o en otro, algo así -->
+
+Exceptuando el registro, el inicio de sesión y la consulta de categorías, los recursos requieren un token JWT enviado mediante el encabezado `Authorization: Bearer <token>`.
+
+| Contexto | Método | Endpoint | Parámetro | Respuesta esperada |
+|---|:---:|---|---|---|
+| IAM | POST | `/api/v1/authentication/sign-up` | `firstName`, `lastName`, `email`, `password`, `companyName`, `role` | `201 Created`: cuenta empresarial registrada. |
+| IAM | POST | `/api/v1/authentication/sign-in` | `email`, `password` | `200 OK`: usuario autenticado y token JWT. |
+| IAM | GET | `/api/v1/authentication/me` | JWT | `200 OK`: correo y autoridades del usuario autenticado. |
+| Profiles | GET | `/api/v1/profiles` | Query opcional `userId` | `200 OK`: lista de perfiles empresariales. |
+| Profiles | GET | `/api/v1/profiles/{id}` | Path `id` | `200 OK`: perfil solicitado. |
+| Profiles | POST | `/api/v1/profiles` | Datos personales, empresa, contacto y dirección | `201 Created`: perfil creado. |
+| Profiles | PUT | `/api/v1/profiles/{id}` | Path `id` y datos actualizados | `200 OK`: perfil actualizado. |
+| Inventory | GET | `/api/v1/equipment-categories` | Sin parámetros | `200 OK`: categorías registradas. |
+| Inventory | GET | `/api/v1/equipment` | Query opcional `userId` | `200 OK`: maquinaria del marketplace o del propietario. |
+| Inventory | GET | `/api/v1/equipment/{id}` | Path `id` | `200 OK`: información de la maquinaria. |
+| Inventory | POST | `/api/v1/equipment` | `userId`, `code`, `name`, `description`, `categoryId`, `location`, tarifas y estado | `201 Created`: maquinaria registrada. |
+| Inventory | PATCH | `/api/v1/equipment/{id}` | Path `id` y datos editables | `200 OK`: maquinaria actualizada. |
+| Inventory | POST | `/api/v1/equipment/{id}/availability-blocks` | `startDate`, `endDate` | `201 Created`: periodo reservado. |
+| Inventory | PATCH | `/api/v1/equipment/{id}/operational-status` | `status` | `200 OK`: estado operativo actualizado. |
+| Inventory | DELETE | `/api/v1/equipment/{id}` | Path `id` | `204 No Content`: maquinaria eliminada. |
+| Inventory | GET | `/api/v1/equipment/{id}/availability` | Query `startDate`, `endDate` | `200 OK`: disponibilidad del periodo. |
+| Subscriptions | GET | `/api/v1/subscription-plans` | JWT | `200 OK`: planes disponibles. |
+| Subscriptions | GET | `/api/v1/user-subscriptions` | JWT | `200 OK`: suscripciones registradas. |
+| Subscriptions | GET | `/api/v1/user-subscriptions/{id}` | Path `id` | `200 OK`: suscripción solicitada. |
+| Subscriptions | POST | `/api/v1/user-subscriptions` | `userId`, `planId`, `startDate`, `endDate`, `status`, `autoRenew` | `201 Created`: suscripción creada. |
+| Subscriptions | PATCH | `/api/v1/user-subscriptions/{id}/cancel` | Path `id` | `200 OK`: suscripción cancelada. |
+| Rentals | GET | `/api/v1/rental-requests` | JWT | `200 OK`: solicitudes relacionadas con el usuario. |
+| Rentals | GET | `/api/v1/rental-requests/{id}` | Path `id` | `200 OK`: solicitud consultada. |
+| Rentals | POST | `/api/v1/rental-requests` | Maquinaria, participantes y periodo | `201 Created`: solicitud pendiente registrada. |
+| Rentals | PATCH | `/api/v1/rental-requests/{id}/period` | `startDate`, `endDate` | `200 OK`: periodo de la solicitud pendiente actualizado. |
+| Rentals | PUT | `/api/v1/rental-requests/{id}` | Datos de la solicitud y nuevo estado | `200 OK`: solicitud aprobada o rechazada. |
+| Rentals | GET | `/api/v1/rentals` | JWT | `200 OK`: alquileres relacionados con el usuario. |
+| Rentals | GET | `/api/v1/rentals/{id}` | Path `id` | `200 OK`: alquiler solicitado. |
+| Rentals | POST | `/api/v1/rentals` | Recurso de alquiler | `409 Conflict`: la creación directa está bloqueada; el alquiler se genera al aprobar una solicitud. |
+| Rentals | PUT | `/api/v1/rentals/{id}` | Recurso de alquiler | `200 OK` únicamente para lectura compatible sin cambios; las transiciones se ejecutan mediante entregas y devoluciones. |
+| Rentals | GET | `/api/v1/deliveries` | JWT | `200 OK`: entregas visibles para el usuario. |
+| Rentals | POST | `/api/v1/deliveries` | `rentalId`, `deliveredAt`, `notes` | `201 Created`: entrega registrada y alquiler activado. |
+| Rentals | GET | `/api/v1/equipment-returns` | JWT | `200 OK`: devoluciones visibles para el usuario. |
+| Rentals | POST | `/api/v1/equipment-returns` | `rentalId`, `returnedAt`, `notes`, `maintenanceRequired` | `201 Created`: devolución registrada y reserva liberada. |
+| Maintenance | GET | `/api/v1/incidents` | Query opcional `equipmentId` | `200 OK`: incidencias relacionadas con la empresa o maquinaria. |
+| Maintenance | GET | `/api/v1/incidents/{id}` | Path `id` | `200 OK`: incidencia solicitada. |
+| Maintenance | POST | `/api/v1/incidents` | `equipmentId`, `description`, `blocksRental` | `201 Created`: incidencia registrada. |
+| Maintenance | PATCH | `/api/v1/incidents/{id}` | `blocksRental`, `status`, `resolvedAt` | `200 OK`: incidencia actualizada o resuelta. |
+| Maintenance | POST | `/api/v1/incidents/equipment/{equipmentId}/reactivate` | `inspectionConfirmed` | `204 No Content`: maquinaria reactivada después de las validaciones. |
+| Maintenance | GET | `/api/v1/maintenances` | Query opcional `equipmentId` | `200 OK`: mantenimientos de la empresa autenticada. |
+| Maintenance | GET | `/api/v1/maintenances/{id}` | Path `id` | `200 OK`: mantenimiento solicitado. |
+| Maintenance | POST | `/api/v1/maintenances` | `equipmentId`, `performedAt`, `type`, `status` | `201 Created`: mantenimiento registrado o programado. |
+| Maintenance | PATCH | `/api/v1/maintenances/{id}` | `status`, `technician`, `acknowledge`, `notes` | `200 OK`: estado o avance actualizado. |
+| Maintenance | GET | `/api/v1/maintenances/{id}/activities` | Path `id` | `200 OK`: actividades del mantenimiento. |
+| Maintenance | GET | `/api/v1/maintenances/equipment/{equipmentId}/history` | Path `equipmentId` | `200 OK`: historial combinado de la maquinaria. |
+
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 3 se preparó la primera versión del RESTful Web Service de MaquiGest. El backend dispone de perfiles separados para desarrollo y producción, configuración mediante variables de entorno, conexión con MySQL, seguridad mediante JWT y control de orígenes autorizados mediante CORS.
+
+La rama `develop` de `maquigest-platform` contiene la implementación integrada del backend. De manera complementaria, la rama `develop` de `maquigest-webapp` fue configurada para consumir recursos bajo el prefijo `/api/v1`. En desarrollo, Angular utiliza `proxy.conf.json` para dirigir las solicitudes hacia `http://127.0.0.1:8080`.
+
+Al corte de esta documentación, el RESTful Web Service todavía no cuenta con una URL pública y los cambios de Sprint 3 no han sido publicados en las ramas `main`. Por ello, la evidencia definitiva de despliegue deberá incorporarse después de completar la publicación de los productos.
+
+**Estado actual de los productos**
+
+| Producto | Repositorio | Status | URL |
+|---|---|---|---|
+| Landing Page | `maquigest-website` | La versión del Sprint 2 continúa publicada. No se registran cambios de Sprint 3. | https://maquigest-cleancode.netlify.app/ |
+| Web Application | `maquigest-webapp` | La integración con el backend se encuentra en `develop`; la versión de producción continúa asociada con la release anterior. | https://maquigest-webapp-cleancode.vercel.app/ |
+| RESTful Web Service | `maquigest-platform` | Implementado en `develop`. Despliegue pendiente. | PENDIENTE |
+| Database | MySQL | Configuración de desarrollo y producción preparada. Instancia cloud pendiente. | PENDIENTE |
+| OpenAPI Documentation | Swagger UI | Disponible localmente. Publicación pendiente. | PENDIENTE |
+
+**Variables de entorno requeridas por el backend**
+
+| Variable | Función |
+|---|---|
+| `DATABASE_URL` | Host de la instancia MySQL. |
+| `DATABASE_PORT` | Puerto de MySQL. |
+| `DATABASE_NAME` | Nombre de la base de datos. |
+| `DATABASE_USER` | Usuario de conexión. |
+| `DATABASE_PASSWORD` | Contraseña de conexión. |
+| `JWT_SECRET` | Secreto utilizado para firmar los tokens JWT. |
+| `CORS_ALLOWED_ORIGINS` | Dominios autorizados para consumir el API. |
+| `PORT` | Puerto utilizado por la aplicación. |
+
+**Proceso pendiente para completar el despliegue**
+
+1. Preparar el esquema completo de MySQL mediante migraciones versionadas.
+2. Crear la instancia de base de datos de producción.
+3. Configurar el servicio de backend en el proveedor cloud seleccionado.
+4. Registrar las variables de entorno sin exponer credenciales en GitHub.
+5. Configurar `CORS_ALLOWED_ORIGINS` con el dominio de la Web Application.
+6. publicar la documentación Swagger junto con el backend.
+7. Configurar Angular para consumir la URL pública o un rewrite de `/api/v1`.
+8. Ejecutar pruebas de registro, autenticación y operaciones protegidas.
+9. Integrar las ramas release en `main`.
+10. Crear los tags correspondientes mediante Semantic Versioning.
+
+**Capturas de evidencia**
+
+<!-- Agregar capturas de la creación del servicio de backend, de la instancia MySQL, de las variables de entorno sin mostrar valores sensibles, del deployment exitoso, del Swagger público, de la Web Application consumiendo el backend desplegado, de la actividad Network con una respuesta HTTP 200 del backend. -->
+
+**URLs del despliegue**
+
+| Recurso | Plataforma | URL |
+|---|---|---|
+| Landing Page | Netlify | https://maquigest-cleancode.netlify.app/ |
+| Web Application | Vercel | https://maquigest-webapp-cleancode.vercel.app/ |
+| RESTful Web Service | - | - |
+| Swagger UI | - | - |
+| API Health Check | - | - |
+
+**Resultado obtenido**
+
+El Sprint 3 permitió preparar la implementación del backend y la integración local con Angular. El despliegue público, la configuración de la base de datos cloud y la publicación de las versiones estables continúan pendientes. Esta sección deberá actualizarse con los proveedores, URLs, versiones y capturas definitivas antes de cerrar AV2.
+
+
+#### 5.2.3.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 3, el trabajo de implementación se concentró en la creación del RESTful Web Service y en la adaptación de la Web Application para consumir el backend. GitHub fue utilizado para organizar las funcionalidades mediante ramas feature y consolidarlas en `develop`.
+
+En `maquigest-platform` se utilizaron ramas independientes para configuración, Shared, IAM, Inventory, Subscriptions, Rentals, Profiles y Maintenance. En `maquigest-webapp` se utilizaron ramas para retirar la Fake API, implementar el historial de maquinaria y alinear los procesos de Inventory, Rentals y Maintenance con los contratos del backend.
+
+##### GitHub Contributors
+
+Al corte actual, el historial verificable de Sprint 3 presenta la siguiente distribución de commits sin incluir operaciones de merge:
+
+| Team Member | GitHub Username | maquigest-platform | maquigest-webapp | Total |
+|---|---|---:|---:|---:|
+| James Caleb Delgado Perez | `JAmsy06` | - | - | - |
+| Bruno Rodrigo Montalvo Vasquez | `TartaroZ` | - | - | - |
+| Miroslav Oscar Manosalva Tovar | `Miroa123` | - | - | - |
+| Carlos Augusto Paredes Chávez | `CarlossUPC` | - | - | - |
+| **Total** |  | **-** | **-** | **-** |
+<!-- | Joaquín Leonardo Daga Chávez | `Eshnikeee` | - | - | - | -->
+
+
+
+<!-- Poner la captura de GitHub Contributors de maquigest-platform y de GitHub Contributors de maquigest-webapp. -->
+
+##### Commit Activity
+
+La sección de estadísticas de GitHub permite observar también la actividad general de commits realizada sobre el repositorio durante el Sprint 3.
+
+<!-- agregar captura de Commit Activity de maquigest-platform. -->
+
+
+---
 # Conclusiones
 
 ## Conclusiones y recomendaciones
 
-Durante el desarrollo de la TB1 se logró avanzar desde la definición inicial de MaquiGest hacia una primera versión funcional de la Web Application, complementando el trabajo realizado durante el Sprint 1 con las funcionalidades y artefactos correspondientes al Sprint 2. Esta entrega permitió continuar la evolución de la solución y validar aspectos relacionados con el acceso de los usuarios, la autenticación, el manejo de sesiones y la navegación según el tipo de empresa.
+Durante el Sprint 1, MaquiGest estableció su presencia pública mediante la implementación y despliegue de la Landing Page. Este producto permitió comunicar la propuesta de valor, los segmentos objetivo, las principales funcionalidades y los planes de la solución. También se incorporaron diseño responsivo, cambio de idioma y enlaces hacia la Web Application.
 
-En relación con los requisitos y la planificación del producto, se actualizaron las User Stories y el Product Backlog a partir de las observaciones recibidas en la entrega anterior. Se incorporaron Technical Stories relacionadas con el RESTful API, permitiendo representar de manera más completa los requerimientos técnicos que deberán soportar las funcionalidades de MaquiGest. Asimismo, se actualizaron las relaciones entre los requisitos funcionales y técnicos, mejorando la trazabilidad entre las necesidades del producto y la futura implementación de la solución.
+En el Sprint 2 se desarrolló y desplegó la primera versión de la Web Application con Angular. Esta versión presentó interfaces para autenticación, perfiles, inventario, solicitudes de alquiler, entregas, devoluciones, mantenimiento y suscripciones. Para demostrar estos recorridos se utilizó una API temporal desarrollada con JSON Server, desplegada en Render, mientras que la aplicación fue publicada en Vercel.
 
-Respecto a los artefactos de análisis y Lean UX, se realizaron correcciones al Problem Statement y a los Hypothesis Statements. El Problem Statement fue complementado con indicadores cuantificables que permiten establecer criterios para evaluar el valor generado por MaquiGest, mientras que los Hypothesis Statements fueron reformulados siguiendo el template de Lean UX, incorporando el Business Outcome, los usuarios involucrados, el User Outcome y la Feature propuesta. También se reorganizaron los User Flows, dividiendo el flujo original en Authentication and Registration User Flow, Rental Company Core Domain User Flow y Construction Company Core Domain User Flow, facilitando la comprensión de los recorridos principales de cada tipo de usuario.
+Durante el Sprint 3 se avanzó desde el uso de información simulada hacia un RESTful Web Service propio. El backend se desarrolló con Java, Spring Boot, Spring Data JPA y MySQL, y fue organizado mediante los bounded contexts IAM, Profiles, Inventory, Rentals, Maintenance, Subscriptions y Shared.
 
-A nivel de modelado y arquitectura, se realizaron correcciones y actualizaciones en los diagramas C4 y en los diagramas de clases correspondientes a los diferentes bounded contexts de MaquiGest. Estas modificaciones permitieron mejorar la representación de la estructura de la solución y mantener una mayor coherencia entre los conceptos del dominio, las responsabilidades de los componentes y las funcionalidades definidas en el Product Backlog. Asimismo, se realizaron correcciones en el Design-Level EventStorming, organizando los diagramas por Bounded Context e incorporando una leyenda estandarizada para representar actores, comandos, agregados, eventos de dominio, modelos de lectura, políticas y reglas de negocio.
+La implementación del backend sigue una separación entre dominio, aplicación, infraestructura e interfaces. También distingue los objetos del dominio de las entidades utilizadas para persistencia con JPA. Esta organización permite mantener las reglas del negocio separadas de los controladores REST y de la tecnología utilizada para almacenar la información.
 
-Durante el Sprint 2 se desarrolló la estructura, implementación y despliegue de la Web Application de MaquiGest. Se trabajó en la configuración inicial de la aplicación, el sistema de navegación y routing, la presentación de los procesos de registro e inicio de sesión, el manejo de sesión y cierre de sesión, así como la redirección hacia los dashboards correspondientes según el tipo de empresa. De esta manera, se obtuvo una primera versión funcional del entorno web que permite establecer la base para la incorporación progresiva de las funcionalidades principales de la plataforma.
+El backend implementa registro e inicio de sesión mediante JWT, perfiles empresariales, inventario de maquinaria, disponibilidad por periodos, solicitudes de alquiler, aprobación y rechazo, entregas, devoluciones, incidencias, mantenimiento, historial operativo, planes y suscripciones. Además, incorpora documentación OpenAPI, manejo de errores con `ProblemDetail`, mensajes internacionalizados y pruebas para componentes del dominio y de la aplicación.
 
-Asimismo, se avanzó en la integración entre la Landing Page y la Web Application mediante los Call-to-Action definidos para dirigir a los visitantes hacia la experiencia de la aplicación. Este avance permite conectar el trabajo realizado durante el Sprint 1 con la nueva iteración y establece una transición más coherente entre la presentación de la propuesta de valor de MaquiGest y el acceso a sus funcionalidades.
+La rama `develop` de `maquigest-webapp` fue desacoplada de la Fake API y configurada para consumir los recursos de `maquigest-platform` mediante `/api/v1`. La integración actual está preparada para ejecutarse localmente mediante un proxy que conecta Angular con el backend en el puerto 8080.
 
-En relación con la gestión del desarrollo, el equipo mantuvo el trabajo colaborativo mediante Git y GitHub, organizando las actividades del Sprint 2 y registrando las evidencias correspondientes al desarrollo, despliegue y colaboración. La definición de líderes y colaboradores para los diferentes aspectos del Sprint permitió distribuir responsabilidades entre los integrantes y facilitar el seguimiento de las actividades realizadas. Asimismo, las evidencias documentadas permiten mantener trazabilidad sobre la evolución de la solución durante esta iteración.
+### Recomendaciones
 
-Como resultado de la TB1, MaquiGest cuenta con una base funcional más completa para continuar con el desarrollo de las funcionalidades definidas en el Product Backlog. La Web Application establece la estructura necesaria para que los siguientes Sprints incorporen progresivamente las funcionalidades propias de la gestión de maquinaria, solicitudes de alquiler, reservas, entregas, devoluciones, mantenimiento y demás procesos definidos para la solución.
+1. Desplegar `maquigest-platform` junto con una instancia MySQL y publicar Swagger UI mediante una URL accesible desde Internet.
 
-Como recomendación para los siguientes Sprints, se deberá continuar manteniendo la trazabilidad entre User Stories, Technical Stories, Product Backlog, Sprint Backlog, Tasks, evidencias y commits, procurando que las funcionalidades implementadas permanezcan alineadas con los requisitos definidos. También será necesario continuar desarrollando el RESTful API y su integración con la Web Application, respetando la arquitectura basada en Domain-Driven Design y la separación de responsabilidades entre las capas y bounded contexts establecidos.
+2. Configurar la versión de producción de la Web Application para consumir el backend desplegado y registrar el dominio de Vercel dentro de los orígenes permitidos por CORS.
 
-Finalmente, se recomienda continuar validando las funcionalidades implementadas mediante pruebas y revisiones progresivas, especialmente en los procesos de autenticación, manejo de sesiones, navegación y control de acceso según el tipo de usuario. En las siguientes iteraciones también deberá mantenerse la consideración de aspectos como responsive design, accessibility, internationalization, documentación, despliegue e integración con los servicios externos definidos para MaquiGest, asegurando que la evolución de la solución mantenga coherencia funcional, técnica y de experiencia de usuario.
+3. Completar las notificaciones externas asociadas con la creación, aprobación y rechazo de solicitudes de alquiler, debido a que forman parte de los criterios de aceptación de US14 y US19.
+
+4. Implementar o retirar temporalmente la opción de recuperación de contraseña de la Web Application, ya que actualmente el frontend utiliza un endpoint que todavía no existe en el backend.
+
+5. Ejecutar pruebas de integración que cubran el recorrido completo entre Angular, Spring Boot y MySQL, incluyendo autenticación, maquinaria, solicitudes, entregas, devoluciones, mantenimiento y suscripciones.
+
+6. Revisar la correspondencia entre los Value Objects definidos en los diagramas de clases y los tipos utilizados por los modelos de dominio del backend.
+
+7. Incorporar un README en `maquigest-platform` con instrucciones de configuración, variables de entorno, perfiles de ejecución, pruebas y acceso a Swagger.
+
+8. Publicar versiones estables mediante ramas release y tags basados en Semantic Versioning, manteniendo sincronizadas las ramas `develop` y `main`.
+
+9. Mantener la trazabilidad entre Product Backlog, Sprint Backlog, commits, Pull Requests, endpoints, evidencias de ejecución y documentación del informe.
+
+---
 
 # Bibliografía
 
