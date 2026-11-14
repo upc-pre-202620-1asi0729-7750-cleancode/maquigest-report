@@ -5079,6 +5079,149 @@ En conclusión, el Sprint Backlog 3 refleja la priorización del desarrollo de s
 
 
 
+### 5.2.3.4. Development Evidence for Sprint Review
+
+Durante el Sprint 3, el equipo CleanCode llevó a cabo la implementación y consolidación de los servicios backend de MaquiGest, así como su integración con la Web Application desarrollada en Angular. El trabajo tuvo como objetivo disponer de una arquitectura funcional que permitiera ejecutar las operaciones principales de la plataforma mediante servicios REST y persistencia de información en una base de datos relacional.
+
+El backend fue desarrollado utilizando Java 27, Spring Boot 4.1.2, Spring Security, Spring Data JPA y MySQL. Por su parte, la Web Application fue adaptada para consumir los endpoints reales, reemplazando progresivamente la Fake API utilizada en las iteraciones anteriores.
+
+La implementación se organizó considerando los principios de Domain-Driven Design (DDD), la separación de responsabilidades mediante Command Query Responsibility Segregation (CQRS) y la utilización de contratos de integración entre Bounded Contexts.
+
+Para mantener la trazabilidad del desarrollo, el equipo empleó Git y GitHub como herramientas de control de versiones, siguiendo un flujo de trabajo basado en GitFlow.
+
+#### Repositorios utilizados
+
+Los principales repositorios relacionados con el desarrollo técnico del Sprint 3 son los siguientes:
+
+**Backend — MaquiGest Platform**
+
+https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform
+
+Contiene los servicios REST, la lógica de negocio, los modelos de dominio, los repositorios de persistencia, la configuración de seguridad y la documentación OpenAPI.
+
+**Frontend — MaquiGest WebApp**
+
+https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp
+
+Contiene la aplicación Angular, sus componentes de interfaz, servicios HTTP, navegación y adaptadores para consumir los recursos proporcionados por el backend.
+
+#### Organización del desarrollo mediante GitFlow
+
+El equipo organizó la implementación a través de ramas de trabajo que permitieron desarrollar funcionalidades y mejoras de forma independiente antes de integrarlas.
+
+Se utilizaron las siguientes categorías de ramas:
+
+- **feature/**: desarrollo de funcionalidades específicas, integración de servicios y mejoras de arquitectura.
+- **develop**: integración de los cambios provenientes de las diferentes ramas de desarrollo.
+- **release/**: preparación de las versiones destinadas a publicación.
+- **main**: código correspondiente a las versiones liberadas del proyecto.
+
+Este procedimiento permitió mantener separados los cambios en desarrollo y las versiones destinadas al despliegue, facilitando la revisión de commits y la integración del trabajo de los integrantes.
+
+#### Implementación de los Bounded Contexts
+
+La solución backend se estructuró mediante seis Bounded Contexts principales y un módulo transversal denominado shared.
+
+| Bounded Context | Responsabilidad principal | Evidencia de desarrollo |
+|---|---|---|
+| IAM | Gestionar el registro de usuarios, autenticación, autorización y acceso seguro. | Servicios de registro, autenticación y configuración JWT. |
+| Profiles | Administrar la información de las empresas constructoras y de alquiler. | Endpoints y recursos REST para perfiles empresariales. |
+| Inventory | Gestionar equipos, características y disponibilidad de maquinaria. | Endpoints de maquinaria y validaciones de disponibilidad. |
+| Rentals | Gestionar solicitudes, reservas, alquileres, entregas y devoluciones. | Servicios REST del ciclo de alquiler y sus transiciones. |
+| Maintenance | Registrar incidencias, mantenimientos e historial de equipos. | Endpoints de incidencias y mantenimiento. |
+| Subscriptions | Administrar planes y operaciones del ciclo de suscripciones. | Servicios REST de planes y suscripciones. |
+| shared | Proporcionar mecanismos técnicos y contratos transversales. | Configuración común, documentación OpenAPI y manejo de aspectos compartidos. |
+
+La organización mediante Bounded Contexts permitió separar las responsabilidades del negocio y reducir dependencias directas entre los módulos. Asimismo, se realizaron mejoras de integración utilizando Published Language y Anti-Corruption Layer (ACL), especialmente en las operaciones que requerían comunicación entre contextos.
+
+#### Git Commit Evidence
+
+La siguiente tabla presenta una selección representativa de los commits registrados durante el desarrollo e integración del Sprint 3. Se incluyen los identificadores, las ramas asociadas, los mensajes originales, el contenido del cuerpo cuando existe y sus respectivas fechas.
+
+Los mensajes de commit se mantienen en su idioma original para preservar la trazabilidad con GitHub.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| maquigest-platform | feature/setup-platform-configuration | [25b0bc7](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/25b0bc724e397d79ef70bc0813a17760d9fcd76a) | build: configure maven and project dependencies. | Configure Java 27, Spring Boot 4.1.2, Maven Wrapper 3.9.11, and the dependencies required by the Learning Center architecture. | 2026-11-03 |
+| maquigest-platform | feature/shared-bounded-context | [d68047a](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/d68047a42db8f0110a76ee1e409fe1584213e5df) | feat(shared): configure OpenAPI and virtual threads. | Configure API documentation and virtual-thread execution following the Learning Center architecture. | 2026-11-03 |
+| maquigest-platform | feature/iam-authentication | [527c024](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/527c0249e343ccea5acf7efcbca0761ca5d93b63) | feat(iam): expose company registration REST endpoint. | Provide the sign-up endpoint and response resources compatible with MaquiGest WebApp. | 2026-11-03 |
+| maquigest-platform | feature/equipment-management | [2149006](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/214900625a7a87f373f6a666b83f8b94c1b39254) | feat(inventory): expose equipment management REST endpoints. | Implement equipment registration, listing, details, updates, deletion and availability endpoints with ownership checks and HTTP responses. | 2026-11-03 |
+| maquigest-platform | feature/profiles-bounded-context | [f6c1c04](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/f6c1c044886b4e574139cdb7d91fbc87691aae14) | feat(profiles): expose company profile REST contracts. | Add controllers, resources and assemblers compatible with Angular profile and rentals requests. | 2026-11-04 |
+| maquigest-platform | feature/rentals-bounded-context | [8d65e38](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/8d65e387358e4d2a6588fcdf6b871b6fe3074224) | feat(rentals): expose rental lifecycle REST endpoints. | Expose REST controllers, request and response resources, transformation assemblers, and localized error handling for rental requests, rentals, deliveries, and equipment returns. Maintain Angular API compatibility. | 2026-11-04 |
+| maquigest-platform | feature/maintenance-bounded-context | [9c7dd83](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/9c7dd83040a4667ea69ba59ce160f7fa28bbfcd2) | feat(maintenance): expose REST workflows and localized errors. | Expose versioned incident, maintenance and equipment history APIs with resource assemblers and localized problem responses. | 2026-11-04 |
+| maquigest-platform | feature/subscriptions-bounded-context | [38cc661](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/38cc6616c223729de23c97a983fda167cd507fff) | feat(subscriptions): expose subscription REST endpoints. | Expose REST controllers for subscription plans and user subscriptions, including creation, retrieval, and cancellation operations. Define request and response resources with transformation assemblers compatible with the MaquiGest WebApp API contracts. | 2026-11-04 |
+| maquigest-platform | feature/ddd-iam-company-directory-acl | [268ea2c](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/268ea2ca662d5c0df433b23cc149edc3b344c449) | refactor(iam): publish company directory through ACL facade. | Move IAM company directory queries behind a published facade and keep JPA access inside IAM. Update Profiles to consume immutable company snapshots without importing IAM persistence entities. Add seven regression tests and preserve existing directory filtering and REST contracts. | 2026-11-05 |
+| maquigest-platform | feature/ddd-inventory-rentals-acl | [7a8d08d](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/7a8d08d1fe9063e1f7b7b743987b1f200a1fe64a) | refactor(inventory): publish rental reservation operations through ACL | Move Inventory aggregate operations and pessimistic locking behind a published facade. Preserve reservations, deliveries, returns, error responses and transaction boundaries. Add unit and opt-in MySQL integration tests. | 2026-11-05 |
+| maquigest-platform | feature/ddd-final-regression-audit | [986e956](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/986e956e067de72466f053fe44976831e726cec3) | test(ddd): close final architecture and API regression | Guard six bounded contexts against forbidden imports and validate published REST routes in OpenAPI. Exercise security, MySQL locks, persistence, event commit/rollback and Maven verify. Sanitize unhandled HTTP 500 messages so internal exception details are not returned. Preserve routes, HTTP codes, database schema and all business transitions. The Angular UI E2E remains a separate manual acceptance check. | 2026-11-05 |
+| maquigest-platform | feature/maintenance-safe-reactivation-20261111-231517 | [022b058](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/022b05814daa68d1566de0ac0db777e07ad22e00) | feat(maintenance): support return-based reactivation through rentals ACL | Sin cuerpo de commit. | 2026-11-11 |
+| maquigest-platform | release/v1.0.0 | [940f7fa](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/940f7fa5834a50e9078546042148381bf1bcf404) | build: configure Java 27 for Northflank | Sin cuerpo de commit. | 2026-11-12 |
+| maquigest-platform | main | [601a991](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/601a991f2aa7466b8772d7b762945ae6a007a3d5) | Merge pull request #13 from upc-pre-202620-1asi0729-7750-cleancode/release/v1.0.0 | build: configure Java 27 for Northflank deployment | 2026-11-12 |
+| maquigest-webapp | feature/decouple-fake-api | [5e257ec](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/5e257ec) | refactor(frontend): decouple fake API from Angular application | Remove embedded demo API, json-server data and simulated authentication endpoint. Configure HTTP access through the Spring Boot Platform API and update application tests. | 2026-11-03 |
+| maquigest-webapp | feature/us05-password-recovery | [a3abd44](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/a3abd44) | feat(iam): implement password recovery frontend | Add password recovery form, internationalization, validation, and REST integration following the IAM layered architecture. | 2026-11-03 |
+| maquigest-webapp | feature/us26-equipment-history | [73752cb](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/73752cb) | feat(maintenance): implement US26 equipment history frontend | Add equipment history view, REST adapter, domain model, application store, route guards, internationalization, and navigation from inventory. Backend integration remains pending. | 2026-11-03 |
+| maquigest-webapp | feature/inventory-operational-acl | [fa92dd4](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/fa92dd4) | feat(inventory): integrate server-side equipment availability checks. | Delegate equipment availability validation to the Spring Boot API through Angular infrastructure adapters and application store, including regression tests. | 2026-11-04 |
+| maquigest-webapp | feature/maintenance-atomic-workflows | [42bc883](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/42bc883) | feat(rentals): permitir editar periodos de solicitudes pendientes | Integra PATCH, store, politica y formulario de edicion para solicitudes PENDING, con estados y errores. | 2026-11-04 |
+| maquigest-webapp | feature/ui-mockup-alignment | [5697cb0](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/5697cb0) | feat(inventory): mejorar catalogo y gestion visual de maquinaria | Ajusta listado, busqueda, formularios y detalles de maquinaria conservando las operaciones y enlaces existentes. | 2026-11-05 |
+| maquigest-webapp | feature/ui-mockup-alignment | [5814d12](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/5814d12) | feat(maintenance): mejorar mantenimiento e incidencias | Organiza los historiales, filtros, formularios, navegacion y seguimiento de mantenimiento e incidencias. | 2026-11-05 |
+| maquigest-webapp | feature/ui-mockup-alignment | [3fc6b4e](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/3fc6b4e) | style(responsive): adaptar tablas y tarjetas para movil | Corrige la disposicion responsive compartida en inventario, solicitudes, alquileres, mantenimiento y mis solicitudes. | 2026-11-05 |
+| maquigest-webapp | feature/maintenance-completion-reactivation-ui-20261111-231517 | [2366a4e](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/2366a4e) | fix(maintenance): enable safe reactivation from incident UI | Sin cuerpo de commit. | 2026-11-11 |
+| maquigest-webapp | develop | [ddd5382](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/ddd5382) | fix(rentals): improve availability and rental request error messages | Sin cuerpo de commit. | 2026-11-12 |
+| maquigest-webapp | release/v2.0.0 | [42b5991](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/42b5991) | chore(deploy): configure Northflank API proxy for Vercel. | Sin cuerpo de commit. | 2026-11-12 |
+| maquigest-webapp | main | [f341489](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/f341489) | Merge pull request #1 from upc-pre-202620-1asi0729-7750-cleancode/release/v2.0.0 | release: MaquiGest WebApp v2.0.0 | 2026-11-12 |
+
+La selección presentada permite identificar los principales cambios técnicos realizados durante el Sprint 3, desde la configuración inicial de los servicios hasta la integración y publicación de las versiones correspondientes.
+
+Los commits de integración y Merge Pull Requests no deben interpretarse como aportes individuales equivalentes a los commits originales de desarrollo. La autoría puede consultarse directamente en GitHub.
+
+#### Integración entre backend y Web Application
+
+Una de las actividades principales del Sprint 3 fue la sustitución de la Fake API por conexiones HTTP hacia los servicios implementados en Spring Boot.
+
+Para ello, se modificaron componentes de infraestructura del frontend, manteniendo la lógica de presentación y delegando las operaciones del negocio a los servicios backend.
+
+La integración comprendió los siguientes procesos:
+
+- Registro e inicio de sesión mediante servicios de autenticación y autorización.
+- Consulta y administración de información empresarial.
+- Registro, búsqueda y consulta de disponibilidad de maquinaria.
+- Creación y seguimiento de solicitudes de alquiler.
+- Gestión de operaciones de entrega y devolución.
+- Registro y consulta de incidencias y mantenimientos.
+- Consulta de planes y gestión de suscripciones.
+
+Asimismo, se incorporaron ajustes en la gestión de errores y estados de operación para proporcionar respuestas coherentes ante situaciones como restricciones de disponibilidad, solicitudes inválidas y conflictos de negocio.
+
+#### Mejoras de arquitectura y validación
+
+Además de la implementación funcional, el equipo realizó actividades orientadas a fortalecer la separación de responsabilidades entre los Bounded Contexts.
+
+Entre las mejoras registradas se encuentran la publicación de contratos de consulta entre IAM y Profiles, la separación de operaciones de Inventory y Rentals mediante ACL y la incorporación de verificaciones arquitectónicas para identificar dependencias no permitidas.
+
+También se añadieron pruebas y controles de regresión relacionados con rutas REST, autenticación, persistencia y transacciones. La existencia de estos cambios se encuentra documentada en los commits de GitHub; los resultados de ejecución deben respaldarse mediante registros o capturas reales de las pruebas.
+
+Estas actividades permitieron mejorar la trazabilidad técnica sin modificar el propósito funcional de los servicios existentes.
+
+#### GitFlow y versiones publicadas
+
+Como resultado del proceso de integración, se prepararon las versiones del backend y de la Web Application mediante sus respectivas ramas release.
+
+| Repository | Release | Branch | Commit Id | Fecha |
+|---|---|---|---|---|
+| maquigest-platform | v1.0.0 | main | 601a991 | 12/11/2026 |
+| maquigest-webapp | v2.0.0 | main | f341489 | 12/11/2026 |
+
+Estas referencias permiten identificar las versiones preparadas para su publicación. La configuración del despliegue y las evidencias de funcionamiento de los servicios en la nube se desarrollan en la sección 5.2.3.7. Software Deployment.
+
+#### Resultados del desarrollo
+
+A partir de los cambios registrados en los repositorios, se evidencia la implementación de los servicios backend principales de MaquiGest, su integración con la aplicación Angular y la adopción de mecanismos de control de versiones para organizar el trabajo del equipo.
+
+El desarrollo comprendió los seis Bounded Contexts de la plataforma, la exposición de recursos REST, la persistencia con MySQL, la integración de autenticación JWT y la documentación OpenAPI.
+
+Además, los commits muestran actividades de refactorización, validación y preparación de releases que contribuyeron a la consolidación técnica de la solución.
+
+En conclusión, las evidencias de desarrollo del Sprint 3 permiten relacionar las funcionalidades implementadas con cambios concretos de código fuente, manteniendo trazabilidad mediante ramas, commits y versiones del proyecto.
+
 
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
