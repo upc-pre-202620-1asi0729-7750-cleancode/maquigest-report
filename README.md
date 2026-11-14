@@ -5486,6 +5486,44 @@ La sección de estadísticas de GitHub permite observar también la actividad ge
 
 ---
 
+## 5.3. Validation Interviews.
+### 5.3.1. Diseño de Entrevistas.
+En esta sección se presenta el diseño de entrevistaas de validación aplicado para la plataforma LowCortisol, con el objetivo de recopilar la percepción de nuestros usuarios anteriormente entrevistados respecto a la porpuesta de valor, la claridad de la información, la utilidad de las funcionalidades implementadas y la experiencia general de interacción con el producto digital. Estas entrevistados fueron planteadas para evaluar tanto el Landing Page como la Web Application, priorizando la validación de los flujos principales de navegación, monitoreo, alertas y visualización de información relevante para los segmentos objetivos.
+
+
+**Objetivos de las entrevistas:** El objetivo principal de las entrevistas de validación fue conocer la opinión de los participantes sobre la experiencia de uso de LowCortisol, especialmente en relacion con:
+
+
+* la comprensión de la propuesta de la plataforma.
+* la facilidad de navegación entre las secciones del sistema
+* la claridad de la información sobre monitoreo de agua y gas
+* la comprensión del estado de los dispositivos y sensores
+* el grado de satisfación general con la plataforma
+
+**Estructura de la entrevista**
+
+La entrevista fue diseñada en dos bloques: datos generales del entrevistado y preguntas de validación del producto.
+
+**A. Datos generales**
+
+Este bloque tuvo como finalidad identificar información básica del participante y contextualizar su perfil dentro de los segmentos objetivo.
+Las preguntas utilizadas fueron las siguientes:
+* ¿Cuál es su nombre?
+* ¿Cuántos años tiene?
+* ¿En qué distrito trabaja o reside?
+* ¿Cuál es su ocupación actual?
+
+**B. Preguntas de validación**
+
+Este bloque estuvo orientado a recoger apreciaciones cualitativas sobre la interfaz, la navegación, la utilidad de las funcionalidades y la satisfacción general con la solución.
+Las preguntas planteadas fueron las siguientes:
+
+* ¿Qué opinión tiene sobre el diseño visual y la apariencia general de nuestra plataforma LowCortisol?
+* ¿Le resultó fácil y rápido navegar entre las diferentes secciones del sistema?
+* ¿Considera útil contar con el selector de idioma (EN/ES)?
+* ¿La información mostrada sobre los equipos, la disponibilidad o los planes de suscripción se entienden con claridad?
+* ¿Le pareció sencillo buscar maquinaria y revisar el estado de sus solicitudes o contratos?
+* ¿Utilizaría nuestra plataforma de manera regular en su trabajo u operaciones diarias?
 
 # Conclusiones
 
