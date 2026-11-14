@@ -5267,67 +5267,155 @@ A continuación, se describen los escenarios que forman parte de la revisión de
 <!-- Subir video del evidence al Clipchamp con el nombre: upc-pre-202620-1asi0729-7750-cleancode-execution-evidence-sprint-3.mp4 -->
 
 
-#### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-Durante el Sprint 3 se incorporó Springdoc OpenAPI para generar la documentación de los recursos de `maquigest-platform`. Los endpoints se encuentran agrupados según los bounded contexts y pueden consultarse desde Swagger UI.
+### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-**Repositorio del Web Service:** [maquigest-platform](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform)
+Durante el Sprint 3, el equipo CleanCode documentó los Web Services REST de MaquiGest Platform, desarrollados con Java 27 y Spring Boot 4.1.2, utilizando Springdoc OpenAPI y Swagger UI. Esta documentación permite consultar métodos HTTP, rutas, parámetros, contratos de solicitud y respuesta, y mecanismos de autenticación.
 
-**Documentación local:** `http://localhost:8080/swagger-ui/index.html`
+Los servicios se organizan según los seis Bounded Contexts del backend: IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions, manteniendo la separación de responsabilidades definida por Domain-Driven Design (DDD).
 
-**Especificación OpenAPI local:** `http://localhost:8080/v3/api-docs`
+#### Repositorio y documentación de los Web Services
 
-**Documentación desplegada:** <!-- despliegue en render o en otro, algo así -->
+**Web Services Repository:** [MaquiGest Platform](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform)
 
-Exceptuando el registro, el inicio de sesión y la consulta de categorías, los recursos requieren un token JWT enviado mediante el encabezado `Authorization: Bearer <token>`.
+**Swagger UI — Production:** https://site--maquigest-backend--g7m4csgtks6m.code.run/swagger-ui/index.html
 
-| Contexto | Método | Endpoint | Parámetro | Respuesta esperada |
-|---|:---:|---|---|---|
-| IAM | POST | `/api/v1/authentication/sign-up` | `firstName`, `lastName`, `email`, `password`, `companyName`, `role` | `201 Created`: cuenta empresarial registrada. |
-| IAM | POST | `/api/v1/authentication/sign-in` | `email`, `password` | `200 OK`: usuario autenticado y token JWT. |
-| IAM | GET | `/api/v1/authentication/me` | JWT | `200 OK`: correo y autoridades del usuario autenticado. |
-| Profiles | GET | `/api/v1/profiles` | Query opcional `userId` | `200 OK`: lista de perfiles empresariales. |
-| Profiles | GET | `/api/v1/profiles/{id}` | Path `id` | `200 OK`: perfil solicitado. |
-| Profiles | POST | `/api/v1/profiles` | Datos personales, empresa, contacto y dirección | `201 Created`: perfil creado. |
-| Profiles | PUT | `/api/v1/profiles/{id}` | Path `id` y datos actualizados | `200 OK`: perfil actualizado. |
-| Inventory | GET | `/api/v1/equipment-categories` | Sin parámetros | `200 OK`: categorías registradas. |
-| Inventory | GET | `/api/v1/equipment` | Query opcional `userId` | `200 OK`: maquinaria del marketplace o del propietario. |
-| Inventory | GET | `/api/v1/equipment/{id}` | Path `id` | `200 OK`: información de la maquinaria. |
-| Inventory | POST | `/api/v1/equipment` | `userId`, `code`, `name`, `description`, `categoryId`, `location`, tarifas y estado | `201 Created`: maquinaria registrada. |
-| Inventory | PATCH | `/api/v1/equipment/{id}` | Path `id` y datos editables | `200 OK`: maquinaria actualizada. |
-| Inventory | POST | `/api/v1/equipment/{id}/availability-blocks` | `startDate`, `endDate` | `201 Created`: periodo reservado. |
-| Inventory | PATCH | `/api/v1/equipment/{id}/operational-status` | `status` | `200 OK`: estado operativo actualizado. |
-| Inventory | DELETE | `/api/v1/equipment/{id}` | Path `id` | `204 No Content`: maquinaria eliminada. |
-| Inventory | GET | `/api/v1/equipment/{id}/availability` | Query `startDate`, `endDate` | `200 OK`: disponibilidad del periodo. |
-| Subscriptions | GET | `/api/v1/subscription-plans` | JWT | `200 OK`: planes disponibles. |
-| Subscriptions | GET | `/api/v1/user-subscriptions` | JWT | `200 OK`: suscripciones registradas. |
-| Subscriptions | GET | `/api/v1/user-subscriptions/{id}` | Path `id` | `200 OK`: suscripción solicitada. |
-| Subscriptions | POST | `/api/v1/user-subscriptions` | `userId`, `planId`, `startDate`, `endDate`, `status`, `autoRenew` | `201 Created`: suscripción creada. |
-| Subscriptions | PATCH | `/api/v1/user-subscriptions/{id}/cancel` | Path `id` | `200 OK`: suscripción cancelada. |
-| Rentals | GET | `/api/v1/rental-requests` | JWT | `200 OK`: solicitudes relacionadas con el usuario. |
-| Rentals | GET | `/api/v1/rental-requests/{id}` | Path `id` | `200 OK`: solicitud consultada. |
-| Rentals | POST | `/api/v1/rental-requests` | Maquinaria, participantes y periodo | `201 Created`: solicitud pendiente registrada. |
-| Rentals | PATCH | `/api/v1/rental-requests/{id}/period` | `startDate`, `endDate` | `200 OK`: periodo de la solicitud pendiente actualizado. |
-| Rentals | PUT | `/api/v1/rental-requests/{id}` | Datos de la solicitud y nuevo estado | `200 OK`: solicitud aprobada o rechazada. |
-| Rentals | GET | `/api/v1/rentals` | JWT | `200 OK`: alquileres relacionados con el usuario. |
-| Rentals | GET | `/api/v1/rentals/{id}` | Path `id` | `200 OK`: alquiler solicitado. |
-| Rentals | POST | `/api/v1/rentals` | Recurso de alquiler | `409 Conflict`: la creación directa está bloqueada; el alquiler se genera al aprobar una solicitud. |
-| Rentals | PUT | `/api/v1/rentals/{id}` | Recurso de alquiler | `200 OK` únicamente para lectura compatible sin cambios; las transiciones se ejecutan mediante entregas y devoluciones. |
-| Rentals | GET | `/api/v1/deliveries` | JWT | `200 OK`: entregas visibles para el usuario. |
-| Rentals | POST | `/api/v1/deliveries` | `rentalId`, `deliveredAt`, `notes` | `201 Created`: entrega registrada y alquiler activado. |
-| Rentals | GET | `/api/v1/equipment-returns` | JWT | `200 OK`: devoluciones visibles para el usuario. |
-| Rentals | POST | `/api/v1/equipment-returns` | `rentalId`, `returnedAt`, `notes`, `maintenanceRequired` | `201 Created`: devolución registrada y reserva liberada. |
-| Maintenance | GET | `/api/v1/incidents` | Query opcional `equipmentId` | `200 OK`: incidencias relacionadas con la empresa o maquinaria. |
-| Maintenance | GET | `/api/v1/incidents/{id}` | Path `id` | `200 OK`: incidencia solicitada. |
-| Maintenance | POST | `/api/v1/incidents` | `equipmentId`, `description`, `blocksRental` | `201 Created`: incidencia registrada. |
-| Maintenance | PATCH | `/api/v1/incidents/{id}` | `blocksRental`, `status`, `resolvedAt` | `200 OK`: incidencia actualizada o resuelta. |
-| Maintenance | POST | `/api/v1/incidents/equipment/{equipmentId}/reactivate` | `inspectionConfirmed` | `204 No Content`: maquinaria reactivada después de las validaciones. |
-| Maintenance | GET | `/api/v1/maintenances` | Query opcional `equipmentId` | `200 OK`: mantenimientos de la empresa autenticada. |
-| Maintenance | GET | `/api/v1/maintenances/{id}` | Path `id` | `200 OK`: mantenimiento solicitado. |
-| Maintenance | POST | `/api/v1/maintenances` | `equipmentId`, `performedAt`, `type`, `status` | `201 Created`: mantenimiento registrado o programado. |
-| Maintenance | PATCH | `/api/v1/maintenances/{id}` | `status`, `technician`, `acknowledge`, `notes` | `200 OK`: estado o avance actualizado. |
-| Maintenance | GET | `/api/v1/maintenances/{id}/activities` | Path `id` | `200 OK`: actividades del mantenimiento. |
-| Maintenance | GET | `/api/v1/maintenances/equipment/{equipmentId}/history` | Path `equipmentId` | `200 OK`: historial combinado de la maquinaria. |
+**OpenAPI Specification — Production:** https://site--maquigest-backend--g7m4csgtks6m.code.run/v3/api-docs
+
+#### Documentación de los endpoints REST
+
+Los siguientes cuadros presentan los endpoints implementados, clasificados por Bounded Context. Los modelos de solicitud y respuesta completos se encuentran en Swagger UI.
+
+**IAM — Identity and Access Management**
+
+| HTTP Method | Endpoint | Parameters / Request | Descripción |
+|---|---|---|---|
+| POST | `/api/v1/authentication/sign-up` | Datos de registro de cuenta | Registrar una cuenta de empresa constructora o de alquiler. |
+| POST | `/api/v1/authentication/sign-in` | Correo electrónico y contraseña | Autenticar una cuenta y emitir un JWT. |
+| GET | `/api/v1/authentication/me` | Token del usuario autenticado | Consultar la identidad del usuario autenticado. |
+
+**Profiles — Company Profiles**
+
+| HTTP Method | Endpoint | Parameters / Request | Descripción |
+|---|---|---|---|
+| GET | `/api/v1/profiles` | Solicitud de consulta | Consultar perfiles empresariales. |
+| GET | `/api/v1/profiles/{id}` | Identificador del perfil | Consultar un perfil específico. |
+| POST | `/api/v1/profiles` | Datos del perfil empresarial | Registrar un perfil empresarial. |
+| PUT | `/api/v1/profiles/{id}` | Identificador y datos de actualización | Actualizar un perfil empresarial. |
+
+**Inventory — Equipment Management**
+
+| HTTP Method | Endpoint | Parameters / Request | Descripción |
+|---|---|---|---|
+| GET | `/api/v1/equipment-categories` | Sin parámetros | Consultar categorías de maquinaria. |
+| GET | `/api/v1/equipment` | Parámetros de consulta, cuando corresponda | Consultar equipos registrados. |
+| GET | `/api/v1/equipment/{id}` | Identificador del equipo | Consultar el detalle de un equipo. |
+| POST | `/api/v1/equipment` | Datos del equipo | Registrar maquinaria. |
+| PATCH | `/api/v1/equipment/{id}` | Identificador y datos de actualización | Actualizar información de maquinaria. |
+| DELETE | `/api/v1/equipment/{id}` | Identificador del equipo | Eliminar un equipo según reglas de negocio. |
+| GET | `/api/v1/equipment/{id}/availability` | Identificador y periodo de consulta | Consultar disponibilidad de un equipo. |
+| POST | `/api/v1/equipment/{id}/availability-blocks` | Identificador y periodo de bloqueo | Registrar bloqueo de disponibilidad. |
+| PATCH | `/api/v1/equipment/{id}/operational-status` | Identificador y nuevo estado | Actualizar el estado operativo. |
+
+**Rentals — Rental Management**
+
+| HTTP Method | Endpoint | Parameters / Request | Descripción |
+|---|---|---|---|
+| GET | `/api/v1/rental-requests` | Consulta de solicitudes | Consultar solicitudes de alquiler. |
+| GET | `/api/v1/rental-requests/{id}` | Identificador de solicitud | Consultar el detalle de una solicitud. |
+| POST | `/api/v1/rental-requests` | Datos de la solicitud y periodo | Registrar una solicitud de alquiler. |
+| PATCH | `/api/v1/rental-requests/{id}/period` | Identificador y periodo | Modificar el periodo solicitado. |
+| PUT | `/api/v1/rental-requests/{id}` | Identificador y datos de actualización | Actualizar o procesar una solicitud. |
+| GET | `/api/v1/rentals` | Consulta de alquileres | Consultar alquileres visibles al usuario. |
+| GET | `/api/v1/rentals/{id}` | Identificador de alquiler | Consultar un alquiler específico. |
+| POST | `/api/v1/rentals` | Datos del alquiler | Registrar un alquiler mediante la operación implementada. |
+| PUT | `/api/v1/rentals/{id}` | Identificador y datos de actualización | Actualizar un alquiler mediante la operación implementada. |
+| POST | `/api/v1/deliveries` | Datos de entrega | Registrar la entrega de maquinaria. |
+| GET | `/api/v1/deliveries` | Consulta de entregas | Consultar entregas registradas. |
+| POST | `/api/v1/equipment-returns` | Datos de devolución | Registrar devolución de maquinaria. |
+| GET | `/api/v1/equipment-returns` | Consulta de devoluciones | Consultar devoluciones registradas. |
+
+**Maintenance — Maintenance and Incidents**
+
+| HTTP Method | Endpoint | Parameters / Request | Descripción |
+|---|---|---|---|
+| GET | `/api/v1/incidents` | Consulta de incidencias | Consultar incidencias. |
+| GET | `/api/v1/incidents/{id}` | Identificador de incidencia | Consultar una incidencia. |
+| POST | `/api/v1/incidents` | Equipo y datos de incidencia | Registrar una incidencia. |
+| PATCH | `/api/v1/incidents/{id}` | Identificador y datos de actualización | Actualizar una incidencia. |
+| POST | `/api/v1/incidents/equipment/{equipmentId}/reactivate` | Identificador del equipo | Solicitar reactivación de maquinaria. |
+| GET | `/api/v1/maintenances` | Consulta de mantenimientos | Consultar mantenimientos. |
+| GET | `/api/v1/maintenances/{id}` | Identificador del mantenimiento | Consultar un mantenimiento específico. |
+| POST | `/api/v1/maintenances` | Datos del mantenimiento | Registrar o programar un mantenimiento. |
+| PATCH | `/api/v1/maintenances/{id}` | Identificador y datos de seguimiento | Actualizar el estado y seguimiento del mantenimiento. |
+| GET | `/api/v1/maintenances/{id}/activities` | Identificador del mantenimiento | Consultar actividades del mantenimiento. |
+| GET | `/api/v1/maintenances/equipment/{equipmentId}/history` | Identificador del equipo | Consultar historial de maquinaria. |
+
+**Subscriptions — Subscription Management**
+
+| HTTP Method | Endpoint | Parameters / Request | Descripción |
+|---|---|---|---|
+| GET | `/api/v1/subscription-plans` | Consulta de planes | Consultar planes disponibles. |
+| GET | `/api/v1/user-subscriptions` | Consulta de suscripciones | Consultar suscripciones. |
+| GET | `/api/v1/user-subscriptions/{id}` | Identificador de suscripción | Consultar una suscripción específica. |
+| POST | `/api/v1/user-subscriptions` | Datos de suscripción | Registrar una suscripción. |
+| PUT | `/api/v1/user-subscriptions/{id}` | Identificador y datos de actualización | Actualizar una suscripción. |
+| PATCH | `/api/v1/user-subscriptions/{id}/cancel` | Identificador de suscripción | Cancelar una suscripción. |
+
+#### Autenticación y seguridad de los servicios
+
+Los endpoints protegidos utilizan Spring Security y autenticación basada en JSON Web Tokens (JWT). Las solicitudes autorizadas incluyen el encabezado `Authorization: Bearer <token>`.
+
+La documentación OpenAPI permite identificar los requisitos de autenticación de cada operación.
+
+#### Evidencias de Swagger UI y servicios REST
+
+La documentación interactiva del backend está disponible públicamente desde el despliegue en Northflank.
+
+![Swagger UI de MaquiGest desplegado](assets/images/sprint-3/services/maquigest-swagger-produccion.png)
+
+*Figura 5. Swagger UI de MaquiGest Platform disponible desde el backend desplegado en Northflank.*
+
+Para comprobar la ejecución de un servicio público se utilizó la operación `GET /api/v1/equipment-categories` mediante la funcionalidad Try it out.
+
+![Ejecución de GET desde Swagger UI](assets/images/sprint-3/services/swagger-equipment-categories-request.png)
+
+*Figura 6. Ejecución de GET /api/v1/equipment-categories mediante Try it out en Swagger UI.*
+
+![Respuesta HTTP 200 de categorías](assets/images/sprint-3/services/swagger-equipment-categories-response.png)
+
+*Figura 7. Respuesta HTTP 200 OK y JSON con las categorías Excavators, Loaders, Compactors y Generators.*
+
+También se ejecutó la operación `POST /api/v1/authentication/sign-in` mediante Swagger UI, utilizando una cuenta de prueba registrada para comprobar la autenticación en producción.
+
+![Ejecución de POST sign-in desde Swagger UI](assets/images/sprint-3/services/swagger-signin-request.png)
+
+*Figura 8. Formulario de solicitud POST /api/v1/authentication/sign-in en Swagger UI.*
+
+![Respuesta HTTP 200 de autenticación](assets/images/sprint-3/services/swagger-signin-response.png)
+
+*Figura 9. Respuesta HTTP 200 OK de POST /api/v1/authentication/sign-in en Northflank. Se conserva la captura completa, ocultando únicamente la contraseña y el token JWT.*
+
+Las Figuras 6 y 7 evidencian el funcionamiento del servicio público de categorías. Las Figuras 8 y 9 muestran la solicitud de autenticación y la respuesta exitosa del servicio de inicio de sesión.
+
+#### Evidencia de desarrollo de la documentación
+
+La configuración y actualización de OpenAPI se respaldan mediante los siguientes commits del repositorio `maquigest-platform`:
+
+| Repository | Commit Id | Commit Message | Descripción |
+|---|---|---|---|
+| maquigest-platform | [d68047a](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/d68047a) | `feat(shared): configure OpenAPI and virtual threads.` | Configuración de OpenAPI en la infraestructura compartida. |
+| maquigest-platform | [986e956](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/986e956) | `test(ddd): close final architecture and API regression` | Verificaciones de arquitectura y regresión de la API. |
+| maquigest-platform | [2ce6ff9](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/2ce6ff9) | `fix(openapi): use relative server URL for Swagger UI` | Actualización de la configuración de OpenAPI en producción. |
+
+#### Resultados de la documentación de servicios
+
+Durante el Sprint 3 se documentaron los servicios REST de MaquiGest mediante Springdoc OpenAPI y Swagger UI, organizados por los seis Bounded Contexts del backend.
+
+Las evidencias presentadas muestran la interfaz de documentación y dos operaciones ejecutadas contra el entorno desplegado en Northflank: `GET /api/v1/equipment-categories` y `POST /api/v1/authentication/sign-in`, ambas con respuesta HTTP `200 OK`.
+
+Los commits vinculados permiten rastrear las configuraciones de OpenAPI realizadas en el repositorio.
+
 
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
