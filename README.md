@@ -5525,6 +5525,126 @@ Las preguntas planteadas fueron las siguientes:
 * ¿Le pareció sencillo buscar maquinaria y revisar el estado de sus solicitudes o contratos?
 * ¿Utilizaría nuestra plataforma de manera regular en su trabajo u operaciones diarias?
 
+### 5.3.2. Registro de entrevistas
+
+### Entrevista 1 — Judith Dávila
+
+| Campo | Detalle |
+|-------|---------|
+| Nombres y apellidos | Judith Dávila |
+| Edad | 44 años |
+| Distrito | Vitarte |
+| Segmento objetivo | Primer segmento objetivo: Pequeñas y medianas empresas de alquiler de maquinaria |
+| Fecha de entrevista | 13 noviembre 2026 |
+| Duración | 01:46 |
+| Timing en el video | 00:00 - 01:46 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)|
+
+<p align="center">
+  <img src="assets/md-images-chapter2/Cap5entrevista1.png" width="180">
+</p>
+
+**Resumen:**  
+Judith Dávila representa a una pequeña empresa dedicada al alquiler de tractores. Comentó que el diseño visual de la plataforma se ve limpio y claro. Sin embargo, indicó que no le resultó fácil navegar entre las secciones ni comprender la información de los equipos o planes de suscripción, debido a que no está muy familiarizada con el uso de computadoras. Valoró positivamente el selector de idioma de inglés a español porque le facilitaría el manejo. Señaló que la plataforma podría ser útil para quienes saben usar computadoras, pero en su caso particular no la utilizaría de manera regular en sus operaciones diarias por su poca familiaridad con el manejo de estos equipos.### Entrevista 2 — Carlos Rodríguez
+
+| Campo | Detalle |
+|-------|---------|
+| Nombres y apellidos | Carlos Rodríguez |
+| Edad | 51 años |
+| Distrito | San Juan de Miraflores |
+| Segmento objetivo | Primer segmento objetivo: Pequeñas y medianas empresas de alquiler de maquinaria |
+| Fecha de entrevista | 13 noviembre 2026 |
+| Duración | 02:17 |
+| Timing en el video | 01:47 - 04:04 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)|
+
+<p align="center">
+  <img src="assets/md-images-chapter2/Cap2entrevista2.png" width="180">
+</p>
+
+**Resumen:**  
+Carlos Rodríguez se desempeña como técnico mecánico y se dedica al alquiler de camiones de carga. Consideró que el diseño visual de la plataforma es muy práctico y asequible. Indicó que la navegación entre las secciones es fluida y está bien explicada, lo que evita complicaciones. Respecto al selector de idioma de inglés a español, lo calificó de muy práctico para ingresar de inmediato sin necesidad de adivinar o traducir. Aunque al principio mencionó que la información de los planes y equipos se le complica un poco por estar ingresando recién, confirmó que buscar maquinaria y revisar el estado de solicitudes es sencillo gracias a las indicaciones de la guía, y aseguró que sí utilizaría la plataforma de manera regular en su trabajo.
+
+### Entrevista 3 — Carmen Losada Paredes
+
+| Campo | Detalle |
+|-------|---------|
+| Nombres y apellidos | Carmen Losada Paredes |
+| Edad | 51 años |
+| Distrito | San Juan de Lurigancho |
+| Segmento objetivo | Primer segmento objetivo: Pequeñas y medianas empresas de alquiler de maquinaria |
+| Fecha de entrevista | 18 setiembre 2026 |
+| Duración | 01:56 |
+| Timing en el video | 04:05 - 06:01 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)|
+
+<p align="center">
+  <img src="assets/md-images-chapter2/Cap2entrevista3.png" width="180">
+</p>
+
+**Resumen:**  
+Carmen Losada Paredes administra una pequeña empresa que presta servicios de alquiler de camiones concreteros (mixers). Opinó que el diseño visual y la apariencia de la plataforma son buenos y le otorgan la facilidad de tener un control adecuado sobre sus maquinarias. Afirmó que la navegación entre las secciones es fácil y que todo está a la mano para su uso. Consideró muy útil el selector de idioma de inglés a español pensando en la atención a posibles clientes extranjeros. Destacó que la información sobre equipos y disponibilidad se entiende con claridad y permite identificar con precisión qué máquinas están operativas y disponibles. Concluyó afirmando que utilizaría la plataforma de manera regular en sus operaciones diarias para lograr un mejor control de sus unidades alquiladas y paradas.
+
+### Entrevista 4 — Saul Vásquez Simeon
+
+| Campo | Detalle |
+|-------|---------|
+| Nombres y apellidos | Saul Vásquez Simeon |
+| Edad | 44 años |
+| Distrito | San Juan de Lurigancho |
+| Segmento objetivo | Segundo segmento objetivo: Pequeñas empresas constructoras |
+| Fecha de entrevista | 13 noviembre 2026 |
+| Duración | 02:03 |
+| Timing en el video | 06:02 - 08:05 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)|
+
+<p align="center">
+  <img src="assets/md-images-chapter2/Cap5entrevista4.png" width="180">
+</p>
+
+**Resumen:**  
+Saul Vásquez Simeón se dedica al alquiler de miniconstructora de maquinarias. Señaló que el diseño visual y la apariencia de la plataforma son claros. Afirmó que la navegación entre las secciones del sistema resulta muy clara y sencilla. Respecto al selector de idioma de inglés a español, indicó que ayuda a notar las cosas de forma más clara. Explicó que la información mostrada sobre los equipos se entiende con total claridad, ya que detalla la ubicación, la clase de máquina y la tarifa diaria. Finalmente, confirmó que buscar maquinaria y revisar el estado de solicitudes o contratos es sencillo con el aplicativo, por lo que sí utilizaría la plataforma de manera regular en su trabajo.
+
+### Entrevista 5 — Sonia Gutiérrez
+
+| Campo | Detalle |
+|-------|---------|
+| Nombres y apellidos | Sonia Gutiérrez |
+| Edad | 41 años |
+| Distrito | San Juan de Miraflores |
+| Segmento objetivo | Segundo segmento objetivo: Pequeñas empresas constructoras |
+| Fecha de entrevista | 13 noviembre 2026 |
+| Duración | 01:47 |
+| Timing en el video | 08:06 - 09:53 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)|
+
+<p align="center">
+  <img src="assets/md-images-chapter2/Cap2entrevista5.png" width="180">
+</p>
+
+**Resumen:**  
+Sonia Gutiérrez trabaja en una empresa inmobiliaria. Opinó que el diseño visual de la plataforma es de mucha ayuda. Indicó que la navegación entre las secciones es ágil porque le ayuda a buscar con mayor rapidez la maquinaria que necesita. Valoró muy positivamente el selector de idioma de inglés a español al señalar que resulta de gran utilidad para quienes no dominan el inglés. Destacó que la información sobre disponibilidad y detalles técnicos de los equipos (como las toneladas) se comprende claramente, al igual que la revisión de fechas solicitadas y la aprobación de alquileres. Concluyó afirmando que utilizaría la plataforma de manera regular en sus operaciones diarias por ser una herramienta organizada y de gran apoyo.
+
+### Entrevista 6 — Ana Rivera Quispe
+
+| Campo | Detalle |
+|-------|---------|
+| Nombres y apellidos | Ana Rivera Quispe |
+| Edad | 36 años |
+| Distrito | Los Olivos |
+| Segmento objetivo | Segundo segmento objetivo: Pequeñas empresas constructoras |
+| Fecha de entrevista | 13 noviembre 2026 |
+| Duración | 01:34 |
+| Timing en el video | 09:54 - 11:28 |
+| URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)|
+
+<p align="center">
+  <img src="assets/md-images-chapter2/Cap2entrevista6.png" width="180">
+</p>
+
+**Resumen:**  
+Ana Rivera Quispe se dedica a la construcción de pequeños edificios. Señaló que la plataforma presenta un diseño limpio y ordenado. Sin embargo, al momento de evaluar la facilidad de navegación y la búsqueda de maquinaria o revisión de contratos, indicó que le resultaría complicado. Consideró útil contar con el selector de idioma debido a que no domina el inglés. Respecto a la información de los equipos y planes, reconoció que se entiende con claridad; sin embargo, al ser consultada sobre si utilizaría la plataforma de manera regular, comentó que aunque lo intentaría, le parecería bastante difícil en su día a día.
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
@@ -5644,3 +5764,4 @@ En este anexo se consolidan los principales recursos audiovisuales utilizados co
 | **Execution Evidence** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-execution-evidence-sprint-3`<br>**Formato:** `.mp4`   | Presenta la navegación por la segunda versión implementada y desplegada de la plataforma, esta vez incluyendo el bakend. El video demuestra las principales secciones y elementos interactivos desarrollados durante el Sprint 3. | [Ver Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQCQPSedz_yQTYMZGNFGaxZzAceAU1lmkCiv5WLOBju6EDY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=oHWgfw)                                                 |
 | **About the Product** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-about-the-product-sprint-3`<br>**Formato:** `.mp4`   | Orientación promocional, resumiendo el modelo de negocio, las características y beneficios del producto,incluyendo algunas escenas de interacción con el producto y al menos una opinión por cada segmento objetivo. | [Ver About the Product](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBughACCTT3TKceHs9kcIpFAenxCJlYrLbrMUlsc3tr8lU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=bde0Am)                                                 |
 | **About the Team** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-about-the-team-sprint-3`<br>**Formato:** `.mp4`   | Video que resume el proceso de trabajo realizado, incluyendo escenas de sesiones de trabajo real del equipo. Incluye además el testimonio ante cámara de cada participante describiendo actividades realizadas, logro de outcomes y desarrollo de competencias alcanzados. | [Ver About the Team](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDciBmwDFCQTJiqSUFUREH2AZgQaN2w8Tiqz_uIjISrxBw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=2494IX)                                                 |
+| **Validation Interviews** | **Cantidad:** 1 video<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-about-the-team-sprint-3`<br>**Formato:** `.mp4` <br>**Formato:** `11:28`   | Consolida sesiones y entrevistas de validación en las que usuarios de los segmentos objetivo interactúen con el landing page y con los prototipos de experiencias web y mobile, manifestando sus observaciones. Para cada entrevista se debe incluir títulos con información del entrevistado, el segmento objetivo y la fecha de la entrevista | [Ver Validation Interview](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)                                                 |
