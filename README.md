@@ -5418,67 +5418,47 @@ Los commits vinculados permiten rastrear las configuraciones de OpenAPI realizad
 
 
 
-#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 3 se preparó la primera versión del RESTful Web Service de MaquiGest. El backend dispone de perfiles separados para desarrollo y producción, configuración mediante variables de entorno, conexión con MySQL, seguridad mediante JWT y control de orígenes autorizados mediante CORS.
+Durante el Sprint 3, el equipo CleanCode realizó el despliegue de los componentes de MaquiGest en servicios de alojamiento en la nube. El backend desarrollado con Spring Boot y la base de datos MySQL se alojaron en Northflank; la Web Application desarrollada con Angular se publicó en Vercel; y la Landing Page se publicó en Netlify.
 
-La rama `develop` de `maquigest-platform` contiene la implementación integrada del backend. De manera complementaria, la rama `develop` de `maquigest-webapp` fue configurada para consumir recursos bajo el prefijo `/api/v1`. En desarrollo, Angular utiliza `proxy.conf.json` para dirigir las solicitudes hacia `http://127.0.0.1:8080`.
+El despliegue del backend se realizó desde la rama `main` del repositorio `maquigest-platform`. En el panel de Northflank se verificó que la versión correspondiente al commit `2ce6ff9` se encontraba en estado **Running**, con una instancia operativa.
 
-Al corte de esta documentación, el RESTful Web Service todavía no cuenta con una URL pública y los cambios de Sprint 3 no han sido publicados en las ramas `main`. Por ello, la evidencia definitiva de despliegue deberá incorporarse después de completar la publicación de los productos.
+**Backend — Production:** https://site--maquigest-backend--g7m4csgtks6m.code.run
 
-**Estado actual de los productos**
+![Despliegue del backend en Northflank](assets/images/sprint-3/deployment/maquigest-backend-northflank.png)
 
-| Producto | Repositorio | Status | URL |
-|---|---|---|---|
-| Landing Page | `maquigest-website` | La versión del Sprint 2 continúa publicada. No se registran cambios de Sprint 3. | https://maquigest-cleancode.netlify.app/ |
-| Web Application | `maquigest-webapp` | La integración con el backend se encuentra en `develop`; la versión de producción continúa asociada con la release anterior. | https://maquigest-webapp-cleancode.vercel.app/ |
-| RESTful Web Service | `maquigest-platform` | Implementado en `develop`. Despliegue pendiente. | PENDIENTE |
-| Database | MySQL | Configuración de desarrollo y producción preparada. Instancia cloud pendiente. | PENDIENTE |
-| OpenAPI Documentation | Swagger UI | Disponible localmente. Publicación pendiente. | PENDIENTE |
+*Figura 10. Despliegue del backend MaquiGest Platform en Northflank, desde la rama main, con el servicio en estado Running.*
 
-**Variables de entorno requeridas por el backend**
+La base de datos de la plataforma se desplegó mediante el addon `maquigest-mysql` de Northflank, que utiliza MySQL 8.0.46. En el panel de administración se observó el estado **Running** con **1/1 instancias**.
 
-| Variable | Función |
-|---|---|
-| `DATABASE_URL` | Host de la instancia MySQL. |
-| `DATABASE_PORT` | Puerto de MySQL. |
-| `DATABASE_NAME` | Nombre de la base de datos. |
-| `DATABASE_USER` | Usuario de conexión. |
-| `DATABASE_PASSWORD` | Contraseña de conexión. |
-| `JWT_SECRET` | Secreto utilizado para firmar los tokens JWT. |
-| `CORS_ALLOWED_ORIGINS` | Dominios autorizados para consumir el API. |
-| `PORT` | Puerto utilizado por la aplicación. |
+![Addon MySQL de MaquiGest en Northflank](assets/images/sprint-3/deployment/maquigest-mysql-northflank.png)
 
-**Proceso pendiente para completar el despliegue**
+*Figura 11. Addon maquigest-mysql desplegado en Northflank con una instancia en estado Running.*
 
-1. Preparar el esquema completo de MySQL mediante migraciones versionadas.
-2. Crear la instancia de base de datos de producción.
-3. Configurar el servicio de backend en el proveedor cloud seleccionado.
-4. Registrar las variables de entorno sin exponer credenciales en GitHub.
-5. Configurar `CORS_ALLOWED_ORIGINS` con el dominio de la Web Application.
-6. publicar la documentación Swagger junto con el backend.
-7. Configurar Angular para consumir la URL pública o un rewrite de `/api/v1`.
-8. Ejecutar pruebas de registro, autenticación y operaciones protegidas.
-9. Integrar las ramas release en `main`.
-10. Crear los tags correspondientes mediante Semantic Versioning.
+Adicionalmente, se verificó la conexión a la base de datos desplegada mediante MySQL Workbench. La consulta `SHOW TABLES` sobre el esquema `maquigest_platform` devolvió **17 tablas**, confirmando que el esquema se encontraba accesible desde el entorno de administración.
 
-**Capturas de evidencia**
+![Consulta de tablas de MaquiGest en MySQL Workbench](assets/images/sprint-3/deployment/maquigest-mysql-workbench.png)
 
-<!-- Agregar capturas de la creación del servicio de backend, de la instancia MySQL, de las variables de entorno sin mostrar valores sensibles, del deployment exitoso, del Swagger público, de la Web Application consumiendo el backend desplegado, de la actividad Network con una respuesta HTTP 200 del backend. -->
+*Figura 12. Consulta del esquema maquigest_platform mediante MySQL Workbench, con 17 tablas identificadas.*
 
-**URLs del despliegue**
+La Web Application de MaquiGest se publicó en Vercel. El panel de despliegue mostró el estado **Ready** en el entorno **Production**, con la rama `main` como origen de la versión publicada y el dominio público asociado a la aplicación.
 
-| Recurso | Plataforma | URL |
-|---|---|---|
-| Landing Page | Netlify | https://maquigest-cleancode.netlify.app/ |
-| Web Application | Vercel | https://maquigest-webapp-cleancode.vercel.app/ |
-| RESTful Web Service | - | - |
-| Swagger UI | - | - |
-| API Health Check | - | - |
+**Web Application — Production:** https://maquigest-webapp-cleancode.vercel.app/
 
-**Resultado obtenido**
+![Despliegue de la Web Application en Vercel](assets/images/sprint-3/deployment/maquigest-webapp-vercel.png)
 
-El Sprint 3 permitió preparar la implementación del backend y la integración local con Angular. El despliegue público, la configuración de la base de datos cloud y la publicación de las versiones estables continúan pendientes. Esta sección deberá actualizarse con los proveedores, URLs, versiones y capturas definitivas antes de cerrar AV2.
+*Figura 13. Despliegue de MaquiGest WebApp en Vercel con estado Ready y entorno Production.*
+
+Por último, la Landing Page de MaquiGest se publicó en Netlify. El panel del proyecto `maquigest-cleancode` mostró el dominio público, la procedencia del despliegue desde GitHub y una vista previa del sitio.
+
+**Landing Page — Production:** https://maquigest-cleancode.netlify.app/
+
+![Publicación de la Landing Page en Netlify](assets/images/sprint-3/deployment/maquigest-landing-netlify.png)
+
+*Figura 14. Landing Page de MaquiGest publicada en Netlify y asociada al repositorio de GitHub.*
+
+Las evidencias presentadas muestran los componentes de MaquiGest desplegados en sus respectivas plataformas y accesibles mediante los entornos de producción configurados para el proyecto.
 
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
