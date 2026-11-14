@@ -72,7 +72,7 @@ Proyecto<br>
 
 <br>
 
-<p><strong>Octubre 2026</strong></p>
+<p><strong>Noviembre 2026</strong></p>
 
 </div>
 
@@ -246,6 +246,11 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
             - [5.2.3.6. Services Documentation Evidence for Sprint Review](#5236-services-documentation-evidence-for-sprint-review)
             - [5.2.3.7. Software Deployment Evidence for Sprint Review](#5237-software-deployment-evidence-for-sprint-review)
             - [5.2.3.8. Team Collaboration Insights during Sprint](#5238-team-collaboration-insights-during-sprint)
+    - [5.3. Validation Interviews]()
+            - [5.3.1. Diseño de Entrevistas](#531-diseño-de-entrevistas)
+            - [5.3.2. Registro de Entrevistas](#532-registro-de-entrevistas)
+            - [5.3.3. Evaluaciones según heuristicas](#533-evaluaciones-segun-heuristicas)
+    - [5.4. Video About-the-Product](#54-video-about-the-product)
 - [Conclusiones](#conclusiones)
     - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
 - [Bibliografía](#bibliografía)
