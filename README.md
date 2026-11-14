@@ -5225,43 +5225,36 @@ Durante el Sprint 3 se implementaron los principales procesos de MaquiGest sobre
 
 A continuación, se describen los escenarios que forman parte de la revisión del Sprint 3.
 
-1. **Documentación del RESTful API:** Swagger UI presenta los recursos organizados por Authentication, Profiles, Equipment, Rentals, Maintenance y Subscriptions.
-<!--![SwaggerUI](assets/md-images-chapter5/swaggeruiResources.png) -->
+1. **Landing Page y Acceso a la Plataforma:** Desde el sitio público de MaquiGest, los visitantes pueden consultar la propuesta de valor y hacer clic en el botón *"Ir a la aplicación"* para redirigirse al portal de autenticación.
+
+![Landing Page MaquiGest](assets/md-images-chapter5/execution1.png)
 
 2. **Registro e inicio de sesión:** un usuario puede registrar una cuenta empresarial, iniciar sesión y recibir un token JWT para acceder a los recursos protegidos.
-<!--![Registro](assets/md-images-chapter5/backendRegistro.png) -->
+![Registro](assets/md-images-chapter5/singIn.png) 
 
 3. **Gestión de perfiles empresariales:** el usuario autenticado puede consultar y actualizar la información asociada con su empresa.
-<!--![Gestión de perfiles empresariales](assets/md-images-chapter5/backendPerfilEmpresarial.png) -->
+![Gestión de perfiles empresariales](assets/md-images-chapter5/profile-rental.png) 
+![Gestión de perfiles empresariales](assets/md-images-chapter5/editProfile-rental.png) 
 
 4. **Inventario de maquinaria:** una empresa de alquiler puede registrar, consultar y actualizar maquinaria, así como revisar su estado operativo y disponibilidad.
-<!--![Inventario de Maquinaria](assets/md-images-chapter5/backendInventarioMaquinaria.png) -->
+![Inventario de Maquinaria](assets/md-images-chapter5/equipmentDetails-construction.png)
 
 5. **Solicitud y reprogramación de alquiler:** una empresa constructora puede crear una solicitud de alquiler y modificar el periodo mientras permanezca en estado pendiente.
-<!--![Solicitud de alquiler](assets/md-images-chapter5/backendSolicitudAlquiler.png) -->
+![Solicitud de alquiler](assets/md-images-chapter5/equipment-rental.png)
 
 6. **Aprobación, entrega y devolución:** una empresa de alquiler puede aprobar o rechazar una solicitud, registrar la entrega de la maquinaria y completar el alquiler mediante su devolución.
-<!--![Aprobacion de Solicitud](assets/md-images-chapter5/backendtratarSolicitud.png) -->
+![Aprobacion de Solicitud](assets/md-images-chapter5/rentalRequest-rental.png) 
 
-7. **Incidencias y mantenimiento:** una empresa de alquiler puede registrar incidencias, bloquear temporalmente una maquinaria, programar mantenimientos y registrar actividades relacionadas.
-<!--![Incidencias y Mantenimiento](assets/md-images-chapter5/backendIncidencias.png) -->
+7**Historial de maquinaria:** el sistema presenta una línea de tiempo que reúne alquileres, incidencias, mantenimientos y actividades registradas para una maquinaria.
+![Historial de Maquinaria](assets/md-images-chapter5/rentals-rental.png) 
 
-8. **Historial de maquinaria:** el sistema presenta una línea de tiempo que reúne alquileres, incidencias, mantenimientos y actividades registradas para una maquinaria.
-<!--![Historial de Maquinaria](assets/md-images-chapter5/backendHistorialMaquinaria.png) -->
-
-9. **Planes y suscripciones:** una empresa de alquiler puede consultar los planes, registrar una suscripción y cancelar su plan actual.
-<!--![Planes y suscripciones](assets/md-images-chapter5/backendPlanes.png) -->
-
-10. **Persistencia en MySQL:** las operaciones realizadas desde la Web Application se almacenan en la base de datos utilizada por el backend.
-<!--![Aprobacion de Solicitud](assets/md-images-chapter5/backendPersistencia.png) -->
+8. **Planes y suscripciones:** una empresa de alquiler puede consultar los planes, registrar una suscripción y cancelar su plan actual.
+![Planes y suscripciones](assets/md-images-chapter5/subscription-rental.png) 
+![Planes y suscripciones](assets/md-images-chapter5/cancelSubscription-rental.png) 
 
 ---
 
-**Execution Evidence Video for Sprint 3 Review:** [Ver video de Execution Evidence Sprint 3](PENDIENTE)
-
-<!-- Subir video del evidence al Clipchamp con el nombre: upc-pre-202620-1asi0729-7750-cleancode-execution-evidence-sprint-3.mp4 -->
-
-
+**Execution Evidence Video for Sprint 3 Review:** [Ver video de Execution Evidence Sprint 3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQCQPSedz_yQTYMZGNFGaxZzAceAU1lmkCiv5WLOBju6EDY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=oHWgfw)
 
 ### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
