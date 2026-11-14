@@ -4990,122 +4990,96 @@ La siguiente matriz conserva únicamente el liderazgo verificable mediante el hi
 
 
 
-
 ### 5.2.3.3. Sprint Backlog 3
 
-During Sprint 3, the CleanCode team focused on implementing and integrating the MaquiGest RESTful Web Service with the Angular Web Application and MySQL database. The objective was to replace the previously used Fake API with a real backend based on Java 27, Spring Boot, Domain-Driven Design (DDD), CQRS, Spring Data JPA and JWT-based authentication.
+Durante el Sprint 3, el equipo CleanCode orientó sus actividades al desarrollo e integración del backend de MaquiGest, plataforma SaaS destinada a la gestión y alquiler de maquinaria de construcción. El propósito principal fue sustituir los servicios simulados utilizados en iteraciones anteriores por una API REST funcional, desarrollada con Java 27, Spring Boot y MySQL, e integrada con la Web Application implementada en Angular.
 
-The sprint included the development of REST endpoints for company profiles, equipment management, availability, rental requests, deliveries, returns, maintenance, incidents and subscriptions. Additionally, the team worked on request validation, HTTP error handling, OpenAPI documentation and the integration of the backend with the frontend.
+La planificación comprendió la implementación de servicios para autenticación, perfiles empresariales, gestión de maquinaria, disponibilidad, solicitudes de alquiler, entregas, devoluciones, mantenimiento, incidencias y suscripciones. Asimismo, se contemplaron actividades relacionadas con la persistencia de datos, validación de solicitudes, gestión de respuestas HTTP y documentación OpenAPI.
 
-To organize and monitor these activities, the team used a Trello board named **Spring Backlog 3 - MaquiGest**, following a Kanban workflow with the columns To-Do, In-Progress, Review and Done.
+Para organizar y supervisar el avance de estas actividades se utilizó Trello, mediante un tablero denominado **Spring Backlog 3 - MaquiGest**, estructurado bajo un flujo Kanban con las listas To-Do, In-Progress, Review y Done.
 
-**Sprint Goal:** Implement, integrate and validate the core MaquiGest backend services, enabling the Angular Web Application to execute real business operations through RESTful APIs and persist data in MySQL.
+**Sprint Goal:** Implementar e integrar los servicios principales del backend de MaquiGest con la Web Application y la base de datos MySQL, permitiendo la ejecución de operaciones reales mediante endpoints REST y reduciendo la dependencia de los servicios simulados.
 
-**Sprint Backlog Board:** [Spring Backlog 3 - MaquiGest](URL_TRELLO_PENDIENTE)
+**Sprint Backlog Board:** Pendiente de incorporar el enlace compartido del tablero Trello.
 
-The following figures present the Sprint 3 board and its implementation progress.
+#### Evidencias del Sprint Backlog 3
 
-![Sprint 3 Backlog Overview](assets/images/sprint-3/trello/trello-sprint3-1.png)
+Las siguientes capturas muestran la organización del Sprint Backlog 3, sus Technical Stories y el estado de avance de las actividades registradas por el equipo.
 
-*Figure 1. Sprint 3 Trello board showing the To-Do, In-Progress, Review and Done columns.*
+![Vista general del Sprint Backlog 3](assets/images/sprint-3/trello/trello-sprint3-1.png)
 
-![Sprint 3 Rental and Maintenance Tasks](assets/images/sprint-3/trello/trello-sprint3-2.png)
+*Figura 1. Vista general del tablero Trello correspondiente al Sprint 3 de MaquiGest.*
 
-*Figure 2. Completed technical stories related to rentals, equipment deliveries, returns, maintenance and subscriptions.*
+![Actividades de alquileres y mantenimiento](assets/images/sprint-3/trello/trello-sprint3-2.png)
 
-![Sprint 3 Backend Infrastructure Tasks](assets/images/sprint-3/trello/trello-sprint3-3.png)
+*Figura 2. Evidencia de las actividades técnicas relacionadas con alquileres, entregas, devoluciones y mantenimiento.*
 
-*Figure 3. Completed technical stories associated with authentication, REST API exposure, database persistence and request validation.*
+![Actividades de backend e infraestructura](assets/images/sprint-3/trello/trello-sprint3-3.png)
 
-![Sprint 3 API Documentation Tasks](assets/images/sprint-3/trello/trello-sprint3-4.png)
+*Figura 3. Evidencia de las actividades relacionadas con autenticación, persistencia, validaciones y servicios REST.*
 
-*Figure 4. Completed technical stories related to API documentation, company profiles and HTTP response handling.*
+![Actividades de documentación y perfiles](assets/images/sprint-3/trello/trello-sprint3-4.png)
+
+*Figura 4. Evidencia de las actividades de documentación OpenAPI, gestión de perfiles y respuestas HTTP.*
 
 #### Sprint Backlog 3 Task Distribution
 
-The Sprint Backlog contains 16 Technical Stories (TS01–TS16) associated with backend development and service integration.
+La distribución del trabajo se organizó mediante 16 Technical Stories, identificadas desde TS01 hasta TS16. Estas actividades representan funcionalidades y tareas técnicas necesarias para la implementación de los servicios principales de MaquiGest.
 
-The task statuses were obtained from the Trello screenshots. The effort values are retrospective estimates proposed for this report, while the suggested assignees were derived from functional Git commit authorship. They must be validated by the team before being treated as original planning records.
+La tabla mantiene las columnas solicitadas en el enunciado oficial del proyecto. Los estados proceden de las capturas del tablero Trello. Las estimaciones en horas son propuestas retrospectivas y los responsables son asignaciones sugeridas a partir de los historiales Git; ambos datos requieren confirmación del equipo, pues no están acreditados como registros originales de planificación.
+
+| Sprint # | Sprint 3 |
+|---|---|
 
 | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
 |---|---|---|---|---|---:|---|---|
-| TS01 | REST API Exposure | TS01 | Expose MaquiGest REST API | Configure shared REST infrastructure, standardized resources and API exposure. | 12 | James Caleb (proposed) | Done |
-| TS02 | Company Profiles | TS02 | Manage company profiles through REST | Implement company profile operations, persistence, ownership validation and REST resources. | 14 | Bruno (proposed) | Done |
-| TS03 | Equipment Management | TS03 | Manage equipment through REST | Implement equipment registration, listing, updating and management operations. | 20 | Miroslav (proposed) | Done |
-| TS04 | Equipment Availability | TS04 | Check equipment availability | Implement equipment availability queries and reservation restrictions. | 12 | Miroslav (proposed) | Done |
-| TS05 | Rental Requests | TS05 | Manage rental requests through REST | Implement rental request creation, consultation and management operations. | 20 | CarlossUPC (proposed) | Done |
-| TS06 | Rental Reservations | TS06 | Manage reservations and rental statuses | Implement reservation coordination and rental lifecycle state transitions. | 18 | CarlossUPC (proposed) | Done |
-| TS07 | Deliveries and Returns | TS07 | Manage deliveries and returns | Implement equipment delivery, return registration and rental lifecycle validation. | 16 | CarlossUPC (proposed) | Done |
-| TS08 | Maintenance and Incidents | TS08 | Manage maintenance and incidents | Implement maintenance workflows, incident registration, resolution and operational restrictions. | 24 | CarlossUPC (proposed) | Done |
-| TS09 | Subscription Plans | TS09 | Consult plans and subscriptions | Implement subscription plan queries, lifecycle operations and REST resources. | 16 | Miroslav (proposed) | Done |
-| TS10 | Authentication and Authorization | TS10 | Manage authentication and authorization | Implement user registration, sign-in, JWT security and role-based authorization. | 20 | Bruno (proposed) | Done |
-| TS11 | Transactional Notifications | TS11 | Send notifications using SendGrid | Integrate an external transactional email service for business notifications. | 12 | Not confirmed | To-Do |
-| TS12 | Domain Persistence | TS12 | Persist domain information using JPA and MySQL | Configure JPA persistence entities, repositories, adapters and MySQL integration. | 20 | James Caleb (proposed) | Done |
-| TS13 | REST Request Validation | TS13 | Validate REST API requests | Implement request validation, domain constraints and localized validation messages. | 12 | James Caleb (proposed) | Done |
-| TS14 | HTTP Error Handling | TS14 | Manage REST API errors and HTTP responses | Standardize API responses, exception handling and appropriate HTTP status codes. | 12 | James Caleb (proposed) | Done |
-| TS15 | OpenAPI Documentation | TS15 | Document REST resources using OpenAPI | Configure Springdoc OpenAPI, Swagger UI and REST contract documentation. | 10 | James Caleb (proposed) | Done |
-| TS16 | Map Services Integration | TS16 | Integrate map services for deliveries and returns | Integrate external geographical services into delivery and return workflows. | 16 | Not confirmed | To-Do |
+| TS01 | Exposición de servicios REST | TS01 | Exponer API REST de MaquiGest | Configurar la infraestructura necesaria para publicar los servicios REST de los módulos de la plataforma. | 12 | James Caleb (propuesto) | Done |
+| TS02 | Gestión de perfiles empresariales | TS02 | Implementar servicios REST de perfiles | Desarrollar operaciones para registrar, consultar y administrar la información de las empresas. | 14 | Bruno (propuesto) | Done |
+| TS03 | Gestión de maquinaria | TS03 | Implementar servicios REST de maquinaria | Desarrollar operaciones para registrar, consultar, actualizar y administrar equipos de construcción. | 20 | Miroslav (propuesto) | Done |
+| TS04 | Disponibilidad de maquinaria | TS04 | Consultar disponibilidad de equipos | Implementar consultas y validaciones de disponibilidad relacionadas con las operaciones de alquiler. | 12 | Miroslav (propuesto) | Done |
+| TS05 | Solicitudes de alquiler | TS05 | Gestionar solicitudes de alquiler | Implementar operaciones para registrar, consultar y gestionar solicitudes de alquiler de equipos. | 20 | CarlossUPC (propuesto) | Done |
+| TS06 | Reservas y estados de alquiler | TS06 | Gestionar reservas y estados | Desarrollar operaciones para administrar las reservas y las transiciones de estado durante el alquiler. | 18 | CarlossUPC (propuesto) | Done |
+| TS07 | Entregas y devoluciones | TS07 | Gestionar entregas y devoluciones | Implementar operaciones para registrar la entrega y devolución de maquinaria, considerando las reglas del ciclo de alquiler. | 16 | CarlossUPC (propuesto) | Done |
+| TS08 | Mantenimiento e incidencias | TS08 | Implementar servicios de mantenimiento | Desarrollar operaciones para registrar incidencias, gestionar mantenimientos y consultar el historial correspondiente. | 24 | CarlossUPC (propuesto) | Done |
+| TS09 | Planes y suscripciones | TS09 | Implementar servicios de suscripciones | Desarrollar operaciones para consultar planes y gestionar el ciclo de vida de las suscripciones. | 16 | Miroslav (propuesto) | Done |
+| TS10 | Autenticación y autorización | TS10 | Implementar autenticación y seguridad | Desarrollar el registro e inicio de sesión, la autenticación JWT y las restricciones de acceso correspondientes. | 20 | Bruno (propuesto) | Done |
+| TS11 | Notificaciones transaccionales | TS11 | Integrar SendGrid | Integrar un servicio externo para el envío de notificaciones transaccionales relacionadas con las operaciones de MaquiGest. | 12 | Sin asignación confirmada | To-Do |
+| TS12 | Persistencia de información | TS12 | Implementar persistencia JPA y MySQL | Configurar entidades de persistencia, repositorios y adaptadores para almacenar información del dominio. | 20 | James Caleb (propuesto) | Done |
+| TS13 | Validación de solicitudes | TS13 | Validar requests de la API REST | Incorporar validaciones para los datos recibidos por los endpoints y controlar solicitudes incorrectas. | 12 | James Caleb (propuesto) | Done |
+| TS14 | Gestión de errores HTTP | TS14 | Estandarizar respuestas y errores | Implementar respuestas HTTP apropiadas y mecanismos de gestión de excepciones. | 12 | James Caleb (propuesto) | Done |
+| TS15 | Documentación de servicios | TS15 | Documentar API mediante OpenAPI | Configurar Springdoc OpenAPI y Swagger UI para documentar los recursos REST disponibles. | 10 | James Caleb (propuesto) | Done |
+| TS16 | Servicios de mapas | TS16 | Integrar servicios de mapas | Incorporar servicios geográficos externos para apoyar los procesos de entrega y devolución de maquinaria. | 16 | Sin asignación confirmada | To-Do |
 
-#### Sprint Backlog Results
+#### Seguimiento y resultados del Sprint Backlog
 
-At the time the Trello evidence was captured, the Sprint 3 backlog presented the following distribution:
+El estado registrado en las evidencias del tablero Trello permite identificar el avance de las 16 Technical Stories planificadas para el Sprint 3.
 
-| Workflow Status | Number of Tasks | Percentage |
+| Status | Cantidad de tareas | Porcentaje |
 |---|---:|---:|
-| To-Do | 2 | 12.5% |
-| In-Progress | 0 | 0% |
-| Review | 0 | 0% |
-| Done | 14 | 87.5% |
-| **Total** | **16** | **100%** |
+| To-Do | 2 | 12,5 % |
+| In-Progress | 0 | 0 % |
+| Review | 0 | 0 % |
+| Done | 14 | 87,5 % |
+| **Total** | **16** | **100 %** |
 
-The estimated effort for all 16 Technical Stories is **254 hours**, of which **226 hours** correspond to tasks currently marked as Done and **28 hours** to pending tasks. These hours represent proposed effort estimates, not actual time-tracking results.
+De acuerdo con estos registros, 14 de las 16 Technical Stories se encontraban en estado Done, lo que representa un avance del 87,5 % respecto al número total de tarjetas del Sprint Backlog.
 
-The completed technical stories covered the REST API foundation, six bounded contexts, database persistence, authentication, authorization, request validation, HTTP error handling and API documentation.
+La estimación referencial propuesta para las 16 actividades equivale a 254 horas, distribuidas en 226 horas correspondientes a tareas marcadas como Done y 28 horas correspondientes a tareas pendientes. Estas cifras representan estimaciones de esfuerzo y no horas efectivamente registradas.
 
-Two Technical Stories remained pending:
+Las actividades finalizadas abarcan la exposición de servicios REST, gestión de perfiles, inventario de maquinaria, solicitudes de alquiler, entregas, devoluciones, mantenimiento, suscripciones, autenticación, persistencia y documentación OpenAPI.
 
-- **TS11 — Transactional Notifications:** SendGrid integration was not completed during Sprint 3.
-- **TS16 — Map Services Integration:** External map services for equipment deliveries and returns were not integrated during Sprint 3.
+Por otro lado, se identificaron dos actividades que permanecían pendientes al momento del registro:
 
-These pending tasks are explicitly distinguished from implemented functionality.
+- **TS11 — Integrar SendGrid:** pendiente la integración de un servicio externo de notificaciones transaccionales.
+- **TS16 — Integrar servicios de mapas:** pendiente la integración de servicios geográficos para los procesos de entrega y devolución.
 
-The Sprint 3 results establish the backend foundation required for MaquiGest to operate using real RESTful services instead of simulated data. The implementation evidence, source-code history, API documentation and cloud deployment are presented in the following sections of this report.
+Estas actividades no se consideran funcionalidades implementadas en el presente Sprint.
+
+En conclusión, el Sprint Backlog 3 refleja la priorización del desarrollo de servicios reales y la integración técnica entre los componentes de MaquiGest. El estado de las tareas proporciona trazabilidad del trabajo realizado y permite identificar los requerimientos técnicos que permanecen pendientes para las siguientes iteraciones.
 
 
 
 
-#### 5.2.3.4. Development Evidence for Sprint Review
-
-Durante el Sprint 3 se creó el repositorio `maquigest-platform` para implementar el RESTful Web Service de MaquiGest. El backend fue desarrollado con Java 27, Spring Boot 4.1.2, Spring Data JPA, Spring Security, JWT, MySQL y Springdoc OpenAPI.
-
-La implementación se organizó mediante GitFlow. Las funcionalidades fueron desarrolladas en ramas feature y posteriormente integradas en `develop`. También se actualizaron los servicios de `maquigest-webapp` para retirar la Fake API y adaptar el frontend a los contratos del nuevo backend.
-
-La tabla presenta una selección de commits representativos. Las fechas corresponden al registro de los commits en la zona horaria de Perú.
-
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
-|---|---|---|---|---|---|
-| maquigest-platform | `feature/setup-platform-configuration` | [25b0bc7](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/25b0bc724e397d79ef70bc0813a17760d9fcd76a) | build: configure maven and project dependencies. | Se configuraron Maven, Java, Spring Boot y las dependencias principales del backend. | 2026-11-03 |
-| maquigest-platform | `feature/shared-bounded-context` | [6e06a74](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/6e06a74eaabf682e69f8165678ddc1eb3a0851cc) | feat(shared): implement result and application error patterns. | Se incorporaron estructuras comunes para representar resultados exitosos y errores de aplicación. | 2026-11-03 |
-| maquigest-platform | `feature/shared-bounded-context` | [d68047a](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/d68047a42db8f0110a76ee1e409fe1584213e5df) | feat(shared): configure OpenAPI and virtual threads. | Se configuraron OpenAPI, Swagger UI y el uso de virtual threads. | 2026-11-03 |
-| maquigest-platform | `feature/iam-authentication` | [527c024](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/527c0249e343ccea5acf7efcbca0761ca5d93b63) | feat(iam): expose company registration REST endpoint. | Se expuso el recurso REST para registrar cuentas empresariales. | 2026-11-03 |
-| maquigest-platform | `feature/iam-authentication` | [d4c9c9b](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/d4c9c9bc8958de6f605a83741ee34ad9a365cac0) | feat(iam): expose sign-in REST endpoint. | Se implementó el inicio de sesión y la emisión de JWT. | 2026-11-03 |
-| maquigest-platform | `feature/iam-authentication` | [fc5dfb5](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/fc5dfb573e5e7ac66f175ec02af5152b54256362) | feat(iam): configure stateless JWT web security. | Se protegieron los recursos mediante Spring Security y autenticación stateless. | 2026-11-03 |
-| maquigest-platform | `feature/equipment-management` | [2149006](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/214900625a7a87f373f6a666b83f8b94c1b39254) | feat(inventory): expose equipment management REST endpoints. | Se expusieron los recursos para consultar, registrar, actualizar y eliminar maquinaria. | 2026-11-03 |
-| maquigest-platform | `feature/inventory-operational-integration` | [bf79d9f](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/bf79d9f0144facb681e412a5e1007d5de1508ef1) | feat(inventory): expose equipment operational REST endpoints. | Se incorporaron disponibilidad, reservas y cambios de estado operativo. | 2026-11-04 |
-| maquigest-platform | `feature/subscriptions-bounded-context` | [38cc661](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/38cc6616c223729de23c97a983fda167cd507fff) | feat(subscriptions): expose subscription REST endpoints. | Se expusieron los recursos para planes y suscripciones. | 2026-11-04 |
-| maquigest-platform | `feature/rentals-bounded-context` | [8d65e38](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/8d65e387358e4d2a6588fcdf6b871b6fe3074224) | feat(rentals): expose rental lifecycle REST endpoints. | Se implementaron los endpoints de solicitudes, alquileres, entregas y devoluciones. | 2026-11-04 |
-| maquigest-platform | `feature/profiles-bounded-context` | [f6c1c04](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/f6c1c044886b4e574139cdb7d91fbc87691aae14) | feat(profiles): expose company profile REST contracts. | Se expusieron los contratos REST para perfiles empresariales. | 2026-11-04 |
-| maquigest-platform | `feature/maintenance-bounded-context` | [9c7dd83](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/9c7dd83040a4667ea69ba59ce160f7fa28bbfcd2) | feat(maintenance): expose REST workflows and localized errors. | Se incorporaron los flujos REST de incidencias, mantenimiento e historial. | 2026-11-04 |
-| maquigest-platform | `feature/rentals-pending-request-management` | [d2e19ff](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/d2e19ffff421372c20eaf080be848ca5288a1bd5) | feat(rentals): habilitar reprogramacion y prevenir duplicados | Se permitió reprogramar solicitudes pendientes y se añadieron controles contra solicitudes duplicadas. | 2026-11-04 |
-| maquigest-platform | `feature/rentals-pending-request-management` | [01b72d0](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-platform/commit/01b72d04ad558fec9808b86671be9477c3523940) | test(rentals): cubrir reprogramacion y concurrencia | Se agregaron pruebas para reprogramación y control de concurrencia. | 2026-11-04 |
-| maquigest-webapp | `feature/decouple-fake-api` | [5e257ec](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/5e257ec7e6d01babe41fd763a938cd72e788ccf0) | refactor(frontend): decouple fake API from Angular application | Se retiró la dependencia de Angular respecto de la Fake API utilizada durante el Sprint 2. | 2026-11-03 |
-| maquigest-webapp | `feature/us26-equipment-history` | [73752cb](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/73752cbffa3e0afac396a29d6a39497c278e116c) | feat(maintenance): implement US26 equipment history frontend | Se implementó en Angular la consulta del historial operativo de una maquinaria. | 2026-11-03 |
-| maquigest-webapp | `feature/inventory-operational-acl` | [fa92dd4](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/fa92dd459602b8df8fc374b733575cc47c0b3772) | feat(inventory): integrate server-side equipment availability checks. | Se integraron las consultas de disponibilidad realizadas por el servidor. | 2026-11-04 |
-| maquigest-webapp | `feature/inventory-operational-acl` | [8c41abb](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/8c41abb67c6bf9e392c010b2caeb800a2630e162) | feat(rentals): align inventory ACL with equipment operational API. | Se alinearon las operaciones de Rentals con los contratos operativos de Inventory. | 2026-11-04 |
-| maquigest-webapp | `feature/inventory-operational-acl` | [02b4fa0](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/02b4fa0e488d147c39192bd301d14a8fcc6d387f) | feat(maintenance): align incident equipment operations with backend. | Se adaptó la gestión de incidencias a los endpoints del backend. | 2026-11-04 |
-| maquigest-webapp | `feature/maintenance-atomic-workflows` | [42bc883](https://github.com/upc-pre-202620-1asi0729-7750-cleancode/maquigest-webapp/commit/42bc88311968bd8ba4a7bf8002368b8bcc55d3bb) | feat(rentals): permitir editar periodos de solicitudes pendientes | Se integró la reprogramación de solicitudes pendientes en la Web Application. | 2026-11-04 |
-
-<!-- Por ahora es esto, creo que harán falta más. -->
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
