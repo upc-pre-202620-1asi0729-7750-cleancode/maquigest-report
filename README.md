@@ -5515,7 +5515,7 @@ Carlos Rodríguez se desempeña como técnico mecánico y se dedica al alquiler 
 | Edad | 51 años |
 | Distrito | San Juan de Lurigancho |
 | Segmento objetivo | Primer segmento objetivo: Pequeñas y medianas empresas de alquiler de maquinaria |
-| Fecha de entrevista | 18 setiembre 2026 |
+| Fecha de entrevista | 13 noviembre 2026 |
 | Duración | 01:56 |
 | Timing en el video | 04:05 - 06:01 |
 | URL del video | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQAno3ha_fARS7yrsw-5yJFTAXmXk9Z9j33zZLcAexur_zA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gRGyqh)|
