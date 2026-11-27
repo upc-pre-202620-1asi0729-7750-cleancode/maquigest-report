@@ -5442,7 +5442,7 @@ A continuación, se presenta la tabla resumen del Sprint Planning 4:
 | :--- | :--- |
 | **Sprint #** | Sprint 3 |
 | **Sprint Planning Background** | |
-| Date | 2026-11-04 |
+| Date | 2026-11-27 |
 | Time | 05:00 PM |
 | Location | Reunión virtual mediante Discord. |
 | Prepared By | Delgado Perez, James Caleb |
@@ -5454,37 +5454,25 @@ A continuación, se presenta la tabla resumen del Sprint Planning 4:
 | Sprint 4 Velocity | 86 Story Points completados en `develop` al corte documentado del Sprint 3, con 8 Story Points en progreso. Esta cifra representa el avance observado; la capacidad estimada inicialmente para el Sprint no consta por separado en el registro disponible. |
 | Sum of Story Points | 94 Story Points registrados para el Sprint 4. |
 
-#### 5.2.3.2. Aspect Leaders and Collaborators
+#### 5.2.4.2. Aspect Leaders and Collaborators
 
-Durante el Sprint 3, el equipo CleanCode organizó sus responsabilidades considerando los principales aspectos funcionales y técnicos necesarios para consolidar MaquiGest. Estas actividades comprendieron el desarrollo del backend mediante Spring Boot, la integración de la Web Application desarrollada en Angular, la planificación y actualización del Sprint Backlog, las entrevistas de validación, la revisión de los artefactos arquitectónicos y de base de datos, la documentación técnica y el despliegue de la plataforma.
+Durante el Sprint 4, el equipo organizó el trabajo alrededor de los aspectos necesarios para cerrar la versión entregable: despliegue frontend, documentación RESTful, estabilización backend, reporte final, evidencia de colaboración y validación funcional del producto. La matriz LACX mantiene un líder por frente y colaboradores distribuidos para asegurar trazabilidad, revisión cruzada y continuidad entre implementación, documentación y despliegue.
 
-El liderazgo general y la coordinación del Sprint estuvieron a cargo de Delgado Perez, James Caleb, quien asumió la organización de las actividades de desarrollo, integración, documentación y despliegue, así como el seguimiento de los entregables correspondientes a la AV2. Los demás integrantes participaron en la implementación de funcionalidades y asumieron responsabilidades específicas según las actividades asignadas.
-
-La distribución de responsabilidades se representa mediante una Leadership-and-Collaboration Matrix (LACX), en la cual la letra **L** identifica al integrante responsable principal de cada aspecto (Leader), mientras que la letra **C** identifica a los integrantes que participaron como colaboradores (Collaborators). Esta matriz permite visualizar la distribución de responsabilidades y mantener una coordinación efectiva durante el desarrollo del Sprint.
-
-Los aspectos considerados fueron el desarrollo de servicios RESTful, la integración de la Web Application, las entrevistas de validación, la planificación del Sprint Backlog, la documentación técnica, el diseño de base de datos y el despliegue de la solución.
+A continuación, se presenta la Matriz LACX (Leader/Collaborator) que detalla la distribución de roles para este cuarto ciclo. La letra L identifica al responsable principal del aspecto y la letra C identifica a los integrantes que colaboraron en su ejecución o revisión.
 
 | Team Member (Last Name, First Name) | GitHub Username | Backend REST Services | Web Application Integration | Validation Interview | Sprint Backlog | Documentation | Database Design | Deployment |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Delgado Perez, James Caleb | JAmsy06 | **L** | **L** | C | C | **L** | C | **L** |
 | Montalvo Vasquez, Bruno Rodrigo | TartaroZ | C | C | **L** | **L** | C | C | C |
-| Manosalva Tovar, Miroslav Oscar | Miroa123 | C | C | C | C | C | C | C |
 | Paredes Chavez, Carlos Augusto | CarlossUPC | C | C | C | C | C | **L** | C |
 
-En el desarrollo del backend, el equipo colaboró en la implementación de los servicios correspondientes a los Bounded Contexts IAM, Profiles, Inventory, Rentals, Maintenance y Subscriptions, junto con las capacidades transversales de Shared. James asumió la coordinación técnica general de estas actividades, participando en la integración de los componentes y en la preparación de la plataforma para su funcionamiento junto con la Web Application.
+En esta etapa final, el equipo aplicó las correcciones y actualizaciones pendientes para alinear la documentación con el sistema desplegado:
 
-Bruno contribuyó al desarrollo e integración del backend y asumió responsabilidades principales relacionadas con las entrevistas de validación, las evaluaciones heurísticas y la actualización de los artefactos de planificación, incluyendo las User Stories y el Product Backlog del Sprint 2. Asimismo, participó en la preparación de las evidencias de ejecución correspondientes al Sprint 3 y en las correcciones del Event Storming.
+* **James:** Lideró la resolución de incidencias de integración entre el backend y la Web Application, verificó los despliegues (Northflank, Vercel y Netlify) y subsanó observaciones en la documentación del Sprint 3 y los videos finales.
+* **Bruno:** Corrigió el *Event Storming*, actualizó las *User Stories* y el *Product Backlog* del Sprint 2, y completó las evaluaciones heurísticas y evidencias del Sprint 3.
+* **Carlos:** Actualizó los diagramas C4, de clases y de componentes para reflejar el código final, además de corregir el diseño de la base de datos MySQL.
 
-
-Miroslav participó en la implementación de funcionalidades del backend relacionadas con la gestión de maquinaria, las reglas de negocio, la disponibilidad y los servicios RESTful. También contribuyó a la revisión del Design-Level Event Storming y al análisis de las entrevistas de validación considerando criterios de usabilidad, arquitectura de información e Inclusive Design.
-
-Carlos participó en el desarrollo del backend y asumió responsabilidades principales relacionadas con la corrección y actualización de los diagramas C4, los diagramas de clases, la representación de los componentes del backend y el diseño de base de datos. Estas actividades permitieron mejorar la coherencia entre los artefactos arquitectónicos, la estructura de persistencia y la implementación técnica de MaquiGest.
-
-Adicionalmente, James lideró la documentación de los apartados del Sprint 3, incluyendo Sprint Backlog 3, Development Evidence for Sprint Review, Services Documentation Evidence for Sprint Review y Software Deployment Evidence for Sprint Review. También coordinó las actividades de integración y despliegue del backend en Northflank, la Web Application en Vercel y la Landing Page en Netlify, así como la preparación del video About the Product y la presentación About the Team.
-
-Esta organización permitió distribuir las responsabilidades entre los cuatro integrantes, mantener una coordinación técnica centralizada y promover la colaboración durante las actividades de desarrollo, validación, documentación y despliegue. Como resultado, el equipo avanzó en la consolidación de MaquiGest como una plataforma web integrada con servicios RESTful propios y una base de datos MySQL.
-
-
+Con estos ajustes, se subsanaron las observaciones previas y se consolidó la entrega final de nuestro producto.
 
 ### 5.2.3.3. Sprint Backlog 3
 
