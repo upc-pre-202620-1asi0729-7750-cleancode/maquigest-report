@@ -5570,15 +5570,9 @@ Estas actividades no se consideran funcionalidades implementadas en el presente 
 
 En conclusión, el Sprint Backlog 3 refleja la priorización del desarrollo de servicios reales y la integración técnica entre los componentes de MaquiGest. El estado de las tareas proporciona trazabilidad del trabajo realizado y permite identificar los requerimientos técnicos que permanecen pendientes para las siguientes iteraciones.
 
-### 5.2.3.4. Development Evidence for Sprint Review
+### 5.2.4.4. Development Evidence for Sprint Review
 
-Durante el Sprint 3, el equipo CleanCode llevó a cabo la implementación y consolidación de los servicios backend de MaquiGest, así como su integración con la Web Application desarrollada en Angular. El trabajo tuvo como objetivo disponer de una arquitectura funcional que permitiera ejecutar las operaciones principales de la plataforma mediante servicios REST y persistencia de información en una base de datos relacional.
-
-El backend fue desarrollado utilizando Java 27, Spring Boot 4.1.2, Spring Security, Spring Data JPA y MySQL. Por su parte, la Web Application fue adaptada para consumir los endpoints reales, reemplazando progresivamente la Fake API utilizada en las iteraciones anteriores.
-
-La implementación se organizó considerando los principios de Domain-Driven Design (DDD), la separación de responsabilidades mediante Command Query Responsibility Segregation (CQRS) y la utilización de contratos de integración entre Bounded Contexts.
-
-Para mantener la trazabilidad del desarrollo, el equipo empleó Git y GitHub como herramientas de control de versiones, siguiendo un flujo de trabajo basado en GitFlow.
+Durante el Sprint 4, el equipo CleanCode realizó un repaso y una corrección integral del trabajo ejecutado en el Sprint 3 sobre MaquiGest, con el objetivo de depurar deudas técnicas, estabilizar la integración entre el backend (Java 27, Spring Boot 4.1.2, Spring Security, Spring Data JPA y MySQL) y la Web Application en Angular, y reforzar la disciplina de DDD, CQRS, contratos entre Bounded Contexts y GitFlow en Git y GitHub.
 
 #### Repositorios utilizados
 
