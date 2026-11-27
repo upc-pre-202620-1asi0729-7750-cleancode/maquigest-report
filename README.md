@@ -85,6 +85,7 @@ Proyecto<br>
 |   AV1   | 19/09/2026 |  Todos   | Se agregó la primera versión del informe, incluyendo carátula, registro de versiones, perfiles del equipo, análisis inicial del problema, artefactos de UX, arquitectura preliminar y evidencias del Sprint 1. |
 |   TB1   | 08/10/2026 |  Todos   | Se actualizó el informe con los avances y correcciones del Sprint 2, incluyendo la actualización de User Stories y Product Backlog con Technical Stories para el RESTful API, correcciones de Impact Mapping, Problem Statement, Hypothesis Statements, User Flows, diagramas C4, diagramas de clases y Design-Level EventStorming. Asimismo, se documentó el Sprint Backlog 2 y se incorporaron las evidencias de desarrollo, despliegue, integración de la Landing Page con la Web Application y colaboración del equipo. |
 |   AV2   | 13/11/2026 |  Todos   | Se actualizó el informe con los avances y correcciones del Sprint 3, incluyendo la actualización de User Stories y Product Backlog con Technical Stories para el RESTful API, correcciones de diagramas C4, diagramas de clases y Design-Level EventStorming. Asimismo, se documentó el Sprint Backlog 3 y se incorporaron las evidencias de desarrollo, despliegue, integración del bakend a la webapp. |
+|   TB2   | 27/11/2026 |  Todos   | Se actualizó el informe con los avances y correcciones del Sprint 4, incluyendo la actualización de User Stories y Product Backlog con Technical Stories para el RESTful API, correcciones de diagramas C4, diagramas de clases y Design-Level EventStorming. Asimismo, se documentó el Sprint Backlog 3 y se incorporaron las evidencias de desarrollo, despliegue, integración del bakend a la webapp. |
 
 <div style="page-break-after: always;"></div>
 
@@ -163,6 +164,26 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
 <div style="page-break-after: always;"></div>
 
 ### Entrega AV2:
+
+#### Participación por integrante:
+
+##### Report
+
+<p align="center">
+  <img src="./assets/md-images-chapter5/teamcolabo3.png"
+       alt="MaquiGest Sprint 3 Collaboration Evidence - GitHub Contributors"
+       width="90%">
+</p>
+
+<p align="center">
+  <img src="./assets/md-images-chapter5/teamcolabo4.png"
+       alt="MaquiGest Sprint 3 Collaboration Evidence - Commit Activity"
+       width="90%">
+</p>
+
+<div style="page-break-after: always;"></div>
+
+### Entrega TB2:
 
 #### Participación por integrante:
 
@@ -283,6 +304,15 @@ A continuación, se presenta el repositorio utilizado para la elaboración colab
             - [5.2.3.6. Services Documentation Evidence for Sprint Review](#5236-services-documentation-evidence-for-sprint-review)
             - [5.2.3.7. Software Deployment Evidence for Sprint Review](#5237-software-deployment-evidence-for-sprint-review)
             - [5.2.3.8. Team Collaboration Insights during Sprint](#5238-team-collaboration-insights-during-sprint)
+        - [5.2.4. Sprint 4](#524-sprint-4)
+            - [5.2.4.1. Sprint Planning 3](#5241-sprint-planning-4)
+            - [5.2.4.2. Aspect Leaders and Collaborators](#5242-aspect-leaders-and-collaborators)
+            - [5.2.4.3. Sprint Backlog 3](#5243-sprint-backlog-4)
+            - [5.2.4.4. Development Evidence for Sprint Review](#5244-development-evidence-for-sprint-review)
+            - [5.2.4.5. Execution Evidence for Sprint Review](#5245-execution-evidence-for-sprint-review)
+            - [5.2.4.6. Services Documentation Evidence for Sprint Review](#5246-services-documentation-evidence-for-sprint-review)
+            - [5.2.4.7. Software Deployment Evidence for Sprint Review](#5247-software-deployment-evidence-for-sprint-review)
+            - [5.2.4.8. Team Collaboration Insights during Sprint](#5248-team-collaboration-insights-during-sprint)
     - [5.3. Validation Interviews]()
   - [5.3.1. Diseño de Entrevistas](#531-diseño-de-entrevistas)
   - [5.3.2. Registro de Entrevistas](#532-registro-de-entrevistas)
@@ -5708,7 +5738,7 @@ Además, los commits muestran actividades de refactorización, validación y pre
 En conclusión, las evidencias de desarrollo del Sprint 3 permiten relacionar las funcionalidades implementadas con cambios concretos de código fuente, manteniendo trazabilidad mediante ramas, commits y versiones del proyecto.
 
 
-#### 5.2.3.5. Execution Evidence for Sprint Review
+#### 5.2.4.5. Execution Evidence for Sprint Review
 
 Durante el Sprint 3 se implementaron los principales procesos de MaquiGest sobre el nuevo RESTful Web Service. La evidencia de ejecución debe demostrar la comunicación entre la Web Application, el backend Spring Boot y la base de datos MySQL.
 
@@ -5745,7 +5775,7 @@ A continuación, se describen los escenarios que forman parte de la revisión de
 
 **Execution Evidence Video for Sprint 3 Review:** [Ver video de Execution Evidence Sprint 3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQCQPSedz_yQTYMZGNFGaxZzAceAU1lmkCiv5WLOBju6EDY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=oHWgfw)
 
-### 5.2.3.6. Services Documentation Evidence for Sprint Review
+### 5.2.4.6. Services Documentation Evidence for Sprint Review
 
 Durante el Sprint 3, el equipo CleanCode documentó los Web Services REST de MaquiGest Platform, desarrollados con Java 27 y Spring Boot 4.1.2, utilizando Springdoc OpenAPI y Swagger UI. Esta documentación permite consultar métodos HTTP, rutas, parámetros, contratos de solicitud y respuesta, y mecanismos de autenticación.
 
@@ -5893,7 +5923,7 @@ Las evidencias presentadas muestran la interfaz de documentación y dos operacio
 
 Los commits vinculados permiten rastrear las configuraciones de OpenAPI realizadas en el repositorio.
 
-### 5.2.3.7. Software Deployment Evidence for Sprint Review
+### 5.2.4.7. Software Deployment Evidence for Sprint Review
 
 Durante el Sprint 3, el equipo CleanCode realizó el despliegue de los componentes de MaquiGest en servicios de alojamiento en la nube. El backend desarrollado con Spring Boot y la base de datos MySQL se alojaron en Northflank; la Web Application desarrollada con Angular se publicó en Vercel; y la Landing Page se publicó en Netlify.
 
@@ -5936,7 +5966,7 @@ Por último, la Landing Page de MaquiGest se publicó en Netlify. El panel del p
 Las evidencias presentadas muestran los componentes de MaquiGest desplegados en sus respectivas plataformas y accesibles mediante los entornos de producción configurados para el proyecto.
 
 
-#### 5.2.3.8. Team Collaboration Insights during Sprint
+#### 5.2.4.8. Team Collaboration Insights during Sprint
 
 Durante el Sprint 3, el trabajo de implementación se concentró en el desarrollo y despliegue del RESTful Web Service de MaquiGest, así como en la adaptación de la Web Application para consumir los servicios proporcionados por el backend. Esta iteración permitió integrar la lógica de negocio y la persistencia de datos con los procesos de la aplicación frontend.
 
@@ -5958,7 +5988,6 @@ La distribución de commits registrada para el Sprint 3 fue la siguiente:
 | ------------------------------ | ------------------- | ----------: |
 | James Caleb Delgado Perez      | `JAmsy06`           | 30          |
 | Bruno Rodrigo Montalvo Vasquez | `TartaroZ`          | 29          |
-| Miroslav Oscar Manosalva Tovar | `Miroa123`          | 30          |
 | Carlos Augusto Paredes Chávez  | `CarlossUPC`        | 24          |
 | **Total**                      |                     | **113**     |
 
@@ -6285,25 +6314,13 @@ El video About-the-Product presenta de manera clara y dinámica la propuesta de 
 
 ## Conclusiones y recomendaciones
 
-Durante el Sprint 1, MaquiGest estableció su presencia pública mediante la implementación y el despliegue de la Landing Page en Netlify. Este primer producto permitió comunicar la propuesta de valor de CleanCode, identificar los segmentos objetivo y presentar las principales funcionalidades y planes de la plataforma SaaS orientada a la gestión y alquiler de maquinaria de construcción. Asimismo, se incorporaron características de diseño responsivo, internacionalización y mecanismos de navegación hacia la Web Application, estableciendo las bases de la experiencia digital del producto.
+A lo largo de los cuatro Sprints, MaquiGest evoluciono de manera progresiva e incremental desde una propuesta de valor validada mediante una Landing Page en Netlify en el Sprint 1 y una primera version de la Web Application en Angular respaldada por una Fake API en el Sprint 2, hasta una arquitectura integrada con backend en Java, Spring Boot, Spring Data JPA y MySQL en el Sprint 3, la cual fue actualizada, revisada y corregida durante el Sprint 4.
 
-En el Sprint 2 se desarrolló y desplegó la primera versión funcional de la Web Application utilizando Angular. Esta versión incorporó interfaces para autenticación, administración de perfiles empresariales, gestión de inventario, solicitudes de alquiler, entregas, devoluciones, mantenimiento y suscripciones. Inicialmente, estas funcionalidades se apoyaron en una Fake API implementada con JSON Server y desplegada en Render, lo que permitió representar y validar los principales recorridos de usuario antes de disponer de un backend propio.
+Durante el Sprint 4, el equipo CleanCode centro su trabajo en depurar, actualizar y corregir lo implementado en el Sprint 3, atendiendo las observaciones tecnicas, de diseno y de validacion detectadas en la iteracion anterior. Se revisaron y ajustaron los seis Bounded Contexts, compuestos por IAM, Profiles, Inventory, Rentals, Maintenance y Suscriptions, junto con el modulo transversal Shared, fortaleciendo la separacion de capas, el uso de Domain-Driven Design y CQRS, la definicion de Aggregates, Value Objects e invariantes de dominio, y la distincion entre los objetos de dominio y las entidades de persistencia.
 
-Durante el Sprint 3, el proyecto evolucionó hacia una arquitectura funcional integrada mediante el desarrollo de un RESTful Web Service con Java, Spring Boot, Spring Data JPA y MySQL. La implementación se estructuró alrededor de seis Bounded Contexts: IAM, Profiles, Inventory, Rentals, Maintenance y Suscriptions, complementados por el módulo transversal Shared. Esta organización permitió establecer una separación de responsabilidades basada en Domain-Driven Design (DDD), facilitando la evolución de las funcionalidades y reduciendo el acoplamiento entre los distintos dominios del negocio.
+Asimismo, se corrigieron y consolidaron los flujos funcionales y de comunicacion entre la Web Application en Angular publicada en Vercel y los servicios REST del backend desplegados en Northflank junto con la base de datos MySQL de 17 tablas. Esto permitio resolver inconsistencias en procesos como autenticacion con JWT, perfiles empresariales, disponibilidad y gestion de maquinaria, solicitudes de alquiler, entregas, devoluciones, incidencias, mantenimiento y suscripciones, ademas de reforzar el manejo de errores, la internacionalizacion de mensajes y la eliminacion definitiva de dependencias con la Fake API.
 
-La arquitectura del backend incorporó una separación entre las capas Domain, Application, Infrastructure e Interfaces, junto con la aplicación de Command Query Responsibility Segregation (CQRS) para distinguir las operaciones de escritura y consulta. Asimismo, se estableció una diferenciación entre los objetos del dominio y las entidades de persistencia utilizadas por JPA. Estas decisiones contribuyeron a mantener las reglas de negocio independientes de los controladores REST y de los mecanismos de almacenamiento, favoreciendo la mantenibilidad y organización del código.
-
-En el ámbito funcional, el backend permitió implementar los procesos principales de MaquiGest, incluyendo registro e inicio de sesión mediante JWT, administración de perfiles empresariales, gestión y disponibilidad de maquinaria, solicitudes de alquiler, aprobación y rechazo, entregas, devoluciones, registro de incidencias, mantenimiento y gestión de suscripciones. Además, se incorporaron mecanismos de manejo de errores mediante ProblemDetail, internacionalización de mensajes y pruebas automatizadas orientadas a validar componentes del dominio y de la aplicación.
-
-Uno de los principales avances del Sprint 3 fue el desacoplamiento de la Fake API de la Web Application y su integración con los recursos reales de maquigest-platform mediante los endpoints REST expuestos bajo `/api/v1`. Esto permitió conectar los componentes desarrollados con Angular y Spring Boot, utilizando una base de datos MySQL para la persistencia de información. De esta manera, MaquiGest dejó de depender de datos simulados para los principales flujos implementados y avanzó hacia una solución integrada entre frontend, backend y base de datos.
-
-Respecto a la documentación de servicios, se utilizó OpenAPI y Swagger UI para representar y consultar los endpoints del backend. Durante el Sprint Review se registraron evidencias de operaciones REST ejecutadas en el entorno de producción, incluyendo consultas de categorías de maquinaria y autenticación, con respuestas HTTP 200 OK. Estas verificaciones permitieron demostrar la disponibilidad de los servicios documentados y facilitaron la revisión de los contratos utilizados por la Web Application.
-
-En relación con el despliegue, se consolidó una arquitectura distribuida en servicios cloud. El backend de MaquiGest y la base de datos MySQL fueron desplegados en Northflank, la Web Application se publicó en Vercel y la Landing Page permaneció disponible en Netlify. Asimismo, se verificó el estado operativo de los servicios y la accesibilidad del esquema de base de datos mediante MySQL Workbench, identificándose 17 tablas correspondientes a la persistencia de la plataforma. Estas evidencias permitieron respaldar el avance del producto hacia un entorno de producción accesible mediante Internet.
-
-Paralelamente, se realizaron correcciones y actualizaciones en los artefactos de análisis, modelado y documentación del proyecto, incluyendo Event Storming, User Stories, Product Backlog, diagramas C4, diagramas de clases y diseño de base de datos. También se desarrollaron actividades de validación de usuarios y evaluación heurística, contribuyendo a identificar oportunidades de mejora en la experiencia propuesta. La utilización de Git, GitHub y GitFlow permitió organizar el trabajo colaborativo y mantener la trazabilidad de las modificaciones realizadas durante los distintos Sprints.
-
-Finalmente, la elaboración del video About the Product y de la presentación About the Team permitió complementar las evidencias técnicas mediante recursos audiovisuales orientados a comunicar el modelo de negocio, las funcionalidades y los beneficios de MaquiGest. En conjunto, los avances de los tres Sprints evidencian la evolución progresiva del proyecto, desde una propuesta inicial y una Landing Page funcional hasta una plataforma web conectada con un backend propio y una base de datos desplegada.
+De manera paralela, se actualizaron los artefactos de analisis, modelado y documentacion para mantener la coherencia entre el codigo y el diseno del sistema, incluyendo OpenAPI y Swagger UI, diagramas C4, diagramas de clases, modelo de base de datos, Event Storming, User Stories y Product Backlog. Finalmente, el control de versiones con Git, GitHub y GitFlow, junto con las pruebas, las verificaciones en produccion y los recursos audiovisuales About the Product y About the Team, permitio consolidar una plataforma mas estable, trazable y lista para su entrega final.
 
 ### Recomendaciones
 
@@ -6369,6 +6386,7 @@ En este anexo se registran progresivamente los videos correspondientes a las exp
 | **AV1** | **Cantidad:** 1 video<br>**Enlace:** [Ver video AV1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQCYkWdlaHE1R4b1jMaRqSokAVYThGIeFB26oMbKBvlVoSU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=HlscHY)<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-expo-av1`<br>**Formato:** `.mp4`<br>**Duración:** 10:56 | Video de exposición grupal correspondiente al AV1 de MaquiGest. Presenta el avance integral del proyecto hasta el Sprint 1, incluyendo Startup Profile, Solution Profile, segmentos objetivo, Requirements Elicitation & Analysis, Needfinding, User Stories, Product Backlog, Product Design, arquitectura de software, diseño e implementación de la Landing Page y las evidencias correspondientes al Sprint 1. | El video se publica en la plataforma indicada por el docente y constituye evidencia de la presentación del AV1. El material permite sustentar los artefactos desarrollados, la participación de los integrantes del equipo y los principales avances alcanzados durante el Sprint 1. |
 | **TB1** | **Cantidad:** 1 video<br>**Enlace:** [Ver video TB1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQBS_QhSFlDCQ73TgpPlv3UMAR2tj58Jz9STtZKhR71Lmqo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=fdm2F6)<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-expo-tb1`<br>**Formato:** `.mp4`<br>**Duración:** 21:06 | Video de exposición grupal correspondiente al TB1 de MaquiGest. Presenta el avance integral del proyecto hasta el Sprint 2 y Sprint 3, incluyendo la web app y el backend integrado. | El video se publica en la plataforma indicada por el docente y constituye evidencia de la presentación del TB1. El material permite sustentar los artefactos desarrollados, la participación de los integrantes del equipo y los principales avances alcanzados durante las etapas de desarrollo. |
 | **AV2** | **Cantidad:** 1 video<br>**Enlace:** [Ver video AV2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDqarBAJsFxQLbWf5OsX0NNAVo9RG8KeiM3mCQW2CiXzAY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=PapkXs)<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-expo-av2`<br>**Formato:** `.mp4`<br>**Duración:** 27:38 | Video de exposicion al AV2 de MaquiGest. Presenta los avances y la síntesis ejecutiva del producto, integrando las revisiones funcionales de las etapas intermedias de desarrollo. | El video se publica en la plataforma indicada por el docente y constituye evidencia de la presentación del AV2 para sustentar el progreso y características clave de la plataforma. |
+| **TB2** | **Cantidad:** 1 video<br>**Enlace:** [Ver video TB2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202111529_upc_edu_pe/IQDqarBAJsFxQLbWf5OsX0NNAVo9RG8KeiM3mCQW2CiXzAY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=PapkXs)<br>**Nomenclatura:** `upc-pre-202620-1asi0729-7750-cleancode-expo-av2`<br>**Formato:** `.mp4`<br>**Duración:** 27:38 | Video de exposicion al TB2 de MaquiGest. Presenta los avances y la síntesis ejecutiva del producto, integrando las revisiones funcionales de las etapas intermedias de desarrollo. | El video se publica en la plataforma indicada por el docente y constituye evidencia de la presentación del AV2 para sustentar el progreso y características clave de la plataforma. |
 
 ## Anexo B. Enlaces del proyecto
 
