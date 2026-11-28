@@ -3415,13 +3415,25 @@ Para facilitar su comprensión, los diagramas se organizan en cuatro capas: Doma
 
 **Explicación del Proceso:** Representa los agregados `RentalRequest` y `Rental`, las entidades `Delivery` y `EquipmentReturn`, sus Value Objects, eventos y repositorios.
 
-**Conexión de la Capa:** Domain establece las reglas de negocio del ciclo de alquiler, desde la solicitud hasta su finalización.
+**Conexión de la Capa:** Representa los agregados RentalRequest, Rental y Notification, sus entidades, Value Objects, eventos y contratos de persistencia.
 
 #### A.1. Rental Aggregate
 
 ![Class Diagram — Rentals Domain Rental Aggregate](./assets/md-images-chapter4/rentals-domain-rental-agreggate.png)
 
-**Descripción:** Detalla el agregado `Rental`, su periodo, participantes, estados y referencias a los registros de entrega y devolución.
+**Descripción:** Detalla el agregado Rental, sus identificadores, periodo, estados operativos y eventos asociados a la entrega y devolución de maquinaria.
+
+#### A.2. RentalRequest Aggregate
+
+![Class Diagram — Rentals Domain RentalRequest Aggregate](./assets/md-images-chapter4/rentals-domain-rental-request-agreggate.png)
+
+**Descripción:** Representa las solicitudes de alquiler, sus Value Objects, restricciones de disponibilidad, transiciones de estado y eventos de creación, aprobación y rechazo.
+
+#### A.3. Notification Aggregate
+
+![Class Diagram — Rentals Domain Notification Aggregate](./assets/md-images-chapter4/rentals-domain-notification-aggregate.png)
+
+**Descripción:** Detalla el agregado Notification, sus identificadores, tipos de acontecimientos, estados de lectura y reglas de envío de correo transaccional.
 
 ### B. Application Layer
 
@@ -3429,7 +3441,7 @@ Para facilitar su comprensión, los diagramas se organizan en cuatro capas: Doma
 
 **Explicación del Proceso:** Representa los servicios y ejecutores transaccionales que coordinan solicitudes, alquileres, entregas y devoluciones.
 
-**Conexión de la Capa:** Application ejecuta los casos de uso mediante los contratos de Domain y los puertos de integración con otros contextos.
+**Conexión de la Capa:** Presenta los servicios de comandos y consultas, ejecutores transaccionales, puertos y event handlers responsables del ciclo de alquiler, las notificaciones y la consulta geográfica.
 
 ### C. Infrastructure Layer
 
@@ -3437,19 +3449,19 @@ Para facilitar su comprensión, los diagramas se organizan en cuatro capas: Doma
 
 **Explicación del Proceso:** Presenta los componentes de persistencia JPA, adaptadores ACL y mecanismos de publicación de eventos.
 
-**Conexión de la Capa:** Infrastructure implementa los repositorios y puertos requeridos por Application, manteniendo desacoplado el dominio.
+**Conexión de la Capa:** Representa los adaptadores de persistencia, las Anti-Corruption Layers y los mecanismos de integración con IAM, Inventory, Subscriptions y Google Maps.
 
 #### C.1. Infrastructure Packages
 
 ![Class Diagram — Rentals Infrastructure Packages](./assets/md-images-chapter4/rentals-infrastructure-packages.png)
 
-**Descripción:** Representa la organización de los paquetes de persistencia, integración y eventos, junto con sus dependencias principales.
+**Descripción:** Presenta la organización de los paquetes de persistencia, integración, conversión y geocodificación, junto con sus dependencias hacia los contratos internos.
 
 #### C.2. Infrastructure Persistence
 
 ![Class Diagram — Rentals Infrastructure Persistence](./assets/md-images-chapter4/rentals-infrastructure-persistence.png)
 
-**Descripción:** Detalla las entidades JPA, repositorios, assemblers y adaptadores utilizados para almacenar solicitudes, alquileres, entregas y devoluciones.
+**Descripción:** Detalla las entidades JPA, repositorios, assemblers y converters utilizados para persistir solicitudes, alquileres, entregas, devoluciones y notificaciones.
 
 ### D. Interfaces Layer
 
@@ -3457,25 +3469,25 @@ Para facilitar su comprensión, los diagramas se organizan en cuatro capas: Doma
 
 **Explicación del Proceso:** Presenta los controladores REST, recursos, transformadores, contratos de integración y componentes de autorización del contexto.
 
-**Conexión de la Capa:** Interfaces transforma las solicitudes HTTP en operaciones de Application y expone las funcionalidades de alquiler.
+**Conexión de la Capa:** Representa los controladores REST, recursos, transformadores, políticas de autorización y contratos publicados del contexto Rentals.
 
 #### D.1. Interfaces Packages
 
 ![Class Diagram — Rentals Interfaces Packages](./assets/md-images-chapter4/rentals-interfaces-packages.png)
 
-**Descripción:** Muestra la distribución de los paquetes de Interfaces y sus dependencias relacionadas con REST, recursos, integración y autorización.
+**Descripción:** Presenta la organización y las dependencias de los paquetes REST, seguridad, recursos, transformadores y servicios de aplicación.
 
 #### D.2. Interfaces REST
 
 ![Class Diagram — Rentals Interfaces REST](./assets/md-images-chapter4/rentals-interfaces-rest.png)
 
-**Descripción:** Detalla los controladores REST, recursos y transformadores utilizados en la gestión HTTP de solicitudes, alquileres, entregas y devoluciones.
+**Descripción:** Detalla los contratos HTTP utilizados para gestionar el ciclo de alquiler, consultar notificaciones y obtener ubicaciones geográficas.
 
 #### D.3. Interfaces Security
 
 ![Class Diagram — Rentals Interfaces Security](./assets/md-images-chapter4/rentals-interfaces-security.png)
 
-**Descripción:** Representa la política `RentalActorPolicy` y sus dependencias para identificar y validar los actores que participan en las operaciones de alquiler.
+**Descripción:** Representa la autorización de actores, los eventos de integración y los mecanismos transaccionales de generación de notificaciones y envío de correos electrónicos.
 
 ## Maintenance
 
