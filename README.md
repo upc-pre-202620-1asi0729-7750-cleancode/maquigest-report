@@ -3212,6 +3212,8 @@ El contenedor backend está organizado alrededor de seis bounded contexts de neg
 
 La Single Page Application desarrollada con Angular aparece fuera del límite del backend debido a que actúa como cliente de los servicios REST expuestos por la aplicación. De igual manera, la base de datos MySQL se representa fuera del límite de componentes del backend como el contenedor encargado de la persistencia de la información.
 
+El diagrama presenta la arquitectura general del backend de MaquiGest, organizada en seis Bounded Contexts y un módulo transversal Shared. Representa las dependencias entre contextos, la persistencia en MySQL, las notificaciones distribuidas y las integraciones externas con SendGrid, Google Maps y Stripe.
+
 <p align="center">
   <img src="./assets/plantuml/chapter-4/c4/component/backend/maquigest-backend-general-component-diagram.png"
        alt="MaquiGest Backend General Components Diagram"
@@ -3221,6 +3223,8 @@ La Single Page Application desarrollada con Angular aparece fuera del límite de
 #### Inventory Backend Component Diagram
 
 El bounded context Inventory del backend administra la maquinaria, categorías, tarifas, estado operativo y disponibilidad.
+
+El diagrama representa los componentes responsables de la gestión de maquinaria, categorías, tarifas y disponibilidad. Incorpora la generación, consulta y persistencia de notificaciones relacionadas con la creación de equipos y los cambios en su estado operativo.
 
 La Interfaces Layer expone los endpoints REST correspondientes a la gestión del inventario. La Application Layer coordina el registro y actualización de maquinaria, consultas de disponibilidad, gestión de tarifas y demás operaciones relacionadas con el inventario.
 
@@ -3238,6 +3242,8 @@ Rentals utiliza Inventory para validar la disponibilidad de la maquinaria, mient
 
 El bounded context Rentals del backend administra el ciclo completo de alquiler, incluyendo solicitudes, reservas, contratos, entregas, alquileres activos y devoluciones.
 
+El diagrama representa los componentes encargados de gestionar solicitudes de alquiler, entregas y devoluciones. Incluye la generación de notificaciones, el envío de correos transaccionales, la integración con Google Maps y los contratos de comunicación con otros Bounded Contexts.
+
 La Interfaces Layer expone las operaciones REST requeridas por el frontend. La Application Layer coordina los diferentes flujos del alquiler, mientras que la Domain Layer contiene los agregados, entidades, value objects y reglas de negocio correspondientes.
 
 La Infrastructure Layer proporciona las implementaciones necesarias para la persistencia. Rentals colabora con Inventory para verificar la disponibilidad de la maquinaria y con Profiles para obtener la información de las empresas y participantes involucrados en las operaciones de alquiler.
@@ -3251,6 +3257,8 @@ La Infrastructure Layer proporciona las implementaciones necesarias para la pers
 #### Maintenance Backend Component Diagram
 
 El bounded context Maintenance del backend administra las programaciones de mantenimiento, inspecciones, incidencias, registros de mantenimiento e historial de mantenimiento de la maquinaria.
+
+El diagrama presenta los componentes responsables de gestionar incidentes, registros y actividades de mantenimiento. Incorpora la generación de notificaciones asociadas a estos acontecimientos y las integraciones con Inventory, Rentals y Subscriptions mediante Anti-Corruption Layers.
 
 La Interfaces Layer expone los endpoints REST relacionados con estas operaciones. La Application Layer coordina los casos de uso asociados con programación de mantenimiento, inspecciones, registro de incidencias y actualización de mantenimientos.
 
@@ -3268,6 +3276,8 @@ Maintenance colabora con Inventory para actualizar el estado y disponibilidad de
 
 El bounded context Subscriptions del backend administra los planes de suscripción, suscripciones activas, cambios de plan, estado de facturación y operaciones relacionadas con pagos.
 
+El diagrama representa los componentes encargados de gestionar planes, suscripciones y permisos asociados. Incluye la integración con Stripe para el procesamiento del checkout y la generación de notificaciones relacionadas con la activación y cancelación de suscripciones.
+
 La Interfaces Layer expone los endpoints REST necesarios para la gestión de suscripciones. La Application Layer coordina la selección de planes, activación de suscripciones, cambios de plan, estado de facturación y operaciones relacionadas con pagos.
 
 La Domain Layer contiene los conceptos y reglas de negocio correspondientes a las suscripciones, mientras que la Infrastructure Layer proporciona los mecanismos de persistencia necesarios.
@@ -3284,6 +3294,8 @@ Este bounded context utiliza IAM para identificar la cuenta autenticada y Profil
 
 El bounded context IAM del backend administra la autenticación, autorización, credenciales, usuarios, roles y control de acceso.
 
+El diagrama presenta los componentes responsables de la gestión de identidades, autenticación, autorización y seguridad de las cuentas. Incorpora la verificación de correo electrónico, la recuperación de contraseña y las notificaciones de cuenta, manteniendo los mecanismos de seguridad basados en JWT y BCrypt.
+
 La Interfaces Layer expone los endpoints REST relacionados con autenticación, registro y administración de cuentas. La Application Layer coordina los casos de uso correspondientes y delega las decisiones de negocio a la Domain Layer. Por su parte, la Infrastructure Layer proporciona los mecanismos de persistencia y adaptadores técnicos necesarios.
 
 Las capacidades relacionadas con seguridad son proporcionadas mediante mecanismos como Spring Security, codificación de contraseñas y autenticación basada en tokens. Además, este contexto puede comunicarse con el servicio externo de correo transaccional para soportar operaciones como recuperación de contraseña y notificaciones relacionadas con la cuenta.
@@ -3297,6 +3309,8 @@ Las capacidades relacionadas con seguridad son proporcionadas mediante mecanismo
 #### Profiles Backend Component Diagram
 
 El bounded context Profiles del backend administra la información correspondiente a usuarios, empresas, proveedores y clientes.
+
+El diagrama representa los componentes encargados de gestionar los perfiles empresariales, sus datos de contacto y direcciones. Incluye la integración con IAM, la reconciliación de perfiles y la generación de notificaciones ante su creación y actualización.
 
 La Interfaces Layer expone los endpoints REST relacionados con perfiles. La Application Layer coordina operaciones de registro, actualización de perfiles, gestión de información empresarial y consultas.
 
