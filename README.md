@@ -3339,13 +3339,19 @@ Para facilitar su comprensión, los diagramas se organizan en cuatro capas: Doma
 
 **Explicación del Proceso:** Representa el dominio de Inventory mediante el agregado `Equipment`, sus entidades, Value Objects, eventos y contratos de repositorio.
 
-**Conexión de la Capa:** Domain concentra las reglas de negocio relacionadas con los equipos y su disponibilidad, manteniéndose independiente de las tecnologías de persistencia.
+**Conexión de la Capa:** Representa los agregados Equipment y Notification, las entidades, Value Objects, eventos y contratos de repositorio que definen las reglas de negocio de Inventory.
 
 #### A.1. Equipment Aggregate
 
 ![Class Diagram — Inventory Domain Equipment Aggregate](./assets/md-images-chapter4/inventory-domain-equipment-agreggate.png)
 
-**Descripción:** Detalla `Equipment` como Aggregate Root, sus atributos, operaciones, Value Objects, estados y reglas de disponibilidad.
+**Descripción:** Detalla el agregado Equipment, sus Value Objects, estados operativos, reglas de disponibilidad y acontecimientos de creación y cambio de estado.
+
+#### A.2. Notification Aggregate
+
+![Class Diagram — Inventory Domain Notification Aggregate](./assets/md-images-chapter4/inventory-domain-notification-aggregate.png)
+
+**Descripción:** Representa el agregado Notification, sus identificadores, tipos de acontecimientos, estados de lectura y restricciones de consistencia.
 
 ### B. Application Layer
 
@@ -3353,7 +3359,7 @@ Para facilitar su comprensión, los diagramas se organizan en cuatro capas: Doma
 
 **Explicación del Proceso:** Presenta los servicios de comandos y consultas que coordinan la gestión de equipos, categorías y disponibilidad.
 
-**Conexión de la Capa:** Application implementa los casos de uso mediante los contratos de Domain, separando las operaciones de lectura y escritura.
+**Conexión de la Capa:** Presenta los servicios de comandos y consultas, los contratos publicados y los event handlers responsables de coordinar las operaciones de inventario y notificaciones.
 
 ### C. Infrastructure Layer
 
@@ -3361,19 +3367,19 @@ Para facilitar su comprensión, los diagramas se organizan en cuatro capas: Doma
 
 **Explicación del Proceso:** Presenta los principales componentes de persistencia, adaptadores e integración utilizados por Inventory.
 
-**Conexión de la Capa:** Infrastructure implementa los contratos definidos por las capas internas y proporciona acceso a la base de datos.
+**Conexión de la Capa:** Representa los adaptadores, entidades JPA, repositorios, assemblers y converters utilizados para persistir equipos, categorías y notificaciones.
 
 #### C.1. Infrastructure Packages
 
 ![Class Diagram — Inventory Infrastructure Packages](./assets/md-images-chapter4/inventory-infrastructure-packages.png)
 
-**Descripción:** Muestra la organización de los paquetes de infraestructura y las dependencias entre sus componentes.
+**Descripción:** Presenta la organización de los paquetes de persistencia y sus dependencias con los contratos y modelos de las capas internas.
 
 #### C.2. Infrastructure Persistence
 
 ![Class Diagram — Inventory Infrastructure Persistence](./assets/md-images-chapter4/inventory-infrastructure-persistence.png)
 
-**Descripción:** Detalla las entidades JPA, repositorios, assemblers y adaptadores responsables de la persistencia de equipos y disponibilidad.
+**Descripción:** Detalla el almacenamiento de equipos, disponibilidad, categorías y notificaciones, manteniendo la separación entre los modelos de dominio y persistencia.
 
 ### D. Interfaces Layer
 
@@ -3381,19 +3387,19 @@ Para facilitar su comprensión, los diagramas se organizan en cuatro capas: Doma
 
 **Explicación del Proceso:** Presenta los controladores REST, recursos, transformadores y contratos de integración del contexto.
 
-**Conexión de la Capa:** Interfaces procesa solicitudes externas y delega las operaciones correspondientes a los servicios de Application.
+**Conexión de la Capa:** Representa los controladores REST, recursos, transformadores, políticas de autorización y contratos publicados de Inventory.
 
 #### D.1. Interfaces Packages
 
 ![Class Diagram — Inventory Interfaces Packages](./assets/md-images-chapter4/inventory-interfaces-packages.png)
 
-**Descripción:** Representa la estructura de paquetes de Interfaces y las dependencias entre REST, recursos, transformadores e integración.
+**Descripción:** Presenta las dependencias entre los paquetes REST, recursos, transformadores, seguridad y servicios de aplicación.
 
 #### D.2. Interfaces REST
 
 ![Class Diagram — Inventory Interfaces REST](./assets/md-images-chapter4/inventory-interfaces-rest.png)
 
-**Descripción:** Detalla los controladores REST, los modelos de entrada y salida y los transformadores utilizados en las operaciones HTTP.
+**Descripción:** Detalla los recursos y operaciones HTTP utilizados para administrar maquinaria, consultar disponibilidad y gestionar las notificaciones del usuario autenticado.
 
 #### D.3. Interfaces ACL
 
